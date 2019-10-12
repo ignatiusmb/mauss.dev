@@ -5,23 +5,15 @@ html {
 body {
   font-family: 'Rubik', sans-serif;
   box-shadow: 0 0 10px black;
-  max-width: 49em;
+  max-width: 21cm;
   margin: 3.5em auto;
-  padding: 0.5em 2.75em;
+  padding: 1em;
   box-sizing: border-box;
   background: #fff;
 }
 
-span.bold {
-  font-weight: 600;
-}
-
 span.red {
   color: #dc143c;
-}
-
-span.green {
-  color: #38761d;
 }
 
 span.blue {
@@ -33,12 +25,14 @@ a.link {
   color: rgb(17, 85, 204);
 }
 
-header h1 {
-  margin: 0 0 0.5em 0;
-  text-align: center;
+header {
   font-family: 'Karla', sans-serif;
-  font-size: 2.8em;
-  font-weight: lighter;
+}
+
+header h1 {
+  margin-bottom: 0.5em;
+  text-align: center;
+  font-size: 1.4em;
 }
 
 section {
@@ -48,31 +42,47 @@ section {
 
 section header {
   padding: 0.2em 0.15em;
+  border-bottom: 1px solid black;
   margin-bottom: -0.2em;
   text-transform: uppercase;
-  font-size: 1.25em;
-  color: #f3f3f3;
-  background-color: rgb(0, 128, 255);
+  font-size: 0.8em;
+  font-weight: bolder;
 }
 
 section .label {
   display: flex;
-  margin: 0.25em 0 0.15em;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0.5em 0 0.25em;
+  font-family: 'Karla', sans-serif;
+  font-size: 0.5em;
 }
-
-section h4 {
-  flex: 3;
-  margin: 0.25em;
-  font-size: 0.9em;
-  font-weight: 400;
+section .label h4 {
+  margin: 0;
+  font-weight: bolder;
 }
-
-section h4:not(:first-child) {
-  flex: 2;
+section .label h4:first-child {
+  width: 15em;
+  color: #38761d;
+}
+section .label h4:nth-child(2) {
+  flex: 1;
+  text-align: right;
+}
+section .label h4:last-child {
+  width: 16em;
   color: #666666;
 }
 
+section .description {
+  margin-bottom: 0.5em;
+  font-family: 'Cabin', sans-serif;
+  font-size: 0.5em;
+  font-weight: normal;
+}
+
 section ul {
+  padding-left: 1em;
   margin: 0;
   font-weight: 600;
   font-size: 13px;
@@ -80,12 +90,13 @@ section ul {
 
 section ul li {
   margin-bottom: 0.2em;
+  font-size: 0.5em;
   font-weight: 400;
 }
 
 footer {
   display: flex;
-  font-size: 0.8em;
+  font-size: 0.4em;
   font-family: 'Inconsolata', monospace;
 }
 
@@ -102,53 +113,59 @@ footer span:last-child {
   text-align: right;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (min-width: 480px) {
+  section .label h4 {
+    margin: 0;
+    font-weight: bolder;
+  }
+  section .label h4:first-child {
+    color: #38761d;
+  }
+  section .label h4:nth-child(2) {
+    text-align: center;
+  }
+  section .label h4:last-child {
+    text-align: right;
+  }
+}
+@media only screen and (min-width: 768px) {
   body {
-    max-width: 28em;
-    padding: 0.5em 1em;
+    padding: 1em 2em;
   }
 
   header h1 {
-    font-size: 1.6em;
-  }
-
-  section {
-    margin-bottom: 0.5em;
+    font-size: 3em;
   }
 
   section header {
-    padding: 0.1em;
-    font-size: 0.9em;
+    font-size: 1.2em;
+  }
+
+  section div {
+    padding: 0 0.5em;
   }
 
   section .label {
-    flex-direction: column;
-    padding-left: 0.2em;
-    margin-top: 0.5em;
+    font-size: 0.9em;
+  }
+
+  section .description {
     font-size: 0.8em;
   }
 
-  section h4 {
-    margin: 0;
-  }
-
   section ul {
-    padding-left: 1.5em;
-    font-size: 0.5em;
-    text-align: justify;
+    padding-left: 2em;
+  }
+
+  section ul li {
+    font-size: 1em;
+  }
+
+  section .label h4:last-child {
+    width: 16em;
   }
 
   footer {
-    font-size: 0.6em;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  footer {
-    justify-content: space-between;
-  }
-
-  footer span:nth-child(2) {
-    display: none;
+    font-size: 0.9em;
   }
 }
