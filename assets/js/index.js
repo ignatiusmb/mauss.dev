@@ -20,6 +20,7 @@
     data = await response.blob()
     const icon = document.createElement('img')
     icon.src = URL.createObjectURL(data)
+    icon.alt = iconName
     logo.appendChild(icon)
   }
 })()
