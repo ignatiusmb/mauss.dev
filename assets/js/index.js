@@ -6,6 +6,7 @@
   let data = await response.blob()
   const profile = document.createElement('img')
   profile.src = URL.createObjectURL(data)
+  profile.alt = 'Profile Picture'
   document.getElementById('display-pic').appendChild(profile)
 
   // Skills Logos
