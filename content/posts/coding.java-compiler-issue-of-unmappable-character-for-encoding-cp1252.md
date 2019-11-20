@@ -1,0 +1,19 @@
+---
+date: 2018-11-30
+title: Get Rid of Un-mappable Character for Encoding Cp1252 when Compiling Java
+---
+
+### 2 ways to get rid of it
+
+1. Add the encoding option on compile command
+
+    ```terminal
+    javac -Dfile.encoding=UTF-8 your_appname.java
+    ```
+
+2. Add the command to the **System Variable**
+
+    ```terminal
+    Variable name: JAVA_TOOL_OPTIONS
+    Variable value: -Dfile.encoding=UTF-8
+    ```
