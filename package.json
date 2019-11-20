@@ -1,0 +1,48 @@
+{
+  "name": "@ignatiusmb/blog",
+  "description": "Max's Blog",
+  "version": "19.11.19",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=dev npm-run-all --parallel dev:app dev:server",
+    "dev:app": "sapper dev",
+    "dev:server": "netlify-lambda serve lambda",
+    "build": "sapper build --legacy",
+    "export": "sapper export --legacy",
+    "start": "node __sapper__/build",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "test": "run-p --race dev cy:run",
+    "netlify:build": "run-p netlify:build:**",
+    "netlify:build:export": "sapper export --legacy",
+    "netlify:build:lambda": "netlify-lambda build lambda"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "katex": "^0.11.1",
+    "netlify-lambda": "^1.6.3",
+    "polka": "next",
+    "sirv": "^0.4.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/runtime": "^7.7.2",
+    "@ignatiusmb/aqua": "git+https://github.com/ignatiusmb/aqua.git",
+    "@rollup/plugin-replace": "^2.2.1",
+    "cross-env": "^6.0.3",
+    "markdown-it": "^10.0.0",
+    "markdown-it-katex": "^2.0.3",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^1.27.2",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-svelte": "^5.1.1",
+    "rollup-plugin-terser": "^5.1.2",
+    "sapper": "^0.27.9",
+    "svelte": "^3.15.0"
+  }
+}
