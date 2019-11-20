@@ -2,7 +2,7 @@ package-lock.json
 yarn-error.log
 .DS_Store
 
-**/node_modules/
+/node_modules/
 /src/node_modules/@sapper/
 /cypress/screenshots/
 
