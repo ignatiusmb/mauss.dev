@@ -111,8 +111,9 @@
 
 <nav class:scrolled={scrolled || (!scrolled && active)}>
   <aside>
-    <a href="https://imbagus.com">max</a>
-    <a class="active" href="/">blog</a>
+    <a class={segment === undefined ? 'active' : ''} href="/">max</a>
+    <a class={segment === 'blog' ? 'active' : ''} href="/blog">blog</a>
+
     <ToggleTheme />
     <span on:click={expand}>
       <i class="fas fa-bars" />
@@ -121,10 +122,10 @@
   <main class:toggled>
     <ul>
       <li>
-        <a class={segment === 'notes' ? 'active' : ''} href="notes">notes</a>
+        <a href="notes">notes</a>
       </li>
       <li>
-        <a class={segment === 'posts' ? 'active' : ''} href="posts">posts</a>
+        <a href="posts">posts</a>
       </li>
     </ul>
   </main>
