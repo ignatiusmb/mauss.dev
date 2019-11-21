@@ -3,9 +3,6 @@
 </script>
 
 <style>
-  :global(body) {
-    background: #262626;
-  }
   article {
     font-family: 'Rubik', sans-serif;
     box-shadow: 0 0 10px black;
@@ -13,7 +10,8 @@
     margin: 3.5em auto;
     padding: 1em;
     box-sizing: border-box;
-    background: #fff;
+    background: var(--bg-color);
+    color: var(--fg-color);
   }
 
   span.red {
