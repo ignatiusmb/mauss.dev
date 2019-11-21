@@ -18,12 +18,13 @@
 </style>
 
 <svelte:head>
-  <title>Max's Blog</title>
+  <title>Ignatius Bagussuputra</title>
   <meta
     name="description"
     content="Hello! My name is Ignatius, and this is my online portfolio. My homepage will always be updated with my
     current situation, so come frequently to get the latest update. Check out my projects and social accounts or contact
     me through any social media given for business inquiries." />
+  <link rel="icon" type="image/png" href="images/favicon/home.png" />
 </svelte:head>
 
 <h1>Ignatius Bagussuputra</h1>
