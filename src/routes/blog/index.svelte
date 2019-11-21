@@ -1,13 +1,17 @@
 <script context="module">
+  const section = ['posts'];
   export async function preload(page, session) {
-    const res = await this.fetch(`posts.json`);
-    const posts = await res.json();
-    return { posts };
+    const data = {};
+    for (const name of section) {
+      const res = await this.fetch(`blog/${name}.json`);
+      data[name] = await res.json();
+    }
+    return data;
   }
 </script>
 
 <script>
-  import Card from '../../components/Card.svelte';
+  import Card from '../../components/PostCard.svelte';
 
   export let posts;
 </script>
@@ -17,6 +21,9 @@
     text-align: center;
   }
   article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 1em;
   }
   main {
@@ -28,14 +35,15 @@
 </style>
 
 <svelte:head>
-  <title>Max's Blog &bull; Posts</title>
+  <title>Ignatius' Blog &bull; Posts</title>
+  <link rel="shortcut icon" type="image/png" href="images/favicon/blog.png" />
 </svelte:head>
 
 <h1>Recent posts</h1>
 
 <article>
   {#each posts as post}
-    <Card src={post.image} href="posts/{post.slug}">
+    <Card src={post.image} href="blog/posts/{post.slug}">
       <main slot="main">
         <h3>{post.title}</h3>
         {#if post.desc}

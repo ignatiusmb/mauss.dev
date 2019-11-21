@@ -7,7 +7,7 @@
 </script>
 
 <script>
-  import Card from '../../../components/Card.svelte';
+  import Card from '../../../components/PostCard.svelte';
 
   export let posts;
 </script>
@@ -28,7 +28,7 @@
 </style>
 
 <svelte:head>
-  <title>Max's Blog &bull; Posts</title>
+  <title>Ignatius' Blog &bull; Posts</title>
   <link rel="shortcut icon" type="image/png" href="images/favicon/blog.png" />
 </svelte:head>
 
@@ -36,7 +36,7 @@
 
 <article>
   {#each posts as post}
-    <Card src={post.image} href="blog/{post.slug}">
+    <Card src={post.image} href="blog/posts/{post.slug}">
       <main slot="main">
         <h3>{post.title}</h3>
         {#if post.desc}
