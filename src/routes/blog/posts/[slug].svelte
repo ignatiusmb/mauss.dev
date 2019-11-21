@@ -2,7 +2,7 @@
   export async function preload(page, session) {
     const { slug } = page.params;
 
-    const res = await this.fetch(`posts/${slug}.json`);
+    const res = await this.fetch(`blog/posts/${slug}.json`);
     const post = await res.json();
 
     if (res.status === 200) return { post };
@@ -11,7 +11,7 @@
 </script>
 
 <script>
-  import { capitalize } from '../_helper';
+  import { capitalize } from '../../_helper';
 
   import { onMount } from 'svelte';
 
