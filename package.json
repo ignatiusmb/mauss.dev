@@ -1,7 +1,7 @@
 {
-  "name": "@ignatiusmb/blog",
-  "description": "Max's Blog",
-  "version": "19.11.19",
+  "name": "@ignatiusmb/imbagus",
+  "description": "Maximilian's Website",
+  "version": "19.11.24",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=dev npm-run-all --parallel dev:app dev:server",
