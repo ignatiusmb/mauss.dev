@@ -1,0 +1,35 @@
+const db = require('faunadb');
+
+/* configure faunaDB Client with our secret */
+const client = new db.Client({
+  secret: process.env.FAUNADB_SERVER_SECRET
+});
+
+/* export our lambda function as named "handler" export */
+module.exports = async (event, context) => {
+  /* parse the string body into a useable JS object */
+  const data = JSON.parse(event.body);
+  console.log('Function `create` invoked', data);
+  const item = {
+    data: data
+  };
+  /* construct the fauna query */
+  return client
+    .query(db.query.Create(db.query.Ref('classes/todos'), item))
+    .then(response => {
+      console.log('success', response);
+      /* Success! return the response with statusCode 200 */
+      return {
+        statusCode: 200,
+        body: JSON.stringify(response)
+      };
+    })
+    .catch(error => {
+      console.log('error', error);
+      /* Error! return the error with statusCode 400 */
+      return {
+        statusCode: 400,
+        body: JSON.stringify(error)
+      };
+    });
+};

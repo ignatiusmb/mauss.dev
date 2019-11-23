@@ -1,0 +1,13 @@
+{
+  "name": "lambda",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "keywords": [],
+  "author": "Ignatius Bagus",
+  "license": "MIT",
+  "dependencies": {
+    "faunadb": "^2.9.4",
+    "googleapis": "^45.0.0"
+  }
+}
