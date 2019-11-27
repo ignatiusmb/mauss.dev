@@ -1,4 +1,3 @@
 [build]
-  command = "npm run netlify:build"
-  functions = "functions"
+  command = "npm run netlify:build:export"
   publish = "__sapper__/export"
