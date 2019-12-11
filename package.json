@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=dev npm-run-all --parallel dev:app dev:server",
     "dev:app": "sapper dev",
-    "dev:server": "netlify-lambda serve lambda",
+    "dev:server": "netlify-lambda serve src/lambda",
     "build": "sapper build --legacy",
     "export": "sapper export --legacy",
     "start": "node __sapper__/build",
@@ -15,7 +15,7 @@
     "test": "run-p --race dev cy:run",
     "netlify:build": "run-p netlify:build:**",
     "netlify:build:export": "sapper export --legacy",
-    "netlify:build:lambda": "netlify-lambda build lambda"
+    "netlify:build:lambda": "netlify-lambda build src/lambda"
   },
   "dependencies": {
     "compression": "^1.7.4",
