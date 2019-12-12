@@ -1,0 +1,9 @@
+---
+date: 2019-12-11
+title: Boost and Enhance your Web Surfing Experience
+---
+
+1. Install [Greasemonkey for Firefox](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/) and [Tampermonkey for Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) to use `.user.js` scripts. For more info, [read more at OpenUserJS GitHub wiki](https://github.com/OpenUserJs/OpenUserJS.org/wiki/Userscript-Beginners-HOWTO)
+2. Some useful userscripts
+    - [AdsBypasser](https://adsbypasser.github.io/) to skip countdown ads or continue pages and prevent ad pop-up windows
+    - [AntiAdware](https://github.com/HandyUserscripts/AntiAdware/blob/master/AntiAdware.user.js) (Click on the raw button to download automatically) to avoid installing unwanted applications downloading with legitimate software
