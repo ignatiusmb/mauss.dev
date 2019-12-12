@@ -15,6 +15,7 @@
   .social-links {
     max-width: 12em;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     padding: 0.8em 0 0.6em;
     margin: auto;
@@ -52,6 +53,9 @@
     </a>
     <a href="https://www.instagram.com/ignatiusmb/">
       <i class="fab fa-instagram" />
+    </a>
+    <a href="https://twitter.com/ignatiusmbs">
+      <i class="fab fa-twitter" />
     </a>
     <a href="https://www.linkedin.com/in/ignatiusmb/">
       <i class="fab fa-linkedin" />
