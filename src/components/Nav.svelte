@@ -1,12 +1,15 @@
 <script>
   import ToggleTheme from './ToggleTheme.svelte';
+  import SideNav from './SideNav.svelte';
+  import NavToggle from './buttons/NavToggle.svelte';
+
+  import { navToggledStatus } from '../store.js';
 
   export let segment;
 
   let scrolled, active, toggled;
-  function expand() {
-    toggled = !toggled;
-  }
+
+  $: toggled = $navToggledStatus;
 </script>
 
 <style>
@@ -23,17 +26,7 @@
     transition: box-shadow 200ms;
   }
 
-  ul,
-  li {
-    display: flex;
-    padding: 0;
-    margin: 0;
-  }
-  li {
-    padding: 0.8em 0.6em;
-  }
-
-  aside {
+  main {
     position: sticky;
     width: 100%;
     display: flex;
@@ -41,17 +34,15 @@
     justify-content: space-between;
     padding: 0.8em 0.6em;
   }
-  aside a:first-child {
+  main a:first-child {
     margin-right: 0.5em;
     text-transform: uppercase;
   }
-  aside a:not(:first-child) {
+  main a:not(:first-child) {
     margin-left: 0.5em;
   }
-  aside span {
-    cursor: pointer;
+  main > :global(span) {
     margin-left: 1em;
-    font-size: 140%;
   }
 
   a {
@@ -87,46 +78,17 @@
   a:visited {
     color: inherit;
   }
-
-  main {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    transform: translateX(100%);
-    transition: transform 200ms;
-  }
-  main ul {
-    display: flex;
-    flex-direction: column;
-    padding-right: 2em;
-    background-color: var(--bg-color);
-  }
-  main.toggled {
-    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5);
-    transform: translateX(0%);
-  }
 </style>
 
 <svelte:window bind:scrollY={scrolled} />
 
 <nav class:scrolled={scrolled || (!scrolled && active)}>
-  <aside>
+  <main>
     <a class={segment === undefined ? 'active' : ''} href="/">max</a>
     <a class={segment === 'blog' ? 'active' : ''} href="/blog">blog</a>
 
     <ToggleTheme />
-    <span on:click={expand}>
-      <i class="fas fa-bars" />
-    </span>
-  </aside>
-  <main class:toggled>
-    <ul>
-      <li>
-        <a href="notes">notes</a>
-      </li>
-      <li>
-        <a href="posts">posts</a>
-      </li>
-    </ul>
+    <NavToggle>Menu</NavToggle>
   </main>
 </nav>
+<SideNav {toggled} />
