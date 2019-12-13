@@ -13,6 +13,7 @@
   img {
     width: 100%;
     max-width: 400px;
+    padding: 1em;
     margin: 1em auto 2em;
   }
 </style>
@@ -30,4 +31,4 @@
 <h1>Ignatius Bagussuputra</h1>
 <h2>Online Web Log</h2>
 <img alt="Code Thinking" src="images/undraw/code-thinking.svg" />
-<img alt="Personal Goals" src="images/undraw/personal-goals.svg" />
+<!-- <img alt="Personal Goals" src="images/undraw/personal-goals.svg" /> -->
