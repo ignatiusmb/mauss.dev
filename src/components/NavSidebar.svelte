@@ -1,7 +1,14 @@
 <script>
   import NavToggle from './buttons/NavToggle.svelte';
+  import HubUser from './hub/UserContainer.svelte';
   import { navToggledStatus } from '../store.js';
+  import { stores } from '@sapper/app';
+
   export let toggled;
+
+  const { page } = stores();
+
+  $: segment = $page.path.split('/').slice(1);
 </script>
 
 <style>
@@ -15,6 +22,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: space-between;
     background-color: var(--bg-color);
     transform: translateX(100%);
     transition: transform 200ms;
@@ -35,6 +43,7 @@
     margin: 0;
   }
   ul {
+    flex: 1;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -42,15 +51,15 @@
     background-color: var(--bg-color);
   }
   li {
-    padding: 0.8em 0.6em;
     border-top: 1px solid var(--fg-color);
   }
   li:last-child {
     border-bottom: 1px solid var(--fg-color);
   }
-  a {
+  aside :global(a) {
+    width: 100%;
     position: relative;
-    padding: 0.1em 0.2em;
+    padding: 0.7em 0.8em;
     color: var(--fg-color);
     text-transform: capitalize;
   }
@@ -59,12 +68,24 @@
 <!-- markup (zero or more items) goes here -->
 <aside class:toggled>
   <NavToggle>Close</NavToggle>
+
   <ul>
+    {#if segment[0] === ''}
+      <li>
+        <a href="resume">resume</a>
+      </li>
+    {:else if segment[0] === 'blog'}
+      <li>
+        <a href="blog/notes">notes</a>
+      </li>
+      <li>
+        <a href="blog/posts">posts</a>
+      </li>
+    {/if}
     <li>
-      <a href="notes">notes</a>
-    </li>
-    <li>
-      <a href="posts">posts</a>
+      <a href="contact">contact</a>
     </li>
   </ul>
+
+  <HubUser />
 </aside>

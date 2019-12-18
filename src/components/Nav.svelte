@@ -1,6 +1,6 @@
 <script>
   import ToggleTheme from './ToggleTheme.svelte';
-  import SideNav from './SideNav.svelte';
+  import NavSidebar from './NavSidebar.svelte';
   import NavToggle from './buttons/NavToggle.svelte';
 
   import { navToggledStatus } from '../store.js';
@@ -91,4 +91,4 @@
     <NavToggle>Menu</NavToggle>
   </main>
 </nav>
-<SideNav {toggled} />
+<NavSidebar {toggled} />
