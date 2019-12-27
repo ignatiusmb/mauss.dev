@@ -3,13 +3,16 @@
   import NavSidebar from './NavSidebar.svelte';
   import NavToggle from './buttons/NavToggle.svelte';
 
+  import { stores } from '@sapper/app';
   import { navToggledStatus } from '../store.js';
 
-  export let segment;
-
-  let scrolled, active, toggled;
+  const { page } = stores();
+  const pages = ['blog'];
+  let scrolled;
 
   $: toggled = $navToggledStatus;
+  $: path = $page.path.split('/').slice(1);
+  $: segment = pages.includes(path[0]) ? path[0] : 'home';
 </script>
 
 <style>
@@ -82,9 +85,9 @@
 
 <svelte:window bind:scrollY={scrolled} />
 
-<nav class:scrolled={scrolled || (!scrolled && active)}>
+<nav class:scrolled>
   <main>
-    <a class={segment === undefined ? 'active' : ''} href="/">max</a>
+    <a class={segment === 'home' ? 'active' : ''} href="/">max</a>
     <a class={segment === 'blog' ? 'active' : ''} href="/blog">blog</a>
 
     <ToggleTheme />
