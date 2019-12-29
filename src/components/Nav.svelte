@@ -15,6 +15,19 @@
   $: segment = pages.includes(path[0]) ? path[0] : 'home';
 </script>
 
+<svelte:window bind:scrollY={scrolled} />
+
+<nav class:scrolled>
+  <main>
+    <a class={segment === 'home' ? 'active' : ''} href="/">max</a>
+    <a class={segment === 'blog' ? 'active' : ''} href="/blog">blog</a>
+
+    <ToggleTheme />
+    <NavToggle>Menu</NavToggle>
+  </main>
+</nav>
+<NavSidebar {toggled} />
+
 <style>
   nav {
     z-index: 2;
@@ -82,16 +95,3 @@
     color: inherit;
   }
 </style>
-
-<svelte:window bind:scrollY={scrolled} />
-
-<nav class:scrolled>
-  <main>
-    <a class={segment === 'home' ? 'active' : ''} href="/">max</a>
-    <a class={segment === 'blog' ? 'active' : ''} href="/blog">blog</a>
-
-    <ToggleTheme />
-    <NavToggle>Menu</NavToggle>
-  </main>
-</nav>
-<NavSidebar {toggled} />

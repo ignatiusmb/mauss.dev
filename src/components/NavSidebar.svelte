@@ -11,10 +11,35 @@
   $: segment = $page.path.split('/').slice(1);
 </script>
 
+<!-- markup (zero or more items) goes here -->
+<aside class:toggled>
+  <NavToggle>Close</NavToggle>
+
+  <ul>
+    {#if segment[0] === ''}
+      <li>
+        <a href="resume">resume</a>
+      </li>
+    {:else if segment[0] === 'blog'}
+      <li>
+        <a href="blog/notes">notes</a>
+      </li>
+      <li>
+        <a href="blog/posts">posts</a>
+      </li>
+    {/if}
+    <li>
+      <a href="contact">contact</a>
+    </li>
+  </ul>
+
+  <HubUser />
+</aside>
+
 <style>
   aside {
     z-index: 3;
-    width: 10em;
+    width: 14em;
     height: 100%;
     position: fixed;
     top: 0;
@@ -31,9 +56,9 @@
     box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5);
     transform: translateX(0%);
   }
-  aside :global(span) {
+  aside > :global(span) {
     align-self: flex-end;
-    margin: 0.5em 1em;
+    margin: 0.8em 1em;
   }
 
   ul,
@@ -64,28 +89,3 @@
     text-transform: capitalize;
   }
 </style>
-
-<!-- markup (zero or more items) goes here -->
-<aside class:toggled>
-  <NavToggle>Close</NavToggle>
-
-  <ul>
-    {#if segment[0] === ''}
-      <li>
-        <a href="resume">resume</a>
-      </li>
-    {:else if segment[0] === 'blog'}
-      <li>
-        <a href="blog/notes">notes</a>
-      </li>
-      <li>
-        <a href="blog/posts">posts</a>
-      </li>
-    {/if}
-    <li>
-      <a href="contact">contact</a>
-    </li>
-  </ul>
-
-  <HubUser />
-</aside>

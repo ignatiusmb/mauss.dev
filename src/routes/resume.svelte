@@ -2,160 +2,6 @@
   // your script goes here
 </script>
 
-<style>
-  article {
-    font-family: 'Rubik', sans-serif;
-    box-shadow: 0 0 10px black;
-    max-width: 21cm;
-    margin: 3.5em auto;
-    padding: 1em;
-    box-sizing: border-box;
-    background: var(--bg-color);
-    color: var(--fg-color);
-  }
-
-  span.red {
-    color: #dc143c;
-  }
-  span.blue {
-    color: #0080ff;
-  }
-
-  a.link {
-    text-decoration: none;
-    color: rgb(17, 85, 204);
-  }
-
-  header {
-    font-family: 'Karla', sans-serif;
-  }
-  header h1 {
-    margin-bottom: 0.5em;
-    text-align: center;
-    font-size: 1.4em;
-  }
-
-  section {
-    padding: 0 0.25em;
-    margin-bottom: 1.25em;
-  }
-  section header {
-    padding: 0.2em 0.15em;
-    border-bottom: 1px solid black;
-    margin-bottom: -0.2em;
-    text-transform: uppercase;
-    font-size: 0.8em;
-    font-weight: bolder;
-  }
-  section .label {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0.5em 0 0.25em;
-    font-family: 'Karla', sans-serif;
-    font-size: 0.5em;
-  }
-  section .label h4 {
-    margin: 0;
-    font-weight: bolder;
-  }
-  section .label h4:first-child {
-    width: 15em;
-    color: #38761d;
-  }
-  section .label h4:nth-child(2) {
-    flex: 1;
-    text-align: right;
-  }
-  section .label h4:last-child {
-    width: 16em;
-    color: #666666;
-  }
-  section .description {
-    margin-bottom: 0.5em;
-    font-family: 'Cabin', sans-serif;
-    font-size: 0.5em;
-    font-weight: normal;
-  }
-  section ul {
-    padding-left: 1em;
-    margin: 0;
-    font-weight: 600;
-    font-size: 13px;
-  }
-  section ul li {
-    margin-bottom: 0.2em;
-    font-size: 0.5em;
-    font-weight: 400;
-  }
-
-  footer {
-    display: flex;
-    font-size: 0.4em;
-    font-family: 'Inconsolata', monospace;
-  }
-  footer span {
-    width: 11em;
-  }
-  footer span:nth-child(2) {
-    flex: 1;
-    text-align: center;
-  }
-  footer span:last-child {
-    text-align: right;
-  }
-
-  @media only screen and (min-width: 480px) {
-    section .label h4 {
-      margin: 0;
-      font-weight: bolder;
-    }
-    section .label h4:first-child {
-      color: #38761d;
-    }
-    section .label h4:nth-child(2) {
-      text-align: center;
-    }
-    section .label h4:last-child {
-      text-align: right;
-    }
-  }
-  @media only screen and (min-width: 768px) {
-    article {
-      padding: 1em 2em;
-    }
-    header h1 {
-      font-size: 3em;
-    }
-
-    section header {
-      font-size: 1.2em;
-    }
-    section div {
-      padding: 0 0.5em;
-    }
-    section .label {
-      font-size: 0.9em;
-    }
-    section .description {
-      font-size: 0.8em;
-    }
-    section ul {
-      padding-left: 2em;
-    }
-    section ul li {
-      font-size: 1em;
-    }
-    section .label h4:last-child {
-      width: 16em;
-    }
-    footer {
-      font-size: 0.9em;
-    }
-  }
-</style>
-
-<!-- markup (zero or more items) goes here -->
 <svelte:head>
   <link rel="shortcut icon" type="image/png" href="images/favicon/resume.png" />
 </svelte:head>
@@ -358,3 +204,156 @@
     <span>Résume</span>
   </footer>
 </article>
+
+<style>
+  article {
+    font-family: 'Rubik', sans-serif;
+    box-shadow: 0 0 10px black;
+    max-width: 21cm;
+    margin: 3.5em auto;
+    padding: 1em;
+    box-sizing: border-box;
+    background: var(--bg-color);
+    color: var(--fg-color);
+  }
+
+  span.red {
+    color: #dc143c;
+  }
+  span.blue {
+    color: #0080ff;
+  }
+
+  a.link {
+    text-decoration: none;
+    color: rgb(17, 85, 204);
+  }
+
+  header {
+    font-family: 'Karla', sans-serif;
+  }
+  header h1 {
+    margin-bottom: 0.5em;
+    text-align: center;
+    font-size: 1.4em;
+  }
+
+  section {
+    padding: 0 0.25em;
+    margin-bottom: 1.25em;
+  }
+  section header {
+    padding: 0.2em 0.15em;
+    border-bottom: 1px solid black;
+    margin-bottom: -0.2em;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: bolder;
+  }
+  section .label {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0.5em 0 0.25em;
+    font-family: 'Karla', sans-serif;
+    font-size: 0.5em;
+  }
+  section .label h4 {
+    margin: 0;
+    font-weight: bolder;
+  }
+  section .label h4:first-child {
+    width: 15em;
+    color: #38761d;
+  }
+  section .label h4:nth-child(2) {
+    flex: 1;
+    text-align: right;
+  }
+  section .label h4:last-child {
+    width: 16em;
+    color: #666666;
+  }
+  section .description {
+    margin-bottom: 0.5em;
+    font-family: 'Cabin', sans-serif;
+    font-size: 0.5em;
+    font-weight: normal;
+  }
+  section ul {
+    padding-left: 1em;
+    margin: 0;
+    font-weight: 600;
+    font-size: 13px;
+  }
+  section ul li {
+    margin-bottom: 0.2em;
+    font-size: 0.5em;
+    font-weight: 400;
+  }
+
+  footer {
+    display: flex;
+    font-size: 0.4em;
+    font-family: 'Inconsolata', monospace;
+  }
+  footer span {
+    width: 11em;
+  }
+  footer span:nth-child(2) {
+    flex: 1;
+    text-align: center;
+  }
+  footer span:last-child {
+    text-align: right;
+  }
+
+  @media only screen and (min-width: 480px) {
+    section .label h4 {
+      margin: 0;
+      font-weight: bolder;
+    }
+    section .label h4:first-child {
+      color: #38761d;
+    }
+    section .label h4:nth-child(2) {
+      text-align: center;
+    }
+    section .label h4:last-child {
+      text-align: right;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    article {
+      padding: 1em 2em;
+    }
+    header h1 {
+      font-size: 3em;
+    }
+
+    section header {
+      font-size: 1.2em;
+    }
+    section div {
+      padding: 0 0.5em;
+    }
+    section .label {
+      font-size: 0.9em;
+    }
+    section .description {
+      font-size: 0.8em;
+    }
+    section ul {
+      padding-left: 2em;
+    }
+    section ul li {
+      font-size: 1em;
+    }
+    section .label h4:last-child {
+      width: 16em;
+    }
+    footer {
+      font-size: 0.9em;
+    }
+  }
+</style>

@@ -5,6 +5,10 @@
   }
 </script>
 
+<span on:click={toggle}>
+  <slot />
+</span>
+
 <style>
   span {
     -webkit-user-select: none;
@@ -17,8 +21,3 @@
     text-transform: uppercase;
   }
 </style>
-
-<!-- markup (zero or more items) goes here -->
-<span on:click={toggle}>
-  <slot />
-</span>

@@ -1,14 +1,16 @@
 <script>
   import { onMount } from 'svelte';
 
-  let y, hide, height;
+  let y, height;
   onMount(() => (height = window.innerHeight));
 
-  $: {
-    if (y > height / 3) hide = false;
-    else hide = true;
-  }
+  $: hide = y > height / 3 ? false : true;
 </script>
+
+<svelte:window bind:scrollY={y} />
+<span class:hide on:click={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}>
+  <i class="fas fa-angle-double-up" />
+</span>
 
 <style>
   span {
@@ -36,9 +38,3 @@
     background-color: rgba(0, 0, 0, 0.5);
   }
 </style>
-
-<!-- markup (zero or more items) goes here -->
-<svelte:window bind:scrollY={y} />
-<span class:hide on:click={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}>
-  <i class="fas fa-angle-double-up" />
-</span>

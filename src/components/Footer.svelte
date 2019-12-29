@@ -2,6 +2,35 @@
   // your script goes here
 </script>
 
+<footer>
+  <slot />
+  <div class="social-links">
+    <a href="https://www.facebook.com/ignatiusmb">
+      <i class="fab fa-facebook" />
+    </a>
+    <a href="https://www.instagram.com/ignatiusmb/">
+      <i class="fab fa-instagram" />
+    </a>
+    <a href="https://twitter.com/ignatiusmbs">
+      <i class="fab fa-twitter" />
+    </a>
+    <a href="https://www.linkedin.com/in/ignatiusmb/">
+      <i class="fab fa-linkedin" />
+    </a>
+    <a href="https://github.com/ignatiusmb/">
+      <i class="fab fa-github" />
+    </a>
+    <a href="https://gitlab.com/ignatiusmb">
+      <i class="fab fa-gitlab" />
+    </a>
+    <a href="https://open.spotify.com/user/ignatiusmb/">
+      <i class="fab fa-spotify" />
+    </a>
+  </div>
+
+  <div class="copyright">Copyright &copy; 2019 Ignatius Bagussuputra</div>
+</footer>
+
 <style>
   footer {
     position: relative;
@@ -43,33 +72,3 @@
     transform: rotate(-6deg) scale(1.2) translateY(-20%);
   }
 </style>
-
-<!-- markup (zero or more items) goes here -->
-<footer>
-  <slot />
-  <div class="social-links">
-    <a href="https://www.facebook.com/ignatiusmb">
-      <i class="fab fa-facebook" />
-    </a>
-    <a href="https://www.instagram.com/ignatiusmb/">
-      <i class="fab fa-instagram" />
-    </a>
-    <a href="https://twitter.com/ignatiusmbs">
-      <i class="fab fa-twitter" />
-    </a>
-    <a href="https://www.linkedin.com/in/ignatiusmb/">
-      <i class="fab fa-linkedin" />
-    </a>
-    <a href="https://github.com/ignatiusmb/">
-      <i class="fab fa-github" />
-    </a>
-    <a href="https://gitlab.com/ignatiusmb">
-      <i class="fab fa-gitlab" />
-    </a>
-    <a href="https://open.spotify.com/user/ignatiusmb/">
-      <i class="fab fa-spotify" />
-    </a>
-  </div>
-
-  <div class="copyright">Copyright &copy; 2019 Ignatius Bagussuputra</div>
-</footer>

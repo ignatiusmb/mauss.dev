@@ -12,23 +12,8 @@
   export let posts;
 </script>
 
-<style>
-  h1 {
-    text-align: center;
-  }
-  article {
-    margin: 1em;
-  }
-  main {
-    padding: 1em;
-  }
-  h3 {
-    margin-bottom: 1em;
-  }
-</style>
-
 <svelte:head>
-  <title>Ignatius' Blog &bull; Posts</title>
+  <title>Posts &bull; Blog | IMB</title>
   <link rel="shortcut icon" type="image/png" href="images/favicon/blog.png" />
 </svelte:head>
 
@@ -46,3 +31,18 @@
     </Card>
   {/each}
 </article>
+
+<style>
+  h1 {
+    text-align: center;
+  }
+  article {
+    margin: 1em;
+  }
+  main {
+    padding: 1em;
+  }
+  h3 {
+    margin-bottom: 1em;
+  }
+</style>

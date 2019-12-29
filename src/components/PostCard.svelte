@@ -2,6 +2,18 @@
   export let src, alt, href;
 </script>
 
+<section>
+  <main>
+    <div class="img-wrapper">
+      <img {src} {alt} />
+    </div>
+    <slot name="main" />
+  </main>
+  <aside>
+    <a rel="prefetch" {href}>read</a>
+  </aside>
+</section>
+
 <style>
   section {
     position: relative;
@@ -12,17 +24,16 @@
     align-items: stretch;
     border-radius: 0.5em;
     box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
-    margin: 1em 0;
+    margin: 1em;
     background-color: var(--bg-card-color);
-    /* transform: scale(1); */
   }
-  div {
+  main {
     cursor: pointer;
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
     transform: translate(0%);
   }
-  div::before {
+  main::before {
     content: '';
     opacity: 0;
     position: absolute;
@@ -32,16 +43,21 @@
     background-color: #000;
     transition: opacity 15ms linear, background-color 15ms linear;
   }
-  div:hover::before {
+  main:hover::before {
     opacity: 0.04;
   }
-  img {
+  .img-wrapper {
+    position: relative;
+    padding-top: 56.25%;
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
     background-color: rgba(0, 0, 0, 0.15);
   }
-  img::before {
-    padding-top: 56.25%;
+  img {
+    position: absolute;
+    top: 0;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
   }
 
   aside {
@@ -62,14 +78,3 @@
     color: var(--fg-color);
   }
 </style>
-
-<!-- markup (zero or more items) goes here -->
-<section>
-  <div>
-    <img {src} {alt} />
-    <slot name="main" />
-  </div>
-  <aside>
-    <a rel="prefetch" {href}>read</a>
-  </aside>
-</section>

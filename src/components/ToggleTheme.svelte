@@ -39,6 +39,11 @@
   });
 </script>
 
+<label>
+  <input on:click={check} bind:checked class="input" type="checkbox" />
+  <span />
+</label>
+
 <style>
   label {
     position: relative;
@@ -84,9 +89,3 @@
     background-color: var(--bg-toggle-active-color);
   }
 </style>
-
-<!-- markup (zero or more items) goes here -->
-<label>
-  <input on:click={check} bind:checked class="input" type="checkbox" />
-  <span />
-</label>

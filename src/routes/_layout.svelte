@@ -5,9 +5,16 @@
 
   import '@ignatiusmb/aqua/lib/core.css';
   import '@ignatiusmb/aqua/lib/main.css';
-
-  export let segment;
 </script>
+
+<Nav />
+
+<main>
+  <slot />
+</main>
+
+<ScrollTop />
+<Footer />
 
 <style>
   main {
@@ -16,12 +23,3 @@
     background-color: var(--bg-color);
   }
 </style>
-
-<Nav {segment} />
-
-<main>
-  <slot />
-</main>
-
-<ScrollTop />
-<Footer />
