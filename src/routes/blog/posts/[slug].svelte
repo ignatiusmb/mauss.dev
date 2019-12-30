@@ -11,7 +11,7 @@
 </script>
 
 <script>
-  import { capitalize } from '../../_helper';
+  import { capitalize } from '../../../helper.js';
 
   import { onMount } from 'svelte';
 
@@ -25,6 +25,49 @@
     Aqua.code.highlight();
   });
 </script>
+
+<svelte:head>
+  <title>{post.metadata.title} &bull; Blog | IMB</title>
+  {#if post.metadata.description}
+    <meta name="description" content={post.metadata.description} />
+  {/if}
+  <link rel="stylesheet" href="css/blog.css" />
+</svelte:head>
+
+<header>
+  <main>
+    <h1>{post['metadata']['title']}</h1>
+    <small>
+      <span>{post['metadata']['pretty-date']}</span>
+      <div class="tags">
+        {#each post['metadata']['tags'] as tag}
+          <span>{capitalize(tag)}</span>
+        {/each}
+      </div>
+    </small>
+  </main>
+  <aside>
+    <div class="author-image">
+      <img src="images/avatar.jpg" alt="" />
+    </div>
+    <div class="author-detail">Ignatius Bagussuputra</div>
+  </aside>
+</header>
+
+<article>
+  {#if post.body.description}
+    <section>
+      {@html post.body.description}
+    </section>
+    <section>
+      {@html post.body.content}
+    </section>
+  {:else}
+    <section>
+      {@html post.body.content}
+    </section>
+  {/if}
+</article>
 
 <style>
   header,
@@ -93,40 +136,3 @@
     }
   }
 </style>
-
-<svelte:head>
-  <title>Max's Blog &bull; {capitalize(post.metadata.category)} &rarr; {post.metadata.title}</title>
-  {#if post.metadata.description}
-    <meta name="description" content={post.metadata.description} />
-  {/if}
-  <link rel="stylesheet" href="css/blog.css" />
-</svelte:head>
-
-<header>
-  <main>
-    <h1>{post.metadata.title}</h1>
-    <small>
-      <span>{post.metadata['pretty-date']}</span>
-      <span>{capitalize(post.metadata.category)}</span>
-    </small>
-  </main>
-  <aside>
-    <div class="author-image">
-      <img src="images/avatar.jpg" alt="" />
-    </div>
-    <div class="author-detail">Ignatius Bagussuputra</div>
-  </aside>
-</header>
-
-<article>
-  {#if post.body.description}
-    <section>
-      {@html post.body.description}
-    </section>
-    <section>
-      {@html post.body.content}
-    </section>
-  {:else}
-    {@html post.body.content}
-  {/if}
-</article>
