@@ -41,17 +41,11 @@
       <span>{post['metadata']['pretty-date']}</span>
       <div class="tags">
         {#each post['metadata']['tags'] as tag}
-          <span>{capitalize(tag)}</span>
+          <a href="blog/t/{tag}">#{tag}</a>
         {/each}
       </div>
     </small>
   </main>
-  <aside>
-    <div class="author-image">
-      <img src="images/avatar.jpg" alt="" />
-    </div>
-    <div class="author-detail">Ignatius Bagussuputra</div>
-  </aside>
 </header>
 
 <article>
@@ -59,14 +53,10 @@
     <section>
       {@html post.body.description}
     </section>
-    <section>
-      {@html post.body.content}
-    </section>
-  {:else}
-    <section>
-      {@html post.body.content}
-    </section>
   {/if}
+  <section>
+    {@html post.body.content}
+  </section>
 </article>
 
 <style>
@@ -74,27 +64,23 @@
   article {
     width: 100%;
     max-width: 48em;
-    padding: 0 1em;
+    padding: 0 0.75em;
     margin: 0 auto;
   }
 
-  aside {
+  header .tags {
     display: flex;
-    align-items: center;
-    padding: 1em;
-    border-radius: 0.5em;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    margin: 0 1em 6em;
-    background-color: var(--bg-color);
-
-    font-family: 'Roboto', sans-serif;
+    margin-top: 0.5em;
   }
-  aside .author-detail {
-    letter-spacing: 0.003125em;
+  header .tags a {
+    padding: 0.2em 0.4em;
+    border-radius: 0.2em;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background: #d6d9e0;
+    color: #606570;
   }
-  aside .author-image img {
-    max-width: 5em;
-    border-radius: 50%;
+  header .tags a:not(:last-child) {
     margin-right: 1em;
   }
 
@@ -127,6 +113,12 @@
   }
   article :global(.info-box) {
     font-size: 1rem;
+  }
+  article :global(blockquote) {
+    font-style: italic;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    margin: 4.8rem 120px;
   }
 
   @media only screen and (min-width: 600px) {

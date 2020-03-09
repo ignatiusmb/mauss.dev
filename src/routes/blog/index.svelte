@@ -47,6 +47,9 @@
     justify-items: center;
     margin: 1em;
   }
+  article :global(img:not([src])) {
+    display: none;
+  }
   main {
     padding: 1em;
   }

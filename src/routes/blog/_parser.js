@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const markIt = require('markdown-it')({ html: true });
-markIt.use(require('markdown-it-katex'));
+const markIt = require('markdown-it')({ html: true }).use(require('markdown-it-katex'));
 
 /**
  * Markdown files parser in a directory
