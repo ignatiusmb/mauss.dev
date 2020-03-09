@@ -95,7 +95,7 @@ body {
 }
 
 p {
-  color: var(--fg-secondary-color);
+  color: var(--fg-color);
 }
 
 code {

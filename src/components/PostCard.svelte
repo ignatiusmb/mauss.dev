@@ -20,7 +20,7 @@
     display: grid;
     grid-template-rows: 6fr 1fr;
     width: 100%;
-    border-radius: 0.5em;
+    border-radius: 0.25em;
     box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
     background-color: var(--bg-card-color);
   }
@@ -52,7 +52,6 @@
     background-color: rgba(0, 0, 0, 0.15);
   }
   img {
-    position: absolute;
     width: 100%;
     height: 100%;
     border-top-left-radius: inherit;
