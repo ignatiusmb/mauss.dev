@@ -35,7 +35,7 @@ function parse(dirname, fileParse, SEPARATOR = '<!-- content -->') {
 
     metadata = fileParse(filename.split('.'), metadata);
     return { metadata, body };
-  }).sort((x, y) => x.metadata.date < y.metadata.date);
+  }).sort((x, y) => y.metadata.dt.getTime() - x.metadata.dt.getTime());
 }
 
 export default parse;

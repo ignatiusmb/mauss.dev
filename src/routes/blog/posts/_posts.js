@@ -5,6 +5,7 @@ export default parse('content/posts/', (fileData, metadata) => {
   const weekday = dt.toLocaleDateString('default', { weekday: 'long' });
   const month = dt.toLocaleDateString('default', { month: 'long' });
   metadata['pretty-date'] = `${weekday}, ${dt.getDate()} ${month} ${dt.getFullYear()}`;
+  metadata.dt = dt;
   metadata.slug = fileData[1];
 
   return metadata;
