@@ -1,16 +1,12 @@
 <script>
   import ToggleTheme from './ToggleTheme.svelte';
-  import NavSidebar from './NavSidebar.svelte';
-  import NavToggle from './buttons/NavToggle.svelte';
 
   import { stores } from '@sapper/app';
-  import { navToggledStatus } from '../store.js';
 
   const { page } = stores();
   const pages = ['posts'];
   let scrolled;
 
-  $: toggled = $navToggledStatus;
   $: path = $page.path.split('/').slice(1);
   $: segment = pages.includes(path[0]) ? path[0] : 'home';
 </script>

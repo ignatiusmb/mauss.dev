@@ -25,7 +25,7 @@
 </script>
 
 <svelte:head>
-  <title>{post.metadata.title} &bull; Blog | IMB</title>
+  <title>{post.metadata.title} &bull; Posts | IMB</title>
   {#if post.metadata.description}
     <meta name="description" content={post.metadata.description} />
   {/if}
