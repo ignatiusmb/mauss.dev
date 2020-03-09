@@ -19,6 +19,7 @@ jobs:
           node-version: 13.x
       - run: npm install
       - run: npm run export
+      - run: pwd
 
       - name: Deploy to Netlify
         uses: netlify/actions/cli@master
@@ -28,3 +29,4 @@ jobs:
         with:
           args: deploy --dir=__sapper__/export --prod
           secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
+        run: pwd
