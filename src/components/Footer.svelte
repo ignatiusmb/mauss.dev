@@ -28,7 +28,7 @@
     </a>
   </div>
 
-  <div class="copyright">Copyright &copy; 2019 Ignatius Bagussuputra</div>
+  <div class="copyright">Copyright &copy; 2020 Ignatius Bagussuputra</div>
 </footer>
 
 <style>
@@ -43,16 +43,15 @@
   }
   .social-links {
     max-width: 12em;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-gap: 0.25em;
+    grid-template-columns: repeat(auto-fit, minmax(1em, 1fr));
     padding: 0.8em 0 0.6em;
     margin: auto;
     font-size: 2.5rem;
   }
   .social-links a,
   .social-links a:visited {
-    padding: 0.24em;
     transition: 0.15s;
     transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
     color: var(--fg-secondary-color);
@@ -70,5 +69,9 @@
   .social-links a:hover:nth-child(even),
   .social-links a:focus:nth-child(even) {
     transform: rotate(-6deg) scale(1.2) translateY(-20%);
+  }
+
+  .copyright {
+    font-weight: bold;
   }
 </style>
