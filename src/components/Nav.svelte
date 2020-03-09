@@ -7,7 +7,7 @@
   import { navToggledStatus } from '../store.js';
 
   const { page } = stores();
-  const pages = ['blog'];
+  const pages = ['posts'];
   let scrolled;
 
   $: toggled = $navToggledStatus;
@@ -20,7 +20,7 @@
 <nav class:scrolled>
   <main>
     <a class={segment === 'home' ? 'active' : ''} href="/">max</a>
-    <a class={segment === 'blog' ? 'active' : ''} href="/blog">blog</a>
+    <a class={segment === 'posts' ? 'active' : ''} href="/posts">posts</a>
 
     <ToggleTheme />
   </main>

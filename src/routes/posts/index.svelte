@@ -1,12 +1,8 @@
 <script context="module">
-  const section = ['posts'];
   export async function preload(page, session) {
-    const data = {};
-    for (const name of section) {
-      const res = await this.fetch(`blog/${name}.json`);
-      data[name] = await res.json();
-    }
-    return data;
+    const res = await this.fetch(`posts.json`);
+    const posts = await res.json();
+    return { posts };
   }
 </script>
 
@@ -25,7 +21,7 @@
 
 <article>
   {#each posts as post}
-    <Card src={post.image} date={post.date} href="blog/posts/{post.slug}">
+    <Card src={post.image} alt={post.title} date={post.date} href="posts/{post.slug}">
       <main slot="main">
         <h3>{post.title}</h3>
         {#if post.desc}
@@ -45,7 +41,9 @@
     grid-gap: 1em;
     grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
     justify-items: center;
-    margin: 1em;
+    max-width: 90em;
+    padding: 0 1em;
+    margin: 1em auto;
   }
   article :global(img:not([src])) {
     display: none;
