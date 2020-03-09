@@ -25,7 +25,7 @@
 
 <article>
   {#each posts as post}
-    <Card src={post.image} href="blog/posts/{post.slug}">
+    <Card src={post.image} date={post.date} href="blog/posts/{post.slug}">
       <main slot="main">
         <h3>{post.title}</h3>
         {#if post.desc}
@@ -41,10 +41,10 @@
     text-align: center;
   }
   article {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: center;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+    justify-items: center;
     margin: 1em;
   }
   main {

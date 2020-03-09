@@ -4,6 +4,7 @@ const contents = JSON.stringify(
   posts.map(post => {
     return {
       slug: post.metadata.slug,
+      date: post.metadata['pretty-date'],
       title: post.metadata.title,
       desc: post.metadata.description,
       image: post.metadata.image
