@@ -29,4 +29,4 @@ jobs:
         with:
           args: deploy --dir=__sapper__/export --prod
           secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
-        run: pwd
+      - run: pwd
