@@ -23,10 +23,8 @@
     <a class={segment === 'blog' ? 'active' : ''} href="/blog">blog</a>
 
     <ToggleTheme />
-    <NavToggle>Menu</NavToggle>
   </main>
 </nav>
-<NavSidebar {toggled} />
 
 <style>
   nav {
