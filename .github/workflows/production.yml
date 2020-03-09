@@ -17,9 +17,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 13.x
-      - run: npm install
-      - run: npm run export
-      - run: pwd
+
+      - name: Installing node packages
+        run: npm install
+
+      - name: Exporting static site
+        run: npm run export
 
       - name: Deploy to Netlify
         uses: netlify/actions/cli@master
@@ -29,4 +32,3 @@ jobs:
         with:
           args: deploy --dir=__sapper__/export --prod
           secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
-      - run: pwd
