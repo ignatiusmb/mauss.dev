@@ -17,9 +17,9 @@
 <Footer />
 
 <style>
-  main {
-    flex: 1;
-    padding-top: 1em;
-    background-color: var(--bg-color);
+  :global(#sapper) {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 </style>
