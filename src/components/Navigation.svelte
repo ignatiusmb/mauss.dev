@@ -14,12 +14,10 @@
 <svelte:window bind:scrollY={scrolled} />
 
 <nav class:scrolled>
-  <main>
-    <a class={segment === 'home' ? 'active' : ''} href="/">max</a>
-    <a class={segment === 'posts' ? 'active' : ''} href="/posts">posts</a>
+  <a class={segment === 'home' ? 'active' : ''} href="/">max</a>
+  <a class={segment === 'posts' ? 'active' : ''} href="/posts">posts</a>
 
-    <ToggleTheme />
-  </main>
+  <ToggleTheme />
 </nav>
 
 <style>
@@ -27,32 +25,16 @@
     z-index: 2;
     position: sticky;
     top: 0;
-    display: flex;
-    padding: 0 0.5em;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(2, auto) 1fr;
+    align-items: center;
+    padding: 0.8em 1em;
     background-color: var(--bg-color);
   }
   nav.scrolled {
     box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5);
     transition: box-shadow 200ms;
-  }
-
-  main {
-    position: sticky;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.8em 0.6em;
-  }
-  main a:first-child {
-    margin-right: 0.5em;
-    text-transform: uppercase;
-  }
-  main a:not(:first-child) {
-    margin-left: 0.5em;
-  }
-  main > :global(span) {
-    margin-left: 1em;
   }
 
   a {
@@ -87,5 +69,9 @@
   }
   a:visited {
     color: inherit;
+  }
+
+  a:first-child {
+    text-transform: uppercase;
   }
 </style>
