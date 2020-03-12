@@ -7,9 +7,9 @@
 </script>
 
 <script>
-  import Card from '../../components/PostCard.svelte';
-
   export let posts;
+  import FlyWrapper from '../../components/transition/Fly.svelte';
+  import Card from '../../components/PostCard.svelte';
 </script>
 
 <svelte:head>
@@ -17,20 +17,22 @@
   <link rel="shortcut icon" type="image/png" href="images/favicon/blog.png" />
 </svelte:head>
 
-<h1>Recent posts</h1>
+<FlyWrapper>
+  <h1>Recent posts</h1>
 
-<article>
-  {#each posts as post}
-    <Card src={post.image} alt={post.title} date={post.date} href="posts/{post.slug}">
-      <main slot="main">
-        <h3>{post.title}</h3>
-        {#if post.desc}
-          <small>{post.desc}</small>
-        {/if}
-      </main>
-    </Card>
-  {/each}
-</article>
+  <article>
+    {#each posts as post, idx}
+      <Card src={post.image} alt={post.title} date={post.date} href="posts/{post.slug}" time={600 + 100 * idx}>
+        <main slot="main">
+          <h3>{post.title}</h3>
+          {#if post.desc}
+            <small>{post.desc}</small>
+          {/if}
+        </main>
+      </Card>
+    {/each}
+  </article>
+</FlyWrapper>
 
 <style>
   h1 {
@@ -38,10 +40,10 @@
   }
   article {
     display: grid;
-    grid-gap: 1em;
-    grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
-    justify-items: center;
-    max-width: 90em;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(18em, 26em));
+    justify-content: center;
+    max-width: 82em;
     padding: 0 1em;
     margin: 1em auto;
   }

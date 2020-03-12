@@ -11,9 +11,10 @@
 </script>
 
 <script>
-  import { onMount } from 'svelte';
-
   export let post;
+  import FlyWrapper from '../../components/transition/Fly.svelte';
+
+  import { onMount } from 'svelte';
 
   onMount(async () => {
     const Aqua = await import('@ignatiusmb/aqua');
@@ -29,39 +30,42 @@
   {#if post.metadata.description}
     <meta name="description" content={post.metadata.description} />
   {/if}
+  <link rel="shortcut icon" type="image/png" href="images/favicon/blog.png" />
   <link rel="stylesheet" href="css/blog.css" />
 </svelte:head>
 
-<header>
-  <main>
-    <h1>{post['metadata']['title']}</h1>
-    <small>
-      <span>{post['metadata']['pretty-date']}</span>
-      <div class="tags">
-        {#each post['metadata']['tags'] as tag}
-          <a href="t/{tag}">#{tag}</a>
-        {/each}
-      </div>
-    </small>
-  </main>
-</header>
+<FlyWrapper>
+  <header>
+    <main>
+      <h1>{post['metadata']['title']}</h1>
+      <small>
+        <span>{post['metadata']['pretty-date']}</span>
+        <div class="tags">
+          {#each post['metadata']['tags'] as tag}
+            <a href="tag/{tag}">#{tag}</a>
+          {/each}
+        </div>
+      </small>
+    </main>
+  </header>
 
-<article>
-  {#if post.body.description}
+  <article>
+    {#if post.body.description}
+      <section>
+        {@html post.body.description}
+      </section>
+    {/if}
     <section>
-      {@html post.body.description}
+      {@html post.body.content}
     </section>
-  {/if}
-  <section>
-    {@html post.body.content}
-  </section>
-</article>
+  </article>
+</FlyWrapper>
 
 <style>
   header,
   article {
     width: 100%;
-    max-width: 48em;
+    max-width: 42em;
     padding: 0 0.75em;
     margin: 0 auto;
   }
