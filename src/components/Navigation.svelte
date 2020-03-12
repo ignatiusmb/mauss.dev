@@ -8,8 +8,8 @@
 <svelte:window bind:scrollY={scrolled} />
 
 <nav class:scrolled>
-  <a aria-current={segment === undefined ? 'page' : undefined} href="/">max</a>
-  <a aria-current={segment === 'posts' ? 'page' : undefined} href="/posts">posts</a>
+  <a rel="prefetch" aria-current={segment === undefined ? 'page' : undefined} href="/">max</a>
+  <a rel="prefetch" aria-current={segment === 'posts' ? 'page' : undefined} href="/posts">posts</a>
 
   <ToggleTheme />
 </nav>

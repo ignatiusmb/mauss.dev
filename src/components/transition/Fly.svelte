@@ -13,7 +13,3 @@
     <slot />
   </main>
 {/if}
-
-<style>
-  /* your styles go here */
-</style>

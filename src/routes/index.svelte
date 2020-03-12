@@ -32,6 +32,7 @@
 
 <style>
   h1 {
+    margin: 1.5em 0 1em;
     text-align: center;
     text-transform: uppercase;
     font-size: 300%;

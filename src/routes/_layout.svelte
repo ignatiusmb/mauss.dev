@@ -21,8 +21,4 @@
     display: flex;
     flex-direction: column;
   }
-
-  :global(main h1) {
-    margin: 1.5em 0 1em;
-  }
 </style>

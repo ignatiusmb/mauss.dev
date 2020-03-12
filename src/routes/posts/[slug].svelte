@@ -12,7 +12,6 @@
 
 <script>
   export let post;
-  import FlyWrapper from '../../components/transition/Fly.svelte';
 
   import { onMount } from 'svelte';
 
@@ -34,32 +33,30 @@
   <link rel="stylesheet" href="css/blog.css" />
 </svelte:head>
 
-<FlyWrapper>
-  <header>
-    <main>
-      <h1>{post['metadata']['title']}</h1>
-      <small>
-        <span>{post['metadata']['pretty-date']}</span>
-        <div class="tags">
-          {#each post['metadata']['tags'] as tag}
-            <a href="tag/{tag}">#{tag}</a>
-          {/each}
-        </div>
-      </small>
-    </main>
-  </header>
+<header>
+  <main>
+    <h1>{post['metadata']['title']}</h1>
+    <small>
+      <span>{post['metadata']['pretty-date']}</span>
+      <div class="tags">
+        {#each post['metadata']['tags'] as tag}
+          <a href="tag/{tag}">#{tag}</a>
+        {/each}
+      </div>
+    </small>
+  </main>
+</header>
 
-  <article>
-    {#if post.body.description}
-      <section>
-        {@html post.body.description}
-      </section>
-    {/if}
+<article>
+  {#if post.body.description}
     <section>
-      {@html post.body.content}
+      {@html post.body.description}
     </section>
-  </article>
-</FlyWrapper>
+  {/if}
+  <section>
+    {@html post.body.content}
+  </section>
+</article>
 
 <style>
   header,
@@ -70,6 +67,9 @@
     margin: 0 auto;
   }
 
+  header h1 {
+    margin: 1em 0 0.5em;
+  }
   header .tags {
     display: flex;
     margin-top: 0.5em;

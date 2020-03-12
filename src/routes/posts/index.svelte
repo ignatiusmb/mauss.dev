@@ -8,7 +8,6 @@
 
 <script>
   export let posts;
-  import FlyWrapper from '../../components/transition/Fly.svelte';
   import Card from '../../components/PostCard.svelte';
 </script>
 
@@ -17,25 +16,24 @@
   <link rel="shortcut icon" type="image/png" href="images/favicon/blog.png" />
 </svelte:head>
 
-<FlyWrapper>
-  <h1>Recent posts</h1>
+<h1>Recent posts</h1>
 
-  <article>
-    {#each posts as post, idx}
-      <Card src={post.image} alt={post.title} date={post.date} href="posts/{post.slug}" time={600 + 100 * idx}>
-        <main slot="main">
-          <h3>{post.title}</h3>
-          {#if post.desc}
-            <small>{post.desc}</small>
-          {/if}
-        </main>
-      </Card>
-    {/each}
-  </article>
-</FlyWrapper>
+<article>
+  {#each posts as post, idx}
+    <Card src={post.image} alt={post.title} date={post.date} href="posts/{post.slug}" time={600 + 100 * idx}>
+      <main slot="main">
+        <h3>{post.title}</h3>
+        {#if post.desc}
+          <small>{post.desc}</small>
+        {/if}
+      </main>
+    </Card>
+  {/each}
+</article>
 
 <style>
   h1 {
+    margin: 1.5em 0 1em;
     text-align: center;
   }
   article {
