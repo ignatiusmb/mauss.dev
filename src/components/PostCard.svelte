@@ -1,8 +1,10 @@
 <script>
-  export let src, alt, date, href;
+  export let src, alt, date, href, time;
+
+  import { fly } from 'svelte/transition';
 </script>
 
-<section>
+<section in:fly={{ x: -200, duration: time }} out:fly={{ x: 200, duration: 300 }}>
   <main>
     <div class="img-wrapper">
       <img {src} {alt} />
@@ -18,7 +20,7 @@
 <style>
   section {
     display: grid;
-    grid-template-rows: 6fr 1fr;
+    grid-template-rows: 6fr 3em;
     width: 100%;
     border-radius: 0.25em;
     box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);

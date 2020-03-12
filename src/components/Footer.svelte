@@ -35,6 +35,7 @@
   footer {
     position: relative;
     padding: 4em 0 6em;
+    margin-top: auto;
     text-align: center;
     font-family: 'Rubik', sans-serif;
   }
@@ -42,13 +43,13 @@
     font-size: 2rem;
   }
   .social-links {
-    max-width: 12em;
+    max-width: 14em;
     display: grid;
-    grid-gap: 0.25em;
-    grid-template-columns: repeat(auto-fit, minmax(1em, 1fr));
-    padding: 0.8em 0 0.6em;
+    gap: 0.25em;
+    grid-template-columns: repeat(auto-fit, minmax(0.75em, 1fr));
+    padding: 0.8em 0.5em 0.6em;
     margin: auto;
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .social-links a,
   .social-links a:visited {
@@ -70,8 +71,14 @@
   .social-links a:focus:nth-child(even) {
     transform: rotate(-6deg) scale(1.2) translateY(-20%);
   }
-
   .copyright {
+    font-size: 90%;
     font-weight: bold;
+  }
+
+  @media only screen and (min-width: 480px) {
+    .social-links {
+      font-size: 2.5rem;
+    }
   }
 </style>

@@ -1,21 +1,15 @@
 <script>
+  export let segment;
   import ToggleTheme from './ToggleTheme.svelte';
 
-  import { stores } from '@sapper/app';
-
-  const { page } = stores();
-  const pages = ['posts'];
   let scrolled;
-
-  $: path = $page.path.split('/').slice(1);
-  $: segment = pages.includes(path[0]) ? path[0] : 'home';
 </script>
 
 <svelte:window bind:scrollY={scrolled} />
 
 <nav class:scrolled>
-  <a class={segment === 'home' ? 'active' : ''} href="/">max</a>
-  <a class={segment === 'posts' ? 'active' : ''} href="/posts">posts</a>
+  <a aria-current={segment === undefined ? 'page' : undefined} href="/">max</a>
+  <a aria-current={segment === 'posts' ? 'page' : undefined} href="/posts">posts</a>
 
   <ToggleTheme />
 </nav>
@@ -37,6 +31,10 @@
     transition: box-shadow 200ms;
   }
 
+  [aria-current]::after {
+    width: 100%;
+    background-color: maroon;
+  }
   a {
     position: relative;
     padding: 0.1em 0.2em;
@@ -55,14 +53,8 @@
     transition: width 200ms ease;
     transform: translateY(100%);
   }
-  a:active::after,
-  .active::after {
-    width: 100%;
-    background-color: maroon;
-  }
   a:hover::after,
-  a:focus::after,
-  a:active::after {
+  a:focus::after {
     left: 0;
     right: auto;
     width: 100%;

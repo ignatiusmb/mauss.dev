@@ -1,4 +1,5 @@
 <script>
+  export let segment;
   import Navigation from '../components/Navigation.svelte';
   import Footer from '../components/Footer.svelte';
   import ScrollTop from '../components/ScrollTop.svelte';
@@ -7,11 +8,9 @@
   import '@ignatiusmb/aqua/lib/main.css';
 </script>
 
-<Navigation />
+<Navigation {segment} />
 
-<main>
-  <slot />
-</main>
+<slot />
 
 <ScrollTop />
 <Footer />
@@ -21,5 +20,9 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
+  }
+
+  :global(main h1) {
+    margin: 1.5em 0 1em;
   }
 </style>

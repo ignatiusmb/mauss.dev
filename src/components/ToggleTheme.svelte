@@ -33,8 +33,8 @@
       html.classList.remove('light');
     } else if (theme === 'light') {
       checked = false;
-      html.classList.remove('dark');
       html.classList.add('light');
+      html.classList.remove('dark');
     }
   });
 </script>
