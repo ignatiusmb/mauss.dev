@@ -1,6 +1,6 @@
-import resolve from 'rollup-plugin-node-resolve';
+import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
-import commonjs from 'rollup-plugin-commonjs';
+import commonjs from '@rollup/plugin-commonjs';
 import svelte from 'rollup-plugin-svelte';
 import babel from 'rollup-plugin-babel';
 import json from 'rollup-plugin-json';
@@ -32,7 +32,7 @@ export default {
       }),
       resolve({
         browser: true,
-        dedupe
+        dedupe: ['svelte']
       }),
       commonjs(),
       json(),
@@ -80,10 +80,11 @@ export default {
       }),
       svelte({
         generate: 'ssr',
+        hydratable: true,
         dev
       }),
       resolve({
-        dedupe
+        dedupe: ['svelte']
       }),
       commonjs(),
       json()
