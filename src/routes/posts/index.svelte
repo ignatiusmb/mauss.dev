@@ -41,6 +41,7 @@
     gap: 1em;
     grid-template-columns: repeat(auto-fit, minmax(18em, 26em));
     justify-content: center;
+    width: 100%;
     max-width: 82em;
     padding: 0 1em;
     margin: 1em auto;
