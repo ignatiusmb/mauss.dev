@@ -19,8 +19,10 @@
   },
   "dependencies": {
     "compression": "^1.7.4",
+    "glob": "^7.1.6",
     "gotrue-js": "^0.9.25",
     "katex": "^0.11.1",
+    "mz": "^2.7.0",
     "netlify-lambda": "^1.6.3",
     "polka": "^1.0.0-next.11",
     "sirv": "^0.4.2"

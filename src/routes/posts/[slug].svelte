@@ -2,18 +2,30 @@
   export async function preload(page, session) {
     const { slug } = page.params;
 
-    const res = await this.fetch(`posts/${slug}.json`);
-    const post = await res.json();
+    const res = await this.fetch(`content/posts/${slug}.md`);
+    const content = await res.json();
 
-    if (res.status === 200) return { post };
-    else this.error(res.status, post.message);
+    if (res.status === 200) return { content };
+    else this.error(res.status, content.message);
   }
 </script>
 
 <script>
-  export let post;
+  export let content;
 
   import { onMount } from 'svelte';
+  import { parseFile } from '../_parser.js';
+
+  $: post = parseFile(content, (fileData, metadata) => {
+    const dt = new Date(fileData[0]);
+    const weekday = dt.toLocaleDateString('default', { weekday: 'long' });
+    const month = dt.toLocaleDateString('default', { month: 'long' });
+    metadata['dt'] = dt;
+    metadata['pretty-date'] = `${weekday}, ${dt.getDate()} ${month} ${dt.getFullYear()}`;
+    metadata['slug'] = fileData[1];
+
+    return metadata;
+  });
 
   onMount(async () => {
     const Aqua = await import('@ignatiusmb/aqua');
@@ -48,11 +60,6 @@
 </header>
 
 <article>
-  {#if post.body.description}
-    <section>
-      {@html post.body.description}
-    </section>
-  {/if}
   <section>
     {@html post.body.content}
   </section>

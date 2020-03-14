@@ -11,7 +11,17 @@
     timeout = setTimeout(repeat, 5000);
   }
 
-  onMount(() => (timeout = setTimeout(repeat, 1000)));
+  onMount(() => {
+    timeout = setTimeout(repeat, 1000);
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on('init', user => {
+        if (user) return;
+        window.netlifyIdentity.on('login', () => {
+          document.location.href = '/admin/';
+        });
+      });
+    }
+  });
   onDestroy(() => clearTimeout(timeout));
 </script>
 
