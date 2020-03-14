@@ -8,3 +8,6 @@ yarn-error.log
 
 /__sapper__/
 functions/
+
+# Local Netlify folder
+.netlify
