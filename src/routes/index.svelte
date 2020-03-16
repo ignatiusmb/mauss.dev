@@ -13,14 +13,13 @@
 
   onMount(() => {
     timeout = setTimeout(repeat, 1000);
-    if (window.netlifyIdentity) {
+    if (window.netlifyIdentity)
       window.netlifyIdentity.on('init', user => {
         if (user) return;
         window.netlifyIdentity.on('login', () => {
           document.location.href = '/admin/';
         });
       });
-    }
   });
   onDestroy(() => clearTimeout(timeout));
 </script>
@@ -33,6 +32,9 @@
     current situation, so come frequently to get the latest update. Check out my projects and social accounts or contact
     me through any social media given for business inquiries." />
   <link rel="icon" type="image/png" href="images/favicon/home.png" />
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js">
+
+  </script>
 </svelte:head>
 
 <FlyWrapper>
