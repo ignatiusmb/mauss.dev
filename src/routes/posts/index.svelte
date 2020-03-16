@@ -2,7 +2,9 @@
   export async function preload(page, session) {
     const res = await this.fetch(`posts.json`);
     const posts = await res.json();
-    return { posts: posts.map(post => post.metadata) };
+
+    if (res.status === 200) return { posts };
+    else this.error(res.status, posts.message);
   }
 </script>
 
@@ -20,7 +22,13 @@
 
 <article>
   {#each posts as post, idx}
-    <Card src={post.image} alt={post.title} date={post['pretty-date']} href="posts/{post.slug}" time={600 + 100 * idx}>
+    <Card
+      src={post.image}
+      alt={post.title}
+      date={post['pretty-date']}
+      read={post['read-time']}
+      href="posts/{post.slug}"
+      time={600 + 100 * idx}>
       <main slot="main">
         <h3>{post.title}</h3>
         {#if post.description}

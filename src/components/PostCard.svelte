@@ -1,5 +1,5 @@
 <script>
-  export let src, alt, date, href, time;
+  export let src, alt, date, read, href, time;
 
   import { fly } from 'svelte/transition';
 </script>
@@ -12,7 +12,9 @@
     <slot name="main" />
   </main>
   <aside>
-    <small>{date}</small>
+    <small>{date.split(',')[1].trim()}</small>
+    <small>&bull;</small>
+    <small>{read} min read</small>
     <a rel="prefetch" {href}>read</a>
   </aside>
 </section>

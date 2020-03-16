@@ -2,30 +2,18 @@
   export async function preload(page, session) {
     const { slug } = page.params;
 
-    const res = await this.fetch(`content/posts/${slug}.md`);
-    const content = await res.json();
+    const res = await this.fetch(`posts/${slug}.json`);
+    const post = await res.json();
 
-    if (res.status === 200) return { content };
-    else this.error(res.status, content.message);
+    if (res.status === 200) return { post };
+    else this.error(res.status, post.message);
   }
 </script>
 
 <script>
-  export let content;
+  export let post;
 
   import { onMount } from 'svelte';
-  import { parseFile } from '../_parser.js';
-
-  $: post = parseFile(content, (fileData, metadata) => {
-    const dt = new Date(fileData[0]);
-    const weekday = dt.toLocaleDateString('default', { weekday: 'long' });
-    const month = dt.toLocaleDateString('default', { month: 'long' });
-    metadata['dt'] = dt;
-    metadata['pretty-date'] = `${weekday}, ${dt.getDate()} ${month} ${dt.getFullYear()}`;
-    metadata['slug'] = fileData[1];
-
-    return metadata;
-  });
 
   onMount(async () => {
     const Aqua = await import('@ignatiusmb/aqua');
@@ -37,9 +25,9 @@
 </script>
 
 <svelte:head>
-  <title>{post.metadata.title} &bull; Posts | IMB</title>
-  {#if post.metadata.description}
-    <meta name="description" content={post.metadata.description} />
+  <title>{post.title} &bull; Posts | IMB</title>
+  {#if post.description}
+    <meta name="description" content={post.description} />
   {/if}
   <link rel="shortcut icon" type="image/png" href="images/favicon/blog.png" />
   <link rel="stylesheet" href="css/blog.css" />
@@ -47,11 +35,15 @@
 
 <header>
   <main>
-    <h1>{post['metadata']['title']}</h1>
+    <h1>{post['title']}</h1>
     <small>
-      <span>{post['metadata']['pretty-date']}</span>
+      <div>
+        <span>{post['pretty-date']}</span>
+        <span>&bull;</span>
+        <span>{post['read-time']} min read</span>
+      </div>
       <div class="tags">
-        {#each post['metadata']['tags'] as tag}
+        {#each post['tags'] as tag}
           <a href="tag/{tag}">#{tag}</a>
         {/each}
       </div>
@@ -61,7 +53,7 @@
 
 <article>
   <section>
-    {@html post.body.content}
+    {@html post.content}
   </section>
 </article>
 
@@ -76,6 +68,11 @@
 
   header h1 {
     margin: 1em 0 0.5em;
+  }
+  header small {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Karla';
   }
   header .tags {
     display: flex;
@@ -101,6 +98,9 @@
   }
   article > section:not(:first-child) {
     margin-top: 2em;
+  }
+  article :global(.aqua-code-box) {
+    line-height: unset;
   }
   article :global(p) {
     margin-top: 0.75em;
