@@ -3,9 +3,9 @@ const path = require('path');
 const markIt = require('markdown-it')({ html: true }).use(require('markdown-it-katex'));
 
 function parseFile(filename, content, parseCallback) {
-  const fmExpression = /---\n([\s\S]+?)\n---/;
+  const fmExpression = /---\r?\n([\s\S]+?)\r?\n---/;
   const separated = fmExpression.exec(content);
-  const frontMatter = separated[1].split('\n').reduce((acc, cur) => {
+  const frontMatter = separated[1].split(/\r?\n/).reduce((acc, cur) => {
     const [key, val] = cur.split(':');
     if (key === 'tags') {
       acc[key] = val.split(',').map(v => v.trim());
