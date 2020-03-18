@@ -2,9 +2,9 @@
   import { onMount } from 'svelte';
 
   let y, height;
-  onMount(() => (height = window.innerHeight));
+  onMount(() => (height = document.body.scrollHeight / 3));
 
-  $: hide = y > height / 3 ? false : true;
+  $: hide = y > height ? false : true;
 </script>
 
 <svelte:window bind:scrollY={y} />
