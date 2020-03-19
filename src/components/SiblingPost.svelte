@@ -1,6 +1,6 @@
 <script>
   export let base, prev, next;
-  import Link from './Link.svelte';
+  import Link from './complement/Link.svelte';
 </script>
 
 <aside>

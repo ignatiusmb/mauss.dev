@@ -1,10 +1,10 @@
 <script>
   export let tag;
-  import Link from './Link.svelte';
+  import Link from './complement/Link.svelte';
 </script>
 
 <span class={tag}>
-  <Link href={tag}>#{tag}</Link>
+  <Link href="tag/{tag}">#{tag}</Link>
 </span>
 
 <style>
