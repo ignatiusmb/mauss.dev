@@ -2,8 +2,19 @@
   export async function preload(page, session) {
     const { slug } = page.params;
 
+    const home = await this.fetch('posts.json');
+    const list = await home.json();
+
     const res = await this.fetch(`posts/${slug}.json`);
     const post = await res.json();
+
+    for (let i = 0; i < list.length; i++)
+      if (list[i].slug === post.slug) {
+        post['siblings'] = {};
+        const [prev, next] = [list[i - 1], list[i + 1]];
+        post.siblings.prev = prev ? { slug: prev.slug, title: prev.title } : null;
+        post.siblings.next = next ? { slug: next.slug, title: next.title } : null;
+      }
 
     if (res.status === 200) return { post };
     else this.error(res.status, post.message);
@@ -12,6 +23,8 @@
 
 <script>
   export let post;
+  import Sibling from '../../components/SiblingPost.svelte';
+  import Tag from '../../components/Tag.svelte';
 
   import { onMount } from 'svelte';
 
@@ -30,7 +43,6 @@
     <meta name="description" content={post.description} />
   {/if}
   <link rel="shortcut icon" type="image/png" href="images/favicon/blog.png" />
-  <link rel="stylesheet" href="css/blog.css" />
 </svelte:head>
 
 <header>
@@ -44,7 +56,7 @@
       </div>
       <div class="tags">
         {#each post['tags'] as tag}
-          <a href="tag/{tag}">#{tag}</a>
+          <Tag {tag} />
         {/each}
       </div>
     </small>
@@ -55,6 +67,8 @@
   <section>
     {@html post.content}
   </section>
+
+  <Sibling base="posts" prev={post.siblings.prev} next={post.siblings.next} />
 </article>
 
 <style>
@@ -64,6 +78,7 @@
     max-width: 42em;
     padding: 0 0.75em;
     margin: 0 auto;
+    word-wrap: break-word;
   }
 
   header h1 {
@@ -78,15 +93,7 @@
     display: flex;
     margin-top: 0.5em;
   }
-  header .tags a {
-    padding: 0.2em 0.4em;
-    border-radius: 0.2em;
-    font-size: 0.9rem;
-    font-weight: bold;
-    background: #d6d9e0;
-    color: #606570;
-  }
-  header .tags a:not(:last-child) {
+  header .tags :global(span:not(:last-child)) {
     margin-right: 1em;
   }
 
@@ -107,6 +114,7 @@
   }
   article :global(img) {
     margin: auto;
+    border: 0.5em solid var(--bg-color-secondary);
     border-radius: 0.1em;
   }
   article :global(h2) {
@@ -121,7 +129,6 @@
   article :global(ol, ul) {
     padding: 0;
     margin: 0;
-    margin-top: 1em;
   }
   article :global(li) {
     margin-left: 1em;
