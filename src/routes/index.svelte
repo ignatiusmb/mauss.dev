@@ -1,6 +1,4 @@
 <script>
-  import FlyWrapper from '../components/transition/Fly.svelte';
-
   import { onMount, onDestroy } from 'svelte';
   import scramble from '@ignatiusmb/scramble';
 
@@ -11,16 +9,7 @@
     timeout = setTimeout(repeat, 5000);
   }
 
-  onMount(() => {
-    timeout = setTimeout(repeat, 1000);
-    if (window.netlifyIdentity)
-      window.netlifyIdentity.on('init', user => {
-        if (user) return;
-        window.netlifyIdentity.on('login', () => {
-          document.location.href = '/admin/';
-        });
-      });
-  });
+  onMount(() => (timeout = setTimeout(repeat, 1000)));
   onDestroy(() => clearTimeout(timeout));
 </script>
 
@@ -32,15 +21,10 @@
     current situation, so come frequently to get the latest update. Check out my projects and social accounts or contact
     me through any social media given for business inquiries." />
   <link rel="icon" type="image/png" href="images/favicon/home.png" />
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js">
-
-  </script>
 </svelte:head>
 
-<FlyWrapper>
-  <h1 bind:this={title}>Ignatius</h1>
-  <img alt="Code Thinking" src="images/undraw/code-thinking.svg" />
-</FlyWrapper>
+<h1 bind:this={title}>Ignatius</h1>
+<img alt="Code Thinking" src="images/undraw/code-thinking.svg" />
 
 <style>
   h1 {
