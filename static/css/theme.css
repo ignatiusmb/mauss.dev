@@ -1,7 +1,7 @@
 html,
 html.light {
-  --bg-color: #eeeeee;
-  --bg-card-color: #ffffff;
+  --bg-color: #fff;
+  --bg-color-secondary: #eee;
   --bg-success-color: #85da85;
   --bg-toggle-inactive-color: rgba(0, 0, 0, 0);
   --bg-toggle-active-color: rgba(0, 0, 0, 0.08);
@@ -14,7 +14,7 @@ html.light {
 }
 html.dark {
   --bg-color: #212121;
-  --bg-card-color: #363636;
+  --bg-color-secondary: #363636;
   --bg-success-color: #008000;
   --bg-toggle-inactive-color: rgba(255, 255, 255, 0);
   --bg-toggle-active-color: rgba(255, 255, 255, 0.1);
@@ -25,62 +25,7 @@ html.dark {
 
   --focus-color: rgba(255, 255, 255, 0.5);
 }
-@media (prefers-color-scheme: light), (prefers-color-scheme: no-preference) {
-  html {
-    --bg-color: #eeeeee;
-    --bg-card-color: #ffffff;
-    --bg-success-color: #85da85;
-    --bg-toggle-inactive-color: rgba(0, 0, 0, 0);
-    --bg-toggle-active-color: rgba(0, 0, 0, 0.08);
 
-    --fg-color: rgba(0, 0, 0, 0.87);
-    --fg-success-color: #000000;
-    --fg-secondary-color: rgba(0, 0, 0, 0.56);
-
-    --focus-color: rgba(0, 0, 0, 0.5);
-  }
-  html.dark {
-    --bg-color: #212121;
-    --bg-card-color: #363636;
-    --bg-success-color: #008000;
-    --bg-toggle-inactive-color: rgba(255, 255, 255, 0);
-    --bg-toggle-active-color: rgba(255, 255, 255, 0.1);
-
-    --fg-color: rgba(255, 255, 255, 0.87);
-    --fg-success-color: #ffffff;
-    --fg-secondary-color: rgba(255, 255, 255, 0.56);
-
-    --focus-color: rgba(255, 255, 255, 0.5);
-  }
-}
-@media (prefers-color-scheme: dark) {
-  html {
-    --bg-color: #212121;
-    --bg-card-color: #363636;
-    --bg-success-color: #008000;
-    --bg-toggle-inactive-color: rgba(255, 255, 255, 0);
-    --bg-toggle-active-color: rgba(255, 255, 255, 0.1);
-
-    --fg-color: rgba(255, 255, 255, 0.87);
-    --fg-success-color: #ffffff;
-    --fg-secondary-color: rgba(255, 255, 255, 0.56);
-
-    --focus-color: rgba(255, 255, 255, 0.5);
-  }
-  html.light {
-    --bg-color: #eeeeee;
-    --bg-card-color: #ffffff;
-    --bg-success-color: #85da85;
-    --bg-toggle-inactive-color: rgba(0, 0, 0, 0);
-    --bg-toggle-active-color: rgba(0, 0, 0, 0.08);
-
-    --fg-color: rgba(0, 0, 0, 0.87);
-    --fg-success-color: #000000;
-    --fg-secondary-color: rgba(0, 0, 0, 0.56);
-
-    --focus-color: rgba(0, 0, 0, 0.5);
-  }
-}
 :focus {
   outline-color: var(--focus-color);
   outline-style: solid;
@@ -91,11 +36,15 @@ html.dark {
 body {
   background-color: var(--bg-color);
   color: var(--fg-color);
-  transition: 200ms;
+  transition: 250ms;
 }
 
 p {
   color: var(--fg-color);
+}
+
+.dark a {
+  color: #81a5f8;
 }
 
 code {

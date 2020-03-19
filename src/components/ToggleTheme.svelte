@@ -1,46 +1,37 @@
 <script>
   import { onMount } from 'svelte';
+  import { stores } from '@sapper/app';
 
   let html, checked;
 
-  function check() {
-    checked = !checked;
+  function updatePreferred() {
+    localStorage.setItem('theme', checked ? 'dark' : 'light');
+  }
+  function checkButton(state) {
+    checked = state;
     if (checked) {
       html.classList.add('dark');
       html.classList.remove('light');
-      localStorage.setItem('theme', 'dark');
     } else {
       html.classList.remove('dark');
       html.classList.add('light');
-      localStorage.setItem('theme', 'light');
     }
+    updatePreferred();
+  }
+  function getPreference() {
+    const stored = localStorage.getItem('theme');
+    if (stored) return stored;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   }
 
   onMount(() => {
-    const storedTheme = localStorage.getItem('theme');
-    checked = storedTheme === 'dark' ? true : false;
-    let theme = storedTheme ? storedTheme : undefined;
-    for (const scheme of ['dark', 'light', 'no-preference']) {
-      if (window.matchMedia(`(prefers-color-scheme: ${scheme})`).matches) {
-        theme = storedTheme ? storedTheme : scheme;
-      }
-    }
-
     html = document.querySelector('html');
-    if (theme === 'dark') {
-      checked = true;
-      html.classList.add('dark');
-      html.classList.remove('light');
-    } else if (theme === 'light') {
-      checked = false;
-      html.classList.add('light');
-      html.classList.remove('dark');
-    }
+    checkButton(getPreference() === 'dark');
   });
 </script>
 
 <label>
-  <input on:click={check} bind:checked class="input" type="checkbox" />
+  <input on:click={() => checkButton(!checked)} bind:checked class="input" type="checkbox" />
   <span />
 </label>
 
@@ -74,7 +65,7 @@
     left: 0.25em;
     width: 1em;
     height: 1em;
-    background-color: var(--bg-card-color);
+    background-color: var(--bg-color-secondary);
     border: 1px solid var(--fg-color);
     border-radius: 50%;
     transform: translate(0em, -50%);

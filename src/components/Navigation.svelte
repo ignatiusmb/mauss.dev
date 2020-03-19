@@ -25,6 +25,7 @@
     align-items: center;
     padding: 0.8em 1em;
     background-color: var(--bg-color);
+    transition: 250ms;
   }
   nav.scrolled {
     box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5);
