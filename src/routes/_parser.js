@@ -1,12 +1,14 @@
+import { splitAt } from '../helper';
+
 const { readdirSync, readFileSync } = require('fs');
 const path = require('path');
 const markIt = require('markdown-it')({ html: true }).use(require('markdown-it-katex'));
 
 function parseFile(filename, content, parseCallback) {
   const fmExpression = /---\r?\n([\s\S]+?)\r?\n---/;
-  const separated = fmExpression.exec(content);
-  const frontMatter = separated[1].split(/\r?\n/).reduce((acc, cur) => {
-    const [key, val] = cur.split(':');
+  const [rawData, metadata] = fmExpression.exec(content);
+  const frontMatter = metadata.split(/\r?\n/).reduce((acc, cur) => {
+    const [key, val] = splitAt(cur.indexOf(':'), cur);
     if (key === 'tags') {
       acc[key] = val.split(',').map(v => v.trim());
     } else acc[key] = val.trim();
@@ -16,7 +18,7 @@ function parseFile(filename, content, parseCallback) {
   const cleanedFilename = filename.split('/').slice(-1)[0];
   const result = parseCallback(cleanedFilename, frontMatter);
 
-  const article = content.slice(separated[0].length + 1);
+  const article = content.slice(rawData.length + 1);
   result['read-time'] = Math.round(article.split(' ').length / 275);
   result['read-time'] = result['read-time'] ? result['read-time'] : 1;
   result['content'] = markIt.render(article);
