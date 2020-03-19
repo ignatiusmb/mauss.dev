@@ -1,7 +1,7 @@
 import { parseDir } from '../_parser';
 
 export function get(req, res) {
-  const DIR = 'static/content/posts';
+  const DIR = 'content/posts';
   const posts = parseDir(DIR, (cleanedFilename, frontMatter) => {
     const [date, name] = cleanedFilename.split('.');
     frontMatter['slug'] = name;

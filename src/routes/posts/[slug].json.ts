@@ -4,7 +4,7 @@ import { parseFile } from '../_parser';
 
 export function get(req, res) {
   const { slug } = req.params;
-  const DIR = 'static/content/posts';
+  const DIR = 'content/posts';
   const posts = readdirSync(DIR);
   const filename = posts.filter(post => post.includes(slug))[0];
   const content = readFileSync(`${DIR}/${filename}`).toString();
