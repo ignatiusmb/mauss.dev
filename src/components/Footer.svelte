@@ -73,7 +73,6 @@
   }
   .copyright {
     font-size: 90%;
-    font-weight: bold;
   }
 
   @media only screen and (min-width: 480px) {

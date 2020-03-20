@@ -5,6 +5,7 @@ html.light {
   --bg-success-color: #85da85;
   --bg-toggle-inactive-color: rgba(0, 0, 0, 0);
   --bg-toggle-active-color: rgba(0, 0, 0, 0.08);
+  --bg-inverse: #000;
 
   --fg-color: rgba(0, 0, 0, 0.87);
   --fg-success-color: #000000;
@@ -18,19 +19,13 @@ html.dark {
   --bg-success-color: #008000;
   --bg-toggle-inactive-color: rgba(255, 255, 255, 0);
   --bg-toggle-active-color: rgba(255, 255, 255, 0.1);
+  --bg-inverse: #fff;
 
   --fg-color: rgba(255, 255, 255, 0.87);
   --fg-success-color: #ffffff;
   --fg-secondary-color: rgba(255, 255, 255, 0.56);
 
   --focus-color: rgba(255, 255, 255, 0.5);
-}
-
-:focus {
-  outline-color: var(--focus-color);
-  outline-style: solid;
-  outline-width: 2px;
-  outline-offset: 2px;
 }
 
 body {

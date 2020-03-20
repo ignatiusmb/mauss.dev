@@ -43,7 +43,7 @@
     width: 100%;
     height: 100%;
     border-radius: inherit;
-    background-color: #000;
+    background-color: var(--bg-inverse);
     transition: opacity 15ms linear, background-color 15ms linear;
   }
   main:hover::before {
@@ -77,6 +77,7 @@
     margin-left: auto;
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
+    color: var(--fg-color);
     background-color: var(--bg-color);
     transition: 50ms;
   }
