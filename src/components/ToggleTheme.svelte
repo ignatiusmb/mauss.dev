@@ -1,32 +1,22 @@
 <script>
   import { onMount } from 'svelte';
-  import { stores } from '@sapper/app';
 
-  let html, checked;
+  let body, checked;
 
-  function updatePreferred() {
-    localStorage.setItem('theme', checked ? 'dark' : 'light');
-  }
   function checkButton(state) {
+    if (checked === state) return;
+    if (state) body.classList.replace('light', 'dark');
+    else body.classList.replace('dark', 'light');
+    localStorage.setItem('theme', state ? 'dark' : 'light');
     checked = state;
-    if (checked) {
-      html.classList.add('dark');
-      html.classList.remove('light');
-    } else {
-      html.classList.remove('dark');
-      html.classList.add('light');
-    }
-    updatePreferred();
-  }
-  function getPreference() {
-    const stored = localStorage.getItem('theme');
-    if (stored) return stored;
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   }
 
   onMount(() => {
-    html = document.querySelector('html');
-    checkButton(getPreference() === 'dark');
+    body = document.body;
+    const preference = window.matchMedia('(prefers-color-scheme: dark)');
+    if (!body.classList.length) body.classList.add(preference.matches ? 'dark' : 'light');
+    if (!localStorage.getItem('theme')) checkButton(preference.matches);
+    else checkButton(localStorage.getItem('theme') === 'dark');
   });
 </script>
 

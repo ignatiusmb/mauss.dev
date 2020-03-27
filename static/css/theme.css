@@ -1,5 +1,5 @@
-html,
-html.light {
+body,
+body.light {
   --bg-color: #fff;
   --bg-color-secondary: #eee;
   --bg-success-color: #85da85;
@@ -13,7 +13,7 @@ html.light {
 
   --focus-color: rgba(0, 0, 0, 0.5);
 }
-html.dark {
+body.dark {
   --bg-color: #212121;
   --bg-color-secondary: #363636;
   --bg-success-color: #008000;
