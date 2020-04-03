@@ -1,34 +1,54 @@
 <script>
-  // your script goes here
+  const icons = [
+    {
+      name: 'facebook',
+      url: 'https://www.facebook.com'
+    },
+    {
+      name: 'instagram',
+      url: 'https://www.instagram.com'
+    },
+    {
+      name: 'twitter',
+      url: 'https://twitter.com'
+    },
+    {
+      name: 'linkedin',
+      url: 'https://www.linkedin.com/in'
+    },
+    {
+      name: 'github',
+      url: 'https://github.com'
+    },
+    {
+      name: 'gitlab',
+      url: 'https://gitlab.com'
+    },
+    {
+      name: 'spotify',
+      url: 'https://open.spotify.com/user'
+    }
+  ];
 </script>
 
 <footer>
   <slot />
+
   <div class="social-links">
-    <a href="https://www.facebook.com/ignatiusmb">
-      <i class="fab fa-facebook" />
-    </a>
-    <a href="https://www.instagram.com/ignatiusmb/">
-      <i class="fab fa-instagram" />
-    </a>
-    <a href="https://twitter.com/ignatiusmbs">
-      <i class="fab fa-twitter" />
-    </a>
-    <a href="https://www.linkedin.com/in/ignatiusmb/">
-      <i class="fab fa-linkedin" />
-    </a>
-    <a href="https://github.com/ignatiusmb/">
-      <i class="fab fa-github" />
-    </a>
-    <a href="https://gitlab.com/ignatiusmb">
-      <i class="fab fa-gitlab" />
-    </a>
-    <a href="https://open.spotify.com/user/ignatiusmb/">
-      <i class="fab fa-spotify" />
-    </a>
+    {#each icons as icon}
+      {#if icon.name === 'twitter'}
+        <a href="{icon.url}/ignatiusmbs">
+          <i class="fab fa-{icon.name}" />
+        </a>
+      {:else}
+        <a href="{icon.url}/ignatiusmb">
+          <i class="fab fa-{icon.name}" />
+        </a>
+      {/if}
+    {/each}
   </div>
 
-  <div class="copyright">Copyright &copy; 2020 Ignatius Bagussuputra</div>
+  <div class="copyright">Copyright &copy; {new Date().getFullYear()} Ignatius Bagussuputra</div>
 </footer>
 
 <style>
