@@ -16,7 +16,8 @@ export function get(req: Request, res: Response) {
     frontMatter['pretty-date'] = `${weekday}, ${day} ${month} ${year}`;
 
     const rootFolder = `${process.cwd()}/static`;
-    const imagePath = `uploads/${frontMatter['tags'][0]}/thumbnail/${frontMatter['slug']}`;
+    const category: string = frontMatter['tags'][0];
+    const imagePath = `uploads/${category.toLowerCase()}/thumbnail/${frontMatter['slug']}`;
     if (existsSync(join(rootFolder, `${imagePath}.png`))) {
       frontMatter['image'] = `${imagePath}.png`;
     } else if (existsSync(join(rootFolder, `${imagePath}.jpg`))) {
