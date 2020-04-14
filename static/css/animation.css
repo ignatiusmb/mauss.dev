@@ -1,0 +1,13 @@
+.color-rotate:hover {
+  animation: color-rotate 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes color-rotate {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
