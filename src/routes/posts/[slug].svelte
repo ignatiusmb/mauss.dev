@@ -117,6 +117,10 @@
     border: 0.5em solid var(--bg-color-secondary);
     border-radius: 0.1em;
   }
+  article :global(img[src^="https://"]) {
+    padding: 0.5em;
+    border: none;
+  }
   article :global(h2) {
     margin-top: 1em;
     font-weight: bold;
@@ -129,6 +133,7 @@
   article :global(ol, ul) {
     padding: 0;
     margin: 0;
+    margin-top: 0.75em;
   }
   article :global(li) {
     margin-left: 1em;
