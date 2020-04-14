@@ -30,7 +30,7 @@
   }
   main {
     display: grid;
-    grid-template-rows: 15em 1fr;
+    grid-template-rows: 14.4em 1fr;
     cursor: pointer;
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
@@ -60,6 +60,9 @@
     height: 100%;
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
   aside {
