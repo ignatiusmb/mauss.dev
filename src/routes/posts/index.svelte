@@ -20,7 +20,7 @@
 
 <h1>Recent posts</h1>
 
-<article>
+<main>
   {#each posts as post, idx}
     <Card
       src={post.image}
@@ -29,22 +29,22 @@
       read={post['read-time']}
       href="posts/{post.slug}"
       time={600 + 100 * idx}>
-      <main slot="main">
+      <div>
         <h3>{post.title}</h3>
         {#if post.description}
           <small>{post.description}</small>
         {/if}
-      </main>
+      </div>
     </Card>
   {/each}
-</article>
+</main>
 
 <style>
   h1 {
     margin: 1.5em 0 1em;
     text-align: center;
   }
-  article {
+  main {
     display: grid;
     gap: 1em;
     grid-template-columns: repeat(auto-fit, minmax(18em, 26em));
@@ -54,10 +54,10 @@
     padding: 0 1em;
     margin: 1em auto;
   }
-  article :global(img:not([src])) {
+  main :global(img:not([src])) {
     display: none;
   }
-  main {
+  main div {
     padding: 1em;
   }
   h3 {

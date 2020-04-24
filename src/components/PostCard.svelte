@@ -5,12 +5,12 @@
 </script>
 
 <section in:fly={{ x: -200, duration: time }} out:fly={{ x: 200, duration: 300 }}>
-  <main>
+  <article>
     <div class="img-wrapper">
       <img {src} {alt} />
     </div>
-    <slot name="main" />
-  </main>
+    <slot />
+  </article>
   <aside>
     <small>{date.split(',')[1].trim()}</small>
     <small>&bull;</small>
@@ -22,13 +22,13 @@
 <style>
   section {
     display: grid;
-    grid-template-rows: 6fr 3em;
+    grid-template-rows: 1fr 3em;
     width: 100%;
     border-radius: 0.25em;
     box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
     background-color: var(--bg-color-secondary);
   }
-  main {
+  article {
     display: grid;
     grid-template-rows: 14.4em 1fr;
     cursor: pointer;
@@ -36,7 +36,7 @@
     border-top-right-radius: inherit;
     transform: translate(0%);
   }
-  main::before {
+  article::before {
     content: '';
     opacity: 0;
     position: absolute;
@@ -46,7 +46,7 @@
     background-color: var(--bg-inverse);
     transition: opacity 15ms linear, background-color 15ms linear;
   }
-  main:hover::before {
+  article:hover::before {
     opacity: 0.04;
   }
   .img-wrapper {
@@ -56,6 +56,7 @@
     background-color: rgba(0, 0, 0, 0.15);
   }
   img {
+    object-fit: cover;
     width: 100%;
     height: 100%;
     border-top-left-radius: inherit;
@@ -63,6 +64,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
   }
 
   aside {
