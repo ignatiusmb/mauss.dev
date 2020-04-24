@@ -7,12 +7,14 @@
     "dev": "sapper dev",
     "build": "sapper build --legacy",
     "export": "sapper export --legacy",
-    "serve": "sapper export --legacy && npx serve __sapper__/export",
+    "serve": "serve __sapper__/export",
     "start": "node __sapper__/build"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
     "compression": "^1.7.4",
     "express": "^4.17.1",
+    "node-html-parser": "^1.2.16",
     "polka": "^1.0.0-next.11",
     "sirv": "^0.4.2"
   },
@@ -29,6 +31,7 @@
     "@ignatiusmb/aqua": "git+https://github.com/ignatiusmb/aqua.git",
     "@ignatiusmb/scramble": "^3.0.1",
     "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-json": "^4.0.3",
     "@rollup/plugin-node-resolve": "^7.1.1",
     "@rollup/plugin-replace": "^2.3.1",
     "@rollup/plugin-typescript": "^4.1.1",
@@ -40,10 +43,10 @@
     "npm-run-all": "^4.1.5",
     "rollup": "^2.2.0",
     "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-svelte": "^5.1.1",
     "rollup-plugin-terser": "^5.3.0",
     "sapper": "^0.27.11",
+    "serve": "^11.3.0",
     "svelte": "^3.20.1",
     "tslib": "^1.11.1",
     "typescript": "^3.8.3"
