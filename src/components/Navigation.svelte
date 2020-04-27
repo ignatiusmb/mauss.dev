@@ -25,11 +25,11 @@
     align-items: center;
     padding: 0.8em 1em;
     background-color: var(--bg-color);
-    transition: 250ms;
+    transition: var(--transition-duration) var(--transition-function);
   }
   nav.scrolled {
     box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5);
-    transition: box-shadow 200ms;
+    transition: var(--transition-duration) var(--transition-function);
   }
 
   [aria-current]::after {
@@ -51,7 +51,7 @@
     height: 0.25em;
     border-radius: 0.8em;
     background-color: crimson;
-    transition: width 200ms ease;
+    transition: width var(--transition-duration) ease;
     transform: translateY(100%);
   }
   a:hover::after,

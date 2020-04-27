@@ -46,7 +46,7 @@
     border: 1px solid var(--fg-color);
     border-radius: 1em;
     background-color: var(--bg-toggle-inactive-color);
-    transition: background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color var(--transition-duration) var(--transition-function);
   }
   span::after {
     content: '';
@@ -59,7 +59,7 @@
     border: 1px solid var(--fg-color);
     border-radius: 50%;
     transform: translate(0em, -50%);
-    transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform var(--transition-duration) var(--transition-function);
   }
   .input:checked ~ span::after {
     transform: translate(1.7em, -50%);

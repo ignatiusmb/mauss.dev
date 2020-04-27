@@ -1,11 +1,16 @@
+:root {
+  --transition-duration: 200ms;
+  --transition-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 body,
 body.light {
+  --bg-inverse: #212121;
   --bg-color: #fff;
   --bg-color-secondary: #eee;
   --bg-success-color: #85da85;
   --bg-toggle-inactive-color: rgba(0, 0, 0, 0);
   --bg-toggle-active-color: rgba(0, 0, 0, 0.08);
-  --bg-inverse: #000;
 
   --fg-color: rgba(0, 0, 0, 0.87);
   --fg-success-color: #000000;
@@ -14,14 +19,14 @@ body.light {
   --focus-color: rgba(0, 0, 0, 0.5);
 }
 body.dark {
+  --bg-inverse: #fff;
   --bg-color: #212121;
   --bg-color-secondary: #363636;
   --bg-success-color: #008000;
   --bg-toggle-inactive-color: rgba(255, 255, 255, 0);
-  --bg-toggle-active-color: rgba(255, 255, 255, 0.1);
-  --bg-inverse: #fff;
+  --bg-toggle-active-color: rgba(77, 65, 65, 0.1);
 
-  --fg-color: rgba(255, 255, 255, 0.87);
+  --fg-color: #b3b9c5;
   --fg-success-color: #ffffff;
   --fg-secondary-color: rgba(255, 255, 255, 0.56);
 
@@ -31,15 +36,11 @@ body.dark {
 body {
   background-color: var(--bg-color);
   color: var(--fg-color);
-  transition: 250ms;
+  transition: var(--transition-duration) var(--transition-function);
 }
 
 p {
   color: var(--fg-color);
-}
-
-.dark a {
-  color: #81a5f8;
 }
 
 code {

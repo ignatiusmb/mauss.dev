@@ -1,23 +1,19 @@
 <script context="module">
   export async function preload(page, session) {
     const { slug } = page.params;
+    const list = await this.fetch('posts.json').then(r => r.json());
+    const post = await this.fetch(`posts/${slug}.json`).then(r => r.json());
 
-    const home = await this.fetch('posts.json');
-    const list = await home.json();
-
-    const res = await this.fetch(`posts/${slug}.json`);
-    const post = await res.json();
-
-    for (let i = 0; i < list.length; i++)
-      if (list[i].slug === post.slug) {
-        post['siblings'] = {};
-        const [prev, next] = [list[i - 1], list[i + 1]];
-        post.siblings.prev = prev ? { slug: prev.slug, title: prev.title } : null;
-        post.siblings.next = next ? { slug: next.slug, title: next.title } : null;
-      }
-
-    if (res.status === 200) return { post };
-    else this.error(res.status, post.message);
+    for (let i = 0; i < list.length; i++) {
+      if (list[i].slug !== post.slug) continue;
+      post['siblings'] = {};
+      post.siblings.base = 'posts';
+      const [prev, next] = [list[i - 1], list[i + 1]];
+      post.siblings.prev = prev ? { slug: prev.slug, title: prev.title } : null;
+      post.siblings.next = next ? { slug: next.slug, title: next.title } : null;
+      break;
+    }
+    return { post };
   }
 </script>
 
@@ -27,14 +23,7 @@
   import Tag from '../../components/Tag.svelte';
 
   import { onMount } from 'svelte';
-
-  onMount(async () => {
-    const Aqua = await import('@ignatiusmb/aqua');
-    Aqua.code.init();
-    Aqua.form.init();
-    Aqua.modal.init();
-    Aqua.code.highlight();
-  });
+  import { aquaInit } from '../../uses';
 </script>
 
 <svelte:head>
@@ -64,11 +53,11 @@
 </header>
 
 <article>
-  <section>
+  <section use:aquaInit>
     {@html post.content}
   </section>
 
-  <Sibling base="posts" prev={post.siblings.prev} next={post.siblings.next} />
+  <Sibling {...post.siblings} />
 </article>
 
 <style>
@@ -137,6 +126,9 @@
   }
   article :global(li) {
     margin-left: 1em;
+  }
+  article :global(blockquote li) {
+    margin-left: unset;
   }
   article :global(.info-box) {
     font-size: 1rem;

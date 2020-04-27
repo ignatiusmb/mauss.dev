@@ -17,7 +17,10 @@
     margin-top: 2em;
     display: grid;
   }
+  aside :global(a) {
+    width: 100%;
+  }
   aside :global(a:last-child) {
-    justify-self: end;
+    text-align: right;
   }
 </style>

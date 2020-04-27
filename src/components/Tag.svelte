@@ -12,12 +12,11 @@
     padding: 0.2em 0.4em;
     border-radius: 0.2em;
     font-size: 0.9rem;
-    font-weight: bold;
     background: #d6d9e0;
     color: #606570;
   }
 
-  .PPL2020 {
+  .ppl2020 {
     background: #feb229;
     color: #000000;
   }

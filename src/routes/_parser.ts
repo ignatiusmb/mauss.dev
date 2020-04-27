@@ -8,7 +8,6 @@ const countReadTime = (content: string) => {
   const words = content.split(' ').filter((word) => word !== '');
   const images = content.match(/(!\[.+\]\(.+\))/g);
   const total = words.length + (images ? images.length * 12 : 0);
-  console.log(total);
   const time = Math.round(total / 270);
   return time ? time : 1;
 };

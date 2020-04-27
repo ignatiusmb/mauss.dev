@@ -1,16 +1,12 @@
 <script context="module">
   export async function preload(page, session) {
-    const res = await this.fetch(`posts.json`);
-    const posts = await res.json();
-
-    if (res.status === 200) return { posts };
-    else this.error(res.status, posts.message);
+    return { posts: await this.fetch(`posts.json`).then(r => r.json()) };
   }
 </script>
 
 <script>
   export let posts;
-  import Card from '../../components/PostCard.svelte';
+  import PostCard from '../../components/PostCard.svelte';
 </script>
 
 <svelte:head>
@@ -22,7 +18,7 @@
 
 <main>
   {#each posts as post, idx}
-    <Card
+    <PostCard
       src={post.image}
       alt={post.title}
       date={post['pretty-date']}
@@ -35,7 +31,7 @@
           <small>{post.description}</small>
         {/if}
       </div>
-    </Card>
+    </PostCard>
   {/each}
 </main>
 

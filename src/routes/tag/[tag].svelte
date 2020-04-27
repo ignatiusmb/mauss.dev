@@ -1,35 +1,32 @@
 <script context="module">
   export async function preload(page, session) {
     const { tag } = page.params;
-
-    const res = await this.fetch('posts.json');
-    const list = await res.json();
+    const list = await this.fetch('posts.json').then(r => r.json());
     const data = list.filter(post => post.tags.includes(tag));
-
-    if (res.status === 200) return { data, tag };
-    else this.error(res.status, list.message);
+    return { data, tag };
   }
 </script>
 
 <script>
   export let data, tag;
-  import Card from '../../components/PostCard.svelte';
+  import TagCard from '../../components/TagCard.svelte';
 
-  import { capitalize } from '../../helper.js';
+  import { capitalize, isAbbreviated } from '../../helper';
+  tag = isAbbreviated(tag) ? tag.toUpperCase() : capitalize(tag);
 </script>
 
 <svelte:head>
-  <title>{capitalize(tag)} | IMB</title>
+  <title>{tag} | Tag &bull; IMB</title>
   <link rel="shortcut icon" type="image/png" href="images/favicon/blog.png" />
 </svelte:head>
 
 <header>
-  <h1>{capitalize(tag)}</h1>
+  <h1>{tag}</h1>
 </header>
 
 <article>
   {#each data as post, idx}
-    <Card
+    <TagCard
       src={post.image}
       alt={post.title}
       date={post['pretty-date']}
@@ -42,7 +39,7 @@
           <small>{post.description}</small>
         {/if}
       </main>
-    </Card>
+    </TagCard>
   {/each}
 
 </article>
@@ -52,9 +49,9 @@
     width: 75em;
     max-width: 92%;
     padding: calc(1.4vw + 0.5em) 0px;
-    border: 2px solid #000000;
+    border: 2px solid var(--bg-inverse);
     border-radius: 0.15em;
-    box-shadow: 5px 6px 0px #000000;
+    box-shadow: 5px 6px 0px var(--bg-inverse);
     margin: 1.5em auto;
   }
   header h1 {
@@ -64,10 +61,10 @@
   article {
     display: grid;
     gap: 1em;
-    grid-template-columns: repeat(auto-fit, minmax(18em, 26em));
+    grid-template-columns: 1fr;
     justify-content: center;
     width: 100%;
-    max-width: 82em;
+    max-width: 64em;
     padding: 0 1em;
     margin: 1em auto;
   }
