@@ -24,13 +24,7 @@
 
   import { onMount } from 'svelte';
 
-  onMount(async () => {
-    const Aqua = await import('@ignatiusmb/aqua');
-    Aqua.code.init();
-    Aqua.form.init();
-    Aqua.modal.init();
-    Aqua.code.highlight();
-  });
+  onMount(() => Aqua.tsunami());
 </script>
 
 <svelte:head>

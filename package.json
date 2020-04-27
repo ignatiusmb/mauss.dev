@@ -1,7 +1,7 @@
 {
   "name": "@ignatiusmb/imbagus",
-  "description": "Maximilian's Website",
-  "version": "20.04.14",
+  "description": "Personal Website",
+  "version": "20.4.27",
   "private": true,
   "scripts": {
     "dev": "sapper dev",
@@ -28,8 +28,6 @@
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-typescript": "^7.9.0",
     "@babel/runtime": "^7.9.2",
-    "@ignatiusmb/aqua": "git+https://github.com/ignatiusmb/aqua.git",
-    "@ignatiusmb/scramble": "^3.0.1",
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-json": "^4.0.3",
     "@rollup/plugin-node-resolve": "^7.1.1",

@@ -1,16 +1,5 @@
 <script>
-  import { onMount, onDestroy } from 'svelte';
-  import scramble from '@ignatiusmb/scramble';
 
-  let title, timeout;
-
-  function repeat() {
-    scramble(title).run();
-    timeout = setTimeout(repeat, 5000);
-  }
-
-  onMount(() => (timeout = setTimeout(repeat, 1000)));
-  onDestroy(() => clearTimeout(timeout));
 </script>
 
 <svelte:head>
@@ -23,10 +12,17 @@
   <link rel="icon" type="image/png" href="images/favicon/home.png" />
 </svelte:head>
 
-<h1 bind:this={title}>Ignatius</h1>
-<img alt="Code Thinking" src="images/undraw/code-thinking.svg" />
+<header>
+  <h1>Ignatius</h1>
+  <img alt="Code Thinking" src="images/undraw/code-thinking.svg" class="color-rotate" />
+</header>
 
 <style>
+  header {
+    padding-bottom: 3em;
+    /* clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
+    background: linear-gradient(to right, #302e24, #28313e); */
+  }
   h1 {
     margin: 1.5em 0 1em;
     text-align: center;
