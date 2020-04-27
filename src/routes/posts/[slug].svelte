@@ -23,10 +23,13 @@
   import Tag from '../../components/Tag.svelte';
 
   import { onMount } from 'svelte';
-  import { aquaInit } from '../../uses';
 
-  onMount(() => {
-    aquaInit();
+  onMount(async () => {
+    const Aqua = await import('@ignatiusmb/aqua');
+    Aqua.code.init();
+    Aqua.form.init();
+    Aqua.modal.init();
+    Aqua.code.highlight();
   });
 </script>
 
