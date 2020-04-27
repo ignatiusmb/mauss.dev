@@ -24,6 +24,10 @@
 
   import { onMount } from 'svelte';
   import { aquaInit } from '../../uses';
+
+  onMount(() => {
+    aquaInit();
+  });
 </script>
 
 <svelte:head>
@@ -53,7 +57,7 @@
 </header>
 
 <article>
-  <section use:aquaInit>
+  <section>
     {@html post.content}
   </section>
 
