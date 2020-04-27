@@ -23,8 +23,9 @@
   import Tag from '../../components/Tag.svelte';
 
   import { onMount } from 'svelte';
-
-  onMount(() => Aqua.tsunami());
+  import { stores } from '@sapper/app';
+  const { preloading } = stores();
+  $: if ($preloading === false) setTimeout(() => Aqua.tsunami(), 1);
 </script>
 
 <svelte:head>
