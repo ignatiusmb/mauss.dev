@@ -1,33 +1,22 @@
 <script>
-  export let src, alt, date, read, href, time;
-
-  import { fly } from 'svelte/transition';
+  export let post;
+  const date = post['pretty-date'].split(',')[1].trim();
 </script>
 
-<section in:fly={{ x: -200, duration: time }} out:fly={{ x: 200, duration: 300 }}>
-  <article>
-    <div class="img-wrapper">
-      <img {src} {alt} />
-    </div>
-    <slot />
-  </article>
-  <aside>
-    <small>{date.split(',')[1].trim()}</small>
-    <small>&bull;</small>
-    <small>{read} min read</small>
-    <a rel="prefetch" {href}>read</a>
-  </aside>
-</section>
+<article>
+  <div class="img-wrapper">
+    <img src={post.image} alt={post.title} />
+  </div>
+  <slot />
+</article>
+<aside>
+  <small>{date}</small>
+  <small>&bull;</small>
+  <small>{post['read-time']} min read</small>
+  <a rel="prefetch" href="posts/{post.slug}">read</a>
+</aside>
 
 <style>
-  section {
-    display: grid;
-    grid-template-rows: 1fr 3em;
-    width: 100%;
-    border-radius: 0.25em;
-    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
-    background-color: var(--bg-color-secondary);
-  }
   article {
     display: grid;
     grid-template-rows: 14.4em 1fr;

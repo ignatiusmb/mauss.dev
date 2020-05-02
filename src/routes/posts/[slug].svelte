@@ -113,7 +113,7 @@
     border: none;
   }
   article :global(h2) {
-    margin-top: 1em;
+    margin-top: 2em;
     font-weight: bold;
   }
   article :global(h3) {
