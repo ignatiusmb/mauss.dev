@@ -2,9 +2,9 @@
   import { onMount } from 'svelte';
 
   let body, checked;
-
   function checkButton(state) {
     if (checked === state) return;
+    if (!body.classList.length) body.classList.add(state ? 'dark' : 'light');
     if (state) body.classList.replace('light', 'dark');
     else body.classList.replace('dark', 'light');
     localStorage.setItem('theme', state ? 'dark' : 'light');
@@ -14,7 +14,6 @@
   onMount(() => {
     body = document.body;
     const preference = window.matchMedia('(prefers-color-scheme: dark)');
-    if (!body.classList.length) body.classList.add(preference.matches ? 'dark' : 'light');
     if (!localStorage.getItem('theme')) checkButton(preference.matches);
     else checkButton(localStorage.getItem('theme') === 'dark');
   });
@@ -29,7 +28,6 @@
   label {
     position: relative;
     display: flex;
-    margin-left: auto;
   }
 
   input {

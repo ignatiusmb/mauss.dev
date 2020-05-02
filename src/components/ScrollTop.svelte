@@ -17,7 +17,7 @@
     position: fixed;
     z-index: 9;
     bottom: 0;
-    right: 0.4em;
+    right: 0;
     width: 1.5em;
     height: 1.5em;
     display: inline-flex;
@@ -27,13 +27,19 @@
     font-size: 1.5em;
     color: var(--aqua-primary);
     background-color: rgba(0, 0, 0, 0.25);
-    transform: translateY(100%);
+    transform: translate(-50%, 100%);
     transition: transform var(--transition-duration);
   }
   span.show {
-    transform: translateY(-40%);
+    transform: translate(-50%, -150%);
   }
   span:hover {
     background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  @media only screen and (min-width: 600px) {
+    span.show {
+      transform: translate(-50%, -50%);
+    }
   }
 </style>

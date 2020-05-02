@@ -17,12 +17,12 @@
 <style>
   nav {
     z-index: 2;
-    position: sticky;
-    top: 0;
-    display: grid;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: row-reverse;
     gap: 1em;
-    grid-template-columns: repeat(2, auto) 1fr;
-    align-items: center;
     padding: 0.8em 1em;
     background-color: var(--bg-color);
     transition: var(--transition-duration) var(--transition-function);
@@ -30,6 +30,9 @@
   nav.scrolled {
     box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5);
     transition: var(--transition-duration) var(--transition-function);
+  }
+  nav :global(:last-child) {
+    margin-right: auto;
   }
 
   [aria-current]::after {
@@ -63,8 +66,19 @@
   a:visited {
     color: inherit;
   }
-
-  a:first-child {
+  a:first-of-type {
     text-transform: uppercase;
+  }
+
+  @media only screen and (min-width: 600px) {
+    nav {
+      position: sticky;
+      top: 0;
+      flex-direction: row;
+    }
+    nav :global(:last-child) {
+      margin-left: auto;
+      margin-right: unset;
+    }
   }
 </style>
