@@ -22,7 +22,7 @@
     bottom: 0;
     display: flex;
     flex-direction: row-reverse;
-    gap: 1em;
+    align-items: center;
     padding: 0.8em 1em;
     background-color: var(--bg-color);
     transition: var(--transition-duration) var(--transition-function);
@@ -69,6 +69,9 @@
   a:first-of-type {
     text-transform: uppercase;
   }
+  a:not(:first-of-type) {
+    margin-right: 0.5em;
+  }
 
   @media only screen and (min-width: 600px) {
     nav {
@@ -79,6 +82,10 @@
     nav :global(:last-child) {
       margin-left: auto;
       margin-right: unset;
+    }
+    a:not(:first-of-type) {
+      margin-right: unset;
+      margin-left: 0.5em;
     }
   }
 </style>
