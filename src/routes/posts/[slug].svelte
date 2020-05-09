@@ -22,10 +22,8 @@
   import Sibling from '../../components/SiblingPost.svelte';
   import Tag from '../../components/Tag.svelte';
 
-  import { onMount } from 'svelte';
-  import { stores } from '@sapper/app';
-  const { preloading } = stores();
-  $: if ($preloading === false) setTimeout(() => Aqua.tsunami(), 1);
+  import { afterUpdate } from 'svelte';
+  afterUpdate(() => Aqua.tsunami());
 </script>
 
 <svelte:head>
