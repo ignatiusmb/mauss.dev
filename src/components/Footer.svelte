@@ -34,7 +34,7 @@
 <footer>
   <slot />
 
-  <div class="social-links">
+  <section class="social-links">
     {#each icons as icon}
       {#if icon.name === 'twitter'}
         <a href="{icon.url}/ignatiusmbs">
@@ -46,9 +46,17 @@
         </a>
       {/if}
     {/each}
-  </div>
+  </section>
 
-  <div class="copyright">Copyright &copy; {new Date().getFullYear()} Ignatius Bagussuputra</div>
+  <section>
+    <p>Copyright &copy; {new Date().getFullYear()} Ignatius Bagussuputra</p>
+    <p>
+      Made with ❤️ and passion using
+      <a href="https://svelte.dev/">Svelte</a>
+      &plus;
+      <a href="https://sapper.svelte.dev/">Sapper</a>
+    </p>
+  </section>
 </footer>
 
 <style>
@@ -91,8 +99,11 @@
   .social-links a:focus:nth-child(even) {
     transform: rotate(-6deg) scale(1.2) translateY(-20%);
   }
-  .copyright {
-    font-size: 90%;
+  section:last-of-type {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0.5em;
+    font-size: 0.9rem;
   }
 
   @media only screen and (min-width: 480px) {

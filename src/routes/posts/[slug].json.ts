@@ -1,15 +1,16 @@
+import { Request, Response } from 'express';
 import { readFileSync, readdirSync } from 'fs';
 
 import { parseFile } from '../_parser';
 
-export function get(req, res) {
+export function get(req: Request, res: Response) {
   const { slug } = req.params;
   const DIR = 'content/posts';
   const posts = readdirSync(DIR);
-  const filename = posts.filter(post => post.includes(slug))[0];
+  const filename = posts.filter((post) => post.includes(slug))[0];
   const content = readFileSync(`${DIR}/${filename}`).toString();
 
-  const post = parseFile(filename, content, (cleanedFilename, frontMatter) => {
+  const post = parseFile(filename, content, (cleanedFilename: string, frontMatter: object) => {
     const [date, name] = cleanedFilename.split('.');
     frontMatter['slug'] = name;
     frontMatter['date'] = new Date(date);

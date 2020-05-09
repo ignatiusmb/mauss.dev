@@ -13,7 +13,7 @@
 </svelte:head>
 
 <header>
-  <h1>Ignatius</h1>
+  <h1>ignatiusmb</h1>
   <img alt="Code Thinking" src="images/undraw/code-thinking.svg" class="color-rotate" />
 </header>
 
@@ -27,16 +27,22 @@
     margin: 1.5em 0 1em;
     text-align: center;
     text-transform: uppercase;
-    font-size: 300%;
+    font-size: 2.5rem;
     font-family: var(--aqua-font-mono-main);
     font-weight: bold;
-    letter-spacing: 4vw;
-    text-indent: 4vw;
+    letter-spacing: 3vw;
+    text-indent: 3vw;
   }
   img {
     width: 100%;
     max-width: 34em;
     padding: 1em;
     margin: 1em auto 2em;
+  }
+
+  @media only screen and (min-width: 600px) {
+    h1 {
+      font-size: 3rem;
+    }
   }
 </style>

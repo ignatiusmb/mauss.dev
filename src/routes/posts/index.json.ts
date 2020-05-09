@@ -23,7 +23,6 @@ export function get(req: Request, res: Response) {
     } else if (existsSync(join(rootFolder, `${imagePath}.jpg`))) {
       frontMatter['image'] = `${imagePath}.jpg`;
     }
-
     return frontMatter;
   }).filter((post) => delete post.content);
 
