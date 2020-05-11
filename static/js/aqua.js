@@ -92,18 +92,24 @@ const Aqua = (function () {
         if (Prism) Prism.highlightAll();
       },
       createToolbar: (pre, snackbar) => util.create.toolbar(pre, snackbar),
-      wrapCodes: (code, start) => {
+      wrapCodes: (code, dataset) => {
+        const { language, lineStart } = dataset;
         const pre = document.createElement('pre');
-        let lineNumber = !start ? 1 : start;
-        for (const line of code.textContent.split('\n')) {
-          const code = document.createElement('code');
-          code.dataset.line = lineNumber++;
-          code.textContent = `${line}\n`;
-          pre.appendChild(code);
+        if (language !== 'svelte') {
+          let lineNumber = !lineStart ? 1 : parseInt(lineStart);
+          for (const line of code.textContent.split('\n')) {
+            const code = document.createElement('code');
+            code.dataset.line = lineNumber++;
+            code.textContent = `${line}\n`;
+            pre.appendChild(code);
+          }
+          while (!pre.firstChild.textContent.trim()) pre.removeChild(pre.firstChild);
+          while (!pre.lastChild.textContent.trim()) pre.removeChild(pre.lastChild);
+        } else {
+          const content = document.createElement('code');
+          content.textContent = code.textContent;
+          pre.appendChild(content);
         }
-        while (!pre.firstChild.textContent.trim()) pre.removeChild(pre.firstChild);
-        while (!pre.lastChild.textContent.trim()) pre.removeChild(pre.lastChild);
-
         pre.className = code.className;
         return pre;
       },
@@ -135,7 +141,7 @@ const Aqua = (function () {
         for (const node of container.querySelectorAll('pre.aqua-code')) {
           if (node.getAttribute('data-aqua') === 'watered') continue;
 
-          const pre = this.wrapCodes(node, parseInt(node.dataset.lineStart));
+          const pre = this.wrapCodes(node, node.dataset);
           pre.setAttribute('data-aqua', 'watered');
           const wrapper = this.wrapBlock(pre, node.dataset, this.createToolbar(pre, snackbar));
 
