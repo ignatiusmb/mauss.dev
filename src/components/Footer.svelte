@@ -2,31 +2,35 @@
   const icons = [
     {
       name: 'facebook',
-      url: 'https://www.facebook.com'
-    },
-    {
-      name: 'instagram',
-      url: 'https://www.instagram.com'
+      url: 'https://www.facebook.com/ignatiusmb'
     },
     {
       name: 'twitter',
-      url: 'https://twitter.com'
+      url: 'https://twitter.com/ignatiusmbs'
+    },
+    {
+      name: 'instagram',
+      url: 'https://www.instagram.com/ignatiusmb'
     },
     {
       name: 'linkedin',
-      url: 'https://www.linkedin.com/in'
+      url: 'https://www.linkedin.com/in/ignatiusmb'
     },
     {
       name: 'github',
-      url: 'https://github.com'
+      url: 'https://github.com/ignatiusmb'
     },
     {
       name: 'gitlab',
-      url: 'https://gitlab.com'
+      url: 'https://gitlab.com/ignatiusmb'
+    },
+    {
+      name: 'twitch',
+      url: 'https://www.twitch.tv/magnawu'
     },
     {
       name: 'spotify',
-      url: 'https://open.spotify.com/user'
+      url: 'https://open.spotify.com/user/ignatiusmb'
     }
   ];
 </script>
@@ -35,16 +39,10 @@
   <slot />
 
   <section class="social-links">
-    {#each icons as icon}
-      {#if icon.name === 'twitter'}
-        <a href="{icon.url}/ignatiusmbs">
-          <i class="fab fa-{icon.name}" />
-        </a>
-      {:else}
-        <a href="{icon.url}/ignatiusmb">
-          <i class="fab fa-{icon.name}" />
-        </a>
-      {/if}
+    {#each icons as { url, name }}
+      <a href={url}>
+        <i class="fab fa-{name}" />
+      </a>
     {/each}
   </section>
 
@@ -71,7 +69,7 @@
     font-size: 2rem;
   }
   .social-links {
-    max-width: 14em;
+    max-width: 18em;
     display: grid;
     gap: 0.25em;
     grid-template-columns: repeat(auto-fit, minmax(0.75em, 1fr));
