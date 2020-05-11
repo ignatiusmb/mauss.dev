@@ -1,6 +1,6 @@
 ---
 title: Frontend Developer to DevOps Engineer Escapade
-tags: PPL2020, frontend, devops
+tags: ppl2020, frontend, devops
 ---
 
 > Learning DevOps was one of my most exhausting and demanding task, but it might be the most satisfying and rewarding thing once I got it
