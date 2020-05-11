@@ -8,9 +8,9 @@
 
 <style>
   a {
-    color: #81a5f8;
+    color: inherit;
   }
   a:hover {
-    color: #477cf4;
+    filter: invert() hue-rotate(180deg);
   }
 </style>

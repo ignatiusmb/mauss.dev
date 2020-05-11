@@ -16,18 +16,37 @@
     color: #606570;
   }
 
-  .ppl2020 {
-    background: #feb229;
-    color: #000000;
-  }
-
   .android {
     background: #56a036;
-    color: #ffffff;
+    color: #fff;
+  }
+  .firebase {
+    background: #ffca28;
+    color: #757575;
   }
   .git {
     background: #f54d27;
     color: #413932;
+  }
+  .javascript {
+    background: #f7df1e;
+    color: #000;
+  }
+  .lighthouse {
+    background: #304ffe;
+    color: #fff;
+  }
+  .ppl2020 {
+    background: #feb229;
+    color: #000;
+  }
+  .sapper {
+    background: rgb(21, 151, 148);
+    color: #fff;
+  }
+  .svelte {
+    background: #ff3e00;
+    color: #fff;
   }
   .tutorial {
     background: #feffa5;
