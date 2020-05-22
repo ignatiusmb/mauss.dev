@@ -1,9 +1,8 @@
-import { Request, Response } from 'express';
 import { readFileSync, readdirSync } from 'fs';
 
 import { parseFile } from '../_parser';
 
-export function get(req: Request, res: Response) {
+export function get(req, res) {
   const { slug } = req.params;
   const DIR = 'content/posts';
   const posts = readdirSync(DIR);
@@ -13,11 +12,12 @@ export function get(req: Request, res: Response) {
   const post = parseFile(filename, content, (cleanedFilename: string, frontMatter: object) => {
     const [date, name] = cleanedFilename.split('.');
     frontMatter['slug'] = name;
-    frontMatter['date'] = new Date(date);
-    const weekday = frontMatter['date'].toLocaleDateString('default', { weekday: 'long' });
-    const day = frontMatter['date'].getDate();
-    const month = frontMatter['date'].toLocaleDateString('default', { month: 'long' });
-    const year = frontMatter['date'].getFullYear();
+    frontMatter['date'] = date;
+    const dateFormat = new Date(date);
+    const weekday = dateFormat.toLocaleDateString('default', { weekday: 'long' });
+    const day = dateFormat.getDate();
+    const month = dateFormat.toLocaleDateString('default', { month: 'long' });
+    const year = dateFormat.getFullYear();
     frontMatter['pretty-date'] = `${weekday}, ${day} ${month} ${year}`;
     return frontMatter;
   });

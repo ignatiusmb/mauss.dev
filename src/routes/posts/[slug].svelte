@@ -19,10 +19,15 @@
 
 <script>
   export let post;
+  import Icon from '../../components/independent/Icon.svelte';
+  import Header from '../../components/Header.svelte';
   import Sibling from '../../components/SiblingPost.svelte';
   import Tag from '../../components/Tag.svelte';
 
   import { afterUpdate } from 'svelte';
+  import { stores } from '@sapper/app';
+  const { preloading, page, session } = stores();
+  const [, segment] = $page.path.split('/');
   afterUpdate(() => Aqua.tsunami());
 </script>
 
@@ -34,23 +39,7 @@
   <link rel="shortcut icon" type="image/png" href="images/favicon/blog.png" />
 </svelte:head>
 
-<header>
-  <main>
-    <h1>{post['title']}</h1>
-    <small>
-      <div>
-        <span>{post['pretty-date']}</span>
-        <span>&bull;</span>
-        <span>{post['read-time']} min read</span>
-      </div>
-      <div class="tags">
-        {#each post['tags'] as tag}
-          <Tag {tag} />
-        {/each}
-      </div>
-    </small>
-  </main>
-</header>
+<Header {post} segment="content/{segment}" />
 
 <article>
   <section>
@@ -61,29 +50,12 @@
 </article>
 
 <style>
-  header,
   article {
     width: 100%;
     max-width: 42em;
     padding: 0 0.75em;
     margin: 0 auto;
     word-wrap: break-word;
-  }
-
-  header h1 {
-    margin: 1em 0 0.5em;
-  }
-  header small {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Karla';
-  }
-  header .tags {
-    display: flex;
-    margin-top: 0.5em;
-  }
-  header .tags :global(span:not(:last-child)) {
-    margin-right: 1em;
   }
 
   article {
@@ -142,7 +114,6 @@
   }
 
   @media only screen and (min-width: 600px) {
-    header,
     article {
       font-size: 1.25rem;
     }
