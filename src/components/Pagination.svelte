@@ -1,5 +1,6 @@
 <script>
   export let store, total;
+  import Icon from './independent/Icon.svelte';
   function handleIndexing(index) {
     if (index < 0) return;
     index = Math.round(index);
@@ -11,19 +12,19 @@
 </script>
 
 <section>
-  <a href="." on:click|preventDefault={() => handleIndexing(0)}>
-    <i class="fas fa-angle-double-left" />
-  </a>
-  <a href="." on:click|preventDefault={() => handleIndexing($store - 1)}>
-    <i class="fas fa-angle-left" />
-  </a>
+  <span on:click|preventDefault={() => handleIndexing(0)}>
+    <Icon name="chevrons-left" />
+  </span>
+  <span on:click|preventDefault={() => handleIndexing($store - 1)}>
+    <Icon name="chevron-left" />
+  </span>
   <div>{curr} - {next} / {total}</div>
-  <a href="." on:click|preventDefault={() => handleIndexing($store + 1)}>
-    <i class="fas fa-angle-right" />
-  </a>
-  <a href="." on:click|preventDefault={() => handleIndexing(total / 6)}>
-    <i class="fas fa-angle-double-right" />
-  </a>
+  <span on:click|preventDefault={() => handleIndexing($store + 1)}>
+    <Icon name="chevron-right" />
+  </span>
+  <span on:click|preventDefault={() => handleIndexing(Math.floor(total / 6))}>
+    <Icon name="chevrons-right" />
+  </span>
 </section>
 
 <style>
@@ -33,7 +34,8 @@
     display: flex;
     align-items: center;
   }
-  section a {
+  section span {
+    cursor: pointer;
     width: 2em;
     font-size: 1.5rem;
     text-align: center;

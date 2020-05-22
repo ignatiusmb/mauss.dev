@@ -1,53 +1,43 @@
 <script>
-  const icons = [
-    {
-      name: 'facebook',
-      url: 'https://www.facebook.com/ignatiusmb'
-    },
-    {
-      name: 'twitter',
-      url: 'https://twitter.com/ignatiusmbs'
-    },
-    {
-      name: 'instagram',
-      url: 'https://www.instagram.com/ignatiusmb'
-    },
-    {
-      name: 'linkedin',
-      url: 'https://www.linkedin.com/in/ignatiusmb'
-    },
-    {
-      name: 'github',
-      url: 'https://github.com/ignatiusmb'
-    },
-    {
-      name: 'gitlab',
-      url: 'https://gitlab.com/ignatiusmb'
-    },
-    {
-      name: 'twitch',
-      url: 'https://www.twitch.tv/magnawu'
-    },
-    {
-      name: 'spotify',
-      url: 'https://open.spotify.com/user/ignatiusmb'
-    }
-  ];
+  import Icon from './independent/Icon.svelte';
+  const size = 30;
 </script>
 
 <footer>
   <slot />
 
   <section class="social-links">
-    {#each icons as { url, name }}
-      <a href={url}>
-        <i class="fab fa-{name}" />
-      </a>
-    {/each}
+    <a href="https://www.facebook.com/ignatiusmb" alt="">
+      <Icon name="facebook" {size} />
+    </a>
+    <a href="https://twitter.com/ignatiusmbs">
+      <Icon name="twitter" {size} />
+    </a>
+    <a href="https://www.instagram.com/ignatiusmb">
+      <Icon name="instagram" {size} />
+    </a>
+    <a href="https://www.linkedin.com/in/ignatiusmb">
+      <Icon name="linkedin" {size} />
+    </a>
+    <a href="https://github.com/ignatiusmb">
+      <Icon name="github" {size} />
+    </a>
+    <a href="https://gitlab.com/ignatiusmb">
+      <Icon name="gitlab" {size} />
+    </a>
+    <!-- <a href="https://www.twitch.tv/magnawu">
+      <Icon name="twitch" {size} />
+    </a> -->
+    <a href="https://www.youtube.com/user/Ignapure">
+      <Icon name="youtube" {size} />
+    </a>
+    <!-- <a href="https://open.spotify.com/user/ignatiusmb">
+      <Icon name="spotify" {size} />
+    </a> -->
   </section>
 
   <section>
-    <p>Copyright &copy; {new Date().getFullYear()} Ignatius Bagussuputra</p>
+    <p>Copyright &copy; 2017 — {new Date().getFullYear()} Ignatius Bagussuputra</p>
     <p>
       Made with ❤️ and passion using
       <a href="https://svelte.dev/">Svelte</a>
