@@ -1,7 +1,6 @@
-import { splitAt } from '../../utils/helper';
-
 import { readdirSync, readFileSync } from 'fs';
 import { join } from 'path';
+import { splitAt } from '../../utils/helper';
 const markIt = require('markdown-it')({ html: true }).use(require('markdown-it-katex'));
 
 const countReadTime = (content: string) => {
@@ -23,7 +22,7 @@ function parseFile(filename: string, content: string, parseCallback: Function) {
     return acc;
   }, {});
 
-  const cleanedFilename = filename.split('/').slice(-1)[0];
+  const [cleanedFilename] = filename.split('/').slice(-1);
   const result = parseCallback(cleanedFilename, frontMatter);
 
   const article = content.slice(rawData.length + 1);

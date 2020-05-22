@@ -1,9 +1,8 @@
 <script>
-  export let post, segment;
+  export let post, segment, filename;
   import Icon from './independent/Icon.svelte';
   import Edit from './Edit.svelte';
   import Tag from './Tag.svelte';
-  const filename = `${post.date}.${post.slug}.md`;
 </script>
 
 <header>
