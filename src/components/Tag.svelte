@@ -1,6 +1,6 @@
 <script>
   export let tag;
-  import Link from './complement/Link.svelte';
+  import Link from './independent/Link.svelte';
 </script>
 
 <span class={tag}>

@@ -1,6 +1,6 @@
 <script>
   export let segment;
-  import ToggleTheme from './ToggleTheme.svelte';
+  import ToggleTheme from './independent/ToggleTheme.svelte';
 
   let scrolled;
 </script>

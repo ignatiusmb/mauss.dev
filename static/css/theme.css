@@ -12,7 +12,7 @@ body.light {
   --bg-toggle-inactive-color: rgba(0, 0, 0, 0);
   --bg-toggle-active-color: rgba(0, 0, 0, 0.08);
 
-  --fg-color: rgba(0, 0, 0, 0.87);
+  --fg-color: #212121;
   --fg-success-color: #000000;
   --fg-secondary-color: rgba(0, 0, 0, 0.56);
 
