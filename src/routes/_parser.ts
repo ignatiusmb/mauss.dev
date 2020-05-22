@@ -1,4 +1,4 @@
-import { splitAt } from '../helper';
+import { splitAt } from '../../utils/helper';
 
 import { readdirSync, readFileSync } from 'fs';
 import { join } from 'path';
@@ -39,7 +39,11 @@ function parseDir(dirname: string, fileParse: Function) {
   return FILTERED.map((filename) => {
     const mdFile = readFileSync(join(DIR, filename), 'utf8');
     return parseFile(filename, mdFile, fileParse);
-  }).sort((x, y) => y.date.getTime() - x.date.getTime());
+  }).sort((x, y) => {
+    const yDate = new Date(y.date);
+    const xDate = new Date(x.date);
+    return yDate.getTime() - xDate.getTime();
+  });
 }
 
 export { parseFile, parseDir };

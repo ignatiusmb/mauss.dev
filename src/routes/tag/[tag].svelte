@@ -11,7 +11,7 @@
   export let data, tag;
   import TagCard from '../../components/TagCard.svelte';
 
-  import { capitalize, isAbbreviated } from '../../helper';
+  import { capitalize, isAbbreviated } from '../../../utils/helper';
   tag = isAbbreviated(tag) ? tag.toUpperCase() : capitalize(tag);
 </script>
 
