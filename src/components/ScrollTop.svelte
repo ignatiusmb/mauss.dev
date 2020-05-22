@@ -1,4 +1,5 @@
 <script>
+  import Icon from './independent/Icon.svelte';
   import { onMount } from 'svelte';
   let y, mounted;
   onMount(() => (mounted = true));
@@ -8,7 +9,7 @@
 
 <svelte:window bind:scrollY={y} />
 <span class:show on:click={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}>
-  <i class="fas fa-angle-double-up" />
+  <Icon name="chevrons-up" />
 </span>
 
 <style>
