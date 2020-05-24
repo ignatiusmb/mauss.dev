@@ -3,8 +3,7 @@
   import { onMount } from 'svelte';
   let y, mounted;
   onMount(() => (mounted = true));
-  $: height = mounted ? document.body.scrollHeight / 3 : y;
-  $: show = y > height;
+  $: show = y > (mounted ? document.body.scrollHeight / 3 : y);
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -16,7 +15,7 @@
   span {
     cursor: pointer;
     position: fixed;
-    z-index: 9;
+    z-index: 1;
     bottom: 0;
     right: 0;
     width: 1.5em;
