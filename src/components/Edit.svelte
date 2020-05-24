@@ -14,7 +14,7 @@
 
 <style>
   span :global(a) {
-    display: flex;
+    display: inline-flex;
     align-items: center;
   }
   span :global(a :last-child) {
