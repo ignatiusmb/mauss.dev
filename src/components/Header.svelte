@@ -36,6 +36,7 @@
   small {
     display: flex;
     flex-wrap: wrap;
+    font-size: 0.9rem;
   }
   header :global(small:not(:first-of-type)) {
     margin-top: 0.5em;
