@@ -38,11 +38,11 @@
   </section>
 
   <section>
-    <p>Ignatius Bagussuputra &copy; 2017 — {new Date().getFullYear()}</p>
+    <p>Ignatius Bagussuputra &copy; 2017 &ndash; {new Date().getFullYear()}</p>
     <p>
       Made with ❤️ and passion using
       <LinkExt href="https://svelte.dev/">Svelte</LinkExt>
-      <Icon name="plus" size={15} />
+      &plus;
       <LinkExt href="https://sapper.svelte.dev/">Sapper</LinkExt>
     </p>
   </section>
@@ -91,6 +91,7 @@
   section:last-of-type {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
+    place-items: center;
     gap: 0.5em;
     font-family: 'Fira Code', 'Inconsolata', monospace;
   }
