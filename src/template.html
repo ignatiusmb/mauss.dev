@@ -6,6 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="author" content="Ignatius Bagussuputra">
+  <script>
+    try {
+      if (!localStorage.theme) {
+        const preferDark = window.matchMedia('(prefers-color-scheme: dark)');
+        localStorage.theme = preferDark ? 'dark' : 'light';
+      }
+      document.querySelector('html').classList.add(localStorage.theme);
+    } catch (error) {
+      console.error(error);
+    }
+  </script>
 
   %sapper.base%
 

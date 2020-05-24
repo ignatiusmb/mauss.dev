@@ -3,8 +3,8 @@
   --transition-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-body,
-body.light {
+html,
+html.light {
   --bg-inverse: #212121;
   --bg-color: #fff;
   --bg-color-secondary: #eee;
@@ -18,7 +18,7 @@ body.light {
 
   --focus-color: rgba(0, 0, 0, 0.5);
 }
-body.dark {
+html.dark {
   --bg-inverse: #fff;
   --bg-color: #212121;
   --bg-color-secondary: #363636;

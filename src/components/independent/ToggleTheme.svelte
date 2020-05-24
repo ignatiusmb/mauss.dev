@@ -1,70 +1,54 @@
 <script>
-  import { onMount } from 'svelte';
+  let nice = false;
+  let theme = localStorage.theme;
 
-  let body, checked;
-  function checkButton(state) {
-    if (checked === state) return;
-    if (!body.classList.length) body.classList.add(state ? 'dark' : 'light');
-    if (state) body.classList.replace('light', 'dark');
-    else body.classList.replace('dark', 'light');
-    localStorage.setItem('theme', state ? 'dark' : 'light');
-    checked = state;
+  function toggle() {
+    const { classList } = document.querySelector('html');
+    theme = theme === 'light' ? 'dark' : 'light';
+    classList.replace(theme === 'light' ? 'dark' : 'light', theme);
+    localStorage.theme = theme;
   }
-
-  onMount(() => {
-    body = document.body;
-    const preference = window.matchMedia('(prefers-color-scheme: dark)');
-    if (!localStorage.getItem('theme')) checkButton(preference.matches);
-    else checkButton(localStorage.getItem('theme') === 'dark');
-  });
 </script>
 
-<label>
-  <input on:click={() => checkButton(!checked)} bind:checked class="input" type="checkbox" />
-  <span />
-</label>
+<span
+  aria-label="Toggle Theme"
+  title="Toggle Theme"
+  class:nice
+  on:click={toggle}
+  on:mousedown={() => (nice = true)}
+  on:blur={() => (nice = false)}>
+  <svg viewBox="0 0 24 24">
+    <path
+      class="sun"
+      d="M12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6A6,6 0 0,1 18,12A6,6 0 0,1
+      12,18M20,15.31L23.31,12L20,8.69V4H15.31L12,0.69L8.69,4H4V8.69L0.69,12L4,15.31V20H8.69L12,23.31L15.31,20H20V15.31Z" />
+    <path
+      class="moon"
+      d="M12,18C11.11,18 10.26,17.8 9.5,17.45C11.56,16.5 13,14.42 13,12C13,9.58 11.56,7.5 9.5,6.55C10.26,6.2 11.11,6
+      12,6A6,6 0 0,1 18,12A6,6 0 0,1
+      12,18M20,8.69V4H15.31L12,0.69L8.69,4H4V8.69L0.69,12L4,15.31V20H8.69L12,23.31L15.31,20H20V15.31L23.31,12L20,8.69Z" />
+  </svg>
+</span>
 
 <style>
-  label {
-    position: relative;
-    display: flex;
-  }
-
-  input {
-    cursor: pointer;
-    position: absolute;
-    height: 100%;
-    opacity: 0;
-  }
-
   span {
     cursor: pointer;
-    width: 3.25em;
     height: 1.5em;
-    border: 1px solid var(--fg-color);
-    border-radius: 1em;
-    background-color: var(--bg-toggle-inactive-color);
-    transition: background-color var(--transition-duration) var(--transition-function);
   }
-  span::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0.25em;
-    width: 1em;
-    height: 1em;
-    background-color: var(--bg-color-secondary);
-    border: 1px solid var(--fg-color);
-    border-radius: 50%;
-    transform: translate(0em, -50%);
-    transition: transform var(--transition-duration) var(--transition-function);
+  svg {
+    height: 100%;
   }
-  .input:checked ~ span::after {
-    transform: translate(1.7em, -50%);
-    background-color: var(--fg-color);
+  path {
+    fill: var(--fg-color);
+    transition: opacity var(--transition-duration);
   }
-  .input:focus ~ span,
-  .input:not([disabled]):hover ~ span {
-    background-color: var(--bg-toggle-active-color);
+  .moon {
+    opacity: 0;
+  }
+  :global(html).dark .moon {
+    opacity: 1;
+  }
+  .nice {
+    outline: none;
   }
 </style>
