@@ -31,7 +31,7 @@
     transition: transform var(--transition-duration);
   }
   span.show {
-    transform: translate(-50%, -150%);
+    transform: translate(-50%, -190%);
   }
   span:hover {
     background-color: rgba(0, 0, 0, 0.5);

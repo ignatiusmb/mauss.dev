@@ -51,8 +51,8 @@
 <style>
   footer {
     position: relative;
-    padding: 4em 0 6em;
-    margin-top: auto;
+    padding: 3em 0;
+    margin: auto 0 3em;
     text-align: center;
     font-family: 'Rubik', sans-serif;
   }
