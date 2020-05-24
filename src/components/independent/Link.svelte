@@ -1,5 +1,6 @@
 <script>
-  export let href, className;
+  export let href;
+  export let className = null;
 </script>
 
 <a rel="preload" class={className} {href}>
