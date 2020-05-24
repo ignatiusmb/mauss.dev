@@ -1,6 +1,6 @@
 import { existsSync } from 'fs';
 import { join } from 'path';
-import { parseDir } from '../_parser';
+import { parseDir } from '../../utils/parser';
 
 export function get(req, res) {
   const DIR = 'content/posts';

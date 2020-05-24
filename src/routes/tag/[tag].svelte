@@ -1,7 +1,8 @@
 <script context="module">
   export async function preload(page, session) {
     const { tag } = page.params;
-    const list = await this.fetch('posts.json').then(r => r.json());
+    let list = await this.fetch('posts.json').then(r => r.json());
+    list = [...list, await this.fetch('uses.json').then(r => r.json())];
     const data = list.filter(post => post.tags.includes(tag));
     return { data, tag };
   }
@@ -11,12 +12,12 @@
   export let data, tag;
   import TagCard from '../../components/TagCard.svelte';
 
-  import { capitalize, isAbbreviated } from '../../../utils/helper';
+  import { capitalize, isAbbreviated } from '../../utils/helper';
   tag = isAbbreviated(tag) ? tag.toUpperCase() : capitalize(tag);
 </script>
 
 <svelte:head>
-  <title>{tag} | Tag &bull; IMB</title>
+  <title>Tagged with {tag} &bull; IMB</title>
   <link rel="shortcut icon" type="image/png" href="images/favicon/blog.png" />
 </svelte:head>
 

@@ -1,6 +1,6 @@
 import { readdirSync, readFileSync } from 'fs';
 import { join } from 'path';
-import { splitAt } from '../../utils/helper';
+import { splitAt } from './helper';
 const markIt = require('markdown-it')({ html: true }).use(require('markdown-it-katex'));
 
 const countReadTime = (content: string) => {

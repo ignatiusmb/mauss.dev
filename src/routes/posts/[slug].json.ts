@@ -1,5 +1,5 @@
 import { readFileSync, readdirSync } from 'fs';
-import { parseFile } from '../_parser';
+import { parseFile } from '../../utils/parser';
 
 export function get(req, res) {
   const { slug } = req.params;
