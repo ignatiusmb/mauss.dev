@@ -1,6 +1,7 @@
 import { existsSync } from 'fs';
 import { join } from 'path';
 import { parseDir } from '../../utils/parser';
+import { createPrettyDate } from '../../utils/helper';
 
 export function get(req, res) {
   const DIR = 'content/posts';
@@ -8,12 +9,7 @@ export function get(req, res) {
     const [date, name] = cleanedFilename.split('.');
     frontMatter['slug'] = name;
     frontMatter['date'] = date;
-    const dateFormat = new Date(date);
-    const weekday = dateFormat.toLocaleDateString('default', { weekday: 'long' });
-    const day = dateFormat.getDate();
-    const month = dateFormat.toLocaleDateString('default', { month: 'long' });
-    const year = dateFormat.getFullYear();
-    frontMatter['pretty-date'] = `${weekday}, ${day} ${month} ${year}`;
+    frontMatter['pretty-date'] = createPrettyDate(date);
 
     const rootFolder = `${process.cwd()}/static`;
     const category: string = frontMatter['tags'][0];

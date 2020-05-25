@@ -4,6 +4,15 @@ export function capitalize(text, lower) {
   });
 }
 
+export function createPrettyDate(date) {
+  const dateFormat = new Date(date);
+  const weekday = dateFormat.toLocaleDateString('default', { weekday: 'long' });
+  const day = dateFormat.getDate();
+  const month = dateFormat.toLocaleDateString('default', { month: 'long' });
+  const year = dateFormat.getFullYear();
+  return `${weekday}, ${day} ${month} ${year}`;
+}
+
 export function isAbbreviated(text) {
   if (text.length < 4) return true;
   return isNaN(parseInt(text[3], 10)) ? false : true;

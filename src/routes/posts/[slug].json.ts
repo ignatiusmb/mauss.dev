@@ -1,5 +1,6 @@
 import { readFileSync, readdirSync } from 'fs';
 import { parseFile } from '../../utils/parser';
+import { createPrettyDate } from '../../utils/helper';
 
 export function get(req, res) {
   const { slug } = req.params;
@@ -10,15 +11,7 @@ export function get(req, res) {
 
   const post = parseFile(filename, content, (cleanedFilename: string, frontMatter: object) => {
     const [date, name] = cleanedFilename.split('.');
-    frontMatter['slug'] = name;
-    frontMatter['date'] = date;
-    const dateFormat = new Date(date);
-    const weekday = dateFormat.toLocaleDateString('default', { weekday: 'long' });
-    const day = dateFormat.getDate();
-    const month = dateFormat.toLocaleDateString('default', { month: 'long' });
-    const year = dateFormat.getFullYear();
-    frontMatter['pretty-date'] = `${weekday}, ${day} ${month} ${year}`;
-    return frontMatter;
+    return { slug: name, ...frontMatter, date, 'pretty-date': createPrettyDate(date) };
   });
 
   res.writeHead(200, { 'Content-Type': 'application/json' });
