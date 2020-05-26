@@ -4,6 +4,7 @@ yarn-error.log
 
 **/node_modules/
 /src/node_modules/@sapper/
+/coverage/
 /cypress/screenshots/
 
 /__sapper__/
