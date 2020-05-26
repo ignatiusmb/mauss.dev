@@ -1,6 +1,11 @@
 import Pagination from '../../src/components/Pagination.svelte';
+import { posts } from '../../src/stores/page';
 import { render, fireEvent } from '@testing-library/svelte';
+import { tick } from 'svelte';
+import { get } from 'svelte/store';
 
 describe('pagination', () => {
-  it('show', () => {});
+  it('show', async () => {
+    const { getAllByLabelText } = render(Pagination);
+  });
 });

@@ -4,5 +4,4 @@ module.exports = {
     '^.+\\.svelte$': 'svelte-test/transform',
     '^.+\\.js$': 'babel-jest',
   },
-  verbose: true,
 };
