@@ -11,6 +11,7 @@
 <script>
   export let data, tag;
   import TagCard from '../../components/TagCard.svelte';
+  import Button from '../../components/Button.svelte';
 
   import { capitalize, isAbbreviated } from '../../utils/helper';
   tag = isAbbreviated(tag) ? tag.toUpperCase() : capitalize(tag);
@@ -27,19 +28,8 @@
 
 <article>
   {#each data as post, idx}
-    <TagCard
-      src={post.image}
-      alt={post.title}
-      date={post['pretty-date']}
-      read={post['read-time']}
-      href="posts/{post.slug}"
-      time={600 + 100 * idx}>
-      <main slot="main">
-        <h3>{post.title}</h3>
-        {#if post.description}
-          <small>{post.description}</small>
-        {/if}
-      </main>
+    <TagCard {post} time={600 + 100 * idx}>
+      <Button href="posts/{post.slug}">read</Button>
     </TagCard>
   {/each}
 

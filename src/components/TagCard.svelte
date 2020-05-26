@@ -1,16 +1,17 @@
 <script>
-  export let src, alt, date, read, href, time;
+  export let post, time;
 
   import { fly } from 'svelte/transition';
+  const [, date] = post['pretty-date'].split(',');
 </script>
 
-<section in:fly={{ x: -200, duration: time }} out:fly={{ x: 200, duration: 300 }}>
-  <p>{alt}</p>
+<section in:fly={{ x: -200, duration: time }}>
+  <p>{post.title}</p>
   <aside>
-    <small>{date.split(',')[1].trim()}</small>
+    <small>{date.trim()}</small>
     <small>&bull;</small>
-    <small>{read} min read</small>
-    <a rel="prefetch" {href}>read</a>
+    <small>{post['read-time']} min read</small>
+    <slot />
   </aside>
 </section>
 
@@ -32,26 +33,8 @@
     align-items: center;
     justify-content: flex-end;
   }
-  aside > * {
+  aside > :global(:not(:first-child)) {
     margin-left: 0.5em;
-  }
-  a {
-    padding: 0.5em 1em;
-    border-radius: 4px;
-    text-transform: uppercase;
-    font-family: 'Roboto', sans-serif;
-    color: var(--fg-color);
-    background-color: var(--bg-color);
-    transition: 50ms;
-  }
-  a:hover,
-  a:active {
-    margin-left: 1em;
-    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-    transform: scale(1.1);
-  }
-  a:visited {
-    color: var(--fg-color);
   }
 
   @media only screen and (min-width: 600px) {
