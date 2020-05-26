@@ -2,7 +2,7 @@
   export let post, segment, filename;
   import Icon from './independent/Icon.svelte';
   import Edit from './Edit.svelte';
-  import Tag from './Tag.svelte';
+  import TagBadge from './TagBadge.svelte';
 </script>
 
 <header>
@@ -14,7 +14,7 @@
   </small>
   <small>
     {#each post.tags as tag}
-      <Tag {tag} />
+      <TagBadge {tag} />
     {/each}
   </small>
   <slot />
