@@ -17,7 +17,7 @@
 </script>
 
 <svelte:head>
-  <title>Posts | IMB</title>
+  <title>Posts &bull; IMB</title>
   <link rel="shortcut icon" type="image/png" href="images/favicon/blog.png" />
 </svelte:head>
 

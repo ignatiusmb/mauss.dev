@@ -4,9 +4,6 @@
   import Navigation from '../components/Navigation.svelte';
   import Footer from '../components/Footer.svelte';
   import ScrollTop from '../components/ScrollTop.svelte';
-
-  import { stores } from '@sapper/app';
-  const { page, preloading, session } = stores();
 </script>
 
 <Icons />
