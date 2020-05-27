@@ -2,21 +2,24 @@
   export let segment;
   import ToggleTheme from './independent/ToggleTheme.svelte';
 
-  let scrolled;
+  let scrolled, innerWidth;
+  $: scrolled = innerWidth < 600 ? true : scrolled;
 </script>
 
-<svelte:window bind:scrollY={scrolled} />
+<svelte:window bind:scrollY={scrolled} bind:innerWidth />
 
 <nav class:scrolled>
   <a rel="prefetch" aria-current={segment === undefined ? 'page' : undefined} href="/">max</a>
   <a rel="prefetch" aria-current={segment === 'posts' ? 'page' : undefined} href="/posts">posts</a>
+  <a rel="prefetch" aria-current={segment === 'about' ? 'page' : undefined} href="/about">about</a>
+  <a rel="prefetch" aria-current={segment === 'uses' ? 'page' : undefined} href="/uses">uses</a>
 
   <ToggleTheme />
 </nav>
 
 <style>
   nav {
-    z-index: 2;
+    z-index: 3;
     width: 100%;
     position: fixed;
     bottom: 0;
@@ -29,7 +32,7 @@
     transition: var(--transition-duration) var(--transition-function);
   }
   nav.scrolled {
-    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.5);
     transition: var(--transition-duration) var(--transition-function);
   }
   nav :global(:last-child) {
@@ -79,6 +82,9 @@
       position: sticky;
       top: 0;
       flex-direction: row;
+    }
+    nav.scrolled {
+      box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5);
     }
     nav :global(:last-child) {
       margin-left: auto;
