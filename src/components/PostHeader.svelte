@@ -1,5 +1,7 @@
 <script>
-  export let post, segment, filename;
+  export let segment = null;
+  export let filename = null;
+  export let post;
   import Icon from './independent/Icon.svelte';
   import Edit from './Edit.svelte';
   import TagBadge from './TagBadge.svelte';
@@ -8,9 +10,13 @@
 <header>
   <h1>{post['title']}</h1>
   <small>
-    <time datetime={post.updated}>{post['pretty-date']}</time>
+    {#if post.updated}
+      <time datetime={post.updated}>{post['pretty-date']}</time>
+    {/if}
     <span>{post['read-time']} min read</span>
-    <Edit {segment} {filename} />
+    {#if segment && filename}
+      <Edit {segment} {filename} />
+    {/if}
   </small>
   {#if post.tags}
     <small>

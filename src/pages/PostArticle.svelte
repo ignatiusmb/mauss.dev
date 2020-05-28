@@ -1,5 +1,6 @@
 <script>
-  export let segment, filename;
+  export let segment = null;
+  export let filename = null;
   export let showEdit = false;
   export let siblings = null;
   import Edit from '../components/Edit.svelte';
