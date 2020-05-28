@@ -10,8 +10,8 @@
 
 <nav class:scrolled>
   <a rel="prefetch" aria-current={segment === undefined ? 'page' : undefined} href="/">max</a>
-  <a rel="prefetch" aria-current={segment === 'posts' ? 'page' : undefined} href="/posts">posts</a>
   <a rel="prefetch" aria-current={segment === 'about' ? 'page' : undefined} href="/about">about</a>
+  <a rel="prefetch" aria-current={segment === 'posts' ? 'page' : undefined} href="/posts">posts</a>
   <a rel="prefetch" aria-current={segment === 'uses' ? 'page' : undefined} href="/uses">uses</a>
 
   <ToggleTheme />
