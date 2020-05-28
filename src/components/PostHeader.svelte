@@ -12,11 +12,13 @@
     <span>{post['read-time']} min read</span>
     <Edit {segment} {filename} />
   </small>
-  <small>
-    {#each post.tags as tag}
-      <TagBadge {tag} />
-    {/each}
-  </small>
+  {#if post.tags}
+    <small>
+      {#each post.tags as tag}
+        <TagBadge {tag} />
+      {/each}
+    </small>
+  {/if}
   <slot />
 </header>
 
