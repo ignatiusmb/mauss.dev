@@ -1,6 +1,7 @@
 package-lock.json
 yarn-error.log
 .DS_Store
+*secret.*
 
 **/node_modules/
 /src/node_modules/@sapper/
