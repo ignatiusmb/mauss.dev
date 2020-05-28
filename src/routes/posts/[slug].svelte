@@ -19,7 +19,7 @@
 
 <script>
   export let post;
-  import Header from '../../components/Header.svelte';
+  import PostHeader from '../../components/PostHeader.svelte';
   import PostArticle from '../../pages/PostArticle.svelte';
 
   const segment = 'content/posts';
@@ -31,7 +31,7 @@
   <meta name="description" content={post.description} />
 </svelte:head>
 
-<Header {post} {segment} {filename} />
+<PostHeader {post} {segment} {filename} />
 <PostArticle {segment} {filename} siblings={post.siblings} showEdit={true}>
   <section>
     {@html post.content}

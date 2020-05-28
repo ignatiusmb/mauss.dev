@@ -8,7 +8,7 @@
 <header>
   <h1>{post['title']}</h1>
   <small>
-    <time datetime={post.date}>{post['pretty-date']}</time>
+    <time datetime={post.updated}>{post['pretty-date']}</time>
     <span>{post['read-time']} min read</span>
     <Edit {segment} {filename} />
   </small>
