@@ -11,7 +11,6 @@
     padding: 0.5em 1em;
     border-radius: 4px;
     text-transform: uppercase;
-    font-family: 'Roboto', sans-serif;
     color: var(--fg-color);
     background-color: var(--bg-color);
     transition: 50ms;

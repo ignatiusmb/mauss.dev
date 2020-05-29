@@ -89,7 +89,7 @@ I might've foreseen this and saved myself big time, but I really can't imagine w
 ### Laptop
 
 - `2011-XX` | MacBook Pro 15
-- `2014-09` | [HP Envy 15-k024tx](https://support.hp.com/id-en/document/c04337678) !Rp13,650,000.00
+- `2014-09` | [HP Envy 15-k024tx](https://support.hp.com/id-en/document/c04337678)
 - `2018-02` | [Dell XPS 13 9370](https://www.dell.com/support/home/en-sg/product-support/product/xps-13-9370-laptop/overview)
 
 I can't say much about this, by far the best laptop I can recommend to have for casual users. Excellent battery life, compact and lightweight form factor, powerful internals. You can always plug in an e-GPU at home for any gaming or GPU intensive usage since you shouldn't be playing on the go or at work either right.

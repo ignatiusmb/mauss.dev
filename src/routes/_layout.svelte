@@ -4,6 +4,13 @@
   import Navigation from '../components/Navigation.svelte';
   import Footer from '../components/Footer.svelte';
   import ScrollTop from '../components/ScrollTop.svelte';
+
+  import '../../static/css/fonts.css';
+  import '../../static/css/theme.css';
+  import '../../static/css/core.css';
+  import '../../static/css/main.css';
+  import '../../static/css/blog.css';
+  import '../../static/css/animation.css';
 </script>
 
 <Icons />

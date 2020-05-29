@@ -4,56 +4,56 @@
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url('fonts/Rubik-Light.ttf');
+  src: url('/css/fonts/Rubik-Light.ttf');
 }
 @font-face {
   font-family: 'Rubik';
   font-style: italic;
   font-weight: 300;
   font-display: swap;
-  src: url('fonts/Rubik-LightItalic.ttf');
+  src: url('/css/fonts/Rubik-LightItalic.ttf');
 }
 @font-face {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('fonts/Rubik-Regular.ttf');
+  src: url('/css/fonts/Rubik-Regular.ttf');
 }
 @font-face {
   font-family: 'Rubik';
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url('fonts/Rubik-Italic.ttf');
+  src: url('/css/fonts/Rubik-Italic.ttf');
 }
 @font-face {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url('fonts/Rubik-Medium.ttf');
+  src: url('/css/fonts/Rubik-Medium.ttf');
 }
 @font-face {
   font-family: 'Rubik';
   font-style: italic;
   font-weight: 500;
   font-display: swap;
-  src: url('fonts/Rubik-MediumItalic.ttf');
+  src: url('/css/fonts/Rubik-MediumItalic.ttf');
 }
 @font-face {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url('fonts/Rubik-Bold.ttf');
+  src: url('/css/fonts/Rubik-Bold.ttf');
 }
 @font-face {
   font-family: 'Rubik';
   font-style: italic;
   font-weight: 600;
   font-display: swap;
-  src: url('fonts/Rubik-BoldItalic.ttf');
+  src: url('/css/fonts/Rubik-BoldItalic.ttf');
 }
 
 /* Heading - Karla */
@@ -62,28 +62,28 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('fonts/Karla-Regular.ttf');
+  src: url('/css/fonts/Karla-Regular.ttf');
 }
 @font-face {
   font-family: 'Karla';
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url('fonts/Karla-Italic.ttf');
+  src: url('/css/fonts/Karla-Italic.ttf');
 }
 @font-face {
   font-family: 'Karla';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url('fonts/Karla-Bold.ttf');
+  src: url('/css/fonts/Karla-Bold.ttf');
 }
 @font-face {
   font-family: 'Karla';
   font-style: italic;
   font-weight: 600;
   font-display: swap;
-  src: url('fonts/Karla-BoldItalic.ttf');
+  src: url('/css/fonts/Karla-BoldItalic.ttf');
 }
 
 /* Monospace - Fira Code */
@@ -92,28 +92,28 @@
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url('fonts/FiraCode-Light.ttf');
+  src: url('/css/fonts/FiraCode-Light.ttf');
 }
 @font-face {
   font-family: 'Fira Code';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('fonts/FiraCode-Regular.ttf');
+  src: url('/css/fonts/FiraCode-Regular.ttf');
 }
 @font-face {
   font-family: 'Fira Code';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url('fonts/FiraCode-Medium.ttf');
+  src: url('/css/fonts/FiraCode-Medium.ttf');
 }
 @font-face {
   font-family: 'Fira Code';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url('fonts/FiraCode-SemiBold.ttf');
+  src: url('/css/fonts/FiraCode-SemiBold.ttf');
 }
 
 /* Serif - Crimson Pro */
@@ -122,68 +122,68 @@
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url('fonts/CrimsonPro-Light.ttf');
+  src: url('/css/fonts/CrimsonPro-Light.ttf');
 }
 @font-face {
   font-family: 'Crimson Pro';
   font-style: italic;
   font-weight: 300;
   font-display: swap;
-  src: url('fonts/CrimsonPro-LightItalic.ttf');
+  src: url('/css/fonts/CrimsonPro-LightItalic.ttf');
 }
 @font-face {
   font-family: 'Crimson Pro';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('fonts/CrimsonPro-Regular.ttf');
+  src: url('/css/fonts/CrimsonPro-Regular.ttf');
 }
 @font-face {
   font-family: 'Crimson Pro';
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url('fonts/CrimsonPro-Italic.ttf');
+  src: url('/css/fonts/CrimsonPro-Italic.ttf');
 }
 @font-face {
   font-family: 'Crimson Pro';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url('fonts/CrimsonPro-Medium.ttf');
+  src: url('/css/fonts/CrimsonPro-Medium.ttf');
 }
 @font-face {
   font-family: 'Crimson Pro';
   font-style: italic;
   font-weight: 500;
   font-display: swap;
-  src: url('fonts/CrimsonPro-MediumItalic.ttf');
+  src: url('/css/fonts/CrimsonPro-MediumItalic.ttf');
 }
 @font-face {
   font-family: 'Crimson Pro';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url('fonts/CrimsonPro-SemiBold.ttf');
+  src: url('/css/fonts/CrimsonPro-SemiBold.ttf');
 }
 @font-face {
   font-family: 'Crimson Pro';
   font-style: italic;
   font-weight: 600;
   font-display: swap;
-  src: url('fonts/CrimsonPro-SemiBoldItalic.ttf');
+  src: url('/css/fonts/CrimsonPro-SemiBoldItalic.ttf');
 }
 @font-face {
   font-family: 'Crimson Pro';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url('fonts/CrimsonPro-Bold.ttf');
+  src: url('/css/fonts/CrimsonPro-Bold.ttf');
 }
 @font-face {
   font-family: 'Crimson Pro';
   font-style: italic;
   font-weight: 700;
   font-display: swap;
-  src: url('fonts/CrimsonPro-BoldItalic.ttf');
+  src: url('/css/fonts/CrimsonPro-BoldItalic.ttf');
 }

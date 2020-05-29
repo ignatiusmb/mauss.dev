@@ -21,7 +21,7 @@ var a {
   border-radius: 5px;
   border-left: 5px solid #757575;
   margin: 2rem 0;
-  font-family: 'Muli', sans-serif;
+  font-family: 'Karla', sans-serif;
   transition: var(--transition-duration) var(--transition-function);
 }
 .info-box li {
