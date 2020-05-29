@@ -29,7 +29,7 @@
     <!-- <LinkExt href="https://www.twitch.tv/magnawu">
       <Icon name="twitch" {size} />
     </LinkExt> -->
-    <LinkExt href="https://www.youtube.com/user/Ignapure" label="youtube playlist profile">
+    <LinkExt href="https://www.youtube.com/user/Ignapure/playlists" label="youtube playlist profile">
       <Icon name="youtube" {size} />
     </LinkExt>
     <!-- <LinkExt href="https://open.spotify.com/user/ignatiusmb">
