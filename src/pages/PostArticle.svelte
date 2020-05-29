@@ -5,7 +5,7 @@
   export let siblings = null;
   import LinkExt from '../components/independent/LinkExt.svelte';
   import Edit from '../components/Edit.svelte';
-  import Siblings from '../components/siblings.svelte';
+  import Siblings from '../components/Siblings.svelte';
 
   import { afterUpdate } from 'svelte';
   afterUpdate(() => Aqua.tsunami());
