@@ -2,7 +2,6 @@
   export async function preload(page, session) {
     const { tag } = page.params;
     let list = await this.fetch('posts.json').then(r => r.json());
-    list = [...list, await this.fetch('uses.json').then(r => r.json())];
     const data = list.filter(post => post.tags.includes(tag));
     return { data, tag };
   }

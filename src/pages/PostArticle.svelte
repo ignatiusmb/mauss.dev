@@ -77,6 +77,10 @@
     padding: 0.5em;
     border: none;
   }
+  article :global(h2),
+  article :global(h3) {
+    font-family: 'Karla', sans-serif;
+  }
   article :global(h2) {
     margin-top: 2em;
     font-weight: bold;

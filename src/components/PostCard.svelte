@@ -1,5 +1,6 @@
 <script>
   export let post;
+  import Button from './Button.svelte';
   const date = post['pretty-date'].split(',')[1].trim();
 </script>
 
@@ -13,7 +14,7 @@
   <small>{date}</small>
   <small>&bull;</small>
   <small>{post['read-time']} min read</small>
-  <a rel="prefetch" href="posts/{post.slug}">read</a>
+  <Button href="posts/{post.slug}">read</Button>
 </aside>
 
 <style>
@@ -65,22 +66,7 @@
   aside small {
     margin-left: 0.5em;
   }
-  aside a {
-    padding: 0.5em 1em;
-    border-radius: 4px;
+  aside :global(:last-child) {
     margin-left: auto;
-    text-transform: uppercase;
-    font-family: 'Roboto', sans-serif;
-    color: var(--fg-color);
-    background-color: var(--bg-color);
-    transition: 50ms;
-  }
-  aside a:hover,
-  aside a:active {
-    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-    transform: scale(1.1);
-  }
-  aside a:visited {
-    color: var(--fg-color);
   }
 </style>

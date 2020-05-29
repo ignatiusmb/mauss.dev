@@ -12,7 +12,6 @@
 
 <span
   aria-label="Toggle Theme"
-  title="Toggle Theme"
   class:nice
   on:click={toggle}
   on:mousedown={() => (nice = true)}

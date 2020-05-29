@@ -8,28 +8,28 @@
   <slot />
 
   <section class="social-links">
-    <LinkExt href="https://www.facebook.com/ignatiusmb">
+    <LinkExt href="https://www.facebook.com/ignatiusmb" label="facebook profile">
       <Icon name="facebook" {size} />
     </LinkExt>
-    <LinkExt href="https://twitter.com/ignatiusmbs">
+    <LinkExt href="https://twitter.com/ignatiusmbs" label="twitter profile">
       <Icon name="twitter" {size} />
     </LinkExt>
-    <LinkExt href="https://www.instagram.com/ignatiusmb">
+    <LinkExt href="https://www.instagram.com/ignatiusmb" label="instagram profile">
       <Icon name="instagram" {size} />
     </LinkExt>
-    <LinkExt href="https://www.linkedin.com/in/ignatiusmb">
+    <LinkExt href="https://www.linkedin.com/in/ignatiusmb" label="linkedin profile">
       <Icon name="linkedin" {size} />
     </LinkExt>
-    <LinkExt href="https://github.com/ignatiusmb">
+    <LinkExt href="https://github.com/ignatiusmb" label="github profile">
       <Icon name="github" {size} />
     </LinkExt>
-    <LinkExt href="https://gitlab.com/ignatiusmb">
+    <LinkExt href="https://gitlab.com/ignatiusmb" label="gitlab profile">
       <Icon name="gitlab" {size} />
     </LinkExt>
     <!-- <LinkExt href="https://www.twitch.tv/magnawu">
       <Icon name="twitch" {size} />
     </LinkExt> -->
-    <LinkExt href="https://www.youtube.com/user/Ignapure">
+    <LinkExt href="https://www.youtube.com/user/Ignapure" label="youtube playlist profile">
       <Icon name="youtube" {size} />
     </LinkExt>
     <!-- <LinkExt href="https://open.spotify.com/user/ignatiusmb">
@@ -40,7 +40,7 @@
   <section>
     <p>Ignatius Bagussuputra &copy; 2017 &ndash; {new Date().getFullYear()}</p>
     <p>
-      Made with ❤️ and passion using
+      Made with ❤️ using
       <LinkExt href="https://svelte.dev/">Svelte</LinkExt>
       &plus;
       <LinkExt href="https://sapper.svelte.dev/">Sapper</LinkExt>
