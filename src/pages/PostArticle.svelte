@@ -3,6 +3,7 @@
   export let filename = null;
   export let showEdit = false;
   export let siblings = null;
+  import LinkExt from '../components/independent/LinkExt.svelte';
   import Edit from '../components/Edit.svelte';
   import Siblings from '../components/siblings.svelte';
 
@@ -22,9 +23,13 @@
       <p>Find an issue with this post? Have something to add, update, or clarify? All my posts here are editable.</p>
       <p>
         Just create a new
-        <strong>Issue</strong>
+        <LinkExt href="https://github.com/ignatiusmb/mauss/issues">
+          <strong>Issue</strong>
+        </LinkExt>
         or
-        <strong>PR</strong>
+        <LinkExt href="https://github.com/ignatiusmb/mauss/pulls">
+          <strong>PR</strong>
+        </LinkExt>
         on GitHub, any fix or addition is much appreciated!
         <Edit {segment} {filename} />
       </p>
