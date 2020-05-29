@@ -2,7 +2,7 @@
   export let segment, filename;
   import LinkExt from './independent/LinkExt.svelte';
   import Icon from './independent/Icon.svelte';
-  let link = 'https://github.com/ignatiusmb/imbagus/edit/master';
+  let link = 'https://github.com/ignatiusmb/mauss/edit/master';
 </script>
 
 <span>

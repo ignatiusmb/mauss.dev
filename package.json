@@ -1,7 +1,7 @@
 {
-  "name": "imbagus",
+  "name": "mauss",
   "description": "Personal Website",
-  "version": "20.5.22",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "test": "jest --coverage",
@@ -12,12 +12,9 @@
     "start": "node __sapper__/build"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.13.0",
     "compression": "^1.7.4",
-    "express": "^4.17.1",
-    "node-html-parser": "^1.2.16",
     "polka": "^1.0.0-next.11",
-    "sirv": "^0.4.2"
+    "sirv": "^0.4.6"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
@@ -27,7 +24,7 @@
     "@babel/plugin-transform-object-assign": "^7.8.3",
     "@babel/plugin-transform-runtime": "^7.9.0",
     "@babel/preset-env": "^7.9.6",
-    "@babel/preset-typescript": "^7.9.0",
+    "@babel/preset-typescript": "^7.10.1",
     "@babel/runtime": "^7.9.2",
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-json": "^4.0.3",
@@ -36,7 +33,6 @@
     "@rollup/plugin-typescript": "^4.1.1",
     "@testing-library/jest-dom": "^5.8.0",
     "@testing-library/svelte": "^3.0.0",
-    "@types/express": "^4.17.6",
     "@types/node": "^13.13.9",
     "babel-jest": "^26.0.1",
     "cross-env": "^7.0.2",
@@ -44,13 +40,13 @@
     "markdown-it": "^10.0.0",
     "markdown-it-katex": "^2.0.3",
     "npm-run-all": "^4.1.5",
-    "rollup": "^2.10.7",
+    "rollup": "^2.11.2",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-svelte": "^5.2.2",
     "rollup-plugin-terser": "^5.3.0",
     "sapper": "^0.27.13",
     "serve": "^11.3.0",
-    "svelte": "^3.22.3",
+    "svelte": "^3.23.0",
     "svelte-test": "^0.4.0",
     "tslib": "^1.13.0",
     "typescript": "^3.9.3"
