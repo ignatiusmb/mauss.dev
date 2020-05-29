@@ -1,5 +1,7 @@
 <script>
-  export let base, prev, next;
+  export let prev = null;
+  export let next = null;
+  export let base;
 </script>
 
 <aside>
