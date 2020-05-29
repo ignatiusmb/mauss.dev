@@ -18,7 +18,6 @@
 
 <svelte:head>
   <title>Posts &bull; IMB</title>
-  <link rel="shortcut icon" type="image/png" href="images/favicon/blog.png" />
 </svelte:head>
 
 <header>

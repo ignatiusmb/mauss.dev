@@ -2,34 +2,34 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="author" content="Ignatius Bagussuputra">
-  <script>
-    try {
-      if (!localStorage.theme) {
-        const preferDark = window.matchMedia('(prefers-color-scheme: dark)');
-        localStorage.theme = preferDark ? 'dark' : 'light';
-      }
-      document.querySelector('html').classList.add(localStorage.theme);
-    } catch (error) {
-      console.error(error);
-    }
-  </script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="author" content="Ignatius Bagussuputra">
+	<script>
+		try {
+			if (!localStorage.theme) {
+				const preferDark = window.matchMedia('(prefers-color-scheme: dark)');
+				localStorage.theme = preferDark ? 'dark' : 'light';
+			}
+			document.querySelector('html').classList.add(localStorage.theme);
+		} catch (error) {
+			console.error(error);
+		}
+	</script>
 
-  <!-- <link rel="manifest" href="manifest.json" crossorigin="use-credentials"> -->
-  %sapper.base%
-  %sapper.styles%
-  <script defer src="js/prism.js"></script>
-  <script defer src="js/prism.svelte.js"></script>
-  <script defer src="js/aqua.js"></script>
-  %sapper.head%
+	<link rel="manifest" href="site.webmanifest" crossorigin="use-credentials">
+	%sapper.base%
+	%sapper.styles%
+	<script defer src="js/prism.js"></script>
+	<script defer src="js/prism.svelte.js"></script>
+	<script defer src="js/aqua.js"></script>
+	%sapper.head%
 </head>
 
 <body>
-  <div id="sapper">%sapper.html%</div>
-  %sapper.scripts%
+	<div id="sapper">%sapper.html%</div>
+	%sapper.scripts%
 </body>
 
 </html>

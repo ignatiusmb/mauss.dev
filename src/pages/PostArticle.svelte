@@ -11,10 +11,6 @@
   afterUpdate(() => Aqua.tsunami());
 </script>
 
-<svelte:head>
-  <link rel="shortcut icon" type="image/png" href="images/favicon/blog.png" />
-</svelte:head>
-
 <article>
   <slot />
 
