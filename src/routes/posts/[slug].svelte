@@ -21,9 +21,8 @@
   export let post;
   import PostHeader from '../../components/PostHeader.svelte';
   import PostArticle from '../../pages/PostArticle.svelte';
-
   const segment = 'content/posts';
-  const filename = `${post.date}.${post.slug}.md`;
+  $: filename = `${post.date}.${post.slug}.md`;
 </script>
 
 <svelte:head>
