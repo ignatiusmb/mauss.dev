@@ -9,7 +9,7 @@
 
 <header>
   <h1>ignatiusmb</h1>
-  <img alt="Code Thinking" src="images/undraw/code-thinking.svg" class="color-rotate" />
+  <img alt="Logo" src="logo.png" class="color-rotate" />
 </header>
 
 <style>
