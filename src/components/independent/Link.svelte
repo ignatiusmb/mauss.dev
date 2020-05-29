@@ -9,6 +9,7 @@
 
 <style>
   a {
+    cursor: pointer;
     color: inherit;
   }
   a:hover {
