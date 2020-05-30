@@ -9,6 +9,7 @@
 
 <script>
   export let data, tag;
+  import MetaHead from '../../components/MetaHead.svelte';
   import TagCard from '../../components/TagCard.svelte';
   import Button from '../../components/Button.svelte';
 
@@ -16,9 +17,7 @@
   tag = isAbbreviated(tag) ? tag.toUpperCase() : capitalize(tag);
 </script>
 
-<svelte:head>
-  <title>Tagged with {tag} &bull; IMB</title>
-</svelte:head>
+<MetaHead canonical="tag/{tag}" title="Tagged with {tag}" description="All articles tagged with {tag}" />
 
 <header>
   <h1>{tag}</h1>

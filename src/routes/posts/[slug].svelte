@@ -19,16 +19,14 @@
 
 <script>
   export let post;
+  import MetaHead from '../../components/MetaHead.svelte';
   import PostHeader from '../../components/PostHeader.svelte';
   import PostArticle from '../../pages/PostArticle.svelte';
   const segment = 'content/posts';
   $: filename = `${post.date}.${post.slug}.md`;
 </script>
 
-<svelte:head>
-  <title>{post.title} &bull; IMB Posts</title>
-  <meta name="description" content={post.description} />
-</svelte:head>
+<MetaHead canonical="posts/{post.slug}" {post} title={post.title} description={post.description} />
 
 <PostHeader {post} {segment} {filename} />
 <PostArticle {segment} {filename} siblings={post.siblings} showEdit={true}>

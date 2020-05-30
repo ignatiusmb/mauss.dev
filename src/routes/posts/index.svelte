@@ -7,6 +7,7 @@
 
 <script>
   export let data, total;
+  import MetaHead from '../../components/MetaHead.svelte';
   import Pagination from '../../components/Pagination.svelte';
   import PostCard from '../../components/PostCard.svelte';
 
@@ -16,9 +17,7 @@
   $: posts = data.slice($postPage * 6, $postPage * 6 + 6);
 </script>
 
-<svelte:head>
-  <title>Posts &bull; IMB</title>
-</svelte:head>
+<MetaHead canonical="posts" title="Posts" description="Get the latest most recent posts here." />
 
 <header>
   <h1>Recent posts</h1>

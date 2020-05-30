@@ -1,15 +1,20 @@
-<svelte:head>
-  <title>Ignatius Bagussuputra</title>
-  <meta
-    name="description"
-    content="Hello! My name is Ignatius, and this is my online portfolio. My homepage will always be updated with my
-    current situation, so come frequently to get the latest update. Check out my projects and social accounts or contact
-    me through any social media given for business inquiries." />
-</svelte:head>
+<script>
+  import MetaHead from '../components/MetaHead.svelte';
+  let innerWidth;
+</script>
+
+<svelte:window bind:innerWidth />
+
+<MetaHead
+  title="Ignatius Bagussuputra"
+  description="Mauss. Personal website of Ignatius Bagussuputra. A Computer Science undergraduate from University of
+  Indonesia." />
 
 <header>
   <h1>ignatiusmb</h1>
-  <img alt="Logo" src="logo@0.5x.png" class="color-rotate" />
+  {#if innerWidth < 600}
+    <h3 style="text-align: center">Navigation for mobile is placed at the bottom</h3>
+  {/if}
 </header>
 
 <style>
@@ -26,12 +31,12 @@
     letter-spacing: 3vw;
     text-indent: 3vw;
   }
-  img {
+  /* img {
     width: 100%;
     max-width: 34em;
     padding: 1em;
     margin: 1em auto 2em;
-  }
+  } */
 
   @media only screen and (min-width: 600px) {
     h1 {

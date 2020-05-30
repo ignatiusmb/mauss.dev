@@ -6,13 +6,12 @@
 
 <script>
   export let post;
+  import MetaHead from '../components/MetaHead.svelte';
   import PostHeader from '../components/PostHeader.svelte';
   import PostArticle from '../pages/PostArticle.svelte';
 </script>
 
-<svelte:head>
-  <title>Uses &bull; IMB</title>
-</svelte:head>
+<MetaHead canonical="uses" {post} title="Uses" />
 
 <PostHeader {post} segment="content" filename="uses.md" />
 <PostArticle segment="content" filename="uses.md">
