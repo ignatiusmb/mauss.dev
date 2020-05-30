@@ -117,7 +117,7 @@
 }
 
 /* Serif - Crimson Pro */
-@font-face {
+/* @font-face {
 	font-family: 'Crimson Pro';
 	font-style: normal;
 	font-weight: 300;
@@ -186,4 +186,4 @@
 	font-weight: 700;
 	font-display: swap;
 	src: url('/fonts/CrimsonPro-BoldItalic.ttf');
-}
+} */

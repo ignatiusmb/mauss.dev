@@ -45,7 +45,7 @@
     margin: 3em auto 0;
     word-wrap: break-word;
     line-height: 1.5;
-    font-family: 'Crimson Pro', Georgia, 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.3rem;
   }
   section {
