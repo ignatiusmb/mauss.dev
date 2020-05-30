@@ -31,11 +31,12 @@
 <style>
   header {
     width: 100%;
-    max-width: 42em;
-    padding: 0 0.75em;
+    max-width: 53rem;
+    padding: 0 1rem;
     margin: 0 auto;
     word-wrap: break-word;
     font-family: 'Karla', sans-serif;
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
   }
 
   h1 {
@@ -44,7 +45,7 @@
   small {
     display: flex;
     flex-wrap: wrap;
-    font-size: 0.9rem;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
   }
   header :global(small:not(:first-of-type)) {
     margin-top: 0.5em;
@@ -60,11 +61,5 @@
   }
   small > :global(:not(:last-child)) {
     margin-right: 0.5em;
-  }
-
-  @media only screen and (min-width: 600px) {
-    header {
-      font-size: 1.25rem;
-    }
   }
 </style>

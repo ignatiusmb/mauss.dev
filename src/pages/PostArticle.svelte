@@ -40,13 +40,12 @@
 <style>
   article {
     width: 100%;
-    max-width: 42em;
-    padding: 0 0.75em;
-    margin: 3em auto 0;
+    max-width: 53rem;
+    padding: 0 1rem;
+    margin: 3rem auto 0;
     word-wrap: break-word;
     line-height: 1.5;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 2vw, 1.15rem);
   }
   section {
     margin-top: 2em;
@@ -54,10 +53,9 @@
     border-left: 2px solid crimson;
     background-color: rgba(0, 0, 0, 0.05);
   }
-  section > p:first-child {
+  article :global(section > :first-child) {
     margin: 0;
   }
-
   article :global(.aqua-code-box) {
     line-height: unset;
   }
@@ -78,45 +76,42 @@
     font-family: 'Karla', sans-serif;
   }
   article :global(h2) {
-    margin-top: 2em;
+    margin-top: 1.5em;
+    font-size: clamp(1.5rem, 4vw, 2rem);
     font-weight: bold;
   }
+  article :global(h2 + h3) {
+    margin-top: 0.5em;
+  }
   article :global(h3) {
-    margin: 0.5em 0;
-    font-size: 1.5rem;
+    margin: 1em 0 -0.25em;
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
     font-weight: bold;
+  }
+  article :global(ol + h3),
+  article :global(ul + h3) {
+    margin-top: 1.5em;
   }
   article :global(ol, ul) {
     padding: 0;
     margin: 0;
     margin-top: 0.75em;
+    margin-bottom: -0.5em;
   }
   article :global(li) {
     margin-left: 1em;
+  }
+  article :global(blockquote) {
+    text-align: center;
+    font-style: italic;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    line-height: clamp(2rem, 3vw, 3rem);
+    margin: clamp(0.5em, 3vw, 1.5rem);
   }
   article :global(blockquote li) {
     margin-left: unset;
   }
   article :global(.info-box) {
     font-size: 1rem;
-  }
-  article :global(blockquote) {
-    text-align: center;
-    font-style: italic;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    margin: 0.5em;
-  }
-
-  @media only screen and (min-width: 600px) {
-    article {
-      font-size: 1.25rem;
-    }
-
-    article :global(blockquote) {
-      font-size: 2rem;
-      line-height: 3rem;
-      margin: 1.5em;
-    }
   }
 </style>
