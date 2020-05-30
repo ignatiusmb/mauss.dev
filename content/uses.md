@@ -1,6 +1,7 @@
 ---
 title: Uses
-updated: 2020-05-23
+date: 2020-05-20
+updated: 2020-05-30
 ---
 
 I really make sure to take my time before settling with something, I would literally spend hours or even days researching for the best of this or that before truly settling on one. Because I don't frequently change my things, I want the best for the job before I stick to one.
@@ -134,14 +135,14 @@ A nice and lightweight mouse to carry and use. Its small but comfortable to the 
 
 ### Phones
 
-- `2015` | Samsung Galaxy S5 (Black 16GB)
-- `2017` | Samsung Galaxy S7 Edge (Gold 32GB)
+- `2015-XX` | Samsung Galaxy S5 (Black 16GB)
+- `2017-XX` | Samsung Galaxy S7 Edge (Gold 32GB)
 - `2020-02` | Samsung Galaxy S10+ (Black 128GB)
 
 ### Bags x Slingbacks
 
 - `2017-05` | [7ven Messenger](https://www.indiegogo.com/projects/7ven-messenger-the-only-bag-you-need#/) ~1 year to arrive
-- `2018-02` | [CYCOP DaySling](https://www.indiegogo.com/projects/7ven-messenger-the-only-bag-you-need#/) ~1 year to arrive
+- `2018-02` | [CYCOP DaySling](https://cycop-life.com/collections/daysling-series) ~2 months to arrive
 
 ### Power Banks
 
