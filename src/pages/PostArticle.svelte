@@ -23,13 +23,9 @@
       <p>Find an issue with this post? Have something to add, update, or clarify? All my posts here are editable.</p>
       <p>
         Just create a new
-        <LinkExt href="https://github.com/ignatiusmb/mauss/issues">
-          <strong>Issue</strong>
-        </LinkExt>
+        <LinkExt href="https://github.com/ignatiusmb/mauss/issues">Issue</LinkExt>
         or
-        <LinkExt href="https://github.com/ignatiusmb/mauss/pulls">
-          <strong>PR</strong>
-        </LinkExt>
+        <LinkExt href="https://github.com/ignatiusmb/mauss/pulls">PR</LinkExt>
         on GitHub, any fix or addition is much appreciated!
         <Edit {segment} {filename} />
       </p>

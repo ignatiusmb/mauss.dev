@@ -41,15 +41,19 @@
 
   [aria-current]::after {
     width: 100%;
-    background-color: maroon;
+    background-color: #990000;
   }
-  a {
+  nav a {
     position: relative;
     padding: 0.1em 0.2em;
     color: var(--fg-color);
     text-transform: capitalize;
   }
-  a::after {
+  nav a:hover,
+  nav a:focus {
+    color: var(--fg-color);
+  }
+  nav a::after {
     content: '';
     position: absolute;
     right: 0;
@@ -61,19 +65,19 @@
     transition: width var(--transition-duration) ease;
     transform: translateY(100%);
   }
-  a:hover::after,
-  a:focus::after {
+  nav a:hover::after,
+  nav a:focus::after {
     left: 0;
     right: auto;
     width: 100%;
   }
-  a:visited {
+  nav a:visited {
     color: inherit;
   }
-  a:first-of-type {
+  nav a:first-of-type {
     text-transform: uppercase;
   }
-  a:not(:first-of-type) {
+  nav a:not(:first-of-type) {
     margin-right: 0.5em;
   }
 
@@ -90,7 +94,7 @@
       margin-left: auto;
       margin-right: unset;
     }
-    a:not(:first-of-type) {
+    nav a:not(:first-of-type) {
       margin-right: unset;
       margin-left: 0.5em;
     }

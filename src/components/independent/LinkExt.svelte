@@ -12,7 +12,4 @@
   a {
     cursor: pointer;
   }
-  a:hover {
-    filter: invert() hue-rotate(180deg);
-  }
 </style>

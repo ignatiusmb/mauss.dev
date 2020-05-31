@@ -25,7 +25,7 @@
     display: grid;
     grid-template-columns: 1fr;
     border-radius: 0.5em;
-    border: 0.1em solid black;
+    border: 0.1em solid var(--fg-color);
   }
   a {
     display: grid;
@@ -33,7 +33,7 @@
     color: inherit;
   }
   a:nth-child(2) {
-    border-top: 0.1em solid black;
+    border-top: 0.1em solid var(--fg-color);
   }
   a:only-child {
     grid-column: 1 / -1;
@@ -44,7 +44,7 @@
     margin: 0;
   }
   strong {
-    border-bottom: 0.1em solid black;
+    border-bottom: 0.1em solid var(--fg-color);
   }
 
   @media only screen and (min-width: 600px) {
@@ -53,7 +53,7 @@
     }
     a:nth-child(2) {
       border-top: none;
-      border-left: 0.1em solid black;
+      border-left: 0.1em solid var(--fg-color);
     }
   }
 </style>
