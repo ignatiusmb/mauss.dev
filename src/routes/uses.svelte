@@ -11,10 +11,13 @@
   import PostArticle from '../pages/PostArticle.svelte';
 </script>
 
-<MetaHead canonical="uses" {post} title="Uses" />
+<MetaHead
+  {post}
+  canonical="uses"
+  title="Uses"
+  description="Ignatius Bagussuputra's collections, detailing his setup, applications, workstations, and other stuffs." />
 
-<PostHeader {post} segment="content" filename="uses.md" />
-<PostArticle segment="content" filename="uses.md">
+<PostArticle {post} segment="content" filename="uses.md">
   <section>
     {@html post.content}
   </section>

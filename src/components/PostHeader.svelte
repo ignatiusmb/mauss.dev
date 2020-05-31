@@ -11,7 +11,9 @@
   <h1>{post['title']}</h1>
   <small>
     {#if post.updated}
-      <time datetime={post.updated}>{post['pretty-date']}</time>
+      <span>
+        <time datetime={post.updated}>{post['pretty-date']}</time>
+      </span>
     {/if}
     <span>{post['read-time']} min read</span>
     {#if segment && filename}
@@ -30,17 +32,14 @@
 
 <style>
   header {
-    width: 100%;
-    max-width: 53rem;
-    padding: 0 1rem;
-    margin: 0 auto;
     word-wrap: break-word;
+    line-height: 1;
     font-family: 'Karla', sans-serif;
-    font-size: clamp(1.25rem, 3vw, 1.5rem);
   }
 
   h1 {
     margin: 1em 0 0.5em;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
   }
   small {
     display: flex;

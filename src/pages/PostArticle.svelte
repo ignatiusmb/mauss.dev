@@ -1,8 +1,10 @@
 <script>
+  export let post = null;
   export let segment = null;
   export let filename = null;
   export let showEdit = false;
   export let siblings = null;
+  import PostHeader from '../components/PostHeader.svelte';
   import LinkExt from '../components/independent/LinkExt.svelte';
   import Edit from '../components/Edit.svelte';
   import Siblings from '../components/Siblings.svelte';
@@ -12,6 +14,8 @@
 </script>
 
 <article>
+  <PostHeader {post} {segment} {filename} />
+
   <slot />
 
   {#if showEdit}
@@ -42,10 +46,15 @@
     width: 100%;
     max-width: 53rem;
     padding: 0 1rem;
-    margin: 3rem auto 0;
+    margin: 0 auto;
     word-wrap: break-word;
     line-height: 1.5;
+  }
+  article :global(section) {
     font-size: clamp(1rem, 2vw, 1.15rem);
+  }
+  article > :global(section:first-of-type) {
+    margin-top: 4em;
   }
   section {
     margin-top: 2em;

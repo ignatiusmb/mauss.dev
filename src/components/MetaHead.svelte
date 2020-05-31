@@ -1,6 +1,6 @@
 <script>
-  export let canonical = '';
   export let post = null;
+  export let canonical = '';
   export let title, description;
   export let social = {};
 </script>

@@ -26,10 +26,9 @@
   $: filename = `${post.date}.${post.slug}.md`;
 </script>
 
-<MetaHead canonical="posts/{post.slug}" {post} title={post.title} description={post.description} />
+<MetaHead {post} canonical="posts/{post.slug}" title={post.title} description={post.description} />
 
-<PostHeader {post} {segment} {filename} />
-<PostArticle {segment} {filename} siblings={post.siblings} showEdit={true}>
+<PostArticle {post} {segment} {filename} siblings={post.siblings} showEdit={true}>
   <section>
     {@html post.content}
   </section>
