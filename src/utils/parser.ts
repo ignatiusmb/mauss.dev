@@ -38,7 +38,7 @@ function parseDir(dirname: string, fileParse: Function) {
 	const FILTERED = readdirSync(DIR).filter((name) => name.endsWith('.md'));
 
 	return FILTERED.map((filename) => {
-		const mdFile = readFileSync(join(DIR, filename), 'utf8');
+		const mdFile = readFileSync(join(DIR, filename), 'utf-8');
 		return parseFile(filename, mdFile, fileParse);
 	}).sort((x, y) => {
 		const yDate = new Date(y.updated);

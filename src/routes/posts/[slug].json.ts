@@ -6,7 +6,7 @@ export function get(req, res) {
 	const DIR = 'content/posts';
 	const posts = readdirSync(DIR);
 	const [filename] = posts.filter((post) => post.includes(slug));
-	const content = readFileSync(`${DIR}/${filename}`).toString();
+	const content = readFileSync(`${DIR}/${filename}`, 'utf-8');
 
 	const post = parseFile(filename, content, (cleanedFilename: string, frontMatter: object) => {
 		const [date, slug] = cleanedFilename.split('.');
