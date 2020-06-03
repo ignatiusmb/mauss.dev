@@ -11,5 +11,6 @@ yarn-error.log
 /__sapper__/
 functions/
 
-# Local Netlify folder
+# Local static site config folder
 .netlify
+.vercel
