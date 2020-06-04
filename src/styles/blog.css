@@ -1,124 +1,128 @@
 var {
-  display: inline-block;
-  padding: 0 10px;
-  border-radius: 1000px;
-  margin: 0 2px;
-  line-height: 1.3;
-  font-style: normal;
-  background: #868c96;
-  color: #fff;
+	display: inline-block;
+	padding: 0 10px;
+	border-radius: 1000px;
+	margin: 0 2px;
+	line-height: 1.3;
+	font-style: normal;
+	background: #868c96;
+	color: #fff;
 }
 
 var a {
-  color: white;
+	color: white;
 }
 
-.dark .info-box {
-  filter: invert() hue-rotate(180deg);
+.dark section.info-box {
+	filter: invert() hue-rotate(180deg);
 }
-.info-box {
-  padding: 1rem 1.5rem;
-  border-radius: 5px;
-  border-left: 5px solid #757575;
-  margin: 2rem 0;
-  font-family: 'Karla', sans-serif;
-  transition: var(--transition-duration) var(--transition-function);
+section.info-box {
+	padding: 1rem 1.5rem;
+	border-radius: 5px;
+	border-left: 5px solid #757575;
+	margin: 2rem 0;
+	font-family: 'Karla', sans-serif;
+	transition: var(--transition-duration) var(--transition-function);
 }
-.info-box li {
-  margin-left: 0.5em;
+section.info-box[id] ol,
+section.info-box[id] ul {
+	margin: 0;
 }
-.info-box h3 {
-  margin-bottom: 0.3rem;
+section.info-box li {
+	margin-left: 0.5em;
 }
-.info-box p,
-.info-box li {
-  margin-bottom: 0;
+section.info-box h3 {
+	margin-bottom: 0.3rem;
 }
-
-.info-box[data-info='objective'],
-.info-box#objective {
-  position: relative;
-  border-top: 3.5em solid;
-  border-right: 5px solid;
-  border-bottom: 5px solid;
-  border-color: rgba(40, 10, 100, 0.4);
-  background: rgba(40, 10, 100, 0.1);
-  color: rgba(40, 10, 100, 0.7);
-}
-.info-box[data-info='objective'] h3,
-.info-box#objective h3 {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: -2.5px;
-  transform: translate(0, -165%);
-  text-align: center;
-}
-.info-box[data-info='objective'] h4,
-.info-box#objective h4 {
-  margin: 1em 0 0.5em;
-  font-weight: bold;
-}
-.info-box[data-info='objective'] var,
-.info-box[data-info='objective'] code,
-.info-box#objective var,
-.info-box#objective code {
-  background: rgba(40, 10, 100, 1);
-  color: white;
+section.info-box p,
+section.info-box li {
+	margin-bottom: 0;
 }
 
-.info-box[data-info='warning'],
-.info-box.warning {
-  border-left-color: rgba(240, 100, 100, 0.4);
-  background: rgba(240, 100, 100, 0.1);
-  color: rgba(240, 100, 100, 1);
+section.info-box[data-info='objective'],
+section.info-box#objective {
+	position: relative;
+	border-top: 3.5em solid;
+	border-right: 5px solid;
+	border-bottom: 5px solid;
+	border-color: rgba(40, 10, 100, 0.4);
+	background: rgba(40, 10, 100, 0.1);
+	color: rgba(40, 10, 100, 0.7);
 }
-.info-box[data-info='warning'] var,
-.info-box[data-info='warning'] code,
-.info-box.warning var,
-.info-box.warning code {
-  background: rgba(240, 100, 100, 1);
-  color: white;
+section.info-box[data-info='objective'] h3,
+section.info-box#objective h3 {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: -2.5px;
+	transform: translate(0, -125%);
+	text-align: center;
 }
-
-.info-box[data-info='tip'],
-.info-box.tip {
-  border-left-color: rgba(150, 200, 60, 0.4);
-  background: rgba(150, 200, 60, 0.1);
-  color: rgba(150, 200, 60, 1);
+section.info-box[data-info='objective'] h4,
+section.info-box#objective h4 {
+	margin: 1em 0 0.5em;
+	font-weight: bold;
 }
-.info-box[data-info='tip'] var,
-.info-box[data-info='tip'] code,
-.info-box.tip var,
-.info-box.tip code {
-  background: rgba(150, 200, 60, 1);
-  color: white;
-}
-
-.info-box[data-info='important'],
-.info-box.important {
-  border-left-color: rgb(226, 177, 0, 1);
-  background: rgba(254, 239, 179, 0.5);
-  color: rgb(226, 177, 0, 1);
-}
-.info-box[data-info='important'] var,
-.info-box[data-info='important'] code,
-.info-box.important var,
-.info-box.important code {
-  background: rgb(226, 177, 0, 1);
-  color: white;
+section.info-box[data-info='objective'] var,
+section.info-box[data-info='objective'] code,
+section.info-box#objective var,
+section.info-box#objective code {
+	background: rgba(40, 10, 100, 1);
+	color: white;
 }
 
-.info-box[data-info='note'],
-.info-box.note {
-  border-left-color: rgba(25, 160, 215, 0.4);
-  background: rgba(25, 160, 215, 0.1);
-  color: rgba(25, 160, 215, 1);
+section.info-box[data-info='warning'],
+section.info-box.warning {
+	border-left-color: rgba(240, 100, 100, 0.4);
+	background: rgba(240, 100, 100, 0.1);
+	color: rgba(240, 100, 100, 1);
 }
-.info-box[data-info='note'] var,
-.info-box[data-info='note'] code,
-.info-box.note var,
-.info-box.note code {
-  background: rgba(25, 160, 215, 1);
-  color: white;
+section.info-box[data-info='warning'] var,
+section.info-box[data-info='warning'] code,
+section.info-box.warning var,
+section.info-box.warning code {
+	background: rgba(240, 100, 100, 1);
+	color: white;
+}
+
+section.info-box[data-info='tip'],
+section.info-box.tip {
+	border-left-color: rgba(150, 200, 60, 0.4);
+	background: rgba(150, 200, 60, 0.1);
+	color: rgba(150, 200, 60, 1);
+}
+section.info-box[data-info='tip'] var,
+section.info-box[data-info='tip'] code,
+section.info-box.tip var,
+section.info-box.tip code {
+	background: rgba(150, 200, 60, 1);
+	color: white;
+}
+
+section.info-box[data-info='important'],
+section.info-box.important {
+	border-left-color: rgb(226, 177, 0, 1);
+	background: rgba(254, 239, 179, 0.5);
+	color: rgb(226, 177, 0, 1);
+}
+section.info-box[data-info='important'] var,
+section.info-box[data-info='important'] code,
+section.info-box.important var,
+section.info-box.important code {
+	background: rgb(226, 177, 0, 1);
+	color: white;
+}
+
+section.info-box[data-info='note'],
+section.info-box.note {
+	border-left-color: rgba(25, 160, 215, 0.4);
+	background: rgba(25, 160, 215, 0.1);
+	color: rgba(25, 160, 215, 1);
+}
+section.info-box[data-info='note'] var,
+section.info-box[data-info='note'] code,
+section.info-box.note var,
+section.info-box.note code {
+	background: rgba(25, 160, 215, 1);
+	color: white;
 }
