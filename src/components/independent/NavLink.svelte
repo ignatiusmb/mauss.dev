@@ -44,4 +44,9 @@
   a:visited {
     color: inherit;
   }
+
+  :global(html.dark) a:hover,
+  :global(html.dark) a:focus {
+    color: var(--fg-color);
+  }
 </style>
