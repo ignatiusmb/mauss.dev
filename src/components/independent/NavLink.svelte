@@ -1,9 +1,9 @@
 <script>
   export let segment, current;
-  const isCurrent = current => (segment === current ? 'page' : undefined);
+  $: isCurrent = current => (segment === current ? 'page' : undefined);
 </script>
 
-<a rel="prefetch" aria-current={isCurrent(current)} href="/{current}">
+<a rel="prefetch" aria-current={isCurrent(current)} href="/{current ? current : ''}">
   <slot />
 </a>
 
