@@ -1,5 +1,6 @@
 <script>
   export let segment;
+  import NavLink from './independent/NavLink.svelte';
   import ToggleTheme from './independent/ToggleTheme.svelte';
 
   let scrolled, innerWidth;
@@ -9,10 +10,10 @@
 <svelte:window bind:scrollY={scrolled} bind:innerWidth />
 
 <nav class:scrolled>
-  <a rel="prefetch" aria-current={segment === undefined ? 'page' : undefined} href="/">max</a>
-  <a rel="prefetch" aria-current={segment === 'about' ? 'page' : undefined} href="/about">about</a>
-  <a rel="prefetch" aria-current={segment === 'posts' ? 'page' : undefined} href="/posts">posts</a>
-  <a rel="prefetch" aria-current={segment === 'uses' ? 'page' : undefined} href="/uses">uses</a>
+  <NavLink {segment} current={undefined}>max</NavLink>
+  <NavLink {segment} current={'about'}>about</NavLink>
+  <NavLink {segment} current={'posts'}>posts</NavLink>
+  <NavLink {segment} current={'uses'}>uses</NavLink>
 
   <ToggleTheme />
 </nav>
@@ -38,46 +39,10 @@
   nav :global(:last-child) {
     margin-right: auto;
   }
-
-  [aria-current]::after {
-    width: 100%;
-    background-color: #990000;
-  }
-  nav a {
-    position: relative;
-    padding: 0.1em 0.2em;
-    color: var(--fg-color);
-    text-transform: capitalize;
-  }
-  nav a:hover,
-  nav a:focus {
-    color: var(--fg-color);
-  }
-  nav a::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 0;
-    height: 0.25em;
-    border-radius: 0.8em;
-    background-color: crimson;
-    transition: width var(--transition-duration) ease;
-    transform: translateY(100%);
-  }
-  nav a:hover::after,
-  nav a:focus::after {
-    left: 0;
-    right: auto;
-    width: 100%;
-  }
-  nav a:visited {
-    color: inherit;
-  }
-  nav a:first-of-type {
+  nav :global(a:first-of-type) {
     text-transform: uppercase;
   }
-  nav a:not(:first-of-type) {
+  nav :global(a:not(:first-of-type)) {
     margin-right: 0.5em;
   }
 
@@ -94,7 +59,7 @@
       margin-left: auto;
       margin-right: unset;
     }
-    nav a:not(:first-of-type) {
+    nav :global(a:not(:first-of-type)) {
       margin-right: unset;
       margin-left: 0.5em;
     }
