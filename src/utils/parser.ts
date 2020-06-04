@@ -25,7 +25,8 @@ function parseFile(filename: string, content: string, parseCallback: Function) {
 	const [cleanedFilename] = filename.split('/').slice(-1);
 	const result = parseCallback(cleanedFilename, frontMatter);
 	if (result.date && !result.updated) result.updated = result.date;
-	if (result.updated) result['pretty-date'] = createPrettyDate(result.updated);
+	if (result.date) result['pretty-date'] = createPrettyDate(result.date);
+	if (result.updated) result['pretty-updated'] = createPrettyDate(result.updated);
 
 	const article = content.slice(rawData.length + 1);
 	result['read-time'] = countReadTime(article);
@@ -41,9 +42,13 @@ function parseDir(dirname: string, fileParse: Function) {
 		const mdFile = readFileSync(join(DIR, filename), 'utf-8');
 		return parseFile(filename, mdFile, fileParse);
 	}).sort((x, y) => {
-		const yDate = new Date(y.updated);
-		const xDate = new Date(x.updated);
-		return yDate.getTime() - xDate.getTime();
+		const yDate = new Date(y.date);
+		const xDate = new Date(x.date);
+		if (yDate.getTime() === xDate.getTime()) {
+			const yUpdated = new Date(y.updated);
+			const xUpdated = new Date(x.updated);
+			return yUpdated.getTime() - xUpdated.getTime();
+		} else return yDate.getTime() - xDate.getTime();
 	});
 }
 

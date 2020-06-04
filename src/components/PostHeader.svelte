@@ -5,14 +5,18 @@
   import Icon from './independent/Icon.svelte';
   import Edit from './Edit.svelte';
   import TagBadge from './TagBadge.svelte';
+  import { lastWords } from '../utils/helper';
 </script>
 
 <header>
   <h1>{post['title']}</h1>
   <small>
+    <span>
+      <time datetime={post.date}>{post['pretty-date']}</time>
+    </span>
     {#if post.updated}
       <span>
-        <time datetime={post.updated}>{post['pretty-date']}</time>
+        <time datetime={post.updated}>Updated {lastWords(2, post['pretty-updated'])}</time>
       </span>
     {/if}
     <span>{post['read-time']} min read</span>
