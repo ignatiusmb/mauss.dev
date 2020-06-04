@@ -1,8 +1,7 @@
 <script context="module">
-  export async function preload(page, session) {
-    const { slug } = page.params;
+  export async function preload({ path, params, query }) {
     const list = await this.fetch('posts.json').then(r => r.json());
-    const post = await this.fetch(`posts/${slug}.json`).then(r => r.json());
+    const post = await this.fetch(`posts/${params.slug}.json`).then(r => r.json());
 
     for (let i = 0; i < list.length; i++) {
       if (list[i].slug !== post.slug) continue;

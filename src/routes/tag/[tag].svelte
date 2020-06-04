@@ -17,7 +17,7 @@
   tag = isAbbreviated(tag) ? tag.toUpperCase() : capitalize(tag);
 </script>
 
-<MetaHead canonical="tag/{tag}" title="Tagged with {tag}" description="All articles tagged with {tag}" />
+<MetaHead title="Tagged with {tag}" description="All articles tagged with {tag}" />
 
 <header>
   <h1>{tag}</h1>

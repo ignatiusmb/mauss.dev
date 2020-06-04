@@ -2,14 +2,13 @@
   export let post, time;
 
   import { fly } from 'svelte/transition';
-  const [, date] = post['pretty-date'].split(',');
+  const prettyDate = post['pretty-date'].split(',')[1].trim();
 </script>
 
 <section in:fly={{ x: -200, duration: time }}>
   <p>{post.title}</p>
   <aside>
-    <small>{date.trim()}</small>
-    <small>&bull;</small>
+    <small>{prettyDate}</small>
     <small>{post['read-time']} min read</small>
     <slot />
   </aside>
@@ -33,7 +32,15 @@
     align-items: center;
     justify-content: flex-end;
   }
-  aside > :global(:not(:first-child)) {
+  aside small {
+    margin-right: 0.5em;
+  }
+  aside small:first-of-type {
+    margin-left: 0.5em;
+  }
+  aside small:not(:last-of-type)::after {
+    content: '•';
+    color: crimson;
     margin-left: 0.5em;
   }
 

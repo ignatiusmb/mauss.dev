@@ -97,7 +97,8 @@
   article :global(ul + h3) {
     margin-top: 1.5em;
   }
-  article :global(ol, ul) {
+  article :global(ol),
+  article :global(ul) {
     padding: 0;
     margin: 0;
     margin-top: 0.75em;

@@ -14,7 +14,7 @@
     <span>
       <time datetime={post.date}>{post['pretty-date']}</time>
     </span>
-    {#if post.updated}
+    {#if post.updated && post.updated !== post.date}
       <span>
         <time datetime={post.updated}>Updated {lastWords(2, post['pretty-updated'])}</time>
       </span>
