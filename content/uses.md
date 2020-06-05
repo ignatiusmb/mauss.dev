@@ -8,6 +8,16 @@ I really make sure to take my time before settling with something, I would liter
 
 This page will serve as a living document and a place to see all of the things I've researched before so I don't have to spent a lot of time to redo my research again and just refer back to here. I also love to collect and track my stuffs so this will also act as my stuff's track record with its own history for my personal reminder as well.
 
+> Unless you have a good reason to, always prioritize **quality** over quantity/price
+
+This is the rule I've always look back to when looking for something. Living off of this really saves me in a lot of aspects. Always keep in mind that there's always a tradeoff when buying something, always.
+
+Money might only be the only thing you'll save if you're aiming for cheap or unreliable stuff. You'll not only lose on quality, but also your time and energy, sometimes even health and other stuff you wouldn't normally think about.
+
+Imagine using/buying something that only lasts for a week at most for let's say $1, compare that to the same product but better quality and perhaps reusable for let's say $10. Sure, you'll save some money early on, but as time goes on, the $10 product gives off more value for the money you spent on it. Its drawback is that you need to invest a lot more early on when you're buying it.
+
+This might not make much sense right now, but take a look at the top item on my Desktop Workstation list and it'll make much more sense why I'm emphasizing on quality right now.
+
 ## Desktop Applications
 
 ### Code & Text Editor
@@ -44,6 +54,27 @@ It's just plain built-in command prompt from Windows. I've tried the beta versio
 - [Rubik](https://fonts.google.com/specimen/Rubik) - main default font
 
 ## Desktop Workstation
+
+### Chair
+
+- `2017-??` | Generic Office Chair
+- `2020-06` | [Secretlab TITAN 2020 PRIME PU Leather - Stealth](https://www.tokopedia.com/secretlab/secretlab-titan-2020-series-prime-pu-leather-kursi-gaming-stealth)
+
+Chair, is in my honest opinion, the most important aspect of your workstation. You know well about that famous sleeping mattresses advertisement quote, which speaks something like
+
+> You spend 1/3 of your life sleeping, so do it well
+
+I believe and agree with that since I've experience having my mattress changed and could never imagine going back to having those rough nights. But, as someone who spends the 2/3 rest of his life mostly sitting in front of the desk, I say The Chair is even more important to get it right than your mattress. Not only it is important for your health and fitness, it will tremendously boost your productivity while still being able to stay comfortable for a long time and reduce fatigue.
+
+I almost went for DXRacer Valkyrie series, that was on my wishlist for some time but all red model is out of stock. I'm so grateful it is because I redid my research for 2020 and finally settled on Secretlab TITAN series. I didn't go for the OMEGA series, partially because it's out of stock and I badly need an upgrade ASAP, but other than that I thought there's no harm in getting a bigger version of the same chair. Most reviews about Secretlab chairs I read recommends TITAN series too for its better lumbar support and an additional head pillow.
+
+You might need to do your own review to figure out what's best for you too, especially if you're the type that needs to try it for themselves first for these kinds of things. With that aside, here's my take on this chair. Almost all the reviews I read at the time suggests Secretlab to be the best at this market, I rarely see DXRacer on the list and always see Secretlab on it. It looks super well-built too with massive cushions which I needed the most. The most convincing review I read that settles it was [a one year review of it](https://www.reddit.com/r/pcmasterrace/comments/8g0v67/secretlab_titan_and_omega_chairs_1_year_later/) and [its following update after 3 years](https://www.reddit.com/r/pcmasterrace/comments/c5tle3/secretlab_chairs_3rd_review_update_3_years_later/).
+
+> Stitching looks new, the seat base does not have any stretching, there is no fading at all, IT STILL LOOKS NEW!
+
+This really sold me because the chair I have previously was totally busted with absolutely no cushion remaining after less than a year, and it really took a toll on my right shoulder and spine's health. It hinders my productivity too and I can't work on something without feeling tired and fatigued after just an hour.
+
+One last to thing to consider is that these so called Gaming chairs are usually geared more towards its looks than to focus on the ergonomics. I settled with Secretlab because they have an official distributor here which I can trust its quality and authenticity, while other brands don't. Of course if you're truly a professional or for some reason doesn't like the looks or branding on these Gaming chairs, you should definitely go for Herman Miller chairs. I didn't because it didn't have an official distributor here, was too expensive, it didn't suit my workstation style, and it's too office-y looking.
 
 ### Monitor
 
@@ -89,7 +120,7 @@ I might've foreseen this and saved myself big time, but I really can't imagine w
 
 ### Laptop
 
-- `2011-XX` | MacBook Pro 15
+- `2011-??` | MacBook Pro 15
 - `2014-09` | [HP Envy 15-k024tx](https://support.hp.com/id-en/document/c04337678)
 - `2018-02` | [Dell XPS 13 9370](https://www.dell.com/support/home/en-sg/product-support/product/xps-13-9370-laptop/overview)
 
@@ -135,8 +166,8 @@ A nice and lightweight mouse to carry and use. Its small but comfortable to the 
 
 ### Phones
 
-- `2015-XX` | Samsung Galaxy S5 (Black 16GB)
-- `2017-XX` | Samsung Galaxy S7 Edge (Gold 32GB)
+- `2015-??` | Samsung Galaxy S5 (Black 16GB)
+- `2017-??` | Samsung Galaxy S7 Edge (Gold 32GB)
 - `2020-02` | Samsung Galaxy S10+ (Black 128GB)
 
 ### Bags x Slingbacks
@@ -146,7 +177,7 @@ A nice and lightweight mouse to carry and use. Its small but comfortable to the 
 
 ### Power Banks
 
-- `2017-XX` | UNEED QuickBox 12000mAh UPB12Q3
+- `2017-??` | UNEED QuickBox 12000mAh UPB12Q3
 - `2018-05` | [Anker PowerCore Speed 20000mAh A1278H11](https://www.anker.com/products/variant/PowerCore-Speed-20000mAh-*Upgraded/A1278011)
 - `2018-10` | UNEED QuickBox 100000mAh UND-UPB101PD
 

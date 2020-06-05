@@ -95,7 +95,7 @@
   }
   article :global(ol + h3),
   article :global(ul + h3) {
-    margin-top: 1.5em;
+    margin-top: 1.25em;
   }
   article :global(ol),
   article :global(ul) {
@@ -103,6 +103,10 @@
     margin: 0;
     margin-top: 0.75em;
     margin-bottom: -0.5em;
+  }
+  article :global(ol li:not(:only-child):last-child),
+  article :global(ul li:not(:only-child):last-child) {
+    margin-bottom: 1em;
   }
   article :global(li) {
     margin-left: 1em;
