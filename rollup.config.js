@@ -41,7 +41,7 @@ export default {
 			legacy &&
 				babel({
 					extensions: ['.js', '.mjs', '.html', '.svelte'],
-					runtimeHelpers: true,
+					babelHelpers: 'runtime',
 					exclude: ['node_modules/@babel/**'],
 					presets: [
 						[
@@ -96,6 +96,7 @@ export default {
 			require('module').builtinModules || Object.keys(process.binding('natives'))
 		),
 
+		preserveEntrySignatures: 'strict',
 		onwarn,
 	},
 
@@ -113,6 +114,7 @@ export default {
 			!dev && terser(),
 		],
 
+		preserveEntrySignatures: false,
 		onwarn,
 	},
 };
