@@ -45,6 +45,11 @@
   nav :global(a:not(:first-of-type)) {
     margin-right: 0.5em;
   }
+  :global(html.dark) nav :global(a),
+  :global(html.dark) nav :global(a:focus),
+  :global(html.dark) nav :global(a:hover) {
+    color: var(--fg-color);
+  }
 
   @media only screen and (min-width: 600px) {
     nav {

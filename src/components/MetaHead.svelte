@@ -3,12 +3,13 @@
   export let canonical = '';
   export let title, description;
   export let social = {};
+  $: canonical = `https://mauss.dev/${canonical}`;
 </script>
 
 <svelte:head>
   <title>{title} &bull; Mauss</title>
   {#if canonical}
-    <link rel="canonical" href="https://mauss.dev/{canonical}" />
+    <link rel="canonical" href={canonical} />
   {/if}
   <meta name="author" content="Ignatius Bagussuputra" />
   {#if description}
@@ -20,7 +21,7 @@
     {/if}
     <meta property="og:title" content={post.title} />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://mauss.dev/{canonical}" />
+    <meta property="og:url" content={canonical} />
     <meta property="og:description" content={post.description} />
     <meta property="article:published_time" content={post.date} />
     <meta property="article:modified_time" content={post.updated} />
@@ -39,7 +40,7 @@
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="@ignatiusmbs" />
       <meta name="twitter:creator" content="@ignatiusmbs" />
-      <meta name="twitter:url" content="https://mauss.dev/{canonical}" />
+      <meta name="twitter:url" content={canonical} />
       <meta name="twitter:title" content={post.title} />
       <meta name="twitter:description" content={post.description} />
     {/if}
