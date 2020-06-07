@@ -11,9 +11,11 @@
 <header>
   <h1>{post['title']}</h1>
   <small>
-    <span>
-      <time datetime={post.date}>{post['pretty-date']}</time>
-    </span>
+    {#if post.date}
+      <span>
+        <time datetime={post.date}>{post['pretty-date']}</time>
+      </span>
+    {/if}
     {#if post.updated && post.updated !== post.date}
       <span>
         <time datetime={post.updated}>Updated {lastWords(2, post['pretty-updated'])}</time>
@@ -36,6 +38,8 @@
 
 <style>
   header {
+    display: flex;
+    flex-direction: column;
     word-wrap: break-word;
     line-height: 1;
     font-family: 'Karla', sans-serif;

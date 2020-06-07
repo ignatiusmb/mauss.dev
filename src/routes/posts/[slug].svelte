@@ -22,10 +22,11 @@
   import PostHeader from '../../components/PostHeader.svelte';
   import PostArticle from '../../pages/PostArticle.svelte';
   const segment = 'content/posts';
+  $: canonical = `posts/${post.slug}`;
   $: filename = `${post.date}.${post.slug}.md`;
 </script>
 
-<MetaHead {post} canonical="posts/{post.slug}" title={post.title} description={post.description} />
+<MetaHead {post} {canonical} title={post.title} description={post.description} />
 
 <PostArticle {post} {segment} {filename} siblings={post.siblings} showEdit={true}>
   <section>

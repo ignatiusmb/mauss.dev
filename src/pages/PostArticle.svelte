@@ -14,7 +14,9 @@
 </script>
 
 <article>
-  <PostHeader {post} {segment} {filename} />
+  <PostHeader {post} {segment} {filename}>
+    <slot name="header" />
+  </PostHeader>
 
   <slot />
 
@@ -114,7 +116,7 @@
   article :global(blockquote) {
     text-align: center;
     font-style: italic;
-    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
     line-height: clamp(2rem, 3vw, 3rem);
     margin: clamp(0.5em, 3vw, 1.5rem);
   }

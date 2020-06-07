@@ -12,9 +12,9 @@ This page will serve as a living document and a place to see all of the things I
 
 This is the rule I've always look back to when looking for something. Living off of this really saves me in a lot of aspects. Always keep in mind that there's always a tradeoff when buying something, always.
 
-Money might only be the only thing you'll save if you're aiming for cheap or unreliable stuff. You'll not only lose on quality, but also your time and energy, sometimes even health and other stuff you wouldn't normally think about.
+Money might be the only thing you'll save if you're aiming for cheap or unreliable stuff. You'll not only lose on quality, but also your time, energy, sometimes even health, and other stuff you wouldn't normally think about.
 
-Imagine using/buying something that only lasts for a week at most for let's say $1, compare that to the same product but better quality and perhaps reusable for let's say $10. Sure, you'll save some money early on, but as time goes on, the $10 product gives off more value for the money you spent on it. Its drawback is that you need to invest a lot more early on when you're buying it.
+Imagine buying something that only lasts for a week at most for let's say $1, compare that to the same product but better quality and perhaps reusable for let's say $10. Sure, you'll save some money early on, but as time goes on, the $10 product gives off more value for the money you spent on it. Its drawback is that you need to invest a lot more early on when you're buying it.
 
 This might not make much sense right now, but take a look at the top item on my Desktop Workstation list and it'll make much more sense why I'm emphasizing on quality right now.
 
