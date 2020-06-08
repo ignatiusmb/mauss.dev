@@ -57,7 +57,7 @@ It's just plain built-in command prompt from Windows. I've tried the beta versio
 
 ### Chair
 
-- `2017-??` | Generic Office Chair
+- `2015-??` | Generic Office Chair
 - `2020-06` | [Secretlab TITAN 2020 PRIME PU Leather - Stealth](https://www.tokopedia.com/secretlab/secretlab-titan-2020-series-prime-pu-leather-kursi-gaming-stealth)
 
 Chair, is in my honest opinion, the most important aspect of your workstation. You know well about that famous sleeping mattresses advertisement quote, which speaks something like
