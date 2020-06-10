@@ -6,7 +6,7 @@
 </script>
 
 <article>
-  <div class="img-wrapper">
+  <div>
     <img src={post.image} alt={post.title} />
   </div>
   <slot />
@@ -42,7 +42,7 @@
   article:hover::before {
     opacity: 0.04;
   }
-  .img-wrapper {
+  div {
     position: relative;
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
@@ -67,7 +67,10 @@
     padding: 0.5em;
   }
   aside small {
-    margin-right: 0.5em;
+    margin-right: 0.5rem;
+  }
+  aside small:first-child {
+    margin-left: 0.5rem;
   }
   aside small:not(:last-of-type)::after {
     content: '•';

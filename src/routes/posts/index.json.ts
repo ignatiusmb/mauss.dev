@@ -1,7 +1,6 @@
 import { existsSync } from 'fs';
 import { join } from 'path';
 import { parseDir } from '../../utils/parser';
-import { createPrettyDate } from '../../utils/helper';
 
 export function get(req, res) {
 	const DIR = 'content/posts';
