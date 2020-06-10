@@ -12,6 +12,7 @@
 <nav class:scrolled>
   <NavLink {segment} current={undefined}>max</NavLink>
   <NavLink {segment} current={'about'}>about</NavLink>
+  <NavLink {segment} current={'curated'}>curated</NavLink>
   <NavLink {segment} current={'posts'}>posts</NavLink>
   <NavLink {segment} current={'uses'}>uses</NavLink>
 
