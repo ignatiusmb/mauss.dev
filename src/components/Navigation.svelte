@@ -14,6 +14,7 @@
   <NavLink {segment} current={'about'}>about</NavLink>
   <NavLink {segment} current={'curated'}>curated</NavLink>
   <NavLink {segment} current={'posts'}>posts</NavLink>
+  <NavLink {segment} current={'reviews'}>reviews</NavLink>
   <NavLink {segment} current={'uses'}>uses</NavLink>
 
   <ToggleTheme />
