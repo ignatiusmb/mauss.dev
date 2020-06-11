@@ -8,9 +8,6 @@
   import LinkExt from '../components/independent/LinkExt.svelte';
   import Edit from '../components/Edit.svelte';
   import Siblings from '../components/Siblings.svelte';
-
-  import { afterUpdate } from 'svelte';
-  afterUpdate(() => Aqua.tsunami());
 </script>
 
 <article>
@@ -114,10 +111,10 @@
     margin-left: 1em;
   }
   article :global(blockquote) {
+    line-height: 1.5;
     text-align: center;
     font-style: italic;
     font-size: clamp(1.4rem, 3vw, 1.8rem);
-    line-height: clamp(2rem, 3vw, 3rem);
     margin: clamp(0.5em, 3vw, 1.5rem);
   }
   article :global(blockquote li) {
