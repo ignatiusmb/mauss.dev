@@ -14,10 +14,13 @@
   import { flip } from 'svelte/animate';
 </script>
 
-<MetaHead canonical="curated" title="Curated" description="Recently curated by Ignatius" />
+<MetaHead
+  canonical="curated"
+  title="Curated"
+  description="Curated content for all kinds of programming, lifestyle, and many more." />
 
 <header>
-  <h1>Latest Curated</h1>
+  <h1>Curated by Mauss</h1>
 </header>
 
 <main>
