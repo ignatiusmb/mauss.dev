@@ -1,7 +1,17 @@
 import { readdirSync, readFileSync } from 'fs';
 import { join } from 'path';
 import { createPrettyDate, splitAt } from './helper';
-const markIt = require('markdown-it')({ html: true });
+import Aqua from '@ignatiusmb/aqua';
+const markIt = require('markdown-it')({
+	html: true,
+	highlight: (str: string, language: string) => {
+		const strList = str.split('\n');
+		const dataset = { language };
+		if (strList[0][0] === '~') dataset['title'] = strList[0].slice(1);
+		const content = strList.slice(dataset['title'] ? 1 : 0).join('\n');
+		return Aqua.code.highlight(content, dataset);
+	},
+});
 
 const countReadTime = (content: string) => {
 	const words = content.split(' ').filter((word) => word !== '');
@@ -16,7 +26,7 @@ function parseFile(filename: string, content: string, parseCallback: Function) {
 	const [rawData, metadata] = fmExpression.exec(content);
 	const frontMatter = metadata.split(/\r?\n/).reduce((acc, cur) => {
 		const [key, val] = splitAt(cur.indexOf(':'), cur);
-		if (key === 'tags') {
+		if (key === 'tags' || key === 'genres') {
 			acc[key] = val.split(',').map((v: string) => v.trim());
 		} else acc[key] = val.trim();
 		return acc;
@@ -27,6 +37,7 @@ function parseFile(filename: string, content: string, parseCallback: Function) {
 	if (result.date && !result.updated) result.updated = result.date;
 	if (result.date) result['pretty-date'] = createPrettyDate(result.date);
 	if (result.updated) result['pretty-updated'] = createPrettyDate(result.updated);
+	if (result.finished) result['finished'] = createPrettyDate(result.finished);
 
 	const article = content.slice(rawData.length + 1);
 	result['read-time'] = countReadTime(article);
