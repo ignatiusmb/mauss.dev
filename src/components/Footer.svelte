@@ -38,7 +38,7 @@
   </section>
 
   <section>
-    <p>Ignatius Bagussuputra &copy; 2017 &ndash; {new Date().getFullYear()}</p>
+    <p>Copyright &copy; Ignatius Bagussuputra 2017 &ndash; {new Date().getFullYear()}</p>
     <p>
       Made with ❤️ using
       <LinkExt href="https://svelte.dev/">Svelte</LinkExt>
