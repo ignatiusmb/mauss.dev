@@ -25,6 +25,7 @@ function parseFile(filename: string, content: string, parseCallback: Function) {
 	const fmExpression = /---\r?\n([\s\S]+?)\r?\n---/;
 	const [rawData, metadata] = fmExpression.exec(content);
 	const frontMatter = metadata.split(/\r?\n/).reduce((acc, cur) => {
+		if (!cur.includes(':')) return acc;
 		const [key, val] = splitAt(cur.indexOf(':'), cur);
 		if (key === 'tags' || key === 'genres') {
 			acc[key] = val.split(',').map((v: string) => v.trim());
