@@ -21,6 +21,12 @@ const countReadTime = (content: string) => {
 	return time ? time : 1;
 };
 
+const compareDate = (x, y) => {
+	const yDate = new Date(y);
+	const xDate = new Date(x);
+	return yDate.getTime() - xDate.getTime();
+};
+
 export function parseFile(filename: string, content: string, parseCallback: Function) {
 	const fmExpression = /---\r?\n([\s\S]+?)\r?\n---/;
 	const [rawData, metadata] = fmExpression.exec(content);
@@ -53,12 +59,14 @@ export function parseDir(dirname: string, fileParse: Function) {
 		const mdFile = readFileSync(join(DIR, filename), 'utf-8');
 		return parseFile(filename, mdFile, fileParse);
 	}).sort((x, y) => {
-		const yDate = new Date(y.date);
-		const xDate = new Date(x.date);
-		if (yDate.getTime() === xDate.getTime()) {
-			const yUpdated = new Date(y.updated);
-			const xUpdated = new Date(x.updated);
-			return yUpdated.getTime() - xUpdated.getTime();
-		} else return yDate.getTime() - xDate.getTime();
+		if (x.date !== y.date) {
+			return compareDate(x.date, y.date);
+		} else if (x.updated !== y.updated) {
+			return compareDate(x.updated, y.updated);
+		} else if ((x.year || y.year) && x.year !== y.year) {
+			return y.year - x.year;
+		}
+		// titles sort by descending order
+		return x.title.localeCompare(y.title);
 	});
 }
