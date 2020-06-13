@@ -42,13 +42,13 @@
     "@types/node": "^14.0.9",
     "babel-jest": "^26.0.1",
     "jest": "^26.0.1",
-    "rollup": "^2.12.1",
+    "rollup": "^2.16.0",
     "rollup-plugin-svelte": "^5.2.2",
     "rollup-plugin-terser": "^6.1.0",
-    "sapper": "^0.27.13",
-    "svelte": "^3.23.0",
+    "sapper": "^0.27.15",
+    "svelte": "^3.23.2",
     "svelte-test": "^0.4.0",
     "tslib": "^2.0.0",
-    "typescript": "^3.9.3"
+    "typescript": "^3.9.5"
   }
 }
