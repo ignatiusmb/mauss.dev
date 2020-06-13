@@ -11,6 +11,8 @@ export function get(req, res) {
 
 		const rootFolder = `${process.cwd()}/static`;
 		const [category] = frontMatter['tags'];
+		if (frontMatter['image']) return frontMatter;
+
 		const imagePath = `uploads/${category.toLowerCase()}/thumbnail/${frontMatter['slug']}`;
 		if (existsSync(join(rootFolder, `${imagePath}.png`))) {
 			frontMatter['image'] = `${imagePath}.png`;
