@@ -1,14 +1,17 @@
 ---
 title: Complete Bash Utility Cheat Sheet
 date: 2020-06-04
+updated: 2020-06-13
 ---
 
-<pre class="aqua-code" data-language="bash" data-title="Copy Method">
+```bash
+~Copy Method
 # This will create a complete hard linked copy instead of traditional one
 cp -al /path/to/source /path/to/destination
-</pre>
+```
 
-<pre class="aqua-code" data-language="bash" data-title="Find Method">
+```bash
+~Find Method
 # Find all empty files and directories
 find /path/to/start/dir -empty
 
@@ -31,9 +34,10 @@ find /path/to/start/dir -name .unwanted -exec rm -rf {} \;
 
 # Recursively remove executable permission from file with all permission
 find /path/to/start/dir -type f -perm 777 -exec chmod -x {} \;
-</pre>
+```
 
-<pre class="aqua-code" data-language="bash" data-title="Rename Method">
+```bash
+~Rename Method
 # Get the package first if you don't have it yet
 sudo apt install rename
 
@@ -45,4 +49,4 @@ rename 's/\[.*\]/\[replacement\]/' **/*     # execute rename
 # This recursively find and rename all folders from the start directory
 rename 's/unwantedName/changedName/' path/to/start/**/* -n  # preview changes
 rename 's/unwantedName/changedName/' path/to/start/**/*     # execute rename
-</pre>
+```

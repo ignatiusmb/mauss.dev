@@ -21,7 +21,7 @@ const countReadTime = (content: string) => {
 	return time ? time : 1;
 };
 
-function parseFile(filename: string, content: string, parseCallback: Function) {
+export function parseFile(filename: string, content: string, parseCallback: Function) {
 	const fmExpression = /---\r?\n([\s\S]+?)\r?\n---/;
 	const [rawData, metadata] = fmExpression.exec(content);
 	const frontMatter = metadata.split(/\r?\n/).reduce((acc, cur) => {
@@ -38,7 +38,6 @@ function parseFile(filename: string, content: string, parseCallback: Function) {
 	if (result.date && !result.updated) result.updated = result.date;
 	if (result.date) result['pretty-date'] = createPrettyDate(result.date);
 	if (result.updated) result['pretty-updated'] = createPrettyDate(result.updated);
-	if (result.finished) result['finished'] = createPrettyDate(result.finished);
 
 	const article = content.slice(rawData.length + 1);
 	result['read-time'] = countReadTime(article);
@@ -46,7 +45,7 @@ function parseFile(filename: string, content: string, parseCallback: Function) {
 	return result;
 }
 
-function parseDir(dirname: string, fileParse: Function) {
+export function parseDir(dirname: string, fileParse: Function) {
 	const DIR = join(process.cwd(), dirname);
 	const FILTERED = readdirSync(DIR).filter((name) => name.endsWith('.md'));
 
@@ -63,5 +62,3 @@ function parseDir(dirname: string, fileParse: Function) {
 		} else return yDate.getTime() - xDate.getTime();
 	});
 }
-
-export { parseFile, parseDir };
