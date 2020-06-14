@@ -5,12 +5,12 @@ export function get(req, res) {
 	const { slug } = req.params;
 	const DIR = 'content/posts';
 	const posts = readdirSync(DIR);
-	const [filename] = posts.filter((post) => post.includes(slug));
-	const content = readFileSync(`${DIR}/${filename}`, 'utf-8');
+	const [filepath] = posts.filter((post) => post.includes(slug));
+	const rawContent = readFileSync(`${DIR}/${filepath}`, 'utf-8');
 
-	const post = parseFile(filename, content, (cleanedFilename: string, frontMatter: object) => {
-		const [date, slug] = cleanedFilename.split('.');
-		return { slug, ...frontMatter, date };
+	const post = parseFile(filepath, rawContent, (data, content, filename) => {
+		const [date, slug] = filename.split('.');
+		return { slug, ...data, date, content };
 	});
 
 	res.writeHead(200, { 'Content-Type': 'application/json' });

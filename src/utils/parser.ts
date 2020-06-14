@@ -40,14 +40,15 @@ export function parseFile(filename: string, content: string, parseCallback: Func
 	}, {});
 
 	const [cleanedFilename] = filename.split('/').slice(-1);
-	const result = parseCallback(cleanedFilename, frontMatter);
+	const article = content.slice(rawData.length + 1);
+	const result = parseCallback(frontMatter, article, cleanedFilename);
+
 	if (result.date && !result.updated) result.updated = result.date;
 	if (result.date) result['pretty-date'] = createPrettyDate(result.date);
 	if (result.updated) result['pretty-updated'] = createPrettyDate(result.updated);
 
-	const article = content.slice(rawData.length + 1);
 	result['read-time'] = countReadTime(article);
-	result['content'] = markIt.render(article);
+	result['content'] = markIt.render(result.content);
 	return result;
 }
 
