@@ -1,15 +1,39 @@
-import { readFileSync, readdirSync } from 'fs';
-import { parseFile } from '../../utils/parser';
+import { readFileSync } from 'fs';
+import { parseFile, aquaMark } from '../../utils/parser';
 
 export function get(req, res) {
 	const { slug } = req.params;
-	const DIR = 'content/reviews';
-	const posts = readdirSync(DIR);
-	const [filepath] = posts.filter((post) => post.includes(slug));
-	const rawContent = readFileSync(`${DIR}/${filepath}`, 'utf-8');
+	const filepath = `content/reviews/${slug}.md`;
+	const rawContent = readFileSync(filepath, 'utf-8');
 
-	const post = parseFile(filepath, rawContent, (data, content, filename) => {
-		return { slug: filename.split('.')[0], ...data, content };
+	const post = parseFile(filepath, rawContent, (data: object, content: string, filename) => {
+		data['slug'] = filename.split('.')[0];
+
+		const parseSpoilers = (content: string, seasonIndex: number) => {
+			const separator = '<!-- SPOILERS -->';
+			const [review, spoilers] = content.split(separator);
+			const [title, ...reviewArray] = review.trim().split('\n');
+			return {
+				title: title.startsWith('# ') ? title.slice(2) : `Season ${seasonIndex}`,
+				content: title ? aquaMark(reviewArray.join('\n')) : aquaMark(review),
+				spoilers: spoilers ? aquaMark(spoilers) : null,
+			};
+		};
+
+		const seasons = '<!-- SEASON DIVIDER -->';
+		if (content.includes(seasons)) {
+			data['seasons'] = [];
+			let currentSeason = 0;
+			for (const season of content.split(seasons)) {
+				if (!currentSeason++) data['content'] = season;
+				else data['seasons'].push(parseSpoilers(season, currentSeason));
+			}
+		} else {
+			const { spoilers } = parseSpoilers(content, 1);
+			if (spoilers) data['spoilers'] = spoilers;
+			data['content'] = content;
+		}
+		return data;
 	});
 
 	res.writeHead(200, { 'Content-Type': 'application/json' });
