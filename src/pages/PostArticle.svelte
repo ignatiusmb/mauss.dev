@@ -70,14 +70,18 @@
   article :global(p) {
     margin-top: 0.75em;
   }
+  article :global(p > code) {
+    font-size: clamp(0.8rem, 2vw, 1rem);
+  }
   article :global(img) {
     margin: auto;
     border: 0.5em solid var(--bg-color-secondary);
-    border-radius: 0.1em;
+    border-radius: 0.25em;
   }
   article :global(img[src^="https://"]) {
     padding: 0.5em;
     border: none;
+    border-radius: 1em;
   }
   article :global(h2),
   article :global(h3) {

@@ -17,6 +17,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-end;
     padding: 1em 0;
     border-radius: inherit;
     background-color: rgba(0, 0, 0, 0.7);

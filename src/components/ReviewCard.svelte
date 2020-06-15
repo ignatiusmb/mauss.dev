@@ -5,18 +5,13 @@
   import Button from './Button.svelte';
   import { capitalize, splitAt } from '../utils/helper';
   const status = parseInt(post.recommended);
-
-  const [title, season] = post.title.includes('|') ? splitAt(post.title.indexOf('|'), post.title) : [post.title, null];
   let show = false;
 </script>
 
 <article on:mouseenter={() => (show = true)} on:mouseleave={() => (show = false)}>
   <img src={post.image} alt={post.title} />
   <CardOverlay {show}>
-    {#if season}
-      <h3>{season}</h3>
-    {/if}
-    <h3>{title}</h3>
+    <h3>{post.title}</h3>
   </CardOverlay>
 </article>
 <aside>
@@ -45,9 +40,6 @@
     height: 100%;
     border-radius: inherit;
     text-align: center;
-  }
-  h3:last-child {
-    margin-top: auto;
   }
 
   aside {

@@ -27,6 +27,8 @@ const compareDate = (x, y) => {
 	return yDate.getTime() - xDate.getTime();
 };
 
+export const aquaMark = (content: string) => markIt.render(content);
+
 export function parseFile(filename: string, content: string, parseCallback: Function) {
 	const fmExpression = /---\r?\n([\s\S]+?)\r?\n---/;
 	const [rawData, metadata] = fmExpression.exec(content);
@@ -48,7 +50,7 @@ export function parseFile(filename: string, content: string, parseCallback: Func
 	if (result.updated) result['pretty-updated'] = createPrettyDate(result.updated);
 
 	result['read-time'] = countReadTime(article);
-	result['content'] = markIt.render(result.content);
+	result['content'] = aquaMark(result.content);
 	return result;
 }
 
