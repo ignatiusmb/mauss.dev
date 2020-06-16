@@ -41,7 +41,7 @@
     flex-direction: column;
     word-wrap: break-word;
     line-height: 1;
-    font-family: 'Karla', sans-serif;
+    font-family: var(--aqua-heading);
   }
 
   h1 {

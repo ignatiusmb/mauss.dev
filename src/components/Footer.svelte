@@ -54,7 +54,6 @@
     padding: 3em 0;
     margin: auto 0 3em;
     text-align: center;
-    font-family: 'Rubik', sans-serif;
   }
   footer :global(.repository) {
     font-size: 2rem;
@@ -93,7 +92,7 @@
     grid-template-rows: repeat(2, 1fr);
     place-items: center;
     gap: 0.5em;
-    font-family: 'Fira Code', 'Inconsolata', monospace;
+    font-family: var(--aqua-monospace);
   }
 
   @media only screen and (min-width: 480px) {

@@ -35,7 +35,7 @@
     margin: 0 auto;
     word-wrap: break-word;
     line-height: 1.5;
-    font-family: 'Karla', sans-serif;
+    font-family: var(--aqua-heading);
   }
   h2 {
     margin-top: 0.5em;

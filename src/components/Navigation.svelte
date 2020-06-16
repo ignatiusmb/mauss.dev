@@ -30,7 +30,7 @@
     flex-direction: row-reverse;
     align-items: center;
     padding: 0.8em 1em;
-    font-family: 'Karla', sans-serif;
+    font-family: var(--aqua-heading);
     background-color: var(--bg-color);
     transition: var(--transition-duration) var(--transition-function);
   }

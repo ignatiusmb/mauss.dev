@@ -85,7 +85,7 @@
   }
   article :global(h2),
   article :global(h3) {
-    font-family: 'Karla', sans-serif;
+    font-family: var(--aqua-heading);
   }
   article :global(h2) {
     margin-top: 1.5em;

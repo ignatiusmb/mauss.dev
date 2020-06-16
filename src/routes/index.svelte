@@ -26,17 +26,11 @@
     text-align: center;
     text-transform: uppercase;
     font-size: 2.5rem;
-    font-family: var(--aqua-font-mono-main);
+    font-family: var(--aqua-monospace);
     font-weight: bold;
     letter-spacing: 3vw;
     text-indent: 3vw;
   }
-  /* img {
-    width: 100%;
-    max-width: 34em;
-    padding: 1em;
-    margin: 1em auto 2em;
-  } */
 
   @media only screen and (min-width: 600px) {
     h1 {

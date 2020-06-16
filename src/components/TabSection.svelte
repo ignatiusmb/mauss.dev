@@ -17,6 +17,7 @@
     width: 100%;
     padding: 0.25em 0.5em;
     border-radius: 0.25em;
+    margin-top: 2em;
     font-size: 1rem;
   }
 </style>
