@@ -2,7 +2,6 @@
   export let segment = null;
   export let filename = null;
   export let post;
-  import Icon from './independent/Icon.svelte';
   import Edit from './Edit.svelte';
   import TagBadge from './TagBadge.svelte';
   import { lastWords } from '../utils/helper';

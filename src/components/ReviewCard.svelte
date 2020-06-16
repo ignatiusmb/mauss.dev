@@ -3,7 +3,7 @@
   import Recommendation from './independent/Recommendation.svelte';
   import CardOverlay from './CardOverlay.svelte';
   import Button from './Button.svelte';
-  import { capitalize, splitAt } from '../utils/helper';
+  import { capitalize } from '../utils/helper';
   const status = parseInt(post.recommended);
   let show = false;
 </script>

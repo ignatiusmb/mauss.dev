@@ -1,6 +1,6 @@
 <script context="module">
-  export async function preload(page, session) {
-    const data = await this.fetch(`posts.json`).then(r => r.json());
+  export async function preload() {
+    const data = await this.fetch('posts.json').then(r => r.json());
     return { data, total: data.length };
   }
 </script>
@@ -20,7 +20,7 @@
 <MetaHead canonical="posts" title="Posts" description="Get the latest most recent posts here." />
 
 <header>
-  <h1>Recent posts</h1>
+  <h1>Recent Posts</h1>
   <Pagination store={postPage} {total} />
 </header>
 

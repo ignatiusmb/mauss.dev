@@ -1,5 +1,5 @@
 <script context="module">
-  export async function preload({ path, params, query }) {
+  export async function preload({ params }) {
     const list = await this.fetch('posts.json').then(r => r.json());
     const post = await this.fetch(`posts/${params.slug}.json`).then(r => r.json());
 
@@ -19,7 +19,6 @@
 <script>
   export let post;
   import MetaHead from '../../components/MetaHead.svelte';
-  import PostHeader from '../../components/PostHeader.svelte';
   import PostArticle from '../../pages/PostArticle.svelte';
   const segment = 'content/posts';
   $: canonical = `posts/${post.slug}`;

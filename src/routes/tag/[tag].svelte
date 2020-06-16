@@ -1,9 +1,8 @@
 <script context="module">
-  export async function preload(page, session) {
-    const { tag } = page.params;
+  export async function preload({ params }) {
     let list = await this.fetch('posts.json').then(r => r.json());
-    const data = list.filter(post => post.tags.includes(tag));
-    return { data, tag };
+    const data = list.filter(post => post.tags.includes(params.tag));
+    return { data, tag: params.tag };
   }
 </script>
 

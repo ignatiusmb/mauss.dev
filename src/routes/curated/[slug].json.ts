@@ -1,4 +1,4 @@
-import { readFileSync, readdirSync } from 'fs';
+import { readFileSync } from 'fs';
 import { parseFile } from '../../utils/parser';
 
 export function get(req, res) {

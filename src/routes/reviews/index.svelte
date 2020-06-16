@@ -1,7 +1,6 @@
 <script context="module">
-  export async function preload(page, session) {
-    let data = await this.fetch('reviews.json').then(r => r.json());
-    return { data };
+  export async function preload() {
+    return { data: await this.fetch('reviews.json').then(r => r.json()) };
   }
 </script>
 

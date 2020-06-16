@@ -4,7 +4,7 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "lint": "eslint src --ext svelte,js,ts",
+    "lint": "eslint src --ext svelte,js",
     "dev": "sapper dev",
     "build": "sapper build --legacy",
     "export": "sapper export --legacy",

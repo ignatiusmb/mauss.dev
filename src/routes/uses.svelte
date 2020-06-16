@@ -1,5 +1,5 @@
 <script context="module">
-  export async function preload(page, session) {
+  export async function preload() {
     return { post: await this.fetch('uses.json').then(r => r.json()) };
   }
 </script>
@@ -7,7 +7,6 @@
 <script>
   export let post;
   import MetaHead from '../components/MetaHead.svelte';
-  import PostHeader from '../components/PostHeader.svelte';
   import PostArticle from '../pages/PostArticle.svelte';
 </script>
 

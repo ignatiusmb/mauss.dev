@@ -1,5 +1,5 @@
 <script context="module">
-  export async function preload({ path, params, query }) {
+  export async function preload({ params }) {
     return { post: await this.fetch(`curated/${params.slug}.json`).then(r => r.json()) };
   }
 </script>
@@ -7,7 +7,6 @@
 <script>
   export let post;
   import MetaHead from '../../components/MetaHead.svelte';
-  import PostHeader from '../../components/PostHeader.svelte';
   import PostArticle from '../../pages/PostArticle.svelte';
   const segment = 'content/curated';
   $: canonical = `curated/${post.slug}`;

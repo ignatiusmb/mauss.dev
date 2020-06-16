@@ -1,5 +1,5 @@
 <script context="module">
-  export async function preload({ path, params, query }) {
+  export async function preload({ params }) {
     const list = await this.fetch('reviews.json').then(r => r.json());
     const post = await this.fetch(`reviews/${params.slug}.json`).then(r => r.json());
 
