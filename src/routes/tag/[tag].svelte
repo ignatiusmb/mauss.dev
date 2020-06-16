@@ -2,6 +2,7 @@
   export async function preload({ params }) {
     let list = await this.fetch('posts.json').then(r => r.json());
     const data = list.filter(post => post.tags.includes(params.tag));
+    if (!data.length) return this.error(404, `${params.tag} not found anywhere`);
     return { data, tag: params.tag };
   }
 </script>

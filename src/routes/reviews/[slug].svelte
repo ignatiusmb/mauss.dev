@@ -1,8 +1,10 @@
 <script context="module">
   export async function preload({ params }) {
     const list = await this.fetch('reviews.json').then(r => r.json());
-    const post = await this.fetch(`reviews/${params.slug}.json`).then(r => r.json());
+    const res = await this.fetch(`reviews/${params.slug}.json`);
+    if (res.status !== 200) return this.error(404, 'Review not found');
 
+    const post = await res.json();
     for (let i = 0; i < list.length; i++) {
       if (list[i].slug !== post.slug) continue;
       post['siblings'] = {};
@@ -12,7 +14,6 @@
       post.siblings.next = next ? { slug: next.slug, title: next.title } : null;
       break;
     }
-
     return { post };
   }
 </script>

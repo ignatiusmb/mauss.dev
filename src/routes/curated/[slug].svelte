@@ -1,6 +1,8 @@
 <script context="module">
   export async function preload({ params }) {
-    return { post: await this.fetch(`curated/${params.slug}.json`).then(r => r.json()) };
+    const res = await this.fetch(`curated/${params.slug}.json`);
+    if (res.status !== 200) return this.error(404, 'Curated post not found');
+    return { post: await res.json() };
   }
 </script>
 
