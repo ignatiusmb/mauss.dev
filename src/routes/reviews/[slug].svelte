@@ -20,7 +20,9 @@
 <script>
   export let post;
   import MetaHead from '../../components/MetaHead.svelte';
-  import PostHeader from '../../components/PostHeader.svelte';
+  import Disclaimer from '../../components/Disclaimer.svelte';
+  import TabSection from '../../components/TabSection.svelte';
+  import Spoilers from '../../components/SpoilerSection.svelte';
   import PostArticle from '../../pages/PostArticle.svelte';
   const segment = 'content/reviews';
   $: canonical = `reviews/${post.slug}`;
@@ -36,9 +38,21 @@
     </span>
   </small>
 
+  <Disclaimer link={true} />
+
   <section>
     {@html post.content}
   </section>
+
+  {#if post.seasons}
+    <TabSection seasons={post.seasons} />
+  {:else if post.spoilers}
+    <Spoilers />
+
+    <section>
+      {@html post.spoilers}
+    </section>
+  {/if}
 </PostArticle>
 
 <style>
