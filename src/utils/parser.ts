@@ -7,7 +7,11 @@ const markIt = require('markdown-it')({
 	highlight: (str: string, language: string) => {
 		const strList = str.split('\n');
 		const dataset = { language };
-		if (strList[0][0] === '~') dataset['title'] = strList[0].slice(1);
+		if (strList[0][0] === '~') {
+			const [title, lineNumber] = strList[0].split('#');
+			dataset['title'] = title.slice(1);
+			if (lineNumber) dataset['lineStart'] = parseInt(lineNumber);
+		}
 		const content = strList.slice(dataset['title'] ? 1 : 0).join('\n');
 		return Aqua.code.highlight(content, dataset);
 	},
@@ -56,7 +60,9 @@ export function parseFile(filename: string, content: string, parseCallback: Func
 
 export function parseDir(dirname: string, fileParse: Function) {
 	const DIR = join(process.cwd(), dirname);
-	const FILTERED = readdirSync(DIR).filter((name) => name.endsWith('.md'));
+	const FILTERED = readdirSync(DIR).filter((name) => {
+		return !name.startsWith('draft.') && name.endsWith('.md');
+	});
 
 	return FILTERED.map((filename) => {
 		const mdFile = readFileSync(join(DIR, filename), 'utf-8');
