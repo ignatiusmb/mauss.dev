@@ -28,13 +28,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+  section:first-of-type {
     text-align: center;
   }
 
   h1 {
     font-size: 5em;
   }
-
   p {
     font-size: 2em;
   }
