@@ -14,7 +14,7 @@
     "node": "12.x"
   },
   "dependencies": {
-    "@ignatiusmb/aqua": "^20.1.0",
+    "@ignatiusmb/aqua": "^20.2.1",
     "compression": "^1.7.4",
     "markdown-it": "^11.0.0",
     "polka": "^1.0.0-next.11",
@@ -46,7 +46,7 @@
     "rollup": "^2.16.1",
     "rollup-plugin-svelte": "^5.2.2",
     "rollup-plugin-terser": "^6.1.0",
-    "sapper": "^0.27.15",
+    "sapper": "^0.27.16",
     "svelte": "^3.23.2",
     "svelte-preprocess": "^3.9.7",
     "svelte-test": "^0.4.0",
