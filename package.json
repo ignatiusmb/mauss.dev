@@ -4,12 +4,11 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "test": "jest --coverage",
+    "lint": "eslint src --ext svelte,js,ts",
     "dev": "sapper dev",
     "build": "sapper build --legacy",
     "export": "sapper export --legacy",
-    "serve": "npx serve __sapper__/export",
-    "start": "node __sapper__/build"
+    "test": "jest --coverage"
   },
   "engines": {
     "node": "12.x"
@@ -41,6 +40,8 @@
     "@testing-library/svelte": "^3.0.0",
     "@types/node": "^14.0.13",
     "babel-jest": "^26.0.1",
+    "eslint": "^7.2.0",
+    "eslint-plugin-svelte3": "^2.7.3",
     "jest": "^26.0.1",
     "rollup": "^2.16.1",
     "rollup-plugin-svelte": "^5.2.2",
