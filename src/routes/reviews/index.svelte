@@ -10,6 +10,7 @@
   import Searchbar from '../../components/Searchbar.svelte';
   import ReviewCard from '../../components/ReviewCard.svelte';
 
+  const duration = 100;
   import { scale } from 'svelte/transition';
   import { flip } from 'svelte/animate';
   import { sieve } from '../../utils/search';
@@ -21,7 +22,7 @@
 <MetaHead
   canonical="reviews"
   title="Reviews"
-  description="Personalized reviews for all kinds of anime, shows, movies, etc." />
+  description="Personalized reviews for all kinds of anime, books, movies, shows, etc." />
 
 <header>
   <h1>Mauss Reviews</h1>
@@ -30,7 +31,7 @@
 
 <main>
   {#each filtered as post (post.slug)}
-    <section animate:flip={{ duration: 100 }}>
+    <section animate:flip={{ duration }}>
       <ReviewCard {post} />
     </section>
   {:else}

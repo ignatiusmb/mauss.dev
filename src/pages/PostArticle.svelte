@@ -128,6 +128,9 @@
   article :global(blockquote li) {
     margin-left: unset;
   }
+  article :global(strong) {
+    font-weight: 500;
+  }
   article :global(.info-box) {
     font-size: 1rem;
   }
