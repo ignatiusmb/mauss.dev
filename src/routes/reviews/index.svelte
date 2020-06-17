@@ -7,10 +7,15 @@
 <script>
   export let data;
   import MetaHead from '../../components/MetaHead.svelte';
+  import Searchbar from '../../components/Searchbar.svelte';
   import ReviewCard from '../../components/ReviewCard.svelte';
 
   import { scale } from 'svelte/transition';
   import { flip } from 'svelte/animate';
+  import { sieve } from '../../utils/search';
+
+  let query;
+  $: filtered = query ? sieve(query, data) : data;
 </script>
 
 <MetaHead
@@ -20,13 +25,16 @@
 
 <header>
   <h1>Mauss Reviews</h1>
+  <Searchbar bind:query />
 </header>
 
 <main>
-  {#each data as post (post.slug)}
-    <section animate:flip transition:scale|local>
+  {#each filtered as post (post.slug)}
+    <section animate:flip={{ duration: 100 }}>
       <ReviewCard {post} />
     </section>
+  {:else}
+    <h2>There are no title reviews matching {query}</h2>
   {/each}
 </main>
 
@@ -58,11 +66,17 @@
   }
 
   main {
+    position: relative;
     display: grid;
     gap: 1em;
-    grid-template-columns: repeat(auto-fit, 12em);
+    grid-template-columns: repeat(auto-fill, 12em);
     justify-content: center;
     margin: 0 auto;
+  }
+  main h2 {
+    position: absolute;
+    width: 100%;
+    text-align: center;
   }
   main :global(img:not([src])) {
     display: none;
