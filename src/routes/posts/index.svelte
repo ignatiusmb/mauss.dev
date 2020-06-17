@@ -1,32 +1,39 @@
 <script context="module">
   export async function preload() {
-    const data = await this.fetch('posts.json').then(r => r.json());
-    return { data, total: data.length };
+    return { data: await this.fetch('posts.json').then(r => r.json()) };
   }
 </script>
 
 <script>
-  export let data, total;
+  export let data;
   import MetaHead from '../../components/MetaHead.svelte';
+  import Searchbar from '../../components/Searchbar.svelte';
   import Pagination from '../../components/Pagination.svelte';
   import PostCard from '../../components/PostCard.svelte';
 
+  const duration = 100;
   import { posts as postPage } from '../../stores/page';
   import { scale } from 'svelte/transition';
   import { flip } from 'svelte/animate';
-  $: posts = data.slice($postPage * 6, $postPage * 6 + 6);
+  import { sieve } from '../../utils/search';
+  let query;
+  $: filtered = query ? sieve(query, data) : data;
+  $: total = filtered.length;
+  $: $postPage = $postPage * 6 > total ? 0 : $postPage;
+  $: posts = filtered.slice($postPage * 6, $postPage * 6 + 6);
 </script>
 
 <MetaHead canonical="posts" title="Posts" description="Get the latest most recent posts here." />
 
 <header>
   <h1>Recent Posts</h1>
+  <Searchbar bind:query />
   <Pagination store={postPage} {total} />
 </header>
 
 <main>
   {#each posts as post (post.slug)}
-    <section animate:flip transition:scale|local>
+    <section animate:flip={{ duration }} transition:scale|local={{ duration }}>
       <PostCard {post}>
         <div>
           <h3>{post.title}</h3>
@@ -69,7 +76,7 @@
   main {
     display: grid;
     gap: 1em;
-    grid-template-columns: repeat(auto-fit, minmax(18em, 26em));
+    grid-template-columns: repeat(auto-fill, minmax(18em, 26em));
     justify-content: center;
     margin: 0 auto;
   }
