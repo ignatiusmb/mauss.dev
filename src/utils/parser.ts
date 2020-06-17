@@ -24,14 +24,20 @@ const countAverageRating = (str: string) => {
 };
 
 const countReadTime = (content: string) => {
-	const words = content.split(' ').filter((word) => word !== '');
+	const paragraphs = content.split('\n').filter((p) => p);
+	const words = paragraphs.reduce((acc, cur) => {
+		if (cur.trim().startsWith('<!--')) return acc;
+		if (cur.trim().match(/^\r?\n<\S+>/)) return acc;
+		const wordsArray = cur.split(' ').filter((w) => w);
+		return acc + wordsArray.length;
+	}, 0);
 	const images = content.match(/(!\[.+\]\(.+\))/g);
-	const total = words.length + (images ? images.length * 12 : 0);
+	const total = words + (images ? images.length * 12 : 0);
 	const time = Math.round(total / 270);
 	return time ? time : 1;
 };
 
-const compareDate = (x, y) => {
+const compareDate = (x: string, y: string) => {
 	const yDate = new Date(y);
 	const xDate = new Date(x);
 	return yDate.getTime() - xDate.getTime();
