@@ -4,6 +4,7 @@ import { createPrettyDate, splitAt } from './helper';
 import Aqua from '@ignatiusmb/aqua';
 const markIt = require('markdown-it')({
 	html: true,
+	typographer: true,
 	highlight: (str: string, language: string) => {
 		const strList = str.split('\n');
 		const dataset = { language };
@@ -16,6 +17,11 @@ const markIt = require('markdown-it')({
 		return Aqua.code.highlight(content, dataset);
 	},
 });
+
+const countAverageRating = (str: string) => {
+	const ratings = str.split(',').map((v) => parseInt(v.trim()));
+	return ratings.reduce((acc, cur) => acc + cur, 0) / ratings.length;
+};
 
 const countReadTime = (content: string) => {
 	const words = content.split(' ').filter((word) => word !== '');
@@ -41,6 +47,8 @@ export function parseFile(filename: string, content: string, parseCallback: Func
 		const [key, val] = splitAt(cur.indexOf(':'), cur);
 		if (key === 'tags' || key === 'genres') {
 			acc[key] = val.split(',').map((v: string) => v.trim());
+		} else if (key === 'rating') {
+			acc[key] = countAverageRating(val);
 		} else acc[key] = val.trim();
 		return acc;
 	}, {});
