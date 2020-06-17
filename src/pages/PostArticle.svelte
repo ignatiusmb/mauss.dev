@@ -46,13 +46,13 @@
     line-height: 1.5;
   }
   article :global(section) {
+    margin-top: 2em;
     font-size: clamp(1rem, 2vw, 1.15rem);
   }
   article > :global(section:first-of-type) {
     margin-top: 4em;
   }
   section {
-    margin-top: 2em;
     padding: 0.4em 0.8em;
     border-left: 2px solid crimson;
     background-color: rgba(0, 0, 0, 0.05);

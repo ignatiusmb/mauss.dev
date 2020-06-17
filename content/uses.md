@@ -1,6 +1,5 @@
 ---
 title: Uses
-date: 2020-05-20
 updated: 2020-05-30
 ---
 

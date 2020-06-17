@@ -12,11 +12,7 @@
 </section>
 
 {#if post.spoilers}
-  <Spoilers />
-
-  <section>
-    {@html post.spoilers}
-  </section>
+  <Spoilers spoilers={post.spoilers} />
 {/if}
 
 <style>
