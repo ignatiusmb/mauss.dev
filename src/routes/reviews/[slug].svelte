@@ -48,10 +48,12 @@
   {#if post.seasons}
     <TabSection seasons={post.seasons} />
   {:else if post.spoilers}
-    <Spoilers />
+    <Spoilers spoilers={post.spoilers} />
+  {/if}
 
+  {#if post.closing}
     <section>
-      {@html post.spoilers}
+      {@html post.closing}
     </section>
   {/if}
 </PostArticle>

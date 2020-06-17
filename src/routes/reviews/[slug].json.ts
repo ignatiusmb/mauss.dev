@@ -1,6 +1,18 @@
 import { readFileSync } from 'fs';
 import { parseFile, aquaMark } from '../../utils/parser';
 
+const parseSpoilers = (content: string, seasonIndex: number) => {
+	const separator = '<!-- SPOILERS -->';
+	const [review, spoilers] = content.split(separator);
+	const [title, ...reviewArray] = review.trim().split('\n');
+	const validTitle = title.startsWith('# ');
+	return {
+		title: validTitle ? title.slice(2) : `Season ${seasonIndex}`,
+		content: validTitle ? aquaMark(reviewArray.join('\n')) : aquaMark(review),
+		spoilers: spoilers ? aquaMark(spoilers) : null,
+	};
+};
+
 export function get(req, res) {
 	const { slug } = req.params;
 	const filepath = `content/reviews/${slug}.md`;
@@ -9,16 +21,12 @@ export function get(req, res) {
 	const post = parseFile(filepath, rawContent, (data: object, content: string, filename) => {
 		data['slug'] = filename.split('.')[0];
 
-		const parseSpoilers = (content: string, seasonIndex: number) => {
-			const separator = '<!-- SPOILERS -->';
-			const [review, spoilers] = content.split(separator);
-			const [title, ...reviewArray] = review.trim().split('\n');
-			return {
-				title: title.startsWith('# ') ? title.slice(2) : `Season ${seasonIndex}`,
-				content: title ? aquaMark(reviewArray.join('\n')) : aquaMark(review),
-				spoilers: spoilers ? aquaMark(spoilers) : null,
-			};
-		};
+		const final = '<!-- CLOSING -->';
+		if (content.includes(final)) {
+			const [article, closing] = content.split(final);
+			content = article;
+			data['closing'] = aquaMark(closing);
+		}
 
 		const seasons = '<!-- SEASON DIVIDER -->';
 		if (content.includes(seasons)) {
