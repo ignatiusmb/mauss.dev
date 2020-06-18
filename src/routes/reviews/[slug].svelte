@@ -10,8 +10,8 @@
       post['siblings'] = {};
       post.siblings.base = 'reviews';
       const [prev, next] = [list[i - 1], list[i + 1]];
-      post.siblings.prev = prev ? { slug: prev.slug, title: prev.title } : null;
-      post.siblings.next = next ? { slug: next.slug, title: next.title } : null;
+      if (prev && prev.rating) post.siblings.prev = { slug: prev.slug, title: prev.title };
+      if (next && next.rating) post.siblings.next = { slug: next.slug, title: next.title };
       break;
     }
     return { post };

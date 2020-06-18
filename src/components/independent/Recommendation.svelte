@@ -7,8 +7,17 @@
   class:positive={status === 1}
   class:neutral={status === 0}
   class:negative={status === -1}
+  class:wip={isNaN(status)}
   title={hot ? 'Must-watch!' : null}>
-  {status === 0 ? 'Contextual' : status > 0 ? 'Recommended' : 'Not recommended'}
+  {#if status === 0}
+    <span>Contextual</span>
+  {:else if status > 0}
+    <span>Recommended</span>
+  {:else if status < 0}
+    <span>Not recommended</span>
+  {:else}
+    <span>Work-in-Progress</span>
+  {/if}
   {#if hot}🔥{/if}
 </div>
 
@@ -21,6 +30,9 @@
     border-radius: 0.25em;
     color: #fff;
   }
+  span:not(:only-child) {
+    margin-right: 0.25em;
+  }
   .positive {
     background: #5cb85c;
   }
@@ -32,5 +44,8 @@
   }
   .negative {
     background: #d9534f;
+  }
+  .wip {
+    background: var(--bg-inactive);
   }
 </style>

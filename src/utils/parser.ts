@@ -86,7 +86,7 @@ export function parseDir(dirname: string, fileParse: Function) {
 			return compareDate(x.date, y.date);
 		} else if (x.updated !== y.updated) {
 			return compareDate(x.updated, y.updated);
-		} else if ((x.year || y.year) && x.year !== y.year) {
+		} else if (x.year && y.year && x.year !== y.year) {
 			return y.year - x.year;
 		}
 		// titles sort by descending order

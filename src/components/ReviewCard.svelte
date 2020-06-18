@@ -3,6 +3,7 @@
   import Recommendation from './independent/Recommendation.svelte';
   import CardOverlay from './CardOverlay.svelte';
   import Button from './Button.svelte';
+  import ButtonDisabled from './ButtonDisabled.svelte';
   import { capitalize } from '../utils/helper';
   const status = parseInt(post.recommended);
   let show = false;
@@ -17,12 +18,16 @@
 <aside>
   <small>
     <span>{capitalize(post.category)}</span>
-    <span>⭐ {post.rating}</span>
+    <span>⭐ {post.rating ? post.rating : '~'}</span>
   </small>
   <small>
     <Recommendation {status} hot={post['must-watch']} />
   </small>
-  <Button href="reviews/{post.slug}">read</Button>
+  {#if post.rating}
+    <Button href="reviews/{post.slug}">read</Button>
+  {:else}
+    <ButtonDisabled>wip</ButtonDisabled>
+  {/if}
 </aside>
 
 <style>

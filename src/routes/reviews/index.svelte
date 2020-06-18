@@ -35,7 +35,7 @@
       <ReviewCard {post} />
     </section>
   {:else}
-    <h2>There are no title reviews matching {query}</h2>
+    <h2>There are no titles matching {query}</h2>
   {/each}
 </main>
 
@@ -78,6 +78,7 @@
     position: absolute;
     width: 100%;
     text-align: center;
+    word-break: break-word;
   }
   main :global(img:not([src])) {
     display: none;

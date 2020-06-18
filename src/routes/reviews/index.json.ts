@@ -7,5 +7,5 @@ export function get(req, res) {
 	}).filter((post) => delete post.content);
 
 	res.writeHead(200, { 'Content-Type': 'application/json' });
-	res.end(JSON.stringify(articles.filter((post) => post.finished)));
+	res.end(JSON.stringify(articles));
 }
