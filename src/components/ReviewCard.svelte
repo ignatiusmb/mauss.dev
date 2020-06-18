@@ -26,7 +26,7 @@
   {#if post.rating}
     <Button href="reviews/{post.slug}">read</Button>
   {:else}
-    <ButtonDisabled>pending</ButtonDisabled>
+    <ButtonDisabled>Work-in-Progress</ButtonDisabled>
   {/if}
 </aside>
 

@@ -18,7 +18,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    padding: 1em 0;
+    padding: 1em 0.5em;
     border-radius: inherit;
     background-color: rgba(0, 0, 0, 0.7);
     color: #fff;

@@ -1,5 +1,5 @@
 <script>
-  export let query;
+  export let query = '';
   export let filters = false;
   import Icon from './independent/Icon.svelte';
   import { createEventDispatcher } from 'svelte';

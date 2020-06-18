@@ -16,7 +16,7 @@
   {:else if status < 0}
     <span>Not recommended</span>
   {:else}
-    <span>Work-in-Progress</span>
+    <span>Pending</span>
   {/if}
   {#if hot}🔥{/if}
 </div>

@@ -4,7 +4,8 @@
     const genres = data.flatMap(p => p.genres);
     const unique = {
       categories: data.reduce((a, c) => (a.includes(c.category) ? a : [...a, c.category]), []),
-      genres: genres.reduce((a, c) => (a.includes(c) ? a : c ? [...a, c] : a), [])
+      genres: genres.reduce((a, c) => (a.includes(c) ? a : c ? [...a, c] : a), []).sort(),
+      verdict: data.reduce((a, c) => (a.includes(c.recommended) ? a : [...a, c.recommended]), [])
     };
     return { data, unique };
   }
@@ -24,7 +25,8 @@
   let query, show, filtered;
   let filters = {
     categories: [],
-    genres: []
+    genres: [],
+    verdict: []
   };
   $: {
     filtered = data;
@@ -34,6 +36,8 @@
         filtered = filtered.filter(p => p.genres.filter(g => filters.genres.includes(g)).length);
       } else if (key === 'categories') {
         filtered = filtered.filter(p => filters.categories.includes(p.category));
+      } else {
+        filtered = filtered.filter(p => filters.verdict.includes(p.recommended));
       }
     }
   }
@@ -67,6 +71,27 @@
           <label>
             <input type="checkbox" bind:group={filters.genres} value={genre} />
             <span>{capitalize(genre)}</span>
+          </label>
+        {/each}
+      </section>
+
+      <section>
+        <h3>Verdict</h3>
+        {#each unique.verdict as rec}
+          <label>
+            {#if rec === '-1'}
+              <input type="checkbox" bind:group={filters.verdict} value="-1" />
+              <span>Not recommended</span>
+            {:else if rec === '0'}
+              <input type="checkbox" bind:group={filters.verdict} value="0" />
+              <span>Contextual</span>
+            {:else if rec === '1'}
+              <input type="checkbox" bind:group={filters.verdict} value="1" />
+              <span>Recommended</span>
+            {:else}
+              <input type="checkbox" bind:group={filters.verdict} value="" />
+              <span>Pending</span>
+            {/if}
           </label>
         {/each}
       </section>
@@ -126,6 +151,7 @@
     background-color: var(--bg-color);
   }
   header section label {
+    cursor: pointer;
     padding: 0.5em 0.25em;
   }
   header section label span {
