@@ -1,22 +1,44 @@
 <script context="module">
   export async function preload() {
-    return { data: await this.fetch('reviews.json').then(r => r.json()) };
+    const data = await this.fetch('reviews.json').then(r => r.json());
+    const genres = data.flatMap(p => p.genres);
+    const unique = {
+      categories: data.reduce((a, c) => (a.includes(c.category) ? a : [...a, c.category]), []),
+      genres: genres.reduce((a, c) => (a.includes(c) ? a : c ? [...a, c] : a), [])
+    };
+    return { data, unique };
   }
 </script>
 
 <script>
-  export let data;
+  export let data, unique;
   import MetaHead from '../../components/MetaHead.svelte';
   import Searchbar from '../../components/Searchbar.svelte';
   import ReviewCard from '../../components/ReviewCard.svelte';
 
   const duration = 100;
-  import { scale } from 'svelte/transition';
   import { flip } from 'svelte/animate';
+  import { capitalize } from '../../utils/helper';
   import { sieve } from '../../utils/search';
 
-  let query;
-  $: filtered = query ? sieve(query, data) : data;
+  let query, show, filtered;
+  let filters = {
+    categories: [],
+    genres: []
+  };
+  $: {
+    filtered = data;
+    for (const key in filters) {
+      if (!filters[key].length) continue;
+      if (key === 'genres') {
+        filtered = filtered.filter(p => p.genres.filter(g => filters.genres.includes(g)).length);
+      } else if (key === 'categories') {
+        filtered = filtered.filter(p => filters.categories.includes(p.category));
+      }
+    }
+  }
+
+  $: sieved = query ? sieve(query, filtered) : filtered;
 </script>
 
 <MetaHead
@@ -26,16 +48,39 @@
 
 <header>
   <h1>Mauss Reviews</h1>
-  <Searchbar bind:query />
+  <Searchbar bind:query filters={true} on:filter={() => (show = !show)} />
+  {#if show}
+    <div>
+      <section>
+        <h3>Categories</h3>
+        {#each unique.categories as category}
+          <label>
+            <input type="checkbox" bind:group={filters.categories} value={category} />
+            <span>{capitalize(category)}</span>
+          </label>
+        {/each}
+      </section>
+
+      <section>
+        <h3>Genres</h3>
+        {#each unique.genres as genre}
+          <label>
+            <input type="checkbox" bind:group={filters.genres} value={genre} />
+            <span>{capitalize(genre)}</span>
+          </label>
+        {/each}
+      </section>
+    </div>
+  {/if}
 </header>
 
 <main>
-  {#each filtered as post (post.slug)}
+  {#each sieved as post (post.slug)}
     <section animate:flip={{ duration }}>
       <ReviewCard {post} />
     </section>
   {:else}
-    <h2>There are no titles matching {query}</h2>
+    <h2>There are no matching {query ? 'titles' : 'filters'}</h2>
   {/each}
 </main>
 
@@ -57,13 +102,41 @@
     margin: 1.5em 0 1em;
     text-align: center;
   }
-  section {
-    display: grid;
-    grid-template-rows: 1fr auto;
+  header div {
     width: 100%;
-    border-radius: 0.25em;
-    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
-    background-color: var(--bg-color-secondary);
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
+  }
+  header input {
+    display: none;
+  }
+  header section {
+    overflow-y: auto;
+    max-height: 20em;
+    display: flex;
+    flex-direction: column;
+  }
+  header section h3 {
+    position: sticky;
+    top: 0;
+    padding: 0.5em 0.25em;
+    border-bottom: 1px solid var(--fg-color);
+    margin-bottom: 0.5em;
+    background-color: var(--bg-color);
+  }
+  header section label {
+    padding: 0.5em 0.25em;
+  }
+  header section label span {
+    color: var(--fg-secondary-color);
+  }
+  header section input:checked + span {
+    color: var(--fg-color);
+  }
+  header section input:checked + span::after {
+    content: '✔';
+    margin-left: 0.5em;
   }
 
   main {
@@ -73,6 +146,14 @@
     grid-template-columns: repeat(auto-fill, 12em);
     justify-content: center;
     margin: 0 auto;
+  }
+  main section {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    width: 100%;
+    border-radius: 0.25em;
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+    background-color: var(--bg-color-secondary);
   }
   main h2 {
     position: absolute;
