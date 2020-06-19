@@ -70,7 +70,9 @@
   article :global(p) {
     margin-top: 0.75em;
   }
-  article :global(p > code) {
+  article :global(p code),
+  article :global(ol code),
+  article :global(ul code) {
     font-size: clamp(0.8rem, 2vw, 1rem);
   }
   article :global(img) {
