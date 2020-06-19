@@ -1,19 +1,19 @@
 <script>
-  export let status, hot;
+  export let verdict, hot;
 </script>
 
 <div
   class:hot={parseInt(hot)}
-  class:positive={status === 1}
-  class:neutral={status === 0}
-  class:negative={status === -1}
-  class:wip={isNaN(status)}
-  title={hot ? 'Must-watch!' : null}>
-  {#if status === 0}
+  class:positive={verdict === 1}
+  class:neutral={verdict === 0}
+  class:negative={verdict === -1}
+  class:wip={isNaN(verdict)}
+  title={verdict === 2 ? 'Must-watch!' : null}>
+  {#if verdict === 0}
     <span>Contextual</span>
-  {:else if status > 0}
+  {:else if verdict > 0}
     <span>Recommended</span>
-  {:else if status < 0}
+  {:else if verdict < 0}
     <span>Not recommended</span>
   {:else}
     <span>Pending</span>

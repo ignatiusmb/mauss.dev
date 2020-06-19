@@ -5,7 +5,7 @@
     const unique = {
       categories: data.reduce((a, c) => (a.includes(c.category) ? a : [...a, c.category]), []),
       genres: genres.reduce((a, c) => (a.includes(c) ? a : c ? [...a, c] : a), []).sort(),
-      verdict: data.reduce((a, c) => (a.includes(c.recommended) ? a : [...a, c.recommended]), [])
+      verdict: data.reduce((a, c) => (a.includes(c.verdict) ? a : [...a, c.verdict]), [])
     };
     return { data, unique };
   }
@@ -37,7 +37,7 @@
       } else if (key === 'categories') {
         filtered = filtered.filter(p => filters.categories.includes(p.category));
       } else {
-        filtered = filtered.filter(p => filters.verdict.includes(p.recommended));
+        filtered = filtered.filter(p => filters.verdict.includes(p.verdict));
       }
     }
   }
@@ -79,15 +79,18 @@
         <h3>Verdict</h3>
         {#each unique.verdict as rec}
           <label>
-            {#if rec === '-1'}
-              <input type="checkbox" bind:group={filters.verdict} value="-1" />
-              <span>Not recommended</span>
-            {:else if rec === '0'}
-              <input type="checkbox" bind:group={filters.verdict} value="0" />
-              <span>Contextual</span>
+            {#if rec === '2'}
+              <input type="checkbox" bind:group={filters.verdict} value="2" />
+              <span>Must-watch!</span>
             {:else if rec === '1'}
               <input type="checkbox" bind:group={filters.verdict} value="1" />
               <span>Recommended</span>
+            {:else if rec === '0'}
+              <input type="checkbox" bind:group={filters.verdict} value="0" />
+              <span>Contextual</span>
+            {:else if rec === '-1'}
+              <input type="checkbox" bind:group={filters.verdict} value="-1" />
+              <span>Not recommended</span>
             {:else}
               <input type="checkbox" bind:group={filters.verdict} value="" />
               <span>Pending</span>

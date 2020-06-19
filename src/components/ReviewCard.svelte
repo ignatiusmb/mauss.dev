@@ -1,11 +1,11 @@
 <script>
   export let post;
-  import Recommendation from './independent/Recommendation.svelte';
+  import Verdict from './independent/Verdict.svelte';
   import CardOverlay from './CardOverlay.svelte';
   import Button from './Button.svelte';
   import ButtonDisabled from './ButtonDisabled.svelte';
   import { capitalize } from '../utils/helper';
-  const status = parseInt(post.recommended);
+  const verdict = parseInt(post.verdict);
   let show = false;
 </script>
 
@@ -21,7 +21,7 @@
     <span>⭐ {post.rating ? post.rating : '~'}</span>
   </small>
   <small>
-    <Recommendation {status} hot={post['must-watch']} />
+    <Verdict {verdict} />
   </small>
   {#if post.rating}
     <Button href="reviews/{post.slug}">read</Button>
