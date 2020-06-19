@@ -16,8 +16,11 @@
   import { scale } from 'svelte/transition';
   import { flip } from 'svelte/animate';
   import { sieve } from '../../utils/search';
-  let query;
-  $: filtered = query ? sieve(query, data) : data;
+  let query, filtered;
+  filtered = data;
+  function search() {
+    filtered = query ? sieve(query, data) : data;
+  }
   $: total = filtered.length;
   $: $postPage = $postPage * 6 > total ? 0 : $postPage;
   $: posts = filtered.slice($postPage * 6, $postPage * 6 + 6);
@@ -27,7 +30,7 @@
 
 <header>
   <h1>Recent Posts</h1>
-  <Searchbar bind:query />
+  <Searchbar bind:query on:keyup={search} />
   <Pagination store={postPage} {total} />
 </header>
 

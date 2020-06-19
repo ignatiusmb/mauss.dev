@@ -18,17 +18,19 @@
   import ReviewCard from '../../components/ReviewCard.svelte';
 
   const duration = 100;
-  import { flip } from 'svelte/animate';
-  import { capitalize } from '../../utils/helper';
-  import { sieve } from '../../utils/search';
-
-  let query, show, filtered;
-  let filters = {
+  const filters = {
     categories: [],
     genres: [],
     verdict: []
   };
-  $: {
+  import { flip } from 'svelte/animate';
+  import { capitalize } from '../../utils/helper';
+  import { sieve } from '../../utils/search';
+
+  let query, show, filtered, sieved;
+  filtered = sieved = data;
+
+  function search() {
     filtered = data;
     for (const key in filters) {
       if (!filters[key].length) continue;
@@ -40,9 +42,8 @@
         filtered = filtered.filter(p => filters.verdict.includes(p.verdict));
       }
     }
+    sieved = query ? sieve(query, filtered) : filtered;
   }
-
-  $: sieved = query ? sieve(query, filtered) : filtered;
 </script>
 
 <MetaHead
@@ -52,7 +53,7 @@
 
 <header>
   <h1>Mauss Reviews</h1>
-  <Searchbar bind:query filters={true} on:filter={() => (show = !show)} />
+  <Searchbar bind:query on:keyup={search} filters={true} on:filter={() => (show = !show)} />
   {#if show}
     <div>
       <section>

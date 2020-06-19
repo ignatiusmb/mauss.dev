@@ -7,7 +7,7 @@
 </script>
 
 <div>
-  <input type="text" bind:value={query} placeholder="Type in your search query here" />
+  <input type="text" on:keyup bind:value={query} placeholder="Type in your search query here" />
   {#if filters}
     <span on:click={() => dispatch('filter')}>
       <Icon name="filter" />
