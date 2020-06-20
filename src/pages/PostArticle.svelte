@@ -60,13 +60,7 @@
   article :global(section > :first-child) {
     margin: 0;
   }
-  article :global(.aqua.code-box) {
-    line-height: unset;
-    font-size: 0.8rem;
-  }
-  article :global(.aqua.code-header::after) {
-    padding: 0.3em 1em;
-  }
+
   article :global(p) {
     margin-top: 0.75em;
   }
@@ -132,6 +126,16 @@
   }
   article :global(strong) {
     font-weight: 500;
+  }
+  article :global(hr) {
+    margin-top: 2em;
+  }
+  article :global(.aqua.code-box) {
+    line-height: unset;
+    font-size: 0.8rem;
+  }
+  article :global(.aqua.code-header::after) {
+    padding: 0.3em 1em;
   }
   article :global(.info-box) {
     font-size: 1rem;
