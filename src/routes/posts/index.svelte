@@ -30,7 +30,7 @@
 
 <header>
   <h1>Recent Posts</h1>
-  <Searchbar bind:query on:keyup={search} />
+  <Searchbar bind:query on:keyup={search} filters={false} />
   <Pagination store={postPage} {total} />
 </header>
 

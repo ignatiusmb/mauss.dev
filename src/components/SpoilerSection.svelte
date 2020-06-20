@@ -4,6 +4,10 @@
   let show = false;
 </script>
 
+<section class="info-box note">
+  <p>Be sure to come back and check out the spoilers section below when you're done.</p>
+</section>
+
 <section class="info-box important" on:click={() => (show = !show)} style="cursor: pointer">
   {#if !show}
     <h2>CLICK TO REVEAL SPOILERS</h2>
