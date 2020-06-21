@@ -21,6 +21,7 @@
 <script>
   export let post;
   import MetaHead from '../../components/MetaHead.svelte';
+  import TagBadge from '../../components/TagBadge.svelte';
   import PostArticle from '../../pages/PostArticle.svelte';
   const segment = 'content/posts';
   $: canonical = `posts/${post.slug}`;
@@ -30,7 +31,19 @@
 <MetaHead {post} {canonical} title={post.title} description={post.description} />
 
 <PostArticle {post} {segment} {filename} siblings={post.siblings} showEdit={true}>
+  <small slot="header">
+    {#each post.tags as tag}
+      <TagBadge {tag} />
+    {/each}
+  </small>
+
   <section>
     {@html post.content}
   </section>
 </PostArticle>
+
+<style>
+  small > :global(:not(:last-child)) {
+    margin-right: 0.5em;
+  }
+</style>

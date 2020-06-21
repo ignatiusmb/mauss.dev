@@ -21,7 +21,7 @@
   const duration = 100;
   import { flip } from 'svelte/animate';
   import { sieve } from '../../utils/search';
-  import { capitalize, compareDate, sortCompare } from '../../utils/helper';
+  import { compareDate, sortCompare } from '../../utils/helper';
   let query, show, filtered, sieved;
   let filters = { categories: [], genres: [], verdict: [], sort: 'published' };
 

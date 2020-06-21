@@ -3,7 +3,6 @@
   export let filename = null;
   export let post;
   import Edit from './Edit.svelte';
-  import TagBadge from './TagBadge.svelte';
   import { lastWords } from '../utils/helper';
 </script>
 
@@ -25,13 +24,7 @@
       <Edit {segment} {filename} />
     {/if}
   </small>
-  {#if post.tags}
-    <small>
-      {#each post.tags as tag}
-        <TagBadge {tag} />
-      {/each}
-    </small>
-  {/if}
+
   <slot />
 </header>
 
@@ -64,8 +57,5 @@
   }
   small > :global(span) {
     margin-bottom: 0.25em;
-  }
-  small > :global(:not(:last-child)) {
-    margin-right: 0.5em;
   }
 </style>
