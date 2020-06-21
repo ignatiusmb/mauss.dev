@@ -1,13 +1,14 @@
 <script context="module">
-  export async function preload({ path, params, query }) {
-    return { post: await this.fetch(`curated/${params.slug}.json`).then(r => r.json()) };
+  export async function preload({ params }) {
+    const res = await this.fetch(`curated/${params.slug}.json`);
+    if (res.status !== 200) return this.error(404, 'Curated post not found');
+    return { post: await res.json() };
   }
 </script>
 
 <script>
   export let post;
   import MetaHead from '../../components/MetaHead.svelte';
-  import PostHeader from '../../components/PostHeader.svelte';
   import PostArticle from '../../pages/PostArticle.svelte';
   const segment = 'content/curated';
   $: canonical = `curated/${post.slug}`;

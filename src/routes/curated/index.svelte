@@ -1,5 +1,5 @@
 <script context="module">
-  export async function preload(page, session) {
+  export async function preload() {
     return { data: await this.fetch('curated.json').then(r => r.json()) };
   }
 </script>
@@ -7,17 +7,19 @@
 <script>
   export let data;
   import MetaHead from '../../components/MetaHead.svelte';
-  import Pagination from '../../components/Pagination.svelte';
   import CuratedCard from '../../components/CuratedCard.svelte';
 
   import { scale } from 'svelte/transition';
   import { flip } from 'svelte/animate';
 </script>
 
-<MetaHead canonical="curated" title="Curated" description="Recently curated by Ignatius" />
+<MetaHead
+  canonical="curated"
+  title="Curated"
+  description="Curated content for all kinds of programming, lifestyle, and many more." />
 
 <header>
-  <h1>Latest Curated</h1>
+  <h1>Curated by Ignatius</h1>
 </header>
 
 <main>

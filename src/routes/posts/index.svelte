@@ -1,32 +1,80 @@
 <script context="module">
-  export async function preload(page, session) {
-    const data = await this.fetch(`posts.json`).then(r => r.json());
-    return { data, total: data.length };
+  export async function preload() {
+    const data = await this.fetch('posts.json').then(r => r.json());
+    const tags = data.flatMap(p => p.tags);
+    const unique = {
+      categories: data.reduce((a, c) => (a.includes(c.tags[0]) ? a : [...a, c.tags[0]]), []).sort(),
+      tags: tags.reduce((a, c) => (a.includes(c) ? a : c ? [...a, c] : a), []).sort()
+    };
+    return { data, unique };
   }
 </script>
 
 <script>
-  export let data, total;
+  export let data, unique;
   import MetaHead from '../../components/MetaHead.svelte';
+  import Searchbar from '../../components/Searchbar.svelte';
+  import FilterGrid from '../../components/FilterGrid.svelte';
   import Pagination from '../../components/Pagination.svelte';
   import PostCard from '../../components/PostCard.svelte';
 
+  const duration = 100;
   import { posts as postPage } from '../../stores/page';
   import { scale } from 'svelte/transition';
   import { flip } from 'svelte/animate';
-  $: posts = data.slice($postPage * 6, $postPage * 6 + 6);
+  import { sieve } from '../../utils/search';
+  import { compareDate, sortCompare } from '../../utils/helper';
+  let query, show, filtered, sieved;
+  let filters = { categories: [], tags: [], sort: 'published' };
+
+  $: {
+    filtered = data;
+    for (const key in filters) {
+      if (!filters[key].length) continue;
+      if (key === 'tags') {
+        filtered = filtered.filter(p => p.tags.filter(g => filters.tags.includes(g)).length);
+      } else if (key === 'categories') {
+        filtered = filtered.filter(p => filters.categories.includes(p.tags[0]));
+      } else {
+        if (filters[key] === 'published') {
+          filtered = filtered.sort(sortCompare);
+        } else if (filters[key] === 'updated') {
+          filtered = filtered.sort((x, y) => {
+            return compareDate(x.updated, y.updated) || sortCompare(x, y);
+          });
+        }
+      }
+    }
+  }
+  $: sieved = query ? sieve(query, filtered) : filtered;
+  $: total = sieved.length;
+  $: $postPage = $postPage * 6 > total ? 0 : $postPage;
 </script>
 
 <MetaHead canonical="posts" title="Posts" description="Get the latest most recent posts here." />
 
 <header>
-  <h1>Recent posts</h1>
+  <h1>Recent Posts</h1>
+  <Searchbar bind:query on:filter={() => (show = !show)} />
+  <FilterGrid {show} {unique} bind:filters>
+    <section>
+      <h3>Sort by</h3>
+      <label>
+        <input type="radio" bind:group={filters.sort} value="published" />
+        <span>Date published</span>
+      </label>
+      <label>
+        <input type="radio" bind:group={filters.sort} value="updated" />
+        <span>Last updated</span>
+      </label>
+    </section>
+  </FilterGrid>
   <Pagination store={postPage} {total} />
 </header>
 
 <main>
-  {#each posts as post (post.slug)}
-    <section animate:flip transition:scale|local>
+  {#each sieved.slice($postPage * 6, $postPage * 6 + 6) as post (post.slug)}
+    <section animate:flip={{ duration }} transition:scale|local={{ duration }}>
       <PostCard {post}>
         <div>
           <h3>{post.title}</h3>
@@ -57,7 +105,7 @@
     margin: 1.5em 0 1em;
     text-align: center;
   }
-  section {
+  main section {
     display: grid;
     grid-template-rows: 1fr 3em;
     width: 100%;
@@ -69,7 +117,7 @@
   main {
     display: grid;
     gap: 1em;
-    grid-template-columns: repeat(auto-fit, minmax(18em, 26em));
+    grid-template-columns: repeat(auto-fill, minmax(18em, 26em));
     justify-content: center;
     margin: 0 auto;
   }
@@ -79,7 +127,7 @@
   main div {
     padding: 1em;
   }
-  h3 {
+  main h3 {
     margin-bottom: 1em;
   }
 </style>

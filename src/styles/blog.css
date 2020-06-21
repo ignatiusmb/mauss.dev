@@ -13,7 +13,7 @@ var a {
 	color: white;
 }
 
-.dark section.info-box {
+.dark section.info-box[id] {
 	filter: invert() hue-rotate(180deg);
 }
 section.info-box {
@@ -24,18 +24,22 @@ section.info-box {
 	font-family: 'Karla', sans-serif;
 	transition: var(--transition-duration) var(--transition-function);
 }
+section.info-box:not([id]) {
+	margin-left: -5px;
+}
 section.info-box[id] ol,
 section.info-box[id] ul {
 	margin: 0;
 }
-section.info-box li {
+section.info-box ol li,
+section.info-box ul li {
 	margin-left: 0.5em;
+	margin-bottom: 0 !important;
 }
 section.info-box h3 {
 	margin-bottom: 0.3rem;
 }
-section.info-box p,
-section.info-box li {
+section.info-box p {
 	margin-bottom: 0;
 }
 
@@ -54,7 +58,7 @@ section.info-box#objective h3 {
 	position: absolute;
 	width: 100%;
 	top: 0;
-	left: -2.5px;
+	left: 0;
 	transform: translate(0, -125%);
 	text-align: center;
 }
@@ -101,15 +105,19 @@ section.info-box.tip code {
 
 section.info-box[data-info='important'],
 section.info-box.important {
-	border-left-color: rgb(226, 177, 0, 1);
+	border-left-color: rgba(226, 177, 0, 1);
 	background: rgba(254, 239, 179, 0.5);
-	color: rgb(226, 177, 0, 1);
+	color: rgba(226, 177, 0, 1);
+}
+.dark section.info-box[data-info='important'],
+.dark section.info-box.important {
+	background: rgba(254, 239, 179, 0.2);
 }
 section.info-box[data-info='important'] var,
 section.info-box[data-info='important'] code,
 section.info-box.important var,
 section.info-box.important code {
-	background: rgb(226, 177, 0, 1);
+	background: rgba(226, 177, 0, 1);
 	color: white;
 }
 

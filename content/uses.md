@@ -1,6 +1,5 @@
 ---
 title: Uses
-date: 2020-05-20
 updated: 2020-05-30
 ---
 
@@ -89,6 +88,12 @@ One last to thing to consider is that these so called Gaming chairs are usually 
 ### Keyboard
 
 - `2018-02` | [Corsair K95 RGB PLATINUM Mechanical Gaming Keyboard (Black, Brown Switch)](https://www.corsair.com/us/en/k95rgbplatinum)
+
+This is a good keyboard, there's no argument to it. Brown switches is what fits me the most, it gives you that really nice tactile feedback unlike any other switches, and it doesn't sound as loud or annoying as blue or razer switches. But, I realized that even though it's nice to have a number pad, I rarely find myself using it and makes it more of a wasted space where I could've have more mouse space.
+
+Even though it's only been around 2 years and I didn't even use it that often before 2020, most of the keys are already chattering, like `TAB`, `A`, and some other ones. It's quite frustrating and I can't seem to fix it by blowing it with canned air, so I might have to replace the switch by de-soldering it from the PCB.
+
+I love this keyboard but it might be too wide for me, I don't want to replace it yet since most of the keys are still functioning well, and I've grown accustomed to the feeling of this switches. Perhaps when the time comes, I'll try to find a TKL or 60% to replace this while still having a brown switch as my future keyboard replacement. I already have my eyes on the POK3R and Ducky keyboards, but having the media keys are nice too. I guess we'll save that decision for when that time comes.
 
 - `2018-02` | [Corsair MM300 Extended Anti-Fray Cloth Gaming Mouse Pad](https://www.corsair.com/us/en/mm300)
 

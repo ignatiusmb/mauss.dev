@@ -1,11 +1,8 @@
 <script>
   export let tag;
-  import Link from './independent/Link.svelte';
 </script>
 
-<span class={tag}>
-  <Link href="tag/{tag}">#{tag}</Link>
-</span>
+<span class={tag}>#{tag}</span>
 
 <style>
   span {

@@ -4,20 +4,23 @@ import { parseDir } from '../../utils/parser';
 
 export function get(req, res) {
 	const DIR = 'content/posts';
-	const posts = parseDir(DIR, (cleanedFilename: string, frontMatter: object) => {
-		const [date, slug] = cleanedFilename.split('.');
-		frontMatter['slug'] = slug;
-		frontMatter['date'] = date;
+	const posts = parseDir(DIR, (data, content, filename) => {
+		const [date, slug] = filename.split('.');
+		data['slug'] = slug;
+		data['date'] = date;
 
 		const rootFolder = `${process.cwd()}/static`;
-		const [category] = frontMatter['tags'];
-		const imagePath = `uploads/${category.toLowerCase()}/thumbnail/${frontMatter['slug']}`;
+		const [category] = data['tags'];
+		data['content'] = content;
+		if (data['image']) return data;
+
+		const imagePath = `uploads/${category.toLowerCase()}/thumbnail/${data['slug']}`;
 		if (existsSync(join(rootFolder, `${imagePath}.png`))) {
-			frontMatter['image'] = `${imagePath}.png`;
+			data['image'] = `${imagePath}.png`;
 		} else if (existsSync(join(rootFolder, `${imagePath}.jpg`))) {
-			frontMatter['image'] = `${imagePath}.jpg`;
+			data['image'] = `${imagePath}.jpg`;
 		}
-		return frontMatter;
+		return data;
 	}).filter((post) => delete post.content);
 
 	res.writeHead(200, { 'Content-Type': 'application/json' });

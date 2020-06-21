@@ -8,9 +8,6 @@
   import LinkExt from '../components/independent/LinkExt.svelte';
   import Edit from '../components/Edit.svelte';
   import Siblings from '../components/Siblings.svelte';
-
-  import { afterUpdate } from 'svelte';
-  afterUpdate(() => Aqua.tsunami());
 </script>
 
 <article>
@@ -49,13 +46,13 @@
     line-height: 1.5;
   }
   article :global(section) {
+    margin-top: 2em;
     font-size: clamp(1rem, 2vw, 1.15rem);
   }
   article > :global(section:first-of-type) {
     margin-top: 4em;
   }
   section {
-    margin-top: 2em;
     padding: 0.4em 0.8em;
     border-left: 2px solid crimson;
     background-color: rgba(0, 0, 0, 0.05);
@@ -63,24 +60,28 @@
   article :global(section > :first-child) {
     margin: 0;
   }
-  article :global(.aqua-code-box) {
-    line-height: unset;
-  }
+
   article :global(p) {
     margin-top: 0.75em;
+  }
+  article :global(p code),
+  article :global(ol code),
+  article :global(ul code) {
+    font-size: clamp(0.8rem, 2vw, 1rem);
   }
   article :global(img) {
     margin: auto;
     border: 0.5em solid var(--bg-color-secondary);
-    border-radius: 0.1em;
+    border-radius: 0.25em;
   }
   article :global(img[src^="https://"]) {
     padding: 0.5em;
     border: none;
+    border-radius: 1em;
   }
   article :global(h2),
   article :global(h3) {
-    font-family: 'Karla', sans-serif;
+    font-family: var(--aqua-heading);
   }
   article :global(h2) {
     margin-top: 1.5em;
@@ -114,14 +115,27 @@
     margin-left: 1em;
   }
   article :global(blockquote) {
+    line-height: 1.5;
     text-align: center;
     font-style: italic;
     font-size: clamp(1.4rem, 3vw, 1.8rem);
-    line-height: clamp(2rem, 3vw, 3rem);
     margin: clamp(0.5em, 3vw, 1.5rem);
   }
   article :global(blockquote li) {
     margin-left: unset;
+  }
+  article :global(strong) {
+    font-weight: 500;
+  }
+  article :global(hr) {
+    margin-top: 2em;
+  }
+  article :global(.aqua.code-box) {
+    line-height: unset;
+    font-size: 0.8rem;
+  }
+  article :global(.aqua.code-header::after) {
+    padding: 0.3em 1em;
   }
   article :global(.info-box) {
     font-size: 1rem;

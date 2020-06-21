@@ -5,10 +5,9 @@
   import Footer from '../components/Footer.svelte';
   import ScrollTop from '../components/ScrollTop.svelte';
 
+  import '@ignatiusmb/aqua/lib/aqua.min.css';
   import '../styles/fonts.css';
   import '../styles/theme.css';
-  import '../styles/core.css';
-  import '../styles/main.css';
   import '../styles/blog.css';
   import '../styles/animation.css';
 </script>
@@ -26,6 +25,6 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Rubik', 'Ubuntu', 'Roboto', sans-serif;
+    font-family: var(--aqua-default);
   }
 </style>

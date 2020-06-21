@@ -1,8 +1,10 @@
 <script context="module">
-  export async function preload({ path, params, query }) {
+  export async function preload({ params }) {
     const list = await this.fetch('posts.json').then(r => r.json());
-    const post = await this.fetch(`posts/${params.slug}.json`).then(r => r.json());
+    const res = await this.fetch(`posts/${params.slug}.json`);
+    if (res.status !== 200) return this.error(404, 'Post not found');
 
+    const post = await res.json();
     for (let i = 0; i < list.length; i++) {
       if (list[i].slug !== post.slug) continue;
       post['siblings'] = {};
@@ -19,7 +21,7 @@
 <script>
   export let post;
   import MetaHead from '../../components/MetaHead.svelte';
-  import PostHeader from '../../components/PostHeader.svelte';
+  import TagBadge from '../../components/TagBadge.svelte';
   import PostArticle from '../../pages/PostArticle.svelte';
   const segment = 'content/posts';
   $: canonical = `posts/${post.slug}`;
@@ -29,7 +31,19 @@
 <MetaHead {post} {canonical} title={post.title} description={post.description} />
 
 <PostArticle {post} {segment} {filename} siblings={post.siblings} showEdit={true}>
+  <small slot="header">
+    {#each post.tags as tag}
+      <TagBadge {tag} />
+    {/each}
+  </small>
+
   <section>
     {@html post.content}
   </section>
 </PostArticle>
+
+<style>
+  small > :global(:not(:last-child)) {
+    margin-right: 0.5em;
+  }
+</style>

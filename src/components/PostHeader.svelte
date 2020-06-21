@@ -2,9 +2,7 @@
   export let segment = null;
   export let filename = null;
   export let post;
-  import Icon from './independent/Icon.svelte';
   import Edit from './Edit.svelte';
-  import TagBadge from './TagBadge.svelte';
   import { lastWords } from '../utils/helper';
 </script>
 
@@ -26,13 +24,7 @@
       <Edit {segment} {filename} />
     {/if}
   </small>
-  {#if post.tags}
-    <small>
-      {#each post.tags as tag}
-        <TagBadge {tag} />
-      {/each}
-    </small>
-  {/if}
+
   <slot />
 </header>
 
@@ -42,7 +34,7 @@
     flex-direction: column;
     word-wrap: break-word;
     line-height: 1;
-    font-family: 'Karla', sans-serif;
+    font-family: var(--aqua-heading);
   }
 
   h1 {
@@ -65,8 +57,5 @@
   }
   small > :global(span) {
     margin-bottom: 0.25em;
-  }
-  small > :global(:not(:last-child)) {
-    margin-right: 0.5em;
   }
 </style>

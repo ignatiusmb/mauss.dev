@@ -4,20 +4,22 @@
   export let base;
 </script>
 
-<aside>
-  {#if prev}
-    <a rel="prefetch" href="{base}/{prev.slug}" style="text-align: left">
-      <strong>&larr; Prev</strong>
-      <p>{prev.title}</p>
-    </a>
-  {/if}
-  {#if next}
-    <a rel="prefetch" href="{base}/{next.slug}" style="text-align: right">
-      <strong>Next &rarr;</strong>
-      <p>{next.title}</p>
-    </a>
-  {/if}
-</aside>
+{#if prev || next}
+  <aside>
+    {#if prev}
+      <a rel="prefetch" href="{base}/{prev.slug}" style="text-align: left">
+        <strong>&larr; Prev</strong>
+        <p>{prev.title}</p>
+      </a>
+    {/if}
+    {#if next}
+      <a rel="prefetch" href="{base}/{next.slug}" style="text-align: right">
+        <strong>Next &rarr;</strong>
+        <p>{next.title}</p>
+      </a>
+    {/if}
+  </aside>
+{/if}
 
 <style>
   aside {

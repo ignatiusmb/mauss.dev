@@ -1,5 +1,6 @@
 ---
 title: About
+updated: 2020-05-30
 ---
 
 Hey there, my name is Ignatius Bagussuputra and I'm passionate with the applications that I make. I'm also an Open-Source enthusiast that focuses on privacy and transparency, check out my curated page in which I discussed a lot about this topic.
