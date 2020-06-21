@@ -32,13 +32,11 @@ It's mostly sad but they always try to follow up with something humorous to cove
 
 ### 6/10 | Artwork & Animation
 
-As expected of A-1 Pictures, great as always. It's not at Kyoto Animation or Ufotable level, but it's still good enough without a doubt. My only minor complaint is that they didn't put enough effort on some of the performance. Sure, it's not really important to the story, but it doesn't seem nice to just see a still picture with variating sounds playing in the background. At least just a little animation would be nice, even if it's just in the hands.
+As expected of A-1 Pictures, great as always. It's not at Kyoto Animation or Ufotable level, but it's still good enough without a doubt. My complaints are the nonexistent effort they have on animating the other performance. Sure, it's not really important to the story, but it doesn't seem nice to just see a still picture with variating sounds playing in the background. At least just a little animation would be nice, even if it's just in the hands. My rating is heavily backed up by the beautiful artworks.
 
 ### 10/10 | Sound
 
-I have no complaints about the sound here. It's a no-brainer for me, I love to listen to music and this show is dedicated to performing one. I love to listen classical music, it's not really the listen-everyday kind of music, but the way they present it to you in this show is nice that you don't really get bored by listening to it throughout the show.
-
-The OP and ED are super nice too that I never skip them. They also change it up in the second half of the season.
+I have no complaints about the sound here. It's a no-brainer for me, I love to listen to music and this show is dedicated to performing one. I love to listen classical music, it's not really the listen-everyday kind of music, but the way they present it to you in this show is nice that you don't really get bored by listening to it throughout the show. The opening and ending sequence are super nice too that I never skip.
 
 ### 8/10 | Characters
 

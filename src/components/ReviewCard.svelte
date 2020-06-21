@@ -23,7 +23,7 @@
   <small>
     <Verdict {verdict} />
   </small>
-  {#if post.rating}
+  {#if post.rating && post.verdict}
     <Button href="reviews/{post.slug}">read</Button>
   {:else}
     <ButtonDisabled>Work-in-Progress</ButtonDisabled>

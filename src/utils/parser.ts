@@ -1,6 +1,6 @@
 import { readdirSync, readFileSync } from 'fs';
 import { join } from 'path';
-import { createPrettyDate, splitAt } from './helper';
+import { createPrettyDate, sortCompare, splitAt } from './helper';
 import Aqua from '@ignatiusmb/aqua';
 const markIt = require('markdown-it')({
 	html: true,
@@ -35,12 +35,6 @@ const countReadTime = (content: string) => {
 	const total = words + (images ? images.length * 12 : 0);
 	const time = Math.round(total / 270);
 	return time ? time : 1;
-};
-
-const compareDate = (x: string, y: string) => {
-	const yDate = new Date(y);
-	const xDate = new Date(x);
-	return yDate.getTime() - xDate.getTime();
 };
 
 export const aquaMark = (content: string) => markIt.render(content);
@@ -81,15 +75,5 @@ export function parseDir(dirname: string, fileParse: Function) {
 	return FILTERED.map((filename) => {
 		const mdFile = readFileSync(join(DIR, filename), 'utf-8');
 		return parseFile(filename, mdFile, fileParse);
-	}).sort((x, y) => {
-		if (x.date !== y.date) {
-			return compareDate(x.date, y.date);
-		} else if (x.updated !== y.updated) {
-			return compareDate(x.updated, y.updated);
-		} else if (x.year && y.year && x.year !== y.year) {
-			return y.year - x.year;
-		}
-		// titles sort by descending order
-		return x.title.localeCompare(y.title);
-	});
+	}).sort(sortCompare);
 }

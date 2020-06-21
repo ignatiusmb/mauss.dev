@@ -5,7 +5,7 @@ finished: 2020-06-06
 date: 2020-06-18
 category: anime
 genres: drama, romance, ecchi, harem
-rating: 4,8,10,6
+rating: 4,7,10,5
 verdict: 0
 
 image: https://image.tmdb.org/t/p/original/9F80WGUD6WYfoEDMImf988NlXhC.jpg
@@ -165,7 +165,7 @@ The story is interesting and I was kinda into it after episode 3. But, I didn't 
 
 The first couple of endings were pretty generic and boring too, and the last one isn't really that satisfying either. But, I do still appreciate and enjoyed this regardless.
 
-### 8/10 | Artwork & Animation
+### 7/10 | Artwork & Animation
 
 For a show released on 2010, it felt quite timeless and was done beautifully. Backgrounds are colorful and vivid with good attention to details. The characters are well designed, Haruka as the main male character which is a kind guy with quirks that makes females find him cute and handsome.
 
@@ -177,7 +177,7 @@ I absolutely love the soundtracks composed here, albeit a bit repetitive in some
 
 Regardless of all of that, objectively speaking of the sounds alone, I really enjoyed it. So far as to not skip the opening nor ending credits, and I rarely not skip an intro.
 
-### 6/10 | Characters
+### 5/10 | Characters
 
 The characters are pretty weak I must say, especially Haruka as he's the lead here. He's kind of boring but still enjoyable in a way. Although, the development for each girls are noticeable and pretty nice. Each one carries a unique personality that depicts their personality. You might see they're boring at first, but with each one getting their own story, you can tell how they're developing as a character.
 
