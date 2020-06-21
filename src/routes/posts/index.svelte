@@ -127,7 +127,7 @@
   main div {
     padding: 1em;
   }
-  h3 {
+  main h3 {
     margin-bottom: 1em;
   }
 </style>
