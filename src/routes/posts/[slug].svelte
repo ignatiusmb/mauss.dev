@@ -43,7 +43,14 @@
 </PostArticle>
 
 <style>
+  small {
+    display: flex;
+    flex-wrap: wrap;
+  }
   small > :global(:not(:last-child)) {
     margin-right: 0.5em;
+  }
+  small > :global(span) {
+    margin-bottom: 0.5em;
   }
 </style>
