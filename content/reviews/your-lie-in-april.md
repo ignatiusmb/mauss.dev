@@ -3,6 +3,7 @@ title: Shigatsu wa Kimi no Uso (Your Lie in April)
 year: 2014
 finished: 2020-06-20
 date: 2020-06-20
+updated: 2020-06-22
 category: anime
 genres: drama, music, romance, school, slice of life
 rating: 9,6,10,8
@@ -28,7 +29,7 @@ Based on the manga series of the same name, Shigatsu wa Kimi no Uso approaches t
 
 The story makes sense, it's not over the top, it's not cliche either. Pretty predictable in a way, but it's written better than most drama love story I've encountered before. In short, it's original in its own way.
 
-It's mostly sad but they always try to follow up with something humorous to cover it up, but when it doesn't, it really hits hard. It's perhaps the definition of riding a rollercoaster of emotions. The plot is well managed too, it guides you from the beginning to the end smoothly, it explains the story well enough and gives you quite a satisfying ending too.
+It's mostly sad but they always try to follow up with something humorous to cover it up, but when it doesn't, it really hits hard. It's perhaps the definition of riding a rollercoaster of emotions. The plot is well managed too, it guides you from the beginning to the end smoothly and explains the story in a well-managed manner.
 
 ### 6/10 | Artwork & Animation
 
@@ -36,7 +37,7 @@ As expected of A-1 Pictures, great as always. It's not at Kyoto Animation or Ufo
 
 ### 10/10 | Sound
 
-I have no complaints about the sound here. It's a no-brainer for me, I love to listen to music and this show is dedicated to performing one. I love to listen classical music, it's not really the listen-everyday kind of music, but the way they present it to you in this show is nice that you don't really get bored by listening to it throughout the show. The opening and ending sequence are super nice too that I never skip.
+I have no complaints about the sound here. It's a no-brainer for me, I love to listen to music and this show is dedicated to performing one. I love to listen classical music, it's not really the listen-to-everyday kind of music, but if you don't, fear not. The way they present it to you in this show is nice that you don't really get bored by listening to it throughout the show. The opening and ending sequence are super nice too that I never skip.
 
 ### 8/10 | Characters
 
@@ -48,7 +49,7 @@ Some minor things I'll be picky about is they sometimes exaggerate some of the c
 
 Your Lie in April was certainly that kind of show where you knew what's going to happen in the end, yet you'll still be "surprised" by it.
 
-The title itself makes me think about it constantly throughout the series, trying to figure out who's perspective is "Your Lie" coming from. I highly suggest you **don't go wiki surfing and just watch it** till the end as is. I always felt like that's the best approach to watch a series, the journey and experience of growing with the characters is worthwhile by itself.
+The title itself makes me think about it constantly throughout the series, trying to figure out who's perspective is "Your Lie" coming from and what lie is about. I highly suggest you **don't go wiki surfing and just watch it** till the end as is. I always felt like that's the best approach to watch a series, the journey and experience of growing with the characters is worthwhile by itself.
 
 The final verdict from me is... **Highly recommended**! Definitely watch it if you have the time. At least give the first 2 episodes a chance to fully understand what you're missing out.
 
@@ -58,13 +59,13 @@ A fair and final warning from me, this definitely lands a spot on my top 10 sadd
 
 There's not much to break down here since they pretty much explains everything in the final episode. But, that doesn't mean there's nothing left to discuss. Here's some of the things I find quite interesting and worth to talk about.
 
-### Kousei Arima Illness
+### Kousei Arima illness
 
 The human mind is truly a fragile thing, and what Kousei experienced was real, it shouldn't be taken lightly and definitely not something to be ignored or brushed off. It may not seem like it, but Kousei actually experienced an extreme form of mental scarring that develops a mental illness in him called post-traumatic stress disorder (PTSD). He was truly suffering as a person after his mother's death. [Explained more thoroughly here](https://aminoapps.com/c/anime/page/blog/kousei-arima-the-struggle-of-ptsd/08tk_uKPrGbKX0dNxwn71BBop7BZ5q)
 
 Him not being able to hear his own piano tones might seem absurd and his vision of himself playing in the bottom of a deep dark waters may also be called an exaggeration. But, those image that he had represents a real world disease, [tone deafness](https://en.wikipedia.org/wiki/Amusia#Congenital_amusia). Also called **congenital amusia**, or perhaps in Kousei's case it was **acquired amusia**, amusia meaning the loss of ability to produce or recognize musical sounds.
 
-### Kaori Miyazono Illness
+### Kaori Miyazono illness
 
 > A single petal that drifted into my life
 
@@ -85,14 +86,13 @@ A surgery to "prolong" her life may just be to implant a pacemaker since she may
 ### Final Scene
 
 - Kousei performs *Chopin`s Ballade No. 1 in G minor, Op. 23* at the competition while Kaori undergoes surgery.
-- As he plays, he enters into a dream-like state, surrounded by color and light with Kaori and her violin appearing before him. This scene is heavily implying both Kousei and Kaori promises, the long awaited performance they're going to do together.
-- This dream-like state indicates that Kousei knows and realize the she's with her inside his dreams. As the play is nearing the end, she started to disappear steadily and he begs her to stay with him.
-- Kousei understands that this means that the surgery was unsuccessful, she then disappears with one last tearful smile.
+- As he plays, he enters into a dream-like state, surrounded by color and light with Kaori and her violin appearing before him. Kousei immediately realize that her surgery was unsuccessful as he played along with her. This scene also presents the last promise they made to play together again.
+- As the play is nearing the end, she started to disappear steadily and he begs her to stay with him, she then disappears with one last tearful smile.
 - In reality, Kousei completes his performance with tears running down his face, saying his final farewell to her, just like he did previously with his mother.
 
-After receiving her letter, Kousei finally knows that Kaori loved him and reaffirms his vow to never forget her, continuing to play the piano. Her intentions from the beginning may not be for Kousei to love her back since she realizes that she doesn't have a lot of time left, however she insisted on doing what she claims to be the things she won't end up regretting in the end, and one of them was to be part of Kousei's life, to be with him in his dreams forever.
+After receiving her letter, Kousei finally knows that Kaori loved him and reaffirms his vow to never forget her, continuing to play the piano. Her intentions from the beginning may not be for Kousei to love her back since she realizes that she doesn't have a lot of time left, however she insisted on doing what she claims to be the things she won't end up regretting in the end, and one of them was to be part of Kousei's life.
 
-**Side Note**: Kaori claims that Watari was an amazing friend but will probably forget all about her. However, it's visually suggested that he really did like her by the scene where we can see him picking up his phone and looking at their picture together.
+**Side Note**: Kaori claims that Watari was an amazing friend but will probably forget all about her. However, it's visually suggested that he really did like her. This is supported by the scene where we can see him picks up his phone and looks at their picture together, and Kaori is likely the one who scolds Watari and slaps him in the scene, hence her believing he'll probably forget about her and move on to another girl quickly.
 
 ### Title Origin
 
@@ -108,7 +108,7 @@ Well, it was a surprise when it turns out that it wasn't what the title was talk
 - "Your Lie" being Kaori's lie she told at the last episode.
 - "Your Lie in April" being used to remind Kousei to never forget Kaori, to never press the "reset" button every year when spring comes, the season when he met her for the first time.
 
-> Spring is almost here. Spring, the season when I met you. But, this spring is coming without you.
+> Spring will be here soon. The season I met you is almost here. A spring without you will arrive.
 
 <!-- CLOSING -->
 
