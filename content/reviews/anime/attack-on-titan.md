@@ -4,7 +4,6 @@ year: 2013
 finished: 2020-05-12
 date: 2020
 updated:
-category: anime
 genres: action, military, mystery, fantasy, drama, shounen
 rating:
 verdict:

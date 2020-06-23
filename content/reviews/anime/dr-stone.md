@@ -4,7 +4,6 @@ year: 2019
 finished: 2020-03-01
 date: 2020
 updated:
-category: anime
 genres: adventure, sci-fi, shounen
 rating:
 verdict:

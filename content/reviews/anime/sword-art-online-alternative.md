@@ -4,7 +4,6 @@ year: 2018
 finished:
 date: 2020
 updated:
-category: anime
 genres: action, fantasy, game, sci-fi
 rating:
 verdict:

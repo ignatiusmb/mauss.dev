@@ -4,7 +4,6 @@ year: 2014
 finished: 2020-06-20
 date: 2020-06-20
 updated: 2020-06-22
-category: anime
 genres: drama, music, romance, school, slice of life
 rating: 9,6,10,8
 verdict: 1

@@ -4,7 +4,6 @@ year: 2014
 finished: 2020-05-10
 date: 2020
 updated:
-category: anime
 genres: sports, school, comedy
 rating:
 verdict:

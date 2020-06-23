@@ -4,7 +4,6 @@ year: 2010
 finished: 2020-06-06
 date: 2020-06-18
 updated: 2020-06-22
-category: anime
 genres: drama, romance, tsundere, ecchi, harem
 rating: 4,7,10,5
 verdict: 0
@@ -249,7 +248,7 @@ This is the show's tagline. Haruka and Sora did in fact went somewhere else, the
 
 Now, if you'll excuse me, I'm going to find something less depressing to think about...
 
-Thankfully, I was watching [Eromanga-sensei](reviews/eromanga-sensei) at the same time. Perhaps it could lighten up your mood just like it did for me.
+Thankfully, I was watching [Eromanga-sensei](reviews/anime/eromanga-sensei) at the same time. Perhaps it could lighten up your mood just like it did for me.
 
 <!-- CLOSING -->
 

@@ -3,7 +3,6 @@ title: The Heroes of Olympus: The Son of Neptune
 year: 2011
 finished:
 date: 2020
-category: book
 genres: adventure, fantasy, mystery
 rating:
 verdict:

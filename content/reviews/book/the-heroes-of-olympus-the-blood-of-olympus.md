@@ -3,7 +3,6 @@ title: The Heroes of Olympus: The Blood of Olympus
 year: 2014
 finished:
 date: 2020
-category: book
 genres: adventure, fantasy, mystery
 rating:
 verdict:

@@ -3,7 +3,6 @@ title: The Heroes of Olympus: The Lost Hero
 year: 2010
 finished:
 date: 2020
-category: book
 genres: adventure, fantasy, mystery
 rating:
 verdict:

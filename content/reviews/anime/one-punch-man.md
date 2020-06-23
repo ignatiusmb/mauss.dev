@@ -3,7 +3,6 @@ title: One Punch Man
 year: 2015
 finished:
 date: 2020
-category: anime
 genres: action, sci-fi, comedy, super power, supernatural
 rating: story,artwork,sound,characters
 verdict:

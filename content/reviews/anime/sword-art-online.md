@@ -4,7 +4,6 @@ year: 2011
 finished: 2020-04-01
 date: 2020
 updated:
-category: anime
 genres: action, adventure, fantasy, game, romance
 rating:
 verdict:

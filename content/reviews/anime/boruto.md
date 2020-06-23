@@ -3,7 +3,6 @@ title: Boruto: Naruto Next Generations
 year: 2016
 finished:
 date: 2020
-category: anime
 genres: action, adventure, super power, martial arts, shounen
 rating: story,artwork,sound,characters
 verdict:

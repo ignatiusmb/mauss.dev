@@ -3,7 +3,6 @@ title: Demon Slayer: Kimetsu no Yaiba
 year: 2019
 finished: 2020-04-20
 date: 2020
-category: anime
 genres: action, demons, historical, shounen, supernatural
 rating:
 verdict:

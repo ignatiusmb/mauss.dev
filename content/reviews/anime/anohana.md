@@ -3,7 +3,6 @@ title: anohana: The Flower We Saw That Day
 year: 2011
 finished: 2020-06-08
 date: 2020
-category: anime
 genres: drama, slice of life, supernatural
 rating:
 verdict:

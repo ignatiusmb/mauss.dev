@@ -4,7 +4,6 @@ year: 2016
 finished:
 date: 2020
 updated:
-category: anime
 genres: action, comedy, school, shounen
 rating:
 verdict:

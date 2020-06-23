@@ -3,7 +3,6 @@ title: The Heroes of Olympus: The House of Hades
 year: 2013
 finished:
 date: 2020
-category: book
 genres: adventure, fantasy, mystery
 rating:
 verdict:

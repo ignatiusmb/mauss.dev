@@ -4,7 +4,6 @@ year: 2009
 finished: 2020-06-09
 date: 2020
 updated:
-category: anime
 genres: action, adventure, fantasy, magic, drama
 rating:
 verdict:

@@ -3,7 +3,6 @@ title: The Heroes of Olympus: The Demigod Diaries
 year: 2012
 finished:
 date: 2020
-category: book
 genres: adventure, fantasy, mystery
 rating:
 verdict:

@@ -3,7 +3,6 @@ title: Eromanga-sensei
 year: 2017
 finished: 2020-06-07
 date: 2020
-category: anime
 genres: comedy, drama, romance, ecchi
 rating:
 verdict:

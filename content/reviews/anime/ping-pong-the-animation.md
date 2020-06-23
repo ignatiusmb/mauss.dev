@@ -3,7 +3,6 @@ title: Ping Pong the Animation
 year: 2014
 finished:
 date: 2020
-category: anime
 genres: sports, drama, seinen
 rating: story,artwork,sound,characters
 verdict:

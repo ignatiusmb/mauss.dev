@@ -3,7 +3,6 @@ title: Black Mirror
 year: 2011
 finished:
 date: 2020
-category: Series
 genres: drama, sci-fi, thriller
 rating: story,artwork,sound,characters
 verdict:

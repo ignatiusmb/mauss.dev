@@ -3,7 +3,6 @@ title: Toradora!
 year: 2008
 finished:
 date: 2020
-category: anime
 genres: romance, comedy, slice of life, school
 rating: story,artwork,sound,characters
 verdict:

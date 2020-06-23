@@ -3,7 +3,6 @@ title:
 year:
 finished:
 date:
-category:
 genres:
 rating: story,artwork,sound,characters
 verdict:
