@@ -18,10 +18,11 @@
   import Pagination from '../../components/Pagination.svelte';
   import PostCard from '../../components/PostCard.svelte';
 
+  import { pSlice } from '../../stores';
+  const bound = 6;
   const duration = 100;
-  import { posts as postPage } from '../../stores/page';
-  import { scale } from 'svelte/transition';
   import { flip } from 'svelte/animate';
+  import { scale } from 'svelte/transition';
   import { sieve } from '../../utils/search';
   import { compareDate, sortCompare } from '../../utils/helper';
   let query, show, filtered, sieved;
@@ -48,7 +49,7 @@
   }
   $: sieved = query ? sieve(query, filtered) : filtered;
   $: total = sieved.length;
-  $: $postPage = $postPage * 6 > total ? 0 : $postPage;
+  $: $pSlice = $pSlice * bound > total ? 0 : $pSlice;
 </script>
 
 <MetaHead canonical="posts" title="Posts" description="Get the latest most recent posts here." />
@@ -69,11 +70,11 @@
       </label>
     </section>
   </FilterGrid>
-  <Pagination store={postPage} {total} />
+  <Pagination store={pSlice} {total} {bound} />
 </header>
 
 <main>
-  {#each sieved.slice($postPage * 6, $postPage * 6 + 6) as post (post.slug)}
+  {#each sieved.slice($pSlice * bound, $pSlice * bound + bound) as post (post.slug)}
     <section animate:flip={{ duration }} transition:scale|local={{ duration }}>
       <PostCard {post}>
         <div>

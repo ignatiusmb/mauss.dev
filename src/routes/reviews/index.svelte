@@ -16,10 +16,14 @@
   import MetaHead from '../../components/MetaHead.svelte';
   import Searchbar from '../../components/Searchbar.svelte';
   import FilterGrid from '../../components/FilterGrid.svelte';
+  import Pagination from '../../components/Pagination.svelte';
   import ReviewCard from '../../components/ReviewCard.svelte';
 
+  import { rSlice } from '../../stores';
+  const bound = 12;
   const duration = 100;
   import { flip } from 'svelte/animate';
+  import { scale } from 'svelte/transition';
   import { sieve } from '../../utils/search';
   import { compareDate, sortCompare } from '../../utils/helper';
   let query, show, filtered, sieved;
@@ -51,6 +55,8 @@
     }
   }
   $: sieved = query ? sieve(query, filtered) : filtered;
+  $: total = sieved.length;
+  $: $rSlice = $rSlice * bound > total ? 0 : $rSlice;
 </script>
 
 <MetaHead
@@ -106,11 +112,12 @@
       </label>
     </section>
   </FilterGrid>
+  <Pagination store={rSlice} {total} {bound} />
 </header>
 
 <main>
-  {#each sieved as post (post.slug)}
-    <section animate:flip={{ duration }}>
+  {#each sieved.slice($rSlice * bound, $rSlice * bound + bound) as post (post.slug)}
+    <section animate:flip={{ duration }} transition:scale|local={{ duration }}>
       <ReviewCard {post} />
     </section>
   {:else}
