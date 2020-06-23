@@ -58,4 +58,7 @@
   small > :global(span) {
     margin-bottom: 0.25em;
   }
+  small > :global(span:not(:first-child)) {
+    margin-left: 0.5em;
+  }
 </style>

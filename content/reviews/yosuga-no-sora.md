@@ -3,8 +3,9 @@ title: Yosuga no Sora: In solitude, where we are least alone
 year: 2010
 finished: 2020-06-06
 date: 2020-06-18
+updated: 2020-06-22
 category: anime
-genres: drama, romance, ecchi, harem
+genres: drama, romance, tsundere, ecchi, harem
 rating: 4,7,10,5
 verdict: 0
 
@@ -16,7 +17,7 @@ link: https://myanimelist.net/anime/8861/Yosuga_no_Sora__In_Solitude_Where_We_Ar
 
 ## Synopsis
 
-After losing both their parents to a car accident and being orphaned, they sold their apartment. Haruka "Haru" Kasugano with his fraternal twin sister Sora "Sora" Kasugano, travel to the countryside and start life anew at their grandparent's house, where they spend their summer holidays in their childhood.
+After losing both their parents to a car accident and being orphaned, they left the city life and sold their apartment. Haruka "Haru" Kasugano with his fraternal twin sister Sora "Sora" Kasugano, travel to the countryside and start life anew at their grandparent's house, where they used to spend their summer holidays.
 
 They met a lot of their childhood friends back when they were still kids. Haruka didn't remember at first, but as the story develops, he remembers his memories of the past where he used to play with a lot of his childhood friends at the village.
 
@@ -153,6 +154,8 @@ Each arc is its own story with independent plot and should not be confused with 
 
 Yosuga no Sora finishes after only 1 season of 12 episodes. Each episode consists of a 22 minutes feature segment and a 3 minutes omake segment. The bonus segment focuses on Motoka's story that is continuous between episode 1 to 12. So you could say that the bonus segment is the only linear plot line here.
 
+In total, there's 5 endings, 4 as the main storyline and another one in the extras.
+
 ## Highlights
 
 This is **not a hentai**, if you're going in on this with that mindset, you're better off watching something else. There is of course some sexual scenes, but it is served reasonably for the story to progress and has deeper meanings with **how they got into it** and not just there for the sake of something sexual.
@@ -175,11 +178,11 @@ Each characters, especially the girls are portrayed differently, each with their
 
 I absolutely love the soundtracks composed here, albeit a bit repetitive in some cases. I would agree if some would say they're being lazy by overusing one track for all the (attempted) sad or happy moments. But, I guess it's more of how they delivered it.
 
-Regardless of all of that, objectively speaking of the sounds alone, I really enjoyed it. So far as to not skip the opening nor ending credits, and I rarely not skip an intro.
+Regardless of all of that, objectively speaking of the sounds alone, I really enjoyed it. It was the one thing I immediately noticed to be spectacular. I didn't know what I expected when I first got into it, but a couple of episodes in I found out that this hits a spot as one of the recommended anime with absolutely stellar music. Even if you don't know about this, you'll still feel how amazing the soundtracks are.
 
 ### 5/10 | Characters
 
-The characters are pretty weak I must say, especially Haruka as he's the lead here. He's kind of boring but still enjoyable in a way. Although, the development for each girls are noticeable and pretty nice. Each one carries a unique personality that depicts their personality. You might see they're boring at first, but with each one getting their own story, you can tell how they're developing as a character.
+The characters are pretty weak, especially Haruka as he's the lead here. He's boring but still enjoyable in a way. Although, the development for each girls are noticeable and pretty nice. Each one carries a unique personality that depicts their personality. You might see they're boring at first, but with each one getting their own story, you can tell how they're developing as a character.
 
 ## Verdict
 
@@ -191,7 +194,7 @@ This is not a show with the usual fluff and fun harem, it's a serious drama with
 2. DO NOT, watch this if you can't handle sad/depressing things.
 3. Only watch episode 1 to 9 and stop there. You'll still get most of the story and experience from that and you won't need to see taboo and sad part with it, but it'll completely feel like a typical and generic romance/drama show.
 
-**The final arc (10-12) didn't treat the subject as something simple or for fun and excitement, they gave all the serious weight it was due. *Society* will see it as wrongdoing, and there will be little to no understanding for those transgressing on taboos. It was certainly not a laughing matter, but it did a really good job of making us empathize and feel the pain they were feeling. It was also thought provoking, at least for me.**
+**The final arc (10-12) didn't treat incest as something simple or for fun and excitement, they gave all the serious weight it was due. *Society* will see it as wrongdoing, and there will be little to no understanding for those transgressing on taboos. It was certainly not a laughing matter, but it did a really good job of making us empathize and feel the pain they were feeling. It was also thought provoking, at least for me.**
 
 If you're still uncertain, perhaps give the first 2 episodes a chance before deciding if it's worth your time. Do decide early before regretting your decision.
 
@@ -203,7 +206,7 @@ As you've already decided to open this section, I'm sure you know what's coming.
 
 ## Hateful comments
 
-**Most** bad reviews are just hating incest in this without actually writing about the show itself, it's total nonsense. I don't really make sense to just drop a show just because a kiss between siblings (or twins) is it, it's not really justifiable by itself. I saw a supportive relationship between orphaned siblings who just lost their parents with no one else to go, trying to support each other, but I guess that's not what most people saw, unfortunately. Well, it's not really my job either to make you love or hate this show. I'm just here to give my perspective, critique, and reviews objectively.
+**Most** bad reviews are just hating incest in this without actually writing about the show itself, it's total nonsense. I don't really make sense to just drop a show just because a kiss between siblings (or twins) is it, it's not really justifiable by itself. I see a supportive relationship between orphaned siblings who just lost their parents with no one else to go, trying to support each other, but I guess that's not what most people saw, unfortunately. Well, it's not really my job either to make you love or hate this show. I'm just here to give my perspective, critique, and reviews objectively.
 
 If you're still complaining only about the incest here, then you should've stop watching it after the first episode. I've given my verdict and provided a couple of options for you to choose before you approach this too. You're not really criticizing the show either, just hating it because it has incest in it. You won't really get anywhere by being a close-minded person who hates things just because, and you won't grow as a person either.
 
@@ -232,15 +235,17 @@ We got to see what happens to each girls on 4 different stories. We also learned
 
 ### Conclusion
 
-Haruka and Sora are dead, their bodies will never be recovered as they drowned in the lake and no one knows they're there. Sora is a physically weak girl and she can't swim as we saw her uses an inflatable swim ring a couple of times previously.
+Haruka and Sora are dead, their bodies will never be recovered as they drowned in the lake and no one knows they're there. Sora is a physically weak girl and she can't swim as we saw her use an inflatable swim ring a couple of times.
 
-Kazuha broke into their house and found Haruka's phone with the final message from Sora, deducing they died in a lover's pact after missing for several days. To give everyone else a closure, she used Haruka's phone to send herself a fake message we saw her read previously. The fact that the message didn't say anything about their uncle or aunt that has went back to Japan proved that no one else knew about it and Kazuha did in fact send that fake message to herself. We also saw that she's the only one that bowed towards the house because she knows they're dead.
+Kazuha broke into their house and found Haruka's phone with the final message from Sora, deducing they died in a lover's pact after missing for several days. So, to give everyone else a closure, she used Haruka's phone to send herself a fake message we saw her read previously.
 
-The bunny at the final scene is just evidence for slow ones like myself to notice. That bunny is irreplaceable because it's Sora's final gift from her mother, so there's no way she more than one of it. The empty train emerging from the darkness points to both of them being "reborn" into an afterlife together.
+The fact that the message didn't say anything about their uncle or aunt that has went back to Japan proved that it wasn't Haruka who wrote it since he only told Sora and no one else knew about it. We also saw that Kazuha is the only one that bowed towards the house because she knows they're dead.
+
+The bunny at the final scene is just evidence for slow ones like myself to notice. That bunny is an irreplaceable final gift from their mother to Sora, so there's no way she more than one of it. The empty train emerging from the darkness points to both of them being "reborn" into an afterlife together.
 
 > In solitude, where we are least alone
 
-This was the show's tagline. Haruka and Sora did in fact went somewhere else, they died in that lake and were reborn to their own place in the magical afterlife, in solitude, where they're least alone and able to share their love without shame or disapproval from others.
+This is the show's tagline. Haruka and Sora did in fact went somewhere else, they died in that lake and were reborn to their own place in the magical afterlife, in solitude, where they're least alone and able to share their love without shame or disapproval from others.
 
 Now, if you'll excuse me, I'm going to find something less depressing to think about...
 
