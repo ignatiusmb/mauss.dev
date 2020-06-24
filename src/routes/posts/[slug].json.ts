@@ -1,14 +1,12 @@
-import { readFileSync, readdirSync } from 'fs';
+import { readdirSync } from 'fs';
 import { parseFile } from '../../utils/parser';
 
 export function get(req, res) {
 	const { slug } = req.params;
 	const DIR = 'content/posts';
-	const posts = readdirSync(DIR);
-	const [filepath] = posts.filter((post) => post.includes(slug));
-	const rawContent = readFileSync(`${DIR}/${filepath}`, 'utf-8');
+	const [filepath] = readdirSync(DIR).filter((post) => post.includes(slug));
 
-	const post = parseFile(filepath, rawContent, (data, content, filename) => {
+	const post = parseFile(`${DIR}/${filepath}`, (data, content, filename) => {
 		const [date, slug] = filename.split('.');
 		return { slug, ...data, date, content };
 	});

@@ -1,14 +1,13 @@
 <script>
-  export let store, total;
+  export let store, total, bound;
   import Icon from './independent/Icon.svelte';
   function handleIndexing(index) {
-    if (index < 0) return;
     index = Math.round(index);
-    if (index > $store && curr + 6 > total) return;
+    if (index < 0 || (index > $store && curr + bound > total)) return;
     $store = index;
   }
-  $: curr = $store * 6;
-  $: next = curr + 6 <= total ? curr + 6 : total;
+  $: curr = $store * bound;
+  $: next = curr + bound <= total ? curr + bound : total;
 </script>
 
 <section>
@@ -22,7 +21,7 @@
   <span on:click|preventDefault={() => handleIndexing($store + 1)}>
     <Icon name="chevron-right" />
   </span>
-  <span on:click|preventDefault={() => handleIndexing(Math.floor(total / 6))}>
+  <span on:click|preventDefault={() => handleIndexing(Math.floor(total / bound))}>
     <Icon name="chevrons-right" />
   </span>
 </section>

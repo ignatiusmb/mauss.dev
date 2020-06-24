@@ -1,7 +1,7 @@
 import { parseFile } from '../utils/parser';
 
 export function get(req, res) {
-	const article = parseFile('content/uses.md', (data, content) => {
+	const article = parseFile('content/help.md', (data, content) => {
 		return { ...data, content };
 	});
 

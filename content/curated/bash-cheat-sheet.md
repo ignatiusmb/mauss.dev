@@ -1,14 +1,25 @@
 ---
 title: Complete Bash Utility Cheat Sheet
-date: 2020-06-04
-updated: 2020-06-13
+updated: 2020-06-23
 ---
+
+This are my goto scripts to manage my home media server. I'll be compiling all that I remember here so I won't forget it and could quickly search for a reference in the future. I hope most of it would be beneficial to you too.
+
+`Copy method`, it creates a hard link for the file or everything in the folder to the desired destination. Hard linking is crucial for media management so that you won't have a lot of wasted space with duplicates or multiple files with similar data and different file names.
 
 ```bash
 ~Copy Method
 # This will create a complete hard linked copy instead of traditional one
 cp -al /path/to/source /path/to/destination
 ```
+
+`Find method`, it quickly finds your desired file or folder with many additional functionalities. It could do many things such as
+
+- Search for empty files or folders
+- Search files and folders with specific hard link counts
+- Search files and folders that belongs to a specific owner or group
+- Search and destroy files and folders with specific prefix/suffix
+- and many more...
 
 ```bash
 ~Find Method
@@ -35,6 +46,8 @@ find /path/to/start/dir -name .unwanted -exec rm -rf {} \;
 # Recursively remove executable permission from file with all permission
 find /path/to/start/dir -type f -perm 777 -exec chmod -x {} \;
 ```
+
+`Rename method`, it renames multiple files or folders with a specific regex pattern. One of the most useful scripts to have for media management.
 
 ```bash
 ~Rename Method

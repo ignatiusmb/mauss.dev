@@ -1,26 +1,53 @@
 <script>
   export let segment;
+  import Icon from './independent/Icon.svelte';
+  import Link from './independent/Link.svelte';
   import NavLink from './independent/NavLink.svelte';
   import ToggleTheme from './independent/ToggleTheme.svelte';
+  import NavGrid from './NavGrid.svelte';
 
   let scrolled, innerWidth;
-  $: scrolled = innerWidth < 600 ? true : scrolled;
+  let opened = false;
+  $: mobile = innerWidth < 600;
+  $: scrolled = mobile ? true : scrolled;
 </script>
 
 <svelte:window bind:scrollY={scrolled} bind:innerWidth />
 
 <nav class:scrolled>
-  <NavLink {segment} current={undefined}>max</NavLink>
-  <NavLink {segment} current={'about'}>about</NavLink>
-  <NavLink {segment} current={'curated'}>curated</NavLink>
-  <NavLink {segment} current={'posts'}>posts</NavLink>
-  <NavLink {segment} current={'reviews'}>reviews</NavLink>
-  <NavLink {segment} current={'uses'}>uses</NavLink>
+  {#if mobile}
+    <span on:click={() => (opened = !opened)} style="cursor:pointer">
+      <Icon name={opened ? 'close' : 'menu'} />
+    </span>
+  {/if}
 
+  <NavLink {segment} current={undefined} hover={false}>
+    <img src="favicon.ico" alt="Mauss" width="24" />
+  </NavLink>
+
+  {#if (!mobile && innerWidth !== undefined) || opened}
+    <NavGrid {mobile}>
+      <NavLink {segment} current="about">about</NavLink>
+      <NavLink {segment} current="curated">curated</NavLink>
+      <NavLink {segment} current="posts">posts</NavLink>
+      <NavLink {segment} current="reviews">reviews</NavLink>
+      <NavLink {segment} current="uses">uses</NavLink>
+    </NavGrid>
+  {/if}
+
+  <Link href="help" invert={false}>
+    <Icon name="help" />
+  </Link>
   <ToggleTheme />
 </nav>
 
 <style>
+  :global(html.dark) nav :global(a),
+  :global(html.dark) nav :global(a:focus),
+  :global(html.dark) nav :global(a:hover) {
+    color: var(--fg-color);
+  }
+
   nav {
     z-index: 3;
     width: 100%;
@@ -30,45 +57,33 @@
     flex-direction: row-reverse;
     align-items: center;
     padding: 0.8em 1em;
+    border-top: 0.25em solid #990000;
     font-family: var(--aqua-heading);
     background-color: var(--bg-color);
     transition: var(--transition-duration) var(--transition-function);
   }
-  nav.scrolled {
-    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.5);
-    transition: var(--transition-duration) var(--transition-function);
+
+  nav > :global(a[href='/']:not(:first-child)) {
+    padding: 0;
+    margin-left: auto;
+    margin-right: 1em;
   }
-  nav :global(:last-child) {
-    margin-right: auto;
-  }
-  nav :global(a:first-of-type) {
-    text-transform: uppercase;
-  }
-  nav :global(a:not(:first-of-type)) {
-    margin-right: 0.5em;
-  }
-  :global(html.dark) nav :global(a),
-  :global(html.dark) nav :global(a:focus),
-  :global(html.dark) nav :global(a:hover) {
-    color: var(--fg-color);
+  nav > :global(:nth-last-child(2)) {
+    margin-left: 1em;
+    margin-right: 1em;
   }
 
   @media only screen and (min-width: 600px) {
     nav {
-      position: sticky;
       top: 0;
+      position: sticky;
       flex-direction: row;
+      border-top: none;
     }
     nav.scrolled {
+      border: none;
       box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5);
-    }
-    nav :global(:last-child) {
-      margin-left: auto;
-      margin-right: unset;
-    }
-    nav :global(a:not(:first-of-type)) {
-      margin-right: unset;
-      margin-left: 0.5em;
+      transition: var(--transition-duration) var(--transition-function);
     }
   }
 </style>

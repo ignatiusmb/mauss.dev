@@ -1,13 +1,9 @@
 ---
 title: Uses
-updated: 2020-05-30
+updated: 2020-06-24
 ---
 
-I really make sure to take my time before settling with something, I would literally spend hours or even days researching for the best of this or that before truly settling on one. Because I don't frequently change my things, I want the best for the job before I stick to one.
-
-This page will serve as a living document and a place to see all of the things I've researched before so I don't have to spent a lot of time to redo my research again and just refer back to here. I also love to collect and track my stuffs so this will also act as my stuff's track record with its own history for my personal reminder as well.
-
-> Unless you have a good reason to, always prioritize **quality** over quantity/price
+> Unless there's a good argument, always prioritize **quality** over price, and rarely ever quantity
 
 This is the rule I've always look back to when looking for something. Living off of this really saves me in a lot of aspects. Always keep in mind that there's always a tradeoff when buying something, always.
 

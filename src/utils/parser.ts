@@ -1,5 +1,5 @@
 import { readdirSync, readFileSync } from 'fs';
-import { join } from 'path';
+import { join, sep } from 'path';
 import { createPrettyDate, sortCompare, splitAt } from './helper';
 import Aqua from '@ignatiusmb/aqua';
 const markIt = require('markdown-it')({
@@ -39,7 +39,8 @@ const countReadTime = (content: string) => {
 
 export const aquaMark = (content: string) => markIt.render(content);
 
-export function parseFile(filename: string, content: string, parseCallback: Function) {
+export function parseFile(filename: string, parseCallback: Function) {
+	const content = readFileSync(filename, 'utf-8');
 	const fmExpression = /---\r?\n([\s\S]+?)\r?\n---/;
 	const [rawData, metadata] = fmExpression.exec(content);
 	const frontMatter = metadata.split(/\r?\n/).reduce((acc, cur) => {
@@ -53,27 +54,22 @@ export function parseFile(filename: string, content: string, parseCallback: Func
 		return acc;
 	}, {});
 
-	const [cleanedFilename] = filename.split('/').slice(-1);
+	const [cleanedFilename] = filename.split(sep).slice(-1);
 	const article = content.slice(rawData.length + 1);
 	const result = parseCallback(frontMatter, article, cleanedFilename);
 
-	if (result.date && !result.updated) result.updated = result.date;
-	if (result.date) result['pretty-date'] = createPrettyDate(result.date);
-	if (result.updated) result['pretty-updated'] = createPrettyDate(result.updated);
+	if (result['date'] && !result['updated']) result['updated'] = result['date'];
+	if (result['date']) result['pretty-date'] = createPrettyDate(result['date']);
+	if (result['updated']) result['pretty-updated'] = createPrettyDate(result['updated']);
 
 	result['read-time'] = countReadTime(article);
-	result['content'] = aquaMark(result.content);
+	result['content'] = aquaMark(result['content']);
 	return result;
 }
 
 export function parseDir(dirname: string, fileParse: Function) {
-	const DIR = join(process.cwd(), dirname);
-	const FILTERED = readdirSync(DIR).filter((name) => {
-		return !name.startsWith('draft.') && name.endsWith('.md');
-	});
-
-	return FILTERED.map((filename) => {
-		const mdFile = readFileSync(join(DIR, filename), 'utf-8');
-		return parseFile(filename, mdFile, fileParse);
-	}).sort(sortCompare);
+	return readdirSync(dirname)
+		.filter((name) => !name.startsWith('draft.') && name.endsWith('.md'))
+		.map((filename) => parseFile(join(dirname, filename), fileParse))
+		.sort(sortCompare);
 }
