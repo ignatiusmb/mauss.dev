@@ -2,7 +2,7 @@
 title: Help
 ---
 
-Help page, brief explanation for each routes located in the navigation bar.
+Having trouble navigating through the page? Don't know what or where to look first? Read the brief explanation for each pages below, perhaps there's something for you in those pages.
 
 ## [About](about)
 

@@ -11,7 +11,7 @@
   import PostArticle from '../pages/PostArticle.svelte';
 </script>
 
-<MetaHead {post} canonical="help" title="help" description="Help page with explanation for each page in the website." />
+<MetaHead {post} canonical="help" title="Help" description="Help page with explanation for each page in the website." />
 
 <PostArticle {post} segment="content" filename="help.md">
   <Disclaimer link={true} />

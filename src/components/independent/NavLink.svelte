@@ -9,7 +9,7 @@
 </a>
 
 <style>
-  [aria-current]::after {
+  a[aria-current]::after {
     width: 100%;
     background-color: #990000;
   }
@@ -20,7 +20,7 @@
     color: var(--fg-color);
     text-transform: capitalize;
   }
-  a.hover::after {
+  .hover::after {
     content: '';
     position: absolute;
     right: 0;
@@ -32,8 +32,8 @@
     transition: width var(--transition-duration) ease;
     transform: translateY(100%);
   }
-  a.hover:hover::after,
-  a.hover:focus::after {
+  .hover:hover::after,
+  .hover:focus::after {
     left: 0;
     right: auto;
     width: 100%;

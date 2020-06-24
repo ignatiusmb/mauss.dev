@@ -78,6 +78,7 @@
       top: 0;
       position: sticky;
       flex-direction: row;
+      border-top: none;
     }
     nav.scrolled {
       border: none;
