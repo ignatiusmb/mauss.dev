@@ -1,9 +1,10 @@
 <script>
   export let segment, current;
+  export let hover = true;
   $: isCurrent = current => (segment === current ? 'page' : undefined);
 </script>
 
-<a rel="prefetch" aria-current={isCurrent(current)} href="/{current ? current : ''}">
+<a rel="prefetch" aria-current={isCurrent(current)} href="/{current ? current : ''}" class:hover>
   <slot />
 </a>
 
@@ -19,11 +20,7 @@
     color: var(--fg-color);
     text-transform: capitalize;
   }
-  a:hover,
-  a:focus {
-    color: var(--fg-color);
-  }
-  a::after {
+  a.hover::after {
     content: '';
     position: absolute;
     right: 0;
@@ -35,13 +32,10 @@
     transition: width var(--transition-duration) ease;
     transform: translateY(100%);
   }
-  a:hover::after,
-  a:focus::after {
+  a.hover:hover::after,
+  a.hover:focus::after {
     left: 0;
     right: auto;
     width: 100%;
-  }
-  a:visited {
-    color: inherit;
   }
 </style>
