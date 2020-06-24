@@ -98,6 +98,12 @@
       <path d="M18 9a9 9 0 0 1-9 9" />
     </symbol>
 
+    <symbol id="help" viewBox="0 00 24 24">
+      <circle cx="12" cy="12" r="10" />
+      <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+      <line x1="12" y1="17" x2="12.01" y2="17" />
+    </symbol>
+
     <symbol id="instagram" viewBox="0 00 24 24">
       <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
       <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
@@ -120,6 +126,15 @@
       <path d="M15 3H19A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H15" />
       <polyline points="10 17 15 12 10 7" />
       <line x1="15" y1="12" x2="3" y2="12" />
+    </symbol>
+
+    <symbol id="list" viewBox="0 00 24 24">
+      <line x1="8" y1="6" x2="21" y2="6" />
+      <line x1="8" y1="12" x2="21" y2="12" />
+      <line x1="8" y1="18" x2="21" y2="18" />
+      <line x1="3" y1="6" x2="3.01" y2="6" />
+      <line x1="3" y1="12" x2="3.01" y2="12" />
+      <line x1="3" y1="18" x2="3.01" y2="18" />
     </symbol>
 
     <symbol id="maximize" viewBox="0 00 24 24">

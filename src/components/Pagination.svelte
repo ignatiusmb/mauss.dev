@@ -2,9 +2,8 @@
   export let store, total, bound;
   import Icon from './independent/Icon.svelte';
   function handleIndexing(index) {
-    if (index < 0) return;
     index = Math.round(index);
-    if (index > $store && curr + bound > total) return;
+    if (index < 0 || (index > $store && curr + bound > total)) return;
     $store = index;
   }
   $: curr = $store * bound;

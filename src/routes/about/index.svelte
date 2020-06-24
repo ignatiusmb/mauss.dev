@@ -1,5 +1,5 @@
 <script context="module">
-  export async function preload({ params }) {
+  export async function preload() {
     const articles = await this.fetch('about.json').then(r => r.json());
     return { post: articles['index'], sections: Object.keys(articles).filter(e => e !== 'index') };
   }
