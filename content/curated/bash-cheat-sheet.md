@@ -1,6 +1,5 @@
 ---
 title: Complete Bash Utility Cheat Sheet
-date: 2020-06-04
 updated: 2020-06-23
 ---
 
