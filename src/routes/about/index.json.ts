@@ -1,8 +1,7 @@
 import { parseDir } from '../../utils/parser';
 
 export function get(req, res) {
-	const DIR = 'content/about';
-	const articles = parseDir(DIR, (data, content, filename) => {
+	const articles = parseDir('content/about', (data, content, filename) => {
 		const [slug] = filename.split('.');
 		return { slug, ...data, content };
 	}).reduce((acc, cur) => {

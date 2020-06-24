@@ -1,4 +1,3 @@
-import { readFileSync } from 'fs';
 import { parseFile, aquaMark } from '../../../utils/parser';
 
 const parseSpoilers = (content: string, seasonIndex: number) => {
@@ -15,10 +14,7 @@ const parseSpoilers = (content: string, seasonIndex: number) => {
 
 export function get(req, res) {
 	const { category, slug } = req.params;
-	const filepath = `content/reviews/${category}/${slug}.md`;
-	const rawContent = readFileSync(filepath, 'utf-8');
-
-	const post = parseFile(filepath, rawContent, (data: object, content: string, filename) => {
+	const post = parseFile(`content/reviews/${category}/${slug}.md`, (data, content, filename) => {
 		data['slug'] = filename.split('.')[0];
 		data['category'] = category;
 

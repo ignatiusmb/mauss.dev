@@ -1,10 +1,7 @@
-import { readFileSync } from 'fs';
 import { parseFile } from '../utils/parser';
 
 export function get(req, res) {
-	const filepath = 'content/uses.md';
-	const rawContent = readFileSync(filepath, 'utf-8');
-	const article = parseFile(filepath, rawContent, (data, content) => {
+	const article = parseFile('content/uses.md', (data, content) => {
 		return { ...data, content };
 	});
 
