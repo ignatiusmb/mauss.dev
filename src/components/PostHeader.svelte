@@ -51,14 +51,11 @@
   }
   small:first-of-type :not(:last-child)::after {
     content: '~';
-    margin-left: 0.5em;
+    margin: 0 0.5em;
     color: crimson;
     font-weight: bolder;
   }
   small > :global(span) {
     margin-bottom: 0.25em;
-  }
-  small > :global(span:not(:first-child)) {
-    margin-left: 0.5em;
   }
 </style>
