@@ -1,9 +1,9 @@
 ---
-title: Yosuga no Sora: In solitude, where we are least alone
+title: Yosuga no Sora
 year: 2010
 finished: 2020-06-06
 date: 2020-06-18
-updated: 2020-06-22
+updated: 2020-06-25
 genres: drama, romance, tsundere, ecchi, harem
 rating: 4,7,10,5
 verdict: 0
@@ -212,6 +212,20 @@ If you're still complaining only about the incest here, then you should've stop 
 ## Breakdown
 
 We got to see what happens to each girls on 4 different stories. We also learned that just because someone's not saying anything doesn't mean it's going well on their side. We saw Haruka resolves Kazuha's problems on the first arc, but then we learned that Akira is having her own problems on the second arc. It's just like in real life, just because we don't see it doesn't mean it's not there.
+
+### How they end up loving each other romantically
+
+I think the first step of romantically loving someone else is to know your relationship with them. We knew our relationship with our siblings as early as when we were born. We also know our boundaries with them by living closely together everyday. All the things missing from the Kasugano twins.
+
+As we knew from Haru, Sora is a sickly girl that spent most of her life in the hospital, away from society and outside Haru's range. She didn't spent much time with her brother and doesn't really care about the society's opinion since she mostly lives on her own world.
+
+Ever since childhood, they didn't get to see each other and their relation grew farther as a sibling. Coming back from the hospital, Haru started seeing Sora more as a girl and not his sister, it must've applied to Sora the same way it did to Haru, she especially felt her love for Haru grew when they first kissed as a child.
+
+Sora, as a consequence of not having a lot of interactions with her surroundings, doesn't really care about the society and didn't really understand why incestuous relationship is considered taboo. Hence, she loves Haru from the deepest part of her heart without caring what the others think about her.
+
+Haru, on the other hand, still maintains a healthy relationship with his surroundings, especially his friends. But, his conflicted feelings about having intimate relationship with his own twin sister results in his uncertainty about living his life, what's considered normal and how society will perceives them.
+
+Haru clearly shows some distressed face after getting caught by their friends, but Sora didn't have and didn't care about any of that.
 
 ### Sora's ending explanation
 
