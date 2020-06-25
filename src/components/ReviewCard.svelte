@@ -12,6 +12,7 @@
 <article on:mouseenter={() => (show = true)} on:mouseleave={() => (show = false)}>
   <img src={post.image} alt={post.title} />
   <CardOverlay {show}>
+    <h3>{post.year}</h3>
     <h3>{post.title}</h3>
   </CardOverlay>
 </article>
