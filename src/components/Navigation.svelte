@@ -6,8 +6,10 @@
   import ToggleTheme from './independent/ToggleTheme.svelte';
   import NavGrid from './NavGrid.svelte';
 
+  import { stores } from '@sapper/app';
+  const { preloading } = stores();
   let scrolled, innerWidth;
-  let opened = false;
+  $: opened = $preloading ? false : opened;
   $: mobile = innerWidth < 600;
   $: scrolled = mobile ? true : scrolled;
 </script>
