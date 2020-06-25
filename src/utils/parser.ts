@@ -1,5 +1,5 @@
+import { join } from 'path';
 import { readdirSync, readFileSync } from 'fs';
-import { join, sep } from 'path';
 import { createPrettyDate, sortCompare, splitAt } from './helper';
 import Aqua from '@ignatiusmb/aqua';
 const markIt = require('markdown-it')({
@@ -54,7 +54,7 @@ export function parseFile(filename: string, parseCallback: Function) {
 		return acc;
 	}, {});
 
-	const [cleanedFilename] = filename.split(sep).slice(-1);
+	const [cleanedFilename] = filename.split(/[\/\\]/).slice(-1);
 	const article = content.slice(rawData.length + 1);
 	const result = parseCallback(frontMatter, article, cleanedFilename);
 
