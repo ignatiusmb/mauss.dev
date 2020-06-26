@@ -25,7 +25,7 @@
     justify-content: center;
     border-radius: 50%;
     font-size: 1.5em;
-    color: var(--aqua-primary);
+    color: #990000;
     background-color: rgba(0, 0, 0, 0.25);
     transform: translate(-50%, 100%);
     transition: transform var(--transition-duration);
