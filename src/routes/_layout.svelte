@@ -10,13 +10,17 @@
   import '../styles/theme.css';
   import '../styles/blog.css';
   import '../styles/animation.css';
+
+  let innerWidth;
+  $: mobile = innerWidth < 600;
 </script>
 
+<svelte:window bind:innerWidth />
 <Icons />
 
-<Navigation {segment} />
+<Navigation {segment} {mobile} />
 <slot />
-<Footer />
+<Footer {mobile} />
 
 <ScrollTop />
 
