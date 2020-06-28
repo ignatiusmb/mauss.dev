@@ -19,7 +19,7 @@
   div.mobile {
     width: 100%;
     position: absolute;
-    top: 0;
+    top: 1px;
     right: 0;
     gap: 1em;
     grid-template-columns: 1fr;
