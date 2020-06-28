@@ -1,10 +1,10 @@
 <script context="module">
   export async function preload() {
-    const data = await this.fetch('posts.json').then(r => r.json());
-    const tags = data.flatMap(p => p.tags);
+    const data = await this.fetch('posts.json').then((r) => r.json());
+    const tags = data.flatMap((p) => p.tags);
     const unique = {
       categories: data.reduce((a, c) => (a.includes(c.tags[0]) ? a : [...a, c.tags[0]]), []).sort(),
-      tags: tags.reduce((a, c) => (a.includes(c) ? a : c ? [...a, c] : a), []).sort()
+      tags: tags.reduce((a, c) => (a.includes(c) ? a : c ? [...a, c] : a), []).sort(),
     };
     return { data, unique };
   }
@@ -12,13 +12,14 @@
 
 <script>
   export let data, unique;
+  import Center from '../../components/independent/Center.svelte';
   import MetaHead from '../../components/MetaHead.svelte';
   import Searchbar from '../../components/Searchbar.svelte';
   import FilterGrid from '../../components/FilterGrid.svelte';
   import Pagination from '../../components/Pagination.svelte';
   import PostCard from '../../components/PostCard.svelte';
 
-  import { pSlice } from '../../stores';
+  import { mobile, pSlice } from '../../stores';
   const bound = 6;
   const duration = 100;
   import { flip } from 'svelte/animate';
@@ -33,9 +34,9 @@
     for (const key in filters) {
       if (!filters[key].length) continue;
       if (key === 'tags') {
-        filtered = filtered.filter(p => p.tags.filter(g => filters.tags.includes(g)).length);
+        filtered = filtered.filter((p) => p.tags.filter((g) => filters.tags.includes(g)).length);
       } else if (key === 'categories') {
-        filtered = filtered.filter(p => filters.categories.includes(p.tags[0]));
+        filtered = filtered.filter((p) => filters.categories.includes(p.tags[0]));
       } else {
         if (filters[key] === 'published') {
           filtered = filtered.sort(sortCompare);
@@ -55,7 +56,7 @@
 <MetaHead canonical="posts" title="Posts" description="Get the latest most recent posts here." />
 
 <header>
-  <h1>Recent Posts</h1>
+  <h1>Posts by Mauss</h1>
   <Searchbar bind:query on:filter={() => (show = !show)} />
   <FilterGrid {show} {unique} bind:filters>
     <section>
@@ -87,6 +88,12 @@
     </section>
   {/each}
 </main>
+
+{#if $mobile}
+  <Center>
+    <Pagination store={pSlice} {total} {bound} />
+  </Center>
+{/if}
 
 <style>
   header,
