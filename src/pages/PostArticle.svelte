@@ -1,19 +1,29 @@
 <script>
+  export let header = true;
   export let post = null;
   export let segment = null;
   export let filename = null;
   export let showEdit = false;
   export let siblings = null;
-  import PostHeader from '../components/PostHeader.svelte';
   import LinkExt from '../components/independent/LinkExt.svelte';
   import Edit from '../components/Edit.svelte';
+  import PostHeader from '../components/PostHeader.svelte';
+  import ScrollProgress from '../components/ScrollProgress.svelte';
   import Siblings from '../components/Siblings.svelte';
 </script>
 
+{#if header}
+  <ScrollProgress />
+{/if}
+
 <article>
-  <PostHeader {post} {segment} {filename}>
+  {#if header}
+    <PostHeader {post} {segment} {filename}>
+      <slot name="header" />
+    </PostHeader>
+  {:else}
     <slot name="header" />
-  </PostHeader>
+  {/if}
 
   <slot />
 

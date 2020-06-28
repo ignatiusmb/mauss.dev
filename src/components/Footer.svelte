@@ -1,11 +1,25 @@
 <script>
+  export let mobile;
   import Icon from './independent/Icon.svelte';
   import LinkExt from './independent/LinkExt.svelte';
-  const size = 30;
+  $: size = mobile ? 20 : 30;
 </script>
 
 <footer>
   <slot />
+
+  <section>
+    <p>Absolutely no cookies or trackers, without analytics and nothing to track you.</p>
+    <p>If you like this, consider leaving some nice comments on my socials down below ツ</p>
+  </section>
+
+  <section>
+    <p>
+      You could also consider
+      <LinkExt href="https://www.buymeacoffee.com/mauss">supporting me</LinkExt>
+      if you want to. I would definitely appreciate it either way.
+    </p>
+  </section>
 
   <section class="social-links">
     <LinkExt href="https://www.facebook.com/ignatiusmb" label="facebook profile">
@@ -50,22 +64,24 @@
 
 <style>
   footer {
+    max-width: 53em;
     position: relative;
-    padding: 3em 0;
-    margin: auto 0 3em;
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: 1fr;
+    padding: 3em 1em;
+    margin: 0 auto 3em;
     text-align: center;
-  }
-  footer :global(.repository) {
-    font-size: 2rem;
+    font-family: var(--aqua-monospace);
+    font-size: clamp(0.8em, 3vw, 1em);
   }
   .social-links {
-    max-width: 18em;
+    width: 100%;
     display: grid;
     gap: 0.25em;
     grid-template-columns: repeat(auto-fit, minmax(0.75em, 1fr));
-    padding: 0.8em 0.5em 0.6em;
+    padding: 1em 0 0.5em;
     margin: auto;
-    font-size: 2rem;
   }
   .social-links :global(a),
   .social-links :global(a:visited) {
@@ -92,12 +108,5 @@
     grid-template-rows: repeat(2, 1fr);
     place-items: center;
     gap: 0.5em;
-    font-family: var(--aqua-monospace);
-  }
-
-  @media only screen and (min-width: 480px) {
-    .social-links {
-      font-size: 2.5rem;
-    }
   }
 </style>

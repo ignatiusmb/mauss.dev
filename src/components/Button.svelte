@@ -4,7 +4,7 @@
 </script>
 
 <span>
-  <Link {href}>
+  <Link {href} invert={false}>
     <slot />
   </Link>
 </span>
@@ -25,8 +25,5 @@
   }
   span :global(a) {
     padding: 0.5em 1em;
-  }
-  span :global(a:hover) {
-    filter: none;
   }
 </style>

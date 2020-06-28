@@ -17,20 +17,32 @@
 
 <PostArticle {post} segment="content" filename="about/index.md">
   <section>
-    {@html post.content}
+    {#each sections as section}
+      <Link href="about/{section}" inherit={false} invert={false}>
+        <h2>{capitalize(section)}</h2>
+      </Link>
+    {/each}
   </section>
 
   <section>
-    {#each sections as section}
-      <Link href="about/{section}">
-        <h2>About - {capitalize(section)}</h2>
-      </Link>
-    {/each}
+    {@html post.content}
   </section>
 </PostArticle>
 
 <style>
-  section:last-child h2 {
+  section:first-of-type {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: row;
+    border: 0.1em solid var(--fg-color);
+    border-radius: 0.15em;
+  }
+  section:first-of-type :global(a) {
+    padding: 0 0.5em;
+    border: 0.1em solid var(--fg-color);
+  }
+  section:first-of-type h2 {
+    margin-top: 0;
     text-align: center;
   }
 </style>

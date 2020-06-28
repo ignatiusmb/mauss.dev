@@ -34,7 +34,7 @@
   div.mobile :global(a) {
     width: 100%;
     padding: 0.5em 0;
-    border: 1px dashed var(--bg-inverse);
+    border: 0.15em dashed var(--bg-inverse);
     border-radius: 0.25em;
   }
   div.mobile :global(a::after) {

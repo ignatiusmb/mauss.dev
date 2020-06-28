@@ -9,6 +9,7 @@
 
 <script>
   export let section, post;
+  import Link from '../../components/independent/Link.svelte';
   import MetaHead from '../../components/MetaHead.svelte';
   import PostArticle from '../../pages/PostArticle.svelte';
   import { capitalize } from '../../utils/helper';
@@ -22,6 +23,25 @@
 
 <PostArticle {post} segment="content" filename="about/{section}.md">
   <section>
+    <Link href="about" inherit={false} invert={false}>
+      <h2>About</h2>
+    </Link>
+  </section>
+
+  <section>
     {@html post.content}
   </section>
 </PostArticle>
+
+<style>
+  section:first-of-type {
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 0.15em solid var(--fg-color);
+    border-radius: 0.15em;
+  }
+  section:first-of-type h2 {
+    margin-top: 0;
+    text-align: center;
+  }
+</style>

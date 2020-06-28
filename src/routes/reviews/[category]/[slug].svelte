@@ -22,7 +22,7 @@
   export let post;
   import MetaHead from '../../../components/MetaHead.svelte';
   import Disclaimer from '../../../components/Disclaimer.svelte';
-  import TabSection from '../../../components/TabSection.svelte';
+  import ReviewsTab from '../../../components/ReviewsTab.svelte';
   import Spoilers from '../../../components/SpoilerSection.svelte';
   import PostArticle from '../../../pages/PostArticle.svelte';
   const segment = `content/reviews/${post.category}`;
@@ -46,7 +46,7 @@
   </section>
 
   {#if post.seasons}
-    <TabSection seasons={post.seasons} />
+    <ReviewsTab seasons={post.seasons} />
   {:else if post.spoilers}
     <Spoilers spoilers={post.spoilers} />
   {/if}

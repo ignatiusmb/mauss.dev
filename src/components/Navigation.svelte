@@ -1,18 +1,19 @@
 <script>
-  export let segment;
+  export let segment, mobile;
   import Icon from './independent/Icon.svelte';
   import Link from './independent/Link.svelte';
   import NavLink from './independent/NavLink.svelte';
   import ToggleTheme from './independent/ToggleTheme.svelte';
   import NavGrid from './NavGrid.svelte';
 
-  let scrolled, innerWidth;
-  let opened = false;
-  $: mobile = innerWidth < 600;
+  import { stores } from '@sapper/app';
+  const { preloading } = stores();
+  let scrolled;
+  $: opened = $preloading ? false : opened;
   $: scrolled = mobile ? true : scrolled;
 </script>
 
-<svelte:window bind:scrollY={scrolled} bind:innerWidth />
+<svelte:window bind:scrollY={scrolled} />
 
 <nav class:scrolled>
   {#if mobile}
@@ -25,7 +26,7 @@
     <img src="favicon.ico" alt="Mauss" width="24" />
   </NavLink>
 
-  {#if (!mobile && innerWidth !== undefined) || opened}
+  {#if !mobile || opened}
     <NavGrid {mobile}>
       <NavLink {segment} current="about">about</NavLink>
       <NavLink {segment} current="curated">curated</NavLink>
