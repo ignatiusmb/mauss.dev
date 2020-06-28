@@ -37,7 +37,7 @@
   section:first-of-type {
     display: grid;
     grid-template-columns: 1fr;
-    border: 0.15em solid var(--fg-color);
+    border: 0.2em solid var(--fg-color);
     border-radius: 0.15em;
   }
   section:first-of-type h2 {
