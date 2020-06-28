@@ -10,9 +10,7 @@
 
     data['curated'] = data['curated'].sort((x, y) => compareDate(x.updated, y.updated));
     data['reviews'] = data['reviews'].filter(p => p.rating && p.verdict);
-    for (const key in data) {
-      data[key] = Array.isArray(data[key]) ? data[key].slice(0, 4) : data[key];
-    }
+    for (const key in data) if (Array.isArray(data[key])) data[key] = data[key].slice(0, 4);
 
     return { data };
   }
