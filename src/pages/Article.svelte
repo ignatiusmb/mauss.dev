@@ -5,22 +5,23 @@
   export let filename = null;
   export let showEdit = false;
   export let siblings = null;
-  import LinkExt from '../components/independent/LinkExt.svelte';
+  import Header from './Header.svelte';
+  import Link from '../svelte/Link.svelte';
+  import Progressbar from '../svelte/Progressbar.svelte';
+
   import Edit from '../components/Edit.svelte';
-  import PostHeader from '../components/PostHeader.svelte';
-  import ScrollProgress from '../components/ScrollProgress.svelte';
   import Siblings from '../components/Siblings.svelte';
 </script>
 
 {#if header}
-  <ScrollProgress />
+  <Progressbar />
 {/if}
 
 <article>
   {#if header}
-    <PostHeader {post} {segment} {filename}>
+    <Header {post} {segment} {filename}>
       <slot name="header" />
-    </PostHeader>
+    </Header>
   {:else}
     <slot name="header" />
   {/if}
@@ -32,9 +33,9 @@
       <p>Find an issue with this post? Have something to add, update, or clarify? All my posts here are editable.</p>
       <p>
         Just create a new
-        <LinkExt href="https://github.com/ignatiusmb/mauss/issues">Issue</LinkExt>
+        <Link href="https://github.com/ignatiusmb/mauss/issues">Issue</Link>
         or
-        <LinkExt href="https://github.com/ignatiusmb/mauss/pulls">PR</LinkExt>
+        <Link href="https://github.com/ignatiusmb/mauss/pulls">PR</Link>
         on GitHub, any fix or addition is much appreciated!
         <Edit {segment} {filename} />
       </p>
@@ -84,7 +85,8 @@
     border: 0.5em solid var(--bg-color-secondary);
     border-radius: 0.25em;
   }
-  article :global(img[src^="https://"]) {
+  article :global(img[src^="https://"])
+  {
     padding: 0.5em;
     border: none;
     border-radius: 1em;

@@ -2,7 +2,7 @@
   export let segment = null;
   export let filename = null;
   export let post;
-  import Edit from './Edit.svelte';
+  import Edit from '../components/Edit.svelte';
   import { lastWords } from '../utils/helper';
 </script>
 
