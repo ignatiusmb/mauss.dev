@@ -31,7 +31,6 @@
     width: 100%;
     max-width: 32em;
     display: flex;
-    align-items: center;
   }
   section span {
     cursor: pointer;

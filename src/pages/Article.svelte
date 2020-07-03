@@ -7,10 +7,9 @@
   export let siblings = null;
   import Header from './Header.svelte';
   import Link from '../svelte/Link.svelte';
+  import Edit from '../svelte/Edit.svelte';
+  import Siblings from '../svelte/Siblings.svelte';
   import Progressbar from '../svelte/Progressbar.svelte';
-
-  import Edit from '../components/Edit.svelte';
-  import Siblings from '../components/Siblings.svelte';
 </script>
 
 {#if header}

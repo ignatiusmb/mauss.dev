@@ -8,8 +8,8 @@
 
 <script>
   export let post;
-  import MetaHead from '../../components/MetaHead.svelte';
-  import PostArticle from '../../pages/PostArticle.svelte';
+  import MetaHead from '../../pages/MetaHead.svelte';
+  import Article from '../../pages/Article.svelte';
   const segment = 'content/curated';
   $: canonical = `curated/${post.slug}`;
   $: filename = `${post.slug}.md`;
@@ -17,8 +17,8 @@
 
 <MetaHead {post} {canonical} title={post.title} description={post.description} />
 
-<PostArticle {post} {segment} {filename} showEdit={true}>
+<Article {post} {segment} {filename} showEdit={true}>
   <section>
     {@html post.content}
   </section>
-</PostArticle>
+</Article>

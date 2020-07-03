@@ -1,7 +1,7 @@
 <script context="module">
   export async function preload({ params }) {
     const { section } = params;
-    const articles = await this.fetch('about.json').then(r => r.json());
+    const articles = await this.fetch('about.json').then((r) => r.json());
     if (!articles[section]) return this.error(404, 'Section not found');
     return { section, post: articles[section] };
   }
@@ -9,9 +9,9 @@
 
 <script>
   export let section, post;
-  import Link from '../../components/independent/Link.svelte';
-  import MetaHead from '../../components/MetaHead.svelte';
-  import PostArticle from '../../pages/PostArticle.svelte';
+  import MetaHead from '../../pages/MetaHead.svelte';
+  import Article from '../../pages/Article.svelte';
+  import Link from '../../svelte/Link.svelte';
   import { capitalize } from '../../utils/helper';
 </script>
 
@@ -21,7 +21,7 @@
   title="About - {capitalize(section)}"
   description="Get to know Ignatius Bagussuputra from his About page." />
 
-<PostArticle {post} segment="content" filename="about/{section}.md">
+<Article {post} segment="content" filename="about/{section}.md">
   <section>
     <Link href="about" inherit={false} invert={false}>
       <h2>About</h2>
@@ -31,12 +31,10 @@
   <section>
     {@html post.content}
   </section>
-</PostArticle>
+</Article>
 
 <style>
   section:first-of-type {
-    display: grid;
-    grid-template-columns: 1fr;
     border: 0.2em solid var(--fg-color);
     border-radius: 0.15em;
   }

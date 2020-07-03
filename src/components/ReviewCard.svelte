@@ -1,11 +1,12 @@
 <script>
   export let post;
-  import Verdict from './independent/Verdict.svelte';
+  import Verdict from '../svelte/Verdict.svelte';
+  import ButtonLink from '../svelte/ButtonLink.svelte';
+
   import CardOverlay from './CardOverlay.svelte';
-  import Button from './Button.svelte';
-  import ButtonDisabled from './ButtonDisabled.svelte';
   import { capitalize } from '../utils/helper';
   const verdict = parseInt(post.verdict);
+  const disabled = !post.rating || !post.verdict;
   let show = false;
 </script>
 
@@ -24,11 +25,7 @@
   <small>
     <Verdict {verdict} />
   </small>
-  {#if post.rating && post.verdict}
-    <Button href="reviews/{post.slug}">read</Button>
-  {:else}
-    <ButtonDisabled>Work-in-Progress</ButtonDisabled>
-  {/if}
+  <ButtonLink href="reviews/{post.slug}" {disabled}>{disabled ? 'Work-in-Progress' : 'read'}</ButtonLink>
 </aside>
 
 <style>
@@ -51,7 +48,6 @@
   aside {
     display: grid;
     gap: 0.5em;
-    grid-template-columns: 1fr;
     padding: 0.5em;
     text-align: center;
   }

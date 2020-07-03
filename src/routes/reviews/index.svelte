@@ -13,11 +13,12 @@
 
 <script>
   export let data, unique;
-  import Center from '../../components/independent/Center.svelte';
-  import MetaHead from '../../components/MetaHead.svelte';
-  import Searchbar from '../../components/Searchbar.svelte';
+  import MetaHead from '../../pages/MetaHead.svelte';
+  import Centered from '../../pages/Centered.svelte';
+  import Searchbar from '../../svelte/Searchbar.svelte';
+  import Pagination from '../../svelte/Pagination.svelte';
+
   import FilterGrid from '../../components/FilterGrid.svelte';
-  import Pagination from '../../components/Pagination.svelte';
   import ReviewCard from '../../components/ReviewCard.svelte';
 
   import { mobile, rSlice } from '../../stores';
@@ -127,9 +128,9 @@
 </main>
 
 {#if $mobile}
-  <Center>
+  <Centered>
     <Pagination store={rSlice} {total} {bound} />
-  </Center>
+  </Centered>
 {/if}
 
 <style>

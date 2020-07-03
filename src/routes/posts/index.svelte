@@ -12,11 +12,12 @@
 
 <script>
   export let data, unique;
-  import Center from '../../components/independent/Center.svelte';
-  import MetaHead from '../../components/MetaHead.svelte';
-  import Searchbar from '../../components/Searchbar.svelte';
+  import MetaHead from '../../pages/MetaHead.svelte';
+  import Centered from '../../pages/Centered.svelte';
+  import Searchbar from '../../svelte/Searchbar.svelte';
+  import Pagination from '../../svelte/Pagination.svelte';
+
   import FilterGrid from '../../components/FilterGrid.svelte';
-  import Pagination from '../../components/Pagination.svelte';
   import PostCard from '../../components/PostCard.svelte';
 
   import { mobile, pSlice } from '../../stores';
@@ -90,9 +91,9 @@
 </main>
 
 {#if $mobile}
-  <Center>
+  <Centered>
     <Pagination store={pSlice} {total} {bound} />
-  </Center>
+  </Centered>
 {/if}
 
 <style>
@@ -125,7 +126,7 @@
   main {
     display: grid;
     gap: 1em;
-    grid-template-columns: repeat(auto-fill, minmax(18em, 26em));
+    grid-template-columns: repeat(auto-fill, minmax(auto, 26em));
     justify-content: center;
     margin: 0 auto;
   }

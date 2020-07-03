@@ -22,7 +22,6 @@
     top: 1px;
     right: 0;
     gap: 1em;
-    grid-template-columns: 1fr;
     grid-auto-flow: row;
     padding: 1em;
     margin: 0;
