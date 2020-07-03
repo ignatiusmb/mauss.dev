@@ -1,5 +1,5 @@
 <script>
-  import Icon from './independent/Icon.svelte';
+  import Icon from './Icon.svelte';
   import { onMount } from 'svelte';
   let y, mounted;
   onMount(() => (mounted = true));
