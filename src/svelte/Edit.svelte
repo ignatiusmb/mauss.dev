@@ -6,7 +6,7 @@
 </script>
 
 <span>
-  <Link href="{link}/{segment}/{filename}">
+  <Link href="{link}/{segment}/{filename}" inherit={false}>
     Edit
     <Icon name="edit" size={15} />
   </Link>
