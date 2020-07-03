@@ -1,15 +1,15 @@
 <script>
   export let segment, filename;
-  import LinkExt from './independent/LinkExt.svelte';
-  import Icon from './independent/Icon.svelte';
-  let link = 'https://github.com/ignatiusmb/mauss/edit/master';
+  import Link from './Link.svelte';
+  import Icon from './Icon.svelte';
+  const link = 'https://github.com/ignatiusmb/mauss/edit/master';
 </script>
 
 <span>
-  <LinkExt href="{link}/{segment}/{filename}">
+  <Link href="{link}/{segment}/{filename}">
     Edit
     <Icon name="edit" size={15} />
-  </LinkExt>
+  </Link>
 </span>
 
 <style>
