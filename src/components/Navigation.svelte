@@ -1,9 +1,9 @@
 <script>
-  export let segment, mobile;
-  import Icon from './independent/Icon.svelte';
-  import Link from './independent/Link.svelte';
-  import NavLink from './independent/NavLink.svelte';
-  import ToggleTheme from './independent/ToggleTheme.svelte';
+  export let mobile;
+  import Icon from '../svelte/Icon.svelte';
+  import Link from '../svelte/Link.svelte';
+  import NavLink from '../svelte/NavLink.svelte';
+  import ToggleTheme from '../svelte/ToggleTheme.svelte';
   import NavGrid from './NavGrid.svelte';
 
   import { stores } from '@sapper/app';
@@ -22,17 +22,17 @@
     </span>
   {/if}
 
-  <NavLink {segment} current={undefined} hover={false}>
+  <NavLink to={undefined} hover={false}>
     <img src="favicon.ico" alt="Mauss" width="24" />
   </NavLink>
 
   {#if !mobile || opened}
     <NavGrid {mobile}>
-      <NavLink {segment} current="about">about</NavLink>
-      <NavLink {segment} current="curated">curated</NavLink>
-      <NavLink {segment} current="posts">posts</NavLink>
-      <NavLink {segment} current="reviews">reviews</NavLink>
-      <NavLink {segment} current="uses">uses</NavLink>
+      <NavLink to="about">about</NavLink>
+      <NavLink to="curated">curated</NavLink>
+      <NavLink to="posts">posts</NavLink>
+      <NavLink to="reviews">reviews</NavLink>
+      <NavLink to="uses">uses</NavLink>
     </NavGrid>
   {/if}
 

@@ -1,9 +1,9 @@
 <script>
-  export let segment;
-  import Icons from '../components/independent/Icons.svelte';
+  import IconList from '../svelte/IconList.svelte';
+  import ScrollTop from '../svelte/ScrollTop.svelte';
+
   import Navigation from '../components/Navigation.svelte';
   import Footer from '../components/Footer.svelte';
-  import ScrollTop from '../components/ScrollTop.svelte';
 
   import '@ignatiusmb/aqua/lib/aqua.min.css';
   import '../styles/fonts.css';
@@ -17,13 +17,12 @@
 </script>
 
 <svelte:window bind:innerWidth />
-<Icons />
+<IconList />
+<ScrollTop />
 
-<Navigation {segment} mobile={$mobile} />
+<Navigation mobile={$mobile} />
 <slot />
 <Footer mobile={$mobile} />
-
-<ScrollTop />
 
 <style>
   :global(#sapper) {
