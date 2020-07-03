@@ -46,7 +46,7 @@ section.info-box p {
 section.info-box[data-info='objective'],
 section.info-box#objective {
 	position: relative;
-	border-top: 3.5em solid;
+	border-top: clamp(2.5em, 9vw, 3.5em) solid;
 	border-right: 5px solid;
 	border-bottom: 5px solid;
 	border-color: rgba(40, 10, 100, 0.4);
@@ -59,7 +59,7 @@ section.info-box#objective h3 {
 	width: 100%;
 	top: 0;
 	left: 0;
-	transform: translate(0, -125%);
+	transform: translateY(-125%);
 	text-align: center;
 }
 section.info-box[data-info='objective'] h4,
