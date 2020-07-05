@@ -40,7 +40,7 @@
   }
   aside small:not(:last-of-type)::after {
     content: '•';
-    color: crimson;
+    color: var(--mauss-secondary);
     margin-left: 0.5em;
   }
 

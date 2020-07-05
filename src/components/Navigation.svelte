@@ -58,7 +58,7 @@
     flex-direction: row-reverse;
     align-items: center;
     padding: 0.8em 1em;
-    border-top: 0.25em solid #990000;
+    border-top: 0.25em solid var(--mauss-primary);
     font-family: var(--aqua-heading);
     background-color: var(--bg-color);
     transition: var(--transition-duration) var(--transition-function);

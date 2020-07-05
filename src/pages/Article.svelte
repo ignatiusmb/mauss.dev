@@ -64,7 +64,7 @@
   }
   section {
     padding: 0.4em 0.8em;
-    border-left: 2px solid crimson;
+    border-left: 2px solid var(--mauss-secondary);
     background-color: rgba(0, 0, 0, 0.05);
   }
   article :global(section > :first-child) {

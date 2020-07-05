@@ -52,7 +52,7 @@
   small:first-of-type :not(:last-child)::after {
     content: '~';
     margin: 0 0.5em;
-    color: crimson;
+    color: var(--mauss-secondary);
     font-weight: bolder;
   }
   small > :global(span) {

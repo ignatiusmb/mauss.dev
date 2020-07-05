@@ -25,7 +25,7 @@
     grid-auto-flow: row;
     padding: 1em;
     margin: 0;
-    border-top: 0.25em solid #990000;
+    border-top: 0.25em solid var(--mauss-primary);
     transform: translateY(-100%);
     background-color: var(--bg-color);
     text-align: center;
@@ -40,6 +40,6 @@
     content: none;
   }
   div.mobile :global(a[aria-current]) {
-    border: 0.15em solid #990000;
+    border: 0.15em solid var(--mauss-primary);
   }
 </style>

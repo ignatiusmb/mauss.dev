@@ -1,4 +1,7 @@
 :root {
+	--mauss-primary: #990000;
+	--mauss-secondary: crimson;
+
 	--transition-duration: 200ms;
 	--transition-function: cubic-bezier(0.4, 0, 0.2, 1);
 }

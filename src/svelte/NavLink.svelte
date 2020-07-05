@@ -16,7 +16,7 @@
 <style>
   a[aria-current]::after {
     width: 100%;
-    background-color: #990000;
+    background-color: var(--mauss-primary);
   }
 
   a {
@@ -33,7 +33,7 @@
     width: 0;
     height: 0.25em;
     border-radius: 0.8em;
-    background-color: crimson;
+    background-color: var(--mauss-secondary);
     transition: width var(--transition-duration) ease;
     transform: translateY(100%);
   }
