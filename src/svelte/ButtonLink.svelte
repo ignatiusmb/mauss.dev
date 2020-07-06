@@ -5,7 +5,7 @@
 </script>
 
 <span class:disabled>
-  <Link href={!disabled ? href : ''} invert={false}>
+  <Link href={!disabled ? href : ''} inherit>
     <slot />
   </Link>
 </span>

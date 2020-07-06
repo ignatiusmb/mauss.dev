@@ -36,7 +36,7 @@
     </NavGrid>
   {/if}
 
-  <Link href="help" invert={false}>
+  <Link href="help">
     <Icon name="help" />
   </Link>
   <ToggleTheme />

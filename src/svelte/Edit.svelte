@@ -6,7 +6,7 @@
 </script>
 
 <span>
-  <Link href="{link}/{path}" inherit={false}>
+  <Link href="{link}/{path}" invert>
     Edit
     <Icon name="edit" size={15} />
   </Link>

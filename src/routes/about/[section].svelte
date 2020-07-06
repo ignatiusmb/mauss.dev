@@ -23,7 +23,7 @@
 
 <Article {post} path="content/about/{section}.md">
   <section>
-    <Link href="about" inherit={false} invert={false}>
+    <Link href="about">
       <h2>About</h2>
     </Link>
   </section>

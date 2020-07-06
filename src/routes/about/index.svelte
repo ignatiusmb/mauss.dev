@@ -21,7 +21,7 @@
 <Article {post} path="content/about/index.md">
   <section>
     {#each sections as section}
-      <Link href="about/{section}" inherit={false} invert={false}>
+      <Link href="about/{section}">
         <h2>{capitalize(section)}</h2>
       </Link>
     {/each}

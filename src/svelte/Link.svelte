@@ -1,8 +1,8 @@
 <script>
   export let href = '';
-  export let inherit = true;
-  export let invert = true;
   export let label = null;
+  export let inherit = false;
+  export let invert = false;
 </script>
 
 <a

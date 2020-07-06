@@ -5,7 +5,7 @@
 
 <section class="info-box warning">
   {#if link}
-    <Link href="disclaimer">
+    <Link href="disclaimer" inherit>
       <h2>READ DISCLAIMER HERE</h2>
     </Link>
   {:else}
