@@ -21,7 +21,7 @@
   title="About - {capitalize(section)}"
   description="Get to know Ignatius Bagussuputra from his About page." />
 
-<Article {post} segment="content" filename="about/{section}.md">
+<Article {post} path="content/about/{section}.md">
   <section>
     <Link href="about" inherit={false} invert={false}>
       <h2>About</h2>

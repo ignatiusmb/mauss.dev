@@ -18,7 +18,7 @@
 
 <MetaHead {post} canonical="about" title="About" description="Get to know Ignatius Bagussuputra from his About page." />
 
-<Article {post} segment="content" filename="about/index.md">
+<Article {post} path="content/about/index.md">
   <section>
     {#each sections as section}
       <Link href="about/{section}" inherit={false} invert={false}>

@@ -16,7 +16,7 @@
   title="Uses"
   description="Ignatius Bagussuputra's collections, detailing his setup, applications, workstations, and other stuffs." />
 
-<Article {post} segment="content" filename="uses.md">
+<Article {post} path="content/uses.md">
   <section>
     {@html post.content}
   </section>

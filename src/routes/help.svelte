@@ -13,8 +13,8 @@
 
 <MetaHead {post} canonical="help" title="Help" description="Help page with explanation for each page in the website." />
 
-<Article {post} segment="content" filename="help.md">
-  <Disclaimer link={true} />
+<Article {post} path="content/help.md">
+  <Disclaimer link />
 
   <section>
     {@html post.content}

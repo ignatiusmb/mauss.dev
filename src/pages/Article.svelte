@@ -1,8 +1,7 @@
 <script>
   export let header = true;
   export let post = null;
-  export let segment = null;
-  export let filename = null;
+  export let path = null;
   export let showEdit = false;
   export let siblings = null;
   import Header from './Header.svelte';
@@ -18,7 +17,7 @@
 
 <article>
   {#if header}
-    <Header {post} {segment} {filename}>
+    <Header {post} {path}>
       <slot name="header" />
     </Header>
   {:else}
@@ -36,7 +35,7 @@
         or
         <Link href="https://github.com/ignatiusmb/mauss/pulls">PR</Link>
         on GitHub, any fix or addition is much appreciated!
-        <Edit {segment} {filename} />
+        <Edit {path} />
       </p>
     </section>
   {/if}
@@ -49,8 +48,8 @@
 <style>
   article {
     width: 100%;
-    max-width: 53rem;
-    padding: 0 1rem;
+    max-width: 53em;
+    padding: 0 1em;
     margin: 0 auto;
     word-wrap: break-word;
     line-height: 1.5;
@@ -84,7 +83,10 @@
     border: 0.5em solid var(--bg-color-secondary);
     border-radius: 0.25em;
   }
-  article :global(img[src^="https://"])
+  article :global(img::after) {
+    content: attr(title);
+  }
+  article :global(img[src*="://"])
   {
     padding: 0.5em;
     border: none;
@@ -130,7 +132,7 @@
     text-align: center;
     font-style: italic;
     font-size: clamp(1.4rem, 3vw, 1.8rem);
-    margin: clamp(0.5em, 3vw, 1.5rem);
+    margin: clamp(0.5em, 3vw, 1.5em);
   }
   article :global(blockquote li) {
     margin-left: unset;

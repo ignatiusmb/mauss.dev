@@ -1,12 +1,12 @@
 <script>
-  export let segment, filename;
+  export let path;
   import Link from './Link.svelte';
   import Icon from './Icon.svelte';
   const link = 'https://github.com/ignatiusmb/mauss/edit/master';
 </script>
 
 <span>
-  <Link href="{link}/{segment}/{filename}" inherit={false}>
+  <Link href="{link}/{path}" inherit={false}>
     Edit
     <Icon name="edit" size={15} />
   </Link>

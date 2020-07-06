@@ -1,6 +1,5 @@
 <script>
-  export let segment = null;
-  export let filename = null;
+  export let path = null;
   export let post;
   import Edit from '../svelte/Edit.svelte';
   import { lastWords } from '../utils/helper';
@@ -20,8 +19,8 @@
       </span>
     {/if}
     <span>{post['read-time']} min read</span>
-    {#if segment && filename}
-      <Edit {segment} {filename} />
+    {#if path}
+      <Edit {path} />
     {/if}
   </small>
 
@@ -39,7 +38,7 @@
 
   h1 {
     margin: 1em 0 0.5em;
-    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-size: clamp(2rem, 4vw, 2.5rem);
   }
   small {
     display: flex;

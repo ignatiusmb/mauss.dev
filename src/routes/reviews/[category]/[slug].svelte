@@ -34,14 +34,14 @@
 
 <MetaHead {post} {canonical} title={post.title} description={post.description} />
 
-<Article {post} {segment} {filename} siblings={post.siblings} showEdit={true}>
+<Article {post} path="content/reviews/{post.category}/{post.slug}.md" siblings={post.siblings} showEdit>
   <small slot="header">
     <span>
       <a href={post.link}>MyAnimeList</a>
     </span>
   </small>
 
-  <Disclaimer link={true} />
+  <Disclaimer link />
 
   <section>
     {@html post.content}

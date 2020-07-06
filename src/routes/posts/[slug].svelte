@@ -23,14 +23,13 @@
   import MetaHead from '../../pages/MetaHead.svelte';
   import Article from '../../pages/Article.svelte';
   import TagBadge from '../../components/TagBadge.svelte';
-  const segment = 'content/posts';
   $: canonical = `posts/${post.slug}`;
   $: filename = `${post.date}.${post.slug}.md`;
 </script>
 
 <MetaHead {post} {canonical} title={post.title} description={post.description} />
 
-<Article {post} {segment} {filename} siblings={post.siblings} showEdit={true}>
+<Article {post} path="content/posts/{filename}" siblings={post.siblings} showEdit>
   <small slot="header">
     {#each post.tags as tag}
       <TagBadge {tag} />
