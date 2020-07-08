@@ -8,7 +8,7 @@
 <span>
   <Link href="{link}/{path}" invert>
     Edit
-    <Icon name="edit" size={15} />
+    <Icon name="edit" size={17} />
   </Link>
 </span>
 
