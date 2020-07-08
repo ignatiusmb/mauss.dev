@@ -68,7 +68,7 @@
 
 <header>
   <h1>Mauss Reviews</h1>
-  <Searchbar bind:query on:filter={() => (show = !show)} />
+  <Searchbar bind:query filters on:filter={() => (show = !show)} />
   <FilterGrid {show} {unique} bind:filters>
     <section>
       <h3>Verdict</h3>
