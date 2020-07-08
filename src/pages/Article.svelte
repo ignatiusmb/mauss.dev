@@ -2,8 +2,8 @@
   export let header = true;
   export let post = null;
   export let path = null;
-  export let showEdit = false;
   export let siblings = null;
+  export let showEdit = false;
   import Header from './Header.svelte';
   import Link from '../svelte/Link.svelte';
   import Edit from '../svelte/Edit.svelte';

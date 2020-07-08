@@ -1,7 +1,7 @@
 ---
 title: Kami no Tou (Tower of God)
 year: 2020
-finished:
+finished: 2020-07-07
 date: 2020
 genres: action, adventure, mystery, drama, fantasy
 rating: story,artwork,sound,characters

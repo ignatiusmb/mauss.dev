@@ -2,24 +2,12 @@
   export let mobile;
   import Icon from '../svelte/Icon.svelte';
   import Link from '../svelte/Link.svelte';
-  const inherit = false;
   $: size = mobile ? 20 : 30;
 </script>
 
 <footer>
-  <slot />
-
   <section>
-    <p>Absolutely no cookies or trackers, without analytics and nothing to track you.</p>
-    <p>If you like this, consider leaving some nice comments on my socials down below ツ</p>
-  </section>
-
-  <section>
-    <p>
-      You could also consider
-      <Link href="https://www.buymeacoffee.com/mauss" {inherit}>supporting me</Link>
-      if you want to. I would definitely appreciate it either way.
-    </p>
+    <em>Absolutely no cookies or trackers, without analytics and nothing to track you.</em>
   </section>
 
   <section class="social-links">
@@ -50,9 +38,9 @@
     <p>Copyright &copy; 2017 &ndash; {new Date().getFullYear()} Ignatius Bagussuputra</p>
     <p>
       Made with ❤️ using
-      <Link href="https://svelte.dev/" {inherit}>Svelte</Link>
+      <Link href="https://svelte.dev/">Svelte</Link>
       &plus;
-      <Link href="https://sapper.svelte.dev/" {inherit}>Sapper</Link>
+      <Link href="https://sapper.svelte.dev/">Sapper</Link>
     </p>
   </section>
 </footer>
@@ -79,13 +67,13 @@
   }
   .social-links :global(a),
   .social-links :global(a:visited) {
-    transition: 0.15s;
+    transition: 150ms;
     transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
     color: var(--fg-secondary-color);
   }
   .social-links :global(a:hover),
   .social-links :global(a:focus) {
-    transition: 0.15s;
+    transition: 150ms;
     transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
     color: var(--mauss-secondary);
   }
