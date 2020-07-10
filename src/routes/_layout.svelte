@@ -30,7 +30,8 @@
 <style>
 	:global(#sapper) {
 		min-height: 100vh;
-		display: grid;
+		display: flex;
+		flex-direction: column;
 		font-family: var(--aqua-default);
 	}
 </style>
