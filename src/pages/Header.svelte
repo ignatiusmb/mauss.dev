@@ -29,9 +29,8 @@
 
 <style>
 	header {
-		display: flex;
-		flex-direction: column;
-		word-wrap: break-word;
+		display: grid;
+		gap: 0.5em;
 		line-height: 1;
 		font-family: var(--aqua-heading);
 	}
@@ -45,9 +44,6 @@
 		flex-wrap: wrap;
 		align-items: center;
 		font-size: clamp(0.9rem, 2vw, 1.1rem);
-	}
-	header :global(small:not(:first-of-type)) {
-		margin-top: 0.5em;
 	}
 	small:first-of-type :not(:last-child)::after {
 		content: '~';
