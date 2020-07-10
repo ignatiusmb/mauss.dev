@@ -47,12 +47,13 @@
 
 <style>
 	footer {
+		width: 100%;
 		max-width: 53em;
 		position: relative;
 		display: grid;
 		gap: 0.5em;
 		padding: 3em 1em;
-		margin: 0 auto 3em;
+		margin: auto auto 3em;
 		text-align: center;
 		font-family: var(--aqua-monospace);
 		font-size: clamp(0.8em, 3vw, 1em);
