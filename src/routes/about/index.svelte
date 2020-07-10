@@ -1,24 +1,27 @@
 <script context="module">
   export async function preload() {
-    const articles = await this.fetch('about.json').then(r => r.json());
-    return { post: articles['index'], sections: Object.keys(articles).filter(e => e !== 'index') };
+    const articles = await this.fetch('about.json').then((r) => r.json());
+    return {
+      post: articles['index'],
+      sections: Object.keys(articles).filter((e) => e !== 'index'),
+    };
   }
 </script>
 
 <script>
   export let post, sections;
-  import Link from '../../components/independent/Link.svelte';
-  import MetaHead from '../../components/MetaHead.svelte';
-  import PostArticle from '../../pages/PostArticle.svelte';
+  import MetaHead from '../../pages/MetaHead.svelte';
+  import Article from '../../pages/Article.svelte';
+  import Link from '../../svelte/Link.svelte';
   import { capitalize } from '../../utils/helper';
 </script>
 
 <MetaHead {post} canonical="about" title="About" description="Get to know Ignatius Bagussuputra from his About page." />
 
-<PostArticle {post} segment="content" filename="about/index.md">
+<Article {post} path="content/about/index.md">
   <section>
     {#each sections as section}
-      <Link href="about/{section}" inherit={false} invert={false}>
+      <Link href="about/{section}">
         <h2>{capitalize(section)}</h2>
       </Link>
     {/each}
@@ -27,7 +30,7 @@
   <section>
     {@html post.content}
   </section>
-</PostArticle>
+</Article>
 
 <style>
   section:first-of-type {

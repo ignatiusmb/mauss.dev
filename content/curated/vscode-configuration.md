@@ -354,6 +354,7 @@ XML and YAML language support with syntax highlighting by Red Hat.
   "css.lint.compatibleVendorPrefixes": "warning",
   "css.lint.float": "error",
   "css.remoteStyleSheets": [],
+  "debug.inlineValues": true,
   "dart.debugExternalLibraries": false,
   "dart.debugSdkLibraries": false,
   "dart.previewFlutterUiGuides": true,

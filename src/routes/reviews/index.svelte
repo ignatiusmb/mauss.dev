@@ -1,11 +1,11 @@
 <script context="module">
   export async function preload() {
-    const data = await this.fetch('reviews.json').then(r => r.json());
-    const genres = data.flatMap(p => p.genres);
+    const data = await this.fetch('reviews.json').then((r) => r.json());
+    const genres = data.flatMap((p) => p.genres);
     const unique = {
       categories: data.reduce((a, c) => (a.includes(c.category) ? a : [...a, c.category]), []),
       genres: genres.reduce((a, c) => (a.includes(c) ? a : c ? [...a, c] : a), []).sort(),
-      verdict: data.reduce((a, c) => (a.includes(c.verdict) ? a : [...a, c.verdict]), [])
+      verdict: data.reduce((a, c) => (a.includes(c.verdict) ? a : [...a, c.verdict]), []),
     };
     return { data, unique };
   }
@@ -13,13 +13,15 @@
 
 <script>
   export let data, unique;
-  import MetaHead from '../../components/MetaHead.svelte';
-  import Searchbar from '../../components/Searchbar.svelte';
+  import MetaHead from '../../pages/MetaHead.svelte';
+  import Centered from '../../pages/Centered.svelte';
+  import Searchbar from '../../svelte/Searchbar.svelte';
+  import Pagination from '../../svelte/Pagination.svelte';
+
   import FilterGrid from '../../components/FilterGrid.svelte';
-  import Pagination from '../../components/Pagination.svelte';
   import ReviewCard from '../../components/ReviewCard.svelte';
 
-  import { rSlice } from '../../stores';
+  import { mobile, rSlice } from '../../stores';
   const bound = 12;
   const duration = 100;
   import { flip } from 'svelte/animate';
@@ -34,11 +36,11 @@
     for (const key in filters) {
       if (!filters[key].length) continue;
       if (key === 'genres') {
-        filtered = filtered.filter(p => p.genres.filter(g => filters.genres.includes(g)).length);
+        filtered = filtered.filter((p) => p.genres.filter((g) => filters.genres.includes(g)).length);
       } else if (key === 'categories') {
-        filtered = filtered.filter(p => filters.categories.includes(p.category));
+        filtered = filtered.filter((p) => filters.categories.includes(p.category));
       } else if (key === 'verdict') {
-        filtered = filtered.filter(p => filters.verdict.includes(p.verdict));
+        filtered = filtered.filter((p) => filters.verdict.includes(p.verdict));
       } else {
         if (filters[key] === 'published') {
           filtered = filtered.sort(sortCompare);
@@ -66,7 +68,7 @@
 
 <header>
   <h1>Mauss Reviews</h1>
-  <Searchbar bind:query on:filter={() => (show = !show)} />
+  <Searchbar bind:query filters on:filter={() => (show = !show)} />
   <FilterGrid {show} {unique} bind:filters>
     <section>
       <h3>Verdict</h3>
@@ -124,6 +126,12 @@
     <h2>There are no matching {query ? 'titles' : 'filters'}</h2>
   {/each}
 </main>
+
+{#if $mobile}
+  <Centered>
+    <Pagination store={rSlice} {total} {bound} />
+  </Centered>
+{/if}
 
 <style>
   header,

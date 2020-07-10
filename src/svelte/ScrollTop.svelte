@@ -1,5 +1,5 @@
 <script>
-  import Icon from './independent/Icon.svelte';
+  import Icon from './Icon.svelte';
   import { onMount } from 'svelte';
   let y, mounted;
   onMount(() => (mounted = true));
@@ -25,7 +25,7 @@
     justify-content: center;
     border-radius: 50%;
     font-size: 1.5em;
-    color: #990000;
+    color: var(--mauss-primary);
     background-color: rgba(0, 0, 0, 0.25);
     transform: translate(-50%, 100%);
     transition: transform var(--transition-duration);

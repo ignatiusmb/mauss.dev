@@ -1,7 +1,7 @@
 <script>
+  export let base = '';
   export let prev = null;
   export let next = null;
-  export let base;
 </script>
 
 {#if prev || next}
@@ -25,7 +25,6 @@
   aside {
     margin-top: 2em;
     display: grid;
-    grid-template-columns: 1fr;
     border-radius: 0.5em;
     border: 0.1em solid var(--fg-color);
   }

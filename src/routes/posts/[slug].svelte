@@ -1,6 +1,6 @@
 <script context="module">
   export async function preload({ params }) {
-    const list = await this.fetch('posts.json').then(r => r.json());
+    const list = await this.fetch('posts.json').then((r) => r.json());
     const res = await this.fetch(`posts/${params.slug}.json`);
     if (res.status !== 200) return this.error(404, 'Post not found');
 
@@ -20,17 +20,16 @@
 
 <script>
   export let post;
-  import MetaHead from '../../components/MetaHead.svelte';
+  import MetaHead from '../../pages/MetaHead.svelte';
+  import Article from '../../pages/Article.svelte';
   import TagBadge from '../../components/TagBadge.svelte';
-  import PostArticle from '../../pages/PostArticle.svelte';
-  const segment = 'content/posts';
   $: canonical = `posts/${post.slug}`;
   $: filename = `${post.date}.${post.slug}.md`;
 </script>
 
 <MetaHead {post} {canonical} title={post.title} description={post.description} />
 
-<PostArticle {post} {segment} {filename} siblings={post.siblings} showEdit={true}>
+<Article {post} path="content/posts/{filename}" siblings={post.siblings} showEdit>
   <small slot="header">
     {#each post.tags as tag}
       <TagBadge {tag} />
@@ -40,7 +39,7 @@
   <section>
     {@html post.content}
   </section>
-</PostArticle>
+</Article>
 
 <style>
   small {

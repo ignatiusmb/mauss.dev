@@ -1,6 +1,6 @@
 <script>
-  import LinkExt from '../components/independent/LinkExt.svelte';
-  import MetaHead from '../components/MetaHead.svelte';
+  import MetaHead from '../pages/MetaHead.svelte';
+  import Link from '../svelte/Link.svelte';
   import Disclaimer from '../components/Disclaimer.svelte';
 </script>
 
@@ -23,7 +23,7 @@
     All of that being said, I hope that we can move past blaming or hating what I said. If you disagree with something,
     I would welcome a discussion. It would be my privilege to learn from what you have to teach me. Direct contributions
     are also welcome at this
-    <LinkExt href="https://github.com/ignatiusmb/mauss">GitHub repository</LinkExt>
+    <Link href="https://github.com/ignatiusmb/mauss">GitHub repository</Link>
   </p>
 </article>
 

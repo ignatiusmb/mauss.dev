@@ -19,14 +19,13 @@
   div.mobile {
     width: 100%;
     position: absolute;
-    top: 0;
+    top: 1px;
     right: 0;
     gap: 1em;
-    grid-template-columns: 1fr;
     grid-auto-flow: row;
     padding: 1em;
     margin: 0;
-    border-top: 0.25em solid #990000;
+    border-top: 0.25em solid var(--mauss-primary);
     transform: translateY(-100%);
     background-color: var(--bg-color);
     text-align: center;
@@ -34,13 +33,13 @@
   div.mobile :global(a) {
     width: 100%;
     padding: 0.5em 0;
-    border: 0.15em dashed var(--bg-inverse);
+    border: 0.1em dashed var(--bg-inverse);
     border-radius: 0.25em;
   }
   div.mobile :global(a::after) {
     content: none;
   }
   div.mobile :global(a[aria-current]) {
-    border: 0.15em solid #990000;
+    border: 0.15em solid var(--mauss-primary);
   }
 </style>

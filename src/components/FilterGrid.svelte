@@ -2,11 +2,12 @@
   export let show = false;
   export let unique = {};
   export let filters = {};
+  import { slide } from 'svelte/transition';
   import { capitalize } from '../utils/helper';
 </script>
 
 {#if show}
-  <div>
+  <div transition:slide={{ duration: 100 }}>
     {#if unique.categories}
       <section>
         <h3>Categories</h3>

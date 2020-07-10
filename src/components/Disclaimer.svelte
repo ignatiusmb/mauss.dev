@@ -1,11 +1,11 @@
 <script>
   export let link;
-  import Link from './independent/Link.svelte';
+  import Link from '../svelte/Link.svelte';
 </script>
 
 <section class="info-box warning">
   {#if link}
-    <Link href="disclaimer">
+    <Link href="disclaimer" inherit>
       <h2>READ DISCLAIMER HERE</h2>
     </Link>
   {:else}

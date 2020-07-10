@@ -1,26 +1,25 @@
 <script>
   export let header = true;
   export let post = null;
-  export let segment = null;
-  export let filename = null;
-  export let showEdit = false;
+  export let path = null;
   export let siblings = null;
-  import LinkExt from '../components/independent/LinkExt.svelte';
-  import Edit from '../components/Edit.svelte';
-  import PostHeader from '../components/PostHeader.svelte';
-  import ScrollProgress from '../components/ScrollProgress.svelte';
-  import Siblings from '../components/Siblings.svelte';
+  export let showEdit = false;
+  import Header from './Header.svelte';
+  import Link from '../svelte/Link.svelte';
+  import Edit from '../svelte/Edit.svelte';
+  import Siblings from '../svelte/Siblings.svelte';
+  import Progressbar from '../svelte/Progressbar.svelte';
 </script>
 
 {#if header}
-  <ScrollProgress />
+  <Progressbar />
 {/if}
 
 <article>
   {#if header}
-    <PostHeader {post} {segment} {filename}>
+    <Header {post} {path}>
       <slot name="header" />
-    </PostHeader>
+    </Header>
   {:else}
     <slot name="header" />
   {/if}
@@ -32,11 +31,11 @@
       <p>Find an issue with this post? Have something to add, update, or clarify? All my posts here are editable.</p>
       <p>
         Just create a new
-        <LinkExt href="https://github.com/ignatiusmb/mauss/issues">Issue</LinkExt>
+        <Link href="https://github.com/ignatiusmb/mauss/issues">Issue</Link>
         or
-        <LinkExt href="https://github.com/ignatiusmb/mauss/pulls">PR</LinkExt>
+        <Link href="https://github.com/ignatiusmb/mauss/pulls">PR</Link>
         on GitHub, any fix or addition is much appreciated!
-        <Edit {segment} {filename} />
+        <Edit {path} />
       </p>
     </section>
   {/if}
@@ -49,8 +48,8 @@
 <style>
   article {
     width: 100%;
-    max-width: 53rem;
-    padding: 0 1rem;
+    max-width: 53em;
+    padding: 0 1em;
     margin: 0 auto;
     word-wrap: break-word;
     line-height: 1.5;
@@ -64,7 +63,7 @@
   }
   section {
     padding: 0.4em 0.8em;
-    border-left: 2px solid crimson;
+    border-left: 2px solid var(--mauss-secondary);
     background-color: rgba(0, 0, 0, 0.05);
   }
   article :global(section > :first-child) {
@@ -84,7 +83,11 @@
     border: 0.5em solid var(--bg-color-secondary);
     border-radius: 0.25em;
   }
-  article :global(img[src^="https://"]) {
+  article :global(img::after) {
+    content: attr(title);
+  }
+  article :global(img[src*="://"])
+  {
     padding: 0.5em;
     border: none;
     border-radius: 1em;
@@ -129,7 +132,7 @@
     text-align: center;
     font-style: italic;
     font-size: clamp(1.4rem, 3vw, 1.8rem);
-    margin: clamp(0.5em, 3vw, 1.5rem);
+    margin: clamp(0.5em, 3vw, 1.5em);
   }
   article :global(blockquote li) {
     margin-left: unset;

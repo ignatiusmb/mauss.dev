@@ -1,6 +1,6 @@
 <script>
   export let store, total, bound;
-  import Icon from './independent/Icon.svelte';
+  import Icon from './Icon.svelte';
   function handleIndexing(index) {
     index = Math.round(index);
     if (index < 0 || (index > $store && curr + bound > total)) return;

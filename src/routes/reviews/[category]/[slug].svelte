@@ -1,7 +1,7 @@
 <script context="module">
   export async function preload({ params }) {
     const { category, slug } = params;
-    const list = await this.fetch('reviews.json').then(r => r.json());
+    const list = await this.fetch('reviews.json').then((r) => r.json());
     const res = await this.fetch(`reviews/${category}/${slug}.json`);
     if (res.status !== 200) return this.error(404, 'Review not found');
 
@@ -20,11 +20,13 @@
 
 <script>
   export let post;
-  import MetaHead from '../../../components/MetaHead.svelte';
+  import MetaHead from '../../../pages/MetaHead.svelte';
+  import Article from '../../../pages/Article.svelte';
+
   import Disclaimer from '../../../components/Disclaimer.svelte';
   import ReviewsTab from '../../../components/ReviewsTab.svelte';
   import Spoilers from '../../../components/SpoilerSection.svelte';
-  import PostArticle from '../../../pages/PostArticle.svelte';
+
   const segment = `content/reviews/${post.category}`;
   $: canonical = `reviews/${post.category}/${post.slug}`;
   $: filename = `${post.slug}.md`;
@@ -32,14 +34,14 @@
 
 <MetaHead {post} {canonical} title={post.title} description={post.description} />
 
-<PostArticle {post} {segment} {filename} siblings={post.siblings} showEdit={true}>
+<Article {post} path="content/reviews/{post.category}/{post.slug}.md" siblings={post.siblings} showEdit>
   <small slot="header">
     <span>
       <a href={post.link}>MyAnimeList</a>
     </span>
   </small>
 
-  <Disclaimer link={true} />
+  <Disclaimer link />
 
   <section>
     {@html post.content}
@@ -56,7 +58,7 @@
       {@html post.closing}
     </section>
   {/if}
-</PostArticle>
+</Article>
 
 <style>
   small {

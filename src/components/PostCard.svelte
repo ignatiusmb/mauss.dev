@@ -1,6 +1,6 @@
 <script>
   export let post;
-  import Button from './Button.svelte';
+  import ButtonLink from '../svelte/ButtonLink.svelte';
   const prettyDate = post['pretty-date'].split(',')[1].trim();
   const { date, updated } = post;
 </script>
@@ -17,7 +17,7 @@
     <small>Updated</small>
   {/if}
   <small>{post['read-time']} min read</small>
-  <Button href="posts/{post.slug}">read</Button>
+  <ButtonLink href="posts/{post.slug}">read</ButtonLink>
 </aside>
 
 <style>
@@ -74,7 +74,7 @@
   }
   aside small:not(:last-of-type)::after {
     content: '•';
-    color: crimson;
+    color: var(--mauss-secondary);
     margin-left: 0.5em;
   }
   aside :global(:last-child) {

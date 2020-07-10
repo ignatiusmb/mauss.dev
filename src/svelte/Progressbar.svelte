@@ -14,6 +14,6 @@
     height: 0.25em;
     position: fixed;
     top: 0;
-    background-color: #990000;
+    background-color: var(--mauss-primary);
   }
 </style>

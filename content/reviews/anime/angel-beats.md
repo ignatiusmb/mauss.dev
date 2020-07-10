@@ -1,7 +1,7 @@
 ---
 title: Angel Beats!
 year: 2010
-finished:
+finished: 2020-06-30
 date: 2020
 genres: action, comedy, drama, school, supernatural
 rating: story,artwork,sound,characters
