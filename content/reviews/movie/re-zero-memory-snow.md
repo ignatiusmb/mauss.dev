@@ -1,13 +1,13 @@
 ---
-title: 5 Centimeters per Second
-year: 2007
+title: Re:ZERO -Starting Life in Another World-: Memory Snow
+year: 2018
 finished:
 date: 2020
-genres: animation, drama, romance
+genres: animation, adventure, fantasy
 rating: story,artwork,sound,characters
 verdict:
 
-image: https://image.tmdb.org/t/p/original/t0ISGhwZtghakg46TWCOWBTIflZ.jpg
+image: https://image.tmdb.org/t/p/original/f5KeRheRVlru6Xexp7MadGB0YEd.jpg
 link:
 ---
 
