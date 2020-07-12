@@ -1,7 +1,7 @@
 <script>
-	export let post = null;
 	export let canonical = '';
 	export let title, description;
+	export let post = null;
 	export let social = {};
 
 	const hostTitle = 'Mauss';
@@ -13,22 +13,20 @@
 </script>
 
 <svelte:head>
-	<title>{title} • {hostTitle}</title>
-	<meta name="author" content="Ignatius Bagussuputra" />
-
 	{#if url}
 		<link rel="canonical" href={url} />
 	{/if}
 
+	<title>{title} • {hostTitle}</title>
+	<meta name="author" content="Ignatius Bagussuputra" />
+
 	{#if description}
 		<meta name="description" content={description} />
+	{:else if post}
+		<meta name="description" content={post.description} />
 	{/if}
 
 	{#if post}
-		{#if !description}
-			<meta name="description" content={post.description} />
-		{/if}
-
 		<meta property="og:title" content={post.title} />
 		<meta property="og:type" content="article" />
 		{#if url}

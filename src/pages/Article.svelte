@@ -3,7 +3,6 @@
 	export let post = null;
 	export let path = null;
 	export let siblings = null;
-	export let showEdit = false;
 	import Header from './Header.svelte';
 	import Link from '../svelte/Link.svelte';
 	import Edit from '../svelte/Edit.svelte';
@@ -26,7 +25,7 @@
 
 	<slot />
 
-	{#if showEdit}
+	{#if path}
 		<section>
 			<p>Find an issue with this post? Have something to add, update, or clarify? All my posts here are editable.</p>
 			<p>

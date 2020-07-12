@@ -8,7 +8,8 @@ verdict:
 
 last_seen: 2020-07-07
 date_published: 2020
-image:en: https://image.tmdb.org/t/p/original/zNP2uGiunhhkQM4s5OqeI6ZwbWW.jpg
+image:en: https://image.tmdb.org/t/p/original/fUs9KMgEJj3wYJGa75MtPSdyJXk.jpg
+image:jp: https://image.tmdb.org/t/p/original/aJdbJ37Vt2Sz1K4mUvvRp1jV5uW.jpg
 
 link:mal: https://myanimelist.net/anime/40221/Kami_no_Tou
 ---
