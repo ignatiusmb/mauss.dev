@@ -19,7 +19,6 @@
 	export let post;
 	import MetaHead from '../../../pages/MetaHead.svelte';
 	import Article from '../../../pages/Article.svelte';
-	import Siblings from '../../../svelte/Siblings.svelte';
 
 	import Disclaimer from '../../../components/Disclaimer.svelte';
 	import ReviewsTab from '../../../components/ReviewsTab.svelte';
