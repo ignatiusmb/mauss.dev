@@ -1,14 +1,15 @@
 ---
-title: One Punch Man
 year: 2015
-finished:
-date: 2020
+title:en: One Punch Man
 genres: action, sci-fi, comedy, super power, supernatural
 rating: story,artwork,sound,characters
 verdict:
 
-image: https://image.tmdb.org/t/p/original/iE3s0lG5QVdEHOEZnoAxjmMtvne.jpg
-link: https://myanimelist.net/anime/30276/One_Punch_Man
+last_seen:
+date_published: 2020
+image:en: https://image.tmdb.org/t/p/original/iE3s0lG5QVdEHOEZnoAxjmMtvne.jpg
+
+link:mal: https://myanimelist.net/anime/30276/One_Punch_Man
 ---
 
 ![Backdrop]()

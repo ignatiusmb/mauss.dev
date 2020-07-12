@@ -1,6 +1,6 @@
 import { join } from 'path';
 import { readdirSync, readFileSync } from 'fs';
-import { createPrettyDate, sortCompare, splitAt } from './helper';
+import { sortCompare, splitAt } from './helper';
 import Aqua from '@ignatiusmb/aqua';
 const markIt = require('markdown-it')({
 	html: true,
@@ -37,33 +37,46 @@ const countReadTime = (content: string) => {
 	return time ? time : 1;
 };
 
+const extractMeta = (metadata: string) =>
+	metadata.split(/\r?\n/).reduce((acc, cur: string) => {
+		if (!cur.includes(': ')) return acc;
+		const [key, val]: [string, string] = splitAt(cur.indexOf(': '), cur);
+
+		if (key === 'tags' || key === 'genres') {
+			acc[key] = val.split(',').map((v: string) => v.trim());
+		} else if (key === 'rating') {
+			acc[key] = countAverageRating(val);
+		} else if (key.slice(0, 4) === 'link') {
+			if (!acc['link']) acc['link'] = [];
+			if (!key.includes(':')) acc['link'] = val.trim();
+			else acc['link'].push({ name: key.slice(5), url: val.trim() });
+		} else if (key.includes(':')) {
+			const [attr, category] = splitAt(key.indexOf(':'), key);
+			if (!acc[attr]) acc[attr] = {};
+			acc[attr][category] = val.trim();
+		} else acc[key] = val.trim();
+
+		return acc;
+	}, {});
+
 export const aquaMark = (content: string) => markIt.render(content);
 
 export function parseFile(filename: string, parseCallback: Function) {
 	const content = readFileSync(filename, 'utf-8');
 	const fmExpression = /---\r?\n([\s\S]+?)\r?\n---/;
 	const [rawData, metadata] = fmExpression.exec(content);
-	const frontMatter = metadata.split(/\r?\n/).reduce((acc, cur) => {
-		if (!cur.includes(':')) return acc;
-		const [key, val] = splitAt(cur.indexOf(':'), cur);
-		if (key === 'tags' || key === 'genres') {
-			acc[key] = val.split(',').map((v: string) => v.trim());
-		} else if (key === 'rating') {
-			acc[key] = countAverageRating(val);
-		} else acc[key] = val.trim();
-		return acc;
-	}, {});
 
+	const frontMatter = extractMeta(metadata);
 	const [cleanedFilename] = filename.split(/[\/\\]/).slice(-1);
 	const article = content.slice(rawData.length + 1);
 	const result = parseCallback(frontMatter, article, cleanedFilename);
 
-	if (result['date'] && !result['updated']) result['updated'] = result['date'];
-	if (result['date']) result['pretty-date'] = createPrettyDate(result['date']);
-	if (result['updated']) result['pretty-updated'] = createPrettyDate(result['updated']);
+	if (result.date_published && !result.date_updated) {
+		result.date_updated = result.date_published;
+	}
 
-	result['read-time'] = countReadTime(article);
-	result['content'] = aquaMark(result['content']);
+	result.read_time = countReadTime(article);
+	result.content = aquaMark(result.content);
 	return result;
 }
 

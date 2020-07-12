@@ -1,6 +1,6 @@
 ---
 title: About - Sports
-updated: 2020-06-23
+date_updated: 2020-06-23
 ---
 
 I'm not the best at a certain sport, but I do love them and I try to be able to play everywhere. I have my preference of course, some that I love the most. Invite me to play when you see me, I'll be happy to play along.

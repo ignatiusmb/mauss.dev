@@ -1,15 +1,17 @@
 ---
-title: Yosuga no Sora
 year: 2010
-finished: 2020-06-06
-date: 2020-06-18
-updated: 2020-06-25
+title:short: Yosuga no Sora
+title:en: Yosuga no Sora: In Solitude, Where We Are Least Alone
 genres: drama, romance, tsundere, ecchi, harem
 rating: 4,7,10,5
 verdict: 0
 
-image: https://image.tmdb.org/t/p/original/9F80WGUD6WYfoEDMImf988NlXhC.jpg
-link: https://myanimelist.net/anime/8861/Yosuga_no_Sora__In_Solitude_Where_We_Are_Least_Alone
+last_seen: 2020-06-06
+date_published: 2020-06-18
+date_updated: 2020-06-25
+image:en: https://image.tmdb.org/t/p/original/9F80WGUD6WYfoEDMImf988NlXhC.jpg
+
+link:mal: https://myanimelist.net/anime/8861/Yosuga_no_Sora__In_Solitude_Where_We_Are_Least_Alone
 ---
 
 ![Yosuga no Sora Backdrop](https://image.tmdb.org/t/p/original/haeBJjV2JHfopKl4dYE7RJwASlF.jpg "Sky of Connection")

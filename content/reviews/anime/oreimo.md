@@ -1,14 +1,17 @@
 ---
-title: Ore no Imouto ga Konnani Kawaii Wake ga Nai (OreImo)
 year: 2010
-finished: 2020-06-23
-date: 2020
+title:short: OreImo
+title:en: My Little Sister Can't Be This Cute
+title:jp: Ore no Imouto ga Konnani Kawaii Wake ga Nai
 genres: comedy, drama, romance, slice of life, harem, ecchi
 rating: story,artwork,sound,characters
 verdict:
 
-image: https://image.tmdb.org/t/p/original/uJFL8PETMI09hj0AJ4oCpRDWRnk.jpg
-link: https://myanimelist.net/anime/8769/Ore_no_Imouto_ga_Konnani_Kawaii_Wake_ga_Nai
+last_seen: 2020-06-23
+date_published: 2020
+image:en: https://image.tmdb.org/t/p/original/uJFL8PETMI09hj0AJ4oCpRDWRnk.jpg
+
+link:mal: https://myanimelist.net/anime/8769/Ore_no_Imouto_ga_Konnani_Kawaii_Wake_ga_Nai
 ---
 
 ![Backdrop]()

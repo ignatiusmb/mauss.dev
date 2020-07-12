@@ -1,13 +1,15 @@
 ---
-title: Shingeki no Kyojin (Attack on Titan)
 year: 2013
-finished: 2020-05-12
-date: 2020
-updated:
+title:en: Attack on Titan
+title:jp: Shingeki no Kyojin
 genres: action, military, mystery, fantasy, drama, shounen
 rating:
 verdict:
 
-image: https://image.tmdb.org/t/p/original/2wxoRovckZPxxFLROZGdujJiNcC.jpg
-link: https://myanimelist.net/anime/16498/Shingeki_no_Kyojin
+last_seen: 2020-05-12
+date_published: 2020
+date_updated:
+image:en: https://image.tmdb.org/t/p/original/2wxoRovckZPxxFLROZGdujJiNcC.jpg
+
+link:mal: https://myanimelist.net/anime/16498/Shingeki_no_Kyojin
 ---

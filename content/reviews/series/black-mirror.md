@@ -1,11 +1,11 @@
 ---
-title: Black Mirror
 year: 2011
-finished:
-date: 2020
+title:en: Black Mirror
 genres: drama, sci-fi, thriller
 rating: story,artwork,sound,characters
 verdict:
 
-image: https://image.tmdb.org/t/p/original/dw7jYk7EdrkrHozG7F1Yg2eFJTm.jpg
+last_seen:
+date_published: 2020
+image:en: https://image.tmdb.org/t/p/original/dw7jYk7EdrkrHozG7F1Yg2eFJTm.jpg
 ---

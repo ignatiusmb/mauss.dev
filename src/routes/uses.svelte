@@ -1,23 +1,23 @@
 <script context="module">
-  export async function preload() {
-    return { post: await this.fetch('uses.json').then((r) => r.json()) };
-  }
+	export async function preload() {
+		return { post: await this.fetch('uses.json').then((r) => r.json()) };
+	}
 </script>
 
 <script>
-  export let post;
-  import MetaHead from '../pages/MetaHead.svelte';
-  import Article from '../pages/Article.svelte';
+	export let post;
+	import MetaHead from '../pages/MetaHead.svelte';
+	import Article from '../pages/Article.svelte';
 </script>
 
 <MetaHead
-  {post}
-  canonical="uses"
-  title="Uses"
-  description="Ignatius Bagussuputra's collections, detailing his setup, applications, workstations, and other stuffs." />
+	{post}
+	canonical="uses"
+	title="Uses"
+	description="Ignatius Bagussuputra's collections, detailing his setup, applications, workstations, and other stuffs." />
 
-<Article {post} path="content/uses.md">
-  <section>
-    {@html post.content}
-  </section>
+<Article {post}>
+	<section>
+		{@html post.content}
+	</section>
 </Article>

@@ -1,12 +1,13 @@
 ---
-title: ReLIFE
 year: 2016
-finished: 2020-05-30
-date: 2020
+title:en: ReLIFE
 genres: slice of life, romance, drama
 rating:
 verdict:
 
-image: https://image.tmdb.org/t/p/original/oavCFoklxWAqPHSbuPaDZCZQ0gB.jpg
-link: https://myanimelist.net/anime/30015/ReLIFE
+last_seen: 2020-05-30
+date_published: 2020
+image:en: https://image.tmdb.org/t/p/original/oavCFoklxWAqPHSbuPaDZCZQ0gB.jpg
+
+link:mal: https://myanimelist.net/anime/30015/ReLIFE
 ---

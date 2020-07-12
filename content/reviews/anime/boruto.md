@@ -1,14 +1,15 @@
 ---
-title: Boruto: Naruto Next Generations
 year: 2016
-finished:
-date: 2020
+title:en: Boruto: Naruto Next Generations
 genres: action, adventure, super power, martial arts, shounen
 rating: story,artwork,sound,characters
 verdict:
 
-image: https://image.tmdb.org/t/p/original/t1eJhngNgHywjXYAg2iAdSJ3PiL.jpg
-link: https://myanimelist.net/anime/34566/Boruto__Naruto_Next_Generations
+last_seen:
+date_published: 2020
+image:en: https://image.tmdb.org/t/p/original/t1eJhngNgHywjXYAg2iAdSJ3PiL.jpg
+
+link:mal: https://myanimelist.net/anime/34566/Boruto__Naruto_Next_Generations
 ---
 
 ![Backdrop]()

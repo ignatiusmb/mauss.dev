@@ -1,14 +1,17 @@
 ---
-title: Kami no Tou (Tower of God)
 year: 2020
-finished: 2020-07-07
-date: 2020
+title:en: Tower of God
+title:jp: Kami no Tou
 genres: action, adventure, mystery, drama, fantasy
 rating: story,artwork,sound,characters
 verdict:
 
-image: https://image.tmdb.org/t/p/original/zNP2uGiunhhkQM4s5OqeI6ZwbWW.jpg
-link: https://myanimelist.net/anime/40221/Kami_no_Tou
+last_seen: 2020-07-07
+date_published: 2020
+image:en: https://image.tmdb.org/t/p/original/fUs9KMgEJj3wYJGa75MtPSdyJXk.jpg
+image:jp: https://image.tmdb.org/t/p/original/aJdbJ37Vt2Sz1K4mUvvRp1jV5uW.jpg
+
+link:mal: https://myanimelist.net/anime/40221/Kami_no_Tou
 ---
 
 ![Tower of God Backdrop](https://image.tmdb.org/t/p/original/bkvkJyLqOk2ZbELDEukEAXEatrt.jpg)

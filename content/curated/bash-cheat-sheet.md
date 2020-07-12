@@ -1,9 +1,9 @@
 ---
 title: Complete Bash Utility Cheat Sheet
-updated: 2020-06-23
+date_updated: 2020-06-23
 ---
 
-This are my goto scripts to manage my home media server. I'll be compiling all that I remember here so I won't forget it and could quickly search for a reference in the future. I hope most of it would be beneficial to you too.
+These are my goto scripts to manage my home media server. I'll be compiling all that I remember here so I won't forget it and could quickly search for a reference in the future. I hope most of it would be beneficial to you too.
 
 `Copy method`, it creates a hard link for the file or everything in the folder to the desired destination. Hard linking is crucial for media management so that you won't have a lot of wasted space with duplicates or multiple files with similar data and different file names.
 

@@ -1,6 +1,6 @@
 ---
 title: VS Code Configuration - Extensions and Settings
-updated: 2020-06-26
+date_updated: 2020-06-26
 ---
 
 This is my curated list of VS Code extensions that I have installed and its corresponding settings, fully synced on all of my machines. Each extensions has its own purpose and unique perks, I'll explain it briefly for each item in this list.

@@ -1,14 +1,18 @@
 ---
-title:
 year:
-finished:
-date:
+title:en:
+title:jp:
 genres:
 rating: story,artwork,sound,characters
 verdict:
 
-image:
-link:
+last_seen: 2020
+date_published: 2020
+date_updated: 2020
+image:en:
+image:jp:
+
+link:mal:
 ---
 
 ![Backdrop]()

@@ -1,5 +1,6 @@
 import { readdirSync } from 'fs';
 import { parseDir } from '../../utils/parser';
+import { fillSiblings } from '../../utils/article';
 
 export function get(req, res) {
 	const DIR = 'content/reviews';
@@ -8,16 +9,14 @@ export function get(req, res) {
 			const [slug] = filename.split('.');
 			return { slug: `${folder}/${slug}`, category: folder, ...data, content };
 		}).map((post) => {
-			delete post['content'];
-			delete post['link'];
-			delete post['finished'];
-			delete post['read-time'];
-			delete post['pretty-date'];
-			delete post['pretty-updated'];
+			delete post.content;
+			delete post.last_seen;
+			delete post.read_time;
 			return post;
 		});
 	});
 
+	const check = (review) => !review.rating || !review.verdict;
 	res.writeHead(200, { 'Content-Type': 'application/json' });
-	res.end(JSON.stringify(reviews));
+	res.end(JSON.stringify(fillSiblings(reviews, 'reviews/', check)));
 }
