@@ -14,6 +14,7 @@
 <script>
 	export let data, unique;
 	import MetaHead from '../../pages/MetaHead.svelte';
+	import PageHeader from '../../pages/PageHeader.svelte';
 	import Centered from '../../pages/Centered.svelte';
 	import Searchbar from '../../svelte/Searchbar.svelte';
 	import Pagination from '../../svelte/Pagination.svelte';
@@ -71,7 +72,7 @@
 	title="Reviews"
 	description="Personalized reviews for all kinds of anime, books, movies, shows, etc." />
 
-<header>
+<PageHeader>
 	<h1>Mauss Reviews</h1>
 	<Searchbar bind:query filters on:filter={() => (show = !show)} />
 	<FilterGrid {show} {unique} bind:filters>
@@ -120,7 +121,7 @@
 		</section>
 	</FilterGrid>
 	<Pagination store={rSlice} {total} {bound} />
-</header>
+</PageHeader>
 
 <main>
 	{#each sieved.slice($rSlice * bound, $rSlice * bound + bound) as post (post.slug)}
@@ -139,30 +140,15 @@
 {/if}
 
 <style>
-	header,
 	main {
 		width: 100%;
 		max-width: 79em;
-		padding: 0 1em;
-	}
-	header {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin: 1em auto;
-	}
-	h1 {
-		width: 100%;
-		margin: 1.5em 0 1em;
-		text-align: center;
-	}
-
-	main {
 		position: relative;
 		display: grid;
 		gap: 1em;
 		grid-template-columns: repeat(auto-fill, 12em);
 		justify-content: center;
+		padding: 0 1em;
 		margin: 0 auto;
 	}
 	main section {

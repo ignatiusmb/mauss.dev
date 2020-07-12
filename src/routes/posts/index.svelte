@@ -13,6 +13,7 @@
 <script>
 	export let data, unique;
 	import MetaHead from '../../pages/MetaHead.svelte';
+	import PageHeader from '../../pages/PageHeader.svelte';
 	import Centered from '../../pages/Centered.svelte';
 	import Searchbar from '../../svelte/Searchbar.svelte';
 	import Pagination from '../../svelte/Pagination.svelte';
@@ -56,7 +57,7 @@
 
 <MetaHead canonical="posts" title="Posts" description="Get the latest most recent posts here." />
 
-<header>
+<PageHeader>
 	<h1>Posts by Mauss</h1>
 	<Searchbar bind:query filters on:filter={() => (show = !show)} />
 	<FilterGrid {show} {unique} bind:filters>
@@ -73,7 +74,7 @@
 		</section>
 	</FilterGrid>
 	<Pagination store={pSlice} {total} {bound} />
-</header>
+</PageHeader>
 
 <main>
 	{#each sieved.slice($pSlice * bound, $pSlice * bound + bound) as post (post.slug)}
@@ -97,22 +98,10 @@
 {/if}
 
 <style>
-	header,
 	main {
 		width: 100%;
 		max-width: 82em;
 		padding: 0 1em;
-	}
-	header {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin: 1em auto;
-	}
-	h1 {
-		width: 100%;
-		margin: 1.5em 0 1em;
-		text-align: center;
 	}
 	main section {
 		display: grid;
