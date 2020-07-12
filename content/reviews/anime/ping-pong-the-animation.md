@@ -1,14 +1,15 @@
 ---
-title: Ping Pong the Animation
 year: 2014
-finished:
-date: 2020
+title:en: Ping Pong the Animation
 genres: sports, drama, seinen
 rating: story,artwork,sound,characters
 verdict:
 
-image: https://fanart.tv/fanart/tv/277464/tvposter/ping-pong-54b1f27191477.jpg
-link: https://myanimelist.net/anime/22135/Ping_Pong_the_Animation
+last_seen:
+date_published: 2020
+image:en: https://fanart.tv/fanart/tv/277464/tvposter/ping-pong-54b1f27191477.jpg
+
+link:mal: https://myanimelist.net/anime/22135/Ping_Pong_the_Animation
 ---
 
 ![Ping Pong the Animation Backdrop](https://image.tmdb.org/t/p/original/1rEPk87q49PspQmBJ74bwsXBVkH.jpg)

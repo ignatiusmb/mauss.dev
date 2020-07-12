@@ -1,14 +1,15 @@
 ---
-title: Toradora!
 year: 2008
-finished:
-date: 2020
+title:en: Toradora!
 genres: romance, comedy, slice of life, school
 rating: story,artwork,sound,characters
 verdict:
 
-image: https://image.tmdb.org/t/p/original/2Z52nZaAQt1P7XJtu8fNlMXgdps.jpg
-link: https://myanimelist.net/anime/4224/toradora
+last_seen:
+date_published: 2020
+image:en: https://image.tmdb.org/t/p/original/2Z52nZaAQt1P7XJtu8fNlMXgdps.jpg
+
+link:mal: https://myanimelist.net/anime/4224/toradora
 ---
 
 ![Toradora Backdrop](https://image.tmdb.org/t/p/original/82hAXKATyuldbt4PxSNnHHy2BVO.jpg)

@@ -1,15 +1,16 @@
 ---
-title: Sword Art Online
 year: 2011
-finished: 2020-04-01
-date: 2020
-updated:
+title:en: Sword Art Online
 genres: action, adventure, fantasy, game, romance
 rating:
 verdict:
 
-image: https://image.tmdb.org/t/p/original/7LTDVXVuQKERnukKJLoBbdNzMYh.jpg
-link: https://myanimelist.net/anime/11757/Sword_Art_Online
+last_seen: 2020-04-01
+date_published: 2020
+date_updated:
+image:en: https://image.tmdb.org/t/p/original/7LTDVXVuQKERnukKJLoBbdNzMYh.jpg
+
+link:mal: https://myanimelist.net/anime/11757/Sword_Art_Online
 ---
 
 ![SAO Main Backdrop](https://image.tmdb.org/t/p/original/pDqx7g9nQxRCGch5WFKvDFmJ87o.jpg)

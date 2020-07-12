@@ -1,14 +1,15 @@
 ---
-title: Mob Psycho 100
 year: 2016
-finished:
-date: 2020
+title:en: Mob Psycho 100
 genres: action, comedy, supernatural
 rating: story,artwork,sound,characters
 verdict:
 
-image: https://image.tmdb.org/t/p/original/5Wf9Y6gucbu1LMe1FyqD8TQjaNM.jpg
-link: https://myanimelist.net/anime/32182/Mob_Psycho_100
+last_seen:
+date_published: 2020
+image:en: https://image.tmdb.org/t/p/original/5Wf9Y6gucbu1LMe1FyqD8TQjaNM.jpg
+
+link:mal: https://myanimelist.net/anime/32182/Mob_Psycho_100
 ---
 
 ![Backdrop]()

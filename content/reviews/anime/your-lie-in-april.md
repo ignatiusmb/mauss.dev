@@ -1,15 +1,17 @@
 ---
-title: Shigatsu wa Kimi no Uso (Your Lie in April)
 year: 2014
-finished: 2020-06-20
-date: 2020-06-20
-updated: 2020-06-22
+title:en: Your Lie in April
+title:jp: Shigatsu wa Kimi no Uso
 genres: drama, music, romance, school, slice of life
 rating: 9,6,10,8
 verdict: 1
 
-image: https://image.tmdb.org/t/p/original/nksFLYTydth9OYVpMuMbtOBkvMO.jpg
-link: https://myanimelist.net/anime/23273/Shigatsu_wa_Kimi_no_Uso
+last_seen: 2020-06-20
+date_published: 2020-06-20
+date_updated: 2020-06-22
+image:en: https://image.tmdb.org/t/p/original/nksFLYTydth9OYVpMuMbtOBkvMO.jpg
+
+link:mal: https://myanimelist.net/anime/23273/Shigatsu_wa_Kimi_no_Uso
 ---
 
 ![Your Lie in April Backdrop](https://wallpapercave.com/wp/wp1848044.jpg)

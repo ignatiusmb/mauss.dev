@@ -6,9 +6,9 @@ genres:
 rating: story,artwork,sound,characters
 verdict:
 
+last_seen: 2020
 date_published: 2020
 date_updated: 2020
-last_seen: 2020
 image:en:
 image:jp:
 

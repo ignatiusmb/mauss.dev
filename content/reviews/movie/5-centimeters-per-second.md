@@ -1,14 +1,15 @@
 ---
-title: 5 Centimeters per Second
 year: 2007
-finished:
-date: 2020
+title:en: 5 Centimeters per Second
 genres: animation, drama, romance
 rating: story,artwork,sound,characters
 verdict:
 
-image: https://image.tmdb.org/t/p/original/t0ISGhwZtghakg46TWCOWBTIflZ.jpg
-link:
+last_seen:
+date_published: 2020
+image:en: https://image.tmdb.org/t/p/original/t0ISGhwZtghakg46TWCOWBTIflZ.jpg
+
+link:mal:
 ---
 
 ![Backdrop]()

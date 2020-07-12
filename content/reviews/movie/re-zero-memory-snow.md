@@ -1,14 +1,16 @@
 ---
-title: Re:ZERO -Starting Life in Another World-: Memory Snow
 year: 2018
-finished:
-date: 2020
+title:short: Re:ZERO - Memory Snow
+title:en: Re:ZERO -Starting Life in Another World-: Memory Snow
 genres: animation, adventure, fantasy
 rating: story,artwork,sound,characters
 verdict:
 
-image: https://image.tmdb.org/t/p/original/f5KeRheRVlru6Xexp7MadGB0YEd.jpg
-link:
+last_seen:
+date_published: 2020
+image:en: https://image.tmdb.org/t/p/original/f5KeRheRVlru6Xexp7MadGB0YEd.jpg
+
+link:mal:
 ---
 
 ![Backdrop]()

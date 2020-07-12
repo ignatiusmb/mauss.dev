@@ -1,14 +1,15 @@
 ---
-title: Re:Zero -Starting Life in Another World-
 year: 2016
-finished:
-date: 2020
+title:en: Re:Zero -Starting Life in Another World-
 genres: drama, comedy, fantasy, adventure, thriller, action
 rating: story,artwork,sound,characters
 verdict:
 
-image: https://image.tmdb.org/t/p/original/5DZa4aDH5MZGcZDf8ouTxm2kH2Y.jpg
-link:
+last_seen:
+date_published: 2020
+image:en: https://image.tmdb.org/t/p/original/5DZa4aDH5MZGcZDf8ouTxm2kH2Y.jpg
+
+link:mal:
 ---
 
 ![Backdrop]()

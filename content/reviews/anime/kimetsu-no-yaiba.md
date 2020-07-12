@@ -1,12 +1,14 @@
 ---
-title: Demon Slayer: Kimetsu no Yaiba
 year: 2019
-finished: 2020-04-20
-date: 2020
+title:en: Demon Slayer
+title:jp: Kimetsu no Yaiba
 genres: action, demons, historical, shounen, supernatural
 rating:
 verdict:
 
-image: https://image.tmdb.org/t/p/original/wrCVHdkBlBWdJUZPvnJWcBRuhSY.jpg
-link: https://myanimelist.net/anime/38000/Kimetsu_no_Yaiba
+last_seen: 2020-04-20
+date_published: 2020
+image:en: https://image.tmdb.org/t/p/original/wrCVHdkBlBWdJUZPvnJWcBRuhSY.jpg
+
+link:mal: https://myanimelist.net/anime/38000/Kimetsu_no_Yaiba
 ---
