@@ -8,12 +8,10 @@ export function get(req, res) {
 			const [slug] = filename.split('.');
 			return { slug: `${folder}/${slug}`, category: folder, ...data, content };
 		}).map((post) => {
-			delete post['content'];
-			delete post['link'];
-			delete post['finished'];
-			delete post['read-time'];
-			delete post['pretty-date'];
-			delete post['pretty-updated'];
+			delete post.content;
+			delete post.link;
+			delete post.last_seen;
+			delete post.read_time;
 			return post;
 		});
 	});

@@ -1,6 +1,6 @@
 ---
 title: About - Socials
-updated: 2020-06-23
+date_updated: 2020-06-23
 ---
 
 ## Facebook

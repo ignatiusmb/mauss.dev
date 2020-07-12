@@ -2,23 +2,29 @@
 	export let path = null;
 	export let post;
 	import Edit from '../svelte/Edit.svelte';
-	import { lastWords } from '../utils/helper';
+	import { createPrettyDate } from '../utils/helper';
+	$: date = createPrettyDate(post.date_published);
+	$: updated = createPrettyDate(post.date_updated);
 </script>
 
 <header>
-	<h1>{post['title']}</h1>
+	<h1>{typeof post.title === 'string' ? post.title : post.title.en}</h1>
 	<small>
-		{#if post.date}
+		{#if post.date_updated && post.date_updated !== post.date_published}
 			<span>
-				<time datetime={post.date}>{post['pretty-date']}</time>
+				<time datetime={post.date_updated}>Updated {updated.complete}</time>
 			</span>
 		{/if}
-		{#if post.updated && post.updated !== post.date}
+		{#if post.date_published}
 			<span>
-				<time datetime={post.updated}>Updated {lastWords(2, post['pretty-updated'])}</time>
+				<time datetime={post.date_published}>
+					{#if post.date_published !== post.date_updated}Originally posted on{/if}
+					{date.weekday}, {date.complete}
+				</time>
 			</span>
 		{/if}
-		<span>{post['read-time']} min read</span>
+
+		<span>{post.read_time} min read</span>
 		{#if path}
 			<Edit {path} />
 		{/if}
