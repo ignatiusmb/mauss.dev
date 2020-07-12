@@ -8,7 +8,14 @@
 </script>
 
 <header>
-	<h1>{typeof post.title === 'string' ? post.title : post.title.en}</h1>
+	{#if typeof post.title === 'string'}
+		<h1>{post.title}</h1>
+	{:else if post.title.jp}
+		<h1>{post.title.jp}</h1>
+	{:else}
+		<h1>{post.title.en}</h1>
+	{/if}
+
 	<small>
 		{#if post.date_updated && post.date_updated !== post.date_published}
 			<span>

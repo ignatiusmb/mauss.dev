@@ -14,7 +14,13 @@
 	<img src={post.image.en} alt={post.title.en} />
 	<CardOverlay {show}>
 		<h3>{post.year}</h3>
-		<h3>{post.title.en}</h3>
+		{#if post.title.short}
+			<h3>{post.title.short}</h3>
+		{:else if post.title.jp}
+			<h3>{post.title.jp}</h3>
+		{:else}
+			<h3>{post.title.en}</h3>
+		{/if}
 	</CardOverlay>
 </article>
 <aside>
