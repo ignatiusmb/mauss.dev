@@ -12,7 +12,7 @@
 	import Article from '../../pages/Article.svelte';
 </script>
 
-<MetaHead {post} canonical="curated/{post.slug}" />
+<MetaHead {post} canonical="curated/{post.slug}" title={post.title} />
 
 <Article {post} path="content/curated/{post.slug}.md">
 	<section>
