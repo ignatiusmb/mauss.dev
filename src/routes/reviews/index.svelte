@@ -36,11 +36,16 @@
 		for (const key in filters) {
 			if (!filters[key].length) continue;
 			if (key === 'genres') {
-				filtered = filtered.filter((p) => p.genres.filter((g) => filters.genres.includes(g)).length);
+				const scan = (g) => filters.genres.includes(g);
+				const check = (p) => p.genres.filter(scan).length;
+				filtered = filtered.filter(check);
 			} else if (key === 'categories') {
 				filtered = filtered.filter((p) => filters.categories.includes(p.category));
 			} else if (key === 'verdict') {
 				filtered = filtered.filter((p) => filters.verdict.includes(p.verdict));
+				if (filters.verdict.includes('-2')) {
+					filtered = [...filtered, ...data.filter((p) => !p.verdict)];
+				}
 			} else {
 				if (filters[key] === 'updated') {
 					filtered = filtered.sort(sortCompare);
@@ -87,7 +92,7 @@
 						<input type="checkbox" bind:group={filters.verdict} value="-1" />
 						<span>Not recommended</span>
 					{:else}
-						<input type="checkbox" bind:group={filters.verdict} value="" />
+						<input type="checkbox" bind:group={filters.verdict} value="-2" />
 						<span>Pending</span>
 					{/if}
 				</label>

@@ -2,7 +2,7 @@
 year: 2011
 title:en: anohana: The Flower We Saw That Day
 title:jp:
-genres:
+genres: drama, slice of life, supernatural
 rating: story,artwork,sound,characters
 verdict:
 
