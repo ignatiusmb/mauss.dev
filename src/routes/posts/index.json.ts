@@ -1,6 +1,7 @@
 import { existsSync } from 'fs';
 import { join } from 'path';
 import { parseDir } from '../../utils/parser';
+import { fillSiblings } from '../../utils/article';
 
 export function get(req, res) {
 	const DIR = 'content/posts';
@@ -21,5 +22,5 @@ export function get(req, res) {
 	}).filter((post) => delete post.content);
 
 	res.writeHead(200, { 'Content-Type': 'application/json' });
-	res.end(JSON.stringify(posts));
+	res.end(JSON.stringify(fillSiblings(posts, 'posts/')));
 }

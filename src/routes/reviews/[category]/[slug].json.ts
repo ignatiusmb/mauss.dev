@@ -14,9 +14,9 @@ const parseSpoilers = (content: string, seasonIndex: number) => {
 
 export function get(req, res) {
 	const { category, slug } = req.params;
-	const post = parseFile(`content/reviews/${category}/${slug}.md`, (data, content, filename) => {
-		data['slug'] = filename.split('.')[0];
-		data['category'] = category;
+	const post = parseFile(`content/reviews/${category}/${slug}.md`, (data, content) => {
+		data.slug = `${category}/${slug}`;
+		data.category = category;
 
 		const final = '<!-- CLOSING -->';
 		if (content.includes(final)) {
