@@ -37,7 +37,14 @@ export function sortCompare(x, y) {
 	} else if (x.year && y.year && x.year !== y.year) {
 		return y.year - x.year;
 	}
-	return x.title.localeCompare(y.title);
+
+	if (typeof x.title === 'string' && typeof y.title === 'string') {
+		return x.title.localeCompare(y.title);
+	} else if (typeof x.title === 'string') {
+		return x.title.localeCompare(y.title.en);
+	} else if (typeof y.title === 'string') {
+		return x.title.en.localeCompare(y.title);
+	} else return x.title.en.localeCompare(y.title.en);
 }
 
 export function splitAt(index, text) {
