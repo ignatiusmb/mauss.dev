@@ -6,9 +6,9 @@ import pkg from './package.json';
 import replace from '@rollup/plugin-replace';
 import resolve from '@rollup/plugin-node-resolve';
 import svelte from 'rollup-plugin-svelte';
-import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
 import { terser } from 'rollup-plugin-terser';
+import { preprocess } from './svelte.config';
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
@@ -16,8 +16,6 @@ const legacy = !!process.env.SAPPER_LEGACY_BUILD;
 
 const onwarn = (warning, onwarn) =>
 	(warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message)) || onwarn(warning);
-const dedupe = (importee) => importee === 'svelte' || importee.startsWith('svelte/');
-const preprocess = sveltePreprocess();
 
 export default {
 	client: {
@@ -39,6 +37,7 @@ export default {
 				dedupe: ['svelte'],
 			}),
 			commonjs(),
+			typescript(),
 			json(),
 
 			legacy &&
@@ -46,29 +45,11 @@ export default {
 					extensions: ['.js', '.mjs', '.html', '.svelte'],
 					babelHelpers: 'runtime',
 					exclude: ['node_modules/@babel/**'],
-					presets: [
-						[
-							'@babel/preset-env',
-							{
-								targets: '> 0.25%, not dead',
-							},
-						],
-					],
-					plugins: [
-						'@babel/plugin-syntax-dynamic-import',
-						[
-							'@babel/plugin-transform-runtime',
-							{
-								useESModules: true,
-							},
-						],
-					],
+					presets: [['@babel/preset-env', { targets: '> 0.25%, not dead' }]],
+					plugins: ['@babel/plugin-syntax-dynamic-import', ['@babel/plugin-transform-runtime', { useESModules: true }]],
 				}),
 
-			!dev &&
-				terser({
-					module: true,
-				}),
+			!dev && terser({ module: true }),
 		],
 
 		preserveEntrySignatures: false,
@@ -93,8 +74,8 @@ export default {
 				dedupe: ['svelte'],
 			}),
 			commonjs(),
-			json(),
 			typescript(),
+			json(),
 		],
 		external: Object.keys(pkg.dependencies).concat(
 			require('module').builtinModules || Object.keys(process.binding('natives'))
