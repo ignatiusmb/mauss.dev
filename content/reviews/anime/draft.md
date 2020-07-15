@@ -1,5 +1,6 @@
 ---
 year:
+title:short:
 title:en:
 title:jp:
 genres:
