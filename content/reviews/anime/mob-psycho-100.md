@@ -40,14 +40,25 @@ link:mal: https://myanimelist.net/anime/32182/Mob_Psycho_100
 
 <!-- SPOILERS -->
 
-<figure>
-    <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/psQY-6KjyIA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<figure class="youtube">
+    <div>
+        <iframe src="https://www.youtube-nocookie.com/embed/psQY-6KjyIA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
     <figcaption>
-    OP Breakdown by Mother's Basement
+    'Mob Psycho 100 II OP Breakdown' by Geoff Thew from Mother's Basement
     </figcaption>
 </figure>
 
 <!-- CLOSING -->
+
+<figure class="youtube">
+    <div>
+        <iframe src="https://www.youtube-nocookie.com/embed/k-DyIWF0h-8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <figcaption>
+    'Mob Psycho 100 - Favorite Anime' by Geoff Thew from Mother's Basement
+    </figcaption>
+</figure>
 
 ---
 Reference(s):

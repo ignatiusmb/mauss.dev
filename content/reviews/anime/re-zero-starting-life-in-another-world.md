@@ -1,7 +1,7 @@
 ---
 year: 2016
 title:en: Re:Zero -Starting Life in Another World-
-genres: drama, comedy, fantasy, adventure, thriller, action
+genres: isekai, drama, comedy, fantasy, adventure, thriller, action
 rating: story,artwork,sound,characters
 verdict:
 
