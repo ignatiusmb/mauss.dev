@@ -6,6 +6,7 @@
 	import Navigation from '../components/Navigation.svelte';
 	import Footer from '../components/Footer.svelte';
 
+	import '@ignatiusmb/aqua/lib/aqua.cbs';
 	import '@ignatiusmb/aqua/lib/aqua.min.css';
 	import '../styles/fonts.css';
 	import '../styles/theme.css';
