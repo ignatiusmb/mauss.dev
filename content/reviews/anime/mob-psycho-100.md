@@ -2,7 +2,7 @@
 year: 2016
 title:en: Mob Psycho 100
 genres: action, comedy, supernatural
-rating: story,artwork,sound,characters
+rating: 10,9,10,10
 verdict:
 
 last_seen: 2020-07-14

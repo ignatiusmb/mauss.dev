@@ -2,10 +2,10 @@
 year: 2014
 title:en: Ping Pong the Animation
 genres: sports, drama, seinen
-rating: story,artwork,sound,characters
+rating: 10,8,10,10
 verdict:
 
-last_seen:
+last_seen: 2020-07-19
 date_published: 2020
 image:en: https://fanart.tv/fanart/tv/277464/tvposter/ping-pong-54b1f27191477.jpg
 
