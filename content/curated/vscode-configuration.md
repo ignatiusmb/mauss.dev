@@ -1,6 +1,6 @@
 ---
 title: VS Code Configuration - Extensions and Settings
-date_updated: 2020-06-26
+date_updated: 2020-07-20
 ---
 
 This is my curated list of VS Code extensions that I have installed and its corresponding settings, fully synced on all of my machines. Each extensions has its own purpose and unique perks, I'll explain it briefly for each item in this list.
@@ -226,19 +226,15 @@ Typescript Lint support by Microsoft.
 
 ## JS Framework Complementary
 
-### [Svelte](https://marketplace.visualstudio.com/items?itemName=JamesBirtles.svelte-vscode)
+### [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode)
 
-I know there's the official one made by Svelte called Svelte Beta, but it's still too buggy and there's a lot of problems with the language server. So I've resolved to using this and the extension below for Intellisense.
+The official Svelte extension developed by the internal team is available and it's amazing, I think it's definitely not a question for anyone writing Svelte in VS Code.
 
 ```json
 "[svelte]": {
-  "editor.defaultFormatter": "JamesBirtles.svelte-vscode"
+  "editor.defaultFormatter": "svelte.svelte-vscode"
 },
 ```
-
-### [Svelte Intellisense](https://marketplace.visualstudio.com/items?itemName=ardenivanov.svelte-intellisense)
-
-There's some bug to this extension as well like the server crashing when you hover in the diff editor, but using this in addition with the extension above is still better than the Beta.
 
 ### [Svelte 3 Snippets](https://marketplace.visualstudio.com/items?itemName=fivethree.vscode-svelte-snippets)
 
@@ -529,7 +525,7 @@ XML and YAML language support with syntax highlighting by Red Hat.
     "editor.tabSize": 4
   },
   "[svelte]": {
-    "editor.defaultFormatter": "JamesBirtles.svelte-vscode"
+    "editor.defaultFormatter": "svelte.svelte-vscode"
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
