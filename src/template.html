@@ -8,11 +8,23 @@
 	<meta name="theme-color" content="#ffffff">
 	<script>
 		try {
+			const html = document.querySelector('html');
+			const preferDark = window.matchMedia('(prefers-color-scheme: dark)');
+			preferDark.addEventListener('change', (event) => {
+				if (event.matches) {
+					html.classList.remove('light');
+					html.classList.add('dark');
+					localStorage.theme = 'dark';
+				} else if (!event.matches) {
+					html.classList.remove('dark');
+					html.classList.add('light');
+					localStorage.theme = 'light';
+				}
+			});
 			if (!localStorage.theme) {
-				const preferDark = window.matchMedia('(prefers-color-scheme: dark)');
-				localStorage.theme = preferDark ? 'dark' : 'light';
+				localStorage.theme = preferDark.matches ? 'dark' : 'light';
 			}
-			document.querySelector('html').classList.add(localStorage.theme);
+			html.classList.add(localStorage.theme);
 		} catch (error) {
 			console.error(error);
 		}
