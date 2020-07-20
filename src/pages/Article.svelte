@@ -93,12 +93,12 @@
 	}
 	article :global(h2),
 	article :global(h3) {
+		font-weight: bold;
 		font-family: var(--aqua-heading);
 	}
 	article :global(h2) {
 		margin-top: 1.5em;
 		font-size: clamp(1.5rem, 4vw, 2rem);
-		font-weight: bold;
 	}
 	article :global(h2 + h3) {
 		margin-top: 0.5em;
@@ -106,7 +106,6 @@
 	article :global(h3) {
 		margin: 1em 0 -0.25em;
 		font-size: clamp(1.2rem, 4vw, 1.5rem);
-		font-weight: bold;
 	}
 	article :global(ol + h3),
 	article :global(ul + h3) {
@@ -144,6 +143,24 @@
 		margin-top: 2em;
 		border: 0;
 		background-color: var(--fg-color);
+	}
+	article :global(figure figcaption) {
+		padding: 0 0.25em;
+		text-align: center;
+		font: 80% var(--aqua-monospace);
+	}
+	article :global(figure.youtube > div) {
+		height: 0;
+		position: relative;
+		padding-bottom: 56.25%;
+		margin-bottom: 0.5em;
+	}
+	article :global(figure.youtube iframe) {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
 	}
 	article :global(.aqua.code-box) {
 		line-height: unset;

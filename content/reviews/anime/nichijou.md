@@ -1,14 +1,17 @@
 ---
-year: 2018
-title:short: Re:ZERO - Memory Snow
-title:en: Re:ZERO -Starting Life in Another World-: Memory Snow
-genres: animation, adventure, fantasy
+year: 2011
+title:short: Nichijou
+title:en: Nichijou: My Ordinary Life
+title:jp:
+genres: comedy
 rating: story,artwork,sound,characters
 verdict:
 
-last_seen: 2020-07-14
+last_seen: 2020
 date_published: 2020
-image:en: https://image.tmdb.org/t/p/original/f5KeRheRVlru6Xexp7MadGB0YEd.jpg
+date_updated: 2020
+image:en: https://image.tmdb.org/t/p/original/qmi1VpOvPFRHg02fbLuc3pVrMbt.jpg
+image:jp:
 
 link:mal:
 ---
