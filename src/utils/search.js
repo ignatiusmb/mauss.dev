@@ -1,7 +1,11 @@
 import { compareDate, sortCompare } from './helper';
 
-const exists = (source, query) => source.toLowerCase().includes(query.toLowerCase());
-const compare = (source, queries) => queries.filter((q) => exists(source, q)).length;
+const exists = (source, query) =>
+	typeof source === 'string' ? source.toLowerCase().includes(query.toLowerCase()) : false;
+const compare = (source, queries) =>
+	Array.isArray(source)
+		? source.filter((s) => compare(s, queries)).length
+		: queries.filter((q) => exists(source, q)).length;
 const check = (source, queries) => compare(source, queries) === queries.length;
 
 export function sieve(query, data) {
@@ -18,9 +22,13 @@ export function filter(dict, data) {
 	let filtered = data;
 	for (const key in dict) {
 		if (!dict[key].length || key === 'sort') continue;
-		if (key === 'genres') filtered = data.filter((p) => compare(p.genres, dict.genres));
-		if (key === 'categories') filtered = data.filter((p) => compare(p.category, dict.categories));
-		if (key === 'verdict') {
+		if (key === 'tags') {
+			filtered = data.filter((p) => compare(p.tags, dict.tags));
+		} else if (key === 'genres') {
+			filtered = data.filter((p) => compare(p.genres, dict.genres));
+		} else if (key === 'categories') {
+			filtered = data.filter((p) => compare(p.category, dict.categories));
+		} else if (key === 'verdict') {
 			filtered = data.filter((p) => compare(p.verdict, dict.verdict));
 			if (dict.verdict.includes('-2')) filtered = [...filtered, ...data.filter((p) => !p.verdict)];
 		}
