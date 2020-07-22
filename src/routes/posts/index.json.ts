@@ -18,7 +18,7 @@ export function get(req, res) {
 			}
 		}
 
-		return { slug, ...data, date_published, content };
+		return { slug, ...data, category: data.tags[0], date_published, content };
 	}).filter((post) => delete post.content);
 
 	res.writeHead(200, { 'Content-Type': 'application/json' });
