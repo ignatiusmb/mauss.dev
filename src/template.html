@@ -10,21 +10,14 @@
 		try {
 			const html = document.querySelector('html');
 			const preferDark = window.matchMedia('(prefers-color-scheme: dark)');
-			preferDark.addEventListener('change', (event) => {
-				if (event.matches) {
-					html.classList.remove('light');
-					html.classList.add('dark');
-					localStorage.theme = 'dark';
-				} else if (!event.matches) {
-					html.classList.remove('dark');
-					html.classList.add('light');
-					localStorage.theme = 'light';
-				}
-			});
-			if (!localStorage.theme) {
-				localStorage.theme = preferDark.matches ? 'dark' : 'light';
-			}
+			const initial = preferDark.matches ? 'dark' : 'light';
+			if (!localStorage.theme) localStorage.theme = initial;
 			html.classList.add(localStorage.theme);
+			preferDark.addEventListener('change', function (event) {
+				const theme = event.matches ? 'dark' : 'light';
+				html.classList.add(theme), localStorage.theme = theme;
+				html.classList.remove(event.matches ? 'light' : 'dark');
+			});
 		} catch (error) {
 			console.error(error);
 		}
