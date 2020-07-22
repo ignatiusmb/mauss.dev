@@ -70,6 +70,7 @@ export function parseFile(filename: string, parseCallback: Function) {
 	const [cleanedFilename] = filename.split(/[\/\\]/).slice(-1);
 	const article = content.slice(rawData.length + 1);
 	const result = parseCallback(frontMatter, article, cleanedFilename);
+	if (!result) return;
 
 	if (result.date_published && !result.date_updated) {
 		result.date_updated = result.date_published;
