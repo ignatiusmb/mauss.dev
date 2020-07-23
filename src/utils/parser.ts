@@ -20,7 +20,8 @@ const markIt = require('markdown-it')({
 
 const countAverageRating = (str: string) => {
 	const ratings = str.split(',').map((v) => parseInt(v.trim()));
-	return ratings.reduce((acc, cur) => acc + cur, 0) / ratings.length;
+	const total = ratings.reduce((acc, cur) => acc + cur, 0);
+	return Math.round((total / ratings.length + Number.EPSILON) * 100) / 100;
 };
 
 const countReadTime = (content: string) => {
@@ -46,10 +47,6 @@ const extractMeta = (metadata: string) =>
 			acc[key] = val.split(',').map((v: string) => v.trim());
 		} else if (key === 'rating') {
 			acc[key] = countAverageRating(val);
-		} else if (key.slice(0, 4) === 'link') {
-			if (!acc['link']) acc['link'] = [];
-			if (!key.includes(':')) acc['link'] = val.trim();
-			else acc['link'].push({ name: key.slice(5), url: val.trim() });
 		} else if (key.includes(':')) {
 			const [attr, category] = splitAt(key.indexOf(':'), key);
 			if (!acc[attr]) acc[attr] = {};
