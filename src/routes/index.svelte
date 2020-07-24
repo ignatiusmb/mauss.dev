@@ -18,12 +18,11 @@
 
 <script>
 	export let data;
+	import Link from '@ignatiusmb/elements/svelte/Link.svelte';
 	import MetaHead from '../pages/MetaHead.svelte';
 	import Article from '../pages/Article.svelte';
-	import Link from '../svelte/Link.svelte';
-
-	import { mobile } from '../stores';
 	import Navigation from '../components/Navigation.svelte';
+	import { mobile } from '../stores';
 	let scrollY, innerHeight;
 	$: scrolled = scrollY >= innerHeight * 0.7;
 </script>
@@ -40,7 +39,7 @@
 
 <Article header={false}>
 	<header slot="header">
-		<Link href="https://github.com/ignatiusmb/">
+		<Link newTab href="https://github.com/ignatiusmb/">
 			<div class="dashed-border" />
 			<img src="profile/mauss.jpeg" alt="Mauss Profile" />
 		</Link>
