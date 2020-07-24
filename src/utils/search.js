@@ -36,9 +36,16 @@ export function filter(dict, data) {
 	return sort(dict['sort'] || 'updated', filtered);
 }
 
+const sortByRatings = (x, y) => {
+	if (x.rating === null || x.rating === undefined) return 1;
+	if (y.rating === null || y.rating === undefined) return 0;
+	if (isNaN(x.rating - y.rating)) return sortCompare(x, y);
+	return x.rating < y.rating;
+};
+
 export function sort(type, data) {
 	if (type === 'updated') return data.sort(sortCompare);
-	if (type === 'rating') return data.sort((x, y) => y.rating - x.rating || sortCompare(x, y));
+	if (type === 'rating') return data.sort(sortByRatings);
 	if (type === 'year') return data.sort((x, y) => y.year - x.year || sortCompare(x, y));
 	if (type === 'published')
 		return data.sort((x, y) => {
