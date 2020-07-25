@@ -1,12 +1,9 @@
 <script>
 	export let to = '';
+	export let path = '';
 	export let hover = false;
 
-	import { stores } from '@sapper/app';
-	const { page } = stores();
-
-	$: segment = $page.path.split('/')[1];
-	$: isCurrent = (to) => (segment === to ? 'page' : undefined);
+	$: isCurrent = (to) => (path === to ? 'page' : undefined);
 </script>
 
 <a rel="prefetch" aria-current={isCurrent(to)} href="/{to}" class:hover>
