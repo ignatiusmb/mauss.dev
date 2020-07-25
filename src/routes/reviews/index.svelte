@@ -97,9 +97,9 @@
 
 <main>
 	{#each sieved.slice($store * bound, $store * bound + bound) as post (post.slug)}
-		<section animate:flip={{ duration }} transition:scale|local={{ duration }}>
+		<div animate:flip={{ duration }} transition:scale|local={{ duration }}>
 			<ReviewCard {post} />
-		</section>
+		</div>
 	{:else}
 		<h2>There are no matching {query ? 'titles' : 'filters'}</h2>
 	{/each}
@@ -113,20 +113,16 @@
 
 <style>
 	main {
+		max-width: 84em;
 		width: 100%;
-		max-width: 79em;
 		position: relative;
 		display: grid;
 		gap: 1em;
-		grid-template-columns: repeat(auto-fill, 12em);
-		justify-content: center;
+		grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
 		padding: 0 1em;
 		margin: 0 auto;
 	}
-	main section {
-		display: grid;
-		grid-template-rows: 1fr auto;
-		width: 100%;
+	main div {
 		border-radius: 0.25em;
 		box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
 		background-color: var(--bg-color-secondary);

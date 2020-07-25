@@ -59,16 +59,9 @@
 
 <main>
 	{#each sieved.slice($store * bound, $store * bound + bound) as post (post.slug)}
-		<section animate:flip={{ duration }} transition:scale|local={{ duration }}>
-			<PostCard {post}>
-				<div>
-					<h3>{post.title}</h3>
-					{#if post.description}
-						<small>{post.description}</small>
-					{/if}
-				</div>
-			</PostCard>
-		</section>
+		<div animate:flip={{ duration }} transition:scale|local={{ duration }}>
+			<PostCard {post} />
+		</div>
 	{/each}
 </main>
 
@@ -80,33 +73,19 @@
 
 <style>
 	main {
+		max-width: 84em;
 		width: 100%;
-		max-width: 82em;
-		padding: 0 1em;
-	}
-	main section {
-		display: grid;
-		grid-template-rows: 1fr 3em;
-		width: 100%;
-		border-radius: 0.25em;
-		box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
-		background-color: var(--bg-color-secondary);
-	}
-
-	main {
 		display: grid;
 		gap: 1em;
-		grid-template-columns: repeat(auto-fill, minmax(auto, 26em));
+		grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
 		justify-content: center;
+		padding: 0 1em;
 		margin: 0 auto;
+	}
+	main div {
+		display: grid;
 	}
 	main :global(img:not([src])) {
 		display: none;
-	}
-	main div {
-		padding: 1em;
-	}
-	main h3 {
-		margin-bottom: 1em;
 	}
 </style>

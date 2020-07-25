@@ -5,7 +5,7 @@
 <style>
 	header {
 		width: 100%;
-		max-width: 80em;
+		max-width: 84em;
 		display: grid;
 		gap: 1em;
 		justify-content: stretch;
