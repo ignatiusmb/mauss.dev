@@ -18,12 +18,6 @@ const markIt = require('markdown-it')({
 	},
 });
 
-const countAverageRating = (str: string) => {
-	const ratings = str.split(',').map((v) => parseInt(v.trim()));
-	const total = ratings.reduce((acc, cur) => acc + cur, 0);
-	return Math.round((total / ratings.length + Number.EPSILON) * 100) / 100;
-};
-
 const countReadTime = (content: string) => {
 	const paragraphs = content.split('\n').filter((p) => p);
 	const words = paragraphs.reduce((acc, cur) => {
@@ -38,15 +32,15 @@ const countReadTime = (content: string) => {
 	return time ? time : 1;
 };
 
-const extractMeta = (metadata: string) =>
-	metadata.split(/\r?\n/).reduce((acc, cur: string) => {
+const extractMeta = (metadata: string) => {
+	const lines = metadata.split(/\r?\n/);
+	return lines.reduce((acc, cur: string) => {
 		if (!cur.includes(': ')) return acc;
 		const [key, val]: [string, string] = splitAt(cur.indexOf(': '), cur);
 
-		if (key === 'tags' || key === 'genres') {
-			acc[key] = val.split(',').map((v: string) => v.trim());
-		} else if (key === 'rating') {
-			acc[key] = countAverageRating(val);
+		if (val.includes(',')) {
+			const items = val.split(',').map((v) => v.trim());
+			acc[key] = items.filter(Boolean);
 		} else if (key.includes(':')) {
 			const [attr, category] = splitAt(key.indexOf(':'), key);
 			if (!acc[attr]) acc[attr] = {};
@@ -55,6 +49,7 @@ const extractMeta = (metadata: string) =>
 
 		return acc;
 	}, {});
+};
 
 export const aquaMark = (content: string) => markIt.render(content);
 
@@ -74,7 +69,7 @@ export function parseFile(filename: string, parseCallback: Function) {
 	}
 
 	result.read_time = countReadTime(article);
-	result.content = aquaMark(result.content);
+	if (result.content) result.content = aquaMark(result.content);
 	return result;
 }
 

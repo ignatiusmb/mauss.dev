@@ -1,3 +1,9 @@
+export function countAverageRating(ratings: Array<string>) {
+	if (!ratings) return null;
+	const total = ratings.reduce((acc, cur) => acc + parseInt(cur), 0);
+	return Math.round((total / ratings.length + Number.EPSILON) * 100) / 100;
+}
+
 export function fillSiblings(articles: Array<Article>, base: string, breakpoint?: Function) {
 	for (let i = 0; i < articles.length; i++) {
 		if (!articles[i]['siblings']) articles[i]['siblings'] = {};

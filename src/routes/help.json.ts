@@ -1,7 +1,8 @@
+import { Request, Response } from 'express';
 import { parseFile } from '../utils/parser';
 
-export function get(req, res) {
-	const article = parseFile('content/help.md', (data, content) => {
+export function get(_: Request, res: Response) {
+	const article = parseFile('content/help.md', (data: any, content: string) => {
 		return { ...data, content };
 	});
 

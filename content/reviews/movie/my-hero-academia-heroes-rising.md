@@ -2,7 +2,7 @@
 year: 2019
 title:en: My Hero Academia: Heroes Rising
 title:jp: Boku no Hero Academia: Heroes:Rising
-genres: animation
+genres: animation,
 rating: 5,10,9,8
 verdict:
 

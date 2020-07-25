@@ -1,4 +1,6 @@
+import { Request, Response } from 'express';
 import { parseFile, aquaMark } from '../../../utils/parser';
+import { countAverageRating } from '../../../utils/article';
 
 const parseSpoilers = (content: string, seasonIndex: number) => {
 	const separator = '<!-- SPOILERS -->';
@@ -12,11 +14,13 @@ const parseSpoilers = (content: string, seasonIndex: number) => {
 	};
 };
 
-export function get(req, res) {
+export function get(req: Request, res: Response) {
 	const { category, slug } = req.params;
-	const post = parseFile(`content/reviews/${category}/${slug}.md`, (data, content) => {
+	const filepath = `content/reviews/${category}/${slug}.md`;
+	const post = parseFile(filepath, (data: Review, content: string) => {
 		data.slug = `${category}/${slug}`;
 		data.category = category;
+		data.rating = countAverageRating(data.rating);
 
 		const final = '<!-- CLOSING -->';
 		if (content.includes(final)) {
