@@ -32,7 +32,6 @@
 
 <style>
 	section {
-		cursor: pointer;
 		display: grid;
 		grid-template-rows: auto 1fr 3em;
 		border-radius: 0.25em;
@@ -41,6 +40,7 @@
 		transform: translate(0%);
 	}
 	section > :global(.elements.image) {
+		cursor: pointer;
 		border-bottom-right-radius: 0;
 		border-bottom-left-radius: 0;
 		background-color: rgba(0, 0, 0, 0.15);
