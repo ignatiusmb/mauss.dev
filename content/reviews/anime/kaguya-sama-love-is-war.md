@@ -4,10 +4,10 @@ title:short: Kaguya-sama: Love is War
 title:en: Kaguya-sama: Love is War
 title:jp: Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen
 genres: comedy, romance, school, seinen
-rating: story,artwork,sound,characters
+rating: 10,9,10,10, 9,9,10,9
 verdict:
 
-last_seen: 2020
+last_seen: 2020-07-21
 date_published: 2020
 date_updated: 2020
 image:en: https://image.tmdb.org/t/p/original/dA93MnalfNLHMMlDcTCfX4QJb5Q.jpg
