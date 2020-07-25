@@ -1,14 +1,18 @@
 <script>
 	export let mobile;
 	export let scrolled = false;
-	import Icon from '../svelte/Icon.svelte';
-	import Link from '../svelte/Link.svelte';
-	import NavLink from '../svelte/NavLink.svelte';
-	import ToggleTheme from '../svelte/ToggleTheme.svelte';
-	import NavGrid from './NavGrid.svelte';
 
 	import { stores } from '@sapper/app';
-	const { preloading } = stores();
+	const { preloading, page } = stores();
+	const sections = ['about', 'curated', 'posts', 'reviews', 'uses'];
+
+	import ThemeSwitcher from '@ignatiusmb/elements/svelte/ThemeSwitcher.svelte';
+	import Hamburger from '../svelte/Hamburger.svelte';
+	import NavLink from '../svelte/NavLink.svelte';
+	import HelpSign from '../svelte/HelpSign.svelte';
+	import NavGrid from './NavGrid.svelte';
+
+	$: path = $page.path.split('/')[1];
 	$: opened = $preloading ? false : opened;
 	$: scrolled = mobile ? true : scrolled;
 </script>
@@ -17,9 +21,7 @@
 
 <nav class:scrolled>
 	{#if mobile}
-		<span on:click={() => (opened = !opened)} style="cursor:pointer">
-			<Icon name={opened ? 'close' : 'menu'} />
-		</span>
+		<Hamburger bind:opened />
 	{/if}
 
 	<NavLink>
@@ -28,18 +30,14 @@
 
 	{#if !mobile || opened}
 		<NavGrid {mobile}>
-			<NavLink hover to="about">about</NavLink>
-			<NavLink hover to="curated">curated</NavLink>
-			<NavLink hover to="posts">posts</NavLink>
-			<NavLink hover to="reviews">reviews</NavLink>
-			<NavLink hover to="uses">uses</NavLink>
+			{#each sections as to}
+				<NavLink {path} {to} hover>{to}</NavLink>
+			{/each}
 		</NavGrid>
 	{/if}
 
-	<Link href="help" inherit>
-		<Icon name="help" />
-	</Link>
-	<ToggleTheme />
+	<HelpSign />
+	<ThemeSwitcher />
 </nav>
 
 <style>
