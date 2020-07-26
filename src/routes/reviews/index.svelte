@@ -2,69 +2,40 @@
 	export async function preload() {
 		const data = await this.fetch('reviews.json').then((r) => r.json());
 		const genres = data.flatMap((p) => p.genres);
-		const unique = {
-			categories: data.reduce((a, c) => (a.includes(c.category) ? a : [...a, c.category]), []),
-			genres: genres.reduce((a, c) => (a.includes(c) ? a : c ? [...a, c] : a), []).sort(),
+		return {
+			data,
+			unique: {
+				categories: data.reduce((a, c) => (a.includes(c.category) ? a : [...a, c.category]), []),
+				genres: genres.reduce((a, c) => (a.includes(c) ? a : c ? [...a, c] : a), []).sort(),
+			},
 			verdict: data.reduce((a, c) => (a.includes(c.verdict) ? a : [...a, c.verdict]), []),
 		};
-		return { data, unique };
 	}
 </script>
 
 <script>
-	export let data, unique;
+	export let data, unique, verdict;
+	import { flip } from 'svelte/animate';
+	import { scale } from 'svelte/transition';
+	const bound = 12;
+	const duration = 100;
+
+	import SearchBar from '@ignatiusmb/elements/svelte/SearchBar.svelte';
+	import Pagination from '@ignatiusmb/elements/svelte/Pagination.svelte';
 	import MetaHead from '../../pages/MetaHead.svelte';
 	import PageHeader from '../../pages/PageHeader.svelte';
 	import Centered from '../../pages/Centered.svelte';
-	import Searchbar from '../../svelte/Searchbar.svelte';
-	import Pagination from '../../svelte/Pagination.svelte';
-
-	import FilterGrid from '../../components/FilterGrid.svelte';
 	import ReviewCard from '../../components/ReviewCard.svelte';
 
-	import { mobile, rSlice } from '../../stores';
-	const bound = 12;
-	const duration = 100;
-	import { flip } from 'svelte/animate';
-	import { scale } from 'svelte/transition';
-	import { sieve } from '../../utils/search';
-	import { compareDate, sortCompare } from '../../utils/helper';
-	let query, show, filtered, sieved;
+	import { sieve, filter } from '../../utils/search';
+	import { mobile, rSlice as store } from '../../stores';
+	let query, sieved;
 	let filters = { categories: [], genres: [], verdict: [], sort: 'updated' };
 
-	$: {
-		filtered = data;
-		for (const key in filters) {
-			if (!filters[key].length) continue;
-			if (key === 'genres') {
-				const scan = (g) => filters.genres.includes(g);
-				const check = (p) => p.genres.filter(scan).length;
-				filtered = filtered.filter(check);
-			} else if (key === 'categories') {
-				filtered = filtered.filter((p) => filters.categories.includes(p.category));
-			} else if (key === 'verdict') {
-				filtered = filtered.filter((p) => filters.verdict.includes(p.verdict));
-				if (filters.verdict.includes('-2')) {
-					filtered = [...filtered, ...data.filter((p) => !p.verdict)];
-				}
-			} else {
-				if (filters[key] === 'updated') {
-					filtered = filtered.sort(sortCompare);
-				} else if (filters[key] === 'rating') {
-					filtered = filtered.sort((x, y) => y.rating - x.rating || sortCompare(x, y));
-				} else if (filters[key] === 'published') {
-					filtered = filtered.sort((x, y) => {
-						return compareDate(x.date_published, y.date_published) || sortCompare(x, y);
-					});
-				} else if (filters[key] === 'year') {
-					filtered = filtered.sort((x, y) => y.year - x.year || sortCompare(x, y));
-				}
-			}
-		}
-	}
+	$: filtered = filter(filters, data);
 	$: sieved = query ? sieve(query, filtered) : filtered;
 	$: total = sieved.length;
-	$: $rSlice = $rSlice * bound > total ? 0 : $rSlice;
+	$: $store = $store * bound > total ? 0 : $store;
 </script>
 
 <MetaHead
@@ -74,11 +45,11 @@
 
 <PageHeader>
 	<h1>Mauss Reviews</h1>
-	<Searchbar bind:query filters on:filter={() => (show = !show)} />
-	<FilterGrid {show} {unique} bind:filters>
+
+	<SearchBar bind:query bind:filters {unique}>
 		<section>
 			<h3>Verdict</h3>
-			{#each unique.verdict as rec}
+			{#each verdict as rec}
 				<label>
 					{#if rec === '2'}
 						<input type="checkbox" bind:group={filters.verdict} value="2" />
@@ -119,15 +90,16 @@
 				<span>Rating</span>
 			</label>
 		</section>
-	</FilterGrid>
-	<Pagination store={rSlice} {total} {bound} />
+	</SearchBar>
+
+	<Pagination {store} {total} {bound} />
 </PageHeader>
 
 <main>
-	{#each sieved.slice($rSlice * bound, $rSlice * bound + bound) as post (post.slug)}
-		<section animate:flip={{ duration }} transition:scale|local={{ duration }}>
+	{#each sieved.slice($store * bound, $store * bound + bound) as post (post.slug)}
+		<div animate:flip={{ duration }} transition:scale|local={{ duration }}>
 			<ReviewCard {post} />
-		</section>
+		</div>
 	{:else}
 		<h2>There are no matching {query ? 'titles' : 'filters'}</h2>
 	{/each}
@@ -135,26 +107,22 @@
 
 {#if $mobile}
 	<Centered>
-		<Pagination store={rSlice} {total} {bound} />
+		<Pagination {store} {total} {bound} />
 	</Centered>
 {/if}
 
 <style>
 	main {
+		max-width: 84em;
 		width: 100%;
-		max-width: 79em;
 		position: relative;
 		display: grid;
 		gap: 1em;
-		grid-template-columns: repeat(auto-fill, 12em);
-		justify-content: center;
+		grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
 		padding: 0 1em;
 		margin: 0 auto;
 	}
-	main section {
-		display: grid;
-		grid-template-rows: 1fr auto;
-		width: 100%;
+	main div {
 		border-radius: 0.25em;
 		box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
 		background-color: var(--bg-color-secondary);

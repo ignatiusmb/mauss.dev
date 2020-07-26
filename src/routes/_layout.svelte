@@ -1,8 +1,7 @@
 <script>
 	export let segment;
-	import IconList from '../svelte/IconList.svelte';
-	import ScrollTop from '../svelte/ScrollTop.svelte';
-
+	import FeatherIcons from '@ignatiusmb/elements/svelte/FeatherIcons.svelte';
+	import ScrollTop from '@ignatiusmb/elements/svelte/ScrollTop.svelte';
 	import Navigation from '../components/Navigation.svelte';
 	import Footer from '../components/Footer.svelte';
 
@@ -19,7 +18,7 @@
 </script>
 
 <svelte:window bind:innerWidth />
-<IconList />
+<FeatherIcons />
 <ScrollTop />
 
 {#if segment}

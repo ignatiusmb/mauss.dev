@@ -8,11 +8,16 @@
 	<meta name="theme-color" content="#ffffff">
 	<script>
 		try {
-			if (!localStorage.theme) {
-				const preferDark = window.matchMedia('(prefers-color-scheme: dark)');
-				localStorage.theme = preferDark ? 'dark' : 'light';
-			}
-			document.querySelector('html').classList.add(localStorage.theme);
+			const html = document.querySelector('html');
+			const preferDark = window.matchMedia('(prefers-color-scheme: dark)');
+			const initial = preferDark.matches ? 'dark' : 'light';
+			if (!localStorage.theme) localStorage.theme = initial;
+			html.classList.add(localStorage.theme);
+			preferDark.addEventListener('change', function (event) {
+				const theme = event.matches ? 'dark' : 'light';
+				html.classList.add(theme), localStorage.theme = theme;
+				html.classList.remove(event.matches ? 'light' : 'dark');
+			});
 		} catch (error) {
 			console.error(error);
 		}

@@ -9,9 +9,9 @@
 
 <script>
 	export let section, post;
+	import Link from '@ignatiusmb/elements/svelte/Link.svelte';
 	import MetaHead from '../../pages/MetaHead.svelte';
 	import Article from '../../pages/Article.svelte';
-	import Link from '../../svelte/Link.svelte';
 	import { capitalize } from '../../utils/helper';
 </script>
 

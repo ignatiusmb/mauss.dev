@@ -1,85 +1,71 @@
 <script>
 	export let post;
+	import Image from '@ignatiusmb/elements/svelte/Image.svelte';
 	import ButtonLink from '../svelte/ButtonLink.svelte';
 	import { createPrettyDate } from '../utils/helper';
 	const date = createPrettyDate(post.date_published);
 	const updated = createPrettyDate(post.date_updated);
 </script>
 
-<article>
-	<div>
-		<img src={post.image ? post.image.en : null} alt={post.title} />
+<section>
+	<Image src={post.image ? post.image.en : null} alt={post.title} overlay>
+		<span>{post.title}</span>
+	</Image>
+
+	<div class="content">
+		<h3>{post.title}</h3>
+		{#if post.description}
+			<small>{post.description}</small>
+		{/if}
 	</div>
-	<slot />
-</article>
-<aside>
-	{#if post.date_updated && post.date_updated !== post.date_published}
-		<small>Updated {updated.day} {updated.month} {updated.year}</small>
-	{:else}
-		<small>{date.day} {date.month} {date.year}</small>
-	{/if}
-	<small>{post.read_time} min read</small>
-	<ButtonLink href="posts/{post.slug}">read</ButtonLink>
-</aside>
+
+	<aside>
+		{#if post.date_updated && post.date_updated !== post.date_published}
+			<small>Updated {updated.day} {updated.month} {updated.year}</small>
+		{:else}
+			<small>{date.day} {date.month} {date.year}</small>
+		{/if}
+		<small>{post.read_time} min read</small>
+		<ButtonLink href="posts/{post.slug}">read</ButtonLink>
+	</aside>
+</section>
 
 <style>
-	article {
+	section {
 		display: grid;
-		grid-template-rows: 14.4em 1fr;
-		cursor: pointer;
-		border-top-left-radius: inherit;
-		border-top-right-radius: inherit;
+		grid-template-rows: auto 1fr 3em;
+		border-radius: 0.25em;
+		box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+		background-color: var(--bg-color-secondary);
 		transform: translate(0%);
 	}
-	article::before {
-		content: '';
-		opacity: 0;
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		border-radius: inherit;
-		background-color: var(--bg-inverse);
-		transition: opacity 15ms linear, background-color 15ms linear;
-	}
-	article:hover::before {
-		opacity: 0.04;
-	}
-	div {
-		position: relative;
-		border-top-left-radius: inherit;
-		border-top-right-radius: inherit;
+	section > :global(.elements.image) {
+		cursor: pointer;
+		border-bottom-right-radius: 0;
+		border-bottom-left-radius: 0;
 		background-color: rgba(0, 0, 0, 0.15);
 	}
-	img {
-		object-fit: cover;
-		width: 100%;
-		height: 100%;
-		border-top-left-radius: inherit;
-		border-top-right-radius: inherit;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		text-align: center;
+	.content {
+		display: grid;
+		gap: 1em;
+		align-content: flex-start;
+		padding: 1em;
+		line-height: 1.5;
 	}
-
 	aside {
-		min-height: 3em;
-		display: flex;
+		display: grid;
+		gap: 0.5em;
+		grid-template-columns: auto auto 1fr;
 		align-items: center;
 		padding: 0.5em;
+		padding-left: 1em;
 	}
-	aside small {
-		margin-right: 0.5rem;
-	}
-	aside small:first-child {
-		margin-left: 0.5rem;
-	}
-	aside small:not(:last-of-type)::after {
+	aside small:not(:first-of-type)::before {
 		content: '•';
 		color: var(--mauss-secondary);
-		margin-left: 0.5em;
+		margin-right: 0.5em;
 	}
 	aside :global(:last-child) {
-		margin-left: auto;
+		justify-self: end;
 	}
 </style>

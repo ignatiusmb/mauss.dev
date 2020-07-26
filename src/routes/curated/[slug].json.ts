@@ -1,8 +1,10 @@
+import { Request, Response } from 'express';
 import { parseFile } from '../../utils/parser';
 
-export function get(req, res) {
+export function get(req: Request, res: Response) {
 	const { slug } = req.params;
-	const post = parseFile(`content/curated/${slug}.md`, (data, content) => {
+	const filepath = `content/curated/${slug}.md`;
+	const post = parseFile(filepath, (data: any, content: string) => {
 		return { slug, ...data, content };
 	});
 

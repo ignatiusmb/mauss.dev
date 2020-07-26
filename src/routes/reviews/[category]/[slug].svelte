@@ -39,8 +39,8 @@
 	<small slot="header">
 		{#if post.link}
 			<span>
-				{#each post.link as { name, url }}
-					<a href={url}>{linkMap[name]}</a>
+				{#each Object.keys(post.link) as linkKey}
+					<a href={post.link[linkKey]}>{linkMap[linkKey]}</a>
 				{/each}
 			</span>
 		{/if}

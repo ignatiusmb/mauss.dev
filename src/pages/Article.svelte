@@ -3,15 +3,15 @@
 	export let post = null;
 	export let path = null;
 	export let siblings = null;
+	import ProgressBar from '@ignatiusmb/elements/svelte/ProgressBar.svelte';
+	import Link from '@ignatiusmb/elements/svelte/Link.svelte';
 	import Header from './Header.svelte';
-	import Link from '../svelte/Link.svelte';
 	import Edit from '../svelte/Edit.svelte';
 	import Siblings from '../svelte/Siblings.svelte';
-	import Progressbar from '../svelte/Progressbar.svelte';
 </script>
 
 {#if header}
-	<Progressbar />
+	<ProgressBar />
 {/if}
 
 <article>
@@ -30,9 +30,9 @@
 			<p>Find an issue with this post? Have something to add, update, or clarify? All my posts here are editable.</p>
 			<p>
 				Just create a new
-				<Link href="https://github.com/ignatiusmb/mauss/issues">Issue</Link>
+				<Link newTab href="https://github.com/ignatiusmb/mauss/issues">Issue</Link>
 				or
-				<Link href="https://github.com/ignatiusmb/mauss/pulls">PR</Link>
+				<Link newTab href="https://github.com/ignatiusmb/mauss/pulls">PR</Link>
 				on GitHub, any fix or addition is much appreciated!
 				<Edit {path} />
 			</p>

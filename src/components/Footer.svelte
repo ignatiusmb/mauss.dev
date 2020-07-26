@@ -1,7 +1,7 @@
 <script>
 	export let mobile;
-	import Icon from '../svelte/Icon.svelte';
-	import Link from '../svelte/Link.svelte';
+	import Link from '@ignatiusmb/elements/svelte/Link.svelte';
+	import Icon from '@ignatiusmb/elements/svelte/Icon.svelte';
 	$: size = mobile ? 20 : 30;
 </script>
 
@@ -11,25 +11,25 @@
 	</section>
 
 	<section class="social-links">
-		<Link href="https://www.facebook.com/ignatiusmb" label="facebook profile">
+		<Link newTab href="https://www.facebook.com/ignatiusmb" label="facebook profile">
 			<Icon name="facebook" {size} />
 		</Link>
-		<Link href="https://twitter.com/ignatiusmbs" label="twitter profile">
+		<Link newTab href="https://twitter.com/ignatiusmbs" label="twitter profile">
 			<Icon name="twitter" {size} />
 		</Link>
-		<Link href="https://www.instagram.com/ignatiusmb" label="instagram profile">
+		<Link newTab href="https://www.instagram.com/ignatiusmb" label="instagram profile">
 			<Icon name="instagram" {size} />
 		</Link>
-		<Link href="https://www.linkedin.com/in/ignatiusmb" label="linkedin profile">
+		<Link newTab href="https://www.linkedin.com/in/ignatiusmb" label="linkedin profile">
 			<Icon name="linkedin" {size} />
 		</Link>
-		<Link href="https://github.com/ignatiusmb" label="github profile">
+		<Link newTab href="https://github.com/ignatiusmb" label="github profile">
 			<Icon name="github" {size} />
 		</Link>
-		<Link href="https://gitlab.com/ignatiusmb" label="gitlab profile">
+		<Link newTab href="https://gitlab.com/ignatiusmb" label="gitlab profile">
 			<Icon name="gitlab" {size} />
 		</Link>
-		<Link href="https://www.youtube.com/user/Ignapure/playlists" label="youtube playlist profile">
+		<Link newTab href="https://www.youtube.com/user/Ignapure/playlists" label="youtube playlist profile">
 			<Icon name="youtube" {size} />
 		</Link>
 	</section>
@@ -38,9 +38,9 @@
 		<p>Copyright &copy; 2017 &ndash; {new Date().getFullYear()} Ignatius Bagussuputra</p>
 		<p>
 			Made with ❤️ using
-			<Link href="https://svelte.dev/">Svelte</Link>
+			<Link newTab href="https://svelte.dev/">Svelte</Link>
 			&plus;
-			<Link href="https://sapper.svelte.dev/">Sapper</Link>
+			<Link newTab href="https://sapper.svelte.dev/">Sapper</Link>
 		</p>
 	</section>
 </footer>
