@@ -29,6 +29,17 @@ export function lastWords(index, text) {
 	return text.split(' ').slice(-index).join(' ');
 }
 
+export function randomInt(max, min) {
+	min = Math.ceil(min ? min : 0);
+	max = Math.floor(max);
+	return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+export function randomKey(dict) {
+	const keys = Object.keys(dict);
+	return dict[keys[(keys.length * Math.random()) << 0]];
+}
+
 export function sortCompare(x, y) {
 	if (x.date_updated !== y.date_updated) {
 		return compareDate(x.date_updated, y.date_updated);
@@ -36,6 +47,10 @@ export function sortCompare(x, y) {
 		return compareDate(x.date_published, y.date_published);
 	} else if (x.year && y.year && x.year !== y.year) {
 		return y.year - x.year;
+	}
+
+	if (typeof x.author === 'string' && typeof y.author === 'string') {
+		return x.author.localeCompare(y.author);
 	}
 
 	if (typeof x.title === 'string' && typeof y.title === 'string') {
