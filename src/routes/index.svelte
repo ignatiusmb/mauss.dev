@@ -1,7 +1,6 @@
 <script context="module">
 	import { compareDate, randomInt } from '../utils/helper';
 	export async function preload() {
-		const quotes = await this.fetch('quotes.json').then((r) => r.json());
 		const data = {
 			about: await this.fetch('about.json').then((r) => r.json()),
 			curated: await this.fetch('curated.json').then((r) => r.json()),
@@ -13,7 +12,7 @@
 		data['reviews'] = data['reviews'].filter((p) => p.rating && p.verdict);
 		for (const key in data) if (Array.isArray(data[key])) data[key] = data[key].slice(0, 4);
 
-		return { data, excerpt: quotes[randomInt(quotes.length - 1)] };
+		return { data, excerpt: await this.fetch('quotes.json').then((r) => r.json()) };
 	}
 </script>
 
@@ -52,7 +51,7 @@
 		<h4>CS Student at University of Indonesia</h4>
 		<h3>I create and engineer graphics</h3>
 
-		{#each [excerpt] as { author, quotes }}
+		{#each [excerpt[randomInt(excerpt.length - 1)]] as { author, quotes }}
 			{#each [quotes[randomInt(quotes.length - 1)]] as { quote, from }}
 				<Quote {author}>
 					<p>{quote}</p>
