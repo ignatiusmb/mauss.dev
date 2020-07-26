@@ -39,13 +39,13 @@ const extractMeta = (metadata: string) => {
 		if (!cur.includes(': ')) return acc;
 		const [key, val]: [string, string] = splitAt(cur.indexOf(': '), cur);
 
-		if (val.includes(',')) {
-			const items = val.split(',').map((v) => v.trim());
-			acc[key] = items.filter(Boolean);
-		} else if (key.includes(':')) {
+		if (key.includes(':')) {
 			const [attr, category] = splitAt(key.indexOf(':'), key);
 			if (!acc[attr]) acc[attr] = {};
 			acc[attr][category] = val.trim();
+		} else if (val.includes(',')) {
+			const items = val.split(',').map((v) => v.trim());
+			acc[key] = items.filter(Boolean);
 		} else acc[key] = val.trim();
 
 		return acc;
