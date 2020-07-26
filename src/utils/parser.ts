@@ -33,6 +33,7 @@ const countReadTime = (content: string) => {
 };
 
 const extractMeta = (metadata: string) => {
+	if (!metadata) return {};
 	const lines = metadata.split(/\r?\n/);
 	return lines.reduce((acc, cur: string) => {
 		if (!cur.includes(': ')) return acc;
@@ -56,11 +57,11 @@ export const aquaMark = (content: string) => markIt.render(content);
 export function parseFile(filename: string, parseCallback: Function) {
 	const content = readFileSync(filename, 'utf-8');
 	const fmExpression = /---\r?\n([\s\S]+?)\r?\n---/;
-	const [rawData, metadata] = fmExpression.exec(content);
+	const [rawData, metadata] = fmExpression.exec(content) || ['', ''];
 
 	const frontMatter = extractMeta(metadata);
 	const [cleanedFilename] = filename.split(/[\/\\]/).slice(-1);
-	const article = content.slice(rawData.length + 1);
+	const article = metadata ? content.slice(rawData.length + 1) : content;
 	const result = parseCallback(frontMatter, article, cleanedFilename);
 	if (!result) return;
 
