@@ -6,12 +6,13 @@
 	const { preloading, page } = stores();
 	const sections = ['about', 'curated', 'posts', 'reviews', 'uses'];
 
+	import Link from '@ignatiusmb/elements/svelte/Link.svelte';
+	import Icon from '@ignatiusmb/elements/svelte/Icon.svelte';
 	import ThemeSwitcher from '@ignatiusmb/elements/svelte/ThemeSwitcher.svelte';
-	import Hamburger from '../svelte/Hamburger.svelte';
 	import NavLink from '../svelte/NavLink.svelte';
-	import HelpSign from '../svelte/HelpSign.svelte';
 	import NavGrid from './NavGrid.svelte';
 
+	let opened = false;
 	$: path = $page.path.split('/')[1];
 	$: opened = $preloading ? false : opened;
 	$: scrolled = mobile ? true : scrolled;
@@ -21,7 +22,9 @@
 
 <nav class:scrolled>
 	{#if mobile}
-		<Hamburger bind:opened />
+		<span on:click={() => (opened = !opened)}>
+			<Icon name={opened ? 'close' : 'menu'} />
+		</span>
 	{/if}
 
 	<NavLink>
@@ -36,7 +39,9 @@
 		</NavGrid>
 	{/if}
 
-	<HelpSign />
+	<Link href="help" inherit>
+		<Icon name="help" />
+	</Link>
 	<ThemeSwitcher />
 </nav>
 
