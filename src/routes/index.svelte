@@ -1,6 +1,7 @@
 <script context="module">
-	import { compareDate } from '../utils/helper';
+	import { compareDate, randomInt } from '../utils/helper';
 	export async function preload() {
+		const quotes = await this.fetch('quotes.json').then((r) => r.json());
 		const data = {
 			about: await this.fetch('about.json').then((r) => r.json()),
 			curated: await this.fetch('curated.json').then((r) => r.json()),
@@ -12,15 +13,17 @@
 		data['reviews'] = data['reviews'].filter((p) => p.rating && p.verdict);
 		for (const key in data) if (Array.isArray(data[key])) data[key] = data[key].slice(0, 4);
 
-		return { data };
+		return { data, excerpt: quotes[randomInt(quotes.length - 1)] };
 	}
 </script>
 
 <script>
-	export let data;
+	export let data, excerpt;
 	import Link from '@ignatiusmb/elements/svelte/Link.svelte';
+	import Image from '@ignatiusmb/elements/svelte/Image.svelte';
 	import MetaHead from '../pages/MetaHead.svelte';
 	import Article from '../pages/Article.svelte';
+	import Quote from '../svelte/Quote.svelte';
 	import Navigation from '../components/Navigation.svelte';
 	import { mobile } from '../stores';
 	let scrollY, innerHeight;
@@ -41,13 +44,24 @@
 	<header slot="header">
 		<Link newTab href="https://github.com/ignatiusmb/">
 			<div class="dashed-border" />
-			<img src="profile/mauss.jpeg" alt="Mauss Profile" />
+			<Image src="profile/mauss.jpeg" alt="Mauss Profile" ratio={1} />
 		</Link>
 		<h2>
 			<Link href="about">Ignatius Bagussuputra</Link>
 		</h2>
 		<h4>CS Student at University of Indonesia</h4>
 		<h3>I create and engineer graphics</h3>
+
+		{#each [excerpt] as { author, quotes }}
+			{#each [quotes[randomInt(quotes.length - 1)]] as { quote, from }}
+				<Quote {author}>
+					<p>{quote}</p>
+					{#if from}
+						<p class="from">{from}</p>
+					{/if}
+				</Quote>
+			{/each}
+		{/each}
 	</header>
 
 	<section>
@@ -115,32 +129,40 @@
 	header {
 		counter-reset: title;
 		min-height: 100vh;
-		display: grid;
-		align-content: center;
-		padding-bottom: 10%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		text-align: center;
 		font-family: var(--aqua-heading);
+	}
+	header h2,
+	header h3,
+	header h4 {
+		width: 100%;
 	}
 	header > :global(a) {
 		position: relative;
 		width: 14em;
 		height: 14em;
 		justify-self: center;
-	}
-	header .dashed-border,
-	header img {
 		border-radius: 50%;
+		margin-top: auto;
 	}
-	header img {
+	header :global(.elements.image img) {
 		padding: 0.5em;
 		border: none;
+		border-radius: inherit;
 	}
 	header .dashed-border {
 		position: absolute;
 		width: 100%;
 		height: 100%;
 		border: 0.25em dashed var(--mauss-primary);
+		border-radius: inherit;
 		animation: 28s infinite linear rotate;
+	}
+	header > :global(blockquote) {
+		margin-top: auto;
 	}
 
 	h2 {
