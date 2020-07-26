@@ -145,7 +145,10 @@
 		height: 14em;
 		justify-self: center;
 		border-radius: 50%;
-		margin-top: auto;
+		margin-top: 25%;
+	}
+	header > h3 {
+		margin-bottom: auto;
 	}
 	header :global(.elements.image img) {
 		padding: 0.5em;
@@ -159,9 +162,6 @@
 		border: 0.25em dashed var(--mauss-primary);
 		border-radius: inherit;
 		animation: 28s infinite linear rotate;
-	}
-	header > :global(blockquote) {
-		margin-top: auto;
 	}
 
 	h2 {
