@@ -163,6 +163,9 @@
 		border-radius: inherit;
 		animation: 28s infinite linear rotate;
 	}
+	header > :global(blockquote) {
+		margin-bottom: 4em;
+	}
 
 	h2 {
 		display: grid;
@@ -201,5 +204,11 @@
 	}
 	.fixed-nav.scrolled > :global(nav) {
 		transform: translateY(0);
+	}
+
+	@media only screen and (min-width: 600px) {
+		header > :global(blockquote) {
+			margin-bottom: revert;
+		}
 	}
 </style>
