@@ -61,7 +61,7 @@
 	small:first-of-type :not(:last-child)::after {
 		content: '~';
 		margin: 0 0.5em;
-		color: var(--mauss-secondary);
+		color: rgba(var(--theme-secondary), 1);
 		font-weight: bolder;
 	}
 	small > :global(span) {

@@ -37,12 +37,12 @@
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-auto-flow: row;
-		border: 0.1em solid var(--fg-color);
+		border: 0.1em solid rgba(var(--fg-color, 1));
 		border-radius: 0.15em;
 	}
 	section:first-of-type :global(a) {
 		padding: 0 0.5em;
-		border: 0.1em solid var(--fg-color);
+		border: 0.1em solid rgba(var(--fg-color, 1));
 	}
 	section:first-of-type h2 {
 		margin-top: 0;

@@ -13,13 +13,13 @@
 <style>
 	a[aria-current]::after {
 		width: 100%;
-		background-color: var(--mauss-primary);
+		background-color: rgba(var(--theme-primary), 1);
 	}
 
 	a {
 		position: relative;
 		padding: 0.1em 0.2em;
-		color: var(--fg-color);
+		color: rgba(var(--fg-color, 1));
 		text-transform: capitalize;
 	}
 	.hover::after {
@@ -30,8 +30,8 @@
 		width: 0;
 		height: 0.25em;
 		border-radius: 0.8em;
-		background-color: var(--mauss-secondary);
-		transition: width var(--transition-duration) ease;
+		background-color: rgba(var(--theme-secondary), 1);
+		transition: width var(--t-duration) ease;
 		transform: translateY(100%);
 	}
 	.hover:hover::after,

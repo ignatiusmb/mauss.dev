@@ -36,7 +36,7 @@
 		grid-template-rows: auto 1fr 3em;
 		border-radius: 0.25em;
 		box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
-		background-color: var(--bg-color-secondary);
+		background-color: rgba(var(--bg-color-secondary, 1));
 		transform: translate(0%);
 	}
 	section > :global(.elements.image) {
@@ -62,7 +62,7 @@
 	}
 	aside small:not(:first-of-type)::before {
 		content: '•';
-		color: var(--mauss-secondary);
+		color: rgba(var(--theme-secondary), 1);
 		margin-right: 0.5em;
 	}
 	aside :global(:last-child) {

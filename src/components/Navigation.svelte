@@ -49,7 +49,7 @@
 	:global(html.dark) nav :global(a),
 	:global(html.dark) nav :global(a:focus),
 	:global(html.dark) nav :global(a:hover) {
-		color: var(--fg-color);
+		color: rgba(var(--fg-color, 1));
 	}
 
 	nav {
@@ -61,10 +61,10 @@
 		flex-direction: row-reverse;
 		align-items: center;
 		padding: 0.8em 1em;
-		border-top: 0.25em solid var(--mauss-primary);
+		border-top: 0.25em solid rgba(var(--theme-primary), 1);
 		font-family: var(--aqua-heading);
-		background-color: var(--bg-color);
-		transition: var(--transition-duration) var(--transition-function);
+		background-color: rgba(var(--bg-color, 1));
+		transition: var(--t-duration) var(--t-function);
 	}
 
 	nav > :global(a[href='/']:not(:first-child)) {
@@ -87,7 +87,7 @@
 		nav.scrolled {
 			border: none;
 			box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5);
-			transition: var(--transition-duration) var(--transition-function);
+			transition: var(--t-duration) var(--t-function);
 		}
 	}
 </style>

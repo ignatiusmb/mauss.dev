@@ -14,7 +14,7 @@
 		grid-auto-flow: column;
 		margin-left: 1em;
 		margin-right: auto;
-		transition: var(--transition-duration);
+		transition: var(--t-duration);
 	}
 	div.mobile {
 		width: 100%;
@@ -25,9 +25,9 @@
 		grid-auto-flow: row;
 		padding: 1em;
 		margin: 0;
-		border-top: 0.25em solid var(--mauss-primary);
+		border-top: 0.25em solid rgba(var(--theme-primary), 1);
 		transform: translateY(-100%);
-		background-color: var(--bg-color);
+		background-color: rgba(var(--bg-color, 1));
 		text-align: center;
 	}
 	div.mobile :global(a) {
@@ -38,7 +38,7 @@
 		content: none;
 	}
 	div.mobile :global(a[aria-current]) {
-		border: 0.15em solid var(--mauss-primary);
+		border: 0.15em solid rgba(var(--theme-primary), 1);
 		border-radius: 0.25em;
 	}
 </style>

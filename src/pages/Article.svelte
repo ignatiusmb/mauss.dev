@@ -62,7 +62,7 @@
 	}
 	section {
 		padding: 0.4em 0.8em;
-		border-left: 2px solid var(--mauss-secondary);
+		border-left: 2px solid rgba(var(--theme-secondary), 1);
 		background-color: rgba(0, 0, 0, 0.05);
 	}
 	article :global(section > :first-child) {
@@ -79,7 +79,7 @@
 	}
 	article :global(img) {
 		margin: auto;
-		border: 0.5em solid var(--bg-color-secondary);
+		border: 0.5em solid rgba(var(--bg-color-secondary, 1));
 		border-radius: 0.25em;
 	}
 	article :global(img::after) {
@@ -142,7 +142,7 @@
 		height: 0.1em;
 		margin-top: 2em;
 		border: 0;
-		background-color: var(--fg-color);
+		background-color: rgba(var(--fg-color, 1));
 	}
 	article :global(figure figcaption) {
 		padding: 0 0.25em;

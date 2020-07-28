@@ -1,49 +1,39 @@
 :root {
-	--mauss-primary: #990000;
-	--mauss-secondary: crimson;
+	--theme-primary: 153, 0, 0;
+	--theme-secondary: 220, 20, 60;
 
-	--transition-duration: 200ms;
-	--transition-function: cubic-bezier(0.4, 0, 0.2, 1);
+	--t-duration: 200ms;
+	--t-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 html,
 html.light {
-	--bg-inverse: #212121;
-	--bg-color: #fff;
-	--bg-color-secondary: #eee;
-	--bg-success: #85da85;
-	--bg-inactive: rgba(0, 0, 0, 0.2);
-	--bg-active: rgba(0, 0, 0, 0.08);
+	--bg-inverse: 33, 33, 33;
+	--bg-color: 255, 255, 255;
+	--bg-color-secondary: 238, 238, 238;
+	--bg-success: 133, 218, 133;
 
-	--fg-color: #212121;
-	--fg-success: #000000;
-	--fg-secondary-color: rgba(0, 0, 0, 0.56);
-
-	--focus-color: rgba(0, 0, 0, 0.5);
+	--fg-color: 33, 33, 33;
+	--fg-success: 0, 0, 0;
 }
 html.dark {
-	--bg-inverse: #fff;
-	--bg-color: #212121;
-	--bg-color-secondary: #363636;
-	--bg-success: #008000;
-	--bg-inactive: rgba(255, 255, 255, 0.2);
-	--bg-active: rgba(77, 65, 65, 0.1);
+	--bg-inverse: 255, 255, 255;
+	--bg-color: 33, 33, 33;
+	--bg-color-secondary: 54, 54, 54;
+	--bg-success: 0, 128, 0;
 
-	--fg-color: #b3b9c5;
-	--fg-success: #ffffff;
-	--fg-secondary-color: rgba(255, 255, 255, 0.56);
-
-	--focus-color: rgba(255, 255, 255, 0.5);
+	--fg-color: 179, 185, 197;
+	--fg-success: 255, 255, 255;
 }
 
 body {
-	background-color: var(--bg-color);
-	color: var(--fg-color);
-	transition: var(--transition-duration) var(--transition-function);
+	background-color: rgba(var(--bg-color, 1));
+	color: rgba(var(--fg-color, 1));
+	transition: var(--t-duration) var(--t-function);
 }
 
 p {
-	color: var(--fg-color);
+	color: rgba(var(--fg-color, 1));
 }
 
 code {

@@ -73,13 +73,13 @@
 	.social-links :global(a:visited) {
 		transition: 150ms;
 		transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-		color: var(--fg-secondary-color);
+		color: rgba(rgba(var(--fg-color, 1)), 0.6);
 	}
 	.social-links :global(a:hover),
 	.social-links :global(a:focus) {
 		transition: 150ms;
 		transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-		color: var(--mauss-secondary);
+		color: rgba(var(--theme-secondary), 1);
 	}
 	.social-links :global(a:hover:nth-child(odd)),
 	.social-links :global(a:focus:nth-child(odd)) {

@@ -159,7 +159,7 @@
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		border: 0.25em dashed var(--mauss-primary);
+		border: 0.25em dashed rgba(var(--theme-primary), 1);
 		border-radius: inherit;
 		animation: 28s infinite linear rotate;
 	}
@@ -194,7 +194,7 @@
 	section h2::after {
 		content: '';
 		height: 0.1em;
-		background-color: var(--mauss-secondary);
+		background-color: rgba(var(--theme-secondary), 1);
 	}
 
 	.fixed-nav > :global(nav) {

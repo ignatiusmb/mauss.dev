@@ -35,7 +35,7 @@
 
 <style>
 	section:first-of-type {
-		border: 0.2em solid var(--fg-color);
+		border: 0.2em solid rgba(var(--fg-color, 1));
 		border-radius: 0.15em;
 	}
 	section:first-of-type h2 {
