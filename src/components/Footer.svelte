@@ -14,7 +14,7 @@
 		<Link newTab href="https://www.facebook.com/ignatiusmb" label="facebook profile">
 			<Icon name="facebook" {size} />
 		</Link>
-		<Link newTab href="https://twitter.com/ignatiusmbs" label="twitter profile">
+		<Link newTab href="https://twitter.com/devmauss" label="twitter profile">
 			<Icon name="twitter" {size} />
 		</Link>
 		<Link newTab href="https://www.instagram.com/ignatiusmb" label="instagram profile">
@@ -28,6 +28,9 @@
 		</Link>
 		<Link newTab href="https://gitlab.com/ignatiusmb" label="gitlab profile">
 			<Icon name="gitlab" {size} />
+		</Link>
+		<Link newTab href="https://twitch.tv/devmauss" label="twitch profile">
+			<Icon name="twitch" {size} />
 		</Link>
 		<Link newTab href="https://www.youtube.com/user/Ignapure/playlists" label="youtube playlist profile">
 			<Icon name="youtube" {size} />
