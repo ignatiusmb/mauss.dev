@@ -35,7 +35,7 @@
 	title={post.title.short ? post.title.short : post.title.jp ? post.title.jp : post.title.en}
 	description={post.description} />
 
-<Article {post} path="content/reviews/{post.category}/{post.slug}.md" siblings={post.siblings}>
+<Article header {post} path="content/reviews/{post.category}/{post.slug}.md" siblings={post.siblings}>
 	<small slot="header">
 		{#if post.link}
 			<span>

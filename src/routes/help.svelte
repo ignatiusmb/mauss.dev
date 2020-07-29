@@ -13,7 +13,7 @@
 
 <MetaHead {post} canonical="help" title="Help" description="Help page with explanation for each page in the website." />
 
-<Article {post}>
+<Article header {post}>
 	<Disclaimer link />
 
 	<section>

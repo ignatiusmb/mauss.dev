@@ -39,15 +39,13 @@
 	<Navigation mobile={$mobile} bind:scrolled />
 </div>
 
-<Article header={false}>
+<Article>
 	<header slot="header">
-		<Link newTab href="https://github.com/ignatiusmb/">
+		<Link href="about">
 			<div class="dashed-border" />
 			<Image src="profile/mauss.jpeg" alt="Mauss Profile" ratio={1} />
 		</Link>
-		<h2>
-			<Link href="about">Ignatius Bagussuputra</Link>
-		</h2>
+		<h2>Ignatius Bagussuputra</h2>
 		<h4>CS Student at University of Indonesia</h4>
 		<h3>I create and engineer graphics</h3>
 

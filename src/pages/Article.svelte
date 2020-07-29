@@ -1,5 +1,5 @@
 <script>
-	export let header = true;
+	export let header = false;
 	export let post = null;
 	export let path = null;
 	export let siblings = null;
