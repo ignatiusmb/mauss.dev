@@ -71,13 +71,13 @@
 	}
 	.social-links :global(a),
 	.social-links :global(a:visited) {
-		transition: 150ms;
+		transition: var(--t-duration);
 		transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 		color: rgba(rgba(var(--fg-color, 1)), 0.6);
 	}
 	.social-links :global(a:hover),
 	.social-links :global(a:focus) {
-		transition: 150ms;
+		transition: var(--t-duration);
 		transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 		color: rgba(var(--theme-secondary), 1);
 	}
