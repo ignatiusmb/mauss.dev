@@ -6,8 +6,8 @@
 
 <script>
 	export let data;
+	import ButtonLink from '@ignatiusmb/elements/svelte/ButtonLink.svelte';
 	import MetaHead from '../../pages/MetaHead.svelte';
-	import ButtonLink from '../../svelte/ButtonLink.svelte';
 
 	import { scale } from 'svelte/transition';
 	import { flip } from 'svelte/animate';

@@ -27,7 +27,8 @@
 		display: inline-flex;
 		justify-content: center;
 		padding: 0.2em 0;
-		border-radius: 0.25em;
+		border-radius: inherit;
+		font-size: 0.8rem;
 		color: #fff;
 	}
 	span:not(:only-child) {

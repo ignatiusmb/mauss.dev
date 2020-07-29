@@ -1,7 +1,7 @@
 <script>
 	export let post;
 	import Image from '@ignatiusmb/elements/svelte/Image.svelte';
-	import ButtonLink from '../svelte/ButtonLink.svelte';
+	import ButtonLink from '@ignatiusmb/elements/svelte/ButtonLink.svelte';
 	import { createPrettyDate } from '../utils/helper';
 	const date = createPrettyDate(post.date_published);
 	const updated = createPrettyDate(post.date_updated);
@@ -59,6 +59,7 @@
 		align-items: center;
 		padding: 0.5em;
 		padding-left: 1em;
+		border-radius: 0.25em;
 	}
 	aside small:not(:first-of-type)::before {
 		content: '•';
