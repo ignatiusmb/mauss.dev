@@ -25,7 +25,7 @@
 	<Navigation mobile={$mobile} />
 {/if}
 <slot />
-<Footer mobile={$mobile} />
+<Footer />
 
 <style>
 	:global(#sapper) {
