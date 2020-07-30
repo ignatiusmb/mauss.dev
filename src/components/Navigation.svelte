@@ -42,7 +42,13 @@
 	<Link href="help" inherit>
 		<Icon name="help" />
 	</Link>
-	<ThemeSwitcher />
+	<ThemeSwitcher let:current>
+		{#if current === 'light'}
+			<Icon name="sun" />
+		{:else if current === 'dark'}
+			<Icon name="moon" />
+		{/if}
+	</ThemeSwitcher>
 </nav>
 
 <style>
