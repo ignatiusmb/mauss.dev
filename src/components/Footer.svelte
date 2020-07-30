@@ -15,11 +15,11 @@
 		<Link newTab href="https://www.instagram.com/ignatiusmb" label="instagram profile">
 			<Icon name="instagram" />
 		</Link>
-		<Link newTab href="https://twitter.com/devmauss" label="twitter profile">
-			<Icon name="twitter" />
-		</Link>
 		<Link newTab href="https://www.linkedin.com/in/ignatiusmb" label="linkedin profile">
 			<Icon name="linkedin" />
+		</Link>
+		<Link newTab href="https://twitter.com/devmauss" label="twitter profile">
+			<Icon name="twitter" />
 		</Link>
 		<Link newTab href="https://github.com/ignatiusmb" label="github profile">
 			<Icon name="github" />
