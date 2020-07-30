@@ -5,6 +5,7 @@
 	import { stores } from '@sapper/app';
 	const { preloading, page } = stores();
 	const sections = ['about', 'curated', 'posts', 'reviews', 'uses'];
+	const rss = ['curated', 'posts', 'reviews'];
 
 	import Link from '@ignatiusmb/elements/svelte/Link.svelte';
 	import Icon from '@ignatiusmb/elements/svelte/Icon.svelte';
@@ -39,6 +40,11 @@
 		</NavGrid>
 	{/if}
 
+	{#if rss.includes(path)}
+		<Link newTab href="{path}.xml" inherit>
+			<Icon name="rss" />
+		</Link>
+	{/if}
 	<Link href="help" inherit>
 		<Icon name="help" />
 	</Link>
