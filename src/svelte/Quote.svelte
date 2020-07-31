@@ -1,10 +1,13 @@
 <script>
 	export let author;
+	import { GradientBorder } from '@ignatiusmb/elements';
 </script>
 
 <blockquote>
 	<slot />
-	<small>&mdash;{author}</small>
+	<small on:click>
+		<GradientBorder>&mdash;{author}</GradientBorder>
+	</small>
 </blockquote>
 
 <style>
@@ -21,6 +24,8 @@
 		font-size: 1.25rem;
 	}
 	blockquote small {
+		cursor: pointer;
+		user-select: none;
 		position: absolute;
 		right: -1.5em;
 		bottom: -0.125em;

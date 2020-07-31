@@ -12,20 +12,26 @@
 		data['reviews'] = data['reviews'].filter((p) => p.rating && p.verdict);
 		for (const key in data) if (Array.isArray(data[key])) data[key] = data[key].slice(0, 4);
 
-		return { data, excerpt: await this.fetch('quotes.json').then((r) => r.json()) };
+		return { data, quotes: await this.fetch('quotes.json').then((r) => r.json()) };
 	}
 </script>
 
 <script>
-	export let data, excerpt;
-	import Link from '@ignatiusmb/elements/svelte/Link.svelte';
-	import Image from '@ignatiusmb/elements/svelte/Image.svelte';
+	export let data, quotes;
+	import { Link, Image } from '@ignatiusmb/elements';
 	import MetaHead from '../pages/MetaHead.svelte';
 	import Article from '../pages/Article.svelte';
 	import Quote from '../svelte/Quote.svelte';
 	import Navigation from '../components/Navigation.svelte';
 	import { mobile } from '../stores';
+	let quoteIndex = randomInt(quotes.length - 1);
 	let scrollY, innerHeight;
+	const getNewQuote = () => {
+		let newIndex;
+		do newIndex = randomInt(quotes.length - 1);
+		while (newIndex === quoteIndex);
+		quoteIndex = newIndex;
+	};
 	$: scrolled = scrollY >= innerHeight * 0.7;
 </script>
 
@@ -49,15 +55,13 @@
 		<h4>CS Student at University of Indonesia</h4>
 		<h3>I create and engineer graphics</h3>
 
-		{#each [excerpt[randomInt(excerpt.length - 1)]] as { author, quotes }}
-			{#each [quotes[randomInt(quotes.length - 1)]] as { quote, from }}
-				<Quote {author}>
-					<p>{quote}</p>
-					{#if from}
-						<p class="from">{from}</p>
-					{/if}
-				</Quote>
-			{/each}
+		{#each [quotes[quoteIndex]] as { author, quote, from }}
+			<Quote {author} on:click={getNewQuote}>
+				<p>{quote}</p>
+				{#if from}
+					<p class="from">{from}</p>
+				{/if}
+			</Quote>
 		{/each}
 	</header>
 
