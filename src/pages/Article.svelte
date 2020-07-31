@@ -166,8 +166,8 @@
 		line-height: unset;
 		font-size: 0.8rem;
 	}
-	article :global(.aqua.code-header::after) {
-		padding: 0.3em 1em;
+	article :global(.aqua.code-header) {
+		line-height: 1;
 	}
 	article :global(.info-box) {
 		font-size: 1rem;

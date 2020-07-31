@@ -9,12 +9,12 @@
 	class:hot={verdict === 2}
 	class:wip={isNaN(verdict)}
 	title={verdict === 2 ? 'Must-watch!' : null}>
-	{#if verdict === 0}
+	{#if verdict < 0}
+		<span>Not recommended</span>
+	{:else if verdict === 0}
 		<span>Contextual</span>
 	{:else if verdict > 0}
 		<span>Recommended</span>
-	{:else if verdict < 0}
-		<span>Not recommended</span>
 	{:else}
 		<span>Pending</span>
 	{/if}
