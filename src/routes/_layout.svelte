@@ -1,7 +1,6 @@
 <script>
 	export let segment;
-	import FeatherIcons from '@ignatiusmb/elements/svelte/FeatherIcons.svelte';
-	import ScrollTop from '@ignatiusmb/elements/svelte/ScrollTop.svelte';
+	import { FeatherIcons, ScrollTop } from '@ignatiusmb/elements';
 	import Navigation from '../components/Navigation.svelte';
 	import Footer from '../components/Footer.svelte';
 

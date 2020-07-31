@@ -1,6 +1,5 @@
 <script>
-	import Link from '@ignatiusmb/elements/svelte/Link.svelte';
-	import Icon from '@ignatiusmb/elements/svelte/Icon.svelte';
+	import { Link, Icon } from '@ignatiusmb/elements';
 </script>
 
 <footer>

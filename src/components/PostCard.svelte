@@ -1,7 +1,6 @@
 <script>
 	export let post;
-	import Image from '@ignatiusmb/elements/svelte/Image.svelte';
-	import ButtonLink from '@ignatiusmb/elements/svelte/ButtonLink.svelte';
+	import { Image, ButtonLink } from '@ignatiusmb/elements';
 	import { createPrettyDate } from '../utils/helper';
 	const date = createPrettyDate(post.date_published);
 	const updated = createPrettyDate(post.date_updated);

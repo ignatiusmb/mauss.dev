@@ -1,7 +1,6 @@
 <script>
 	export let post;
-	import Image from '@ignatiusmb/elements/svelte/Image.svelte';
-	import ButtonLink from '@ignatiusmb/elements/svelte/ButtonLink.svelte';
+	import { Image, ButtonLink } from '@ignatiusmb/elements';
 	import Verdict from '../svelte/Verdict.svelte';
 
 	import { capitalize } from '../utils/helper';

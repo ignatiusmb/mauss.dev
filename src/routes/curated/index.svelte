@@ -6,7 +6,7 @@
 
 <script>
 	export let data;
-	import ButtonLink from '@ignatiusmb/elements/svelte/ButtonLink.svelte';
+	import { ButtonLink } from '@ignatiusmb/elements';
 	import MetaHead from '../../pages/MetaHead.svelte';
 
 	import { scale } from 'svelte/transition';

@@ -2,14 +2,12 @@
 	export let mobile;
 	export let scrolled = false;
 
+	import { Link, Icon, ThemeSwitcher } from '@ignatiusmb/elements';
 	import { stores } from '@sapper/app';
 	const { preloading, page } = stores();
 	const sections = ['about', 'curated', 'posts', 'reviews', 'uses'];
 	const rss = ['curated', 'posts', 'reviews'];
 
-	import Link from '@ignatiusmb/elements/svelte/Link.svelte';
-	import Icon from '@ignatiusmb/elements/svelte/Icon.svelte';
-	import ThemeSwitcher from '@ignatiusmb/elements/svelte/ThemeSwitcher.svelte';
 	import NavLink from '../svelte/NavLink.svelte';
 	import NavGrid from './NavGrid.svelte';
 

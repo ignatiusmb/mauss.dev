@@ -17,8 +17,7 @@
 	const bound = 6;
 	const duration = 100;
 
-	import SearchBar from '@ignatiusmb/elements/svelte/SearchBar.svelte';
-	import Pagination from '@ignatiusmb/elements/svelte/Pagination.svelte';
+	import { SearchBar, Pagination } from '@ignatiusmb/elements';
 	import MetaHead from '../../pages/MetaHead.svelte';
 	import GridView from '../../pages/GridView.svelte';
 	import Centered from '../../pages/Centered.svelte';

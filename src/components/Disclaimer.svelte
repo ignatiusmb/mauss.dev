@@ -1,6 +1,6 @@
 <script>
 	export let link;
-	import Link from '@ignatiusmb/elements/svelte/Link.svelte';
+	import { Link } from '@ignatiusmb/elements';
 </script>
 
 <section class="info-box warning">
