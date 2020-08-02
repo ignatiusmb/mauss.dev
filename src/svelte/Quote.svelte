@@ -1,10 +1,13 @@
 <script>
 	export let author;
+	import { GradientBorder } from '@ignatiusmb/elements/styled';
 </script>
 
 <blockquote>
 	<slot />
-	<small>&mdash;{author}</small>
+	<small on:click>
+		<GradientBorder>&mdash;{author}</GradientBorder>
+	</small>
 </blockquote>
 
 <style>
@@ -15,18 +18,20 @@
 		border: 0.25em solid;
 		border-left: none;
 		border-image-slice: 1;
-		border-image-source: linear-gradient(-45deg, crimson, transparent);
+		border-image-source: linear-gradient(-45deg, rgba(var(--theme-secondary, 1)), transparent);
 		margin: 1em;
 		text-align: justify;
 		font-size: 1.25rem;
 	}
 	blockquote small {
+		cursor: pointer;
+		user-select: none;
 		position: absolute;
 		right: -1.5em;
 		bottom: -0.125em;
 		padding: 0.5em;
 		transform: translateY(50%);
-		background-color: var(--bg-color);
+		background-color: rgba(var(--bg-color, 1));
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
 		line-height: 1.5rem;

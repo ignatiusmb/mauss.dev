@@ -2,13 +2,13 @@
 	export let mobile;
 	export let scrolled = false;
 
+	import { Link, Icon } from '@ignatiusmb/elements/essentials';
+	import { ThemeSwitcher } from '@ignatiusmb/elements/functional';
 	import { stores } from '@sapper/app';
 	const { preloading, page } = stores();
 	const sections = ['about', 'curated', 'posts', 'reviews', 'uses'];
+	const rss = ['curated', 'posts', 'reviews'];
 
-	import Link from '@ignatiusmb/elements/svelte/Link.svelte';
-	import Icon from '@ignatiusmb/elements/svelte/Icon.svelte';
-	import ThemeSwitcher from '@ignatiusmb/elements/svelte/ThemeSwitcher.svelte';
 	import NavLink from '../svelte/NavLink.svelte';
 	import NavGrid from './NavGrid.svelte';
 
@@ -39,17 +39,28 @@
 		</NavGrid>
 	{/if}
 
+	{#if rss.includes(path)}
+		<Link newTab href="{path}.xml" inherit>
+			<Icon name="rss" />
+		</Link>
+	{/if}
 	<Link href="help" inherit>
 		<Icon name="help" />
 	</Link>
-	<ThemeSwitcher />
+	<ThemeSwitcher let:current>
+		{#if current === 'light'}
+			<Icon name="sun" />
+		{:else if current === 'dark'}
+			<Icon name="moon" />
+		{/if}
+	</ThemeSwitcher>
 </nav>
 
 <style>
 	:global(html.dark) nav :global(a),
 	:global(html.dark) nav :global(a:focus),
 	:global(html.dark) nav :global(a:hover) {
-		color: var(--fg-color);
+		color: rgba(var(--fg-color, 1));
 	}
 
 	nav {
@@ -61,10 +72,10 @@
 		flex-direction: row-reverse;
 		align-items: center;
 		padding: 0.8em 1em;
-		border-top: 0.25em solid var(--mauss-primary);
+		border-top: 0.25em solid rgba(var(--theme-primary), 1);
 		font-family: var(--aqua-heading);
-		background-color: var(--bg-color);
-		transition: var(--transition-duration) var(--transition-function);
+		background-color: rgba(var(--bg-color, 1));
+		transition: var(--t-duration) var(--t-function);
 	}
 
 	nav > :global(a[href='/']:not(:first-child)) {
@@ -87,7 +98,7 @@
 		nav.scrolled {
 			border: none;
 			box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5);
-			transition: var(--transition-duration) var(--transition-function);
+			transition: var(--t-duration) var(--t-function);
 		}
 	}
 </style>

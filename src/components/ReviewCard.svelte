@@ -1,8 +1,8 @@
 <script>
 	export let post;
-	import Image from '@ignatiusmb/elements/svelte/Image.svelte';
+	import { Image } from '@ignatiusmb/elements/essentials';
+	import { ButtonLink } from '@ignatiusmb/elements/styled';
 	import Verdict from '../svelte/Verdict.svelte';
-	import ButtonLink from '../svelte/ButtonLink.svelte';
 
 	import { capitalize } from '../utils/helper';
 	const verdict = parseInt(post.verdict);
@@ -26,9 +26,7 @@
 			<span>{capitalize(post.category)}</span>
 			<span>⭐ {post.rating ? post.rating : '~'}</span>
 		</small>
-		<small>
-			<Verdict {verdict} />
-		</small>
+		<Verdict {verdict} />
 		<ButtonLink href="reviews/{post.slug}" {disabled}>{disabled ? 'Work-in-Progress' : 'read'}</ButtonLink>
 	</aside>
 </section>
@@ -48,14 +46,11 @@
 		display: grid;
 		gap: 0.5em;
 		padding: 0.5em;
+		border-radius: 0.25em;
 		text-align: center;
 	}
 	aside small:first-child {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-	}
-
-	aside :global(:last-child a) {
-		width: 100%;
 	}
 </style>

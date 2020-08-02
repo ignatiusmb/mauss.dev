@@ -1,10 +1,10 @@
 <script>
-	export let header = true;
+	export let header = false;
 	export let post = null;
 	export let path = null;
 	export let siblings = null;
-	import ProgressBar from '@ignatiusmb/elements/svelte/ProgressBar.svelte';
-	import Link from '@ignatiusmb/elements/svelte/Link.svelte';
+	import { Link } from '@ignatiusmb/elements/essentials';
+	import { ProgressBar } from '@ignatiusmb/elements/styled';
 	import Header from './Header.svelte';
 	import Edit from '../svelte/Edit.svelte';
 	import Siblings from '../svelte/Siblings.svelte';
@@ -62,7 +62,7 @@
 	}
 	section {
 		padding: 0.4em 0.8em;
-		border-left: 2px solid var(--mauss-secondary);
+		border-left: 2px solid rgba(var(--theme-secondary), 1);
 		background-color: rgba(0, 0, 0, 0.05);
 	}
 	article :global(section > :first-child) {
@@ -79,7 +79,7 @@
 	}
 	article :global(img) {
 		margin: auto;
-		border: 0.5em solid var(--bg-color-secondary);
+		border: 0.5em solid rgba(var(--bg-color-secondary, 1));
 		border-radius: 0.25em;
 	}
 	article :global(img::after) {
@@ -142,7 +142,7 @@
 		height: 0.1em;
 		margin-top: 2em;
 		border: 0;
-		background-color: var(--fg-color);
+		background-color: rgba(var(--fg-color, 1));
 	}
 	article :global(figure figcaption) {
 		padding: 0 0.25em;
@@ -166,8 +166,8 @@
 		line-height: unset;
 		font-size: 0.8rem;
 	}
-	article :global(.aqua.code-header::after) {
-		padding: 0.3em 1em;
+	article :global(.aqua.code-header) {
+		line-height: 1;
 	}
 	article :global(.info-box) {
 		font-size: 1rem;

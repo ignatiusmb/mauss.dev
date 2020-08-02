@@ -14,7 +14,7 @@
 
 <MetaHead {post} canonical="curated/{post.slug}" title={post.title} />
 
-<Article {post} path="content/curated/{post.slug}.md">
+<Article header {post} path="content/curated/{post.slug}.md">
 	<section>
 		{@html post.content}
 	</section>

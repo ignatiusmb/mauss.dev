@@ -1,7 +1,7 @@
 <script>
 	export let post;
-	import Image from '@ignatiusmb/elements/svelte/Image.svelte';
-	import ButtonLink from '../svelte/ButtonLink.svelte';
+	import { Image } from '@ignatiusmb/elements/essentials';
+	import { ButtonLink } from '@ignatiusmb/elements/styled';
 	import { createPrettyDate } from '../utils/helper';
 	const date = createPrettyDate(post.date_published);
 	const updated = createPrettyDate(post.date_updated);
@@ -36,7 +36,7 @@
 		grid-template-rows: auto 1fr 3em;
 		border-radius: 0.25em;
 		box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
-		background-color: var(--bg-color-secondary);
+		background-color: rgba(var(--bg-color-secondary, 1));
 		transform: translate(0%);
 	}
 	section > :global(.elements.image) {
@@ -59,10 +59,11 @@
 		align-items: center;
 		padding: 0.5em;
 		padding-left: 1em;
+		border-radius: 0.25em;
 	}
 	aside small:not(:first-of-type)::before {
 		content: '•';
-		color: var(--mauss-secondary);
+		color: rgba(var(--theme-secondary), 1);
 		margin-right: 0.5em;
 	}
 	aside :global(:last-child) {

@@ -20,10 +20,9 @@
 	const bound = 12;
 	const duration = 100;
 
-	import SearchBar from '@ignatiusmb/elements/svelte/SearchBar.svelte';
-	import Pagination from '@ignatiusmb/elements/svelte/Pagination.svelte';
+	import { SearchBar, Pagination } from '@ignatiusmb/elements/functional';
 	import MetaHead from '../../pages/MetaHead.svelte';
-	import PageHeader from '../../pages/PageHeader.svelte';
+	import GridView from '../../pages/GridView.svelte';
 	import Centered from '../../pages/Centered.svelte';
 	import ReviewCard from '../../components/ReviewCard.svelte';
 
@@ -41,61 +40,63 @@
 <MetaHead
 	canonical="reviews"
 	title="Reviews"
-	description="Personalized reviews for all kinds of anime, books, movies, shows, etc." />
+	description="Personalized reviews for all kinds of anime, books, movies, shows, etc.">
+	<link rel="alternate" href="reviews.xml" type="application/rss+xml" title="Read recent reviews" />
+</MetaHead>
 
-<PageHeader>
-	<h1>Mauss Reviews</h1>
+<GridView>
+	<header slot="header">
+		<h1>Mauss Reviews</h1>
 
-	<SearchBar bind:query bind:filters {unique}>
-		<section>
-			<h3>Verdict</h3>
-			{#each verdict as rec}
+		<SearchBar bind:query bind:filters {unique}>
+			<section>
+				<h3>Verdict</h3>
+				{#each verdict as rec}
+					<label>
+						{#if rec === '2'}
+							<input type="checkbox" bind:group={filters.verdict} value="2" />
+							<span>Must-watch!</span>
+						{:else if rec === '1'}
+							<input type="checkbox" bind:group={filters.verdict} value="1" />
+							<span>Recommended</span>
+						{:else if rec === '0'}
+							<input type="checkbox" bind:group={filters.verdict} value="0" />
+							<span>Contextual</span>
+						{:else if rec === '-1'}
+							<input type="checkbox" bind:group={filters.verdict} value="-1" />
+							<span>Not recommended</span>
+						{:else}
+							<input type="checkbox" bind:group={filters.verdict} value="-2" />
+							<span>Pending</span>
+						{/if}
+					</label>
+				{/each}
+			</section>
+
+			<section>
+				<h3>Sort by</h3>
 				<label>
-					{#if rec === '2'}
-						<input type="checkbox" bind:group={filters.verdict} value="2" />
-						<span>Must-watch!</span>
-					{:else if rec === '1'}
-						<input type="checkbox" bind:group={filters.verdict} value="1" />
-						<span>Recommended</span>
-					{:else if rec === '0'}
-						<input type="checkbox" bind:group={filters.verdict} value="0" />
-						<span>Contextual</span>
-					{:else if rec === '-1'}
-						<input type="checkbox" bind:group={filters.verdict} value="-1" />
-						<span>Not recommended</span>
-					{:else}
-						<input type="checkbox" bind:group={filters.verdict} value="-2" />
-						<span>Pending</span>
-					{/if}
+					<input type="radio" bind:group={filters.sort} value="updated" />
+					<span>Last updated</span>
 				</label>
-			{/each}
-		</section>
+				<label>
+					<input type="radio" bind:group={filters.sort} value="published" />
+					<span>Date published</span>
+				</label>
+				<label>
+					<input type="radio" bind:group={filters.sort} value="year" />
+					<span>Year released</span>
+				</label>
+				<label>
+					<input type="radio" bind:group={filters.sort} value="rating" />
+					<span>Rating</span>
+				</label>
+			</section>
+		</SearchBar>
 
-		<section>
-			<h3>Sort by</h3>
-			<label>
-				<input type="radio" bind:group={filters.sort} value="updated" />
-				<span>Last updated</span>
-			</label>
-			<label>
-				<input type="radio" bind:group={filters.sort} value="published" />
-				<span>Date published</span>
-			</label>
-			<label>
-				<input type="radio" bind:group={filters.sort} value="year" />
-				<span>Year released</span>
-			</label>
-			<label>
-				<input type="radio" bind:group={filters.sort} value="rating" />
-				<span>Rating</span>
-			</label>
-		</section>
-	</SearchBar>
+		<Pagination {store} {total} {bound} />
+	</header>
 
-	<Pagination {store} {total} {bound} />
-</PageHeader>
-
-<main>
 	{#each sieved.slice($store * bound, $store * bound + bound) as post (post.slug)}
 		<div animate:flip={{ duration }} transition:scale|local={{ duration }}>
 			<ReviewCard {post} />
@@ -103,8 +104,7 @@
 	{:else}
 		<h2>There are no matching {query ? 'titles' : 'filters'}</h2>
 	{/each}
-</main>
-
+</GridView>
 {#if $mobile}
 	<Centered>
 		<Pagination {store} {total} {bound} />
@@ -112,28 +112,18 @@
 {/if}
 
 <style>
-	main {
-		max-width: 84em;
-		width: 100%;
-		position: relative;
-		display: grid;
-		gap: 1em;
-		grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
-		padding: 0 1em;
-		margin: 0 auto;
+	h1 {
+		text-align: center;
 	}
-	main div {
+	div {
 		border-radius: 0.25em;
 		box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
-		background-color: var(--bg-color-secondary);
+		background-color: rgba(var(--bg-color-secondary, 1));
 	}
-	main h2 {
+	h2 {
 		position: absolute;
 		width: 100%;
 		text-align: center;
 		word-break: break-word;
-	}
-	main :global(img:not([src])) {
-		display: none;
 	}
 </style>

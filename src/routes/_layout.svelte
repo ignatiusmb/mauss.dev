@@ -1,7 +1,7 @@
 <script>
 	export let segment;
-	import FeatherIcons from '@ignatiusmb/elements/svelte/FeatherIcons.svelte';
-	import ScrollTop from '@ignatiusmb/elements/svelte/ScrollTop.svelte';
+	import { FeatherIcons } from '@ignatiusmb/elements/essentials';
+	import { ScrollTop } from '@ignatiusmb/elements/styled';
 	import Navigation from '../components/Navigation.svelte';
 	import Footer from '../components/Footer.svelte';
 
@@ -25,7 +25,7 @@
 	<Navigation mobile={$mobile} />
 {/if}
 <slot />
-<Footer mobile={$mobile} />
+<Footer />
 
 <style>
 	:global(#sapper) {

@@ -1,8 +1,5 @@
 <script>
-	export let mobile;
-	import Link from '@ignatiusmb/elements/svelte/Link.svelte';
-	import Icon from '@ignatiusmb/elements/svelte/Icon.svelte';
-	$: size = mobile ? 20 : 30;
+	import { Link, Icon } from '@ignatiusmb/elements/essentials';
 </script>
 
 <footer>
@@ -12,25 +9,31 @@
 
 	<section class="social-links">
 		<Link newTab href="https://www.facebook.com/ignatiusmb" label="facebook profile">
-			<Icon name="facebook" {size} />
-		</Link>
-		<Link newTab href="https://twitter.com/ignatiusmbs" label="twitter profile">
-			<Icon name="twitter" {size} />
+			<Icon name="facebook" />
 		</Link>
 		<Link newTab href="https://www.instagram.com/ignatiusmb" label="instagram profile">
-			<Icon name="instagram" {size} />
+			<Icon name="instagram" />
 		</Link>
 		<Link newTab href="https://www.linkedin.com/in/ignatiusmb" label="linkedin profile">
-			<Icon name="linkedin" {size} />
+			<Icon name="linkedin" />
+		</Link>
+		<Link newTab href="https://twitter.com/devmauss" label="twitter profile">
+			<Icon name="twitter" />
 		</Link>
 		<Link newTab href="https://github.com/ignatiusmb" label="github profile">
-			<Icon name="github" {size} />
+			<Icon name="github" />
 		</Link>
 		<Link newTab href="https://gitlab.com/ignatiusmb" label="gitlab profile">
-			<Icon name="gitlab" {size} />
+			<Icon name="gitlab" />
+		</Link>
+		<Link newTab href="https://twitch.tv/devmauss" label="twitch profile">
+			<Icon name="twitch" />
 		</Link>
 		<Link newTab href="https://www.youtube.com/user/Ignapure/playlists" label="youtube playlist profile">
-			<Icon name="youtube" {size} />
+			<Icon name="youtube" />
+		</Link>
+		<Link newTab href="rss.xml" label="complete rss feed">
+			<Icon name="rss" />
 		</Link>
 	</section>
 
@@ -41,6 +44,8 @@
 			<Link newTab href="https://svelte.dev/">Svelte</Link>
 			&plus;
 			<Link newTab href="https://sapper.svelte.dev/">Sapper</Link>
+			&plus;
+			<Link newTab href="https://aqua.mauss.dev/">Aqua</Link>
 		</p>
 	</section>
 </footer>
@@ -61,22 +66,22 @@
 	.social-links {
 		width: 100%;
 		display: grid;
-		gap: 0.25em;
-		grid-template-columns: repeat(auto-fit, minmax(0.75em, 1fr));
+		gap: 1em;
+		grid-template-columns: repeat(auto-fit, minmax(4em, 1fr));
 		padding: 1em 0 0.5em;
 		margin: auto;
 	}
 	.social-links :global(a),
 	.social-links :global(a:visited) {
-		transition: 150ms;
+		transition: var(--t-duration);
 		transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-		color: var(--fg-secondary-color);
+		color: rgba(rgba(var(--fg-color, 1)), 0.6);
 	}
 	.social-links :global(a:hover),
 	.social-links :global(a:focus) {
-		transition: 150ms;
+		transition: var(--t-duration);
 		transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-		color: var(--mauss-secondary);
+		color: rgba(var(--theme-secondary), 1);
 	}
 	.social-links :global(a:hover:nth-child(odd)),
 	.social-links :global(a:focus:nth-child(odd)) {

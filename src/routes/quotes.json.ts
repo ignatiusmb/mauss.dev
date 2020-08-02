@@ -3,17 +3,21 @@ import { parseDir } from '../utils/parser';
 
 export function get(_: Request, res: Response) {
 	const DIR = 'content/quotes';
-	const quotes = parseDir(DIR, (_: any, content: string, filename: string) => {
+	const excerpts = parseDir(DIR, (_: any, content: string, filename: string) => {
 		const [author] = filename.split('.');
-		return {
-			author: author.replace('-', ' '),
-			quotes: content.split('\n').reduce((acc, cur) => {
-				if (!cur) return acc;
-				const [quote, from] = cur.split('#!/');
-				return [...acc, { quote, from }];
-			}, []),
-		};
+		return { author: author.replace('-', ' '), lines: content.split('\n') };
 	});
+
+	const quotes = excerpts.reduce((acc: [], cur: { author: string; lines: string[] }) => {
+		const { author, lines } = cur;
+		const content = [];
+		for (const line of lines) {
+			if (!line) continue;
+			const [quote, from] = line.split('#!/');
+			content.push({ author, quote, from });
+		}
+		return [...acc, ...content];
+	}, []);
 
 	res.writeHead(200, { 'Content-Type': 'application/json' });
 	res.end(JSON.stringify(quotes));

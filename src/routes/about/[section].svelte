@@ -9,7 +9,8 @@
 
 <script>
 	export let section, post;
-	import Link from '@ignatiusmb/elements/svelte/Link.svelte';
+	import { Link } from '@ignatiusmb/elements/essentials';
+	import { WeavedImage } from '@ignatiusmb/elements/styled';
 	import MetaHead from '../../pages/MetaHead.svelte';
 	import Article from '../../pages/Article.svelte';
 	import { capitalize } from '../../utils/helper';
@@ -22,6 +23,8 @@
 	description="Get to know Ignatius Bagussuputra from his About page." />
 
 <Article {post}>
+	<WeavedImage src="profile/mauss.jpeg" alt="Mauss Profile" />
+
 	<section>
 		<Link href="about">
 			<h2>About</h2>
@@ -35,7 +38,7 @@
 
 <style>
 	section:first-of-type {
-		border: 0.2em solid var(--fg-color);
+		border: 0.2em solid rgba(var(--fg-color, 1));
 		border-radius: 0.15em;
 	}
 	section:first-of-type h2 {

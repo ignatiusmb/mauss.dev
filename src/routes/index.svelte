@@ -12,20 +12,26 @@
 		data['reviews'] = data['reviews'].filter((p) => p.rating && p.verdict);
 		for (const key in data) if (Array.isArray(data[key])) data[key] = data[key].slice(0, 4);
 
-		return { data, excerpt: await this.fetch('quotes.json').then((r) => r.json()) };
+		return { data, quotes: await this.fetch('quotes.json').then((r) => r.json()) };
 	}
 </script>
 
 <script>
-	export let data, excerpt;
-	import Link from '@ignatiusmb/elements/svelte/Link.svelte';
-	import Image from '@ignatiusmb/elements/svelte/Image.svelte';
+	export let data, quotes;
+	import { Link, Image } from '@ignatiusmb/elements/essentials';
 	import MetaHead from '../pages/MetaHead.svelte';
 	import Article from '../pages/Article.svelte';
 	import Quote from '../svelte/Quote.svelte';
 	import Navigation from '../components/Navigation.svelte';
 	import { mobile } from '../stores';
+	let quoteIndex = randomInt(quotes.length - 1);
 	let scrollY, innerHeight;
+	const getNewQuote = () => {
+		let newIndex;
+		do newIndex = randomInt(quotes.length - 1);
+		while (newIndex === quoteIndex);
+		quoteIndex = newIndex;
+	};
 	$: scrolled = scrollY >= innerHeight * 0.7;
 </script>
 
@@ -39,27 +45,23 @@
 	<Navigation mobile={$mobile} bind:scrolled />
 </div>
 
-<Article header={false}>
+<Article>
 	<header slot="header">
-		<Link newTab href="https://github.com/ignatiusmb/">
+		<Link href="about">
 			<div class="dashed-border" />
 			<Image src="profile/mauss.jpeg" alt="Mauss Profile" ratio={1} />
 		</Link>
-		<h2>
-			<Link href="about">Ignatius Bagussuputra</Link>
-		</h2>
+		<h2>Ignatius Bagussuputra</h2>
 		<h4>CS Student at University of Indonesia</h4>
 		<h3>I create and engineer graphics</h3>
 
-		{#each [excerpt[randomInt(excerpt.length - 1)]] as { author, quotes }}
-			{#each [quotes[randomInt(quotes.length - 1)]] as { quote, from }}
-				<Quote {author}>
-					<p>{quote}</p>
-					{#if from}
-						<p class="from">{from}</p>
-					{/if}
-				</Quote>
-			{/each}
+		{#each [quotes[quoteIndex]] as { author, quote, from }}
+			<Quote {author} on:click={getNewQuote}>
+				<p>{quote}</p>
+				{#if from}
+					<p class="from">{from}</p>
+				{/if}
+			</Quote>
 		{/each}
 	</header>
 
@@ -145,7 +147,10 @@
 		height: 14em;
 		justify-self: center;
 		border-radius: 50%;
-		margin-top: auto;
+		margin-top: 25%;
+	}
+	header > h3 {
+		margin-bottom: auto;
 	}
 	header :global(.elements.image img) {
 		padding: 0.5em;
@@ -156,12 +161,12 @@
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		border: 0.25em dashed var(--mauss-primary);
+		border: 0.25em dashed rgba(var(--theme-primary), 1);
 		border-radius: inherit;
 		animation: 28s infinite linear rotate;
 	}
 	header > :global(blockquote) {
-		margin-top: auto;
+		margin-bottom: 4em;
 	}
 
 	h2 {
@@ -191,7 +196,7 @@
 	section h2::after {
 		content: '';
 		height: 0.1em;
-		background-color: var(--mauss-secondary);
+		background-color: rgba(var(--theme-secondary), 1);
 	}
 
 	.fixed-nav > :global(nav) {
@@ -201,5 +206,11 @@
 	}
 	.fixed-nav.scrolled > :global(nav) {
 		transform: translateY(0);
+	}
+
+	@media only screen and (min-width: 600px) {
+		header > :global(blockquote) {
+			margin-bottom: revert;
+		}
 	}
 </style>

@@ -16,7 +16,7 @@
 	title="Uses"
 	description="Ignatius Bagussuputra's collections, detailing his setup, applications, workstations, and other stuffs." />
 
-<Article {post}>
+<Article header {post}>
 	<section>
 		{@html post.content}
 	</section>

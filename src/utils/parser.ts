@@ -60,7 +60,7 @@ export function parseFile(filename: string, parseCallback: Function) {
 	const [rawData, metadata] = fmExpression.exec(content) || ['', ''];
 
 	const frontMatter = extractMeta(metadata);
-	const [cleanedFilename] = filename.split(/[\/\\]/).slice(-1);
+	const [cleanedFilename] = filename.split(/[/\\]/).slice(-1);
 	const article = metadata ? content.slice(rawData.length + 1) : content;
 	const result = parseCallback(frontMatter, article, cleanedFilename);
 	if (!result) return;

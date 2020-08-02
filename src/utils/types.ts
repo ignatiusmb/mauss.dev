@@ -3,7 +3,23 @@ interface Article {
 	title: string | {};
 }
 
-class Post implements Article {
+interface RSSChannel {
+	domain: string;
+	image?: string;
+	title: string;
+	slug: string;
+	description: string;
+	language?: string;
+}
+
+interface RSSItem {
+	title: string;
+	slug: string;
+	description: string;
+	date: string;
+}
+
+interface Post extends Article {
 	slug: string;
 	title: string | {};
 	tags: Array<string>;
@@ -13,7 +29,7 @@ class Post implements Article {
 	};
 }
 
-class Review implements Article {
+interface Review extends Article {
 	slug: string;
 	category: string;
 	year: number;

@@ -1,64 +1,66 @@
 <script context="module">
-  export async function preload() {
-    return { data: await this.fetch('curated.json').then((r) => r.json()) };
-  }
+	export async function preload() {
+		return { data: await this.fetch('curated.json').then((r) => r.json()) };
+	}
 </script>
 
 <script>
-  export let data;
-  import MetaHead from '../../pages/MetaHead.svelte';
-  import ButtonLink from '../../svelte/ButtonLink.svelte';
+	export let data;
+	import { ButtonLink } from '@ignatiusmb/elements/styled';
+	import MetaHead from '../../pages/MetaHead.svelte';
 
-  import { scale } from 'svelte/transition';
-  import { flip } from 'svelte/animate';
+	import { scale } from 'svelte/transition';
+	import { flip } from 'svelte/animate';
 </script>
 
 <MetaHead
-  canonical="curated"
-  title="Curated"
-  description="Curated content for all kinds of programming, lifestyle, and many more." />
+	canonical="curated"
+	title="Curated"
+	description="Curated content for all kinds of programming, lifestyle, and many more.">
+	<link rel="alternate" href="curated.xml" type="application/rss+xml" title="Read curated stuff" />
+</MetaHead>
 
 <header>
-  <h1>Curated by Ignatius</h1>
+	<h1>Curated by Mauss</h1>
 </header>
 
 <main>
-  {#each data as post (post.slug)}
-    <section animate:flip transition:scale|local>
-      <small>{post.title}</small>
-      <ButtonLink href="curated/{post.slug}">read</ButtonLink>
-    </section>
-  {/each}
+	{#each data as post (post.slug)}
+		<section animate:flip transition:scale|local>
+			<small>{post.title}</small>
+			<ButtonLink href="curated/{post.slug}">read</ButtonLink>
+		</section>
+	{/each}
 </main>
 
 <style>
-  header,
-  main {
-    width: 100%;
-    max-width: 48em;
-    display: grid;
-    gap: 1em;
-    padding: 0 1em;
-    margin: 0 auto;
-  }
-  h1 {
-    width: 100%;
-    margin: 1.5em 0 1em;
-    text-align: center;
-  }
-  section {
-    width: 100%;
-    min-height: 3em;
-    display: grid;
-    gap: 0.5em;
-    align-items: center;
-    grid-template-columns: 1fr auto;
-    padding: 0.5em;
-    border-radius: 0.25em;
-    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
-    background-color: var(--bg-color-secondary);
-  }
-  small {
-    padding-left: 0.5em;
-  }
+	header,
+	main {
+		width: 100%;
+		max-width: 48em;
+		display: grid;
+		gap: 1em;
+		padding: 0 1em;
+		margin: 0 auto;
+	}
+	h1 {
+		width: 100%;
+		margin: 1.5em 0 1em;
+		text-align: center;
+	}
+	section {
+		width: 100%;
+		min-height: 3em;
+		display: grid;
+		gap: 0.5em;
+		align-items: center;
+		grid-template-columns: 1fr auto;
+		padding: 0.5em;
+		border-radius: 0.25em;
+		box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+		background-color: rgba(var(--bg-color-secondary, 1));
+	}
+	small {
+		padding-left: 0.5em;
+	}
 </style>

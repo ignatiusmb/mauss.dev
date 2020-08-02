@@ -22,7 +22,7 @@ section.info-box {
 	border-left: 5px solid #757575;
 	margin: 2rem 0;
 	font-family: 'Karla', sans-serif;
-	transition: var(--transition-duration) var(--transition-function);
+	transition: var(--t-duration) var(--t-function);
 }
 section.info-box:not([id]) {
 	margin-left: -5px;

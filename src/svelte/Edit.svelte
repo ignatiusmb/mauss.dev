@@ -1,7 +1,6 @@
 <script>
 	export let path;
-	import Link from '@ignatiusmb/elements/svelte/Link.svelte';
-	import Icon from '@ignatiusmb/elements/svelte/Icon.svelte';
+	import { Link, Icon } from '@ignatiusmb/elements/essentials';
 	const link = 'https://github.com/ignatiusmb/mauss/edit/master';
 </script>
 
