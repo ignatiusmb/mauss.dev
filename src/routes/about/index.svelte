@@ -10,7 +10,8 @@
 
 <script>
 	export let post, sections;
-	import { Link, WeavedImage } from '@ignatiusmb/elements';
+	import { Link } from '@ignatiusmb/elements/essentials';
+	import { WeavedImage } from '@ignatiusmb/elements/styled';
 	import MetaHead from '../../pages/MetaHead.svelte';
 	import Article from '../../pages/Article.svelte';
 	import { capitalize } from '../../utils/helper';

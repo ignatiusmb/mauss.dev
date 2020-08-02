@@ -1,6 +1,6 @@
 <script>
 	export let author;
-	import { GradientBorder } from '@ignatiusmb/elements';
+	import { GradientBorder } from '@ignatiusmb/elements/styled';
 </script>
 
 <blockquote>

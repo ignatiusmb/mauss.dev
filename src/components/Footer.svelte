@@ -1,5 +1,5 @@
 <script>
-	import { Link, Icon } from '@ignatiusmb/elements';
+	import { Link, Icon } from '@ignatiusmb/elements/essentials';
 </script>
 
 <footer>

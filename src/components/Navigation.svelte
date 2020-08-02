@@ -2,7 +2,8 @@
 	export let mobile;
 	export let scrolled = false;
 
-	import { Link, Icon, ThemeSwitcher } from '@ignatiusmb/elements';
+	import { Link, Icon } from '@ignatiusmb/elements/essentials';
+	import { ThemeSwitcher } from '@ignatiusmb/elements/functional';
 	import { stores } from '@sapper/app';
 	const { preloading, page } = stores();
 	const sections = ['about', 'curated', 'posts', 'reviews', 'uses'];

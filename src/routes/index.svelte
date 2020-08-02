@@ -18,7 +18,7 @@
 
 <script>
 	export let data, quotes;
-	import { Link, Image } from '@ignatiusmb/elements';
+	import { Link, Image } from '@ignatiusmb/elements/essentials';
 	import MetaHead from '../pages/MetaHead.svelte';
 	import Article from '../pages/Article.svelte';
 	import Quote from '../svelte/Quote.svelte';
