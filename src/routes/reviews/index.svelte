@@ -40,7 +40,9 @@
 <MetaHead
 	canonical="reviews"
 	title="Reviews"
-	description="Personalized reviews for all kinds of anime, books, movies, shows, etc." />
+	description="Personalized reviews for all kinds of anime, books, movies, shows, etc.">
+	<link rel="alternate" href="reviews.xml" type="application/rss+xml" title="Read recent reviews" />
+</MetaHead>
 
 <GridView>
 	<header slot="header">

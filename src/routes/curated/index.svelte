@@ -16,10 +16,12 @@
 <MetaHead
 	canonical="curated"
 	title="Curated"
-	description="Curated content for all kinds of programming, lifestyle, and many more." />
+	description="Curated content for all kinds of programming, lifestyle, and many more.">
+	<link rel="alternate" href="curated.xml" type="application/rss+xml" title="Read curated stuff" />
+</MetaHead>
 
 <header>
-	<h1>Curated by Ignatius</h1>
+	<h1>Curated by Mauss</h1>
 </header>
 
 <main>

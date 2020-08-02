@@ -34,7 +34,9 @@
 	$: $store = $store * bound > total ? 0 : $store;
 </script>
 
-<MetaHead canonical="posts" title="Posts" description="Get the latest most recent posts here." />
+<MetaHead canonical="posts" title="Posts" description="Get the latest most recent posts here.">
+	<link rel="alternate" href="posts.xml" type="application/rss+xml" title="Read recent posts" />
+</MetaHead>
 
 <GridView itemSize={21}>
 	<header slot="header">
