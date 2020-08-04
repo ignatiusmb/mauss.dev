@@ -65,11 +65,15 @@
 	}
 	.social-links {
 		width: 100%;
-		display: grid;
-		gap: 1em;
-		grid-template-columns: repeat(auto-fit, minmax(4em, 1fr));
-		padding: 1em 0 0.5em;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding: 0 0 0.5em;
 		margin: auto;
+	}
+	.social-links > :global(a) {
+		flex: 0 1 5em;
+		padding-top: 1em;
 	}
 	.social-links :global(a),
 	.social-links :global(a:visited) {
