@@ -1,4 +1,4 @@
-import { Request, Response } from 'express';
+import type { Request, Response } from 'express';
 import { parseDir } from '../../utils/parser';
 
 export function get(req: Request, res: Response) {

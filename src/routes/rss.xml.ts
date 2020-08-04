@@ -1,4 +1,4 @@
-import { Response, Request } from 'express';
+import type { Response, Request } from 'express';
 import { readdirSync } from 'fs';
 import { parseDir } from '../utils/parser';
 import { compareDate } from '../utils/helper';

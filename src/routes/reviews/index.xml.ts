@@ -1,4 +1,4 @@
-import { Response, Request } from 'express';
+import type { Request, Response } from 'express';
 import { readdirSync } from 'fs';
 import { parseDir } from '../../utils/parser';
 import RSS from '../../utils/rss';

@@ -1,4 +1,4 @@
-import { Request, Response } from 'express';
+import type { Request, Response } from 'express';
 import { parseFile, aquaMark } from '../../../utils/parser';
 import { countAverageRating } from '../../../utils/article';
 

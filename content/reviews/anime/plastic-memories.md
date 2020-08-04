@@ -2,7 +2,7 @@
 year: 2015
 title:short:
 title:en: Plastic Memories
-title:jp: プラスティック・メモリーズ
+title:jp:
 genres: romance, sci-fi, drama
 rating: story,artwork,sound,characters
 verdict:

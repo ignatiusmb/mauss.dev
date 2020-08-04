@@ -1,4 +1,4 @@
-import { Request, Response } from 'express';
+import type { Request, Response } from 'express';
 import { existsSync } from 'fs';
 import { join } from 'path';
 import { parseDir } from '../../utils/parser';
