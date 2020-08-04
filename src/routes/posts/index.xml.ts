@@ -17,5 +17,5 @@ export function get(_: Request, res: Response) {
 	});
 
 	res.writeHead(200, { 'Content-Type': 'application/xml' });
-	res.end(RSS(channel).generate(posts));
+	res.end(RSS(channel, posts));
 }
