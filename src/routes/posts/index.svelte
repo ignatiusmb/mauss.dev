@@ -35,7 +35,7 @@
 </script>
 
 <MetaHead canonical="posts" title="Posts" description="Get the latest most recent posts here.">
-	<link rel="alternate" href="posts.xml" type="application/rss+xml" title="Read recent posts" />
+	<link rel="alternate" href="rss.xml" type="application/rss+xml" />
 </MetaHead>
 
 <GridView itemSize={21}>

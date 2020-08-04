@@ -40,7 +40,7 @@
 	{/if}
 
 	{#if rss.includes(path)}
-		<Link newTab href="{path}.xml" inherit>
+		<Link newTab href="rss.xml" inherit>
 			<Icon name="rss" />
 		</Link>
 	{/if}

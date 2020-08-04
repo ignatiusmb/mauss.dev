@@ -17,7 +17,7 @@
 	canonical="curated"
 	title="Curated"
 	description="Curated content for all kinds of programming, lifestyle, and many more.">
-	<link rel="alternate" href="curated.xml" type="application/rss+xml" title="Read curated stuff" />
+	<link rel="alternate" href="rss.xml" type="application/rss+xml" />
 </MetaHead>
 
 <header>

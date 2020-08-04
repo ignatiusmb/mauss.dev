@@ -32,9 +32,6 @@
 		<Link newTab href="https://www.youtube.com/user/Ignapure/playlists" label="youtube playlist profile">
 			<Icon name="youtube" />
 		</Link>
-		<Link newTab href="rss.xml" label="complete rss feed">
-			<Icon name="rss" />
-		</Link>
 	</section>
 
 	<section>
