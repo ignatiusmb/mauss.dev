@@ -15,20 +15,35 @@ export function get(_: Request, res: Response) {
 	const curated = parseDir('content/curated', (data: any, _: string, filename: string) => {
 		const [slug] = filename.split('.');
 		const { title, date_updated } = data;
-		return { title, slug: `curated/${slug}`, date: date_updated };
+		return {
+			title,
+			slug: `curated/${slug}`,
+			description: `${title} curated by Mauss`,
+			date: date_updated,
+		};
 	});
 
 	const posts = parseDir('content/posts', (data: Post, _: string, filename: string) => {
 		const [date, slug] = filename.split('.');
 		const { title, description } = data;
-		return { title, slug: `posts/${slug}`, description, date };
+		return {
+			title,
+			slug: `posts/${slug}`,
+			description,
+			date,
+		};
 	});
 
 	const reviews = readdirSync('content/reviews').flatMap((folder) => {
 		return parseDir(`content/reviews/${folder}`, (data: Review, _: string, filename: string) => {
 			const [slug] = filename.split('.');
 			const { title, date_published } = data;
-			return { slug: `reviews/${folder}/${slug}`, title: title.en, date: date_published };
+			return {
+				title: title.en,
+				slug: `reviews/${folder}/${slug}`,
+				description: `Review for ${title.en} ${folder}`,
+				date: date_published,
+			};
 		});
 	});
 
