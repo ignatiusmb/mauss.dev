@@ -32,7 +32,7 @@
 		while (newIndex === quoteIndex);
 		quoteIndex = newIndex;
 	};
-	$: scrolled = scrollY >= innerHeight * 0.7;
+	$: scrolled = scrollY >= innerHeight * 0.6;
 </script>
 
 <svelte:window bind:scrollY bind:innerHeight />
