@@ -6,10 +6,8 @@ export function get(_: Request, res: Response) {
 		const [slug] = filename.split('.');
 		return { slug, ...data, content };
 	}).reduce((acc, cur) => {
-		const { slug } = cur;
-		delete cur['slug'];
-		acc[slug] = cur;
-		return acc;
+		const { slug, ...res } = cur;
+		return { ...acc, [slug]: res };
 	}, {});
 
 	res.writeHead(200, { 'Content-Type': 'application/json' });
