@@ -14,12 +14,12 @@ const channel = {
 export function get(_: Request, res: Response) {
 	const curated = parseDir('content/curated', (data: any, _: string, filename: string) => {
 		const [slug] = filename.split('.');
-		const { title, date_updated } = data;
+		const { title, date } = data;
 		return {
 			title,
 			slug: `curated/${slug}`,
 			description: `${title} curated by Mauss`,
-			date: date_updated,
+			date: date.updated,
 		};
 	});
 
@@ -37,12 +37,12 @@ export function get(_: Request, res: Response) {
 	const reviews = readdirSync('content/reviews').flatMap((folder) => {
 		return parseDir(`content/reviews/${folder}`, (data: Review, _: string, filename: string) => {
 			const [slug] = filename.split('.');
-			const { title, date_published } = data;
+			const { title, date } = data;
 			return {
 				title: title.en,
 				slug: `reviews/${folder}/${slug}`,
 				description: `Review for ${title.en} ${folder}`,
-				date: date_published,
+				date: date.published,
 			};
 		});
 	});

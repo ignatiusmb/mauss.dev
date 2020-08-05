@@ -23,7 +23,7 @@
 
 <MetaHead {post} canonical="posts/{post.slug}" title={post.title} />
 
-<Article header {post} path="content/posts/{post.date_published}.{post.slug}.md" siblings={post.siblings}>
+<Article header {post} path="content/posts/{post.date.published}.{post.slug}.md" siblings={post.siblings}>
 	<small slot="header">
 		{#each post.tags as tag}
 			<TagBadge {tag} />

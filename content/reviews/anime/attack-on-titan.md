@@ -7,8 +7,8 @@ rating:
 verdict:
 
 last_seen: 2020-05-12
-date_published: 2020
-date_updated:
+date:published: 2020
+date:updated:
 image:en: https://image.tmdb.org/t/p/original/2wxoRovckZPxxFLROZGdujJiNcC.jpg
 
 link:mal: https://myanimelist.net/anime/16498/Shingeki_no_Kyojin

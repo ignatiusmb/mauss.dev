@@ -1,6 +1,6 @@
 ---
 title: About - Workouts
-date_updated: 2020-06-23
+date:updated: 2020-06-23
 ---
 
 My workouts started from my journey of trying to gain Full Body Control, I felt that I need to gain full control of my body so in some rare case where I might fall, I'll be able to fall with minimum or no damage to my body. This is what motivates me, and that's when I started to learn breaking and calisthenics.

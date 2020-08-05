@@ -6,7 +6,7 @@ rating: story,artwork,sound,characters
 verdict:
 
 last_seen:
-date_published: 2020
+date:published: 2020
 image:en: https://image.tmdb.org/t/p/original/5DZa4aDH5MZGcZDf8ouTxm2kH2Y.jpg
 
 link:mal:

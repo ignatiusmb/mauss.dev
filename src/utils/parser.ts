@@ -65,8 +65,8 @@ export function parseFile(filename: string, parseCallback: Function) {
 	const result = parseCallback(frontMatter, article, cleanedFilename);
 	if (!result) return;
 
-	if (result.date_published && !result.date_updated) {
-		result.date_updated = result.date_published;
+	if (result.date && result.date.published && !result.date.updated) {
+		result.date.updated = result.date.published;
 	}
 
 	result.read_time = countReadTime(article);

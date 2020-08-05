@@ -24,6 +24,8 @@ interface Post extends Article {
 	title: string | {};
 	tags: Array<string>;
 	description: string;
+
+	date?: { updated: Date };
 	image: {
 		en: string;
 	};
@@ -43,8 +45,10 @@ interface Review extends Article {
 	verdict: number;
 
 	last_seen: Date;
-	date_published: Date;
-	date_updated: Date;
+	date: {
+		published: Date;
+		updated?: Date;
+	};
 	image: {
 		en: string;
 		jp?: string;

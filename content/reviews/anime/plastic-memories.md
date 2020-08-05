@@ -8,8 +8,8 @@ rating: story,artwork,sound,characters
 verdict:
 
 last_seen: 2020-08-03
-date_published: 2020
-date_updated: 2020
+date:published: 2020
+date:updated: 2020
 image:en: https://image.tmdb.org/t/p/original/ypQKH5Q1ifDaRKoo6oQozmtFIvN.jpg
 image:jp:
 

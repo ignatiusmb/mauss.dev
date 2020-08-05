@@ -3,8 +3,8 @@
 	import { Image } from '@ignatiusmb/elements/essentials';
 	import { ButtonLink } from '@ignatiusmb/elements/styled';
 	import { createPrettyDate } from '../utils/helper';
-	const date = createPrettyDate(post.date_published);
-	const updated = createPrettyDate(post.date_updated);
+	const { published, updated } = post.date;
+	const prettyDate = createPrettyDate((updated !== published && updated) || published);
 </script>
 
 <section>
@@ -20,11 +20,10 @@
 	</div>
 
 	<aside>
-		{#if post.date_updated && post.date_updated !== post.date_published}
-			<small>Updated {updated.day} {updated.month} {updated.year}</small>
-		{:else}
-			<small>{date.day} {date.month} {date.year}</small>
-		{/if}
+		<small>
+			{#if updated && updated !== published}Updated{/if}
+			{prettyDate.day} {prettyDate.month} {prettyDate.year}
+		</small>
 		<small>{post.read_time} min read</small>
 		<ButtonLink href="posts/{post.slug}">read</ButtonLink>
 	</aside>

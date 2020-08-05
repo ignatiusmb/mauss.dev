@@ -8,7 +8,7 @@
 			reviews: await this.fetch('reviews.json').then((r) => r.json()),
 		};
 
-		data['curated'] = data['curated'].sort((x, y) => compareDate(x.date_updated, y.date_updated));
+		data['curated'] = data['curated'].sort((x, y) => compareDate(x.date.updated, y.date.updated));
 		data['reviews'] = data['reviews'].filter((p) => p.rating && p.verdict);
 		for (const key in data) if (Array.isArray(data[key])) data[key] = data[key].slice(0, 4);
 

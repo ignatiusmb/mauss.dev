@@ -7,7 +7,7 @@ import { fillSiblings } from '../../utils/article';
 export function get(_: Request, res: Response) {
 	const DIR = 'content/posts';
 	const posts = parseDir(DIR, (data: Post, _: string, filename: string) => {
-		const [date_published, slug] = filename.split('.');
+		const [published, slug] = filename.split('.');
 		const [category] = data.tags;
 
 		if (!data.image) {
@@ -19,7 +19,8 @@ export function get(_: Request, res: Response) {
 			}
 		}
 
-		return { slug, ...data, category: data.tags[0], date_published };
+		const date = { published, updated: data.date && data.date.updated };
+		return { slug, ...data, category: data.tags[0], date };
 	});
 
 	res.writeHead(200, { 'Content-Type': 'application/json' });

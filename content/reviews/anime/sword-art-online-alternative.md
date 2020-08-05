@@ -7,8 +7,8 @@ rating:
 verdict:
 
 last_seen:
-date_published: 2020
-date_updated:
+date:published: 2020
+date:updated:
 image:en: https://image.tmdb.org/t/p/original/mkFSXuWzPemM1Ok0sBHl0SAsFbX.jpg
 
 link:mal: https://myanimelist.net/anime/36475/Sword_Art_Online_Alternative__Gun_Gale_Online

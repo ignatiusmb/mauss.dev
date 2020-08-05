@@ -6,7 +6,7 @@ rating:
 verdict:
 
 last_seen:
-date_published: 2020
+date:published: 2020
 image:en: https://vignette.wikia.nocookie.net/olympians/images/8/8d/The_Lost_Hero.jpg/revision/latest?cb=20151117024147
 
 link:fandom: https://riordan.fandom.com/wiki/The_Lost_Hero

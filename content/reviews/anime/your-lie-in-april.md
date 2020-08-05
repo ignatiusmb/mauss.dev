@@ -7,8 +7,8 @@ rating: 9,6,10,8
 verdict: 1
 
 last_seen: 2020-06-20
-date_published: 2020-06-20
-date_updated: 2020-06-22
+date:published: 2020-06-20
+date:updated: 2020-06-22
 image:en: https://image.tmdb.org/t/p/original/nksFLYTydth9OYVpMuMbtOBkvMO.jpg
 
 link:mal: https://myanimelist.net/anime/23273/Shigatsu_wa_Kimi_no_Uso
