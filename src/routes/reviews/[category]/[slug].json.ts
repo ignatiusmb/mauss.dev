@@ -17,34 +17,38 @@ const parseSpoilers = (content: string, seasonIndex: number) => {
 export function get(req: Request, res: Response) {
 	const { category, slug } = req.params;
 	const filepath = `content/reviews/${category}/${slug}.md`;
-	const post = parseFile(filepath, (data: Review, content: string) => {
-		data.slug = `${category}/${slug}`;
-		data.category = category;
-		data.rating = countAverageRating(data.rating);
+	function hydrate(data: RawReview, content: string): FinalReview {
+		const review: FinalReview = {
+			slug: `${category}/${slug}`,
+			category,
+			...data,
+			rating: countAverageRating(data.rating),
+		};
 
 		const final = '<!-- CLOSING -->';
 		if (content.includes(final)) {
 			const [article, closing] = content.split(final);
 			content = article;
-			data['closing'] = aquaMark(closing);
+			review.closing = aquaMark(closing);
 		}
 
 		const seasons = '<!-- SEASON DIVIDER -->';
 		if (content.includes(seasons)) {
-			data['seasons'] = [];
+			review.seasons = [];
 			let currentSeason = 0;
 			for (const season of content.split(seasons)) {
-				if (!currentSeason++) data['content'] = season;
-				else data['seasons'].push(parseSpoilers(season, currentSeason));
+				if (!currentSeason++) review.content = season;
+				else review.seasons.push(parseSpoilers(season, currentSeason));
 			}
 		} else {
 			const { content: review, spoilers } = parseSpoilers(content, 1);
-			if (spoilers) data['spoilers'] = spoilers;
-			data['content'] = review;
+			if (spoilers) review.spoilers = spoilers;
+			review.content = review;
 		}
-		return data;
-	});
+		return review;
+	}
 
+	const file = parseFile(filepath, hydrate);
 	res.writeHead(200, { 'Content-Type': 'application/json' });
-	res.end(JSON.stringify(post));
+	res.end(JSON.stringify(file));
 }

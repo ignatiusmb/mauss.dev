@@ -23,7 +23,7 @@ export function get(_: Request, res: Response) {
 		};
 	});
 
-	const posts = parseDir('content/posts', (data: Post, _: string, filename: string) => {
+	const posts = parseDir('content/posts', (data: any, _: string, filename: string) => {
 		const [date, slug] = filename.split('.');
 		const { title, description } = data;
 		return {
@@ -35,7 +35,7 @@ export function get(_: Request, res: Response) {
 	});
 
 	const reviews = readdirSync('content/reviews').flatMap((folder) => {
-		return parseDir(`content/reviews/${folder}`, (data: Review, _: string, filename: string) => {
+		return parseDir(`content/reviews/${folder}`, (data: any, _: string, filename: string) => {
 			const [slug] = filename.split('.');
 			const { title, date } = data;
 			return {

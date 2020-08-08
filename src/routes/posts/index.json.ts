@@ -5,8 +5,7 @@ import { parseDir } from '../../utils/parser';
 import { fillSiblings } from '../../utils/article';
 
 export function get(_: Request, res: Response) {
-	const DIR = 'content/posts';
-	const posts = parseDir(DIR, (data: Post, _: string, filename: string) => {
+	function hydrate(data: RawPost, _: string, filename: string): FinalPost {
 		const [published, slug] = filename.split('.');
 		const [category] = data.tags;
 
@@ -21,8 +20,9 @@ export function get(_: Request, res: Response) {
 
 		const date = { published, updated: data.date && data.date.updated };
 		return { slug, ...data, category: data.tags[0], date };
-	});
+	}
 
+	const posts = parseDir('content/posts', hydrate);
 	res.writeHead(200, { 'Content-Type': 'application/json' });
 	res.end(JSON.stringify(fillSiblings(posts, 'posts/')));
 }

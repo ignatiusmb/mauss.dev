@@ -1,4 +1,4 @@
-const chars = {
+const chars: { [key: string]: string } = {
 	'"': 'quot',
 	"'": '#39',
 	'&': 'amp',

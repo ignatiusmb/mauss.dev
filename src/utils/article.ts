@@ -4,7 +4,7 @@ export function countAverageRating(ratings: Array<string>) {
 	return Math.round((total / ratings.length + Number.EPSILON) * 100) / 100;
 }
 
-export function fillSiblings(articles: Array<Article>, base: string, breakpoint?: Function) {
+export function fillSiblings(articles: any[], base: string, breakpoint?: Function) {
 	for (let i = 0; i < articles.length; i++) {
 		if (!articles[i]['siblings']) articles[i]['siblings'] = {};
 		const [prev, next] = [articles[i - 1], articles[i + 1]];
