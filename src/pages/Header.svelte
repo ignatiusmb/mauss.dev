@@ -3,7 +3,7 @@
 	export let post;
 	import Edit from '../svelte/Edit.svelte';
 	import { createPrettyDate } from '../utils/helper';
-	$: ({ published, updated } = post.date);
+	$: ({ published, updated } = post.date || {});
 	$: pretty = {
 		published: createPrettyDate(published),
 		updated: createPrettyDate(updated),

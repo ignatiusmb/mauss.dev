@@ -25,10 +25,10 @@
 </header>
 
 <main>
-	{#each data as post (post.slug)}
+	{#each data as { slug, category, title } (slug)}
 		<section animate:flip transition:scale|local>
-			<small>{post.title}</small>
-			<ButtonLink href="curated/{post.slug}">read</ButtonLink>
+			<small>{title}</small>
+			<ButtonLink href="curated/{slug}">read</ButtonLink>
 		</section>
 	{/each}
 </main>
