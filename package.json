@@ -46,7 +46,6 @@
     "eslint": "^7.6.0",
     "eslint-plugin-svelte3": "^2.7.3",
     "jest": "^26.2.2",
-    "mdsvex": "^0.8.3",
     "postcss": "^7.0.32",
     "rollup": "^2.23.1",
     "rollup-plugin-svelte": "^5.2.3",
