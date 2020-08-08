@@ -4,7 +4,7 @@ export function countAverageRating(ratings: string[]) {
 	return Math.round((total / ratings.length + Number.EPSILON) * 100) / 100;
 }
 
-export function contentParser(data: { [key: string]: string }, content: string) {
+export function contentParser(data: any, content: string) {
 	function create(props: { type?: string; link?: string; caption?: string }) {
 		let data;
 		if (props.type === 'youtube') {

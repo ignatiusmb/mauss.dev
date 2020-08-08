@@ -152,13 +152,13 @@
 		text-align: center;
 		font: 80% var(--aqua-monospace);
 	}
-	article :global(figure.youtube > div) {
+	article :global(figure > div.youtube) {
 		height: 0;
 		position: relative;
 		padding-top: 56.25%;
 		margin-bottom: 0.5em;
 	}
-	article :global(figure.youtube iframe) {
+	article :global(figure > div.youtube iframe) {
 		width: 100%;
 		height: 100%;
 		position: absolute;
