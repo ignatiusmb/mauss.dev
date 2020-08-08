@@ -1,5 +1,6 @@
 import { join } from 'path';
 import { readdirSync, readFileSync } from 'fs';
+import { contentParser } from './article';
 import { sortCompare, splitAt } from './helper';
 import Aqua from '@ignatiusmb/aqua';
 const markIt = require('markdown-it')({
@@ -70,7 +71,11 @@ export function parseFile(filename: string, hydrate: Function) {
 	}
 
 	result.read_time = countReadTime(article);
-	if (result.content) result.content = aquaMark(result.content);
+	if (result.content) {
+		const { content, ...rest } = result;
+		result.content = contentParser(rest, content);
+		result.content = aquaMark(result.content);
+	}
 	return result;
 }
 
