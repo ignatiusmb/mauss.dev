@@ -53,20 +53,16 @@
 				<h3>Verdict</h3>
 				{#each verdict as rec}
 					<label>
+						<input type="checkbox" bind:group={filters.verdict} value={rec ? rec : '-2'} />
 						{#if rec === '2'}
-							<input type="checkbox" bind:group={filters.verdict} value="2" />
 							<span>Must-watch!</span>
 						{:else if rec === '1'}
-							<input type="checkbox" bind:group={filters.verdict} value="1" />
 							<span>Recommended</span>
 						{:else if rec === '0'}
-							<input type="checkbox" bind:group={filters.verdict} value="0" />
 							<span>Contextual</span>
 						{:else if rec === '-1'}
-							<input type="checkbox" bind:group={filters.verdict} value="-1" />
 							<span>Not recommended</span>
 						{:else}
-							<input type="checkbox" bind:group={filters.verdict} value="-2" />
 							<span>Pending</span>
 						{/if}
 					</label>
