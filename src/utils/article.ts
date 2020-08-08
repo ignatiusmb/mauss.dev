@@ -1,5 +1,5 @@
-export function countAverageRating(ratings: Array<string>) {
-	if (!ratings) return null;
+export function countAverageRating(ratings: string[]) {
+	if (!ratings) return 0;
 	const total = ratings.reduce((acc, cur) => acc + parseInt(cur), 0);
 	return Math.round((total / ratings.length + Number.EPSILON) * 100) / 100;
 }

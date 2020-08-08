@@ -65,7 +65,7 @@ declare class FinalReview implements RawReview {
 	year: string;
 	title: { short?: string; en: string; jp?: string };
 	genres: string[];
-	rating: number | null;
+	rating: number;
 	verdict: number | undefined;
 
 	last_seen: string | Date;
