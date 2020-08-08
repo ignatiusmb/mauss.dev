@@ -84,6 +84,10 @@
 					<span>Year released</span>
 				</label>
 				<label>
+					<input type="radio" bind:group={filters.sort} value="seen" />
+					<span>Last seen</span>
+				</label>
+				<label>
 					<input type="radio" bind:group={filters.sort} value="rating" />
 					<span>Rating</span>
 				</label>

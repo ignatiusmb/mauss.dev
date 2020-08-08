@@ -51,4 +51,8 @@ export function sort(type, data) {
 		return data.sort((x, y) => {
 			return compareDate(x.date.published, y.date.published) || sortCompare(x, y);
 		});
+	if (type === 'seen')
+		return data.sort((x, y) => {
+			return compareDate(x.last_seen, y.last_seen) || sortCompare(x, y);
+		});
 }
