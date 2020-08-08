@@ -32,7 +32,7 @@ export function lastWords(index, text) {
 export function randomInt(max, min) {
 	min = Math.ceil(min ? min : 0);
 	max = Math.floor(max);
-	return Math.floor(Math.random() * (max - min + 1)) + min;
+	return Math.floor(Math.random() * (max - min)) + min;
 }
 
 export function randomKey(dict) {

@@ -24,11 +24,11 @@
 	import Quote from '../svelte/Quote.svelte';
 	import Navigation from '../components/Navigation.svelte';
 	import { mobile } from '../stores';
-	let quoteIndex = randomInt(quotes.length - 1);
+	let quoteIndex = randomInt(quotes.length);
 	let scrollY, innerHeight;
 	const getNewQuote = () => {
 		let newIndex;
-		do newIndex = randomInt(quotes.length - 1);
+		do newIndex = randomInt(quotes.length);
 		while (newIndex === quoteIndex);
 		quoteIndex = newIndex;
 	};
