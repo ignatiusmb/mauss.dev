@@ -144,6 +144,9 @@
 		border: 0;
 		background-color: rgba(var(--fg-color, 1));
 	}
+	article :global(figure) {
+		margin: 1em 0 2em;
+	}
 	article :global(figure figcaption) {
 		padding: 0 0.25em;
 		text-align: center;
@@ -152,7 +155,7 @@
 	article :global(figure.youtube > div) {
 		height: 0;
 		position: relative;
-		padding-bottom: 56.25%;
+		padding-top: 56.25%;
 		margin-bottom: 0.5em;
 	}
 	article :global(figure.youtube iframe) {
