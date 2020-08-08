@@ -41,9 +41,9 @@ export function get(req: Request, res: Response) {
 				else review.seasons.push(parseSpoilers(season, currentSeason));
 			}
 		} else {
-			const { content: review, spoilers } = parseSpoilers(content, 1);
+			const { content: raw, spoilers } = parseSpoilers(content, 1);
 			if (spoilers) review.spoilers = spoilers;
-			review.content = review;
+			review.content = raw;
 		}
 		return review;
 	}
