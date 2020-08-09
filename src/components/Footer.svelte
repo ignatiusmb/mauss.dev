@@ -4,7 +4,7 @@
 
 <footer>
 	<section>
-		<em>Without cookies, trackers, analytics, or anything to track you.</em>
+		<em>Without cookies, analytics, or anything to track you.</em>
 	</section>
 
 	<section class="social-links">
