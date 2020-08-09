@@ -28,7 +28,7 @@
 		{#if published}
 			<span>
 				<time datetime={published}>
-					{#if published !== updated}Originally posted on{/if}
+					{#if published !== updated}Published on{/if}
 					{pretty.published.weekday}, {pretty.published.complete}
 				</time>
 			</span>
