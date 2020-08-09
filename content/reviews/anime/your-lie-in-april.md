@@ -115,7 +115,7 @@ Well, it was a surprise when it turns out that it wasn't what the title was talk
 
 ## Soundtracks
 
-$#type=:=youtube:disclosure::link=:=IeJTNN8_jLI::caption=:=OP01 - Hikarunara by Goose house (<a href="spotify:track:4kAAko5kg70EjAWGF2ViWW">Spotify version</a>)#!
+$#type=:=youtube:disclosure::link=:=SGsbYfvfE6s::caption=:=OP01 - Hikarunara by Goose house (<a href="spotify:track:4kAAko5kg70EjAWGF2ViWW">Spotify version</a>)#!
 $#type=:=youtube:disclosure::link=:=pS7Hbxv2E_E::caption=:=OP02 - Nanairo Symphony by COALAMODE.#!
 
 $#type=:=youtube:disclosure::link=:=LDDAwKs6YBw::caption=:=ED01 - Kirameki by Wacci#!
