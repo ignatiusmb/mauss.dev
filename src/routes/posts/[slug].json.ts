@@ -10,7 +10,6 @@ export function get(req: Request, res: Response) {
 		return { slug, ...data, category: data.tags[0], date, content };
 	}
 
-	const [post] = parseDir('content/posts', hydrate);
 	res.writeHead(200, { 'Content-Type': 'application/json' });
-	res.end(JSON.stringify(post));
+	res.end(JSON.stringify(parseDir('content/posts', hydrate)[0]));
 }

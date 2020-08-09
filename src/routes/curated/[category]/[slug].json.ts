@@ -8,7 +8,6 @@ export function get(req: Request, res: Response) {
 		return { slug: `${category}/${slug}`, category, ...data, content };
 	}
 
-	const post = parseFile(filepath, hydrate);
 	res.writeHead(200, { 'Content-Type': 'application/json' });
-	res.end(JSON.stringify(post));
+	res.end(JSON.stringify(parseFile(filepath, hydrate)));
 }
