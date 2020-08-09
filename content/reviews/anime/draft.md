@@ -24,19 +24,19 @@ link:mal:
 
 ## Highlights
 
-### /10 | Story & Plot
+### $#{rating:0}#!/10 | Story & Plot
 
-### /10 | Artwork & Animation
+### $#{rating:1}#!/10 | Artwork & Animation
 
-### /10 | Sound
+### $#{rating:2}#!/10 | Sound
 
-### /10 | Characters
+### $#{rating:3}#!/10 | Characters
 
 ## Verdict
 
-<!-- SPOILERS -->
+## $SPOILERS
 
-<!-- CLOSING -->
+## $CLOSING
 
 ---
 Reference(s):
