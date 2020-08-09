@@ -23,26 +23,25 @@ export function contentParser(data: any, content: string) {
 		return str.charAt(0) === '{' && str.charAt(str.length - 1) === '}';
 	};
 
+	const traverseData = (meta: any, str: any): string => {
+		const checkNum = (str: any) => (isNaN(str) ? str : parseInt(str));
+		if (!str.includes(':')) return meta[checkNum(str)];
+		const [key, ...rest] = str.split(':');
+		return traverseData(meta[checkNum(key)], rest.join(':'));
+	};
+
 	return content.replace(/\$#.+#!/g, (exp) => {
 		const captured = trimSides(exp, 2);
 		if (isLiteral(captured)) {
 			const trimmed = trimSides(captured, 1);
-			if (!captured.includes(':')) return data[trimmed];
-
-			const keys = trimmed.split(':');
-			let replacement = data[keys[0]];
-			for (let i = 1; i < keys.length; i++) {
-				replacement = data[keys[i]];
-			}
-			return replacement;
-		} else {
-			const items = captured.split('::');
-			const props = items.reduce((acc, cur) => {
-				const [key, val] = cur.split('=:=');
-				return { ...acc, [key]: val };
-			}, {});
-			return create(props);
+			return traverseData(data, trimmed);
 		}
+		const items = captured.split('::');
+		const props = items.reduce((acc, cur) => {
+			const [key, val] = cur.split('=:=');
+			return { ...acc, [key]: val };
+		}, {});
+		return create(props);
 	});
 }
 
