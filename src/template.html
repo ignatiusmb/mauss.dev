@@ -28,11 +28,14 @@
 	<link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
 	%sapper.styles%
 	%sapper.head%
+	%sapper.scripts%
 </head>
 
 <body>
 	<div id="sapper">%sapper.html%</div>
-	%sapper.scripts%
+
+	<!-- Hack to generate 404 page during export -->
+	<a href="/404" aria-hidden="true" style="display: none"></a>
 </body>
 
 </html>

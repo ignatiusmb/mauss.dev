@@ -1,4 +1,4 @@
-const chars = {
+const chars: { [key: string]: string } = {
 	'"': 'quot',
 	"'": '#39',
 	'&': 'amp',
@@ -15,7 +15,7 @@ const clean = (html: string) => {
 	return html.replace(/["'&<>]/g, (c) => `&${chars[c]};`);
 };
 
-export default function RSS(channel: RSSChannel) {
+export default function RSS(channel: RSSChannel, items: RSSItem[]) {
 	const createItem = (item: RSSItem) => `
 		<item>
 			<title>${clean(item.title)}</title>
@@ -24,23 +24,23 @@ export default function RSS(channel: RSSChannel) {
 			<pubDate>${formatPubDate(item.date)}</pubDate>
 		</item>`;
 
-	const xml = (items: RSSItem[]) =>
-		`<?xml version="1.0" encoding="UTF-8" ?>
-		<rss version="2.0">
-		<channel>
-			<title>${clean(channel.title)}</title>
+	const xml = `
+	<?xml version="1.0" encoding="UTF-8" ?>
+	<rss version="2.0">
+	<channel>
+		<title>${clean(channel.title)}</title>
+		<link>https://${channel.domain}/${clean(channel.slug)}</link>
+		<description>${clean(channel.description)}</description>
+		<lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
+		<language>${channel.language || 'en'}</language>
+		<image>
+			<url>https://${channel.domain}/${channel.image || 'favicon.ico'}</url>
+			<title>${channel.title}</title>
 			<link>https://${channel.domain}/${clean(channel.slug)}</link>
-			<description>${clean(channel.description)}</description>
-			<lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
-			<language>${channel.language || 'en'}</language>
-			<image>
-				<url>https://${channel.domain}/${channel.image || 'favicon.ico'}</url>
-				<title>${channel.title}</title>
-				<link>https://${channel.domain}/${clean(channel.slug)}</link>
-			</image>
-			${items.map(createItem).join('')}
-		</channel>
-		</rss>`.replace(/>[^\S]+/gm, '>');
+		</image>
+		${items.map(createItem).join('')}
+	</channel>
+	</rss>`;
 
-	return { generate: (items: RSSItem[]) => xml(items).trim() };
+	return xml.replace(/>[^\S]+/gm, '>').trim();
 }

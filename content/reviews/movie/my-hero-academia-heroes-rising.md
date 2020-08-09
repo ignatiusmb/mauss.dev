@@ -6,9 +6,9 @@ genres: animation,
 rating: 5,10,9,8
 verdict:
 
-date_published: 2020
-date_updated:
 last_seen: 2020-07-12
+date:published: 2020
+date:updated:
 image:en: https://image.tmdb.org/t/p/original/zGVbrulkupqpbwgiNedkJPyQum4.jpg
 image:jp: https://image.tmdb.org/t/p/original/y56HkHAbSZQJjQaxlqCaRI3lIHu.jpg
 

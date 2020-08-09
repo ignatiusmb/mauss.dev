@@ -8,7 +8,7 @@
 			reviews: await this.fetch('reviews.json').then((r) => r.json()),
 		};
 
-		data['curated'] = data['curated'].sort((x, y) => compareDate(x.date_updated, y.date_updated));
+		data['curated'] = data['curated'].sort((x, y) => compareDate(x.date.updated, y.date.updated));
 		data['reviews'] = data['reviews'].filter((p) => p.rating && p.verdict);
 		for (const key in data) if (Array.isArray(data[key])) data[key] = data[key].slice(0, 4);
 
@@ -24,15 +24,15 @@
 	import Quote from '../svelte/Quote.svelte';
 	import Navigation from '../components/Navigation.svelte';
 	import { mobile } from '../stores';
-	let quoteIndex = randomInt(quotes.length - 1);
+	let quoteIndex = randomInt(quotes.length);
 	let scrollY, innerHeight;
 	const getNewQuote = () => {
 		let newIndex;
-		do newIndex = randomInt(quotes.length - 1);
+		do newIndex = randomInt(quotes.length);
 		while (newIndex === quoteIndex);
 		quoteIndex = newIndex;
 	};
-	$: scrolled = scrollY >= innerHeight * 0.7;
+	$: scrolled = scrollY >= innerHeight * 0.6;
 </script>
 
 <svelte:window bind:scrollY bind:innerHeight />

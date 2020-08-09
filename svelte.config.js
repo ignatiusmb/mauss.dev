@@ -1,7 +1,6 @@
-import sveltePreprocess from 'svelte-preprocess';
+const sveltePreprocess = require('svelte-preprocess');
 
-const dev = process.env.NODE_ENV === 'development';
-export const preprocess = sveltePreprocess({
-	postcss: { plugins: [require('autoprefixer')()] },
-	typescript: { transpileOnly: dev },
-});
+// This file is only for language server and svelte-check
+module.exports = {
+	preprocess: sveltePreprocess({ sourceMap: true }),
+};

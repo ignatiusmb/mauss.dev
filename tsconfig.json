@@ -1,8 +1,18 @@
 {
 	"compilerOptions": {
 		"target": "ES2020",
-		"lib": ["ES2020"]
+		"lib": ["DOM", "ES2020", "WebWorker"],
+		"allowSyntheticDefaultImports": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"importsNotUsedAsValues": "error",
+		"isolatedModules": true,
+		"moduleResolution": "Node",
+		"sourceMap": true,
+		"strict": true,
+		"types": ["svelte", "@sapper"],
+		"typeRoots": ["src/typings"]
 	},
-	"include": ["src"],
-	"exclude": ["node_modules", "__sapper__", "public"]
+	"include": ["src/**/*", "src/node_modules/**/*"],
+	"exclude": ["node_modules/*", "__sapper__/*", "static/*", "public/*"]
 }

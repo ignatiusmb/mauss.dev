@@ -41,7 +41,7 @@
 	canonical="reviews"
 	title="Reviews"
 	description="Personalized reviews for all kinds of anime, books, movies, shows, etc.">
-	<link rel="alternate" href="reviews.xml" type="application/rss+xml" title="Read recent reviews" />
+	<link rel="alternate" href="rss.xml" type="application/rss+xml" />
 </MetaHead>
 
 <GridView>
@@ -53,20 +53,16 @@
 				<h3>Verdict</h3>
 				{#each verdict as rec}
 					<label>
+						<input type="checkbox" bind:group={filters.verdict} value={rec ? rec : '-2'} />
 						{#if rec === '2'}
-							<input type="checkbox" bind:group={filters.verdict} value="2" />
 							<span>Must-watch!</span>
 						{:else if rec === '1'}
-							<input type="checkbox" bind:group={filters.verdict} value="1" />
 							<span>Recommended</span>
 						{:else if rec === '0'}
-							<input type="checkbox" bind:group={filters.verdict} value="0" />
 							<span>Contextual</span>
 						{:else if rec === '-1'}
-							<input type="checkbox" bind:group={filters.verdict} value="-1" />
 							<span>Not recommended</span>
 						{:else}
-							<input type="checkbox" bind:group={filters.verdict} value="-2" />
 							<span>Pending</span>
 						{/if}
 					</label>
@@ -86,6 +82,10 @@
 				<label>
 					<input type="radio" bind:group={filters.sort} value="year" />
 					<span>Year released</span>
+				</label>
+				<label>
+					<input type="radio" bind:group={filters.sort} value="seen" />
+					<span>Last seen</span>
 				</label>
 				<label>
 					<input type="radio" bind:group={filters.sort} value="rating" />

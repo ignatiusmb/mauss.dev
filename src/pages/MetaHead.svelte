@@ -1,6 +1,7 @@
 <script>
+	export let title;
 	export let canonical = '';
-	export let title, description;
+	export let description = '';
 	export let post = null;
 	export let social = {};
 
@@ -36,9 +37,9 @@
 			<meta property="og:description" content={post.description} />
 		{/if}
 
-		{#if post.date_published}
-			<meta property="article:published_time" content={post.date_published} />
-			<meta property="article:modified_time" content={post.date_updated} />
+		{#if post.date && post.date.published}
+			<meta property="article:published_time" content={post.date.published} />
+			<meta property="article:modified_time" content={post.date.updated} />
 		{/if}
 		<meta property="article:author" content="Ignatius Bagussuputra" />
 		<meta property="article:author" content="Ignatius Bagus" />

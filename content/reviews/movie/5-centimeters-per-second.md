@@ -1,15 +1,15 @@
 ---
 year: 2007
 title:en: 5 Centimeters per Second
-genres: animation, drama, romance
+genres: animation, drama, romance, slice of life
 rating: story,artwork,sound,characters
 verdict:
 
-last_seen:
-date_published: 2020
+last_seen: 2020-08-08
+date:published: 2020
 image:en: https://image.tmdb.org/t/p/original/t0ISGhwZtghakg46TWCOWBTIflZ.jpg
 
-link:mal:
+link:mal: https://myanimelist.net/anime/1689/Byousoku_5_Centimeter/
 ---
 
 ![Backdrop]()

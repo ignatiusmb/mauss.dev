@@ -4,7 +4,7 @@
 
 <footer>
 	<section>
-		<em>Without cookies, trackers, analytics, or anything to track you.</em>
+		<em>Without cookies, analytics, or anything to track you.</em>
 	</section>
 
 	<section class="social-links">
@@ -31,9 +31,6 @@
 		</Link>
 		<Link newTab href="https://www.youtube.com/user/Ignapure/playlists" label="youtube playlist profile">
 			<Icon name="youtube" />
-		</Link>
-		<Link newTab href="rss.xml" label="complete rss feed">
-			<Icon name="rss" />
 		</Link>
 	</section>
 
@@ -65,11 +62,15 @@
 	}
 	.social-links {
 		width: 100%;
-		display: grid;
-		gap: 1em;
-		grid-template-columns: repeat(auto-fit, minmax(4em, 1fr));
-		padding: 1em 0 0.5em;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding: 0 0 0.5em;
 		margin: auto;
+	}
+	.social-links > :global(a) {
+		flex: 0 1 5em;
+		padding-top: 1em;
 	}
 	.social-links :global(a),
 	.social-links :global(a:visited) {

@@ -1,23 +1,25 @@
-import { Request, Response } from 'express';
+import type { Request, Response } from 'express';
 import { readdirSync } from 'fs';
 import { parseDir } from '../../utils/parser';
 import { countAverageRating, fillSiblings } from '../../utils/article';
 
-const check = (review: Review) => !review.rating || !review.verdict;
+const check = (review: RawReview) => !review.rating || !review.verdict;
 
 export function get(_: Request, res: Response) {
 	const DIR = 'content/reviews';
 	const reviews = readdirSync(DIR).flatMap((folder) => {
-		return parseDir(`${DIR}/${folder}`, (data: Review, _: string, filename: string) => {
+		function hydrate(data: RawReview, _: string, filename: string): FinalReview {
 			const [slug] = filename.split('.');
-			const { rating, ...rest } = data;
-			return {
+			const review: FinalReview = {
 				slug: `${folder}/${slug}`,
 				category: folder,
-				rating: countAverageRating(rating),
-				...rest,
+				...data,
+				rating: countAverageRating(data.rating),
 			};
-		});
+			return review;
+		}
+
+		return parseDir(`${DIR}/${folder}`, hydrate);
 	});
 
 	res.writeHead(200, { 'Content-Type': 'application/json' });

@@ -1,5 +1,6 @@
 import { join } from 'path';
 import { readdirSync, readFileSync } from 'fs';
+import { contentParser } from './article';
 import { sortCompare, splitAt } from './helper';
 import Aqua from '@ignatiusmb/aqua';
 const markIt = require('markdown-it')({
@@ -7,7 +8,7 @@ const markIt = require('markdown-it')({
 	typographer: true,
 	highlight: (str: string, language: string) => {
 		const strList = str.split('\n');
-		const dataset = { language };
+		const dataset: any = { language };
 		if (strList[0][0] === '~') {
 			const [title, lineNumber] = strList[0].split('#');
 			dataset['title'] = title.slice(1);
@@ -35,7 +36,7 @@ const countReadTime = (content: string) => {
 const extractMeta = (metadata: string) => {
 	if (!metadata) return {};
 	const lines = metadata.split(/\r?\n/);
-	return lines.reduce((acc, cur: string) => {
+	return lines.reduce((acc: { [key: string]: any }, cur: string) => {
 		if (!cur.includes(': ')) return acc;
 		const [key, val]: [string, string] = splitAt(cur.indexOf(': '), cur);
 
@@ -54,7 +55,7 @@ const extractMeta = (metadata: string) => {
 
 export const aquaMark = (content: string) => markIt.render(content);
 
-export function parseFile(filename: string, parseCallback: Function) {
+export function parseFile(filename: string, hydrate: Function) {
 	const content = readFileSync(filename, 'utf-8');
 	const fmExpression = /---\r?\n([\s\S]+?)\r?\n---/;
 	const [rawData, metadata] = fmExpression.exec(content) || ['', ''];
@@ -62,21 +63,25 @@ export function parseFile(filename: string, parseCallback: Function) {
 	const frontMatter = extractMeta(metadata);
 	const [cleanedFilename] = filename.split(/[/\\]/).slice(-1);
 	const article = metadata ? content.slice(rawData.length + 1) : content;
-	const result = parseCallback(frontMatter, article, cleanedFilename);
+	const result = hydrate(frontMatter, article, cleanedFilename);
 	if (!result) return;
 
-	if (result.date_published && !result.date_updated) {
-		result.date_updated = result.date_published;
+	if (result.date && result.date.published && !result.date.updated) {
+		result.date.updated = result.date.published;
 	}
 
 	result.read_time = countReadTime(article);
-	if (result.content) result.content = aquaMark(result.content);
+	if (result.content) {
+		const { content, ...rest } = result;
+		result.content = contentParser(rest, content);
+		result.content = aquaMark(result.content);
+	}
 	return result;
 }
 
-export function parseDir(dirname: string, fileParse: Function) {
+export function parseDir(dirname: string, hydrate: Function) {
 	return readdirSync(dirname)
 		.filter((name) => !name.startsWith('draft.') && name.endsWith('.md'))
-		.map((filename) => parseFile(join(dirname, filename), fileParse))
+		.map((filename) => parseFile(join(dirname, filename), hydrate))
 		.sort(sortCompare);
 }

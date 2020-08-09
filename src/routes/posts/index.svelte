@@ -26,7 +26,7 @@
 	import { mobile, pSlice as store } from '../../stores';
 	import { sieve, filter } from '../../utils/search';
 	let query, filtered, sieved;
-	let filters = { categories: [], tags: [], sort: 'published' };
+	let filters = { categories: [], tags: [], sort: 'updated' };
 
 	$: filtered = filter(filters, data);
 	$: sieved = query ? sieve(query, filtered) : filtered;
@@ -35,7 +35,7 @@
 </script>
 
 <MetaHead canonical="posts" title="Posts" description="Get the latest most recent posts here.">
-	<link rel="alternate" href="posts.xml" type="application/rss+xml" title="Read recent posts" />
+	<link rel="alternate" href="rss.xml" type="application/rss+xml" />
 </MetaHead>
 
 <GridView itemSize={21}>
@@ -46,12 +46,12 @@
 			<section>
 				<h3>Sort by</h3>
 				<label>
-					<input type="radio" bind:group={filters.sort} value="published" />
-					<span>Date published</span>
-				</label>
-				<label>
 					<input type="radio" bind:group={filters.sort} value="updated" />
 					<span>Last updated</span>
+				</label>
+				<label>
+					<input type="radio" bind:group={filters.sort} value="published" />
+					<span>Date published</span>
 				</label>
 			</section>
 		</SearchBar>

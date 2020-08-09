@@ -17,30 +17,27 @@
 
 <script>
 	export let post;
+	const linkMap = {
+		mal: 'MyAnimeList',
+	};
+
 	import MetaHead from '../../../pages/MetaHead.svelte';
 	import Article from '../../../pages/Article.svelte';
 
 	import Disclaimer from '../../../components/Disclaimer.svelte';
 	import ReviewsTab from '../../../components/ReviewsTab.svelte';
 	import Spoilers from '../../../components/SpoilerSection.svelte';
-
-	const linkMap = {
-		mal: 'MyAnimeList',
-	};
+	$: ({ slug, title, link, content, seasons, spoilers, closing, siblings } = post);
 </script>
 
-<MetaHead
-	{post}
-	canonical="reviews/{post.category}/{post.slug}"
-	title={post.title.short ? post.title.short : post.title.jp ? post.title.jp : post.title.en}
-	description={post.description} />
+<MetaHead {post} canonical="reviews/{slug}" title={title.short ? title.short : title.jp ? title.jp : title.en} />
 
-<Article header {post} path="content/reviews/{post.category}/{post.slug}.md" siblings={post.siblings}>
+<Article header {post} path="content/reviews/{slug}.md" {siblings}>
 	<small slot="header">
-		{#if post.link}
+		{#if link}
 			<span>
-				{#each Object.keys(post.link) as linkKey}
-					<a href={post.link[linkKey]}>{linkMap[linkKey]}</a>
+				{#each Object.keys(link) as linkKey}
+					<a href={link[linkKey]}>{linkMap[linkKey]}</a>
 				{/each}
 			</span>
 		{/if}
@@ -49,18 +46,18 @@
 	<Disclaimer link />
 
 	<section>
-		{@html post.content}
+		{@html content}
 	</section>
 
-	{#if post.seasons}
-		<ReviewsTab seasons={post.seasons} />
-	{:else if post.spoilers}
-		<Spoilers spoilers={post.spoilers} />
+	{#if seasons}
+		<ReviewsTab {seasons} />
+	{:else if spoilers}
+		<Spoilers {spoilers} />
 	{/if}
 
-	{#if post.closing}
+	{#if closing}
 		<section>
-			{@html post.closing}
+			{@html closing}
 		</section>
 	{/if}
 </Article>

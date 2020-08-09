@@ -3,7 +3,7 @@ title: Authentication with JWT vs Classic Session
 tags: category/tag1, tag2
 description:
 
-date_updated:
+date:updated:
 image:en:
 ---
 

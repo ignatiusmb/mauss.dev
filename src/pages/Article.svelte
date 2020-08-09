@@ -144,18 +144,29 @@
 		border: 0;
 		background-color: rgba(var(--fg-color, 1));
 	}
+	article :global(figure) {
+		margin: 1em 0 2em;
+	}
+	article :global(details) {
+		margin: 1em 0;
+	}
 	article :global(figure figcaption) {
 		padding: 0 0.25em;
 		text-align: center;
 		font: 80% var(--aqua-monospace);
 	}
-	article :global(figure.youtube > div) {
+	article :global(details summary) {
+		padding: 0 0.25em;
+		margin-bottom: 0.5em;
+		font: 90% var(--aqua-monospace);
+	}
+	article :global(div.youtube) {
 		height: 0;
 		position: relative;
-		padding-bottom: 56.25%;
+		padding-top: 56.25%;
 		margin-bottom: 0.5em;
 	}
-	article :global(figure.youtube iframe) {
+	article :global(div.youtube iframe) {
 		width: 100%;
 		height: 100%;
 		position: absolute;

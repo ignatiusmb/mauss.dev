@@ -32,7 +32,7 @@ export function lastWords(index, text) {
 export function randomInt(max, min) {
 	min = Math.ceil(min ? min : 0);
 	max = Math.floor(max);
-	return Math.floor(Math.random() * (max - min + 1)) + min;
+	return Math.floor(Math.random() * (max - min)) + min;
 }
 
 export function randomKey(dict) {
@@ -41,10 +41,10 @@ export function randomKey(dict) {
 }
 
 export function sortCompare(x, y) {
-	if (x.date_updated !== y.date_updated) {
-		return compareDate(x.date_updated, y.date_updated);
-	} else if (x.date_published !== y.date_published) {
-		return compareDate(x.date_published, y.date_published);
+	if (x.date && y.date && x.date.updated !== y.date.updated) {
+		return compareDate(x.date.updated, y.date.updated);
+	} else if (x.date && y.date && x.date.published !== y.date.published) {
+		return compareDate(x.date.published, y.date.published);
 	} else if (x.year && y.year && x.year !== y.year) {
 		return y.year - x.year;
 	}

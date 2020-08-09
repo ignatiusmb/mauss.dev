@@ -7,8 +7,8 @@ rating: 9,6,10,8
 verdict: 1
 
 last_seen: 2020-06-20
-date_published: 2020-06-20
-date_updated: 2020-06-22
+date:published: 2020-06-20
+date:updated: 2020-06-22
 image:en: https://image.tmdb.org/t/p/original/nksFLYTydth9OYVpMuMbtOBkvMO.jpg
 
 link:mal: https://myanimelist.net/anime/23273/Shigatsu_wa_Kimi_no_Uso
@@ -26,21 +26,21 @@ Based on the manga series of the same name, Shigatsu wa Kimi no Uso approaches t
 
 ## Highlights
 
-### 9/10 | Story & Plot
+### $#{rating:0}#!/10 | Story & Plot
 
 The story makes sense, it's not over the top, it's not cliche either. Pretty predictable in a way, but it's written better than most drama love story I've encountered before. In short, it's original in its own way.
 
 It's mostly sad but they always try to follow up with something humorous to cover it up, but when it doesn't, it really hits hard. It's perhaps the definition of riding a rollercoaster of emotions. The plot is well managed too, it guides you from the beginning to the end smoothly and explains the story in a well-managed manner.
 
-### 6/10 | Artwork & Animation
+### $#{rating:1}#!/10 | Artwork & Animation
 
 As expected of A-1 Pictures, great as always. It's not at Kyoto Animation or Ufotable level, but it's still good enough without a doubt. My complaints are the nonexistent effort they have on animating the other performance. Sure, it's not really important to the story, but it doesn't seem nice to just see a still picture with variating sounds playing in the background. At least just a little animation would be nice, even if it's just in the hands. My rating is heavily backed up by the beautiful artworks.
 
-### 10/10 | Sound
+### $#{rating:2}#!/10 | Sound
 
 I have no complaints about the sound here. It's a no-brainer for me, I love to listen to music and this show is dedicated to performing one. I love to listen classical music, it's not really the listen-to-everyday kind of music, but if you don't, fear not. The way they present it to you in this show is nice that you don't really get bored by listening to it throughout the show. The opening and ending sequence are super nice too that I never skip.
 
-### 8/10 | Characters
+### $#{rating:3}#!/10 | Characters
 
 The characters are well-built. True to the nature of the genre, they're humans, and they're relatable as such. Their character development is visible and they makes us feel like we grew together with them.
 
@@ -56,7 +56,7 @@ The final verdict from me is... **Highly recommended**! Definitely watch it if y
 
 A fair and final warning from me, this definitely lands a spot on my top 10 saddest anime.
 
-<!-- SPOILERS -->
+## $SPOILERS
 
 There's not much to break down here since they pretty much explains everything in the final episode. But, that doesn't mean there's nothing left to discuss. Here's some of the things I find quite interesting and worth to talk about.
 
@@ -111,12 +111,17 @@ Well, it was a surprise when it turns out that it wasn't what the title was talk
 
 > Spring will be here soon. The season I met you is almost here. A spring without you will arrive.
 
-<!-- CLOSING -->
+## $CLOSING
 
 ## Soundtracks
 
-- `Ending` | [Kirameki - Wacci](https://youtu.be/LDDAwKs6YBw)
-- `Covers` | [Spotify Playlist](https://open.spotify.com/playlist/6a0PMD9AsNoK3XD5Nnheig?si=eBorapTPSpS3qdZEVHW5kg)
+$#type=:=youtube:disclosure::link=:=SGsbYfvfE6s::caption=:=OP01 - Hikarunara by Goose house (<a href="spotify:track:4kAAko5kg70EjAWGF2ViWW">Spotify version</a>)#!
+$#type=:=youtube:disclosure::link=:=pS7Hbxv2E_E::caption=:=OP02 - Nanairo Symphony by COALAMODE.#!
+
+$#type=:=youtube:disclosure::link=:=LDDAwKs6YBw::caption=:=ED01 - Kirameki by Wacci#!
+$#type=:=youtube:disclosure::link=:=JdSpuTi9d8A::caption=:=ED02 - Orange by 7!!#!
+
+> ### OST Covers [[Spotify](spotify:playlist:6a0PMD9AsNoK3XD5Nnheig)]
 
 ---
 Reference(s):

@@ -7,8 +7,8 @@ rating: 4,7,10,5
 verdict: 0
 
 last_seen: 2020-06-06
-date_published: 2020-06-18
-date_updated: 2020-06-25
+date:published: 2020-06-18
+date:updated: 2020-06-25
 image:en: https://image.tmdb.org/t/p/original/9F80WGUD6WYfoEDMImf988NlXhC.jpg
 
 link:mal: https://myanimelist.net/anime/8861/Yosuga_no_Sora__In_Solitude_Where_We_Are_Least_Alone
@@ -161,7 +161,7 @@ In total, there's 5 endings, 4 as the main storyline and another one in the extr
 
 This is **not a hentai**, if you're going in on this with that mindset, you're better off watching something else. There is of course some sexual scenes, but it is served reasonably for the story to progress and has deeper meanings with **how they got into it** and not just there for the sake of something sexual.
 
-### 4/10 | Story & Plot
+### $#{rating:0}#!/10 | Story & Plot
 
 Originally coming from a game, you won't be bored by the lack of content and useless fillers. Even though I appreciate its uniqueness by having the plot executed like a game with a save point to experience all the paths, I feel it's a lot of wasted potential and it could've felt better with just a linear plot.
 
@@ -169,19 +169,19 @@ The story is interesting and I was kinda into it after episode 3. But, I didn't 
 
 The first couple of endings were pretty generic and boring too, and the last one isn't really that satisfying either. But, I do still appreciate and enjoyed this regardless.
 
-### 7/10 | Artwork & Animation
+### $#{rating:1}#!/10 | Artwork & Animation
 
 For a show released on 2010, it felt quite timeless and was done beautifully. Backgrounds are colorful and vivid with good attention to details. The characters are well designed, Haruka as the main male character which is a kind guy with quirks that makes females find him cute and handsome.
 
 Each characters, especially the girls are portrayed differently, each with their own unique and memorable style that is easy to remember.
 
-### 10/10 | Sound
+### $#{rating:2}#!/10 | Sound
 
 I absolutely love the soundtracks composed here, albeit a bit repetitive in some cases. I would agree if some would say they're being lazy by overusing one track for all the (attempted) sad or happy moments. But, I guess it's more of how they delivered it.
 
 Regardless of all of that, objectively speaking of the sounds alone, I really enjoyed it. It was the one thing I immediately noticed to be spectacular. I didn't know what I expected when I first got into it, but a couple of episodes in I found out that this hits a spot as one of the recommended anime with absolutely stellar music. Even if you don't know about this, you'll still feel how amazing the soundtracks are.
 
-### 5/10 | Characters
+### $#{rating:3}#!/10 | Characters
 
 The characters are pretty weak, especially Haruka as he's the lead here. He's boring but still enjoyable in a way. Although, the development for each girls are noticeable and pretty nice. Each one carries a unique personality that depicts their personality. You might see they're boring at first, but with each one getting their own story, you can tell how they're developing as a character.
 
@@ -201,7 +201,7 @@ If you're still uncertain, perhaps give the first 2 episodes a chance before dec
 
 If you do choose option 3, you might understand why some people are bashing this show for being "generic" and "boring". But, if you choose to continue through the last 3 episodes, then you might be able to see something else with a deeper meaning and that's what really caught most people's attention.
 
-<!-- SPOILERS -->
+## $SPOILERS
 
 As you've already decided to open this section, I'm sure you know what's coming. We'll be discussing more on Sora's arc as it felt like the true ending to the show. But, before that...
 
@@ -266,7 +266,16 @@ Now, if you'll excuse me, I'm going to find something less depressing to think a
 
 Thankfully, I was watching [Eromanga-sensei](reviews/anime/eromanga-sensei) at the same time. Perhaps it could lighten up your mood just like it did for me.
 
-<!-- CLOSING -->
+## $CLOSING
+
+## Soundtracks
+
+$#type=:=youtube:disclosure::link=:=KoHAQkAsuB4::caption=:=Main OP - Hiyoku no Hane by eufonius#!
+
+$#type=:=youtube:disclosure::link=:=fV_iGL8W1GM::caption=:=Main ED - Tsunagu Kizuna by Team.Nekokan [猫] (feat. Junca Amaoto)#!
+$#type=:=youtube:disclosure::link=:=qVn3_qeIrBA::caption=:=Specials ED - Pinky Jones by Momoiro Clover Z (<a href="https://youtu.be/jztquwmHdrg">with lyrics version</a>)#!
+
+$#type=:=youtube:disclosure::link=:=qeI0K26_5ZA::caption=:=Original Sound Track (OST) Mix#!
 
 ---
 Reference(s):

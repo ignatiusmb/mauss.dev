@@ -1,6 +1,6 @@
 ---
 title: Complete Bash Utility Cheat Sheet
-date_updated: 2020-06-23
+date:updated: 2020-06-23
 ---
 
 These are my goto scripts to manage my home media server. I'll be compiling all that I remember here so I won't forget it and could quickly search for a reference in the future. I hope most of it would be beneficial to you too.

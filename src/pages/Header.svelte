@@ -3,8 +3,11 @@
 	export let post;
 	import Edit from '../svelte/Edit.svelte';
 	import { createPrettyDate } from '../utils/helper';
-	$: date = createPrettyDate(post.date_published);
-	$: updated = createPrettyDate(post.date_updated);
+	$: ({ published, updated } = post.date || {});
+	$: pretty = {
+		published: createPrettyDate(published),
+		updated: createPrettyDate(updated),
+	};
 </script>
 
 <header>
@@ -17,16 +20,16 @@
 	{/if}
 
 	<small>
-		{#if post.date_updated && post.date_updated !== post.date_published}
+		{#if updated && updated !== published}
 			<span>
-				<time datetime={post.date_updated}>Updated {updated.complete}</time>
+				<time datetime={updated}>Updated {pretty.updated.complete}</time>
 			</span>
 		{/if}
-		{#if post.date_published}
+		{#if published}
 			<span>
-				<time datetime={post.date_published}>
-					{#if post.date_published !== post.date_updated}Originally posted on{/if}
-					{date.weekday}, {date.complete}
+				<time datetime={published}>
+					{#if published !== updated}Published on{/if}
+					{pretty.published.weekday}, {pretty.published.complete}
 				</time>
 			</span>
 		{/if}

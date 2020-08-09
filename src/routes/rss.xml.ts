@@ -1,4 +1,4 @@
-import { Response, Request } from 'express';
+import type { Response, Request } from 'express';
 import { readdirSync } from 'fs';
 import { parseDir } from '../utils/parser';
 import { compareDate } from '../utils/helper';
@@ -12,26 +12,43 @@ const channel = {
 };
 
 export function get(_: Request, res: Response) {
-	const curated = parseDir('content/curated', (data: any, _: string, filename: string) => {
-		const [slug] = filename.split('.');
-		const { title, date_updated } = data;
-		return { title, slug: `curated/${slug}`, date: date_updated };
-	});
-
-	const posts = parseDir('content/posts', (data: Post, _: string, filename: string) => {
-		const [date, slug] = filename.split('.');
-		const { title, description } = data;
-		return { title, slug: `posts/${slug}`, description, date };
-	});
-
-	const reviews = readdirSync('content/reviews').flatMap((folder) => {
-		return parseDir(`content/reviews/${folder}`, (data: Review, _: string, filename: string) => {
-			const [slug] = filename.split('.');
-			const { title, date_published } = data;
-			return { slug: `reviews/${folder}/${slug}`, title: title.en, date: date_published };
+	const curated = readdirSync('content/curated').flatMap((folder) => {
+		if (folder === 'draft') return;
+		return parseDir(`content/curated/${folder}`, (data: any, _: string, filename: string) => {
+			const { title, date } = data;
+			return {
+				title,
+				slug: `curated/${folder}/${filename.split('.')[0]}`,
+				description: `${title} curated by Mauss`,
+				date: date.published || date.updated,
+			};
 		});
 	});
 
+	const posts = parseDir('content/posts', (data: any, _: string, filename: string) => {
+		const [date, slug] = filename.split('.');
+		const { title, description } = data;
+		return {
+			title,
+			slug: `posts/${slug}`,
+			description,
+			date,
+		};
+	});
+
+	const reviews = readdirSync('content/reviews').flatMap((folder) => {
+		return parseDir(`content/reviews/${folder}`, (data: any, _: string, filename: string) => {
+			const { title, date } = data;
+			return {
+				title: title.en,
+				slug: `reviews/${folder}/${filename.split('.')[0]}`,
+				description: `Review for ${title.en} ${folder}`,
+				date: date.published,
+			};
+		});
+	});
+
+	const items = [...curated, ...posts, ...reviews];
 	res.writeHead(200, { 'Content-Type': 'application/xml' });
-	res.end(RSS(channel).generate([...curated, ...posts, ...reviews].sort(compareDate)));
+	res.end(RSS(channel, items.filter(Boolean).sort(compareDate)));
 }

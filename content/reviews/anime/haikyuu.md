@@ -6,8 +6,8 @@ rating:
 verdict:
 
 last_seen: 2020-05-10
-date_published: 2020
-date_updated:
+date:published: 2020
+date:updated:
 image:en: https://m.media-amazon.com/images/M/MV5BNzQ1MmJjZDUtMmI5OC00ZDk2LThkODQtODgwYmU0MTIzNDhmXkEyXkFqcGdeQXVyNDgyODgxNjE@._V1_.jpg
 
 link:mal: https://myanimelist.net/manga/35243/Haikyuu/

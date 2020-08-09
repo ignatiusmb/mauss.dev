@@ -1,6 +1,6 @@
 ---
 title: VS Code Configuration - Extensions and Settings
-date_updated: 2020-07-20
+date:updated: 2020-08-08
 ---
 
 This is my curated list of VS Code extensions that I have installed and its corresponding settings, fully synced on all of my machines. Each extensions has its own purpose and unique perks, I'll explain it briefly for each item in this list.
@@ -8,6 +8,11 @@ This is my curated list of VS Code extensions that I have installed and its corr
 I will list all the extensions complete with its name and url link to the marketplace. Another way to install all the extensions in this list quickly is to use a [simple python script](https://github.com/ignatiusmb/codesync-extensions/) I made, available as a repository on my GitHub account with my extensions embedded with it.
 
 ## Editor Enhancements
+
+```json
+~Built-in settings
+"editor.suggest.snippetsPreventQuickSuggestions": false,
+```
 
 ### [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
 
@@ -337,7 +342,7 @@ XML and YAML language support with syntax highlighting by Red Hat.
 ## Complete User Configuration
 
 ```json
-~VS Code Version 1.46.1
+~VS Code Version 1.47.3
 {
   "beautify.language": {
     "js": {},
@@ -373,8 +378,9 @@ XML and YAML language support with syntax highlighting by Red Hat.
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.renameOnType": true,
   "editor.renderWhitespace": "selection",
-  "editor.suggestSelection": "first",
   "editor.suggest.maxVisibleSuggestions": 15,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.suggestSelection": "first",
   "editor.tabSize": 2,
   "editor.wordWrap": "bounded",
   "editor.wordWrapColumn": 100,

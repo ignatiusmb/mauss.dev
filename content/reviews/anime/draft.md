@@ -8,8 +8,8 @@ rating: story,artwork,sound,characters
 verdict:
 
 last_seen: 2020
-date_published: 2020
-date_updated: 2020
+date:published: 2020
+date:updated: 2020
 image:en:
 image:jp:
 
@@ -24,19 +24,19 @@ link:mal:
 
 ## Highlights
 
-### /10 | Story & Plot
+### $#{rating:0}#!/10 | Story & Plot
 
-### /10 | Artwork & Animation
+### $#{rating:1}#!/10 | Artwork & Animation
 
-### /10 | Sound
+### $#{rating:2}#!/10 | Sound
 
-### /10 | Characters
+### $#{rating:3}#!/10 | Characters
 
 ## Verdict
 
-<!-- SPOILERS -->
+## $SPOILERS
 
-<!-- CLOSING -->
+## $CLOSING
 
 ---
 Reference(s):

@@ -1,11 +1,11 @@
-import { Request, Response } from 'express';
+import type { Request, Response } from 'express';
 import { parseDir } from '../utils/parser';
 
 export function get(_: Request, res: Response) {
 	const DIR = 'content/quotes';
 	const excerpts = parseDir(DIR, (_: any, content: string, filename: string) => {
 		const [author] = filename.split('.');
-		return { author: author.replace('-', ' '), lines: content.split('\n') };
+		return { author: author.replace('-', ' '), lines: content.split(/\r?\n/) };
 	});
 
 	const quotes = excerpts.reduce((acc: [], cur: { author: string; lines: string[] }) => {
