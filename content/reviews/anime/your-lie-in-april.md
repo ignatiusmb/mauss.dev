@@ -115,8 +115,13 @@ Well, it was a surprise when it turns out that it wasn't what the title was talk
 
 ## Soundtracks
 
-- `Ending` | [Kirameki - Wacci](https://youtu.be/LDDAwKs6YBw)
-- `Covers` | [Spotify Playlist](https://open.spotify.com/playlist/6a0PMD9AsNoK3XD5Nnheig?si=eBorapTPSpS3qdZEVHW5kg)
+$#type=:=youtube:disclosure::link=:=IeJTNN8_jLI::caption=:=OP01 - Hikarunara by Goose house (<a href="spotify:track:4kAAko5kg70EjAWGF2ViWW">Spotify version</a>)#!
+$#type=:=youtube:disclosure::link=:=pS7Hbxv2E_E::caption=:=OP02 - Nanairo Symphony by COALAMODE.#!
+
+$#type=:=youtube:disclosure::link=:=LDDAwKs6YBw::caption=:=ED01 - Kirameki by Wacci#!
+$#type=:=youtube:disclosure::link=:=JdSpuTi9d8A::caption=:=ED02 - Orange by 7!!#!
+
+> [Covers in Spotify Playlist](https://open.spotify.com/playlist/6a0PMD9AsNoK3XD5Nnheig?si=eBorapTPSpS3qdZEVHW5kg)
 
 ---
 Reference(s):

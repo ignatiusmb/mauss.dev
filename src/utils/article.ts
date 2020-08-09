@@ -5,12 +5,16 @@ export function countAverageRating(ratings: string[]) {
 }
 
 export function contentParser(data: any, content: string) {
-	function create(props: { type?: string; link?: string; caption?: string }) {
+	function create(props: { [key: string]: string }) {
+		const { type, link, caption } = props;
+
 		let data;
-		if (props.type === 'youtube') {
-			data = `<div class="youtube"><iframe src="https://www.youtube-nocookie.com/embed/${props.link}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+		if (type.startsWith('youtube')) {
+			data = `<div class="youtube"><iframe src="https://www.youtube-nocookie.com/embed/${link}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
 		}
-		return `<figure>${data}<figcaption>${props.caption}</figcaption></figure>`;
+		return type.includes(':disclosure')
+			? `<details><summary>${caption}</summary>${data}</details>`
+			: `<figure>${data}<figcaption>${caption}</figcaption></figure>`;
 	}
 	const trimSides = (str: string, chars: number) => {
 		return str.slice(chars, str.length - chars);

@@ -1,6 +1,6 @@
 import type { Request, Response } from 'express';
 import { parseFile, aquaMark } from '../../../utils/parser';
-import { countAverageRating } from '../../../utils/article';
+import { countAverageRating, contentParser } from '../../../utils/article';
 
 const parseSpoilers = (content: string, seasonIndex: number) => {
 	const separator = '<!-- SPOILERS -->';
@@ -29,7 +29,8 @@ export function get(req: Request, res: Response) {
 		if (content.includes(final)) {
 			const [article, closing] = content.split(final);
 			content = article;
-			review.closing = aquaMark(closing);
+			review.closing = contentParser(review, closing);
+			review.closing = aquaMark(review.closing);
 		}
 
 		const seasons = '<!-- SEASON DIVIDER -->';
