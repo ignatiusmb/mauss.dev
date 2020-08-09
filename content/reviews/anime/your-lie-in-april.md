@@ -121,7 +121,7 @@ $#type=:=youtube:disclosure::link=:=pS7Hbxv2E_E::caption=:=OP02 - Nanairo Sympho
 $#type=:=youtube:disclosure::link=:=LDDAwKs6YBw::caption=:=ED01 - Kirameki by Wacci#!
 $#type=:=youtube:disclosure::link=:=JdSpuTi9d8A::caption=:=ED02 - Orange by 7!!#!
 
-> [Covers in Spotify Playlist](https://open.spotify.com/playlist/6a0PMD9AsNoK3XD5Nnheig?si=eBorapTPSpS3qdZEVHW5kg)
+> ### OST Covers [[Spotify](spotify:playlist:6a0PMD9AsNoK3XD5Nnheig)]
 
 ---
 Reference(s):
