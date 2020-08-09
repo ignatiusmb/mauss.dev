@@ -1,22 +1,21 @@
 <script context="module">
-	export async function preload() {
-		return { data: await this.fetch('curated.json').then((r) => r.json()) };
+	export async function preload({ params }) {
+		const { category } = params;
+		const list = await this.fetch('curated.json').then((r) => r.json());
+		return { category, data: list.filter((p) => p.category === category) };
 	}
 </script>
 
 <script>
-	export let data;
+	export let category, data;
 	import { ButtonLink } from '@ignatiusmb/elements/styled';
-	import MetaHead from '../../pages/MetaHead.svelte';
+	import MetaHead from '../../../pages/MetaHead.svelte';
 
 	import { scale } from 'svelte/transition';
 	import { flip } from 'svelte/animate';
 </script>
 
-<MetaHead
-	canonical="curated"
-	title="Curated"
-	description="Curated content for all kinds of programming, lifestyle, and many more.">
+<MetaHead canonical="curated" title="Curated" description="Curated content for {category} stuff.">
 	<link rel="alternate" href="rss.xml" type="application/rss+xml" />
 </MetaHead>
 
