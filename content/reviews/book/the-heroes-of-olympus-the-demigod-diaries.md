@@ -5,7 +5,7 @@ genres: adventure, fantasy, mystery
 rating:
 verdict:
 
-last_seen:
+last_seen: 2020
 date:published: 2020
 image:en: https://vignette.wikia.nocookie.net/olympians/images/1/1a/Demigod_diaries_cover.jpg/revision/latest?cb=20120120192751
 

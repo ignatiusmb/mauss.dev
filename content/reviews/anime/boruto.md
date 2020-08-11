@@ -5,7 +5,7 @@ genres: action, adventure, super power, martial arts, shounen
 rating: story,artwork,sound,characters
 verdict:
 
-last_seen:
+last_seen: 2020
 date:published: 2020
 image:en: https://image.tmdb.org/t/p/original/t1eJhngNgHywjXYAg2iAdSJ3PiL.jpg
 

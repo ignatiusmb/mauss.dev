@@ -5,7 +5,7 @@ genres: adventure, fantasy, mystery
 rating:
 verdict:
 
-last_seen:
+last_seen: 2020
 date:published: 2020
 image:en: https://vignette.wikia.nocookie.net/olympians/images/a/a8/The_Mark_of_Athena.jpeg/revision/latest?cb=20130330182357
 
