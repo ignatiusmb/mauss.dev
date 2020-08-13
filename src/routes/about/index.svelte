@@ -20,7 +20,7 @@
 <MetaHead {post} canonical="about" title="About" description="Get to know Ignatius Bagussuputra from his About page." />
 
 <Article {post}>
-	<WeavedImage src="profile/mauss.jpeg" alt="Mauss Profile" />
+	<WeavedImage src="profile/mauss.jpeg" alt="DevMauss Profile" />
 
 	<section>
 		{#each sections as section}

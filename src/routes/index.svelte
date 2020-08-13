@@ -38,7 +38,7 @@
 <svelte:window bind:scrollY bind:innerHeight />
 <MetaHead
 	title="Ignatius Bagussuputra"
-	description="Mauss. Personal website of Ignatius Bagussuputra. A Computer Science undergraduate from University of
+	description="DevMauss. Personal website of Ignatius Bagussuputra. A Computer Science undergraduate from University of
 	Indonesia." />
 
 <div class:fixed-nav={!$mobile} class:scrolled>
@@ -49,7 +49,7 @@
 	<header slot="header">
 		<Link href="about">
 			<div class="dashed-border" />
-			<Image src="profile/mauss.jpeg" alt="Mauss Profile" ratio={1} />
+			<Image src="profile/mauss.jpeg" alt="DevMauss Profile" ratio={1} />
 		</Link>
 		<h2>Ignatius Bagussuputra</h2>
 		<h4>CS Student at University of Indonesia</h4>

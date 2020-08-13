@@ -6,9 +6,9 @@ import RSS from '../utils/rss';
 
 const channel = {
 	domain: 'mauss.dev',
-	title: 'Ignatius Bagussuputra • Mauss',
+	title: 'Ignatius Bagussuputra • DevMauss',
 	slug: '',
-	description: 'Developed by Mauss',
+	description: 'Developed by DevMauss',
 };
 
 export function get(_: Request, res: Response) {
@@ -19,7 +19,7 @@ export function get(_: Request, res: Response) {
 			return {
 				title,
 				slug: `curated/${folder}/${filename.split('.')[0]}`,
-				description: `${title} curated by Mauss`,
+				description: `${title} curated by DevMauss`,
 				date: date.published || date.updated,
 			};
 		});

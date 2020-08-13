@@ -47,7 +47,7 @@
 
 <GridView>
 	<header slot="header">
-		<h1>Mauss Reviews</h1>
+		<h1>DevMauss Reviews</h1>
 
 		<SearchBar bind:query bind:filters {unique}>
 			<section>

@@ -40,7 +40,7 @@
 
 <GridView itemSize={21}>
 	<header slot="header">
-		<h1>Posts by Mauss</h1>
+		<h1>Posts by DevMauss</h1>
 
 		<SearchBar bind:query bind:filters {unique}>
 			<section>
