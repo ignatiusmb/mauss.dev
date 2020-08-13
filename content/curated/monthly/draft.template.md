@@ -13,6 +13,6 @@ date:published: 202X-XX-01
 
 ---
 
-## Monthly Recap
+## Monthly recap
 
 ### {Date} - {Day}
