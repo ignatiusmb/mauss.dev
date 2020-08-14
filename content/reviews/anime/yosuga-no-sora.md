@@ -273,7 +273,7 @@ Thankfully, I was watching [Eromanga-sensei](reviews/anime/eromanga-sensei) at t
 $#type=:=youtube:disclosure::link=:=KoHAQkAsuB4::caption=:=Main OP - Hiyoku no Hane by eufonius#!
 
 $#type=:=youtube:disclosure::link=:=fV_iGL8W1GM::caption=:=Main ED - Tsunagu Kizuna by Team.Nekokan [猫] (feat. Junca Amaoto)#!
-$#type=:=youtube:disclosure::link=:=qVn3_qeIrBA::caption=:=Specials ED - Pinky Jones by Momoiro Clover Z (<a href="https://youtu.be/jztquwmHdrg">with lyrics version</a>)#!
+$#type=:=youtube:disclosure::link=:=qVn3_qeIrBA::caption=:=Specials ED - Pinky Jones by Momoiro Clover Z [<a href="https://youtu.be/jztquwmHdrg">w/Lyrics</a>]#!
 
 $#type=:=youtube:disclosure::link=:=qeI0K26_5ZA::caption=:=Original Sound Track (OST) Mix#!
 

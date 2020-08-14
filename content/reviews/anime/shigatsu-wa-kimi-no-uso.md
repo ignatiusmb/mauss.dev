@@ -115,11 +115,11 @@ Well, it was a surprise when it turns out that it wasn't what the title was talk
 
 ## Soundtracks
 
-$#type=:=youtube:disclosure::link=:=SGsbYfvfE6s::caption=:=OP01 - Hikarunara by Goose house (<a href="spotify:track:4kAAko5kg70EjAWGF2ViWW">Spotify version</a>)#!
+$#type=:=youtube:disclosure::link=:=SGsbYfvfE6s::caption=:=OP01 - Hikarunara by Goose house [<a href="spotify:track:4kAAko5kg70EjAWGF2ViWW">Spotify</a>]#!
 $#type=:=youtube:disclosure::link=:=pS7Hbxv2E_E::caption=:=OP02 - Nanairo Symphony by COALAMODE.#!
 
 $#type=:=youtube:disclosure::link=:=LDDAwKs6YBw::caption=:=ED01 - Kirameki by Wacci#!
-$#type=:=youtube:disclosure::link=:=JdSpuTi9d8A::caption=:=ED02 - Orange by 7!!#!
+$#type=:=youtube:disclosure::link=:=B9OBH8Wodd4::caption=:=ED02 - Orange by 7!! [<a href="spotify:track:7p30D2KjK2XW7YUvI6nH3o">Spotify</a> | <a href="https://youtu.be/B9OBH8Wodd4">w/Lyrics</a>]#!
 
 > ### OST Covers [[Spotify](spotify:playlist:6a0PMD9AsNoK3XD5Nnheig)]
 
