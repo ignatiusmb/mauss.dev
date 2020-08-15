@@ -114,6 +114,7 @@
 	article :global(ol),
 	article :global(ul) {
 		padding: 0;
+		padding-left: 0.5em;
 		margin: 0;
 		margin-top: 0.75em;
 		margin-bottom: -0.5em;
@@ -124,6 +125,11 @@
 	}
 	article :global(li) {
 		margin-left: 1em;
+	}
+	article :global(li > ol),
+	article :global(li > ul) {
+		margin-top: 0;
+		margin-bottom: 0.5em;
 	}
 	article :global(blockquote) {
 		line-height: 1.5;
