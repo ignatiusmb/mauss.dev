@@ -82,9 +82,6 @@
 		border: 0.5em solid rgba(var(--bg-color-secondary, 1));
 		border-radius: 0.25em;
 	}
-	article :global(img::after) {
-		content: attr(title);
-	}
 	article :global(img[src*="://"])
 	{
 		padding: 0.5em;
@@ -150,6 +147,7 @@
 		border: 0;
 		background-color: rgba(var(--fg-color, 1));
 	}
+
 	article :global(figure) {
 		margin: 1em 0 2em;
 	}
@@ -157,7 +155,7 @@
 		margin: 1em 0;
 	}
 	article :global(figure figcaption) {
-		padding: 0 0.25em;
+		padding: 0.5em 0.25em 0;
 		text-align: center;
 		font: 80% var(--aqua-monospace);
 	}
@@ -170,7 +168,6 @@
 		height: 0;
 		position: relative;
 		padding-top: 56.25%;
-		margin-bottom: 0.5em;
 	}
 	article :global(div.youtube iframe) {
 		width: 100%;
@@ -179,6 +176,19 @@
 		left: 0;
 		top: 0;
 	}
+	article :global(div.captioned-image) {
+		position: relative;
+		padding-top: 56.25%;
+	}
+	article :global(div.captioned-image > img) {
+		object-fit: contain;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		border: 0;
+	}
+
 	article :global(.aqua.code-box) {
 		line-height: unset;
 		font-size: 0.8rem;
