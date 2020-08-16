@@ -1,5 +1,5 @@
 ---
-year: 2016
+year: 2017
 title:en: Boruto: Naruto Next Generations
 genres: action, adventure, super power, martial arts, shounen
 rating: 3,2,4,3
@@ -8,11 +8,10 @@ verdict: -1
 last_seen: 2020-07-12
 date:published: 2020-08-15
 image:en: https://image.tmdb.org/t/p/original/t1eJhngNgHywjXYAg2iAdSJ3PiL.jpg
+backdrop: https://image.tmdb.org/t/p/original/hy7CPzl227MOlByLUcD9nWuwbjn.jpg
 
 link:mal: https://myanimelist.net/anime/34566/Boruto__Naruto_Next_Generations
 ---
-
-![Boruto Backdrop](https://image.tmdb.org/t/p/original/3XlKckxPEa4lg5w4vHnyE35PUyI.jpg)
 
 ## Synopsis
 
@@ -23,6 +22,8 @@ Having the privilege of being born from the greatest ninja ever that lived in hi
 ## Plot
 
 There's no plot at this point, just staying relevant is probably a good enough achievement for this anime. Its manga is being written as this anime is produced, what more can I say. An anime with a release format that should just die already, having only one mega-season with a weekly release schedule. You can be sure that it's quality will never be as good as those prepared in advance and released in seasons.
+
+![Boruto Backdrop](https://image.tmdb.org/t/p/original/3XlKckxPEa4lg5w4vHnyE35PUyI.jpg)
 
 ## Highlights
 
