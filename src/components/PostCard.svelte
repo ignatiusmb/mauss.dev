@@ -63,7 +63,7 @@
 	aside small:not(:first-of-type)::before {
 		content: '•';
 		color: rgba(var(--theme-secondary), 1);
-		margin-right: 0.5em;
+		margin-right: 0.5rem;
 	}
 	aside :global(:last-child) {
 		justify-self: end;
