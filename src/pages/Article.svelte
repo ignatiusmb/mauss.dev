@@ -87,6 +87,7 @@
 		padding: 0.5em;
 		border: none;
 		border-radius: 1em;
+		text-align: center;
 	}
 	article :global(h2),
 	article :global(h3) {
