@@ -1,5 +1,5 @@
 ---
-title: Monthly Curation - {Month} {Year}
+title: Monthly Digest - {Month} {Year}
 date:published: 202X-XX-01
 ---
 
@@ -29,4 +29,4 @@ date:published: 202X-XX-01
 
 That's it for our recap of {Month} {Year}, folks! Stay safe and have a great {NextMonth} 👋
 
-As always, let me know if you have any feedback for this monthly curation content.
+As always, let me know if you have any feedback for this monthly digests.
