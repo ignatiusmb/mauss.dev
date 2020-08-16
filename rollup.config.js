@@ -63,7 +63,7 @@ export default {
 				dedupe: ['svelte'],
 			}),
 			commonjs(),
-			typescript(),
+			typescript({ noEmitOnError: false }),
 			json(),
 
 			legacy &&
@@ -99,7 +99,7 @@ export default {
 			}),
 			resolve({ dedupe: ['svelte'] }),
 			commonjs(),
-			typescript(),
+			typescript({ noEmitOnError: false }),
 			json(),
 		],
 	},
