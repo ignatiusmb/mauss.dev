@@ -49,7 +49,8 @@
 </header>
 
 <style>
-	header {
+	header,
+	header > :global(div) {
 		display: grid;
 		gap: 0.5em;
 		line-height: 1;
@@ -60,19 +61,22 @@
 		margin: 1em 0 0.5em;
 		font-size: clamp(2rem, 4vw, 2.5rem);
 	}
-	small {
+	small,
+	header > :global(div > small) {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
 		font-size: clamp(0.9rem, 2vw, 1.1rem);
 	}
-	small:first-of-type > :not(:last-child)::after {
+	small:first-of-type > :not(:last-child)::after,
+	header > :global(div > small:first-of-type > :not(:last-child)::after) {
 		content: '~';
 		margin: 0 0.5em;
 		color: rgba(var(--theme-secondary), 1);
 		font-weight: bolder;
 	}
-	small > :global(span) {
+	small > :global(span),
+	header > :global(div > small > span) {
 		margin-bottom: 0.25em;
 	}
 	small time + :global(.elements.link) {
