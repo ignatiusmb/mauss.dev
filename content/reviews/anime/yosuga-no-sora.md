@@ -10,11 +10,11 @@ last_seen: 2020-06-06
 date:published: 2020-06-18
 date:updated: 2020-06-25
 image:en: https://image.tmdb.org/t/p/original/9F80WGUD6WYfoEDMImf988NlXhC.jpg
+backdrop: https://image.tmdb.org/t/p/original/sY7HH2gbcTa9fTvyxopvo1Wiqbr.jpg
 
 link:mal: https://myanimelist.net/anime/8861/Yosuga_no_Sora__In_Solitude_Where_We_Are_Least_Alone
 ---
 
-![Yosuga no Sora Backdrop](https://image.tmdb.org/t/p/original/haeBJjV2JHfopKl4dYE7RJwASlF.jpg "Sky of Connection")
 
 ## Synopsis
 
@@ -156,6 +156,8 @@ Each arc is its own story with independent plot and should not be confused with 
 Yosuga no Sora finishes after only 1 season of 12 episodes. Each episode consists of a 22 minutes feature segment and a 3 minutes omake segment. The bonus segment focuses on Motoka's story that is continuous between episode 1 to 12. So you could say that the bonus segment is the only linear plot line here.
 
 In total, there's 5 endings, 4 as the main storyline and another one in the extras.
+
+![Yosuga no Sora Backdrop](https://image.tmdb.org/t/p/original/haeBJjV2JHfopKl4dYE7RJwASlF.jpg "Sky of Connection")
 
 ## Highlights
 
