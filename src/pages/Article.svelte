@@ -71,6 +71,7 @@
 
 	article :global(p) {
 		margin-top: 0.75em;
+		line-height: 2rem;
 	}
 	article :global(p code),
 	article :global(ol code),
