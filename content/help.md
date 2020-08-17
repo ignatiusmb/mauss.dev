@@ -10,11 +10,21 @@ Navigation bar for mobile users are placed at the bottom, click the hamburger ic
 
 ## [About](about)
 
-I think this is pretty self-explanatory, right? It includes explanation for who I am, what I do, hobbies, socials, some fun facts, and other trivial stuff.
+I think this is pretty self-explanatory, right? It includes explanation for who I am, what I do, hobbies, socials, some fun facts, and other trivial stuff. Also why I built this website if some of you are curious.
 
 ## [Curated](curated)
 
-Curated page consists of things I find interesting or worthwhile to be compiled into its own dedicated timeless post, so it shouldn't matter when it's being read. It also hosts the special [Monthly Curation Feed](curated/monthly), subscribe so you'll get the latest curation at the start of every month.
+Curated page consists of things I find interesting or worthwhile to be compiled into its own dedicated timeless post, so it shouldn't matter when it's being read. It also hosts the special [Monthly Digests](curated/monthly), subscribe so you'll get the latest curation at the start of every month.
+
+### Monthly Digests
+
+Just like the name suggests, it's a monthly summation. A compilation of everything I find interesting, informative, thought-provoking, or just something relevant happening in that month. The post is divided into 3 main sections:
+
+1. [Article | Content | Music | Video] of the month
+   - Each accompanied with their own honorable mentions
+2. Headlines of the month
+3. Detailed monthly recap
+   - Limited to 3 items per day
 
 ## [Posts](posts)
 
