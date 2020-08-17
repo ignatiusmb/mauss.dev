@@ -32,4 +32,10 @@
 	p {
 		font-size: 2em;
 	}
+	pre {
+		display: flex;
+		justify-content: center;
+		margin-top: 1em;
+		text-align: left;
+	}
 </style>

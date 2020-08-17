@@ -12,15 +12,17 @@ date:published: 2020
 date:updated: 2020
 image:en:
 image:jp:
+backdrop:
 
 link:mal:
 ---
 
-![Backdrop]()
 
 ## Synopsis
 
 ## Plot
+
+![Backdrop]()
 
 ## Highlights
 
@@ -38,7 +40,9 @@ link:mal:
 
 ## $CLOSING
 
----
+## Soundtracks
+
+***
 Reference(s):
 
 - 1

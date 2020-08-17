@@ -10,11 +10,11 @@ last_seen: 2020-06-06
 date:published: 2020-06-18
 date:updated: 2020-06-25
 image:en: https://image.tmdb.org/t/p/original/9F80WGUD6WYfoEDMImf988NlXhC.jpg
+backdrop: https://image.tmdb.org/t/p/original/sY7HH2gbcTa9fTvyxopvo1Wiqbr.jpg
 
 link:mal: https://myanimelist.net/anime/8861/Yosuga_no_Sora__In_Solitude_Where_We_Are_Least_Alone
 ---
 
-![Yosuga no Sora Backdrop](https://image.tmdb.org/t/p/original/haeBJjV2JHfopKl4dYE7RJwASlF.jpg "Sky of Connection")
 
 ## Synopsis
 
@@ -157,6 +157,8 @@ Yosuga no Sora finishes after only 1 season of 12 episodes. Each episode consist
 
 In total, there's 5 endings, 4 as the main storyline and another one in the extras.
 
+![Yosuga no Sora Backdrop](https://image.tmdb.org/t/p/original/haeBJjV2JHfopKl4dYE7RJwASlF.jpg "Sky of Connection")
+
 ## Highlights
 
 This is **not a hentai**, if you're going in on this with that mindset, you're better off watching something else. There is of course some sexual scenes, but it is served reasonably for the story to progress and has deeper meanings with **how they got into it** and not just there for the sake of something sexual.
@@ -273,7 +275,7 @@ Thankfully, I was watching [Eromanga-sensei](reviews/anime/eromanga-sensei) at t
 $#type=:=youtube:disclosure::link=:=KoHAQkAsuB4::caption=:=Main OP - Hiyoku no Hane by eufonius#!
 
 $#type=:=youtube:disclosure::link=:=fV_iGL8W1GM::caption=:=Main ED - Tsunagu Kizuna by Team.Nekokan [猫] (feat. Junca Amaoto)#!
-$#type=:=youtube:disclosure::link=:=qVn3_qeIrBA::caption=:=Specials ED - Pinky Jones by Momoiro Clover Z (<a href="https://youtu.be/jztquwmHdrg">with lyrics version</a>)#!
+$#type=:=youtube:disclosure::link=:=qVn3_qeIrBA::caption=:=Specials ED - Pinky Jones by Momoiro Clover Z [<a href="https://youtu.be/jztquwmHdrg">w/Lyrics</a>]#!
 
 $#type=:=youtube:disclosure::link=:=qeI0K26_5ZA::caption=:=Original Sound Track (OST) Mix#!
 

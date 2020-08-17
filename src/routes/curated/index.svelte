@@ -21,7 +21,7 @@
 </MetaHead>
 
 <header>
-	<h1>Curated by Mauss</h1>
+	<h1>Curated by DevMauss</h1>
 </header>
 
 <main>

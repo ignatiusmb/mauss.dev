@@ -5,7 +5,7 @@ genres: isekai, drama, comedy, fantasy, adventure, thriller, action
 rating: story,artwork,sound,characters
 verdict:
 
-last_seen:
+last_seen: 2020
 date:published: 2020
 image:en: https://image.tmdb.org/t/p/original/5DZa4aDH5MZGcZDf8ouTxm2kH2Y.jpg
 

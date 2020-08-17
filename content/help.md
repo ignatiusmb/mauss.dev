@@ -8,15 +8,25 @@ Having trouble navigating through the page? Don't know what or where to look fir
 Navigation bar for mobile users are placed at the bottom, click the hamburger icon on the right to expand other pages, and click the square "M" icon to go back to the home page.
 </section>
 
-### [About](about)
+## [About](about)
 
-I think this is pretty self-explanatory, right? It includes explanation for who I am, what I do, hobbies, socials, some fun facts, and other trivial stuff.
+I think this is pretty self-explanatory, right? It includes explanation for who I am, what I do, hobbies, socials, some fun facts, and other trivial stuff. Also why I built this website if some of you are curious.
 
-### [Curated](curated)
+## [Curated](curated)
 
-Curated page consists of things I find interesting or worthwhile to be compiled into its own dedicated timeless post, so it shouldn't matter when it's being read. It also hosts the special [Monthly Curation Feed](curated/monthly), subscribe so you'll get the latest curation at the start of every month.
+Curated page consists of things I find interesting or worthwhile to be compiled into its own dedicated timeless post, so it shouldn't matter when it's being read. It also hosts the special [Monthly Digests](curated/monthly), subscribe so you'll get the latest curation at the start of every month.
 
-### [Posts](posts)
+### Monthly Digests
+
+Just like the name suggests, it's a monthly summation. A compilation of everything I find interesting, informative, thought-provoking, or just something relevant happening in that month. The post is divided into 3 main sections:
+
+1. [Article | Content | Music | Video] of the month
+   - Each accompanied with their own honorable mentions
+2. Headlines of the month
+3. Detailed monthly recap
+   - Limited to 3 items per day
+
+## [Posts](posts)
 
 Posts page are just blog posts for various stuff happening or has happened. Would talk about life in general, have a tutorial post, or just discussing general technology or programming specific.
 
@@ -24,20 +34,28 @@ Posts page are just blog posts for various stuff happening or has happened. Woul
 You can get the link and subscribe to this site's RSS by clicking on the icon at the navigation bar so you don't miss out on any new stuff.
 </section>
 
-### [Reviews](reviews)
+## [Reviews](reviews)
 
 Reviews page is the place where I try to express myself the most. I try to review all content I consume as objectively as possible and treat each review as a way to show my appreciation for the content that has been made. Even if I don't recommend it, I'm sure there's always something to learn from and take the positive out of it.
 
-Most reviews will be accompanied by a **Spoilers Section**, which is just me theorizing and basically overanalyzing everything in the content I reviewed.
+Most reviews will be accompanied by a **Spoilers Section**, which is just basically me theorizing and overanalyzing everything, or in some rare cases, a place where I could freely talk about the important events that happen there and open a discussion to all readers (or at least intrigue some of you about the topic).
 
-### [Uses](uses)
+### Attributions - TMDB
 
-Uses page are somewhat a trend for people who have their own blog or website. Although, I've added a personal touch to my uses page. It doubles down as a living document for all the things I've researched and bought. I could spend hours or days before truly settling on one thing because I'm lazy and I prefer sticking to one thing rather than frequently changing them.
+![TMDB Logo](https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg)
+
+Apologies for the huge logo, it automatically fits itself to the available width space (hope it doesn't violate the TOC). Anyways, I pull most of my images from [TMDB](https://www.themoviedb.org/) and according to their [TOC for Logos & Attribution](https://www.themoviedb.org/about/logos-attribution), *"every application that uses our data or images is required to properly attribute TMDb as the source"*. Although I don't necessarily use their API, rather linking them directly because I can choose it personally, here's an appropriate attribution for their high quality images and database.
+
+I don't have any affiliation with TMDB nor any connection whatsoever, the usage of TMDB here is purely my personal choice and convenience it provides. The reviews, images used, and other stuff I chose does not represent TMDB, any further questions should be asked directly to me through my Twitter or other social links down below.
+
+## [Uses](uses)
+
+Uses page are somewhat [a trend for people who have their own blog or website](https://uses.tech/). Although, I've added a personal touch to my uses page. It doubles down as a living document for all the things I've researched and bought. I could spend hours or days before truly settling on one thing because I'm lazy and I prefer sticking to one thing rather than frequently changing them.
 
 Because of that, I want the best for the job so I won't have to worry about its longevity, stick with just that one thing and get comfortable with it. Even if it somehow broke after 5 years or more, I would still have a benchmark I could compare it to for future replacements.
 
 It could also serve as my personal reviews with testimonies for your reference on deciding what to use. Also, it induces a bit of personal nostalgia knowing your old stuffs.
 
 <section class="info-box note">
-Mauss(.dev) automatically detects your device's preferred theme and changes to it, but if you decide to use another theme for this website, you can simply click the icon on the navigation bar to toggle through the available themes.
+DevMauss automatically detects your device's preferred theme and changes to it, but if you decide to use another theme for this website, you can simply click the icon on the navigation bar to toggle through the available themes.
 </section>

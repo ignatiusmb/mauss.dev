@@ -8,7 +8,11 @@ export function get(req: Request, res: Response) {
 	const { category, slug } = req.params;
 	const filepath = `content/reviews/${category}/${slug}.md`;
 	function hydrate(data: RawReview, content: string): FinalReview {
+		const { published, updated } = data.date;
+		const [dStart, dSeen] = [new Date(updated || published), new Date(data.last_seen)];
+
 		const review: FinalReview = { slug: `${category}/${slug}`, category, ...data };
+		review.composed = (dStart.getTime() - dSeen.getTime()) / 1000 / 24 / 60 / 60;
 
 		const [article, closing] = content.split(/^## \$CLOSING/m);
 		if (closing) review.closing = mark(review, closing);

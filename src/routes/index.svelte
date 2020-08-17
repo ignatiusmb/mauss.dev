@@ -18,6 +18,12 @@
 
 <script>
 	export let data, quotes;
+	const sections = [
+		{ key: 'posts', heading: 'Recent Posts 📚', desc: "What's on my mind (or life) recently:" },
+		{ key: 'reviews', heading: 'Recent Reviews ⭐', desc: "Creative contents I've been consuming recently:" },
+		{ key: 'curated', heading: 'Recently Curated ⚖️', desc: "Stuffs I've been curating recently:" },
+	];
+
 	import { Link, Image } from '@ignatiusmb/elements/essentials';
 	import MetaHead from '../pages/MetaHead.svelte';
 	import Article from '../pages/Article.svelte';
@@ -38,7 +44,7 @@
 <svelte:window bind:scrollY bind:innerHeight />
 <MetaHead
 	title="Ignatius Bagussuputra"
-	description="Mauss. Personal website of Ignatius Bagussuputra. A Computer Science undergraduate from University of
+	description="DevMauss. Personal website of Ignatius Bagussuputra. A Computer Science undergraduate from University of
 	Indonesia." />
 
 <div class:fixed-nav={!$mobile} class:scrolled>
@@ -49,7 +55,7 @@
 	<header slot="header">
 		<Link href="about">
 			<div class="dashed-border" />
-			<Image src="profile/mauss.jpeg" alt="Mauss Profile" ratio={1} />
+			<Image src="profile/mauss.jpeg" alt="DevMauss Profile" ratio={1} />
 		</Link>
 		<h2>Ignatius Bagussuputra</h2>
 		<h4>CS Student at University of Indonesia</h4>
@@ -80,50 +86,22 @@
 		<Link href="about">More info...</Link>
 	</section>
 
-	<section>
-		<h2>Recent Posts 📚</h2>
-		<p>What's on my mind (or life) recently:</p>
-		<ul>
-			{#each data['posts'] as post}
+	{#each sections as { key, heading, desc }}
+		<section>
+			<h2>{heading}</h2>
+			<p>{desc}</p>
+			<ul>
+				{#each data[key] as { slug, title }}
+					<li>
+						<Link href="{key}/{slug}">{typeof title === 'string' ? title : title.short ? title.short : title.en}</Link>
+					</li>
+				{/each}
 				<li>
-					<Link href="posts/{post.slug}">{post.title}</Link>
+					<Link href={key}>More {key}{key === 'curated' ? ' stuffs ' : ''}...</Link>
 				</li>
-			{/each}
-			<li>
-				<Link href="posts">More posts...</Link>
-			</li>
-		</ul>
-	</section>
-
-	<section>
-		<h2>Recent Reviews ⭐</h2>
-		<p>Creative contents I've been consuming recently:</p>
-		<ul>
-			{#each data['reviews'] as review}
-				<li>
-					<Link href="reviews/{review.slug}">{typeof review.title === 'string' ? review.title : review.title.en}</Link>
-				</li>
-			{/each}
-			<li>
-				<Link href="reviews">More reviews...</Link>
-			</li>
-		</ul>
-	</section>
-
-	<section>
-		<h2>Recently Curated ⚖️</h2>
-		<p>Stuffs I've been curating recently:</p>
-		<ul>
-			{#each data['curated'] as curated}
-				<li>
-					<Link href="curated/{curated.slug}">{curated.title}</Link>
-				</li>
-			{/each}
-			<li>
-				<Link href="curated">More curated stuffs...</Link>
-			</li>
-		</ul>
-	</section>
+			</ul>
+		</section>
+	{/each}
 </Article>
 
 <style>

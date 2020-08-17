@@ -11,6 +11,10 @@ export function contentParser(data: any, content: string) {
 		let data;
 		if (type.startsWith('youtube')) {
 			data = `<div class="youtube"><iframe src="https://www.youtube-nocookie.com/embed/${link}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+		} else if (type.startsWith('image')) {
+			data = `<div class="captioned-image"><img src="${link}"></div>`;
+		} else if (type.startsWith('video')) {
+			data = `<div class="captioned-video"><video controls autoplay><source src="${link}" type="video/mp4"></video></div>`;
 		}
 		return type.includes(':disclosure')
 			? `<details><summary>${caption}</summary>${data}</details>`

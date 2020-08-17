@@ -5,7 +5,7 @@
 	export let post = null;
 	export let social = {};
 
-	const hostTitle = 'Mauss';
+	const hostTitle = 'DevMauss';
 	const hostname = 'mauss.dev';
 
 	import { stores } from '@sapper/app';

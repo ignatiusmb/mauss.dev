@@ -4,7 +4,14 @@
 
 <footer>
 	<section>
-		<em>Without cookies, analytics, or anything to track you.</em>
+		<em>
+			Fully open-source and static, yet interactive site. Built without cookies, analytics, or anything to track you.
+		</em>
+		<em>
+			Read the
+			<Link href="uses">help page</Link>
+			for more information
+		</em>
 	</section>
 
 	<section class="social-links">

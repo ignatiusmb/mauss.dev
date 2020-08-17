@@ -24,46 +24,50 @@
 	import MetaHead from '../../../pages/MetaHead.svelte';
 	import Article from '../../../pages/Article.svelte';
 
+	import ReviewBanner from '../../../components/ReviewBanner.svelte';
 	import Disclaimer from '../../../components/Disclaimer.svelte';
-	import ReviewsTab from '../../../components/ReviewsTab.svelte';
 	import Spoilers from '../../../components/SpoilerSection.svelte';
-	$: ({ slug, title, link, content, seasons, spoilers, closing, siblings } = post);
+	$: ({ title, spoilers, siblings } = post);
 </script>
 
-<MetaHead {post} canonical="reviews/{slug}" title={title.short ? title.short : title.jp ? title.jp : title.en} />
+<MetaHead {post} canonical="reviews/{post.slug}" title={title.short ? title.short : title.jp ? title.jp : title.en} />
 
-<Article header {post} path="content/reviews/{slug}.md" {siblings}>
-	<small slot="header">
-		{#if link}
-			<span>
-				{#each Object.keys(link) as linkKey}
-					<a href={link[linkKey]}>{linkMap[linkKey]}</a>
+<Article header {post} path="content/reviews/{post.slug}.md" {siblings}>
+	<div slot="header">
+		<ReviewBanner {post} />
+
+		{#if post.link}
+			<small>
+				<span>[</span>
+				{#each Object.keys(post.link) as linkKey}
+					<span>
+						<a href={post.link[linkKey]}>{linkMap[linkKey]}</a>
+					</span>
 				{/each}
-			</span>
+				<span>]</span>
+			</small>
 		{/if}
-	</small>
+	</div>
 
 	<Disclaimer link />
 
 	<section>
-		{@html content}
+		{@html post.content}
 	</section>
 
-	{#if seasons}
-		<ReviewsTab {seasons} />
-	{:else if spoilers}
+	{#if spoilers}
 		<Spoilers {spoilers} />
 	{/if}
 
-	{#if closing}
+	{#if post.closing}
 		<section>
-			{@html closing}
+			{@html post.closing}
 		</section>
 	{/if}
 </Article>
 
 <style>
-	small {
-		font-size: 1rem;
+	div small {
+		justify-content: center;
 	}
 </style>

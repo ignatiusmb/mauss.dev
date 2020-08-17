@@ -71,6 +71,7 @@
 
 	article :global(p) {
 		margin-top: 0.75em;
+		line-height: 2rem;
 	}
 	article :global(p code),
 	article :global(ol code),
@@ -79,17 +80,16 @@
 	}
 	article :global(img) {
 		margin: auto;
-		border: 0.5em solid rgba(var(--bg-color-secondary, 1));
-		border-radius: 0.25em;
-	}
-	article :global(img::after) {
-		content: attr(title);
+		border: 0.25em solid rgba(var(--bg-color-secondary, 1));
+		border-radius: 0.5em;
+		text-align: center;
 	}
 	article :global(img[src*="://"])
 	{
 		padding: 0.5em;
 		border: none;
-		border-radius: 1em;
+		border-radius: 0.5em;
+		text-align: center;
 	}
 	article :global(h2),
 	article :global(h3) {
@@ -114,6 +114,7 @@
 	article :global(ol),
 	article :global(ul) {
 		padding: 0;
+		padding-left: 0.5em;
 		margin: 0;
 		margin-top: 0.75em;
 		margin-bottom: -0.5em;
@@ -124,6 +125,10 @@
 	}
 	article :global(li) {
 		margin-left: 1em;
+	}
+	article :global(li > ol),
+	article :global(li > ul) {
+		margin: 0;
 	}
 	article :global(blockquote) {
 		line-height: 1.5;
@@ -144,6 +149,7 @@
 		border: 0;
 		background-color: rgba(var(--fg-color, 1));
 	}
+
 	article :global(figure) {
 		margin: 1em 0 2em;
 	}
@@ -151,7 +157,7 @@
 		margin: 1em 0;
 	}
 	article :global(figure figcaption) {
-		padding: 0 0.25em;
+		padding: 0.5em 0.25em 0;
 		text-align: center;
 		font: 80% var(--aqua-monospace);
 	}
@@ -160,11 +166,15 @@
 		margin-bottom: 0.5em;
 		font: 90% var(--aqua-monospace);
 	}
-	article :global(div.youtube) {
-		height: 0;
+	article :global(div.youtube),
+	article :global(div.captioned-image),
+	article :global(div.captioned-video) {
 		position: relative;
 		padding-top: 56.25%;
-		margin-bottom: 0.5em;
+	}
+	article :global(div.captioned-image),
+	article :global(div.captioned-video) {
+		border-radius: 0.5em;
 	}
 	article :global(div.youtube iframe) {
 		width: 100%;
@@ -173,6 +183,24 @@
 		left: 0;
 		top: 0;
 	}
+	article :global(div.captioned-image > img) {
+		object-fit: contain;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		border: 0;
+		border-radius: inherit;
+	}
+	article :global(div.captioned-video > video) {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		border-radius: inherit;
+	}
+
 	article :global(.aqua.code-box) {
 		line-height: unset;
 		font-size: 0.8rem;

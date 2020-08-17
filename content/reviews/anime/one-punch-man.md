@@ -5,7 +5,7 @@ genres: action, sci-fi, comedy, super power, supernatural
 rating: story,artwork,sound,characters
 verdict:
 
-last_seen:
+last_seen: 2020
 date:published: 2020
 image:en: https://image.tmdb.org/t/p/original/iE3s0lG5QVdEHOEZnoAxjmMtvne.jpg
 

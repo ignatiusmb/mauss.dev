@@ -5,7 +5,7 @@ genres: romance, comedy, slice of life, school
 rating: story,artwork,sound,characters
 verdict:
 
-last_seen:
+last_seen: 2020
 date:published: 2020
 image:en: https://image.tmdb.org/t/p/original/2Z52nZaAQt1P7XJtu8fNlMXgdps.jpg
 

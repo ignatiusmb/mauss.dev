@@ -1,5 +1,5 @@
 <script context="module">
-	export async function preload() {
+	export async function preload({ query }) {
 		const data = await this.fetch('reviews.json').then((r) => r.json());
 		const genres = data.flatMap((p) => p.genres);
 		return {
@@ -9,12 +9,13 @@
 				genres: genres.reduce((a, c) => (a.includes(c) ? a : c ? [...a, c] : a), []).sort(),
 			},
 			verdict: data.reduce((a, c) => (a.includes(c.verdict) ? a : [...a, c.verdict]), []),
+			query: query.query,
 		};
 	}
 </script>
 
 <script>
-	export let data, unique, verdict;
+	export let data, unique, verdict, query;
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
 	const bound = 12;
@@ -28,7 +29,7 @@
 
 	import { sieve, filter } from '../../utils/search';
 	import { mobile, rSlice as store } from '../../stores';
-	let query, sieved;
+	let sieved;
 	let filters = { categories: [], genres: [], verdict: [], sort: 'updated' };
 
 	$: filtered = filter(filters, data);
@@ -46,7 +47,7 @@
 
 <GridView>
 	<header slot="header">
-		<h1>Mauss Reviews</h1>
+		<h1>DevMauss Reviews</h1>
 
 		<SearchBar bind:query bind:filters {unique}>
 			<section>

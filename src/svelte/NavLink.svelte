@@ -29,7 +29,7 @@
 		bottom: 0;
 		width: 0;
 		height: 0.25em;
-		border-radius: 0.8em;
+		border-radius: 0.5em;
 		background-color: rgba(var(--theme-secondary), 1);
 		transition: width var(--t-duration) ease;
 		transform: translateY(100%);

@@ -82,7 +82,7 @@ declare class FinalReview implements RawReview {
 		mal?: string;
 	};
 
-	seasons?: Array<{ title: string; content: string; spoilers?: string }>;
+	composed?: number;
 	spoilers?: string;
 	closing?: string;
 	content?: string;

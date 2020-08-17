@@ -3,18 +3,18 @@ year: 2014
 title:en: Your Lie in April
 title:jp: Shigatsu wa Kimi no Uso
 genres: drama, music, romance, school, slice of life
-rating: 9,6,10,8
+rating: 9,8,10,8
 verdict: 1
 
-last_seen: 2020-06-20
+last_seen: 2020-08-14
 date:published: 2020-06-20
-date:updated: 2020-06-22
+date:updated: 2020-08-16
 image:en: https://image.tmdb.org/t/p/original/nksFLYTydth9OYVpMuMbtOBkvMO.jpg
+backdrop: https://image.tmdb.org/t/p/original/3qQFa8n5sFmrxMhcjUnKdg2CCOU.jpg
 
 link:mal: https://myanimelist.net/anime/23273/Shigatsu_wa_Kimi_no_Uso
 ---
 
-![Your Lie in April Backdrop](https://wallpapercave.com/wp/wp1848044.jpg)
 
 ## Synopsis
 
@@ -23,6 +23,8 @@ Kousei Arima the prodigious pianist, also called the human metronome that never 
 Two years later, after living in a monochrome world, his life changes drastically as he meets Kaori Miyazono, a beautiful and audacious violinist who stirs up his world and drags him back on a journey to face music again with his piano. Together with his childhood friends, Tsubaki Sawabe and Ryouta Watari, he's starting to get back on his feet, and time that was once frozen started ticking again for him.
 
 Based on the manga series of the same name, Shigatsu wa Kimi no Uso approaches the story of Kousei's recovery as he discovers that music is more than playing each note perfectly, and a single melody can bring in the fresh spring air of April.
+
+![Your Lie in April Backdrop](https://wallpapercave.com/wp/wp1848044.jpg)
 
 ## Highlights
 
@@ -34,7 +36,7 @@ It's mostly sad but they always try to follow up with something humorous to cove
 
 ### $#{rating:1}#!/10 | Artwork & Animation
 
-As expected of A-1 Pictures, great as always. It's not at Kyoto Animation or Ufotable level, but it's still good enough without a doubt. My complaints are the nonexistent effort they have on animating the other performance. Sure, it's not really important to the story, but it doesn't seem nice to just see a still picture with variating sounds playing in the background. At least just a little animation would be nice, even if it's just in the hands. My rating is heavily backed up by the beautiful artworks.
+As expected of A-1 Pictures, great as always. Always been a fan of their works, and this is without a doubt one of them. My only complaints are when they only put a static image of with sound when a side character is performing. Aside from that, it's scenes and backgrounds, especially when the performance is on, is absolutely beautiful.
 
 ### $#{rating:2}#!/10 | Sound
 
@@ -48,13 +50,11 @@ Some minor things I'll be picky about is they sometimes exaggerate some of the c
 
 ## Verdict
 
-Your Lie in April was certainly that kind of show where you knew what's going to happen in the end, yet you'll still be "surprised" by it.
+Your Lie in April was certainly that kind of show where you knew what's going to happen in the end, yet you'll still be "surprised" by it. It's that type of slice of life, drama anime  you'll most likely just enjoy watching or re-watching.
 
 The title itself makes me think about it constantly throughout the series, trying to figure out who's perspective is "Your Lie" coming from and what lie is about. I highly suggest you **don't go wiki surfing and just watch it** till the end as is. I always felt like that's the best approach to watch a series, the journey and experience of growing with the characters is worthwhile by itself.
 
-The final verdict from me is... **Highly recommended**! Definitely watch it if you have the time. At least give the first 2 episodes a chance to fully understand what you're missing out.
-
-A fair and final warning from me, this definitely lands a spot on my top 10 saddest anime.
+The final verdict from me is of course, highly recommended! You can watch it anytime you'd like, but by the time you're done, you'll probably want to re-watch it around April.
 
 ## $SPOILERS
 
@@ -115,11 +115,11 @@ Well, it was a surprise when it turns out that it wasn't what the title was talk
 
 ## Soundtracks
 
-$#type=:=youtube:disclosure::link=:=SGsbYfvfE6s::caption=:=OP01 - Hikarunara by Goose house (<a href="spotify:track:4kAAko5kg70EjAWGF2ViWW">Spotify version</a>)#!
+$#type=:=youtube:disclosure::link=:=SGsbYfvfE6s::caption=:=OP01 - Hikarunara by Goose house [<a href="spotify:track:4kAAko5kg70EjAWGF2ViWW">Spotify</a>]#!
 $#type=:=youtube:disclosure::link=:=pS7Hbxv2E_E::caption=:=OP02 - Nanairo Symphony by COALAMODE.#!
 
 $#type=:=youtube:disclosure::link=:=LDDAwKs6YBw::caption=:=ED01 - Kirameki by Wacci#!
-$#type=:=youtube:disclosure::link=:=JdSpuTi9d8A::caption=:=ED02 - Orange by 7!!#!
+$#type=:=youtube:disclosure::link=:=B9OBH8Wodd4::caption=:=ED02 - Orange by 7!! [<a href="spotify:track:7p30D2KjK2XW7YUvI6nH3o">Spotify</a> | <a href="https://youtu.be/B9OBH8Wodd4">w/Lyrics</a>]#!
 
 > ### OST Covers [[Spotify](spotify:playlist:6a0PMD9AsNoK3XD5Nnheig)]
 
