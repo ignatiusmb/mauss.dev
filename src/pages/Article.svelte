@@ -79,14 +79,15 @@
 	}
 	article :global(img) {
 		margin: auto;
-		border: 0.5em solid rgba(var(--bg-color-secondary, 1));
-		border-radius: 0.25em;
+		border: 0.25em solid rgba(var(--bg-color-secondary, 1));
+		border-radius: 0.5em;
+		text-align: center;
 	}
 	article :global(img[src*="://"])
 	{
 		padding: 0.5em;
 		border: none;
-		border-radius: 1em;
+		border-radius: 0.5em;
 		text-align: center;
 	}
 	article :global(h2),

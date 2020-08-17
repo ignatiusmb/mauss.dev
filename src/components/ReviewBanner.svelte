@@ -24,7 +24,7 @@
 		position: relative;
 		padding-top: 20%;
 		border: none;
-		border-radius: 1em;
+		border-radius: 0.5em;
 		margin-top: 1em;
 	}
 	.banner::after {
@@ -75,9 +75,6 @@
 		padding: 0 1em;
 	}
 	small > .stars span {
-		/* content: '⭐';
-		position: absolute;
-		transform: translate(-50%, -50%); */
 		filter: grayscale(1);
 	}
 	small > .stars span.active {
