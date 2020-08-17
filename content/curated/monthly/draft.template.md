@@ -3,6 +3,10 @@ title: Monthly Digest - {Month} {Year}
 date:published: 202X-XX-01
 ---
 
+## Article of the month
+
+### Honorable article mentions
+
 ## Content of the month
 
 ### Honorable content mentions
@@ -15,7 +19,9 @@ date:published: 202X-XX-01
 
 ### Honorable video mentions
 
-## Clip of the month
+***
+
+## Headlines of the month
 
 ***
 
