@@ -32,7 +32,7 @@ Most reviews will be accompanied by a **Spoilers Section**, which is just me the
 
 ### [Uses](uses)
 
-Uses page are somewhat a trend for people who have their own blog or website. Although, I've added a personal touch to my uses page. It doubles down as a living document for all the things I've researched and bought. I could spend hours or days before truly settling on one thing because I'm lazy and I prefer sticking to one thing rather than frequently changing them.
+Uses page are somewhat [a trend for people who have their own blog or website](https://uses.tech/). Although, I've added a personal touch to my uses page. It doubles down as a living document for all the things I've researched and bought. I could spend hours or days before truly settling on one thing because I'm lazy and I prefer sticking to one thing rather than frequently changing them.
 
 Because of that, I want the best for the job so I won't have to worry about its longevity, stick with just that one thing and get comfortable with it. Even if it somehow broke after 5 years or more, I would still have a benchmark I could compare it to for future replacements.
 

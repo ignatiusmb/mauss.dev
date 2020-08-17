@@ -2,7 +2,7 @@
 year: 2017
 title:en: Boruto: Naruto Next Generations
 genres: action, adventure, super power, martial arts, shounen
-rating: 3,2,4,3
+rating: 2,1,4,2
 verdict: -1
 
 last_seen: 2020-07-12
