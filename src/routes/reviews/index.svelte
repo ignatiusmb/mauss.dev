@@ -9,7 +9,7 @@
 				genres: genres.reduce((a, c) => (a.includes(c) ? a : c ? [...a, c] : a), []).sort(),
 			},
 			verdict: data.reduce((a, c) => (a.includes(c.verdict) ? a : [...a, c.verdict]), []),
-			query: query.title,
+			query: query.query,
 		};
 	}
 </script>
