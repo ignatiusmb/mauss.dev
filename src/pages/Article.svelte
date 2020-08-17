@@ -127,8 +127,7 @@
 	}
 	article :global(li > ol),
 	article :global(li > ul) {
-		margin-top: 0;
-		margin-bottom: 0.5em;
+		margin: 0;
 	}
 	article :global(blockquote) {
 		line-height: 1.5;
