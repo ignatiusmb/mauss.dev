@@ -68,10 +68,16 @@
 	article :global(section > :first-child) {
 		margin: 0;
 	}
+	article :global(section p),
+	article :global(section li) {
+		line-height: 2rem;
+	}
+	article :global(blockquote p) {
+		line-height: unset;
+	}
 
 	article :global(p) {
 		margin-top: 0.75em;
-		line-height: 2rem;
 	}
 	article :global(p code),
 	article :global(ol code),
