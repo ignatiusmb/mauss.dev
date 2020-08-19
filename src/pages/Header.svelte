@@ -24,9 +24,11 @@
 	<small>
 		{#if updated && updated !== published}
 			<span>
-				<time datetime={updated}>Updated {pretty.updated.complete}</time>
 				{#if path}
+					<time datetime={updated}>Updated {pretty.updated.complete}</time>
 					<Link href="{link}/{path}" newTab>[revision history]</Link>
+				{:else}
+					<time datetime={updated}>Updated {pretty.updated.complete}</time>
 				{/if}
 			</span>
 		{/if}
