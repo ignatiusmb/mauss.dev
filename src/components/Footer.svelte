@@ -9,7 +9,7 @@
 		</em>
 		<em>
 			Read the
-			<Link href="uses">help page</Link>
+			<Link href="help">help page</Link>
 			for more information
 		</em>
 	</section>
