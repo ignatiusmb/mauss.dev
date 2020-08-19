@@ -64,6 +64,7 @@
 		padding: 3em 1em;
 		margin: auto auto 3em;
 		text-align: center;
+		line-height: 1.5;
 		font-family: var(--aqua-monospace);
 		font-size: clamp(0.8em, 3vw, 1em);
 	}
