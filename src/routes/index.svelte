@@ -24,7 +24,7 @@
 		{ key: 'curated', heading: 'Recently Curated ⚖️', desc: "Stuffs I've been curating recently:" },
 	];
 
-	import { Link, Image } from '@ignatiusmb/elements/essentials';
+	import { Link, Image } from '@ignatiusmb/elements';
 	import MetaHead from '../pages/MetaHead.svelte';
 	import Article from '../pages/Article.svelte';
 	import Quote from '../svelte/Quote.svelte';
@@ -130,7 +130,7 @@
 	header > h3 {
 		margin-bottom: auto;
 	}
-	header :global(.elements.image img) {
+	header :global(.lmns-image img) {
 		padding: 0.5em;
 		border: none;
 		border-radius: inherit;

@@ -81,7 +81,7 @@
 	header > :global(div > small > span) {
 		margin-bottom: 0.25em;
 	}
-	small time + :global(.elements.link) {
+	small time + :global(.lmns-link) {
 		font: 90% var(--aqua-monospace);
 	}
 </style>

@@ -1,7 +1,6 @@
 <script>
 	export let post;
-	import { Image } from '@ignatiusmb/elements/essentials';
-	import { ButtonLink } from '@ignatiusmb/elements/styled';
+	import { Image, ButtonLink } from '@ignatiusmb/elements';
 	import { createPrettyDate } from '../utils/helper';
 	const { published, updated } = post.date;
 	const prettyDate = createPrettyDate((updated !== published && updated) || published);
@@ -38,7 +37,7 @@
 		background-color: rgba(var(--bg-color-secondary, 1));
 		transform: translate(0%);
 	}
-	section > :global(.elements.image) {
+	section > :global(.lmns-image) {
 		cursor: pointer;
 		border-bottom-right-radius: 0;
 		border-bottom-left-radius: 0;

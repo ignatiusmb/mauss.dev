@@ -1,6 +1,6 @@
 <script>
 	export let link;
-	import { Link } from '@ignatiusmb/elements/essentials';
+	import { Link } from '@ignatiusmb/elements';
 </script>
 
 <section class="info-box warning">

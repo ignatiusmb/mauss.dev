@@ -3,8 +3,7 @@
 	export let post = null;
 	export let path = null;
 	export let siblings = null;
-	import { Link } from '@ignatiusmb/elements/essentials';
-	import { ProgressBar } from '@ignatiusmb/elements/styled';
+	import { Link, ProgressBar } from '@ignatiusmb/elements';
 	import Header from './Header.svelte';
 	import Edit from '../svelte/Edit.svelte';
 	import Siblings from '../svelte/Siblings.svelte';

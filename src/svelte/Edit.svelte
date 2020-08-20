@@ -1,7 +1,7 @@
 <script>
 	export let path;
+	import { Link, Icon } from '@ignatiusmb/elements';
 	const link = 'https://github.com/ignatiusmb/mauss/edit/master';
-	import { Link, Icon } from '@ignatiusmb/elements/essentials';
 </script>
 
 <span>
