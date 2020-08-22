@@ -91,7 +91,6 @@
 	}
 	article :global(img[src*="://"])
 	{
-		padding: 0.5em;
 		border: none;
 		border-radius: 0.5em;
 		text-align: center;
