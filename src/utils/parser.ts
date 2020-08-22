@@ -2,22 +2,7 @@ import { join } from 'path';
 import { readdirSync, readFileSync } from 'fs';
 import { contentParser } from './article';
 import { sortCompare, splitAt } from './helper';
-import Aqua from '@ignatiusmb/aqua';
-const markIt = require('markdown-it')({
-	html: true,
-	typographer: true,
-	highlight: (str: string, language: string) => {
-		const strList = str.split('\n');
-		const dataset: any = { language };
-		if (strList[0][0] === '~') {
-			const [title, lineNumber] = strList[0].split('#');
-			dataset['title'] = title.slice(1);
-			if (lineNumber) dataset['lineStart'] = parseInt(lineNumber);
-		}
-		const content = strList.slice(dataset['title'] ? 1 : 0).join('\n');
-		return Aqua.code.highlight(content, dataset);
-	},
-});
+import marker from './marker';
 
 const countReadTime = (content: string) => {
 	const paragraphs = content.split('\n').filter((p) => p);
@@ -53,8 +38,6 @@ const extractMeta = (metadata: string) => {
 	}, {});
 };
 
-export const aquaMark = (content: string) => markIt.render(content);
-
 export function parseFile(filename: string, hydrate: Function) {
 	const content = readFileSync(filename, 'utf-8');
 	const fmExpression = /---\r?\n([\s\S]+?)\r?\n---/;
@@ -74,7 +57,7 @@ export function parseFile(filename: string, hydrate: Function) {
 	if (result.content) {
 		const { content, ...rest } = result;
 		result.content = contentParser(rest, content);
-		result.content = aquaMark(result.content);
+		result.content = marker.render(result.content);
 	}
 	return result;
 }
