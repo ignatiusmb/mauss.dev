@@ -2,7 +2,7 @@
 	export let path = null;
 	export let post;
 	const link = 'https://github.com/ignatiusmb/mauss/commits/master';
-	import { Link } from '@ignatiusmb/elements/essentials';
+	import { Link } from '@ignatiusmb/elements';
 	import Edit from '../svelte/Edit.svelte';
 	import { createPrettyDate } from '../utils/helper';
 	$: ({ published, updated } = post.date || {});
