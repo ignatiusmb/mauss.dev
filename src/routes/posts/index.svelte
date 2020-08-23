@@ -38,7 +38,7 @@
 	<link rel="alternate" href="rss.xml" type="application/rss+xml" />
 </MetaHead>
 
-<GridView itemSize={21}>
+<GridView itemSize="21em">
 	<header slot="header">
 		<h1>Posts by DevMauss</h1>
 
