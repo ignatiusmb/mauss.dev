@@ -93,6 +93,10 @@
 		margin-right: 1em;
 	}
 
+	nav > :global(.lmns-theme-switcher path) {
+		fill: none;
+	}
+
 	@media only screen and (min-width: 600px) {
 		nav {
 			top: 0;
