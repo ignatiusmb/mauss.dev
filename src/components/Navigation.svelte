@@ -6,7 +6,7 @@
 	const { preloading, page } = stores();
 	const sections = ['about', 'curated', 'posts', 'reviews', 'uses'];
 
-	import { Link, Icon, ThemeSwitcher } from '@ignatiusmb/elements';
+	import { Icons, Link, ThemeSwitcher } from '@ignatiusmb/elements';
 	import NavLink from '../svelte/NavLink.svelte';
 	import NavGrid from './NavGrid.svelte';
 
@@ -21,7 +21,11 @@
 <nav class:scrolled>
 	{#if mobile}
 		<span on:click={() => (opened = !opened)}>
-			<Icon name={opened ? 'close' : 'menu'} />
+			{#if opened}
+				<Icons.X />
+			{:else}
+				<Icons.Menu />
+			{/if}
 		</span>
 	{/if}
 
@@ -38,16 +42,16 @@
 	{/if}
 
 	<Link newTab href="rss.xml" inherit>
-		<Icon name="rss" />
+		<Icons.Rss />
 	</Link>
 	<Link href="help" inherit>
-		<Icon name="help" />
+		<Icons.HelpCircle />
 	</Link>
 	<ThemeSwitcher let:current>
 		{#if current === 'light'}
-			<Icon name="sun" />
+			<Icons.Sun />
 		{:else if current === 'dark'}
-			<Icon name="moon" />
+			<Icons.Moon />
 		{/if}
 	</ThemeSwitcher>
 </nav>
@@ -72,6 +76,11 @@
 		font-family: var(--aqua-heading);
 		background-color: rgba(var(--bg-color, 1));
 		transition: var(--t-duration) var(--t-function);
+	}
+
+	nav > span,
+	nav > :global(a.lmns-link) {
+		display: inline-flex;
 	}
 
 	nav > :global(a[href='/']:not(:first-child)) {
