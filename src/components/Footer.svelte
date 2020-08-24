@@ -27,6 +27,9 @@
 		<Link newTab href="https://twitter.com/devmauss" label="twitter profile">
 			<Icons.Twitter name="twitter" />
 		</Link>
+		<Link newTab href="https://keybase.io/mauss" label="keybase profile">
+			<Icons.Key />
+		</Link>
 		<Link newTab href="https://github.com/ignatiusmb" label="github profile">
 			<Icons.Github />
 		</Link>
