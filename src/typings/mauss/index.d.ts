@@ -30,6 +30,7 @@ declare class FinalPost implements RawPost {
 		updated?: string | Date;
 	};
 	image?: { en: string };
+	toc?: string[];
 	content?: string;
 }
 
