@@ -47,7 +47,7 @@
 	<section>
 		<p>Copyright &copy; 2017 &ndash; {new Date().getFullYear()} Ignatius Bagussuputra</p>
 		<p>
-			Made with ❤️ using
+			Handcrafted with ❤️ using
 			<Link newTab href="https://svelte.dev/">Svelte</Link>
 			&plus;
 			<Link newTab href="https://sapper.svelte.dev/">Sapper</Link>
