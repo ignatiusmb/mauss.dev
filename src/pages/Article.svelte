@@ -170,38 +170,26 @@
 		margin-bottom: 0.5em;
 		font: 90% var(--aqua-monospace);
 	}
-	article :global(div.youtube),
-	article :global(div.captioned-image),
-	article :global(div.captioned-video) {
+	article :global(details > div.captioned),
+	article :global(figure > div.captioned) {
 		position: relative;
 		padding-top: 56.25%;
+		border-radius: 0.15em;
 	}
-	article :global(div.captioned-image),
-	article :global(div.captioned-video) {
-		border-radius: 0.5em;
-	}
-	article :global(div.youtube iframe) {
+	article :global(div.captioned iframe),
+	article :global(div.captioned img),
+	article :global(div.captioned video) {
 		width: 100%;
 		height: 100%;
 		position: absolute;
 		left: 0;
 		top: 0;
 	}
-	article :global(div.captioned-image > img) {
+	article :global(div.captioned img) {
 		object-fit: contain;
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		border: 0;
 		border-radius: inherit;
 	}
-	article :global(div.captioned-video > video) {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		left: 0;
-		top: 0;
+	article :global(div.captioned video) {
 		border-radius: inherit;
 	}
 
