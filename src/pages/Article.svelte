@@ -85,14 +85,13 @@
 	}
 	article :global(img) {
 		margin: auto;
-		border: 0.25em solid rgba(var(--bg-color-secondary, 1));
-		border-radius: 0.5em;
+		border-radius: 0.15em;
 		text-align: center;
 	}
 	article :global(img[src*="://"])
 	{
 		border: none;
-		border-radius: 0.5em;
+		border-radius: 0.15em;
 		text-align: center;
 	}
 	article :global(h2),
