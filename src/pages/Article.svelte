@@ -199,7 +199,4 @@
 	article :global(.aqua.code-header) {
 		line-height: 1;
 	}
-	article :global(.info-box) {
-		font-size: 1rem;
-	}
 </style>
