@@ -21,7 +21,8 @@ export function countAverageRating(ratings: string[]) {
 
 export function contentParser(data: any, content: string) {
 	function create(props: { [key: string]: string }) {
-		const { type, link, caption } = props;
+		let { type, link, caption } = props;
+		link = /^<.+>$/.test(link) ? link.slice(1, -1) : link;
 
 		let data;
 		if (type.startsWith('youtube')) {
