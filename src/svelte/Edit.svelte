@@ -1,13 +1,13 @@
 <script>
 	export let path;
-	import { Icons, Link } from '@ignatiusmb/elements';
+	import { Feather, Link } from '@ignatiusmb/elements';
 	const link = 'https://github.com/ignatiusmb/mauss/edit/master';
 </script>
 
 <span>
 	<Link href="{link}/{path}" newTab invert>
 		<span>Edit</span>
-		<Icons.Edit size="17" />
+		<Feather.Edit size="17" />
 	</Link>
 </span>
 

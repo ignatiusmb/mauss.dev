@@ -6,7 +6,7 @@
 	const { preloading, page } = stores();
 	const sections = ['about', 'curated', 'posts', 'reviews', 'uses'];
 
-	import { Icons, Link, ThemeSwitcher } from '@ignatiusmb/elements';
+	import { Feather, Link, ThemeSwitcher } from '@ignatiusmb/elements';
 	import NavLink from '../svelte/NavLink.svelte';
 	import NavGrid from './NavGrid.svelte';
 
@@ -22,9 +22,9 @@
 	{#if mobile}
 		<span on:click={() => (opened = !opened)}>
 			{#if opened}
-				<Icons.X />
+				<Feather.X />
 			{:else}
-				<Icons.Menu />
+				<Feather.Menu />
 			{/if}
 		</span>
 	{/if}
@@ -42,16 +42,16 @@
 	{/if}
 
 	<Link newTab href="rss.xml" inherit>
-		<Icons.Rss />
+		<Feather.Rss />
 	</Link>
 	<Link href="help" inherit>
-		<Icons.HelpCircle />
+		<Feather.HelpCircle />
 	</Link>
 	<ThemeSwitcher let:current>
 		{#if current === 'light'}
-			<Icons.Sun />
+			<Feather.Sun />
 		{:else if current === 'dark'}
-			<Icons.Moon />
+			<Feather.Moon />
 		{/if}
 	</ThemeSwitcher>
 </nav>

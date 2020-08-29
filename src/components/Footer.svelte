@@ -1,5 +1,5 @@
 <script>
-	import { Icons, Link } from '@ignatiusmb/elements';
+	import { Feather, Link } from '@ignatiusmb/elements';
 </script>
 
 <footer>
@@ -16,31 +16,31 @@
 
 	<section class="social-links">
 		<Link newTab href="https://www.facebook.com/ignatiusmb" label="facebook profile">
-			<Icons.Facebook />
+			<Feather.Facebook />
 		</Link>
 		<Link newTab href="https://www.instagram.com/ignatiusmb" label="instagram profile">
-			<Icons.Instagram />
+			<Feather.Instagram />
 		</Link>
 		<Link newTab href="https://www.linkedin.com/in/ignatiusmb" label="linkedin profile">
-			<Icons.Linkedin />
+			<Feather.Linkedin />
 		</Link>
 		<Link newTab href="https://twitter.com/devmauss" label="twitter profile">
-			<Icons.Twitter  />
+			<Feather.Twitter />
 		</Link>
 		<Link newTab href="https://keybase.io/mauss" label="keybase profile">
-			<Icons.Key />
+			<Feather.Key />
 		</Link>
 		<Link newTab href="https://github.com/ignatiusmb" label="github profile">
-			<Icons.Github />
+			<Feather.Github />
 		</Link>
 		<Link newTab href="https://gitlab.com/ignatiusmb" label="gitlab profile">
-			<Icons.Gitlab />
+			<Feather.Gitlab />
 		</Link>
 		<Link newTab href="https://twitch.tv/devmauss" label="twitch profile">
-			<Icons.Twitch />
+			<Feather.Twitch />
 		</Link>
 		<Link newTab href="https://www.youtube.com/user/Ignapure/playlists" label="youtube playlist profile">
-			<Icons.Youtube />
+			<Feather.Youtube />
 		</Link>
 	</section>
 
