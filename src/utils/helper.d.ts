@@ -1,5 +1,6 @@
 export function capitalize(text: string, lower?: boolean): string;
 export function compareDate(x: string, y: string): number;
+export function convertCase(style: string, text: string, sep?: string): string;
 export function createPrettyDate(
 	date: string
 ): { weekday: string; day: string; month: string; year: string; complete: string };

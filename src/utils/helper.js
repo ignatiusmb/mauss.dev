@@ -10,6 +10,24 @@ export function compareDate(x, y) {
 	return yDate.getTime() - xDate.getTime();
 }
 
+export function convertCase(style, text, sep = ' ') {
+	const exp = /[ |-|.|_]/g;
+	switch (style) {
+		case 'camel':
+			break;
+		case 'pascal':
+			text = text.replace(/\w+/g, capitalize);
+			return text.replace(exp, sep);
+		case 'snake':
+			break;
+		case 'kebab':
+			break;
+
+		default:
+			return text;
+	}
+}
+
 export function createPrettyDate(date) {
 	if (!date) return null;
 	const dateFormat = new Date(date);
