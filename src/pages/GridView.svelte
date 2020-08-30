@@ -19,7 +19,7 @@
 		padding: 0 1em;
 		margin: 3em auto 2em;
 	}
-	div :global(header),
+	div > :global(header),
 	div main {
 		max-width: 86em;
 		width: 100%;
