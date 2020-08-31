@@ -3,10 +3,23 @@
 	export let post = null;
 	export let path = null;
 	export let siblings = null;
+	import { onMount } from 'svelte';
 	import { Link, ProgressBar } from '@ignatiusmb/elements';
 	import Header from './Header.svelte';
 	import Edit from '../svelte/Edit.svelte';
 	import Siblings from '../svelte/Siblings.svelte';
+
+	onMount(() => {
+		function offsetAnchor() {
+			if (!window.location.hash.length) return;
+			window.scrollTo(window.scrollX, window.scrollY - 50);
+		}
+		setTimeout(offsetAnchor, 0);
+
+		const anchors = document.querySelectorAll('a[href*="#"]');
+		const delay = () => setTimeout(offsetAnchor, 0);
+		for (const hash of anchors) hash.addEventListener('click', delay);
+	});
 </script>
 
 {#if header}
