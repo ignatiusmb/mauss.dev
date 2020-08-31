@@ -28,9 +28,10 @@ marker.renderer.rules.image = (tokens, idx, options, env, slf) => {
 	const token = tokens[idx];
 	token.attrs[token.attrIndex('alt')][1] = slf.renderInlineAsText(token.children, options, env);
 	if (token.attrIndex('title') === -1) return slf.renderToken(tokens, idx, options);
+	const caption = token.attrs.pop()[1];
 	return `<figure>
 		<div class="captioned">${slf.renderToken(tokens, idx, options)}</div>
-		<figcaption>${marker.renderInline(token.attrs.pop()[1])}</figcaption>
+		<figcaption>${marker.renderInline(caption)}</figcaption>
 	</figure>`;
 };
 
