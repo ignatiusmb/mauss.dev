@@ -185,7 +185,7 @@
 		top: 0;
 	}
 	article :global(div.captioned img) {
-		object-fit: contain;
+		object-fit: cover;
 		border-radius: inherit;
 	}
 	article :global(div.captioned video) {
