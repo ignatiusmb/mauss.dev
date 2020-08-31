@@ -58,8 +58,8 @@
 			<Image src="profile/mauss.jpeg" alt="DevMauss Profile" ratio={1} />
 		</Link>
 		<h2>Ignatius Bagussuputra</h2>
-		<h4>CS Student at University of Indonesia</h4>
-		<h3>I create and engineer graphics</h3>
+		<span>Developer on Weekdays, Avid Writer on Weekends</span>
+		<h3>I can make any design come true</h3>
 
 		{#each [quotes[quoteIndex]] as { author, quote, from }}
 			<Quote {author} on:click={getNewQuote}>
