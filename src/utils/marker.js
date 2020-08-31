@@ -28,11 +28,18 @@ marker.renderer.rules.image = (tokens, idx, options, env, slf) => {
 	const token = tokens[idx];
 	token.attrs[token.attrIndex('alt')][1] = slf.renderInlineAsText(token.children, options, env);
 	if (token.attrIndex('title') === -1) return slf.renderToken(tokens, idx, options);
+
 	const caption = token.attrs.pop()[1];
-	return `<figure>
-		<div class="captioned">${slf.renderToken(tokens, idx, options)}</div>
-		<figcaption>${marker.renderInline(caption)}</figcaption>
-	</figure>`;
+	const alt = token.attrs[token.attrIndex('alt')][1];
+	let data = slf.renderToken(tokens, idx, options);
+	if (/:YouTube/i.test(alt)) {
+		const link = token.attrs[token.attrIndex('src')][1];
+		data = `<iframe src="https://www.youtube-nocookie.com/embed/${link}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+	}
+	const rendered = marker.renderInline(caption);
+	return /:disclosure/i.test(alt)
+		? `<details><summary>${rendered}</summary><div class="captioned">${data}</div></details>`
+		: `<figure><div class="captioned">${data}</div><figcaption>${rendered}</figcaption></figure>`;
 };
 
 export default marker;
