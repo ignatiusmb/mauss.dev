@@ -1,16 +1,13 @@
 <script context="module">
 	import { compareDate, randomInt } from '../utils/helper';
 	export async function preload() {
-		const data = {
-			about: await this.fetch('about.json').then((r) => r.json()),
-			curated: await this.fetch('curated.json').then((r) => r.json()),
-			posts: await this.fetch('posts.json').then((r) => r.json()),
-			reviews: await this.fetch('reviews.json').then((r) => r.json()),
-		};
-
-		data['curated'] = data['curated'].sort((x, y) => compareDate(x.date.updated, y.date.updated));
-		data['reviews'] = data['reviews'].filter((p) => p.rating && p.verdict);
-		for (const key in data) if (Array.isArray(data[key])) data[key] = data[key].slice(0, 4);
+		const data = { about: '', curated: '', posts: '', reviews: '' };
+		for (const seg in data) {
+			data[seg] = await this.fetch(`${seg}.json`).then((r) => r.json());
+			if (seg === 'curated') data[seg].sort((x, y) => compareDate(x.date.updated, y.date.updated));
+			if (seg === 'reviews') data[seg].filter((p) => p.rating && p.verdict);
+			if (Array.isArray(data[seg])) data[seg] = data[seg].slice(0, 4);
+		}
 
 		return { data, quotes: await this.fetch('quotes.json').then((r) => r.json()) };
 	}
@@ -115,8 +112,7 @@
 		font-family: var(--aqua-heading);
 	}
 	header h2,
-	header h3,
-	header h4 {
+	header h3 {
 		width: 100%;
 	}
 	header > :global(a) {
