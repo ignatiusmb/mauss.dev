@@ -1,7 +1,6 @@
 <script>
 	export let segment;
-	import { FeatherIcons } from '@ignatiusmb/elements/essentials';
-	import { ScrollTop } from '@ignatiusmb/elements/styled';
+	import { ScrollTop } from '@ignatiusmb/elements';
 	import Navigation from '../components/Navigation.svelte';
 	import Footer from '../components/Footer.svelte';
 
@@ -18,7 +17,6 @@
 </script>
 
 <svelte:window bind:innerWidth />
-<FeatherIcons />
 <ScrollTop />
 
 {#if segment}

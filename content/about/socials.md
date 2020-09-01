@@ -3,13 +3,28 @@ title: About - Socials
 date:updated: 2020-06-23
 ---
 
+<section class="info-box" id="objective">
+    <h3>Summary</h3>
+    <h4>Reachable through:</h4>
+    <ul>
+        <li><a href="https://keybase.io/mauss">Keybase</a></li>
+        <li><a href="https://t.me/ignatiusmb">Telegram</a></li>
+        <li><a href="https://twitter.com/devmauss">Twitter</a></li>
+        <li><a href="https://www.linkedin.com/in/ignatiusmb">LinkedIn</a></li>
+    </ul>
+    <h4>Unreachable but present:</h4>
+    <ul>
+        <li>Facebook</li>
+        <li>Instagram</li>
+        <li>LinkedIn</li>
+        <li><s>Snapchat</s></li>
+    </ul>
+
+</section>
+
 ## Facebook
 
 I don't really use FB anymore, never actually, but there's still some good memories in it so I just keep it for the sake of having one. Feel free to cringe over it.
-
-## Twitter
-
-Same case as Facebook, although I scroll through my timeline once in a while. Just having one for the sake of having it, though my usual username is already taken by someone else.
 
 ## Instagram
 
@@ -18,6 +33,10 @@ I've been away from this platform for quite some time now, deactivated a couple 
 ## LinkedIn
 
 Trying to be a little more active here, especially important to keep professional connections these days. Started posting my posts here to my LinkedIn page, quite grateful my course in 6th semester forces me to do this since I finally have something there.
+
+## Twitter
+
+Same case as Facebook, although I scroll through my timeline once in a while. Just having one for the sake of having it, though my usual username is already taken by someone else.
 
 ## GitHub
 
@@ -37,7 +56,7 @@ I started to categorize my music to songs I listen to on that month, the results
 
 This links to my playlists tab in which I've collected videos I watched every day that's worthwhile, all grouped in their own playlist with each having one purpose.
 
-### Curated Series - *Upcoming Page*
+### Curated Series
 
 Curated series is just a playlist of the stuff that happens that month. A more detailed one which involves more than just a YouTube playlist where I break down everything that happens each month is in the Curated Page.
 

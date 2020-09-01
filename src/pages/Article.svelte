@@ -3,11 +3,23 @@
 	export let post = null;
 	export let path = null;
 	export let siblings = null;
-	import { Link } from '@ignatiusmb/elements/essentials';
-	import { ProgressBar } from '@ignatiusmb/elements/styled';
+	import { onMount } from 'svelte';
+	import { Link, ProgressBar } from '@ignatiusmb/elements';
 	import Header from './Header.svelte';
 	import Edit from '../svelte/Edit.svelte';
 	import Siblings from '../svelte/Siblings.svelte';
+
+	onMount(() => {
+		function offsetAnchor() {
+			if (!window.location.hash.length) return;
+			window.scrollTo(window.scrollX, window.scrollY - 50);
+		}
+		setTimeout(offsetAnchor, 0);
+
+		const anchors = document.querySelectorAll('a[href*="#"]');
+		const delay = () => setTimeout(offsetAnchor, 0);
+		for (const hash of anchors) hash.addEventListener('click', delay);
+	});
 </script>
 
 {#if header}
@@ -68,10 +80,16 @@
 	article :global(section > :first-child) {
 		margin: 0;
 	}
+	article :global(section p),
+	article :global(section li) {
+		line-height: 2rem;
+	}
+	article :global(blockquote p) {
+		line-height: unset;
+	}
 
 	article :global(p) {
 		margin-top: 0.75em;
-		line-height: 2rem;
 	}
 	article :global(p code),
 	article :global(ol code),
@@ -79,16 +97,15 @@
 		font-size: clamp(0.8rem, 2vw, 1rem);
 	}
 	article :global(img) {
+		max-height: 42em;
 		margin: auto;
-		border: 0.25em solid rgba(var(--bg-color-secondary, 1));
-		border-radius: 0.5em;
+		border-radius: 0.15em;
 		text-align: center;
 	}
 	article :global(img[src*="://"])
 	{
-		padding: 0.5em;
 		border: none;
-		border-radius: 0.5em;
+		border-radius: 0.15em;
 		text-align: center;
 	}
 	article :global(h2),
@@ -166,38 +183,26 @@
 		margin-bottom: 0.5em;
 		font: 90% var(--aqua-monospace);
 	}
-	article :global(div.youtube),
-	article :global(div.captioned-image),
-	article :global(div.captioned-video) {
+	article :global(details > div.captioned),
+	article :global(figure > div.captioned) {
 		position: relative;
 		padding-top: 56.25%;
+		border-radius: 0.15em;
 	}
-	article :global(div.captioned-image),
-	article :global(div.captioned-video) {
-		border-radius: 0.5em;
-	}
-	article :global(div.youtube iframe) {
+	article :global(div.captioned iframe),
+	article :global(div.captioned img),
+	article :global(div.captioned video) {
 		width: 100%;
 		height: 100%;
 		position: absolute;
 		left: 0;
 		top: 0;
 	}
-	article :global(div.captioned-image > img) {
-		object-fit: contain;
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		border: 0;
+	article :global(div.captioned img) {
+		object-fit: cover;
 		border-radius: inherit;
 	}
-	article :global(div.captioned-video > video) {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		left: 0;
-		top: 0;
+	article :global(div.captioned video) {
 		border-radius: inherit;
 	}
 
@@ -207,8 +212,5 @@
 	}
 	article :global(.aqua.code-header) {
 		line-height: 1;
-	}
-	article :global(.info-box) {
-		font-size: 1rem;
 	}
 </style>

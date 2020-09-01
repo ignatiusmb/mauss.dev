@@ -7,6 +7,7 @@ verdict: -1
 
 last_seen: 2020-07-12
 date:published: 2020-08-15
+date:updated: 2020-08-19
 image:en: https://image.tmdb.org/t/p/original/t1eJhngNgHywjXYAg2iAdSJ3PiL.jpg
 backdrop: https://image.tmdb.org/t/p/original/hy7CPzl227MOlByLUcD9nWuwbjn.jpg
 
@@ -29,7 +30,9 @@ There's no plot at this point, just staying relevant is probably a good enough a
 
 ### $#{rating:0}#!/10 | Story & Plot
 
-Half-assed written story with no clear plot and 80% fillers. Plot built on the idea of a flashback story, this anime starts of by showing us a village where they used to live, ruined to pieces after what seemed like a huge battle. It then throws all of that out of the window just a couple seconds later and starts off to (what seems like) 5 or more years then, expecting
+Half-assed written story with no clear plot and 80% fillers. Plot built on the idea of a flashback story, this anime starts of by showing us a village where they used to live, ruined to pieces after what seemed like a huge battle. It then throws all of that out of the window just a couple seconds later and starts off to (what seems like) 5 or more years then, expecting us to just forget that everything that happens from the very first episode until that very first scene is all but a flashback, A FLASHBACK! Just how stupid can this be to deliver a story based on a flashback, what even is a flashback at this point, we will then experience a flashback inception, where we see a flashback inside flashback on an ongoing flashback.
+
+Even if everything went well, can you really deliver the story well enough to fit it together and reuse the very first scene when the story itself is still being made? How confident can you be to already "spoil" the scene from episode... I don't know, maybe 300 something&mdash;judging from the current pace&mdash;at episode 1 and set our expectations that high, can Boruto really deliver what they promised. Perhaps they can (being optimistic here), but then the question becomes when.
 
 ### $#{rating:1}#!/10 | Artwork & Animation
 

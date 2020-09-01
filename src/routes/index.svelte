@@ -1,16 +1,13 @@
 <script context="module">
 	import { compareDate, randomInt } from '../utils/helper';
 	export async function preload() {
-		const data = {
-			about: await this.fetch('about.json').then((r) => r.json()),
-			curated: await this.fetch('curated.json').then((r) => r.json()),
-			posts: await this.fetch('posts.json').then((r) => r.json()),
-			reviews: await this.fetch('reviews.json').then((r) => r.json()),
-		};
-
-		data['curated'] = data['curated'].sort((x, y) => compareDate(x.date.updated, y.date.updated));
-		data['reviews'] = data['reviews'].filter((p) => p.rating && p.verdict);
-		for (const key in data) if (Array.isArray(data[key])) data[key] = data[key].slice(0, 4);
+		const data = { about: '', curated: '', posts: '', reviews: '' };
+		for (const seg in data) {
+			data[seg] = await this.fetch(`${seg}.json`).then((r) => r.json());
+			if (seg === 'curated') data[seg].sort((x, y) => compareDate(x.date.updated, y.date.updated));
+			if (seg === 'reviews') data[seg].filter((p) => p.rating && p.verdict);
+			if (Array.isArray(data[seg])) data[seg] = data[seg].slice(0, 4);
+		}
 
 		return { data, quotes: await this.fetch('quotes.json').then((r) => r.json()) };
 	}
@@ -24,7 +21,7 @@
 		{ key: 'curated', heading: 'Recently Curated ⚖️', desc: "Stuffs I've been curating recently:" },
 	];
 
-	import { Link, Image } from '@ignatiusmb/elements/essentials';
+	import { Link, Image } from '@ignatiusmb/elements';
 	import MetaHead from '../pages/MetaHead.svelte';
 	import Article from '../pages/Article.svelte';
 	import Quote from '../svelte/Quote.svelte';
@@ -58,8 +55,8 @@
 			<Image src="profile/mauss.jpeg" alt="DevMauss Profile" ratio={1} />
 		</Link>
 		<h2>Ignatius Bagussuputra</h2>
-		<h4>CS Student at University of Indonesia</h4>
-		<h3>I create and engineer graphics</h3>
+		<span>Developer on Weekdays, Avid Writer on Weekends</span>
+		<h3>I can make any design come true</h3>
 
 		{#each [quotes[quoteIndex]] as { author, quote, from }}
 			<Quote {author} on:click={getNewQuote}>
@@ -115,8 +112,7 @@
 		font-family: var(--aqua-heading);
 	}
 	header h2,
-	header h3,
-	header h4 {
+	header h3 {
 		width: 100%;
 	}
 	header > :global(a) {
@@ -130,7 +126,7 @@
 	header > h3 {
 		margin-bottom: auto;
 	}
-	header :global(.elements.image img) {
+	header :global(.lmns-image img) {
 		padding: 0.5em;
 		border: none;
 		border-radius: inherit;

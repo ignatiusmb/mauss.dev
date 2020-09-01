@@ -17,7 +17,7 @@
 	const bound = 6;
 	const duration = 100;
 
-	import { SearchBar, Pagination } from '@ignatiusmb/elements/functional';
+	import { SearchBar, Pagination } from '@ignatiusmb/elements';
 	import MetaHead from '../../pages/MetaHead.svelte';
 	import GridView from '../../pages/GridView.svelte';
 	import Centered from '../../pages/Centered.svelte';
@@ -38,7 +38,7 @@
 	<link rel="alternate" href="rss.xml" type="application/rss+xml" />
 </MetaHead>
 
-<GridView itemSize={21}>
+<GridView itemSize="21em">
 	<header slot="header">
 		<h1>Posts by DevMauss</h1>
 

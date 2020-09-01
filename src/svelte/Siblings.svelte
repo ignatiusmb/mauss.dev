@@ -9,11 +9,11 @@
 			<a rel="prefetch" href={prev.slug} style="text-align: left">
 				<strong>&larr; Prev</strong>
 				{#if typeof prev.title === 'string'}
-					<p>{prev.title}</p>
+					<span>{prev.title}</span>
 				{:else if prev.title.jp}
-					<p>{prev.title.jp}</p>
+					<span>{prev.title.jp}</span>
 				{:else}
-					<p>{prev.title.en}</p>
+					<span>{prev.title.en}</span>
 				{/if}
 			</a>
 		{/if}
@@ -21,11 +21,11 @@
 			<a rel="prefetch" href={next.slug} style="text-align: right">
 				<strong>Next &rarr;</strong>
 				{#if typeof next.title === 'string'}
-					<p>{next.title}</p>
+					<span>{next.title}</span>
 				{:else if next.title.jp}
-					<p>{next.title.jp}</p>
+					<span>{next.title.jp}</span>
 				{:else}
-					<p>{next.title.en}</p>
+					<span>{next.title.en}</span>
 				{/if}
 			</a>
 		{/if}
@@ -51,7 +51,7 @@
 		grid-column: 1 / -1;
 	}
 	a strong,
-	a p {
+	a span {
 		padding: 0.2em 0.8em;
 		margin: 0;
 	}

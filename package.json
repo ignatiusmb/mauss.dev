@@ -4,7 +4,6 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "lint": "eslint src --ext svelte,js",
     "dev": "sapper dev",
     "build": "sapper build --legacy",
     "export": "run-s sapper:export static:404",
@@ -12,14 +11,16 @@
     "static:404": "run-s static:404:mv static:404:rm",
     "static:404:mv": "mv __sapper__/export/404/index.html __sapper__/export/404.html",
     "static:404:rm": "rmdir \"__sapper__/export/404\"",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "lint": "eslint src --ext svelte,js",
+    "check": "prettier -c src",
+    "format": "prettier -w src"
   },
   "engines": {
     "node": "12.x"
   },
   "dependencies": {
     "compression": "^1.7.4",
-    "markdown-it": "^11.0.0",
     "polka": "^1.0.0-next.11",
     "sirv": "^1.0.5"
   },
@@ -34,7 +35,7 @@
     "@babel/preset-typescript": "^7.10.4",
     "@babel/runtime": "^7.11.2",
     "@ignatiusmb/aqua": "^20.3.1",
-    "@ignatiusmb/elements": "0.2.2",
+    "@ignatiusmb/elements": "0.5.0",
     "@rollup/plugin-alias": "^3.1.1",
     "@rollup/plugin-babel": "^5.1.0",
     "@rollup/plugin-commonjs": "^14.0.0",
@@ -50,13 +51,19 @@
     "babel-jest": "^26.2.2",
     "eslint": "^7.6.0",
     "eslint-plugin-svelte3": "^2.7.3",
+    "husky": "^4.2.5",
     "jest": "^26.2.2",
+    "markdown-it": "^11.0.0",
+    "markdown-it-container": "^3.0.0",
+    "markdown-it-mark": "^3.0.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^7.0.32",
+    "prettier": "^2.1.1",
+    "prettier-plugin-svelte": "^1.1.1",
     "rollup": "^2.23.1",
     "rollup-plugin-svelte": "^5.2.3",
     "rollup-plugin-terser": "^6.1.0",
-    "sapper": "^0.28.0",
+    "sapper": "0.28.0",
     "svelte": "^3.24.1",
     "svelte-preprocess": "^4.0.10",
     "svelte-test": "^0.4.0",

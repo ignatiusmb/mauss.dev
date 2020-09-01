@@ -1,5 +1,5 @@
 <script>
-	import { Link, Icon } from '@ignatiusmb/elements/essentials';
+	import { Feather, Link } from '@ignatiusmb/elements';
 </script>
 
 <footer>
@@ -9,42 +9,45 @@
 		</em>
 		<em>
 			Read the
-			<Link href="uses">help page</Link>
+			<Link href="help">help page</Link>
 			for more information
 		</em>
 	</section>
 
 	<section class="social-links">
 		<Link newTab href="https://www.facebook.com/ignatiusmb" label="facebook profile">
-			<Icon name="facebook" />
+			<Feather.Facebook />
 		</Link>
 		<Link newTab href="https://www.instagram.com/ignatiusmb" label="instagram profile">
-			<Icon name="instagram" />
+			<Feather.Instagram />
 		</Link>
 		<Link newTab href="https://www.linkedin.com/in/ignatiusmb" label="linkedin profile">
-			<Icon name="linkedin" />
+			<Feather.Linkedin />
 		</Link>
 		<Link newTab href="https://twitter.com/devmauss" label="twitter profile">
-			<Icon name="twitter" />
+			<Feather.Twitter />
+		</Link>
+		<Link newTab href="https://keybase.io/mauss" label="keybase profile">
+			<Feather.Key />
 		</Link>
 		<Link newTab href="https://github.com/ignatiusmb" label="github profile">
-			<Icon name="github" />
+			<Feather.Github />
 		</Link>
 		<Link newTab href="https://gitlab.com/ignatiusmb" label="gitlab profile">
-			<Icon name="gitlab" />
+			<Feather.Gitlab />
 		</Link>
 		<Link newTab href="https://twitch.tv/devmauss" label="twitch profile">
-			<Icon name="twitch" />
+			<Feather.Twitch />
 		</Link>
 		<Link newTab href="https://www.youtube.com/user/Ignapure/playlists" label="youtube playlist profile">
-			<Icon name="youtube" />
+			<Feather.Youtube />
 		</Link>
 	</section>
 
 	<section>
 		<p>Copyright &copy; 2017 &ndash; {new Date().getFullYear()} Ignatius Bagussuputra</p>
 		<p>
-			Made with ❤️ using
+			Handcrafted with ❤️ using
 			<Link newTab href="https://svelte.dev/">Svelte</Link>
 			&plus;
 			<Link newTab href="https://sapper.svelte.dev/">Sapper</Link>
@@ -64,6 +67,7 @@
 		padding: 3em 1em;
 		margin: auto auto 3em;
 		text-align: center;
+		line-height: 1.5;
 		font-family: var(--aqua-monospace);
 		font-size: clamp(0.8em, 3vw, 1em);
 	}

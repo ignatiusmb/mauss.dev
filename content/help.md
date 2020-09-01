@@ -14,7 +14,7 @@ I think this is pretty self-explanatory, right? It includes explanation for who 
 
 ## [Curated](curated)
 
-Curated page consists of things I find interesting or worthwhile to be compiled into its own dedicated timeless post, so it shouldn't matter when it's being read. It also hosts the special [Monthly Digests](curated/monthly), subscribe so you'll get the latest curation at the start of every month.
+Curated page consists of things I find interesting or worthwhile to be compiled into its own dedicated timeless post, so it shouldn't matter when it's being read. It also hosts the special [Monthly Digests](curated/monthly), subscribe so you'll get the latest digests at the start of every month.
 
 ### Monthly Digests
 
@@ -59,3 +59,13 @@ It could also serve as my personal reviews with testimonies for your reference o
 <section class="info-box note">
 DevMauss automatically detects your device's preferred theme and changes to it, but if you decide to use another theme for this website, you can simply click the icon on the navigation bar to toggle through the available themes.
 </section>
+
+## Site Info
+
+This site is fully open-source, you can check how I built each and every piece here in the GitHub repository. It's also fully static, meaning there's no need for a server or back-end engine to run this, everything is served from a CDN, you can theoretically just copy the exported files and serve it from any device in the world.
+
+Fully static but it doesn't necessarily mean noninteractive. There's just no authentication or session, every actions and queries can still be made, there's of course some animations too. Static is just referring to how the site is served, everything is available to the end-user or readers, so there's no restriction on who or how someone can access a specific part of the site.
+
+Finally, user privacy. I'm a privacy-focused user / developer myself, and this site is built with no intentions of milking or selling user data from analytics or any sort of tracking methods. There's only a couple of things to keep in mind:
+
+- I'm using YouTube with privacy-enhanced mode for embedded videos, meaning there's 3rd party cookies involved, which you can easily disable directly from your browser settings. But, YouTube won't store any information about you unless you play the video. If you do play it directly here, any information will be stored in this site only for YouTube to use next time.

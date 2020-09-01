@@ -1,3 +1,18 @@
+const tag = '(?:[^"\'>]|"[^"]*"|\'[^\']*\')*';
+const TXC = new RegExp(
+	`<(?:!--(?:(?:-*[^->])*--+|-?)|script\\b${tag}>[\\s\\S]*?</script\\s*|style\\b${tag}>[\\s\\S]*?</style\\s*|/?[a-z]${tag})>`,
+	'gi'
+);
+
+function sanitize(text: string) {
+	let old;
+	do {
+		old = text;
+		text = text.replace(TXC, '');
+	} while (text !== old);
+	return text.replace(/</g, '&lt;');
+}
+
 export function countAverageRating(ratings: string[]) {
 	if (!ratings) return 0;
 	const total = ratings.reduce((acc, cur) => acc + parseInt(cur), 0);
@@ -6,19 +21,34 @@ export function countAverageRating(ratings: string[]) {
 
 export function contentParser(data: any, content: string) {
 	function create(props: { [key: string]: string }) {
-		const { type, link, caption } = props;
+		let { type, link, caption } = props;
+		link = /^<.+>$/.test(link) ? link.slice(1, -1) : link;
 
 		let data;
 		if (type.startsWith('youtube')) {
-			data = `<div class="youtube"><iframe src="https://www.youtube-nocookie.com/embed/${link}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+			data = `<iframe src="https://www.youtube-nocookie.com/embed/${link}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+		} else if (type.startsWith('reddit')) {
+			const url = (video: boolean, gif = false) => {
+				const type = video ? '1080' : 'audio';
+				const ext = gif ? '' : '.mp4';
+				return `https://v.redd.it/${link}/DASH_${type}${ext}`;
+			};
+			const source = {
+				video: url(true, type.includes(':gif')),
+				audio: type.includes(':audio') ? url(false) : null,
+			};
+
+			data = `<video controls><source src="${source.video}" type="video/mp4"></video>`;
+			if (source.audio) data += `<video><source src="${source.audio}" type="video/mp4"></video>`;
 		} else if (type.startsWith('image')) {
-			data = `<div class="captioned-image"><img src="${link}"></div>`;
+			data = `<img src="${link}" alt="${sanitize(caption)}">`;
 		} else if (type.startsWith('video')) {
-			data = `<div class="captioned-video"><video controls autoplay><source src="${link}" type="video/mp4"></video></div>`;
+			data = `<video controls${type.includes('gif') ? ' autoplay' : ''}>`;
+			data += `<source src="${link}" type="video/mp4"></video>`;
 		}
 		return type.includes(':disclosure')
-			? `<details><summary>${caption}</summary>${data}</details>`
-			: `<figure>${data}<figcaption>${caption}</figcaption></figure>`;
+			? `<details><summary>${caption}</summary><div class="captioned">${data}</div></details>`
+			: `<figure><div class="captioned">${data}</div><figcaption>${caption}</figcaption></figure>`;
 	}
 	const trimSides = (str: string, chars: number) => {
 		return str.slice(chars, str.length - chars);

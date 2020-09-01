@@ -115,11 +115,11 @@ Well, it was a surprise when it turns out that it wasn't what the title was talk
 
 ## Soundtracks
 
-$#type=:=youtube:disclosure::link=:=SGsbYfvfE6s::caption=:=OP01 - Hikarunara by Goose house [<a href="spotify:track:4kAAko5kg70EjAWGF2ViWW">Spotify</a>]#!
-$#type=:=youtube:disclosure::link=:=pS7Hbxv2E_E::caption=:=OP02 - Nanairo Symphony by COALAMODE.#!
+![!YouTube:disclosure](SGsbYfvfE6s "OP01 - Hikarunara by Goose house [[Spotify](spotify:track:4kAAko5kg70EjAWGF2ViWW)]")
+![!YouTube:disclosure](pS7Hbxv2E_E "OP01 - OP02 - Nanairo Symphony by COALAMODE.")
 
-$#type=:=youtube:disclosure::link=:=LDDAwKs6YBw::caption=:=ED01 - Kirameki by Wacci#!
-$#type=:=youtube:disclosure::link=:=B9OBH8Wodd4::caption=:=ED02 - Orange by 7!! [<a href="spotify:track:7p30D2KjK2XW7YUvI6nH3o">Spotify</a> | <a href="https://youtu.be/B9OBH8Wodd4">w/Lyrics</a>]#!
+![!YouTube:disclosure](LDDAwKs6YBw "ED01 - Kirameki by Wacci")
+![!YouTube:disclosure](B9OBH8Wodd4 "ED02 - Orange by 7!! [[Spotify](spotify:track:7p30D2KjK2XW7YUvI6nH3o) | [w/Lyrics](https://youtu.be/B9OBH8Wodd4)]")
 
 > ### OST Covers [[Spotify](spotify:playlist:6a0PMD9AsNoK3XD5Nnheig)]
 

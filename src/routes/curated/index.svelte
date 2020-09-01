@@ -1,16 +1,32 @@
 <script context="module">
 	export async function preload() {
-		return { data: await this.fetch('curated.json').then((r) => r.json()) };
+		const data = await this.fetch('curated.json').then((r) => r.json());
+		const categories = Array.from(new Set(data.map((p) => p.category)));
+		return { data, categories };
 	}
 </script>
 
 <script>
-	export let data;
-	import { ButtonLink } from '@ignatiusmb/elements/styled';
-	import MetaHead from '../../pages/MetaHead.svelte';
-
-	import { scale } from 'svelte/transition';
+	export let data, categories;
 	import { flip } from 'svelte/animate';
+	import { scale } from 'svelte/transition';
+	const bound = 8;
+
+	import { SearchBar, Pagination, ButtonLink } from '@ignatiusmb/elements';
+	import MetaHead from '../../pages/MetaHead.svelte';
+	import GridView from '../../pages/GridView.svelte';
+
+	import { cSlice as store } from '../../stores';
+	import { convertCase } from '../../utils/helper';
+	import { sieve, filter } from '../../utils/search';
+
+	let query, filtered, sieved;
+	let filters = { categories: [], tags: [], sort: 'updated' };
+
+	$: filtered = filter(filters, data);
+	$: sieved = query ? sieve(query, filtered) : filtered;
+	$: total = sieved.length;
+	$: $store = $store * bound > total ? 0 : $store;
 </script>
 
 <MetaHead
@@ -20,32 +36,35 @@
 	<link rel="alternate" href="rss.xml" type="application/rss+xml" />
 </MetaHead>
 
-<header>
-	<h1>Curated by DevMauss</h1>
-</header>
+<GridView>
+	<header slot="header">
+		<h1>Curated by DevMauss</h1>
+	</header>
 
-<main>
-	{#each data as { slug, title } (slug)}
+	{#each categories as category (category)}
+		<section animate:flip transition:scale|local>
+			<small>{convertCase('pascal', category)}</small>
+			<ButtonLink href="curated/{category}">view</ButtonLink>
+		</section>
+	{/each}
+</GridView>
+
+<GridView itemSize="18em">
+	<header slot="header">
+		<SearchBar bind:query />
+		<Pagination {store} {total} {bound} />
+	</header>
+
+	{#each sieved.slice($store * bound, $store * bound + bound) as { slug, title } (slug)}
 		<section animate:flip transition:scale|local>
 			<small>{title}</small>
 			<ButtonLink href="curated/{slug}">read</ButtonLink>
 		</section>
 	{/each}
-</main>
+</GridView>
 
 <style>
-	header,
-	main {
-		width: 100%;
-		max-width: 48em;
-		display: grid;
-		gap: 1em;
-		padding: 0 1em;
-		margin: 0 auto;
-	}
-	h1 {
-		width: 100%;
-		margin: 1.5em 0 1em;
+	header {
 		text-align: center;
 	}
 	section {

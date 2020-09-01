@@ -1,11 +1,11 @@
 <script>
-	export let itemSize = 12;
+	export let itemSize = '12em';
 </script>
 
 <div class="grid-view">
 	<slot name="header" />
 
-	<main style="grid-template-columns: repeat(auto-fill, minmax({itemSize}em, 1fr))">
+	<main style="grid-template-columns: repeat(auto-fill, minmax({itemSize}, 1fr))">
 		<slot />
 	</main>
 </div>
@@ -19,7 +19,7 @@
 		padding: 0 1em;
 		margin: 3em auto 2em;
 	}
-	div :global(header),
+	div > :global(header),
 	div main {
 		max-width: 86em;
 		width: 100%;
@@ -28,6 +28,12 @@
 		margin: 0 auto;
 	}
 
+	main > :global(div) {
+		transition: var(--t-duration);
+	}
+	main > :global(div:hover) {
+		transform: translateY(-0.15em);
+	}
 	main :global(img:not([src])) {
 		display: none;
 	}

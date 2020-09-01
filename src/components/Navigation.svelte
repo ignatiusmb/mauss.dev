@@ -2,12 +2,11 @@
 	export let mobile;
 	export let scrolled = false;
 
-	import { Link, Icon } from '@ignatiusmb/elements/essentials';
-	import { ThemeSwitcher } from '@ignatiusmb/elements/functional';
 	import { stores } from '@sapper/app';
 	const { preloading, page } = stores();
 	const sections = ['about', 'curated', 'posts', 'reviews', 'uses'];
 
+	import { Feather, Link, ThemeSwitcher } from '@ignatiusmb/elements';
 	import NavLink from '../svelte/NavLink.svelte';
 	import NavGrid from './NavGrid.svelte';
 
@@ -22,7 +21,11 @@
 <nav class:scrolled>
 	{#if mobile}
 		<span on:click={() => (opened = !opened)}>
-			<Icon name={opened ? 'close' : 'menu'} />
+			{#if opened}
+				<Feather.X />
+			{:else}
+				<Feather.Menu />
+			{/if}
 		</span>
 	{/if}
 
@@ -39,16 +42,16 @@
 	{/if}
 
 	<Link newTab href="rss.xml" inherit>
-		<Icon name="rss" />
+		<Feather.Rss />
 	</Link>
 	<Link href="help" inherit>
-		<Icon name="help" />
+		<Feather.HelpCircle />
 	</Link>
 	<ThemeSwitcher let:current>
 		{#if current === 'light'}
-			<Icon name="sun" />
+			<Feather.Sun />
 		{:else if current === 'dark'}
-			<Icon name="moon" />
+			<Feather.Moon />
 		{/if}
 	</ThemeSwitcher>
 </nav>
@@ -75,6 +78,11 @@
 		transition: var(--t-duration) var(--t-function);
 	}
 
+	nav > span,
+	nav > :global(a.lmns-link) {
+		display: inline-flex;
+	}
+
 	nav > :global(a[href='/']:not(:first-child)) {
 		padding: 0;
 		margin-left: auto;
@@ -83,6 +91,10 @@
 	nav > :global(:nth-last-child(2)) {
 		margin-left: 1em;
 		margin-right: 1em;
+	}
+
+	nav > :global(.lmns-theme-switcher path) {
+		fill: none;
 	}
 
 	@media only screen and (min-width: 600px) {

@@ -10,7 +10,7 @@
 		"moduleResolution": "Node",
 		"sourceMap": true,
 		"strict": true,
-		"types": ["svelte", "@sapper"],
+		"types": ["svelte"],
 		"typeRoots": ["src/typings"]
 	},
 	"include": ["src/**/*", "src/node_modules/**/*"],

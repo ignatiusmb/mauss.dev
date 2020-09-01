@@ -1,12 +1,7 @@
 ---
-title: Why Use Svelte
+title: Svelte 3 - Why I Use It
 ---
 
-<figure class="youtube">
-    <div>
-        <iframe src="https://www.youtube-nocookie.com/embed/BzX4aTRPzno" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <figcaption>
-        The Return of 'Write Less, Do More' by Rich Harris | JSCAMP 2019
-    </figcaption>
-</figure>
+Let me introduce myself so we have some context here. I first started my web dev journey the same time as I started my coding journey, that was when I enrolled into university mid-2017. It was intimidating at first since I have zero experience in programming, so I prepared and comfort myself by starting a personal project, [Aqua (formerly BlueSheets)](github.com/ignatiusmb/aqua/). It was
+
+![!YouTube](BzX4aTRPzno "The Return of 'Write Less, Do More' by Rich Harris | JSCAMP 2019")

@@ -30,6 +30,17 @@
 		{/each}
 	</small>
 
+	{#if post.toc.length}
+		<section id="objective" class="info-box">
+			<h3>Outline & Focus</h3>
+			<ul>
+				{#each post.toc as heading}
+					<li>{heading}</li>
+				{/each}
+			</ul>
+		</section>
+	{/if}
+
 	<section>
 		{@html post.content}
 	</section>

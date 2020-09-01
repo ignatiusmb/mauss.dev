@@ -1,5 +1,5 @@
 <script>
-	import { Link } from '@ignatiusmb/elements/essentials';
+	import { Link } from '@ignatiusmb/elements';
 	import MetaHead from '../pages/MetaHead.svelte';
 	import Disclaimer from '../components/Disclaimer.svelte';
 </script>

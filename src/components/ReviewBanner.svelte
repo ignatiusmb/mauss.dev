@@ -1,6 +1,6 @@
 <script>
 	export let post;
-	import { Image } from '@ignatiusmb/elements/essentials';
+	import { Image } from '@ignatiusmb/elements';
 	import { createPrettyDate } from '../utils/helper';
 	$: ({ backdrop, title, rating, composed, last_seen } = post);
 	$: ({ day, month, year } = createPrettyDate(last_seen));
@@ -24,7 +24,7 @@
 		position: relative;
 		padding-top: 20%;
 		border: none;
-		border-radius: 0.5em;
+		border-radius: 0.15em;
 		margin-top: 1em;
 	}
 	.banner::after {
@@ -36,7 +36,7 @@
 		border-radius: inherit;
 		background-color: rgba(0, 0, 0, 0.5);
 	}
-	.banner :global(.elements img) {
+	.banner :global(.lmns-image img) {
 		display: flex;
 		align-items: flex-end;
 		justify-content: center;

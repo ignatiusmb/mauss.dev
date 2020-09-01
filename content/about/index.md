@@ -19,6 +19,8 @@ Other than serving as my online portfolio, that's mainly the reason why this was
 
 Of course, the other reason is so that I have all my stuff compiled and organized in one place where I can easily find them (yes, I've also noticed that I'm quite a clean freak, but I don't think it's a bad thing to be). Also, I think I might have some problems when it comes down to my communication skills, I can't seem to articulate myself properly. But, I feel like I can express myself better through my writings, so I guess this is another reason too. In other words, I made this site to better communicate and improve myself **in hopes** to become a better person. Please don't quote me on that. Anyways, have fun exploring DevMauss!
 
+For more information about this site, visit the [help page](help).
+
 ## Fun facts about me
 
 - I lose approximately 0.5&ndash;1.0 kg every night, there's also one time where it's 1.5 kg. Weighted before I sleep and immediately after waking up.

@@ -1,7 +1,6 @@
 <script>
 	export let post;
-	import { Image } from '@ignatiusmb/elements/essentials';
-	import { ButtonLink } from '@ignatiusmb/elements/styled';
+	import { Image, ButtonLink } from '@ignatiusmb/elements';
 	import Verdict from '../svelte/Verdict.svelte';
 
 	import { capitalize } from '../utils/helper';
@@ -39,7 +38,7 @@
 		border-top-left-radius: inherit;
 		border-top-right-radius: inherit;
 	}
-	section > :global(.elements.image) {
+	section > :global(.lmns-image) {
 		cursor: pointer;
 	}
 	aside {

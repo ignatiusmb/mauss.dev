@@ -2,7 +2,7 @@
 	export let path = null;
 	export let post;
 	const link = 'https://github.com/ignatiusmb/mauss/commits/master';
-	import { Link } from '@ignatiusmb/elements/essentials';
+	import { Link } from '@ignatiusmb/elements';
 	import Edit from '../svelte/Edit.svelte';
 	import { createPrettyDate } from '../utils/helper';
 	$: ({ published, updated } = post.date || {});
@@ -24,9 +24,11 @@
 	<small>
 		{#if updated && updated !== published}
 			<span>
-				<time datetime={updated}>Updated {pretty.updated.complete}</time>
 				{#if path}
+					<time datetime={updated}>Updated {pretty.updated.complete}</time>
 					<Link href="{link}/{path}" newTab>[revision history]</Link>
+				{:else}
+					<time datetime={updated}>Updated {pretty.updated.complete}</time>
 				{/if}
 			</span>
 		{/if}
@@ -79,7 +81,7 @@
 	header > :global(div > small > span) {
 		margin-bottom: 0.25em;
 	}
-	small time + :global(.elements.link) {
+	small time + :global(.lmns-link) {
 		font: 90% var(--aqua-monospace);
 	}
 </style>
