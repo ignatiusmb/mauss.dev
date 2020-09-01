@@ -9,6 +9,7 @@
 
 <script>
 	export let post;
+	import { Link } from '@ignatiusmb/elements';
 	import MetaHead from '../../../pages/MetaHead.svelte';
 	import Article from '../../../pages/Article.svelte';
 	$: ({ slug, title, content } = post);
@@ -17,6 +18,19 @@
 <MetaHead {post} canonical="curated/{slug}" {title} />
 
 <Article header {post} path="content/curated/{slug}.md">
+	{#if post.toc.length}
+		<section id="objective" class="info-box">
+			<h3>Quick Links</h3>
+			<ul>
+				{#each post.toc as { id, cleaned }}
+					<li style="color: #f48fb1">
+						<Link href="curated/{post.slug}#{id}" inherit>{cleaned}</Link>
+					</li>
+				{/each}
+			</ul>
+		</section>
+	{/if}
+
 	<section>
 		{@html content}
 	</section>
