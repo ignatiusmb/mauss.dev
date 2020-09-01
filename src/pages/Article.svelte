@@ -97,6 +97,7 @@
 		font-size: clamp(0.8rem, 2vw, 1rem);
 	}
 	article :global(img) {
+		max-height: 42em;
 		margin: auto;
 		border-radius: 0.15em;
 		text-align: center;
