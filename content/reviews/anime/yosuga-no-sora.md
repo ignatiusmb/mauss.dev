@@ -31,122 +31,122 @@ It's pretty reasonable for every girl to have their own story considering this w
 > Episode Flowchart
 
 <div style="display: grid; grid-template-columns: repeat(7, 1fr); grid-template-rows: repeat(10, 1fr); text-align: center;">
-    <span style="grid-area:1/4/2/5; padding: 0.25em 0; border: 3px solid rgb(var(--bg-inverse));">
+    <span style="grid-area:1/4/2/5; padding: 0.25em 0; border: 3px solid var(--bg-inverse);">
     1
     </span>
     <span style="grid-area:2/3/3/4;position:relative;">
         <!-- Horizontal Bar -->
-        <span style="width:100%;position:absolute;top:50%;left:0;border:0.25px solid rgb(var(--bg-inverse));"></span>
+        <span style="width:100%;position:absolute;top:50%;left:0;border:0.25px solid var(--bg-inverse);"></span>
     </span>
     <span style="grid-area:2/4/3/5;position:relative;">
         <!-- Upper Vertical Bar -->
-        <span style="height:50%;position:absolute;border:0.25px solid rgb(var(--bg-inverse));"></span>
+        <span style="height:50%;position:absolute;border:0.25px solid var(--bg-inverse);"></span>
         <!-- Horizontal Bar -->
-        <span style="width:100%;position:absolute;top:50%;left:0;border:0.25px solid rgb(var(--bg-inverse));"></span>
+        <span style="width:100%;position:absolute;top:50%;left:0;border:0.25px solid var(--bg-inverse);"></span>
     </span>
     <span style="grid-area:2/5/3/6;position:relative;">
         <!-- Horizontal Bar -->
-        <span style="width:100%;position:absolute;top:50%;left:0;border:0.25px solid rgb(var(--bg-inverse));"></span>
+        <span style="width:100%;position:absolute;top:50%;left:0;border:0.25px solid var(--bg-inverse);"></span>
     </span>
-    <span style="grid-area:2/2/3/3; padding: 0.25em 0; border: 3px solid rgb(var(--bg-inverse));">
+    <span style="grid-area:2/2/3/3; padding: 0.25em 0; border: 3px solid var(--bg-inverse);">
     2
     </span>
     <span style="grid-area:3/1/4/2;position:relative;">
         <!-- Bottom Vertical Bar -->
-        <span style="height:50%;position:absolute;bottom:0;border:0.25px solid rgb(var(--bg-inverse));"></span>
+        <span style="height:50%;position:absolute;bottom:0;border:0.25px solid var(--bg-inverse);"></span>
         <!-- Right Horizontal Bar -->
-        <span style="width:50%;position:absolute;top:50%;right:0;border:0.25px solid rgb(var(--bg-inverse));"></span>
+        <span style="width:50%;position:absolute;top:50%;right:0;border:0.25px solid var(--bg-inverse);"></span>
     </span>
     <span style="grid-area:3/2/4/3;position:relative;">
         <!-- Upper Vertical Bar -->
-        <span style="height:50%;position:absolute;border:0.25px solid rgb(var(--bg-inverse));"></span>
+        <span style="height:50%;position:absolute;border:0.25px solid var(--bg-inverse);"></span>
         <!-- Horizontal Bar -->
-        <span style="width:100%;position:absolute;top:50%;left:0;border:0.25px solid rgb(var(--bg-inverse));"></span>
+        <span style="width:100%;position:absolute;top:50%;left:0;border:0.25px solid var(--bg-inverse);"></span>
     </span>
     <span style="grid-area:3/3/4/4;position:relative;">
         <!-- Left Horizontal Bar -->
-        <span style="width:50%;position:absolute;top:50%;left:0;border:0.25px solid rgb(var(--bg-inverse));"></span>
+        <span style="width:50%;position:absolute;top:50%;left:0;border:0.25px solid var(--bg-inverse);"></span>
         <!-- Bottom Vertical Bar -->
-        <span style="height:50%;position:absolute;bottom:0;border:0.25px solid rgb(var(--bg-inverse));"></span>
+        <span style="height:50%;position:absolute;bottom:0;border:0.25px solid var(--bg-inverse);"></span>
     </span>
-    <span style="grid-area:2/6/3/7; padding: 0.25em 0; border: 3px solid rgb(var(--bg-inverse));">
+    <span style="grid-area:2/6/3/7; padding: 0.25em 0; border: 3px solid var(--bg-inverse);">
     7
     </span>
     <span style="grid-area:3/5/4/6;position:relative;">
         <!-- Bottom Vertical Bar -->
-        <span style="height:50%;position:absolute;bottom:0;border:0.25px solid rgb(var(--bg-inverse));"></span>
+        <span style="height:50%;position:absolute;bottom:0;border:0.25px solid var(--bg-inverse);"></span>
         <!-- Right Horizontal Bar -->
-        <span style="width:50%;position:absolute;top:50%;right:0;border:0.25px solid rgb(var(--bg-inverse));"></span>
+        <span style="width:50%;position:absolute;top:50%;right:0;border:0.25px solid var(--bg-inverse);"></span>
     </span>
     <span style="grid-area:3/6/4/7;position:relative;">
         <!-- Upper Vertical Bar -->
-        <span style="height:50%;position:absolute;border:0.25px solid rgb(var(--bg-inverse));"></span>
+        <span style="height:50%;position:absolute;border:0.25px solid var(--bg-inverse);"></span>
         <!-- Horizontal Bar -->
-        <span style="width:100%;position:absolute;top:50%;left:0;border:0.25px solid rgb(var(--bg-inverse));"></span>
+        <span style="width:100%;position:absolute;top:50%;left:0;border:0.25px solid var(--bg-inverse);"></span>
     </span>
     <span style="grid-area:3/7/4/8;position:relative;">
         <!-- Left Horizontal Bar -->
-        <span style="width:50%;position:absolute;top:50%;left:0;border:0.25px solid rgb(var(--bg-inverse));"></span>
+        <span style="width:50%;position:absolute;top:50%;left:0;border:0.25px solid var(--bg-inverse);"></span>
         <!-- Bottom Vertical Bar -->
-        <span style="height:50%;position:absolute;bottom:0;border:0.25px solid rgb(var(--bg-inverse));"></span>
+        <span style="height:50%;position:absolute;bottom:0;border:0.25px solid var(--bg-inverse);"></span>
     </span>
-    <span style="grid-area:4/1/5/2; padding: 0.25em 0; border: 3px solid rgb(var(--bg-inverse));">
+    <span style="grid-area:4/1/5/2; padding: 0.25em 0; border: 3px solid var(--bg-inverse);">
     3
     </span>
     <span style="grid-area:5/1/5/2;position:relative;">
         <!-- Vertical Bar -->
-        <span style="height:100%;position:absolute;border:0.25px solid rgb(var(--bg-inverse));"></span>
+        <span style="height:100%;position:absolute;border:0.25px solid var(--bg-inverse);"></span>
     </span>
-    <span style="grid-area:6/1/7/2; padding: 0.25em 0; border: 3px solid rgb(var(--bg-inverse));">
+    <span style="grid-area:6/1/7/2; padding: 0.25em 0; border: 3px solid var(--bg-inverse);">
     4
     </span>
-    <span style="grid-area:4/3/5/4; padding: 0.25em 0; border: 3px solid rgb(var(--bg-inverse));">
+    <span style="grid-area:4/3/5/4; padding: 0.25em 0; border: 3px solid var(--bg-inverse);">
     5
     </span>
     <span style="grid-area:5/3/5/4;position:relative;">
         <!-- Vertical Bar -->
-        <span style="height:100%;position:absolute;border:0.25px solid rgb(var(--bg-inverse));"></span>
+        <span style="height:100%;position:absolute;border:0.25px solid var(--bg-inverse);"></span>
     </span>
-    <span style="grid-area:6/3/7/4; padding: 0.25em 0; border: 3px solid rgb(var(--bg-inverse));">
+    <span style="grid-area:6/3/7/4; padding: 0.25em 0; border: 3px solid var(--bg-inverse);">
     6
     </span>
-    <span style="grid-area:4/5/5/6; padding: 0.25em 0; border: 3px solid rgb(var(--bg-inverse));">
+    <span style="grid-area:4/5/5/6; padding: 0.25em 0; border: 3px solid var(--bg-inverse);">
     8
     </span>
     <span style="grid-area:5/5/5/6;position:relative;">
         <!-- Vertical Bar -->
-        <span style="height:100%;position:absolute;border:0.25px solid rgb(var(--bg-inverse));"></span>
+        <span style="height:100%;position:absolute;border:0.25px solid var(--bg-inverse);"></span>
     </span>
-    <span style="grid-area:6/5/7/6; padding: 0.25em 0; border: 3px solid rgb(var(--bg-inverse));">
+    <span style="grid-area:6/5/7/6; padding: 0.25em 0; border: 3px solid var(--bg-inverse);">
     9
     </span>
-    <span style="grid-area:4/7/5/8; padding: 0.25em 0; border: 3px solid rgb(var(--bg-inverse));">
+    <span style="grid-area:4/7/5/8; padding: 0.25em 0; border: 3px solid var(--bg-inverse);">
     10
     </span>
     <span style="grid-area:5/7/5/8;position:relative;">
         <!-- Vertical Bar -->
-        <span style="height:100%;position:absolute;border:0.25px solid rgb(var(--bg-inverse));"></span>
+        <span style="height:100%;position:absolute;border:0.25px solid var(--bg-inverse);"></span>
     </span>
-    <span style="grid-area:6/7/7/8; padding: 0.25em 0; border: 3px solid rgb(var(--bg-inverse));">
+    <span style="grid-area:6/7/7/8; padding: 0.25em 0; border: 3px solid var(--bg-inverse);">
     11
     </span>
     <span style="grid-area:7/7/7/8;position:relative;">
         <!-- Vertical Bar -->
-        <span style="height:100%;position:absolute;border:0.25px solid rgb(var(--bg-inverse));"></span>
+        <span style="height:100%;position:absolute;border:0.25px solid var(--bg-inverse);"></span>
     </span>
-    <span style="grid-area:8/7/9/8; padding: 0.25em 0; border: 3px solid rgb(var(--bg-inverse));">
+    <span style="grid-area:8/7/9/8; padding: 0.25em 0; border: 3px solid var(--bg-inverse);">
     12
     </span>
-    <span style="grid-area:10/1/11/2; padding: 0.25em 0; border: 3px solid rgb(var(--bg-inverse));">
+    <span style="grid-area:10/1/11/2; padding: 0.25em 0; border: 3px solid var(--bg-inverse);">
     Kazuha
     </span>
-    <span style="grid-area:10/3/11/4; padding: 0.25em 0; border: 3px solid rgb(var(--bg-inverse));">
+    <span style="grid-area:10/3/11/4; padding: 0.25em 0; border: 3px solid var(--bg-inverse);">
     Akira
     </span>
-    <span style="grid-area:10/5/11/6; padding: 0.25em 0; border: 3px solid rgb(var(--bg-inverse));">
+    <span style="grid-area:10/5/11/6; padding: 0.25em 0; border: 3px solid var(--bg-inverse);">
     Nao
     </span>
-    <span style="grid-area:10/7/11/8; padding: 0.25em 0; border: 3px solid rgb(var(--bg-inverse));">
+    <span style="grid-area:10/7/11/8; padding: 0.25em 0; border: 3px solid var(--bg-inverse);">
     Sora
     </span>
 </div>

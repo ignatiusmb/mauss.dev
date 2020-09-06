@@ -24,7 +24,7 @@
 		position: relative;
 		padding-top: 20%;
 		border: none;
-		border-radius: 0.15em;
+		border-radius: var(--b-radius);
 		margin-top: 1em;
 	}
 	.banner::after {

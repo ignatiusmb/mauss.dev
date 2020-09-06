@@ -21,13 +21,15 @@
 		position: absolute;
 		top: 1px;
 		right: 0;
+
 		gap: 1em;
 		grid-auto-flow: row;
 		padding: 1em;
 		margin: 0;
-		border-top: 0.25em solid rgba(var(--theme-primary), 1);
+		border-top: 0.25em solid var(--theme-primary);
+
 		transform: translateY(-100%);
-		background-color: rgba(var(--bg-color, 1));
+		background-color: var(--bg-surface);
 		text-align: center;
 	}
 	div.mobile :global(a) {
@@ -38,7 +40,7 @@
 		content: none;
 	}
 	div.mobile :global(a[aria-current]) {
-		border: 0.15em solid rgba(var(--theme-primary), 1);
-		border-radius: 0.25em;
+		border: 0.15em solid var(--theme-primary);
+		border-radius: var(--b-radius);
 	}
 </style>

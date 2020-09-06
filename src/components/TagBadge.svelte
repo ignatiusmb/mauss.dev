@@ -7,7 +7,7 @@
 <style>
 	span {
 		padding: 0.2em 0.4em;
-		border-radius: 0.2em;
+		border-radius: var(--b-radius);
 		font-size: 0.9rem;
 		background: #d6d9e0;
 		color: #606570;
@@ -54,7 +54,7 @@
 		color: #ffda5d;
 	}
 	.sapper {
-		background: rgb(21, 151, 148);
+		background: #159794;
 		color: #fff;
 	}
 	.svelte {

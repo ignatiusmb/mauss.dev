@@ -37,8 +37,8 @@
 
 <style>
 	section:first-of-type {
-		border: 0.2em solid rgba(var(--fg-color, 1));
-		border-radius: 0.15em;
+		border: 0.2em solid var(--fg-surface);
+		border-radius: var(--b-radius);
 	}
 	section:first-of-type h2 {
 		margin-top: 0;
