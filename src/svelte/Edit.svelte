@@ -14,6 +14,7 @@
 <style>
 	span :global(a) {
 		display: inline-flex;
+		align-items: center;
 	}
 	span :global(a :last-child) {
 		margin-left: 0.25em;
