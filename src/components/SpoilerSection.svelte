@@ -14,9 +14,9 @@
 	{#if !show}
 		<h2>CLICK TO REVEAL SPOILERS</h2>
 		<p>
-			Clicking this card will reveal the another section below which will contain major spoilers as we will be breaking
-			down most parts of the story as well as the ending, and dicussing any related theories to it, please proceed with
-			caution.
+			Clicking this card will reveal the another section below which will contain major spoilers as
+			we will be breaking down most parts of the story as well as the ending, and dicussing any
+			related theories to it, please proceed with caution.
 		</p>
 	{:else}
 		<h2>CLICK TO HIDE SPOILERS</h2>

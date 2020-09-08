@@ -5,7 +5,8 @@
 <footer>
 	<section>
 		<em>
-			Fully open-source and static, yet interactive site. Built without cookies, analytics, or anything to track you.
+			Fully open-source and static, yet interactive site. Built without cookies, analytics, or
+			anything to track you.
 		</em>
 		<em>
 			Read the
@@ -39,7 +40,10 @@
 		<Link newTab href="https://twitch.tv/devmauss" label="twitch profile">
 			<Feather.Twitch />
 		</Link>
-		<Link newTab href="https://www.youtube.com/user/Ignapure/playlists" label="youtube playlist profile">
+		<Link
+			newTab
+			href="https://www.youtube.com/user/Ignapure/playlists"
+			label="youtube playlist profile">
 			<Feather.Youtube />
 		</Link>
 	</section>

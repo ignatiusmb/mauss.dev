@@ -16,7 +16,11 @@
 	import { capitalize } from '../../utils/helper';
 </script>
 
-<MetaHead {post} canonical="about" title="About" description="Get to know Ignatius Bagussuputra from his About page." />
+<MetaHead
+	{post}
+	canonical="about"
+	title="About"
+	description="Get to know Ignatius Bagussuputra from his About page." />
 
 <Article {post}>
 	<WeavedImage src="profile/mauss.jpeg" alt="DevMauss Profile" />

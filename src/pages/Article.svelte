@@ -39,7 +39,10 @@
 
 	{#if path}
 		<section>
-			<p>Find an issue with this post? Have something to add, update, or clarify? All my posts here are editable.</p>
+			<p>
+				Find an issue with this post? Have something to add, update, or clarify? All my posts here
+				are editable.
+			</p>
 			<p>
 				Just create a new
 				<Link newTab href="https://github.com/ignatiusmb/mauss/issues">Issue</Link>
