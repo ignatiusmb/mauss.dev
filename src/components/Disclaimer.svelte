@@ -17,8 +17,8 @@
 		</p>
 
 		<p>
-			I am not a professional reviewer nor writter and you are not obliged in any way to follow and/or blatanly take
-			everything I say here.
+			Please take everything expressed with a grain of salt. I am not a professional reviewer nor writter and you are
+			not obliged in any way to follow and/or blatanly take anything I say here as is.
 		</p>
 	{/if}
 	<slot />
