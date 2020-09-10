@@ -17,7 +17,7 @@
     "format": "prettier -w src"
   },
   "engines": {
-    "node": ">=14.x"
+    "node": ">=12.x"
   },
   "dependencies": {
     "compression": "^1.7.4",
