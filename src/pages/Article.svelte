@@ -12,7 +12,8 @@
 	onMount(() => {
 		function offsetAnchor() {
 			if (!window.location.hash.length) return;
-			window.scrollTo(window.scrollX, window.scrollY - 50);
+			const offset = window.innerWidth < 600 ? 10 : 50;
+			window.scrollTo(window.scrollX, window.scrollY - offset);
 		}
 		setTimeout(offsetAnchor, 0);
 
