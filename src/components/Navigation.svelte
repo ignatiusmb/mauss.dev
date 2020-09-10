@@ -6,7 +6,7 @@
 	const { preloading, page } = stores();
 	const sections = ['about', 'curated', 'posts', 'reviews', 'uses'];
 
-	import { Feather, Link, ThemeSwitcher } from '@ignatiusmb/elements';
+	import { Feather, ThemeSwitcher, Link } from '@ignatiusmb/elements';
 	import NavLink from '../svelte/NavLink.svelte';
 	import NavGrid from './NavGrid.svelte';
 

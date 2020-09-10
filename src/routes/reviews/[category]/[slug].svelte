@@ -21,6 +21,7 @@
 		mal: 'MyAnimeList',
 	};
 
+	import { Link } from '@ignatiusmb/elements';
 	import MetaHead from '../../../pages/MetaHead.svelte';
 	import Article from '../../../pages/Article.svelte';
 
@@ -44,7 +45,7 @@
 				<span>[</span>
 				{#each Object.keys(post.link) as linkKey}
 					<span>
-						<a href={post.link[linkKey]}>{linkMap[linkKey]}</a>
+						<Link href={post.link[linkKey]} newTab>{linkMap[linkKey]}</Link>
 					</span>
 				{/each}
 				<span>]</span>
