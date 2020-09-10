@@ -25,8 +25,8 @@
 <slot />
 <Footer />
 
-<style global>
-	#sapper {
+<style>
+	:global(#sapper) {
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
