@@ -8,13 +8,25 @@
 		{#if prev}
 			<a rel="prefetch" href={prev.slug} style="text-align: left">
 				<strong>&larr; Prev</strong>
-				<span>{(prev.title?.jp || prev.title?.en) ?? prev.title}</span>
+				{#if typeof prev.title === 'string'}
+					<span>{prev.title}</span>
+				{:else if prev.title.jp}
+					<span>{prev.title.jp}</span>
+				{:else}
+					<span>{prev.title.en}</span>
+				{/if}
 			</a>
 		{/if}
 		{#if next}
 			<a rel="prefetch" href={next.slug} style="text-align: right">
 				<strong>Next &rarr;</strong>
-				<span>{(next.title?.jp || next.title?.en) ?? next.title}</span>
+				{#if typeof next.title === 'string'}
+					<span>{next.title}</span>
+				{:else if next.title.jp}
+					<span>{next.title.jp}</span>
+				{:else}
+					<span>{next.title.en}</span>
+				{/if}
 			</a>
 		{/if}
 	</footer>

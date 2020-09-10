@@ -7,13 +7,15 @@
 </script>
 
 <section>
-	<Image src={post.image?.en ?? null} alt={post.title} overlay>
+	<Image src={post.image ? post.image.en : null} alt={post.title} overlay>
 		<span>{post.title}</span>
 	</Image>
 
 	<div class="content">
 		<h3>{post.title}</h3>
-		<small>{post.description ?? ''}</small>
+		{#if post.description}
+			<small>{post.description}</small>
+		{/if}
 	</div>
 
 	<aside>
