@@ -1,7 +1,6 @@
 <script>
 	export let view = 'grid';
 	export let itemSize = '12em';
-	import { Feather } from '@ignatiusmb/elements';
 </script>
 
 <div class="layout-wrapper">
