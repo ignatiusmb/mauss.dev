@@ -1,7 +1,7 @@
 <script context="module">
 	import { compareDate, randomInt } from '../utils/helper';
 	export async function preload() {
-		const data = { about: '', curated: '', posts: '', reviews: '' };
+		const data = { posts: '', reviews: '', curated: '' };
 		for (const seg in data) {
 			data[seg] = await this.fetch(`${seg}.json`).then((r) => r.json());
 			if (seg === 'curated') data[seg].sort((x, y) => compareDate(x.date.updated, y.date.updated));
@@ -15,11 +15,11 @@
 
 <script>
 	export let data, quotes;
-	const sections = [
-		{ key: 'posts', heading: 'Recent Posts 📚', desc: "What's on my mind (or life) recently:" },
-		{ key: 'reviews', heading: 'Recent Reviews ⭐', desc: "Creative contents I've been consuming recently:" },
-		{ key: 'curated', heading: 'Recently Curated ⚖️', desc: "Stuffs I've been curating recently:" },
-	];
+	const section = {
+		posts: { heading: 'Recent Posts 📚', desc: "What's on my mind (or life) recently:" },
+		reviews: { heading: 'Recent Reviews ⭐', desc: "Contents I've been reviewing recently:" },
+		curated: { heading: 'Recently Curated ⚖️', desc: "Stuffs I've been curating recently:" },
+	};
 
 	import { Link, Image } from '@ignatiusmb/elements';
 	import MetaHead from '../pages/MetaHead.svelte';
@@ -41,8 +41,8 @@
 <svelte:window bind:scrollY bind:innerHeight />
 <MetaHead
 	title="Ignatius Bagussuputra"
-	description="DevMauss. Personal website of Ignatius Bagussuputra. A Computer Science undergraduate from University of
-	Indonesia." />
+	description="DevMauss. Personal website of Ignatius Bagussuputra. A Computer Science undergraduate
+	from University of Indonesia." />
 
 <div class:fixed-nav={!$mobile} class:scrolled>
 	<Navigation mobile={$mobile} bind:scrolled />
@@ -71,30 +71,32 @@
 	<section>
 		<h2>About Me</h2>
 		<p>
-			Hey there 👋! My name is Ignatius Bagussuputra, a student at the University of Indonesia pursuing a Computer
-			Science degree.
+			Hey there 👋! My name is Ignatius Bagussuputra, a student at the University of Indonesia
+			pursuing a Computer Science degree.
 		</p>
 		<p>
-			Have been developing since I started college, I love Open Source and enjoy making applications I think would be
-			helpful or especially useful for me. Building interfaces is also something I love, that's why I'm passionate about
-			my websites. I also like to build things IRL.
+			Have been developing since I started college, I love Open Source and enjoy making applications
+			I think would be helpful or especially useful for me. Building interfaces is also something I
+			love, that's why I'm passionate about my websites. I also like to build things IRL.
 		</p>
 		<br />
 		<Link href="about">More info...</Link>
 	</section>
 
-	{#each sections as { key, heading, desc }}
+	{#each Object.keys(data) as seg}
 		<section>
-			<h2>{heading}</h2>
-			<p>{desc}</p>
+			<h2>{section[seg]['heading']}</h2>
+			<p>{section[seg]['desc']}</p>
 			<ul>
-				{#each data[key] as { slug, title }}
+				{#each data[seg] as { slug, title }}
 					<li>
-						<Link href="{key}/{slug}">{typeof title === 'string' ? title : title.short ? title.short : title.en}</Link>
+						<Link href="{seg}/{slug}">
+							{typeof title === 'string' ? title : title.short ? title.short : title.en}
+						</Link>
 					</li>
 				{/each}
 				<li>
-					<Link href={key}>More {key}{key === 'curated' ? ' stuffs ' : ''}...</Link>
+					<Link href={seg}>More {seg}{seg === 'curated' ? ' stuffs ' : ''}...</Link>
 				</li>
 			</ul>
 		</section>
@@ -135,7 +137,7 @@
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		border: 0.25em dashed rgba(var(--theme-primary), 1);
+		border: 0.25em dashed var(--theme-primary);
 		border-radius: inherit;
 		animation: 28s infinite linear rotate;
 	}
@@ -170,7 +172,7 @@
 	section h2::after {
 		content: '';
 		height: 0.1em;
-		background-color: rgba(var(--theme-secondary), 1);
+		background-color: var(--theme-secondary);
 	}
 
 	.fixed-nav > :global(nav) {

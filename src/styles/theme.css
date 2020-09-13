@@ -1,6 +1,8 @@
 :root {
-	--theme-primary: 153, 0, 0;
-	--theme-secondary: 220, 20, 60;
+	--theme-primary: rgb(153, 0, 0);
+	--theme-secondary: rgb(220, 20, 60);
+
+	--b-radius: 0.25em;
 
 	--t-duration: 200ms;
 	--t-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -8,36 +10,32 @@
 
 html,
 html.light {
-	--bg-inverse: 33, 33, 33;
-	--bg-color: 255, 255, 255;
-	--bg-color-secondary: 238, 238, 238;
-	--bg-success: 133, 218, 133;
+	--bg-inverse: rgba(33, 33, 33, 1);
 
-	--fg-color: 33, 33, 33;
-	--fg-success: 0, 0, 0;
+	--bg-overlay: rgba(238, 238, 238, 1);
+	--bg-surface: rgba(255, 255, 255, 1);
+	--bg-base: rgba(255, 255, 255, 1);
+
+	--fg-overlay: rgba(0, 0, 0, 0.6);
+	--fg-surface: rgba(0, 0, 0, 0.9);
 }
 html.dark {
-	--bg-inverse: 255, 255, 255;
-	--bg-color: 33, 33, 33;
-	--bg-color-secondary: 54, 54, 54;
-	--bg-success: 0, 128, 0;
+	--bg-inverse: rgba(255, 255, 255, 0.8);
 
-	--fg-color: 179, 185, 197;
-	--fg-success: 255, 255, 255;
+	--bg-cover: rgba(56, 59, 64, 1);
+	--bg-overlay: rgba(45, 47, 52, 1);
+	--bg-surface: rgba(39, 41, 45, 1);
+	--bg-base: rgba(31, 32, 35, 1);
+	--bg-overflow: rgba(1, 1, 1, 1);
+
+	--fg-overlay: rgba(255, 255, 255, 0.65);
+	--fg-surface: rgba(255, 255, 255, 0.8);
 }
 
-body {
-	background-color: rgba(var(--bg-color, 1));
-	color: rgba(var(--fg-color, 1));
+html body {
 	transition: var(--t-duration) var(--t-function);
-}
-
-p {
-	color: rgba(var(--fg-color, 1));
-}
-
-code {
-	background-color: #2d2d2d;
+	background-color: var(--bg-base);
+	color: var(--fg-surface);
 }
 
 a {

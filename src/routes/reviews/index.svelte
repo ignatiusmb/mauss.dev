@@ -17,25 +17,45 @@
 <script>
 	export let data, unique, verdict, query;
 	import { flip } from 'svelte/animate';
-	import { scale } from 'svelte/transition';
-	const bound = 12;
+	import { scale, crossfade } from 'svelte/transition';
+	import { quintInOut } from 'svelte/easing';
 	const duration = 100;
+	const [send, receive] = crossfade({
+		duration: (d) => Math.sqrt(d * 200),
 
-	import { SearchBar, Pagination } from '@ignatiusmb/elements';
+		fallback(node, params) {
+			const style = getComputedStyle(node);
+			const transform = style.transform === 'none' ? '' : style.transform;
+
+			return {
+				duration,
+				easing: quintInOut,
+				css: (t) => `
+					transform: ${transform} scale(${t});
+					opacity: ${t}
+				`,
+			};
+		},
+	});
+
+	import { Feather, SearchBar, Pagination } from '@ignatiusmb/elements';
 	import MetaHead from '../../pages/MetaHead.svelte';
-	import GridView from '../../pages/GridView.svelte';
-	import Centered from '../../pages/Centered.svelte';
+	import LayoutPicker from '../../pages/LayoutPicker.svelte';
 	import ReviewCard from '../../components/ReviewCard.svelte';
+	import PerspectiveCarousel from '../../components/PerspectiveCarousel.svelte';
 
 	import { sieve, filter } from '../../utils/search';
-	import { mobile, rSlice as store } from '../../stores';
-	let sieved;
-	let filters = { categories: [], genres: [], verdict: [], sort: 'updated' };
+	import { rSlice as store } from '../../stores';
+	let filters = { categories: [], genres: [], verdict: [], sort: 'updated' },
+		sieved,
+		view = 'grid';
+	$: bound = view === 'grid' ? 12 : 3;
+	$: increment = view === 'carousel' ? 1 : bound;
 
+	$: count = $store * increment;
 	$: filtered = filter(filters, data);
 	$: sieved = query ? sieve(query, filtered) : filtered;
 	$: total = sieved.length;
-	$: $store = $store * bound > total ? 0 : $store;
 </script>
 
 <MetaHead
@@ -45,7 +65,7 @@
 	<link rel="alternate" href="rss.xml" type="application/rss+xml" />
 </MetaHead>
 
-<GridView>
+<LayoutPicker {view}>
 	<header slot="header">
 		<h1>DevMauss Reviews</h1>
 
@@ -95,31 +115,52 @@
 			</section>
 		</SearchBar>
 
-		<Pagination {store} {total} {bound} />
+		<Pagination {store} {total} {bound} {increment} />
 	</header>
 
-	{#each sieved.slice($store * bound, $store * bound + bound) as post (post.slug)}
-		<div animate:flip={{ duration }} transition:scale|local={{ duration }}>
-			<ReviewCard {post} />
-		</div>
-	{:else}
-		<h2>There are no matching {query ? 'titles' : 'filters'}</h2>
-	{/each}
-</GridView>
-{#if $mobile}
-	<Centered>
-		<Pagination {store} {total} {bound} />
-	</Centered>
-{/if}
+	<aside slot="picker">
+		<button class:active={view === 'grid'} on:click={() => (view = 'grid')}>
+			<Feather.Grid />
+		</button>
+		<button class:active={view === 'carousel'} on:click={() => (view = 'carousel')}>
+			<Feather.Layers />
+		</button>
+	</aside>
+
+	{#if view === 'grid'}
+		{#each sieved.slice(count, count + bound) as post (post.slug)}
+			<div animate:flip={{ duration }} transition:scale|local={{ duration }}>
+				<ReviewCard {post} />
+			</div>
+		{:else}
+			<h2>There are no matching {query ? 'titles' : 'filters'}</h2>
+		{/each}
+	{:else if view === 'carousel'}
+		<PerspectiveCarousel>
+			{#each sieved.slice(count, count + bound) as post, idx (post.slug)}
+				<div
+					class="carousel-card"
+					class:translate-left={idx === 0}
+					class:translate-right={idx === 2}
+					in:receive={{ key: post.slug }}
+					out:send={{ key: post.slug }}>
+					<ReviewCard {post} />
+				</div>
+			{/each}
+		</PerspectiveCarousel>
+	{/if}
+</LayoutPicker>
 
 <style>
 	h1 {
 		text-align: center;
 	}
 	div {
-		border-radius: 0.25em;
-		box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
-		background-color: rgba(var(--bg-color-secondary, 1));
+		border-radius: var(--b-radius);
+		box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+			0 1px 3px 0 rgba(0, 0, 0, 0.12);
+		transition: var(--t-duration);
+		background-color: var(--bg-overlay);
 	}
 	h2 {
 		position: absolute;

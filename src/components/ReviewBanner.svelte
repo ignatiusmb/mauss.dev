@@ -7,7 +7,11 @@
 </script>
 
 <div class="banner">
-	<Image src={backdrop} alt="{title.short ? title.short : title.en} backdrop" absolute ratio={1 / 5} />
+	<Image
+		src={backdrop}
+		alt="{title.short ? title.short : title.en} backdrop"
+		absolute
+		ratio={1 / 5} />
 
 	<span class="composed">Credibility: {composed} days since last seen on {day} {month} {year}</span>
 	<small>
@@ -24,7 +28,7 @@
 		position: relative;
 		padding-top: 20%;
 		border: none;
-		border-radius: 0.15em;
+		border-radius: var(--b-radius);
 		margin-top: 1em;
 	}
 	.banner::after {

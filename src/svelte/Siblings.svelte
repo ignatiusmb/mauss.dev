@@ -37,7 +37,7 @@
 		margin-top: 2em;
 		display: grid;
 		border-radius: 0.5em;
-		border: 0.1em solid rgba(var(--fg-color, 1));
+		border: 0.1em solid var(--fg-surface);
 	}
 	a {
 		display: grid;
@@ -45,7 +45,7 @@
 		color: inherit;
 	}
 	a:nth-child(2) {
-		border-top: 0.1em solid rgba(var(--fg-color, 1));
+		border-top: 0.1em solid var(--fg-surface);
 	}
 	a:only-child {
 		grid-column: 1 / -1;
@@ -56,7 +56,7 @@
 		margin: 0;
 	}
 	strong {
-		border-bottom: 0.1em solid rgba(var(--fg-color, 1));
+		border-bottom: 0.1em solid var(--fg-surface);
 	}
 
 	@media only screen and (min-width: 600px) {
@@ -65,7 +65,7 @@
 		}
 		a:nth-child(2) {
 			border-top: none;
-			border-left: 0.1em solid rgba(var(--fg-color, 1));
+			border-left: 0.1em solid var(--fg-surface);
 		}
 	}
 </style>

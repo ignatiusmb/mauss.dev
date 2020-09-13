@@ -18,7 +18,7 @@
 		border: 0.25em solid;
 		border-left: none;
 		border-image-slice: 1;
-		border-image-source: linear-gradient(-45deg, rgba(var(--theme-secondary, 1)), transparent);
+		border-image-source: linear-gradient(-45deg, var(--theme-secondary), transparent);
 		margin: 1em;
 		text-align: justify;
 		font-size: 1.25rem;
@@ -31,7 +31,7 @@
 		bottom: -0.125em;
 		padding: 0.5em;
 		transform: translateY(50%);
-		background-color: rgba(var(--bg-color, 1));
+		background-color: var(--bg-base);
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
 		line-height: 1.5rem;

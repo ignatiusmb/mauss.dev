@@ -1,7 +1,7 @@
 {
 	"svelteSortOrder": "scripts-markup-styles",
 	"semi": true,
-	"printWidth": 120,
+	"printWidth": 100,
 	"singleQuote": true,
 	"tabWidth": 2
 }

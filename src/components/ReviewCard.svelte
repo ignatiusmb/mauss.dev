@@ -26,7 +26,9 @@
 			<span>⭐ {post.rating ? post.rating : '~'}</span>
 		</small>
 		<Verdict {verdict} />
-		<ButtonLink href="reviews/{post.slug}" {disabled}>{disabled ? 'Work-in-Progress' : 'read'}</ButtonLink>
+		<ButtonLink href="reviews/{post.slug}" {disabled}>
+			{disabled ? 'Work-in-Progress' : 'read'}
+		</ButtonLink>
 	</aside>
 </section>
 
@@ -45,7 +47,7 @@
 		display: grid;
 		gap: 0.5em;
 		padding: 0.5em;
-		border-radius: 0.25em;
+		border-radius: var(--b-radius);
 		text-align: center;
 	}
 	aside small:first-child {

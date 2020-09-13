@@ -10,8 +10,17 @@ describe('capitalize', () => {
 });
 
 describe('createPrettyDate', () => {
-	it('convert YYYY-MM-DD to a prettier format', () => {
-		expect(helper.createPrettyDate('2020-05-25')).toBe('Monday, 25 May 2020');
+	const result = {
+		complete: '25 May 2020',
+		day: 25,
+		month: 'May',
+		weekday: 'Monday',
+		year: 2020,
+	};
+
+	const date = '2020-05-25';
+	it('convert YYYY-MM-DD to formatted object', () => {
+		expect(helper.createPrettyDate(date)).toStrictEqual(result);
 	});
 });
 

@@ -32,9 +32,10 @@
 	section {
 		display: grid;
 		grid-template-rows: auto 1fr 3em;
-		border-radius: 0.25em;
-		box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
-		background-color: rgba(var(--bg-color-secondary, 1));
+		border-radius: var(--b-radius);
+		box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+			0 1px 3px 0 rgba(0, 0, 0, 0.12);
+		background-color: var(--bg-overlay);
 		transform: translate(0%);
 	}
 	section > :global(.lmns-image) {
@@ -57,11 +58,11 @@
 		align-items: center;
 		padding: 0.5em;
 		padding-left: 1em;
-		border-radius: 0.25em;
+		border-radius: var(--b-radius);
 	}
 	aside small:not(:first-of-type)::before {
 		content: '•';
-		color: rgba(var(--theme-secondary), 1);
+		color: var(--theme-secondary);
 		margin-right: 0.5rem;
 	}
 	aside :global(:last-child) {

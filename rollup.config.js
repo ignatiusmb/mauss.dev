@@ -15,6 +15,7 @@ import pkg from './package.json';
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
+const sourcemap = dev ? 'inline' : false;
 const legacy = !!process.env.SAPPER_LEGACY_BUILD;
 
 const onwarn = (warning, onwarn) =>
@@ -43,7 +44,7 @@ const preprocess = [
 export default {
 	client: {
 		input: config.client.input(),
-		output: config.client.output(),
+		output: { ...config.client.output(), sourcemap },
 		preserveEntrySignatures: false,
 		onwarn,
 		plugins: [
@@ -53,8 +54,8 @@ export default {
 			}),
 			alias,
 			svelte({
-				preprocess,
 				dev,
+				preprocess,
 				hydratable: true,
 				emitCss: true,
 			}),
@@ -62,8 +63,11 @@ export default {
 				browser: true,
 				dedupe: ['svelte'],
 			}),
-			commonjs(),
-			typescript({ noEmitOnError: false }),
+			commonjs({ sourceMap: !!sourcemap }),
+			typescript({
+				sourceMap: !!sourcemap,
+				inlineSources: !!sourcemap,
+			}),
 			json(),
 
 			legacy &&
@@ -72,7 +76,10 @@ export default {
 					babelHelpers: 'runtime',
 					exclude: ['node_modules/@babel/**'],
 					presets: [['@babel/preset-env', { targets: '> 0.25%, not dead' }]],
-					plugins: ['@babel/plugin-syntax-dynamic-import', ['@babel/plugin-transform-runtime', { useESModules: true }]],
+					plugins: [
+						'@babel/plugin-syntax-dynamic-import',
+						['@babel/plugin-transform-runtime', { useESModules: true }],
+					],
 				}),
 
 			!dev && terser({ module: true }),
@@ -81,7 +88,7 @@ export default {
 
 	server: {
 		input: config.server.input(),
-		output: config.server.output(),
+		output: { ...config.server.output(), sourcemap },
 		preserveEntrySignatures: 'strict',
 		external: Object.keys(pkg.dependencies).concat(require('module').builtinModules),
 		onwarn,
@@ -92,21 +99,24 @@ export default {
 			}),
 			alias,
 			svelte({
-				preprocess,
 				dev,
+				preprocess,
 				hydratable: true,
 				generate: 'ssr',
 			}),
 			resolve({ dedupe: ['svelte'] }),
-			commonjs(),
-			typescript({ noEmitOnError: false }),
+			commonjs({ sourceMap: !!sourcemap }),
+			typescript({
+				sourceMap: !!sourcemap,
+				inlineSources: !!sourcemap,
+			}),
 			json(),
 		],
 	},
 
 	serviceworker: {
 		input: config.serviceworker.input(),
-		output: config.serviceworker.output(),
+		output: { ...config.serviceworker.output(), sourcemap },
 		preserveEntrySignatures: false,
 		onwarn,
 		plugins: [
@@ -115,7 +125,7 @@ export default {
 				'process.browser': true,
 				'process.env.NODE_ENV': JSON.stringify(mode),
 			}),
-			commonjs(),
+			commonjs({ sourceMap: !!sourcemap }),
 			!dev && terser(),
 		],
 	},

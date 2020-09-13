@@ -16,7 +16,11 @@
 	import { capitalize } from '../../utils/helper';
 </script>
 
-<MetaHead {post} canonical="about" title="About" description="Get to know Ignatius Bagussuputra from his About page." />
+<MetaHead
+	{post}
+	canonical="about"
+	title="About"
+	description="Get to know Ignatius Bagussuputra from his About page." />
 
 <Article {post}>
 	<WeavedImage src="profile/mauss.jpeg" alt="DevMauss Profile" />
@@ -39,12 +43,12 @@
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-auto-flow: row;
-		border: 0.1em solid rgba(var(--fg-color, 1));
-		border-radius: 0.15em;
+		border: 0.1em solid var(--fg-surface);
+		border-radius: var(--b-radius);
 	}
 	section:first-of-type :global(a) {
 		padding: 0 0.5em;
-		border: 0.1em solid rgba(var(--fg-color, 1));
+		border: 0.1em solid var(--fg-surface);
 	}
 	section:first-of-type h2 {
 		margin-top: 0;

@@ -12,13 +12,15 @@
 		<h1>DISCLAIMER</h1>
 
 		<p>
-			All views expressed here is entirely my own opinion and personal take on the subject and do not represent the
-			opinion of any entity whatsoever with which I have been, am now, or will be affiliated.
+			All views expressed here is entirely my own opinion and personal take on the subject and do
+			not represent the opinion of any entity whatsoever with which I have been, am now, or will be
+			affiliated.
 		</p>
 
 		<p>
-			I am not a professional reviewer nor writter and you are not obliged in any way to follow and/or blatanly take
-			everything I say here.
+			Please take everything expressed with a grain of salt. I am not a professional reviewer nor
+			writter and you are not obliged in any way to follow and/or blatanly take anything I say here
+			as is.
 		</p>
 	{/if}
 	<slot />

@@ -5,7 +5,8 @@
 <footer>
 	<section>
 		<em>
-			Fully open-source and static, yet interactive site. Built without cookies, analytics, or anything to track you.
+			Fully open-source and static, yet interactive site. Built without cookies, analytics, or
+			anything to track you.
 		</em>
 		<em>
 			Read the
@@ -39,7 +40,10 @@
 		<Link newTab href="https://twitch.tv/devmauss" label="twitch profile">
 			<Feather.Twitch />
 		</Link>
-		<Link newTab href="https://www.youtube.com/user/Ignapure/playlists" label="youtube playlist profile">
+		<Link
+			newTab
+			href="https://www.youtube.com/user/Ignapure/playlists"
+			label="youtube playlist profile">
 			<Feather.Youtube />
 		</Link>
 	</section>
@@ -87,13 +91,13 @@
 	.social-links :global(a:visited) {
 		transition: var(--t-duration);
 		transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-		color: rgba(rgba(var(--fg-color, 1)), 0.6);
+		color: var(--fg-surface);
 	}
 	.social-links :global(a:hover),
 	.social-links :global(a:focus) {
 		transition: var(--t-duration);
 		transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-		color: rgba(var(--theme-secondary), 1);
+		color: var(--theme-secondary);
 	}
 	.social-links :global(a:hover:nth-child(odd)),
 	.social-links :global(a:focus:nth-child(odd)) {

@@ -74,7 +74,7 @@
 	header > :global(div > small:first-of-type > :not(:last-child)::after) {
 		content: '~';
 		margin: 0 0.5em;
-		color: rgba(var(--theme-secondary), 1);
+		color: var(--theme-secondary);
 		font-weight: bolder;
 	}
 	small > :global(span),

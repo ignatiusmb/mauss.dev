@@ -19,7 +19,7 @@
 
 	import { SearchBar, Pagination } from '@ignatiusmb/elements';
 	import MetaHead from '../../pages/MetaHead.svelte';
-	import GridView from '../../pages/GridView.svelte';
+	import LayoutPicker from '../../pages/LayoutPicker.svelte';
 	import Centered from '../../pages/Centered.svelte';
 	import PostCard from '../../components/PostCard.svelte';
 
@@ -31,14 +31,13 @@
 	$: filtered = filter(filters, data);
 	$: sieved = query ? sieve(query, filtered) : filtered;
 	$: total = sieved.length;
-	$: $store = $store * bound > total ? 0 : $store;
 </script>
 
 <MetaHead canonical="posts" title="Posts" description="Get the latest most recent posts here.">
 	<link rel="alternate" href="rss.xml" type="application/rss+xml" />
 </MetaHead>
 
-<GridView itemSize="21em">
+<LayoutPicker view="grid" itemSize="21em">
 	<header slot="header">
 		<h1>Posts by DevMauss</h1>
 
@@ -64,7 +63,7 @@
 			<PostCard {post} />
 		</div>
 	{/each}
-</GridView>
+</LayoutPicker>
 {#if $mobile}
 	<Centered>
 		<Pagination {store} {total} {bound} />

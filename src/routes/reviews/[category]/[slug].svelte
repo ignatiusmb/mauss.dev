@@ -21,6 +21,7 @@
 		mal: 'MyAnimeList',
 	};
 
+	import { Link } from '@ignatiusmb/elements';
 	import MetaHead from '../../../pages/MetaHead.svelte';
 	import Article from '../../../pages/Article.svelte';
 
@@ -30,7 +31,10 @@
 	$: ({ title, spoilers, siblings } = post);
 </script>
 
-<MetaHead {post} canonical="reviews/{post.slug}" title={title.short ? title.short : title.jp ? title.jp : title.en} />
+<MetaHead
+	{post}
+	canonical="reviews/{post.slug}"
+	title={title.short ? title.short : title.jp ? title.jp : title.en} />
 
 <Article header {post} path="content/reviews/{post.slug}.md" {siblings}>
 	<div slot="header">
@@ -41,7 +45,7 @@
 				<span>[</span>
 				{#each Object.keys(post.link) as linkKey}
 					<span>
-						<a href={post.link[linkKey]}>{linkMap[linkKey]}</a>
+						<Link href={post.link[linkKey]} newTab>{linkMap[linkKey]}</Link>
 					</span>
 				{/each}
 				<span>]</span>

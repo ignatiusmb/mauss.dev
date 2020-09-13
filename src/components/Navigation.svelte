@@ -6,7 +6,7 @@
 	const { preloading, page } = stores();
 	const sections = ['about', 'curated', 'posts', 'reviews', 'uses'];
 
-	import { Feather, Link, ThemeSwitcher } from '@ignatiusmb/elements';
+	import { Feather, ThemeSwitcher, Link } from '@ignatiusmb/elements';
 	import NavLink from '../svelte/NavLink.svelte';
 	import NavGrid from './NavGrid.svelte';
 
@@ -60,7 +60,7 @@
 	:global(html.dark) nav :global(a),
 	:global(html.dark) nav :global(a:focus),
 	:global(html.dark) nav :global(a:hover) {
-		color: rgba(var(--fg-color, 1));
+		color: var(--fg-surface);
 	}
 
 	nav {
@@ -68,14 +68,16 @@
 		width: 100%;
 		position: fixed;
 		bottom: 0;
+
 		display: flex;
 		flex-direction: row-reverse;
 		align-items: center;
 		padding: 0.8em 1em;
-		border-top: 0.25em solid rgba(var(--theme-primary), 1);
-		font-family: var(--aqua-heading);
-		background-color: rgba(var(--bg-color, 1));
+		border-top: 0.25em solid var(--theme-primary);
+
 		transition: var(--t-duration) var(--t-function);
+		background-color: var(--bg-surface);
+		font-family: var(--aqua-heading);
 	}
 
 	nav > span,
@@ -99,15 +101,17 @@
 
 	@media only screen and (min-width: 600px) {
 		nav {
-			top: 0;
 			position: sticky;
+			top: 0;
 			flex-direction: row;
 			border-top: none;
+			background-color: var(--bg-base);
 		}
 		nav.scrolled {
 			border: none;
 			box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5);
 			transition: var(--t-duration) var(--t-function);
+			background-color: var(--bg-surface);
 		}
 	}
 </style>

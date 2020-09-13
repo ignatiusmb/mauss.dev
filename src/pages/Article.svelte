@@ -12,7 +12,8 @@
 	onMount(() => {
 		function offsetAnchor() {
 			if (!window.location.hash.length) return;
-			window.scrollTo(window.scrollX, window.scrollY - 50);
+			const offset = window.innerWidth < 600 ? 10 : 50;
+			window.scrollTo(window.scrollX, window.scrollY - offset);
 		}
 		setTimeout(offsetAnchor, 0);
 
@@ -39,7 +40,10 @@
 
 	{#if path}
 		<section>
-			<p>Find an issue with this post? Have something to add, update, or clarify? All my posts here are editable.</p>
+			<p>
+				Find an issue with this post? Have something to add, update, or clarify? All my posts here
+				are editable.
+			</p>
 			<p>
 				Just create a new
 				<Link newTab href="https://github.com/ignatiusmb/mauss/issues">Issue</Link>
@@ -74,7 +78,7 @@
 	}
 	section {
 		padding: 0.4em 0.8em;
-		border-left: 2px solid rgba(var(--theme-secondary), 1);
+		border-left: 2px solid var(--theme-secondary);
 		background-color: rgba(0, 0, 0, 0.05);
 	}
 	article :global(section > :first-child) {
@@ -99,13 +103,13 @@
 	article :global(img) {
 		max-height: 42em;
 		margin: auto;
-		border-radius: 0.15em;
+		border-radius: var(--b-radius);
 		text-align: center;
 	}
 	article :global(img[src*="://"])
 	{
 		border: none;
-		border-radius: 0.15em;
+		border-radius: var(--b-radius);
 		text-align: center;
 	}
 	article :global(h2),
@@ -164,7 +168,7 @@
 		height: 0.1em;
 		margin-top: 2em;
 		border: 0;
-		background-color: rgba(var(--fg-color, 1));
+		background-color: var(--fg-surface);
 	}
 
 	article :global(figure) {
@@ -187,7 +191,7 @@
 	article :global(figure > div.captioned) {
 		position: relative;
 		padding-top: 56.25%;
-		border-radius: 0.15em;
+		border-radius: var(--b-radius);
 	}
 	article :global(div.captioned iframe),
 	article :global(div.captioned img),
