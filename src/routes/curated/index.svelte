@@ -14,7 +14,7 @@
 
 	import { SearchBar, Pagination, ButtonLink } from '@ignatiusmb/elements';
 	import MetaHead from '../../pages/MetaHead.svelte';
-	import GridView from '../../pages/GridView.svelte';
+	import LayoutPicker from '../../pages/LayoutPicker.svelte';
 
 	import { cSlice as store } from '../../stores';
 	import { convertCase } from '../../utils/helper';
@@ -26,7 +26,6 @@
 	$: filtered = filter(filters, data);
 	$: sieved = query ? sieve(query, filtered) : filtered;
 	$: total = sieved.length;
-	$: $store = $store * bound > total ? 0 : $store;
 </script>
 
 <MetaHead
@@ -36,7 +35,7 @@
 	<link rel="alternate" href="rss.xml" type="application/rss+xml" />
 </MetaHead>
 
-<GridView>
+<LayoutPicker view="grid">
 	<header slot="header">
 		<h1>Curated by DevMauss</h1>
 	</header>
@@ -47,9 +46,9 @@
 			<ButtonLink href="curated/{category}">view</ButtonLink>
 		</section>
 	{/each}
-</GridView>
+</LayoutPicker>
 
-<GridView itemSize="18em">
+<LayoutPicker view="grid" itemSize="18em">
 	<header slot="header">
 		<SearchBar bind:query />
 		<Pagination {store} {total} {bound} />
@@ -61,7 +60,7 @@
 			<ButtonLink href="curated/{slug}">read</ButtonLink>
 		</section>
 	{/each}
-</GridView>
+</LayoutPicker>
 
 <style>
 	header {
