@@ -35,7 +35,7 @@
     "@babel/preset-typescript": "^7.10.4",
     "@babel/runtime": "^7.11.2",
     "@ignatiusmb/aqua": "^20.3.1",
-    "@ignatiusmb/elements": "0.6.0",
+    "@ignatiusmb/elements": "0.6.2",
     "@rollup/plugin-alias": "^3.1.1",
     "@rollup/plugin-babel": "^5.2.1",
     "@rollup/plugin-commonjs": "^14.0.0",
