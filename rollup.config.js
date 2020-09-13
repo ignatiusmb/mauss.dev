@@ -67,7 +67,6 @@ export default {
 			typescript({
 				sourceMap: !!sourcemap,
 				inlineSources: !!sourcemap,
-				noEmitOnError: !dev,
 			}),
 			json(),
 
@@ -110,7 +109,6 @@ export default {
 			typescript({
 				sourceMap: !!sourcemap,
 				inlineSources: !!sourcemap,
-				noEmitOnError: !dev,
 			}),
 			json(),
 		],
