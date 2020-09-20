@@ -110,6 +110,8 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		padding-top: 30%;
+		padding-bottom: 15%;
 		text-align: center;
 		font-family: var(--aqua-heading);
 	}
@@ -123,7 +125,6 @@
 		height: 14em;
 		justify-self: center;
 		border-radius: 50%;
-		margin-top: 25%;
 	}
 	header > h3 {
 		margin-bottom: auto;
@@ -185,8 +186,9 @@
 	}
 
 	@media only screen and (min-width: 600px) {
-		header > :global(blockquote) {
-			margin-bottom: revert;
+		header {
+			padding-top: 25%;
+			padding-bottom: 0;
 		}
 	}
 </style>
