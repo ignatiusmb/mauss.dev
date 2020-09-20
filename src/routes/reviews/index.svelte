@@ -124,7 +124,7 @@
 		{/each}
 	{:else if view === 'carousel'}
 		<PerspectiveCarousel>
-			{#each sieved.slice(count, count + bound) as post, idx}
+			{#each sieved.slice(count, count + bound) as post, idx (post.slug)}
 				<div class:translate-left={idx === 0} class:translate-right={idx === 2}>
 					<ReviewCard {post} />
 				</div>
