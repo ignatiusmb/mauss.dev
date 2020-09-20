@@ -87,7 +87,7 @@
 	}
 	main.scrollsnap {
 		scrollbar-width: none;
-		overflow-x: scroll;
+		overflow-x: auto;
 		scroll-snap-type: x mandatory;
 		scroll-behavior: smooth;
 
