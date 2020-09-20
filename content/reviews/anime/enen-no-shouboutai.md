@@ -2,7 +2,7 @@
 year: 2019
 title:en: Fire Force
 title:jp: Enen no Shouboutai
-genres: action, supernatural, shounen
+genres: action, supernatural, shounen, comedy
 rating: story,artwork,sound,characters
 verdict:
 
