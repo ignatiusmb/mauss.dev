@@ -97,7 +97,9 @@
 			</section>
 		</SearchBar>
 
-		<Pagination {store} {total} {bound} {increment} />
+		{#if view !== 'scrollsnap'}
+			<Pagination {store} {total} {bound} {increment} />
+		{/if}
 	</header>
 
 	<aside slot="picker">
@@ -106,6 +108,9 @@
 		</button>
 		<button class:active={view === 'carousel'} on:click={() => (view = 'carousel')}>
 			<Feather.Layers />
+		</button>
+		<button class:active={view === 'scrollsnap'} on:click={() => (view = 'scrollsnap')}>
+			<Feather.Columns />
 		</button>
 	</aside>
 
@@ -119,12 +124,20 @@
 		{/each}
 	{:else if view === 'carousel'}
 		<PerspectiveCarousel>
-			{#each sieved.slice(count, count + bound) as post, idx (post.slug)}
+			{#each sieved.slice(count, count + bound) as post, idx}
 				<div class:translate-left={idx === 0} class:translate-right={idx === 2}>
 					<ReviewCard {post} />
 				</div>
 			{/each}
 		</PerspectiveCarousel>
+	{:else if view === 'scrollsnap'}
+		<div class="empty" />
+		{#each sieved as post (post.slug)}
+			<div animate:flip={{ duration }}>
+				<ReviewCard {post} />
+			</div>
+		{/each}
+		<div class="empty" />
 	{/if}
 </LayoutPicker>
 
@@ -132,7 +145,7 @@
 	h1 {
 		text-align: center;
 	}
-	div {
+	div:not(.empty) {
 		border-radius: var(--b-radius);
 		box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
 			0 1px 3px 0 rgba(0, 0, 0, 0.12);
