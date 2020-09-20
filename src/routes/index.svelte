@@ -142,9 +142,6 @@
 		border-radius: inherit;
 		animation: 28s infinite linear rotate;
 	}
-	header > :global(blockquote) {
-		margin-bottom: 4em;
-	}
 
 	h2 {
 		display: grid;
