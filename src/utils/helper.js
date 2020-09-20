@@ -1,8 +1,9 @@
 export function capitalize(text, lower) {
-	return (lower ? text.toLowerCase() : text).replace(/(?:^|\s)\S/g, function (a) {
-		return a.toUpperCase();
-	});
+	text = lower ? text.toLowerCase() : text;
+	return text.replace(/(?:^|\s)\S/g, (a) => a.toUpperCase());
 }
+
+export const checkNum = (str) => (isNaN(str) ? str : parseInt(str));
 
 export function compareDate(x, y) {
 	const yDate = new Date(y);
