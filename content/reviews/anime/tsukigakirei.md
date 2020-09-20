@@ -27,13 +27,13 @@ link:mal: https://myanimelist.net/anime/34822/Tsuki_ga_Kirei
 
 ## Highlights
 
-### $#{rating:0}#!/10 | Story & Plot
+### #{rating:0}!/10 | Story & Plot
 
-### $#{rating:1}#!/10 | Artwork & Animation
+### #{rating:1}!/10 | Artwork & Animation
 
-### $#{rating:2}#!/10 | Sound
+### #{rating:2}!/10 | Sound
 
-### $#{rating:3}#!/10 | Characters
+### #{rating:3}!/10 | Characters
 
 ## Verdict
 
