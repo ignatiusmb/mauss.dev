@@ -23,7 +23,7 @@ Hinata, her younger sister just started fifth grade and decided to bring her cla
 
 ## Plot
 
-# {title:en}! starts off by introducing us to a Miyako's daily life in general. With only her loving sister to keep her accompanied, Miyako is quite awkward and doesn't seem to know how to handle actual basic social interactions between strangers, but she does seem to get the hang of it if the other person keeps bringing up topics to discuss.
+This show starts off by introducing us to a Miyako's daily life in general. With only her loving sister to keep her accompanied, Miyako is quite awkward and doesn't seem to know how to handle actual basic social interactions between strangers, but she does seem to get the hang of it if the other person keeps bringing up topics to discuss.
 
 Although we see mostly everything that happens inside the house from Miyako's perspective, we rarely see her throughout the actual day and we're only introduced to Hinata's daily life then. We, plus Hinata and friends, don't really know what she does when they're in school, at least for some episodes.
 
