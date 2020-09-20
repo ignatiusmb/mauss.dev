@@ -35,9 +35,9 @@ marker.renderer.rules.image = (tokens, idx, options, env, slf) => {
 	if (/^!YouTube/i.test(alt)) {
 		const link = token.attrs[token.attrIndex('src')][1];
 		data = `<iframe src="https://www.youtube-nocookie.com/embed/${link}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-	} else if (/^!GIF/i.test(alt)) {
+	} else if (/^!Video/i.test(alt)) {
 		const link = token.attrs[token.attrIndex('src')][1];
-		data = `<video controls autoplay><source src="${link}" type="video/mp4"></video>`;
+		data = `<video controls><source src="${link}" type="video/mp4"></video>`;
 	}
 	const rendered = marker.renderInline(caption);
 	return /:disclosure/i.test(alt)
