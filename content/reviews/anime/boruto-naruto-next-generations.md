@@ -28,21 +28,21 @@ There's no plot at this point, just staying relevant is probably a good enough a
 
 ## Highlights
 
-### $#{rating:0}#!/10 | Story & Plot
+### #{rating:0}!/10 | Story & Plot
 
 Half-assed written story with no clear plot and 80% fillers. Plot built on the idea of a flashback story, this anime starts of by showing us a village where they used to live, ruined to pieces after what seemed like a huge battle. It then throws all of that out of the window just a couple seconds later and starts off to (what seems like) 5 or more years then, expecting us to just forget that everything that happens from the very first episode until that very first scene is all but a flashback, A FLASHBACK! Just how stupid can this be to deliver a story based on a flashback, what even is a flashback at this point, we will then experience a flashback inception, where we see a flashback inside flashback on an ongoing flashback.
 
 Even if everything went well, can you really deliver the story well enough to fit it together and reuse the very first scene when the story itself is still being made? How confident can you be to already "spoil" the scene from episode... I don't know, maybe 300 something&mdash;judging from the current pace&mdash;at episode 1 and set our expectations that high, can Boruto really deliver what they promised. Perhaps they can (being optimistic here), but then the question becomes when.
 
-### $#{rating:1}#!/10 | Artwork & Animation
+### #{rating:1}!/10 | Artwork & Animation
 
 It's slowly but surely degrading as the episode number increases. Having the 2.5 month hiatus between April and July this year gave me a bit of hope for Boruto to at least try a bit and produce an animation that doesn't look like it was rushed within 1 week. But, I was too stupid to have (some) hopes for this anime. You see that backdrop on the start of this post, the animation here doesn't even look half as good as that. Watching 1080p feels like watching a gaming video with all the graphic settings turned off and in 360p quality.
 
-### $#{rating:2}#!/10 | Sound
+### #{rating:2}!/10 | Sound
 
 The most decent thing about this anime, nothing spectacular but nothing memorable too. It puts amazing animated OPs and EDs with good soundtracks but absolutely butchered it with the actual show.
 
-### $#{rating:3}#!/10 | Characters
+### #{rating:3}!/10 | Characters
 
 Half-assed written characters. The protagonist who's supposed to be the main focus of this story doesn't have any appealing traits with the only problem he seems to have is that his dad doesn't spend any time with his family and only focuses on keeping the whole village safe and sound with improvements to the facilities here and there.
 

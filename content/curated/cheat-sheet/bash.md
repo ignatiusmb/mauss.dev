@@ -1,9 +1,36 @@
 ---
 title: Complete Bash Utility Cheat Sheet
-date:updated: 2020-06-23
+date:updated: 2020-09-17
 ---
 
 These are my goto scripts to manage my home media server. I'll be compiling all that I remember here so I won't forget it and could quickly search for a reference in the future. I hope most of it would be beneficial to you too.
+
+## Resource management
+
+`df`, displays the amount of disk space available on the file system containing each file name argument. Used more for calculating the overall disk space or file system.
+
+```bash
+# The -H switch is for human-readable format
+df -H path/to/drive
+
+# For more output details
+df -H --output=source,size,used,avail path/to/disk
+```
+
+`du`, stands for disk usage. It reports on directories and not drives.
+
+```bash
+# The -h switch is for human-readable format
+du -h path/to/directory
+
+# Display only the total or summary
+du -sh path/to/directory
+
+# Find the top 10 directories eating space
+du -a path/to/start | sort -nr | head -n 10
+```
+
+## File and folder manipulation
 
 `Copy method`, it creates a hard link for the file or everything in the folder to the desired destination. Hard linking is crucial for media management so that you won't have a lot of wasted space with duplicates or multiple files with similar data and different file names.
 

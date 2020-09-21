@@ -12,7 +12,10 @@
 		</div>
 	</div>
 
-	<main class:grid={view === 'grid'} style="--grid-minval: {itemSize}">
+	<main
+		class:grid={view === 'grid'}
+		class:scrollsnap={view === 'scrollsnap'}
+		style="--grid-minval: {itemSize}">
 		<slot />
 	</main>
 </div>
@@ -35,13 +38,9 @@
 		position: relative;
 		margin: 0 auto;
 	}
-	.layout-wrapper main.grid,
 	.header-wrapper > :global(header) {
 		display: grid;
 		gap: 1em;
-	}
-	.layout-wrapper main.grid {
-		grid-template-columns: repeat(auto-fill, minmax(var(--grid-minval), 1fr));
 	}
 	.header-wrapper > .aside-wrapper {
 		width: 100%;
@@ -73,14 +72,65 @@
 	main :global(img:not([src])) {
 		display: none;
 	}
+	/* View Specific */
+	main.grid {
+		display: grid;
+		gap: 1em;
+		grid-template-columns: repeat(auto-fill, minmax(var(--grid-minval), 1fr));
+		transition: var(--t-duration);
+	}
 	main.grid > :global(div:hover) {
 		transform: translateY(-0.15em);
+	}
+	main.grid > :global(div) {
+		transition: var(--t-duration);
+	}
+	main.scrollsnap {
+		scrollbar-width: none;
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+		scroll-behavior: smooth;
+
+		display: grid;
+		gap: calc(2em + 1vw);
+		grid-auto-flow: column;
+		grid-auto-columns: 12em;
+		padding: 1em 0;
+
+		mask: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #000 10%, #000 90%, rgba(0, 0, 0, 0) 100%);
+	}
+	main.scrollsnap::-webkit-scrollbar {
+		width: 0.5em;
+		height: 0.5em;
+	}
+	main.scrollsnap::-webkit-scrollbar-thumb {
+		background: #201c29;
+		border-radius: 0.5em;
+		box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+	}
+
+	main.scrollsnap::-webkit-scrollbar-track {
+		background: linear-gradient(90deg, #201c29, #201c29 1px, #17141d 0, #17141d);
+	}
+	main.scrollsnap > :global(div) {
+		scroll-snap-align: center;
+		transition: var(--t-duration);
 	}
 
 	@media only screen and (min-width: 480px) {
 		.header-wrapper > .aside-wrapper {
 			width: unset;
 			right: 0;
+		}
+	}
+	@media only screen and (min-width: 600px) {
+		main.scrollsnap:hover > :global(div) {
+			opacity: 0.6;
+			filter: blur(0.1em);
+		}
+		main.scrollsnap:hover > :global(div:hover) {
+			opacity: 1;
+			filter: blur(0);
 		}
 	}
 </style>

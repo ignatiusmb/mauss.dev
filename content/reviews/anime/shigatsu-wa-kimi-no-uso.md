@@ -28,21 +28,21 @@ Based on the manga series of the same name, Shigatsu wa Kimi no Uso approaches t
 
 ## Highlights
 
-### $#{rating:0}#!/10 | Story & Plot
+### #{rating:0}!/10 | Story & Plot
 
 The story makes sense, it's not over the top, it's not cliche either. Pretty predictable in a way, but it's written better than most drama love story I've encountered before. In short, it's original in its own way.
 
 It's mostly sad but they always try to follow up with something humorous to cover it up, but when it doesn't, it really hits hard. It's perhaps the definition of riding a rollercoaster of emotions. The plot is well managed too, it guides you from the beginning to the end smoothly and explains the story in a well-managed manner.
 
-### $#{rating:1}#!/10 | Artwork & Animation
+### #{rating:1}!/10 | Artwork & Animation
 
 As expected of A-1 Pictures, great as always. Always been a fan of their works, and this is without a doubt one of them. My only complaints are when they only put a static image of with sound when a side character is performing. Aside from that, it's scenes and backgrounds, especially when the performance is on, is absolutely beautiful.
 
-### $#{rating:2}#!/10 | Sound
+### #{rating:2}!/10 | Sound
 
 I have no complaints about the sound here. It's a no-brainer for me, I love to listen to music and this show is dedicated to performing one. I love to listen classical music, it's not really the listen-to-everyday kind of music, but if you don't, fear not. The way they present it to you in this show is nice that you don't really get bored by listening to it throughout the show. The opening and ending sequence are super nice too that I never skip.
 
-### $#{rating:3}#!/10 | Characters
+### #{rating:3}!/10 | Characters
 
 The characters are well-built. True to the nature of the genre, they're humans, and they're relatable as such. Their character development is visible and they makes us feel like we grew together with them.
 

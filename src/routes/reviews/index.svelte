@@ -17,26 +17,8 @@
 <script>
 	export let data, unique, verdict, query;
 	import { flip } from 'svelte/animate';
-	import { scale, crossfade } from 'svelte/transition';
-	import { quintInOut } from 'svelte/easing';
+	import { scale } from 'svelte/transition';
 	const duration = 100;
-	const [send, receive] = crossfade({
-		duration: (d) => Math.sqrt(d * 200),
-
-		fallback(node, params) {
-			const style = getComputedStyle(node);
-			const transform = style.transform === 'none' ? '' : style.transform;
-
-			return {
-				duration,
-				easing: quintInOut,
-				css: (t) => `
-					transform: ${transform} scale(${t});
-					opacity: ${t}
-				`,
-			};
-		},
-	});
 
 	import { Feather, SearchBar, Pagination } from '@ignatiusmb/elements';
 	import MetaHead from '../../pages/MetaHead.svelte';
@@ -115,7 +97,9 @@
 			</section>
 		</SearchBar>
 
-		<Pagination {store} {total} {bound} {increment} />
+		{#if view !== 'scrollsnap'}
+			<Pagination {store} {total} {bound} {increment} />
+		{/if}
 	</header>
 
 	<aside slot="picker">
@@ -124,6 +108,9 @@
 		</button>
 		<button class:active={view === 'carousel'} on:click={() => (view = 'carousel')}>
 			<Feather.Layers />
+		</button>
+		<button class:active={view === 'scrollsnap'} on:click={() => (view = 'scrollsnap')}>
+			<Feather.Columns />
 		</button>
 	</aside>
 
@@ -138,16 +125,19 @@
 	{:else if view === 'carousel'}
 		<PerspectiveCarousel>
 			{#each sieved.slice(count, count + bound) as post, idx (post.slug)}
-				<div
-					class="carousel-card"
-					class:translate-left={idx === 0}
-					class:translate-right={idx === 2}
-					in:receive={{ key: post.slug }}
-					out:send={{ key: post.slug }}>
+				<div class:translate-left={idx === 0} class:translate-right={idx === 2}>
 					<ReviewCard {post} />
 				</div>
 			{/each}
 		</PerspectiveCarousel>
+	{:else if view === 'scrollsnap'}
+		<div class="empty" />
+		{#each sieved as post (post.slug)}
+			<div animate:flip={{ duration }}>
+				<ReviewCard {post} />
+			</div>
+		{/each}
+		<div class="empty" />
 	{/if}
 </LayoutPicker>
 
@@ -155,11 +145,10 @@
 	h1 {
 		text-align: center;
 	}
-	div {
+	div:not(.empty) {
 		border-radius: var(--b-radius);
 		box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
 			0 1px 3px 0 rgba(0, 0, 0, 0.12);
-		transition: var(--t-duration);
 		background-color: var(--bg-overlay);
 	}
 	h2 {
