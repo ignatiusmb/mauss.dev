@@ -22,7 +22,7 @@ marker.renderer.rules.heading_open = (tokens, idx) => {
 	if (parseInt(token.tag.slice(-1)) > 3) return `<${token.tag}>`;
 	let tagId = text.split(/ \| /)[0].toLowerCase(); // Take only part before vBar "|"
 	tagId = tagId.replace(separators, '-').split('-').filter(Boolean).join('-');
-	return `<${token.tag} id="${tagId}"><a href="${tagId}"><i></i></a>`;
+	return `<${token.tag} id="${tagId}">`;
 };
 marker.renderer.rules.image = (tokens, idx, options, env, slf) => {
 	const token = tokens[idx];
