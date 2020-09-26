@@ -161,9 +161,6 @@
 	main :global(blockquote li) {
 		margin-left: unset;
 	}
-	main :global(strong) {
-		font-weight: 500;
-	}
 	main :global(hr) {
 		height: 0.1em;
 		margin-top: 2em;
