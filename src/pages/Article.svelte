@@ -6,7 +6,7 @@
 	import { onMount } from 'svelte';
 	import { Link, ProgressBar } from '@ignatiusmb/elements';
 	import Header from './Header.svelte';
-	import Edit from '../svelte/Edit.svelte';
+	import EditLink from '../components/EditLink.svelte';
 	import Siblings from '../svelte/Siblings.svelte';
 
 	onMount(() => {
@@ -50,7 +50,7 @@
 				or
 				<Link newTab href="https://github.com/ignatiusmb/mauss/pulls">PR</Link>
 				on GitHub, any fix or addition is much appreciated!
-				<Edit {path} />
+				<EditLink {path} />
 			</p>
 		</section>
 	{/if}

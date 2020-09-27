@@ -3,7 +3,7 @@
 	export let post;
 	const link = 'https://github.com/ignatiusmb/mauss/commits/master';
 	import { Link } from '@ignatiusmb/elements';
-	import Edit from '../svelte/Edit.svelte';
+	import EditLink from '../components/EditLink.svelte';
 	import { createPrettyDate } from '../utils/helper';
 	$: ({ published, updated } = post.date || {});
 	$: pretty = {
@@ -43,7 +43,7 @@
 
 		<span>{post.read_time} min read</span>
 		{#if path}
-			<Edit {path} />
+			<EditLink {path} />
 		{/if}
 	</small>
 
