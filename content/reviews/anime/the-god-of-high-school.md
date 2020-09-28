@@ -5,7 +5,7 @@ genres: action, adventure, supernatural, martial arts, fantasy, comedy
 rating: story,artwork,sound,characters
 verdict:
 
-last_seen: 2020-09-06
+last_seen: 2020-09-28
 date:published: 2020
 date:updated: 2020
 image:en: https://image.tmdb.org/t/p/original/gfMBnUVzWTlal8Hr0RfgnVe6kHW.jpg
