@@ -41,10 +41,10 @@
 		</NavGrid>
 	{/if}
 
-	<Link newTab href="rss.xml" inherit>
+	<Link inherit newTab href="rss.xml" label="Get RSS">
 		<Feather.Rss />
 	</Link>
-	<Link href="help" inherit>
+	<Link inherit href="help" label="See help page">
 		<Feather.HelpCircle />
 	</Link>
 	<ThemeSwitcher let:current>

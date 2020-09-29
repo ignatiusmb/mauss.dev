@@ -1,4 +1,6 @@
-You miss 100% of the shots you don't take
+Most perfectionist are procrastinators because anxiety makes it difficult to start a project unless you're sure you can do it perfectly.
+
+You miss 100% of the shots you don't take.
 
 If you don't know how to make things better, just listen.
 

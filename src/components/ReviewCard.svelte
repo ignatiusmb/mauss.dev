@@ -9,7 +9,7 @@
 </script>
 
 <section>
-	<Image src={post.image.en} alt={post.title.en} overlay ratio={3 / 2}>
+	<Image src={post.image.en} alt={post.title.en} lazy overlay ratio={3 / 2}>
 		<h3>{post.year}</h3>
 		{#if post.title.short}
 			<h3>{post.title.short}</h3>

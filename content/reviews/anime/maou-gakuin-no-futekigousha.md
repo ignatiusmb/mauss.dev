@@ -7,7 +7,7 @@ genres: action, adventure, comedy, demons, magic, fantasy, school
 rating: story,artwork,sound,characters
 verdict:
 
-last_seen: 2020-09-06
+last_seen: 2020-09-27
 date:published: 2020
 date:updated: 2020
 image:en: https://image.tmdb.org/t/p/original/xBNR7V4s5b0qQfRCiyEvIC5PS6v.jpg

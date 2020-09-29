@@ -6,7 +6,7 @@
 	import { onMount } from 'svelte';
 	import { Link, ProgressBar } from '@ignatiusmb/elements';
 	import Header from './Header.svelte';
-	import Edit from '../svelte/Edit.svelte';
+	import EditLink from '../components/EditLink.svelte';
 	import Siblings from '../svelte/Siblings.svelte';
 
 	onMount(() => {
@@ -27,7 +27,7 @@
 	<ProgressBar />
 {/if}
 
-<article>
+<main>
 	{#if header}
 		<Header {post} {path}>
 			<slot name="header" />
@@ -50,7 +50,7 @@
 				or
 				<Link newTab href="https://github.com/ignatiusmb/mauss/pulls">PR</Link>
 				on GitHub, any fix or addition is much appreciated!
-				<Edit {path} />
+				<EditLink {path} />
 			</p>
 		</section>
 	{/if}
@@ -58,10 +58,10 @@
 	{#if siblings}
 		<Siblings {...siblings} />
 	{/if}
-</article>
+</main>
 
 <style>
-	article {
+	main {
 		width: 100%;
 		max-width: 53em;
 		padding: 0 1em;
@@ -69,11 +69,11 @@
 		word-wrap: break-word;
 		line-height: 1.5;
 	}
-	article :global(section) {
+	main :global(section) {
 		margin-top: 2em;
 		font-size: clamp(1rem, 2vw, 1.15rem);
 	}
-	article > :global(section:first-of-type) {
+	main > :global(section:first-of-type) {
 		margin-top: 4em;
 	}
 	section {
@@ -81,140 +81,137 @@
 		border-left: 2px solid var(--theme-secondary);
 		background-color: rgba(0, 0, 0, 0.05);
 	}
-	article :global(section > :first-child) {
+	main :global(section > :first-child) {
 		margin: 0;
 	}
-	article :global(section p),
-	article :global(section li) {
+	main :global(section p),
+	main :global(section li) {
 		line-height: 2rem;
 	}
-	article :global(blockquote p) {
+	main :global(blockquote p) {
 		line-height: unset;
 	}
 
-	article :global(p) {
+	main :global(p) {
 		margin-top: 0.75em;
 	}
-	article :global(p code),
-	article :global(ol code),
-	article :global(ul code) {
+	main :global(p code),
+	main :global(ol code),
+	main :global(ul code) {
 		font-size: clamp(0.8rem, 2vw, 1rem);
 	}
-	article :global(img) {
+	main :global(img) {
 		max-height: 42em;
 		margin: auto;
 		border-radius: var(--b-radius);
 		text-align: center;
 	}
-	article :global(img[src*="://"])
+	main :global(img[src*="://"])
 	{
 		border: none;
 		border-radius: var(--b-radius);
 		text-align: center;
 	}
-	article :global(h2),
-	article :global(h3) {
+	main :global(h2),
+	main :global(h3) {
 		font-weight: bold;
 		font-family: var(--aqua-heading);
 	}
-	article :global(h2) {
+	main :global(h2) {
 		margin-top: 1.5em;
 		font-size: clamp(1.5rem, 4vw, 2rem);
 	}
-	article :global(h2 + h3) {
+	main :global(h2 + h3) {
 		margin-top: 0.5em;
 	}
-	article :global(h3) {
+	main :global(h3) {
 		margin: 1em 0 -0.25em;
 		font-size: clamp(1.2rem, 4vw, 1.5rem);
 	}
-	article :global(ol + h3),
-	article :global(ul + h3) {
+	main :global(ol + h3),
+	main :global(ul + h3) {
 		margin-top: 1.25em;
 	}
-	article :global(ol),
-	article :global(ul) {
+	main :global(ol),
+	main :global(ul) {
 		padding: 0;
 		padding-left: 0.5em;
 		margin: 0;
 		margin-top: 0.75em;
 		margin-bottom: -0.5em;
 	}
-	article :global(ol li:not(:only-child):last-child),
-	article :global(ul li:not(:only-child):last-child) {
+	main :global(ol li:not(:only-child):last-child),
+	main :global(ul li:not(:only-child):last-child) {
 		margin-bottom: 1em;
 	}
-	article :global(li) {
+	main :global(li) {
 		margin-left: 1em;
 	}
-	article :global(li > ol),
-	article :global(li > ul) {
+	main :global(li > ol),
+	main :global(li > ul) {
 		margin: 0;
 	}
-	article :global(blockquote) {
+	main :global(blockquote) {
 		line-height: 1.5;
 		text-align: center;
 		font-style: italic;
 		font-size: clamp(1.4rem, 3vw, 1.8rem);
 		margin: clamp(0.5em, 3vw, 1.5em);
 	}
-	article :global(blockquote li) {
+	main :global(blockquote li) {
 		margin-left: unset;
 	}
-	article :global(strong) {
-		font-weight: 500;
-	}
-	article :global(hr) {
+	main :global(hr) {
 		height: 0.1em;
 		margin-top: 2em;
 		border: 0;
 		background-color: var(--fg-surface);
 	}
 
-	article :global(figure) {
+	main :global(figure) {
 		margin: 1em 0 2em;
 	}
-	article :global(details) {
+	main :global(details) {
 		margin: 1em 0;
 	}
-	article :global(figure figcaption) {
+	main :global(figure figcaption) {
 		padding: 0.5em 0.25em 0;
 		text-align: center;
 		font: 80% var(--aqua-monospace);
 	}
-	article :global(details summary) {
+	main :global(details summary) {
 		padding: 0 0.25em;
 		margin-bottom: 0.5em;
 		font: 90% var(--aqua-monospace);
 	}
-	article :global(details > div.captioned),
-	article :global(figure > div.captioned) {
+	main :global(details > div.captioned),
+	main :global(figure > div.captioned) {
 		position: relative;
 		padding-top: 56.25%;
 		border-radius: var(--b-radius);
 	}
-	article :global(div.captioned iframe),
-	article :global(div.captioned img),
-	article :global(div.captioned video) {
+	main :global(div.captioned iframe),
+	main :global(div.captioned img),
+	main :global(div.captioned video) {
 		width: 100%;
 		height: 100%;
 		position: absolute;
 		left: 0;
 		top: 0;
 	}
-	article :global(div.captioned img) {
+	main :global(div.captioned img) {
 		object-fit: cover;
 		border-radius: inherit;
 	}
-	article :global(div.captioned video) {
+	main :global(div.captioned video) {
 		border-radius: inherit;
 	}
 
-	article :global(.aqua.code-box) {
+	main :global(.aqua.code-box) {
 		line-height: unset;
 		font-size: 0.8rem;
 	}
-	article :global(.aqua.code-header) {
+	main :global(.aqua.code-header) {
 		line-height: 1;
 	}
 </style>
