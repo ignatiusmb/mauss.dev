@@ -45,10 +45,10 @@ Ref: [Links]
 
 [[Source](link)] Title
 
-## Monthly memes
-
 ***
 
 That's it for our recap of {Month} {Year}, folks! Stay safe and have a great {NextMonth} 👋
 
 As always, let me know if you like this format or have any feedback for the monthly digests in my Twitter, Keybase, or other socials down below.
+
+## Bonus - Monthly memes
