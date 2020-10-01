@@ -14,7 +14,7 @@ I think this is pretty self-explanatory, right? It includes explanation for who 
 
 ## [Curated](curated)
 
-Curated page consists of things I find interesting or worthwhile to be compiled into its own dedicated timeless post, so it shouldn't matter when it's being read. It also hosts the special [Monthly Digests](curated/monthly), subscribe so you'll get the latest digests at the start of every month.
+Curated page consists of things I find interesting or worthwhile to be compiled into its own dedicated timeless post, so it shouldn't matter when it's being read. It also hosts the special [Monthly Digests](curated/digest), subscribe so you'll get the latest digests at the start of every month.
 
 ### Monthly Digests
 

@@ -34,7 +34,7 @@ marker.renderer.rules.image = (tokens, idx, options, env, slf) => {
 	let data = slf.renderToken(tokens, idx, options);
 	if (/^!YouTube/i.test(alt)) {
 		const link = token.attrs[token.attrIndex('src')][1];
-		data = `<iframe src="https://www.youtube-nocookie.com/embed/${link}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+		data = `<iframe src="https://www.youtube-nocookie.com/embed/${link}" frameborder="0" allowfullscreen></iframe>`;
 	} else if (/^!Video/i.test(alt)) {
 		const link = token.attrs[token.attrIndex('src')][1];
 		data = `<video controls><source src="${link}" type="video/mp4"></video>`;
