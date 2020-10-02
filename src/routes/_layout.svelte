@@ -1,5 +1,9 @@
 <script>
 	export let segment;
+
+	import { stores } from '@sapper/app';
+	const { page } = stores();
+
 	import { ScrollTop } from '@ignatiusmb/elements';
 	import Navigation from '../components/Navigation.svelte';
 	import Footer from '../components/Footer.svelte';
@@ -14,6 +18,8 @@
 	import { mobile } from '../stores';
 	let innerWidth;
 	$: $mobile = innerWidth < 600;
+
+	$: if (process.browser && !process.dev) fetch(`api/hit?slug=${$page.path}`);
 </script>
 
 <svelte:window bind:innerWidth />
