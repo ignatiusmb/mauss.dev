@@ -13,6 +13,7 @@ import { terser } from 'rollup-plugin-terser';
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
 
+require('dotenv').config();
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
 const sourcemap = dev ? 'inline' : false;
@@ -50,7 +51,7 @@ export default {
 		plugins: [
 			replace({
 				'process.browser': true,
-				'process.env.NODE_ENV': JSON.stringify(mode),
+				'process.dev': dev,
 			}),
 			alias,
 			svelte({
@@ -95,7 +96,7 @@ export default {
 		plugins: [
 			replace({
 				'process.browser': false,
-				'process.env.NODE_ENV': JSON.stringify(mode),
+				'process.dev': dev,
 			}),
 			alias,
 			svelte({
@@ -123,7 +124,7 @@ export default {
 			resolve(),
 			replace({
 				'process.browser': true,
-				'process.env.NODE_ENV': JSON.stringify(mode),
+				'process.dev': dev,
 			}),
 			commonjs({ sourceMap: !!sourcemap }),
 			!dev && terser(),
