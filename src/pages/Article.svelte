@@ -9,19 +9,21 @@
 	import EditLink from '../components/EditLink.svelte';
 	import Siblings from '../svelte/Siblings.svelte';
 
-	onMount(() => {
-		function offsetAnchor() {
-			if (!window.location.hash.length) return;
-			const offset = window.innerWidth < 600 ? 10 : 50;
-			window.scrollTo(window.scrollX, window.scrollY - offset);
-		}
-		setTimeout(offsetAnchor, 0);
+	function offsetAnchor() {
+		if (!window.location.hash.length) return;
+		const offset = window.innerWidth < 600 ? 10 : 50;
+		window.scrollTo(window.scrollX, window.scrollY - offset);
+	}
 
+	const offsetDelay = () => setTimeout(offsetAnchor, 0);
+	onMount(() => {
+		document.addEventListener('DOMContentLoaded', offsetDelay);
 		const anchors = document.querySelectorAll('a[href*="#"]');
-		const delay = () => setTimeout(offsetAnchor, 0);
-		for (const hash of anchors) hash.addEventListener('click', delay);
+		for (const hash of anchors) hash.addEventListener('click', offsetDelay);
 	});
 </script>
+
+<svelte:window on:load={offsetDelay} />
 
 {#if header}
 	<ProgressBar />
