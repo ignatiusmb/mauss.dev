@@ -24,6 +24,8 @@ link:mal: https://myanimelist.net/anime/36474/Sword_Art_Online__Alicization
 
 ## Highlights
 
+<https://www.reddit.com/r/swordartonline/comments/iyriv1/what_a_great_opening/>
+
 ### #{rating:0}!/10 | Story & Plot
 
 ### #{rating:1}!/10 | Artwork & Animation
