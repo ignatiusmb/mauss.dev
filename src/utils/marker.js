@@ -30,19 +30,27 @@ marker.renderer.rules.image = (tokens, idx, options, env, slf) => {
 	if (token.attrIndex('title') === -1) return slf.renderToken(tokens, idx, options);
 
 	const caption = token.attrs.pop()[1];
-	const alt = token.attrs[token.attrIndex('alt')][1];
-	let data = slf.renderToken(tokens, idx, options);
+	const altIdx = token.attrIndex('alt');
+	const alt = token.attrs[altIdx][1];
+
+	let data;
 	if (/^!YouTube/i.test(alt)) {
 		const link = token.attrs[token.attrIndex('src')][1];
 		data = `<iframe src="https://www.youtube-nocookie.com/embed/${link}" frameborder="0" allowfullscreen></iframe>`;
 	} else if (/^!Video/i.test(alt)) {
 		const link = token.attrs[token.attrIndex('src')][1];
 		data = `<video controls><source src="${link}" type="video/mp4"></video>`;
+	} else {
+		tokens[idx].attrs[altIdx][1] = alt.replace(/#disclosure|#flexible/g, '');
+		data = slf.renderToken(tokens, idx, options);
 	}
+
+	data = `<div class="captioned${/#flexible/i.test(alt) ? ' flexible' : ''}">${data}</div>`;
 	const rendered = marker.renderInline(caption);
-	return /:disclosure/i.test(alt)
-		? `<details><summary>${rendered}</summary><div class="captioned">${data}</div></details>`
-		: `<figure><div class="captioned">${data}</div><figcaption>${rendered}</figcaption></figure>`;
+
+	return /#disclosure/i.test(alt)
+		? `<details><summary>${rendered}</summary>${data}</details>`
+		: `<figure>${data}<figcaption>${rendered}</figcaption></figure>`;
 };
 
 export default marker;
