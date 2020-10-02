@@ -186,23 +186,27 @@
 	}
 	main :global(details > div.captioned),
 	main :global(figure > div.captioned) {
-		position: relative;
-		padding-top: 56.25%;
 		border-radius: var(--b-radius);
 	}
-	main :global(div.captioned iframe),
-	main :global(div.captioned img),
-	main :global(div.captioned video) {
+	main :global(details > div.captioned:not(.flexible)),
+	main :global(figure > div.captioned:not(.flexible)) {
+		position: relative;
+		padding-top: 56.25%;
+	}
+	main :global(div.captioned:not(.flexible) iframe),
+	main :global(div.captioned:not(.flexible) img),
+	main :global(div.captioned:not(.flexible) video) {
 		width: 100%;
 		height: 100%;
 		position: absolute;
 		left: 0;
 		top: 0;
 	}
-	main :global(div.captioned img) {
+	main :global(div.captioned:not(.flexible) img) {
 		object-fit: cover;
-		border-radius: inherit;
 	}
+
+	main :global(div.captioned img),
 	main :global(div.captioned video) {
 		border-radius: inherit;
 	}
