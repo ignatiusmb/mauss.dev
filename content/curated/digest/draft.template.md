@@ -41,7 +41,7 @@ Ref: [Links]
 
 ## Detailed monthly recap
 
-### {Date} - {Day}
+### {Date}
 
 [[Source](link)] Title
 
