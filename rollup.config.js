@@ -115,19 +115,19 @@ export default {
 		],
 	},
 
-	serviceworker: {
-		input: config.serviceworker.input(),
-		output: { ...config.serviceworker.output(), sourcemap },
-		preserveEntrySignatures: false,
-		onwarn,
-		plugins: [
-			resolve(),
-			replace({
-				'process.browser': true,
-				'process.dev': dev,
-			}),
-			commonjs({ sourceMap: !!sourcemap }),
-			!dev && terser(),
-		],
-	},
+	// serviceworker: {
+	// 	input: config.serviceworker.input(),
+	// 	output: { ...config.serviceworker.output(), sourcemap },
+	// 	preserveEntrySignatures: false,
+	// 	onwarn,
+	// 	plugins: [
+	// 		resolve(),
+	// 		replace({
+	// 			'process.browser': true,
+	// 			'process.dev': dev,
+	// 		}),
+	// 		commonjs({ sourceMap: !!sourcemap }),
+	// 		!dev && terser(),
+	// 	],
+	// },
 };
