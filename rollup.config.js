@@ -1,4 +1,3 @@
-import aliasFactory from '@rollup/plugin-alias';
 import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
@@ -24,17 +23,6 @@ const onwarn = (warning, onwarn) =>
 	(warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message)) ||
 	onwarn(warning);
 
-const rootPath = require('path').resolve(__dirname, 'src');
-const alias = aliasFactory({
-	entries: [
-		{ find: '@app', replacement: `${rootPath}/` },
-		{ find: '@components', replacement: `${rootPath}/components` },
-		{ find: '@pages', replacement: `${rootPath}/pages` },
-		{ find: '@styles', replacement: `${rootPath}/styles` },
-		{ find: '@svelte', replacement: `${rootPath}/svelte` },
-		{ find: '@utils', replacement: `${rootPath}/utils` },
-	],
-});
 const preprocess = [
 	autoPreprocess({
 		postcss: { plugins: [require('autoprefixer')()] },
@@ -53,7 +41,6 @@ export default {
 				'process.browser': true,
 				'process.dev': dev,
 			}),
-			alias,
 			svelte({
 				dev,
 				preprocess,
@@ -98,7 +85,6 @@ export default {
 				'process.browser': false,
 				'process.dev': dev,
 			}),
-			alias,
 			svelte({
 				dev,
 				preprocess,
