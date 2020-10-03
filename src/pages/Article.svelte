@@ -188,6 +188,8 @@
 	}
 	main :global(details > div.captioned),
 	main :global(figure > div.captioned) {
+		display: flex;
+		justify-content: center;
 		border-radius: var(--b-radius);
 	}
 	main :global(details > div.captioned:not(.flexible)),
@@ -211,6 +213,9 @@
 	main :global(div.captioned img),
 	main :global(div.captioned video) {
 		border-radius: inherit;
+	}
+	main :global(div.captioned.flexible video) {
+		width: 100%;
 	}
 
 	main :global(.aqua.code-box) {
