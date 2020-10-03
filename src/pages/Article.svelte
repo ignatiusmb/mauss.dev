@@ -102,7 +102,8 @@
 	main :global(ul code) {
 		font-size: clamp(0.8rem, 2vw, 1rem);
 	}
-	main :global(img) {
+	main :global(img),
+	main :global(video) {
 		max-height: 42em;
 		margin: auto;
 		border-radius: var(--b-radius);
