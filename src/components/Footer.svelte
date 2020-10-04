@@ -58,6 +58,13 @@
 			&plus;
 			<Link newTab href="https://aqua.mauss.dev/">Aqua</Link>
 		</p>
+		<small>
+			<Link newTab href="https://web.dev/time-to-first-byte/">TTFB:</Link>
+			{#if process.browser}
+				{window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart}
+				ms
+			{/if}
+		</small>
 	</section>
 </footer>
 
