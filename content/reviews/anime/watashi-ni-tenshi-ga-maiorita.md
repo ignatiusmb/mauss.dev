@@ -81,9 +81,9 @@ Aside from that, despite being inside all the time, Miyako is really talented. S
 
 ## Soundtracks
 
-![!YouTube:disclosure](KE_eUJeyMzM "OP/ED - Kimama na Tenshitachi by Wataten☆Five [[Spotify](spotify:track:7GXPTAop1kVgWds4ZiAboh)]")
+![!YouTube#disclosure](KE_eUJeyMzM "[[Spotify](spotify:track:7GXPTAop1kVgWds4ZiAboh)] OP/ED - Kimama na Tenshitachi by Wataten☆Five")
 
-![!YouTube:disclosure](RQVUsWlq8yw "ED02 - Happy Happy Friends by Wataten☆Five [[Spotify](spotify:track:2dPU25vkiOuE6VpKpVnGWC)]")
+![!YouTube#disclosure](RQVUsWlq8yw "[[Spotify](spotify:track:2dPU25vkiOuE6VpKpVnGWC)] ED02 - Happy Happy Friends by Wataten☆Five")
 
 ***
 Reference(s):

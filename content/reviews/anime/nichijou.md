@@ -24,6 +24,8 @@ link:mal: https://myanimelist.net/anime/10165/Nichijou
 
 ## Highlights
 
+<https://www.reddit.com/r/anime/comments/j1rnyu/all_that_animation_for_just_a_short_and/>
+
 ### #{rating:0}!/10 | Story & Plot
 
 ### #{rating:1}!/10 | Artwork & Animation

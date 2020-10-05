@@ -15,13 +15,13 @@ Hey folks, welcome back to our monthly digest! As always, feel free to skip ahea
 
 ### Honorable content mentions
 
-## Music of the month | [Spotify Playlist](spotify:playlist:{playlist_id})
+## Music of the month | [Spotify Playlist]({spotify_playlist_uri})
 
 ![!YouTube]({youtube_id} "caption")
 
 ### Honorable music mentions
 
-## Video of the month | [YouTube Playlist]({playlist_link})
+## Video of the month | [YouTube Playlist]({youtube_playlist_link})
 
 ![!YouTube]({youtube_id} "caption")
 
@@ -41,7 +41,7 @@ Ref: [Links]
 
 ## Detailed monthly recap
 
-### {Date} - {Day}
+### {Date}
 
 [[Source](link)] Title
 

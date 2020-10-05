@@ -9,19 +9,21 @@
 	import EditLink from '../components/EditLink.svelte';
 	import Siblings from '../svelte/Siblings.svelte';
 
-	onMount(() => {
-		function offsetAnchor() {
-			if (!window.location.hash.length) return;
-			const offset = window.innerWidth < 600 ? 10 : 50;
-			window.scrollTo(window.scrollX, window.scrollY - offset);
-		}
-		setTimeout(offsetAnchor, 0);
+	function offsetAnchor() {
+		if (!window.location.hash.length) return;
+		const offset = window.innerWidth < 600 ? 10 : 50;
+		window.scrollTo(window.scrollX, window.scrollY - offset);
+	}
 
+	const offsetDelay = () => setTimeout(offsetAnchor, 0);
+	onMount(() => {
+		document.addEventListener('DOMContentLoaded', offsetDelay);
 		const anchors = document.querySelectorAll('a[href*="#"]');
-		const delay = () => setTimeout(offsetAnchor, 0);
-		for (const hash of anchors) hash.addEventListener('click', delay);
+		for (const hash of anchors) hash.addEventListener('click', offsetDelay);
 	});
 </script>
+
+<svelte:window on:load={offsetDelay} />
 
 {#if header}
 	<ProgressBar />
@@ -100,7 +102,8 @@
 	main :global(ul code) {
 		font-size: clamp(0.8rem, 2vw, 1rem);
 	}
-	main :global(img) {
+	main :global(img),
+	main :global(video) {
 		max-height: 42em;
 		margin: auto;
 		border-radius: var(--b-radius);
@@ -186,25 +189,34 @@
 	}
 	main :global(details > div.captioned),
 	main :global(figure > div.captioned) {
-		position: relative;
-		padding-top: 56.25%;
+		display: flex;
+		justify-content: center;
 		border-radius: var(--b-radius);
 	}
-	main :global(div.captioned iframe),
-	main :global(div.captioned img),
-	main :global(div.captioned video) {
+	main :global(details > div.captioned:not(.flexible)),
+	main :global(figure > div.captioned:not(.flexible)) {
+		position: relative;
+		padding-top: 56.25%;
+	}
+	main :global(div.captioned:not(.flexible) iframe),
+	main :global(div.captioned:not(.flexible) img),
+	main :global(div.captioned:not(.flexible) video) {
 		width: 100%;
 		height: 100%;
 		position: absolute;
 		left: 0;
 		top: 0;
 	}
-	main :global(div.captioned img) {
+	main :global(div.captioned:not(.flexible) img) {
 		object-fit: cover;
-		border-radius: inherit;
 	}
+
+	main :global(div.captioned img),
 	main :global(div.captioned video) {
 		border-radius: inherit;
+	}
+	main :global(div.captioned.flexible video) {
+		width: 100%;
 	}
 
 	main :global(.aqua.code-box) {
