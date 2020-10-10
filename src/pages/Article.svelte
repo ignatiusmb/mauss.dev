@@ -119,6 +119,7 @@
 		line-height: 2rem;
 	}
 	main :global(blockquote p) {
+		font-size: inherit;
 		line-height: unset;
 	}
 	main :global(blockquote > :first-child) {
