@@ -77,9 +77,7 @@
 			</section>
 		{/if}
 
-		<article>
-			{@html post.content}
-		</article>
+		{@html post.content}
 	</section>
 </Article>
 

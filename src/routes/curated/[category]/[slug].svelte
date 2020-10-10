@@ -31,7 +31,5 @@
 		</section>
 	{/if}
 
-	<section>
-		{@html content}
-	</section>
+	{@html content}
 </Article>
