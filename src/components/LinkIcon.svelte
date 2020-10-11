@@ -10,6 +10,10 @@
 </span>
 
 <style>
+	span {
+		display: inline-flex;
+		align-items: center;
+	}
 	span > :global(a) {
 		display: inline-grid;
 		gap: 0.25em;
