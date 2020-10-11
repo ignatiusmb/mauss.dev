@@ -2,7 +2,7 @@
 	export let path = null;
 	export let post;
 	import { Feather, Link } from '@ignatiusmb/elements';
-	import LinkIcon from '../components/LinkIcon.svelte';
+	import TextIcon from '../components/TextIcon.svelte';
 	import { createPrettyDate } from '../utils/helper';
 	$: ({ author, published, updated } = post.date || {});
 	$: ({ name, img, link } = author || {});
@@ -36,10 +36,10 @@
 						</time>
 					</span>
 					{#if path && (!updated || (updated && updated === published))}
-						<LinkIcon href="https://github.com/ignatiusmb/mauss/edit/master/{path}">
+						<TextIcon href="https://github.com/ignatiusmb/mauss/edit/master/{path}">
 							<span>Edit</span>
 							<Feather.Edit size="17" />
-						</LinkIcon>
+						</TextIcon>
 					{/if}
 				</div>
 			{/if}
@@ -47,28 +47,28 @@
 			{#if updated && updated !== published}
 				<div>
 					{#if path}
-						<LinkIcon href="https://github.com/ignatiusmb/mauss/commits/master/{path}" newTab>
+						<TextIcon href="https://github.com/ignatiusmb/mauss/commits/master/{path}" newTab>
 							<Feather.GitCommit size="18" />
 							<time datetime={updated}>Updated {pretty.updated.complete}</time>
-						</LinkIcon>
+						</TextIcon>
 					{:else}
 						<span>
 							<time datetime={updated}>Updated {pretty.updated.complete}</time>
 						</span>
 					{/if}
 					{#if path}
-						<LinkIcon href="https://github.com/ignatiusmb/mauss/edit/master/{path}">
+						<TextIcon href="https://github.com/ignatiusmb/mauss/edit/master/{path}">
 							<span>Edit</span>
 							<Feather.Edit size="17" />
-						</LinkIcon>
+						</TextIcon>
 					{/if}
 				</div>
 			{/if}
 
-			<LinkIcon>
+			<TextIcon>
 				<Feather.Clock size="15" />
 				<span>{post.read_time} min read</span>
-			</LinkIcon>
+			</TextIcon>
 		</div>
 	</small>
 

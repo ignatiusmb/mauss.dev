@@ -6,7 +6,7 @@
 	import { onMount } from 'svelte';
 	import { Feather, Link, ProgressBar } from '@ignatiusmb/elements';
 	import Header from './Header.svelte';
-	import LinkIcon from '../components/LinkIcon.svelte';
+	import TextIcon from '../components/TextIcon.svelte';
 	import Siblings from '../svelte/Siblings.svelte';
 
 	function offsetAnchor() {
@@ -52,10 +52,10 @@
 				or
 				<Link newTab href="https://github.com/ignatiusmb/mauss/pulls">PR</Link>
 				on GitHub, any fix or addition is much appreciated!
-				<LinkIcon href="https://github.com/ignatiusmb/mauss/edit/master/{path}">
+				<TextIcon href="https://github.com/ignatiusmb/mauss/edit/master/{path}">
 					<span>Edit</span>
 					<Feather.Edit size="17" />
-				</LinkIcon>
+				</TextIcon>
 			</p>
 		</section>
 	{/if}
