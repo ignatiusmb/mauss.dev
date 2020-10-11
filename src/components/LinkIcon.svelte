@@ -1,18 +1,25 @@
 <script>
-	export let href;
+	export let href = '';
 	import { Link } from '@ignatiusmb/elements';
 </script>
 
-<span>
-	<Link {href} newTab invert>
+<span class:empty={!href}>
+	{#if href}
+		<Link {href} newTab invert>
+			<slot />
+		</Link>
+	{:else}
 		<slot />
-	</Link>
+	{/if}
 </span>
 
 <style>
 	span {
 		display: inline-flex;
 		align-items: center;
+	}
+	span.empty > :global(:not(:first-child)) {
+		margin-left: 0.25em;
 	}
 	span > :global(a) {
 		display: inline-grid;
