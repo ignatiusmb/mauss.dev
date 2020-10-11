@@ -65,10 +65,20 @@
 				</div>
 			{/if}
 
-			<TextIcon>
-				<Feather.Clock size="15" />
-				<span>{post.read_time} min read</span>
-			</TextIcon>
+			<div>
+				<TextIcon>
+					<Feather.Clock size="15" />
+					<span>{post.read_time} min read</span>
+				</TextIcon>
+				<TextIcon
+					style="cursor:pointer"
+					on:click={async () => {
+						if (!process.browser && !navigator.share) return;
+						navigator.share({ title: document.title, url: window.location.href });
+					}}>
+					<span>Share</span>
+				</TextIcon>
+			</div>
 		</div>
 	</small>
 
