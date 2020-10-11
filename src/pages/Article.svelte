@@ -4,9 +4,9 @@
 	export let path = null;
 	export let siblings = null;
 	import { onMount } from 'svelte';
-	import { Link, ProgressBar } from '@ignatiusmb/elements';
+	import { Feather, Link, ProgressBar } from '@ignatiusmb/elements';
 	import Header from './Header.svelte';
-	import EditLink from '../components/EditLink.svelte';
+	import LinkIcon from '../components/LinkIcon.svelte';
 	import Siblings from '../svelte/Siblings.svelte';
 
 	function offsetAnchor() {
@@ -52,7 +52,10 @@
 				or
 				<Link newTab href="https://github.com/ignatiusmb/mauss/pulls">PR</Link>
 				on GitHub, any fix or addition is much appreciated!
-				<EditLink {path} />
+				<LinkIcon href="https://github.com/ignatiusmb/mauss/edit/master/{path}">
+					<span>Edit</span>
+					<Feather.Edit size="17" />
+				</LinkIcon>
 			</p>
 		</section>
 	{/if}
