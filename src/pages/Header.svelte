@@ -1,11 +1,10 @@
 <script>
 	export let path = null;
 	export let post;
-	const link = 'https://github.com/ignatiusmb/mauss/commits/master';
-	import { Link } from '@ignatiusmb/elements';
-	import EditLink from '../components/EditLink.svelte';
+	import { Feather, Link } from '@ignatiusmb/elements';
+	import LinkIcon from '../components/LinkIcon.svelte';
 	import { createPrettyDate } from '../utils/helper';
-	$: ({ published, updated } = post.date || {});
+	$: ({ author, published, updated } = post.date || {});
 	$: pretty = {
 		published: createPrettyDate(published),
 		updated: createPrettyDate(updated),
@@ -22,29 +21,54 @@
 	{/if}
 
 	<small>
-		{#if updated && updated !== published}
-			<span>
-				{#if path}
-					<time datetime={updated}>Updated {pretty.updated.complete}</time>
-					<Link href="{link}/{path}" newTab>[revision history]</Link>
-				{:else}
-					<time datetime={updated}>Updated {pretty.updated.complete}</time>
-				{/if}
-			</span>
-		{/if}
-		{#if published}
-			<span>
-				<time datetime={published}>
-					{#if published !== updated}Published on{/if}
-					{pretty.published.weekday}, {pretty.published.complete}
-				</time>
-			</span>
-		{/if}
+		<Link href="about">
+			<img src="profile/mauss.jpeg" alt="author profile" />
+		</Link>
+		<div class="details">
+			<span style="font-weight: bolder">{author || 'Ignatius Bagussuputra'}</span>
 
-		<span>{post.read_time} min read</span>
-		{#if path}
-			<EditLink {path} />
-		{/if}
+			{#if published}
+				<div>
+					<span>
+						<time datetime={published}>
+							Published on {pretty.published.weekday}, {pretty.published.complete}
+						</time>
+					</span>
+					{#if path && (!updated || (updated && updated === published))}
+						<LinkIcon href="https://github.com/ignatiusmb/mauss/edit/master/{path}">
+							<span>Edit</span>
+							<Feather.Edit size="17" />
+						</LinkIcon>
+					{/if}
+				</div>
+			{/if}
+
+			{#if updated && updated !== published}
+				<div>
+					{#if path}
+						<LinkIcon href="https://github.com/ignatiusmb/mauss/commits/master/{path}" newTab>
+							<Feather.GitCommit size="18" />
+							<time datetime={updated}>Updated {pretty.updated.complete}</time>
+						</LinkIcon>
+					{:else}
+						<span>
+							<time datetime={updated}>Updated {pretty.updated.complete}</time>
+						</span>
+					{/if}
+					{#if path}
+						<LinkIcon href="https://github.com/ignatiusmb/mauss/edit/master/{path}">
+							<span>Edit</span>
+							<Feather.Edit size="17" />
+						</LinkIcon>
+					{/if}
+				</div>
+			{/if}
+
+			<LinkIcon>
+				<Feather.Clock size="15" />
+				<span>{post.read_time} min read</span>
+			</LinkIcon>
+		</div>
 	</small>
 
 	<slot />
@@ -54,7 +78,7 @@
 	header,
 	header > :global(div) {
 		display: grid;
-		gap: 0.5em;
+		gap: 0.8em;
 		line-height: 1;
 		font-family: var(--aqua-heading);
 	}
@@ -68,18 +92,40 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
-		font-size: clamp(0.9rem, 2vw, 1.1rem);
+		font-size: clamp(0.8rem, 2vw, 1rem);
 	}
-	small:first-of-type > :not(:last-child)::after,
-	header > :global(div > small:first-of-type > :not(:last-child)::after) {
+
+	small:first-of-type {
+		display: grid;
+		gap: 0.75em;
+		grid-template-columns: 3em 1fr;
+	}
+	small:first-of-type > :global(:first-child) {
+		align-self: flex-start;
+	}
+	small:first-of-type img {
+		border-radius: 50%;
+	}
+	small:first-of-type > .details {
+		display: grid;
+		gap: 0.5em;
+	}
+	.details > div {
+		display: flex;
+		align-items: center;
+	}
+
+	.details > div > :global(:not(:first-child)::before),
+	header > :global(small:not(:first-of-type):not([slot]) > :not(:first-child)::before),
+	header > :global(div > small:not([slot]) > :not(:first-child)::before) {
 		content: '~';
 		margin: 0 0.5em;
 		color: var(--theme-secondary);
 		font-weight: bolder;
 	}
-	small > :global(span),
-	header > :global(div > small > span) {
-		margin-bottom: 0.25em;
+	small > :global(span.no-tilde::before) {
+		content: '' !important;
+		margin: 0 !important;
 	}
 	small time + :global(.lmns-link) {
 		font: 90% var(--aqua-monospace);
