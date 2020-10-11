@@ -77,6 +77,7 @@
 						navigator.share({ title: document.title, url: window.location.href });
 					}}>
 					<span>Share</span>
+					<Feather.Share2 size="17" />
 				</TextIcon>
 			</div>
 		</div>
