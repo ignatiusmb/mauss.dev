@@ -30,7 +30,7 @@
 	{/if}
 
 	<NavLink>
-		<img src="favicon.ico" alt="DevMauss" width="24" />
+		<img src="favicon.ico" alt="DevMauss" width="24" height="24" />
 	</NavLink>
 
 	{#if !mobile || opened}
