@@ -157,7 +157,7 @@ Yosuga no Sora finishes after only 1 season of 12 episodes. Each episode consist
 
 In total, there's 5 endings, 4 as the main storyline and another one in the extras.
 
-![Yosuga no Sora Backdrop](https://image.tmdb.org/t/p/original/haeBJjV2JHfopKl4dYE7RJwASlF.jpg "Sky of Connection")
+![Yosuga no Sora Backdrop#f#fb](https://image.tmdb.org/t/p/original/haeBJjV2JHfopKl4dYE7RJwASlF.jpg "Source: TMDB")
 
 ## Highlights
 
