@@ -5,6 +5,7 @@
 	import LinkIcon from '../components/LinkIcon.svelte';
 	import { createPrettyDate } from '../utils/helper';
 	$: ({ author, published, updated } = post.date || {});
+	$: ({ name, img, link } = author || {});
 	$: pretty = {
 		published: createPrettyDate(published),
 		updated: createPrettyDate(updated),
@@ -21,11 +22,11 @@
 	{/if}
 
 	<small>
-		<Link href="about">
-			<img src="profile/mauss.jpeg" alt="author profile" />
+		<Link href={link || 'about'}>
+			<img src={img || 'profile/mauss.jpeg'} alt="author profile" />
 		</Link>
 		<div class="details">
-			<span style="font-weight: bolder">{author || 'Ignatius Bagussuputra'}</span>
+			<span style="font-weight: bolder">{name || 'Ignatius Bagussuputra'}</span>
 
 			{#if published}
 				<div>
