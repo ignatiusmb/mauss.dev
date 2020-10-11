@@ -19,7 +19,7 @@
 	let innerWidth;
 	$: $mobile = innerWidth < 600;
 
-	$: if (process.browser && !process.dev) {
+	$: if (!process.dev && process.browser) {
 		fetch(`api/hit?slug=${$page.path}`, { method: 'POST' });
 	}
 </script>
