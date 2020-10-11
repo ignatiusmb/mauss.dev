@@ -1,9 +1,10 @@
 <script>
 	export let href = '';
+	export let style = '';
 	import { Link } from '@ignatiusmb/elements';
 </script>
 
-<span class:empty={!href}>
+<span on:click {style} class:empty={!href}>
 	{#if href}
 		<Link {href} newTab invert>
 			<slot />
