@@ -61,7 +61,7 @@ marker.renderer.rules.image = (tokens, idx, options, env, slf) => {
 	const mAttrs = new Set(media.attrs.map((a) => classMap[a] || a));
 	const classes = {
 		div: ['captioned', ['flexible'].filter((c) => mAttrs.has(c))].flat(),
-		top: ['half-bleed', 'full-bleed', 'pseudo-full-bleed'].filter((c) => mAttrs.has(c)),
+		top: ['half-bleed', 'full-bleed'].filter((c) => mAttrs.has(c)),
 	};
 
 	media.data = `<div class="${classes.div.join(' ')}">${media.data}</div>`;
