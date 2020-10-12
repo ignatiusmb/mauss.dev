@@ -24,7 +24,7 @@ Having the privilege of being born from the greatest ninja ever that lived in hi
 
 There's no plot at this point, just staying relevant is probably a good enough achievement for this anime. Its manga is being written as this anime is produced, what more can I say. An anime with a release format that should just die already, having only one mega-season with a weekly release schedule. You can be sure that it's quality will never be as good as those prepared in advance and released in seasons.
 
-![Boruto Backdrop](https://image.tmdb.org/t/p/original/3XlKckxPEa4lg5w4vHnyE35PUyI.jpg)
+![Boruto Backdrop#f#fb](https://image.tmdb.org/t/p/original/3XlKckxPEa4lg5w4vHnyE35PUyI.jpg "Source: TMDB")
 
 ## Highlights
 

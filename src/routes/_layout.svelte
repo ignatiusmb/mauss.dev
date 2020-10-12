@@ -19,7 +19,9 @@
 	let innerWidth;
 	$: $mobile = innerWidth < 600;
 
-	$: if (process.browser && !process.dev) fetch(`api/hit?slug=${$page.path}`);
+	$: if (!process.dev && process.browser) {
+		fetch(`api/hit?slug=${$page.path}`, { method: 'POST' });
+	}
 </script>
 
 <svelte:window bind:innerWidth />

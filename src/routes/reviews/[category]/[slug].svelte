@@ -55,18 +55,14 @@
 
 	<Disclaimer link />
 
-	<section>
-		{@html post.content}
-	</section>
+	{@html post.content}
 
 	{#if spoilers}
 		<Spoilers {spoilers} />
 	{/if}
 
 	{#if post.closing}
-		<section>
-			{@html post.closing}
-		</section>
+		{@html post.closing}
 	{/if}
 </Article>
 

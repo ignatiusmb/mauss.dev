@@ -27,7 +27,7 @@ This show starts off by introducing us to a Miyako's daily life in general. With
 
 Although we see mostly everything that happens inside the house from Miyako's perspective, we rarely see her throughout the actual day and we're only introduced to Hinata's daily life then. We, plus Hinata and friends, don't really know what she does when they're in school, at least for some episodes.
 
-![Wataten Backdrop](https://image.tmdb.org/t/p/original/hlsdjfAgSpY4wAATOsYQXhUG9HJ.jpg)
+![Wataten Backdrop#f#fb](https://image.tmdb.org/t/p/original/z6OqSU4k6HvUYGVgaCAKrFaksTm.jpg "Source: TMDB")
 
 ## Highlights
 
@@ -43,7 +43,7 @@ I can't seem to see any fault here. It's just good, I don't think there's anythi
 
 Each expressions is animated so fluidly and really captures the feelings of those characters at that moment. It uses some slapstick for some of the facial expressions, but they use it moderately, well-timed, and well-placed. Most of the environments and scenery are also beautifully made and drawn to match the rest of the art style.
 
-![!Video](https://firebasestorage.googleapis.com/v0/b/devmauss.appspot.com/o/anime%2Fclips%2Fa3831d7045ac33fb060917b248ea9a25-dr77a1.mp4?alt=media&token=8033d143-ed32-4a26-8cad-a9beaba488bb "When your little sister makes your breakfast")
+![!Video#f#hb](https://firebasestorage.googleapis.com/v0/b/devmauss.appspot.com/o/anime%2Fclips%2Fa3831d7045ac33fb060917b248ea9a25-dr77a1.mp4?alt=media&token=8033d143-ed32-4a26-8cad-a9beaba488bb "When your little sister makes your breakfast")
 
 One last thing is the food. I can't tell you how much I could suddenly crave for some sweets when foods are involved in the scene. I found this clip while scrolling through Reddit and it immediately made me bought some bread and butter, and this is right at the start of the first episode, so you know of what to expect later on.
 

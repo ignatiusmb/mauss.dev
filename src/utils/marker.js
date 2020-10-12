@@ -29,28 +29,50 @@ marker.renderer.rules.image = (tokens, idx, options, env, slf) => {
 	token.attrs[token.attrIndex('alt')][1] = slf.renderInlineAsText(token.children, options, env);
 	if (token.attrIndex('title') === -1) return slf.renderToken(tokens, idx, options);
 
-	const caption = token.attrs.pop()[1];
+	const caption = token.attrs.pop()[1]; // Pop here so it's not rendered in else block below
 	const altIdx = token.attrIndex('alt');
 	const alt = token.attrs[altIdx][1];
 
-	let data;
-	if (/^!YouTube/i.test(alt)) {
-		const link = token.attrs[token.attrIndex('src')][1];
-		data = `<iframe src="https://www.youtube-nocookie.com/embed/${link}" frameborder="0" allowfullscreen></iframe>`;
-	} else if (/^!Video/i.test(alt)) {
-		const link = token.attrs[token.attrIndex('src')][1];
-		data = `<video controls><source src="${link}" type="video/mp4"></video>`;
+	const media = {
+		type: alt.match(/^!(\w+)($|#)/),
+		attrs: alt.match(/#(\w+)/g) || [],
+	};
+	if (media.attrs) media.attrs = media.attrs.map((a) => a.slice(1));
+
+	const link = token.attrs[token.attrIndex('src')][1];
+	if (media.type) {
+		const stripped = media.type[1].toLowerCase();
+		if (['youtube'].includes(stripped)) {
+			media.data = `<iframe src="https://www.youtube-nocookie.com/embed/${link}" frameborder="0" allowfullscreen></iframe>`;
+		} else if (['video'].includes(stripped)) {
+			media.data = `<video controls><source src="${link}" type="video/mp4"></video>`;
+		}
 	} else {
-		tokens[idx].attrs[altIdx][1] = alt.replace(/#disclosure|#flexible/g, '');
-		data = slf.renderToken(tokens, idx, options);
+		tokens[idx].attrs[altIdx][1] = alt.replace(/#(\w+)/g, '');
+		media.data = slf.renderToken(tokens, idx, options);
 	}
 
-	data = `<div class="captioned${/#flexible/i.test(alt) ? ' flexible' : ''}">${data}</div>`;
-	const rendered = marker.renderInline(caption);
+	const classMap = {
+		d: 'disclosure',
+		f: 'flexible',
+		fb: 'full-bleed',
+		hb: 'half-bleed',
+	};
+	const mAttrs = new Set(media.attrs.map((a) => classMap[a] || a));
+	const classes = {
+		div: ['captioned', ['flexible'].filter((c) => mAttrs.has(c))].flat(),
+		top: ['half-bleed', 'full-bleed'].filter((c) => mAttrs.has(c)),
+	};
 
-	return /#disclosure/i.test(alt)
-		? `<details><summary>${rendered}</summary>${data}</details>`
-		: `<figure>${data}<figcaption>${rendered}</figcaption></figure>`;
+	media.data = `<div class="${classes.div.join(' ')}">${media.data}</div>`;
+	const rendered = marker.renderInline(caption);
+	if (mAttrs.has('disclosure')) {
+		const body = `<summary>${rendered}</summary>${media.data}`;
+		return `<details class="${classes.top.join(' ')}">${body}</details>`;
+	} else {
+		const body = `${media.data}<figcaption>${rendered}</figcaption>`;
+		return `<figure class="${classes.top.join(' ')}">${body}</figure>`;
+	}
 };
 
 export default marker;

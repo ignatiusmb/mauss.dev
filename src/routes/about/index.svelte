@@ -33,9 +33,7 @@
 		{/each}
 	</section>
 
-	<section>
-		{@html post.content}
-	</section>
+	{@html post.content}
 </Article>
 
 <style>

@@ -77,9 +77,7 @@
 			</section>
 		{/if}
 
-		<article>
-			{@html post.content}
-		</article>
+		{@html post.content}
 	</section>
 </Article>
 
@@ -92,6 +90,6 @@
 		margin-right: 0.5em;
 	}
 	small > :global(span) {
-		margin-bottom: 0.5em;
+		margin-top: 0.5em;
 	}
 </style>

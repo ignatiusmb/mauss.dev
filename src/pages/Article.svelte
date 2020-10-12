@@ -4,9 +4,9 @@
 	export let path = null;
 	export let siblings = null;
 	import { onMount } from 'svelte';
-	import { Link, ProgressBar } from '@ignatiusmb/elements';
+	import { Feather, Link, ProgressBar } from '@ignatiusmb/elements';
 	import Header from './Header.svelte';
-	import EditLink from '../components/EditLink.svelte';
+	import TextIcon from '../components/TextIcon.svelte';
 	import Siblings from '../svelte/Siblings.svelte';
 
 	function offsetAnchor() {
@@ -52,7 +52,10 @@
 				or
 				<Link newTab href="https://github.com/ignatiusmb/mauss/pulls">PR</Link>
 				on GitHub, any fix or addition is much appreciated!
-				<EditLink {path} />
+				<TextIcon href="https://github.com/ignatiusmb/mauss/edit/master/{path}">
+					<span>Edit</span>
+					<Feather.Edit size="17" />
+				</TextIcon>
 			</p>
 		</section>
 	{/if}
@@ -65,15 +68,45 @@
 <style>
 	main {
 		width: 100%;
-		max-width: 53em;
+		display: grid;
+		grid-template-columns: 1fr min(80ch, 100%) 1fr;
 		padding: 0 1em;
 		margin: 0 auto;
 		word-wrap: break-word;
 		line-height: 1.5;
 	}
+	main > :global(*) {
+		grid-column: 2;
+	}
+	main > :global(p:empty) {
+		margin: 0;
+	}
+
+	main > :global(.half-bleed) {
+		width: 100%;
+		max-width: 72rem;
+		grid-column: 1 / -1;
+		margin: 1em auto;
+	}
+	main > :global(.full-bleed) {
+		width: calc(100% + 2em);
+		max-width: 120rem;
+		grid-column: 1 / -1;
+		margin: 1em auto;
+		transform: translateX(-1em);
+	}
+	main > :global(.half-bleed img),
+	main > :global(.full-bleed img) {
+		object-fit: cover;
+		width: 100%;
+		max-height: 60vh;
+	}
+
 	main :global(section) {
 		margin-top: 2em;
-		font-size: clamp(1rem, 2vw, 1.15rem);
+	}
+	main :global(section > :first-child) {
+		margin: 0;
 	}
 	main > :global(section:first-of-type) {
 		margin-top: 4em;
@@ -83,15 +116,17 @@
 		border-left: 2px solid var(--theme-secondary);
 		background-color: rgba(0, 0, 0, 0.05);
 	}
-	main :global(section > :first-child) {
-		margin: 0;
-	}
-	main :global(section p),
-	main :global(section li) {
+	main :global(p),
+	main :global(li) {
+		font-size: clamp(1rem, 2vw, 1.15rem);
 		line-height: 2rem;
 	}
 	main :global(blockquote p) {
+		font-size: inherit;
 		line-height: unset;
+	}
+	main :global(blockquote > :first-child) {
+		margin: 0;
 	}
 
 	main :global(p) {
@@ -165,6 +200,7 @@
 		margin-left: unset;
 	}
 	main :global(hr) {
+		width: 100%;
 		height: 0.1em;
 		margin-top: 2em;
 		border: 0;
@@ -172,20 +208,22 @@
 	}
 
 	main :global(figure) {
-		margin: 1em 0 2em;
+		margin: 1em 0;
 	}
 	main :global(details) {
-		margin: 1em 0;
+		margin: 1em 0 0;
+	}
+	main :global(details[open] > summary) {
+		margin-bottom: 0.5em;
 	}
 	main :global(figure figcaption) {
 		padding: 0.5em 0.25em 0;
 		text-align: center;
-		font: 80% var(--aqua-monospace);
+		font: 90% var(--aqua-monospace);
 	}
 	main :global(details summary) {
 		padding: 0 0.25em;
-		margin-bottom: 0.5em;
-		font: 90% var(--aqua-monospace);
+		font-family: var(--aqua-monospace);
 	}
 	main :global(details > div.captioned),
 	main :global(figure > div.captioned) {
