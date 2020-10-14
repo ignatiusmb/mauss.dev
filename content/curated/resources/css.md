@@ -7,6 +7,8 @@ date:updated: 2020-10-14
 
 [[Generative Art with CSS](https://generative-art-with-css.commons.host/)] Learn to design and make shapes with pure CSS
 
+[[Modern CSS](https://moderncss.dev/custom-css-styles-for-form-inputs-and-textareas/)] Style native input and textarea that's consistent with near-identical appearance across the major browsers commonly used
+
 ## Learn the basics
 
 Look through the sections below to find something about CSS you'd like to learn
