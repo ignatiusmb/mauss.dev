@@ -20,8 +20,7 @@
 	$: $mobile = innerWidth < 600;
 
 	$: if (!process.dev && process.browser && !$page.error) {
-		const cleaned = $page.path.endsWith('/') && $page.path.slice(0, -1);
-		fetch(`api/hit?slug=${cleaned || $page.path}`, { method: 'POST' });
+		fetch(`api/hit?slug=${$page.path}`, { method: 'POST' });
 	}
 </script>
 
