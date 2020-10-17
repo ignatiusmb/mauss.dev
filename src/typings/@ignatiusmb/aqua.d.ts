@@ -13,3 +13,5 @@ declare module '@ignatiusmb/aqua' {
 		init(container?: HTMLElement | Node): void;
 	};
 }
+
+declare module '@ignatiusmb/aqua/lib/aqua.cbs' {}
