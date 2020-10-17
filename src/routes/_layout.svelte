@@ -28,7 +28,7 @@
 <ScrollTop />
 
 {#if segment}
-	<Navigation mobile={$mobile} />
+	<Navigation />
 {/if}
 <slot />
 <Footer />
