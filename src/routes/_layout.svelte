@@ -15,16 +15,11 @@
 	import '../styles/blog.css';
 	import '../styles/animation.css';
 
-	import { mobile } from '../stores';
-	let innerWidth;
-	$: $mobile = innerWidth < 600;
-
 	$: if (!process.dev && process.browser && !$page.error) {
 		fetch(`api/hit?slug=${$page.path}`, { method: 'POST' });
 	}
 </script>
 
-<svelte:window bind:innerWidth />
 <ScrollTop />
 
 {#if segment}
