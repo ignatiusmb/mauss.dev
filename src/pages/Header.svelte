@@ -47,7 +47,7 @@
 			{#if updated && updated !== published}
 				<div>
 					{#if path}
-						<TextIcon href="https://github.com/ignatiusmb/mauss/commits/master/{path}" newTab>
+						<TextIcon href="https://github.com/ignatiusmb/mauss/commits/master/{path}">
 							<Feather.GitCommit size="18" />
 							<time datetime={updated}>Updated {pretty.updated.complete}</time>
 						</TextIcon>
