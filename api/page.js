@@ -10,11 +10,11 @@ module.exports = async (req, res) => {
 
 	// Create new doc if it does not exist
 	const initial = { data: { slug, hits: 0 } };
-	if (!(await client.query(q.Exists(q.Match(q.Index('hits_by_slug'), slug)))))
-		await client.query(q.Create(q.Collection('hits'), initial));
+	if (!(await client.query(q.Exists(q.Match(q.Index('pages_by_slug'), slug)))))
+		await client.query(q.Create(q.Collection('pages'), initial));
 
 	// Fetch the document for-real
-	const { ref, data } = await client.query(q.Get(q.Match(q.Index('hits_by_slug'), slug)));
+	const { ref, data } = await client.query(q.Get(q.Match(q.Index('pages_by_slug'), slug)));
 
 	// Update document only if method is POST
 	if (req.method === 'POST') {
