@@ -23,7 +23,7 @@ module.exports = async (req, res) => {
 		// Increment hit if it does not have a body
 		if (!req.body) await server.query(q.Update(ref, { data: { hits: data.hits + 1 } }));
 
-		const { love } = req.body;
+		const { love } = req.body || {};
 		if (love) await server.query(q.Update(ref, { data: { loves: data.loves + 1 || 1 } }));
 	}
 
