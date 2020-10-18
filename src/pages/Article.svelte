@@ -7,7 +7,7 @@
 	import { Feather, Link, ProgressBar } from '@ignatiusmb/elements';
 	import Header from './Header.svelte';
 	import TextIcon from '../components/TextIcon.svelte';
-	import Siblings from '../svelte/Siblings.svelte';
+	import Siblings from '../components/Siblings.svelte';
 
 	function offsetAnchor() {
 		if (!window.location.hash.length) return;

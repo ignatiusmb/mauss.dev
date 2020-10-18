@@ -6,7 +6,7 @@
 	const sections = ['about', 'curated', 'posts', 'reviews', 'uses'];
 
 	import { Feather, ThemeSwitcher, Link } from '@ignatiusmb/elements';
-	import NavLink from '../svelte/NavLink.svelte';
+	import NavLink from './NavLink.svelte';
 	import NavGrid from './NavGrid.svelte';
 
 	let opened = false;

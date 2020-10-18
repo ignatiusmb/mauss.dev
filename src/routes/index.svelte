@@ -24,7 +24,7 @@
 	import { Link, Image } from '@ignatiusmb/elements';
 	import MetaHead from '../pages/MetaHead.svelte';
 	import Article from '../pages/Article.svelte';
-	import Quote from '../svelte/Quote.svelte';
+	import Quote from '../components/Quote.svelte';
 	import Navigation from '../components/Navigation.svelte';
 
 	let quoteIndex = randomInt(quotes.length);
