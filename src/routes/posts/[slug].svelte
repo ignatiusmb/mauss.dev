@@ -27,6 +27,7 @@
 <Article
 	{post}
 	header
+	counter
 	path="content/posts/{post.date.published}.{post.slug}.md"
 	siblings={post.siblings}>
 	<small slot="header">

@@ -20,10 +20,9 @@
 	import { SearchBar, Pagination } from '@ignatiusmb/elements';
 	import MetaHead from '../../pages/MetaHead.svelte';
 	import LayoutPicker from '../../pages/LayoutPicker.svelte';
-	import Centered from '../../pages/Centered.svelte';
 	import PostCard from '../../components/PostCard.svelte';
 
-	import { mobile, pSlice as store } from '../../stores';
+	import { pSlice as store } from '../../stores';
 	import { sieve, filter } from '../../utils/search';
 	let query, filtered, sieved;
 	let filters = { categories: [], tags: [], sort: 'updated' };
@@ -64,11 +63,6 @@
 		</div>
 	{/each}
 </LayoutPicker>
-{#if $mobile}
-	<Centered>
-		<Pagination {store} {total} {bound} />
-	</Centered>
-{/if}
 
 <style>
 	h1 {

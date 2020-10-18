@@ -17,7 +17,7 @@
 
 <MetaHead {post} canonical="curated/{slug}" {title} />
 
-<Article header {post} path="content/curated/{slug}.md">
+<Article {post} header counter path="content/curated/{slug}.md">
 	{#if post.toc.length}
 		<section id="objective" class="info-box">
 			<h3>Quick Links</h3>

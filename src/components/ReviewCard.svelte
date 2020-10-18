@@ -1,7 +1,7 @@
 <script>
 	export let post;
 	import { Image, ButtonLink } from '@ignatiusmb/elements';
-	import Verdict from '../svelte/Verdict.svelte';
+	import Verdict from '../components/Verdict.svelte';
 
 	import { capitalize } from '../utils/helper';
 	const verdict = parseInt(post.verdict);

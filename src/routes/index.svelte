@@ -24,9 +24,9 @@
 	import { Link, Image } from '@ignatiusmb/elements';
 	import MetaHead from '../pages/MetaHead.svelte';
 	import Article from '../pages/Article.svelte';
-	import Quote from '../svelte/Quote.svelte';
+	import Quote from '../components/Quote.svelte';
 	import Navigation from '../components/Navigation.svelte';
-	import { mobile } from '../stores';
+
 	let quoteIndex = randomInt(quotes.length);
 	let scrollY, innerHeight;
 	const getNewQuote = () => {
@@ -44,8 +44,8 @@
 	description="DevMauss. Personal website of Ignatius Bagussuputra. A Computer Science undergraduate
 	from University of Indonesia." />
 
-<div class:fixed-nav={!$mobile} class:scrolled>
-	<Navigation mobile={$mobile} bind:scrolled />
+<div class="fixed-nav" class:scrolled>
+	<Navigation bind:scrolled />
 </div>
 
 <Article>
@@ -175,17 +175,19 @@
 
 	.fixed-nav > :global(nav) {
 		position: fixed;
-		bottom: unset;
-		transform: translateY(-100%);
-	}
-	.fixed-nav.scrolled > :global(nav) {
-		transform: translateY(0);
 	}
 
 	@media only screen and (min-width: 600px) {
 		header {
 			padding-top: 25%;
 			padding-bottom: 0;
+		}
+		.fixed-nav > :global(nav) {
+			bottom: unset;
+			transform: translateY(-100%);
+		}
+		.fixed-nav.scrolled > :global(nav) {
+			transform: translateY(0);
 		}
 	}
 </style>

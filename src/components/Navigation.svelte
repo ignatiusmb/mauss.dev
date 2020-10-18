@@ -1,5 +1,4 @@
 <script>
-	export let mobile;
 	export let scrolled = false;
 
 	import { stores } from '@sapper/app';
@@ -7,39 +6,34 @@
 	const sections = ['about', 'curated', 'posts', 'reviews', 'uses'];
 
 	import { Feather, ThemeSwitcher, Link } from '@ignatiusmb/elements';
-	import NavLink from '../svelte/NavLink.svelte';
+	import NavLink from './NavLink.svelte';
 	import NavGrid from './NavGrid.svelte';
 
 	let opened = false;
 	$: path = $page.path.split('/')[1];
 	$: opened = $preloading ? false : opened;
-	$: scrolled = mobile ? true : scrolled;
 </script>
 
 <svelte:window bind:scrollY={scrolled} />
 
 <nav class:scrolled>
-	{#if mobile}
-		<span on:click={() => (opened = !opened)}>
-			{#if opened}
-				<Feather.X />
-			{:else}
-				<Feather.Menu />
-			{/if}
-		</span>
-	{/if}
+	<span on:click={() => (opened = !opened)}>
+		{#if opened}
+			<Feather.X />
+		{:else}
+			<Feather.Menu />
+		{/if}
+	</span>
 
 	<NavLink>
 		<img src="favicon.ico" alt="DevMauss" width="24" height="24" />
 	</NavLink>
 
-	{#if !mobile || opened}
-		<NavGrid {mobile}>
-			{#each sections as to}
-				<NavLink {path} {to} hover>{to}</NavLink>
-			{/each}
-		</NavGrid>
-	{/if}
+	<NavGrid {opened}>
+		{#each sections as to}
+			<NavLink {path} {to} hover>{to}</NavLink>
+		{/each}
+	</NavGrid>
 
 	<Link inherit newTab href="rss.xml" label="Get RSS">
 		<Feather.Rss />
@@ -73,7 +67,6 @@
 		flex-direction: row-reverse;
 		align-items: center;
 		padding: 0.8em 1em;
-		border-top: 0.25em solid var(--theme-primary);
 
 		transition: var(--t-duration) var(--t-function);
 		background-color: var(--bg-surface);
@@ -85,7 +78,7 @@
 		display: inline-flex;
 	}
 
-	nav > :global(a[href='/']:not(:first-child)) {
+	nav > :global(a:first-of-type) {
 		padding: 0;
 		margin-left: auto;
 		margin-right: 1em;
@@ -99,6 +92,14 @@
 		fill: none;
 	}
 
+	@media only screen and (max-width: 599px) {
+		nav {
+			border-top: 0.25em solid var(--theme-primary);
+			box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5);
+			transition: var(--t-duration) var(--t-function);
+			background-color: var(--bg-surface);
+		}
+	}
 	@media only screen and (min-width: 600px) {
 		nav {
 			position: sticky;
@@ -108,10 +109,15 @@
 			background-color: var(--bg-base);
 		}
 		nav.scrolled {
-			border: none;
 			box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5);
 			transition: var(--t-duration) var(--t-function);
 			background-color: var(--bg-surface);
+		}
+		nav > span:first-child {
+			display: none;
+		}
+		nav > span:first-child + :global(a) {
+			margin: 0;
 		}
 	}
 </style>
