@@ -16,7 +16,7 @@
 	import '../styles/animation.css';
 
 	$: if (!process.dev && process.browser && !$page.error) {
-		fetch(`api/hit?slug=${$page.path}`, { method: 'POST' });
+		fetch(`api/page?slug=${$page.path}`, { method: 'POST' });
 	}
 </script>
 
