@@ -11,19 +11,19 @@ Hey folks, welcome back to our monthly digest! As always, feel free to skip ahea
 
 ## Content of the month
 
-![alt]({link} "caption")
+![alt#f#fb]({link} "caption")
 
 ### Honorable content mentions
 
 ## Music of the month | [Spotify Playlist]({spotify_playlist_uri})
 
-![!YouTube]({youtube_id} "caption")
+![!YouTube#hb]({youtube_id} "[[Spotify](link)] title")
 
 ### Honorable music mentions
 
 ## Video of the month | [YouTube Playlist]({youtube_playlist_link})
 
-![!YouTube]({youtube_id} "caption")
+![!YouTube#hb]({youtube_id} "title")
 
 ### Honorable video mentions
 
@@ -35,7 +35,7 @@ Hey folks, welcome back to our monthly digest! As always, feel free to skip ahea
 
 {Summary}
 
-Ref: [Links]
+Source(s): [[Links]]
 
 ***
 
