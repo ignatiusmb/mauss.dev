@@ -67,7 +67,7 @@
 	{/if}
 </main>
 
-{#if counter}
+{#if !process.dev && counter}
 	<LoveCounter />
 {/if}
 
