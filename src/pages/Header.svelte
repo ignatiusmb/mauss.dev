@@ -1,7 +1,7 @@
 <script>
 	export let path = null;
 	export let post;
-	const size = 17;
+	const size = 16;
 
 	import { createPrettyDate } from '../utils/helper';
 	import { Feather, Link } from '@ignatiusmb/elements';
