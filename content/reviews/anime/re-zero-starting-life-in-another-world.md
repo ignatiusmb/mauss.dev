@@ -5,11 +5,11 @@ genres: isekai, drama, comedy, fantasy, adventure, thriller, action
 rating: story,artwork,sound,characters
 verdict:
 
-last_seen: 2020
+last_seen: 2020-10-22
 date:published: 2020
 image:en: https://image.tmdb.org/t/p/original/5DZa4aDH5MZGcZDf8ouTxm2kH2Y.jpg
 
-link:mal:
+link:mal: https://myanimelist.net/anime/31240/Re_Zero_kara_Hajimeru_Isekai_Seikatsu
 ---
 
 ![Backdrop]()
