@@ -4,7 +4,7 @@
 	import { Link } from '@ignatiusmb/elements';
 </script>
 
-<span on:click {style} class:empty={!href}>
+<span on:click {style} class:empty={!href} class="text-icon">
 	{#if href}
 		<Link {href} newTab invert>
 			<slot />

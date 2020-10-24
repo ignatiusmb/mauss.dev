@@ -1,9 +1,12 @@
 <script>
 	export let path = null;
 	export let post;
+	const size = 16;
+
+	import { createPrettyDate } from '../utils/helper';
 	import { Feather, Link } from '@ignatiusmb/elements';
 	import TextIcon from '../components/TextIcon.svelte';
-	import { createPrettyDate } from '../utils/helper';
+
 	$: ({ author, published, updated } = post.date || {});
 	$: ({ name, img, link } = author || {});
 	$: pretty = {
@@ -30,15 +33,17 @@
 
 			{#if published}
 				<div>
-					<span>
+					<TextIcon>
+						<Feather.Calendar {size} />
 						<time datetime={published}>
-							Published on {pretty.published.weekday}, {pretty.published.complete}
+							{#if updated && updated !== published}Published on{/if}
+							{pretty.published.weekday}, {pretty.published.complete}
 						</time>
-					</span>
+					</TextIcon>
 					{#if path && (!updated || (updated && updated === published))}
 						<TextIcon href="https://github.com/ignatiusmb/mauss/edit/master/{path}">
 							<span>Edit</span>
-							<Feather.Edit size="17" />
+							<Feather.Edit {size} />
 						</TextIcon>
 					{/if}
 				</div>
@@ -48,7 +53,7 @@
 				<div>
 					{#if path}
 						<TextIcon href="https://github.com/ignatiusmb/mauss/commits/master/{path}">
-							<Feather.GitCommit size="18" />
+							<Feather.GitCommit {size} />
 							<time datetime={updated}>Updated {pretty.updated.complete}</time>
 						</TextIcon>
 					{:else}
@@ -59,7 +64,7 @@
 					{#if path}
 						<TextIcon href="https://github.com/ignatiusmb/mauss/edit/master/{path}">
 							<span>Edit</span>
-							<Feather.Edit size="17" />
+							<Feather.Edit {size} />
 						</TextIcon>
 					{/if}
 				</div>
@@ -67,7 +72,7 @@
 
 			<div>
 				<TextIcon>
-					<Feather.Clock size="15" />
+					<Feather.Clock {size} />
 					<span>{post.read_time} min read</span>
 				</TextIcon>
 				<TextIcon
@@ -77,7 +82,7 @@
 						navigator.share({ title: document.title, url: window.location.href });
 					}}>
 					<span>Share</span>
-					<Feather.Share2 size="17" />
+					<Feather.Share2 {size} />
 				</TextIcon>
 			</div>
 		</div>
@@ -104,7 +109,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
-		font-size: clamp(0.8rem, 2vw, 1rem);
+		font-size: clamp(0.9rem, 2vw, 1rem);
 	}
 
 	small:first-of-type {
@@ -121,6 +126,9 @@
 	small:first-of-type > .details {
 		display: grid;
 		gap: 0.5em;
+	}
+	.details :global(.text-icon) {
+		align-items: flex-end;
 	}
 	.details > div {
 		display: flex;

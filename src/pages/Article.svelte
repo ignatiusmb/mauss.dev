@@ -108,6 +108,10 @@
 		max-height: 60vh;
 	}
 
+	main > :global(header:first-child + :not(section)) {
+		margin-top: 4em;
+	}
+
 	main :global(section) {
 		margin-top: 2em;
 	}
