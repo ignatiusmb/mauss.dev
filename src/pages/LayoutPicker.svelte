@@ -1,10 +1,12 @@
 <script>
+	let className;
+	export { className as class };
 	export let view = 'grid';
 	export let itemSize = '12em';
 	export let header = null;
 </script>
 
-<div class="layout-wrapper">
+<div class="layout-wrapper {className}">
 	{#if header}
 		<div class="header-wrapper">
 			<slot name="header" />
@@ -17,6 +19,7 @@
 
 	<main
 		class:grid={view === 'grid'}
+		class:column={view === 'column'}
 		class:scrollsnap={view === 'scrollsnap'}
 		style="--grid-minval: {itemSize}">
 		<slot />
@@ -76,17 +79,23 @@
 		display: none;
 	}
 	/* View Specific */
-	main.grid {
+	main.grid,
+	main.column {
 		display: grid;
 		gap: 1em;
-		grid-template-columns: repeat(auto-fill, minmax(var(--grid-minval), 1fr));
 		transition: var(--t-duration);
+	}
+	main.grid {
+		grid-template-columns: repeat(auto-fill, minmax(var(--grid-minval), 1fr));
 	}
 	main.grid > :global(div:hover) {
 		transform: translateY(-0.15em);
 	}
 	main.grid > :global(div) {
 		transition: var(--t-duration);
+	}
+	main.column {
+		grid-template-columns: minmax(0, 1fr);
 	}
 	main.scrollsnap {
 		scrollbar-width: none;
