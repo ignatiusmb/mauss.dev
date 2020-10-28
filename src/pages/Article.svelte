@@ -171,6 +171,7 @@
 	main :global(h2) {
 		margin-top: 1.5em;
 		font-size: clamp(1.5rem, 4vw, 2rem);
+		color: rgb(255, 225, 0);
 	}
 	main :global(h2 + h3) {
 		margin-top: 0.5em;
@@ -178,6 +179,7 @@
 	main :global(h3) {
 		margin: 1em 0 -0.25em;
 		font-size: clamp(1.2rem, 4vw, 1.5rem);
+		color: rgb(0, 160, 120);
 	}
 	main :global(ol + h3),
 	main :global(ul + h3) {
