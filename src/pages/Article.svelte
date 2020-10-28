@@ -274,4 +274,8 @@
 	main :global(.aqua.code-header) {
 		line-height: 1;
 	}
+
+	main > :global(.layout-wrapper) {
+		padding: 0 !important;
+	}
 </style>
