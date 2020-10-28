@@ -67,7 +67,7 @@
 	{/if}
 </main>
 
-{#if counter}
+{#if !process.dev && counter}
 	<LoveCounter />
 {/if}
 
@@ -106,6 +106,10 @@
 		object-fit: cover;
 		width: 100%;
 		max-height: 60vh;
+	}
+
+	main > :global(header:first-child + :not(section)) {
+		margin-top: 4em;
 	}
 
 	main :global(section) {
