@@ -1,16 +1,19 @@
 <script>
 	export let view = 'grid';
 	export let itemSize = '12em';
+	export let header = null;
 </script>
 
 <div class="layout-wrapper">
-	<div class="header-wrapper">
-		<slot name="header" />
+	{#if header}
+		<div class="header-wrapper">
+			<slot name="header" />
 
-		<div class="aside-wrapper">
-			<slot name="picker" />
+			<div class="aside-wrapper">
+				<slot name="picker" />
+			</div>
 		</div>
-	</div>
+	{/if}
 
 	<main
 		class:grid={view === 'grid'}
