@@ -87,6 +87,9 @@
 	main > :global(p:empty) {
 		margin: 0;
 	}
+	main > :global(p:empty + p:empty) {
+		margin-top: 0.5em;
+	}
 
 	main > :global(.half-bleed) {
 		width: 100%;
