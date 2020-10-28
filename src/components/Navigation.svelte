@@ -3,7 +3,7 @@
 
 	import { stores } from '@sapper/app';
 	const { preloading, page } = stores();
-	const sections = ['about', 'curated', 'posts', 'reviews', 'uses'];
+	const sections = ['about', 'curated', 'notes', 'posts', 'reviews', 'uses'];
 
 	import { Feather, ThemeSwitcher, Link } from '@ignatiusmb/elements';
 	import NavLink from './NavLink.svelte';
