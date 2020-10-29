@@ -118,6 +118,7 @@
 	header h2,
 	header h3 {
 		width: 100%;
+		color: inherit;
 	}
 	header > :global(a) {
 		position: relative;
