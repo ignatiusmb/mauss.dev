@@ -61,6 +61,7 @@ section.info-box#objective h3 {
 	left: 0;
 	transform: translateY(-125%);
 	text-align: center;
+	color: inherit;
 }
 section.info-box[data-info='objective'] h4,
 section.info-box#objective h4 {
