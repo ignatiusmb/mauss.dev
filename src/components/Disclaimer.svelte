@@ -30,6 +30,7 @@
 	section :global(a > h2) {
 		margin-top: 0;
 		text-align: center;
+		color: inherit;
 	}
 	section h1 {
 		font-size: clamp(2rem, 6vw, 3rem);

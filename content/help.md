@@ -18,13 +18,20 @@ Curated page consists of things I find interesting or worthwhile to be compiled 
 
 ### Monthly Digests
 
-Just like the name suggests, it's a monthly summation. A compilation of everything I find interesting, informative, thought-provoking, or just something relevant happening in that month. The post is divided into 3 main sections:
+See the world through my eyes. A compilation of everything I find interesting, informative, thought-provoking, or just something relevant happening in that month. I'll try my best to always keep it around 10 minutes read, but you can also skip to the sections you're interested in. The post is divided into 3 main sections with a couple bonus sections:
 
 1. [Article | Content | Music | Video] of the month
    - Each accompanied with their own honorable mentions
+   - There will only be 3 mentions and 4 at max on some occasion
 2. Headlines of the month
+   - Hot topics and news that happened in that month
+   - Articles or relevant sources will be linked below the summary
 3. Detailed monthly recap
-   - Limited to 3 items per day
+   - List of some news or activity on that day
+   - Limited to 3 items at max per day
+   - No guarantee that every day will have a list
+
+These sections above can be accessed or shared immediately by linking their hashes, for example you could add `#music-of-the-month` at the end of the URL to immediately jump to the section. Available for headlines as well, and for detailed monthly recap, just add the date number at the end of it `#24`, but as mentioned before there's no guarantee that every day would have it.
 
 ## [Posts](posts)
 
