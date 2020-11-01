@@ -1,0 +1,1 @@
+I don't know which option you should choose. I could never advise you on that, no matter what kind of wisdom dictates you, the option you pick, no one will be able to tell if it's right or wrong until you arrive to some sort of outcome from your choice. The only thing we are allowed to do is to believe that we won't regret the choice we made.
