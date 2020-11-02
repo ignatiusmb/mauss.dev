@@ -1,12 +1,9 @@
 <script context="module">
 	export async function preload() {
 		const data = await this.fetch('posts.json').then((r) => r.json());
-		const tags = data.flatMap((p) => p.tags);
-		const unique = {
-			categories: data.reduce((a, c) => (a.includes(c.tags[0]) ? a : [...a, c.tags[0]]), []).sort(),
-			tags: tags.reduce((a, c) => (a.includes(c) ? a : c ? [...a, c] : a), []).sort(),
-		};
-		return { data, unique };
+		const tags = Array.from(new Set(data.flatMap((p) => p.tags))).sort();
+		const categories = Array.from(new Set(data.map((p) => p.tags[0]))).sort();
+		return { data, unique: { categories, tags } };
 	}
 </script>
 
