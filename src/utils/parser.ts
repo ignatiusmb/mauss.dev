@@ -16,7 +16,7 @@ const countReadTime = (content: string) => {
 	}, 0);
 	const images = content.match(/(!\[.+\]\(.+\))/g);
 	const total = words + (images ? images.length * 12 : 0);
-	return Math.round(total / 270) || 1;
+	return Math.round(total / 250) || 1;
 };
 
 const extractMeta = (metadata: string) => {
