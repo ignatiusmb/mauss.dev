@@ -34,13 +34,13 @@ marker.renderer.rules.image = (tokens, idx, options, env, slf) => {
 	const alt = token.attrs[altIdx][1];
 
 	const media = {
-		type: alt.match(/^!(\w+[-\w]+)($|#)/)[1] || '',
+		type: alt.match(/^!(\w+[-\w]+)($|#)/),
 		attrs: (alt.match(/#(\w+)/g) || []).map((a) => a.slice(1)),
 	};
 
 	const link = token.attrs[token.attrIndex('src')][1];
 	if (media.type) {
-		const stripped = media.type.toLowerCase();
+		const stripped = media.type[1].toLowerCase();
 		const [type, ...args] = stripped.split('-');
 		if (['yt', 'youtube'].includes(type)) {
 			const prefix = args && args[0] === 's' ? 'videoseries?list=' : '';
