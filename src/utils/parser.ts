@@ -15,7 +15,7 @@ const countReadTime = (content: string) => {
 		return acc + wordCount.length;
 	}, 0);
 	const images = content.match(/(!\[.+\]\(.+\))/g);
-	const total = words + (images ? images.length * 12 : 0);
+	const total = words + (images || []).length * 12;
 	return Math.round(total / 250) || 1;
 };
 
