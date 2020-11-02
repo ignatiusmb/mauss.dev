@@ -35,7 +35,7 @@
 	<link rel="alternate" href="rss.xml" type="application/rss+xml" />
 </MetaHead>
 
-<LayoutPicker view="grid">
+<LayoutPicker header view="grid">
 	<header slot="header">
 		<h1>Curated by DevMauss</h1>
 	</header>
@@ -48,7 +48,7 @@
 	{/each}
 </LayoutPicker>
 
-<LayoutPicker view="grid" itemSize="18em">
+<LayoutPicker header view="grid" itemSize="18em">
 	<header slot="header">
 		<SearchBar bind:query />
 		<Pagination {store} {total} {bound} />

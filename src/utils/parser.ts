@@ -5,17 +5,18 @@ import { sortCompare, splitAt } from './helper';
 import marker from './marker';
 
 const countReadTime = (content: string) => {
-	const paragraphs = content.split('\n').filter((p) => p);
+	const paragraphs = content.split('\n').filter((p) => {
+		return p && !/^[!*]/.test(p); // remove empty and not sentences
+	});
 	const words = paragraphs.reduce((acc, cur) => {
 		if (cur.trim().startsWith('<!--')) return acc;
 		if (cur.trim().match(/^\r?\n<\S+>/)) return acc;
-		const wordsArray = cur.split(' ').filter((w) => w);
-		return acc + wordsArray.length;
+		const wordCount = cur.split(' ').filter(Boolean);
+		return acc + wordCount.length;
 	}, 0);
 	const images = content.match(/(!\[.+\]\(.+\))/g);
-	const total = words + (images ? images.length * 12 : 0);
-	const time = Math.round(total / 270);
-	return time ? time : 1;
+	const total = words + (images || []).length * 12;
+	return Math.round(total / 250) || 1;
 };
 
 const extractMeta = (metadata: string) => {

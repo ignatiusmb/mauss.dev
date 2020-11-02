@@ -34,17 +34,18 @@ marker.renderer.rules.image = (tokens, idx, options, env, slf) => {
 	const alt = token.attrs[altIdx][1];
 
 	const media = {
-		type: alt.match(/^!(\w+)($|#)/),
-		attrs: alt.match(/#(\w+)/g) || [],
+		type: alt.match(/^!(\w+[-\w]+)($|#)/),
+		attrs: (alt.match(/#(\w+)/g) || []).map((a) => a.slice(1)),
 	};
-	if (media.attrs) media.attrs = media.attrs.map((a) => a.slice(1));
 
 	const link = token.attrs[token.attrIndex('src')][1];
 	if (media.type) {
 		const stripped = media.type[1].toLowerCase();
-		if (['youtube'].includes(stripped)) {
-			media.data = `<iframe src="https://www.youtube-nocookie.com/embed/${link}" frameborder="0" allowfullscreen></iframe>`;
-		} else if (['video'].includes(stripped)) {
+		const [type, ...args] = stripped.split('-');
+		if (['yt', 'youtube'].includes(type)) {
+			const prefix = args && args[0] === 's' ? 'videoseries?list=' : '';
+			media.data = `<iframe src="https://www.youtube-nocookie.com/embed/${prefix}${link}" frameborder="0" allowfullscreen></iframe>`;
+		} else if (['video'].includes(type)) {
 			media.data = `<video controls><source src="${link}" type="video/mp4"></video>`;
 		}
 	} else {

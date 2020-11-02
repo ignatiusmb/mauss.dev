@@ -1,6 +1,7 @@
 <script>
 	import { Link } from '@ignatiusmb/elements';
 	import MetaHead from '../pages/MetaHead.svelte';
+	import Article from '../pages/Article.svelte';
 	import Disclaimer from '../components/Disclaimer.svelte';
 </script>
 
@@ -9,7 +10,7 @@
 	title="Disclaimer"
 	description="Disclaimer page for all the content in this website." />
 
-<article>
+<Article>
 	<Disclaimer>
 		<h2>Reviews</h2>
 		<p>
@@ -25,18 +26,9 @@
 		what you have to teach me. Direct contributions are also welcome at this
 		<Link href="https://github.com/ignatiusmb/mauss">GitHub repository</Link>
 	</p>
-</article>
+</Article>
 
 <style>
-	article {
-		width: 100%;
-		max-width: 53rem;
-		padding: 0 1rem;
-		margin: 0 auto;
-		word-wrap: break-word;
-		line-height: 1.5;
-		font-family: var(--aqua-heading);
-	}
 	h2 {
 		margin-top: 0.5em;
 		font-size: clamp(1.5rem, 4vw, 2rem);

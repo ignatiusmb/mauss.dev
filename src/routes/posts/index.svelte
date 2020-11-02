@@ -36,7 +36,7 @@
 	<link rel="alternate" href="rss.xml" type="application/rss+xml" />
 </MetaHead>
 
-<LayoutPicker view="grid" itemSize="21em">
+<LayoutPicker header view="grid" itemSize="21em">
 	<header slot="header">
 		<h1>Posts by DevMauss</h1>
 

@@ -47,7 +47,7 @@
 	<link rel="alternate" href="rss.xml" type="application/rss+xml" />
 </MetaHead>
 
-<LayoutPicker {view}>
+<LayoutPicker header {view}>
 	<header slot="header">
 		<h1>DevMauss Reviews</h1>
 
