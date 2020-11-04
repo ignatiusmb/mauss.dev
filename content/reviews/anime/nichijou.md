@@ -28,6 +28,8 @@ link:mal: https://myanimelist.net/anime/10165/Nichijou
 
 ### #{rating:0}!/10 | Story & Plot
 
+> Your jam was so disgusting, my life flashed before my eyes!
+
 ### #{rating:1}!/10 | Artwork & Animation
 
 ### #{rating:2}!/10 | Sound
