@@ -39,8 +39,7 @@ export function filter(dict, data) {
 const sortByRatings = (x, y) => {
 	if (x.rating === null || x.rating === undefined) return 1;
 	if (y.rating === null || y.rating === undefined) return 0;
-	if (isNaN(x.rating - y.rating)) return sortCompare(x, y);
-	return x.rating < y.rating;
+	return x.rating === y.rating ? sortCompare(x, y) : y.rating - x.rating;
 };
 
 export function sort(type, data) {

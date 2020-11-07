@@ -1,14 +1,12 @@
 <script context="module">
 	export async function preload({ query }) {
 		const data = await this.fetch('reviews.json').then((r) => r.json());
-		const genres = data.flatMap((p) => p.genres);
+		const genres = Array.from(new Set(data.flatMap((p) => p.genres))).sort();
+		const categories = Array.from(new Set(data.map((p) => p.category)));
 		return {
 			data,
-			unique: {
-				categories: data.reduce((a, c) => (a.includes(c.category) ? a : [...a, c.category]), []),
-				genres: genres.reduce((a, c) => (a.includes(c) ? a : c ? [...a, c] : a), []).sort(),
-			},
-			verdict: data.reduce((a, c) => (a.includes(c.verdict) ? a : [...a, c.verdict]), []),
+			unique: { categories, genres },
+			verdict: Array.from(new Set(data.map((d) => d.verdict))),
 			query: query.query,
 		};
 	}
