@@ -3,10 +3,11 @@
 		const data = await this.fetch('reviews.json').then((r) => r.json());
 		const genres = Array.from(new Set(data.flatMap((p) => p.genres))).sort();
 		const categories = Array.from(new Set(data.map((p) => p.category)));
+		const verdict = Array.from(new Set(data.map((d) => d.verdict)));
 		return {
 			data,
 			unique: { categories, genres },
-			verdict: Array.from(new Set(data.map((d) => d.verdict))),
+			verdict: verdict.sort((x, y) => x - y).reverse(),
 			query: query.query,
 		};
 	}
@@ -54,14 +55,14 @@
 				<h3>Verdict</h3>
 				{#each verdict as rec}
 					<label>
-						<input type="checkbox" bind:group={filters.verdict} value={rec ? rec : '-2'} />
-						{#if rec === '2'}
+						<input type="checkbox" bind:group={filters.verdict} value={rec} />
+						{#if rec === 2}
 							<span>Must-watch!</span>
-						{:else if rec === '1'}
+						{:else if rec === 1}
 							<span>Recommended</span>
-						{:else if rec === '0'}
+						{:else if rec === 0}
 							<span>Contextual</span>
-						{:else if rec === '-1'}
+						{:else if rec === -1}
 							<span>Not recommended</span>
 						{:else}
 							<span>Pending</span>
