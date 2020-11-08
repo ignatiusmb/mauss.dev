@@ -1,4 +1,5 @@
 import type { Request, Response } from 'express';
+import { checkNum } from '../../../utils/helper';
 import { parseFile } from '../../../utils/parser';
 import { countAverageRating, contentParser } from '../../../utils/article';
 import marker from '../../../utils/marker';
@@ -20,6 +21,7 @@ export function get(req: Request, res: Response) {
 
 		review.content = contentParser(review, summary);
 		review.rating = countAverageRating(data.rating);
+		review.verdict = checkNum(data.verdict || -2);
 		return review;
 	}
 

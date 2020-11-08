@@ -1,5 +1,6 @@
 import type { Request, Response } from 'express';
 import { readdirSync } from 'fs';
+import { checkNum } from '../../utils/helper';
 import { parseDir } from '../../utils/parser';
 import { countAverageRating, fillSiblings } from '../../utils/article';
 
@@ -15,6 +16,7 @@ export function get(_: Request, res: Response) {
 				category: folder,
 				...data,
 				rating: countAverageRating(data.rating),
+				verdict: checkNum(data.verdict || -2),
 			};
 			return review;
 		}
