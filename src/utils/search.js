@@ -1,7 +1,9 @@
 import { compareDate, sortCompare } from './helper';
 
 const exists = (source, query) =>
-	typeof source === 'string' ? source.toLowerCase().includes(query.toLowerCase()) : false;
+	typeof source !== 'string'
+		? source === query
+		: source.toLowerCase().includes(query.toLowerCase());
 const compare = (source, queries) =>
 	Array.isArray(source)
 		? source.filter((s) => compare(s, queries)).length
@@ -22,15 +24,10 @@ export function filter(dict, data) {
 	let filtered = data;
 	for (const key in dict) {
 		if (!dict[key].length || key === 'sort') continue;
-		if (key === 'tags') {
-			filtered = data.filter((p) => compare(p.tags, dict.tags));
-		} else if (key === 'genres') {
-			filtered = data.filter((p) => compare(p.genres, dict.genres));
+		if (['tags', 'genres', 'verdict'].includes(key)) {
+			filtered = data.filter((p) => compare(p[key], dict[key]));
 		} else if (key === 'categories') {
-			filtered = data.filter((p) => compare(p.category, dict.categories));
-		} else if (key === 'verdict') {
-			filtered = data.filter((p) => compare(p.verdict, dict.verdict));
-			if (dict.verdict.includes('-2')) filtered = [...filtered, ...data.filter((p) => !p.verdict)];
+			filtered = data.filter((p) => compare(p.category, dict[key]));
 		}
 	}
 	return sort(dict['sort'] || 'updated', filtered);
