@@ -11,7 +11,6 @@
     "static:404": "run-s static:404:mv static:404:rm",
     "static:404:mv": "mv __sapper__/export/404/index.html __sapper__/export/404.html",
     "static:404:rm": "rmdir \"__sapper__/export/404\"",
-    "test": "jest --coverage",
     "lint": "eslint src --ext svelte,js",
     "check": "prettier -c src",
     "format": "prettier -w src"
