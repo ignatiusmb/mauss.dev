@@ -3,20 +3,20 @@
 </script>
 
 <div
-	class:negative={verdict === -1}
-	class:neutral={verdict === 0}
-	class:positive={verdict === 1}
 	class:hot={verdict === 2}
-	class:wip={isNaN(verdict)}
+	class:positive={verdict === 1}
+	class:neutral={verdict === 0}
+	class:negative={verdict === -1}
+	class:wip={verdict === -2}
 	title={verdict === 2 ? 'Must-watch!' : null}>
-	{#if verdict < 0}
+	{#if verdict < -1}
+		<span>Pending</span>
+	{:else if verdict < 0}
 		<span>Not recommended</span>
 	{:else if verdict === 0}
 		<span>Contextual</span>
 	{:else if verdict > 0}
 		<span>Recommended</span>
-	{:else}
-		<span>Pending</span>
 	{/if}
 	{#if verdict === 2}🔥{/if}
 </div>

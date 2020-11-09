@@ -5,7 +5,7 @@
 
 	import { capitalize } from '../utils/helper';
 	const verdict = parseInt(post.verdict);
-	const disabled = !post.rating || !post.verdict;
+	const disabled = !post.rating || post.verdict === -2;
 </script>
 
 <section>

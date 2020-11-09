@@ -44,7 +44,7 @@ interface RawReview extends RawArticle {
 	};
 	genres: string[];
 	rating: any;
-	verdict: number | undefined;
+	verdict: number | string;
 
 	last_seen: string | Date;
 	date: {
@@ -67,7 +67,7 @@ declare class FinalReview implements RawReview {
 	title: { short?: string; en: string; jp?: string };
 	genres: string[];
 	rating: number;
-	verdict: number | undefined;
+	verdict: number | string;
 
 	last_seen: string | Date;
 	date: {
