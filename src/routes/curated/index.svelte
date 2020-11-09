@@ -1,15 +1,12 @@
 <script context="module">
 	export async function preload() {
 		const data = await this.fetch('curated.json').then((r) => r.json());
-		return {
-			data: data.filter((p) => p.category !== 'digest'),
-			digest: data.filter((p) => p.category === 'digest'),
-		};
+		return { data };
 	}
 </script>
 
 <script>
-	export let data, digest;
+	export let data;
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
 	const bound = 8;
@@ -17,7 +14,6 @@
 	import { SearchBar, Pagination, ButtonLink } from '@ignatiusmb/elements';
 	import MetaHead from '../../pages/MetaHead.svelte';
 	import LayoutPicker from '../../pages/LayoutPicker.svelte';
-	import DigestCard from '../../components/Card.Digest.svelte';
 
 	import { cSlice as store } from '../../stores';
 	import { sieve, filter } from '../../utils/search';
@@ -37,20 +33,9 @@
 	<link rel="alternate" href="rss.xml" type="application/rss+xml" />
 </MetaHead>
 
-<LayoutPicker header>
-	<header slot="header">
-		<h1>Curated by DevMauss</h1>
-	</header>
-
-	<div class="digests">
-		{#each digest as post (post.slug)}
-			<DigestCard {post} />
-		{/each}
-	</div>
-</LayoutPicker>
-
 <LayoutPicker header view="grid" itemSize="18em">
 	<header slot="header">
+		<h1>Curated by DevMauss</h1>
 		<SearchBar bind:query />
 		<Pagination {store} {total} {bound} />
 	</header>
@@ -64,16 +49,6 @@
 </LayoutPicker>
 
 <style>
-	.digests {
-		display: flex;
-	}
-	.digests > :global(:hover ~ section) {
-		transform: translateX(calc(4em * 1.25));
-	}
-	.digests > :global(:not(:first-child)) {
-		margin-left: -4em;
-	}
-
 	header {
 		text-align: center;
 	}
