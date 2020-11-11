@@ -21,7 +21,7 @@ const countReadTime = (content: string) => {
 
 const extractMeta = (metadata: string) => {
 	if (!metadata) return {};
-	const lines: string[] = metadata.split(/\r?\n/);
+	const lines = metadata.split(/\r?\n/);
 	return lines.reduce((acc, cur) => {
 		if (!cur.includes(': ')) return acc;
 		const [key, val] = splitAt(cur.indexOf(': '), cur);
