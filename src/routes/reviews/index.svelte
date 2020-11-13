@@ -16,6 +16,7 @@
 <script>
 	export let data, search, unique, verdict;
 	let { q: query } = search;
+	if (query) query = query.replace(/\+/g, ' ');
 
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
