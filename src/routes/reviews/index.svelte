@@ -6,15 +6,17 @@
 		const verdict = Array.from(new Set(data.map((d) => d.verdict)));
 		return {
 			data,
+			search: query,
 			unique: { categories, genres },
 			verdict: verdict.sort((x, y) => x - y).reverse(),
-			query: query.query,
 		};
 	}
 </script>
 
 <script>
-	export let data, unique, verdict, query;
+	export let data, search, unique, verdict;
+	let { q: query } = search;
+
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
 	const duration = 100;
