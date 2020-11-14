@@ -1,5 +1,5 @@
 ---
-year: 2014
+released: 2014-10-10
 title:en: Your Lie in April
 title:jp: Shigatsu wa Kimi no Uso
 genres: drama, music, romance, school, slice of life

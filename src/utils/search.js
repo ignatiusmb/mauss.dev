@@ -39,8 +39,8 @@ const sortBy = {
 		if (y.rating === null || y.rating === undefined) return 0;
 		return x.rating === y.rating ? sortCompare(x, y) : y.rating - x.rating;
 	},
-	year: (x, y) => compareDate(x.year, y.year) || sortCompare(x, y),
 	seen: (x, y) => compareDate(x.last_seen, y.last_seen) || sortCompare(x, y),
+	released: (x, y) => compareDate(x.released, y.released) || sortCompare(x, y),
 	published: (x, y) => compareDate(x.date.published, y.date.published) || sortCompare(x, y),
 };
 

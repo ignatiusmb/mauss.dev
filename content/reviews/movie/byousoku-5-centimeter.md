@@ -1,5 +1,5 @@
 ---
-year: 2007
+released: 2007-03-03
 title:en: 5 Centimeters per Second
 title:jp: Byousoku 5 Centimeter
 genres: animation, drama, romance, slice of life

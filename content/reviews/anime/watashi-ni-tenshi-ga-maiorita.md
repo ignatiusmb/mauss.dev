@@ -1,5 +1,5 @@
 ---
-year: 2019
+released: 2019-01-08
 title:en: WATATEN!: an Angel Flew Down to Me
 title:jp: Watashi ni Tenshi ga Maiorita!
 genres: comedy, slice of life, shoujo ai

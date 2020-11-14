@@ -1,5 +1,5 @@
 ---
-year: 2014
+released: 2014-04-11
 title:en: Ping Pong the Animation
 genres: sports, drama, seinen
 rating: 10,8,10,10

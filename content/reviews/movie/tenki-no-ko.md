@@ -1,5 +1,5 @@
 ---
-year: 2019
+released: 2019-07-19
 title:en: Weathering With You
 title:jp: Tenki no Ko
 genres: animation, slice of life, supernatural, drama, fantasy, adventure, romance

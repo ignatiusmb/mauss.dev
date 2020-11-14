@@ -85,7 +85,7 @@
 					<span>Date published</span>
 				</label>
 				<label>
-					<input type="radio" bind:group={filters.sort} value="year" />
+					<input type="radio" bind:group={filters.sort} value="released" />
 					<span>Year released</span>
 				</label>
 				<label>

@@ -1,5 +1,5 @@
 ---
-year: 2011
+released: 2011-04-03
 title:short: Nichijou
 title:en: Nichijou: My Ordinary Life
 title:jp:

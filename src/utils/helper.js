@@ -64,7 +64,9 @@ export function sortCompare(x, y) {
 		if (xu !== yu) return compareDate(xu, yu);
 		if (xp !== yp) return compareDate(xp, yp);
 	}
-	if (x.year && y.year && x.year !== y.year) return compareDate(x.year, y.year);
+
+	if (x.released && y.released && x.released !== y.released)
+		return compareDate(x.released, y.released);
 
 	if (x.author && y.author) return x.author.localeCompare(y.author);
 
