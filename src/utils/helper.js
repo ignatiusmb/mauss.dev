@@ -6,8 +6,7 @@ export function capitalize(text, lower) {
 export const checkNum = (str) => (isNaN(str) ? str : parseInt(str));
 
 export function compareDate(x, y) {
-	const [yDate, xDate] = [new Date(y), new Date(x)];
-	return yDate.getTime() - xDate.getTime();
+	return new Date(y) - new Date(x);
 }
 
 export function convertCase(style, text, sep = ' ') {
