@@ -33,27 +33,17 @@ export function filter(dict, data) {
 	return sort(dict['sort'] || 'updated', filtered);
 }
 
-const sortByRatings = (x, y) => {
-	if (x.rating === null || x.rating === undefined) return 1;
-	if (y.rating === null || y.rating === undefined) return 0;
-	return x.rating === y.rating ? sortCompare(x, y) : y.rating - x.rating;
+const sortBy = {
+	rating(x, y) {
+		if (x.rating === null || x.rating === undefined) return 1;
+		if (y.rating === null || y.rating === undefined) return 0;
+		return x.rating === y.rating ? sortCompare(x, y) : y.rating - x.rating;
+	},
+	year: (x, y) => compareDate(x.year, y.year) || sortCompare(x, y),
+	seen: (x, y) => compareDate(x.last_seen, y.last_seen) || sortCompare(x, y),
+	published: (x, y) => compareDate(x.date.published, y.date.published) || sortCompare(x, y),
 };
 
 export function sort(type, data) {
-	switch (type) {
-		case 'updated':
-			return data.sort(sortCompare);
-		case 'rating':
-			return data.sort(sortByRatings);
-		case 'year':
-			return data.sort((x, y) => compareDate(x.year, y.year) || sortCompare(x, y));
-		case 'published':
-			return data.sort(
-				(x, y) => compareDate(x.date.published, y.date.published) || sortCompare(x, y)
-			);
-		case 'seen':
-			return data.sort((x, y) => compareDate(x.last_seen, y.last_seen) || sortCompare(x, y));
-		default:
-			return data.sort(sortCompare);
-	}
+	return type in sortBy ? data.sort(sortBy[type]) : data.sort(sortCompare);
 }
