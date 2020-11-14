@@ -40,15 +40,20 @@ const sortByRatings = (x, y) => {
 };
 
 export function sort(type, data) {
-	if (type === 'updated') return data.sort(sortCompare);
-	if (type === 'rating') return data.sort(sortByRatings);
-	if (type === 'year') return data.sort((x, y) => y.year - x.year || sortCompare(x, y));
-	if (type === 'published')
-		return data.sort((x, y) => {
-			return compareDate(x.date.published, y.date.published) || sortCompare(x, y);
-		});
-	if (type === 'seen')
-		return data.sort((x, y) => {
-			return compareDate(x.last_seen, y.last_seen) || sortCompare(x, y);
-		});
+	switch (type) {
+		case 'updated':
+			return data.sort(sortCompare);
+		case 'rating':
+			return data.sort(sortByRatings);
+		case 'year':
+			return data.sort((x, y) => compareDate(x.year, y.year) || sortCompare(x, y));
+		case 'published':
+			return data.sort(
+				(x, y) => compareDate(x.date.published, y.date.published) || sortCompare(x, y)
+			);
+		case 'seen':
+			return data.sort((x, y) => compareDate(x.last_seen, y.last_seen) || sortCompare(x, y));
+		default:
+			return data.sort(sortCompare);
+	}
 }
