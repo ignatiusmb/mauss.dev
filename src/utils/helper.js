@@ -6,8 +6,7 @@ export function capitalize(text, lower) {
 export const checkNum = (str) => (isNaN(str) ? str : parseInt(str));
 
 export function compareDate(x, y) {
-	const yDate = new Date(y);
-	const xDate = new Date(x);
+	const [yDate, xDate] = [new Date(y), new Date(x)];
 	return yDate.getTime() - xDate.getTime();
 }
 
@@ -65,7 +64,7 @@ export function sortCompare(x, y) {
 	} else if (x.date && y.date && x.date.published !== y.date.published) {
 		return compareDate(x.date.published, y.date.published);
 	} else if (x.year && y.year && x.year !== y.year) {
-		return y.year - x.year;
+		return compareDate(x.year, y.year);
 	}
 
 	if (typeof x.author === 'string' && typeof y.author === 'string') {
