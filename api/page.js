@@ -5,27 +5,34 @@ module.exports = async (req, res) => {
 	const query = req.query.slug;
 	if (!query) return res.status(400).json({ message: 'Slug not provided' });
 
-	// Trim trailing slash
 	const slug = (query.endsWith('/') && query.slice(0, -1)) || query;
-
 	const match = q.Match(q.Index('pages_by_slug'), slug);
+	const exists = await server.query(q.Exists(match));
 
-	// Create new doc if it does not exist
-	const initial = { data: { slug, hits: 0 } };
-	if (!(await server.query(q.Exists(match))))
-		await server.query(q.Create(q.Collection('pages'), initial));
+	if (!exists && req.method === 'POST') {
+		const initial = { data: { slug, hits: 1 } };
+		server.query(q.Create(q.Collection('pages'), initial));
+		return res.status(200).json({ hits: 1 });
+	} else if (!exists) return res.status(200).json({ hits: 0 });
 
-	// Fetch the document for-real
-	const { ref, data } = await server.query(q.Get(match));
+	const doc = await server.query(q.Get(match));
+	delete doc.data.slug;
 
-	// Update document only if method is POST
 	if (req.method === 'POST') {
-		// Increment hit if it does not have a body
-		if (!req.body) await server.query(q.Update(ref, { data: { hits: data.hits + 1 } }));
+		if (!req.body) {
+			const data = { hits: doc.data.hits + 1 };
+			server.query(q.Update(doc.ref, { data }));
+			return res.status(200).json(data);
+		}
 
-		const { love } = req.body || {};
-		if (love) await server.query(q.Update(ref, { data: { loves: data.loves + 1 || 1 } }));
+		const data = {
+			hits: doc.data.hits,
+			loves: req.body.love && (doc.data.loves || 0) + 1,
+		};
+
+		server.query(q.Update(doc.ref, { data }));
+		return res.status(200).json(data);
 	}
 
-	return res.status(200).json({ hits: data.hits, loves: data.loves });
+	return res.status(200).json(...doc.data);
 };
