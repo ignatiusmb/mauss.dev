@@ -2,7 +2,7 @@
 	export let segment;
 
 	import { stores } from '@sapper/app';
-	const { page } = stores();
+	const { preloading, page } = stores();
 
 	import { ScrollTop } from '@ignatiusmb/elements';
 	import Navigation from '../components/Navigation.svelte';
@@ -15,7 +15,7 @@
 	import '../styles/blog.css';
 	import '../styles/animation.css';
 
-	$: if (!process.dev && process.browser && !$page.error) {
+	$: if (!process.dev && process.browser && !$page.error && $preloading) {
 		fetch(`api/page?slug=${$page.path}`, { method: 'POST' });
 	}
 </script>
