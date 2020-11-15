@@ -1,6 +1,7 @@
 <script>
 	export let segment;
 
+	import { page } from '../stores';
 	import { stores } from '@sapper/app';
 	const { page: local } = stores();
 
@@ -15,9 +16,8 @@
 	import '../styles/blog.css';
 	import '../styles/animation.css';
 
-	import { page } from '../stores';
 	$: if (!process.dev && process.browser && !$local.error) {
-		$page = fetch(`api/page?slug=${$local.path}`, { method: 'POST' });
+		$page = fetch(`api/page?slug=${$local.path}`, { method: 'POST' }).then((r) => r.json());
 	}
 </script>
 
