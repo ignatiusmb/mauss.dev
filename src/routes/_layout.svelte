@@ -15,7 +15,7 @@
 	import '../styles/blog.css';
 	import '../styles/animation.css';
 
-	$: if (!process.dev && process.browser && !$page.error && $preloading) {
+	$: if (!process.dev && process.browser && !$page.error && !$preloading) {
 		fetch(`api/page?slug=${$page.path}`, { method: 'POST' });
 	}
 </script>
