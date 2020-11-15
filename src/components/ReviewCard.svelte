@@ -10,7 +10,7 @@
 
 <section>
 	<Image src={post.image.en} alt={post.title.en} lazy overlay ratio={3 / 2}>
-		<h3>{post.year}</h3>
+		<h3>{post.released.split('-')[0]}</h3>
 		{#if post.title.short}
 			<h3>{post.title.short}</h3>
 		{:else if post.title.jp}

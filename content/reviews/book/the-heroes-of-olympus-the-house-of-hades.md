@@ -1,5 +1,5 @@
 ---
-year: 2013
+released: 2013-10-08
 title:en: The Heroes of Olympus: The House of Hades
 genres: adventure, fantasy, mystery
 rating:

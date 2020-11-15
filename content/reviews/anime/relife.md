@@ -1,5 +1,5 @@
 ---
-year: 2016
+released: 2016-07-02
 title:en: ReLIFE
 genres: slice of life, romance, drama
 rating:

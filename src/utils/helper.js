@@ -6,9 +6,7 @@ export function capitalize(text, lower) {
 export const checkNum = (str) => (isNaN(str) ? str : parseInt(str));
 
 export function compareDate(x, y) {
-	const yDate = new Date(y);
-	const xDate = new Date(x);
-	return yDate.getTime() - xDate.getTime();
+	return new Date(y) - new Date(x);
 }
 
 export function convertCase(style, text, sep = ' ') {
@@ -60,25 +58,24 @@ export function randomKey(dict) {
 }
 
 export function sortCompare(x, y) {
-	if (x.date && y.date && x.date.updated !== y.date.updated) {
-		return compareDate(x.date.updated, y.date.updated);
-	} else if (x.date && y.date && x.date.published !== y.date.published) {
-		return compareDate(x.date.published, y.date.published);
-	} else if (x.year && y.year && x.year !== y.year) {
-		return y.year - x.year;
+	if (x.date && y.date) {
+		const { updated: xu, published: xp } = x.date;
+		const { updated: yu, published: yp } = y.date;
+		if (xu !== yu) return compareDate(xu, yu);
+		if (xp !== yp) return compareDate(xp, yp);
 	}
 
-	if (typeof x.author === 'string' && typeof y.author === 'string') {
-		return x.author.localeCompare(y.author);
-	}
+	if (x.released && y.released && x.released !== y.released)
+		return compareDate(x.released, y.released);
 
-	if (typeof x.title === 'string' && typeof y.title === 'string') {
-		return x.title.localeCompare(y.title);
-	} else if (typeof x.title === 'string') {
-		return x.title.localeCompare(y.title.en);
-	} else if (typeof y.title === 'string') {
-		return x.title.en.localeCompare(y.title);
-	} else return x.title.en.localeCompare(y.title.en);
+	if (x.author && y.author) return x.author.localeCompare(y.author);
+
+	const xt = typeof x.title === 'string' && x.title;
+	const yt = typeof y.title === 'string' && y.title;
+	if (xt && yt) return x.title.localeCompare(y.title);
+	else if (xt) return x.title.localeCompare(y.title.en);
+	else if (yt) return x.title.en.localeCompare(y.title);
+	else return x.title.en.localeCompare(y.title.en);
 }
 
 export function splitAt(index, text) {

@@ -1,5 +1,5 @@
 ---
-year: 2016
+released: 2016-07-11
 title:en: Mob Psycho 100
 genres: action, comedy, supernatural
 rating: 10,9,10,10

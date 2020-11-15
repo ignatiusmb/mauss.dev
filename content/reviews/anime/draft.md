@@ -1,5 +1,5 @@
 ---
-year:
+released:
 title:short:
 title:en:
 title:jp:

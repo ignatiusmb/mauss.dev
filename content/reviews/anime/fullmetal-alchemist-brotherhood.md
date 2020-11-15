@@ -1,5 +1,5 @@
 ---
-year: 2009
+released: 2009-04-05
 title:en: Fullmetal Alchemist: Brotherhood
 genres: action, adventure, fantasy, magic, drama
 rating: 10,9,10,10

@@ -1,12 +1,12 @@
 ---
-year: 2012
+released: 2012-01-10
 title:en: Daily Lives of High School Boys
 title:jp: Danshi Koukousei no Nichijou
 genres: slice of life, comedy, school
 rating: story,artwork,sound,characters
 verdict:
 
-last_seen: 2020
+last_seen: 2020-11-11
 date:published: 2020
 date:updated: 2020
 image:en: https://image.tmdb.org/t/p/original/kPzPTbw3rkB66qKSsjlWtOetQWc.jpg

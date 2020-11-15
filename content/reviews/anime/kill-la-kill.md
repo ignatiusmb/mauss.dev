@@ -1,5 +1,5 @@
 ---
-year: 2013
+released: 2013-10-04
 title:short:
 title:en: Kill la Kill
 title:jp:

@@ -1,15 +1,17 @@
 <script context="module">
 	import { compareDate, randomInt } from '../utils/helper';
 	export async function preload() {
+		const quotes = this.fetch('quotes.json').then((r) => r.json());
+
 		const data = { posts: '', reviews: '', curated: '' };
 		for (const seg in data) {
 			data[seg] = await this.fetch(`${seg}.json`).then((r) => r.json());
 			if (seg === 'curated') data[seg].sort((x, y) => compareDate(x.date.updated, y.date.updated));
-			if (seg === 'reviews') data[seg].filter((p) => p.rating && p.verdict);
+			if (seg === 'reviews') data[seg].filter(({ rating, verdict }) => rating && verdict);
 			if (Array.isArray(data[seg])) data[seg] = data[seg].slice(0, 4);
 		}
 
-		return { data, quotes: await this.fetch('quotes.json').then((r) => r.json()) };
+		return { data, quotes: await quotes };
 	}
 </script>
 

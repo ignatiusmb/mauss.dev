@@ -1,5 +1,5 @@
 ---
-year: 2019
+released: 2019-01-08
 title:en: WATATEN!: an Angel Flew Down to Me
 title:jp: Watashi ni Tenshi ga Maiorita!
 genres: comedy, slice of life, shoujo ai
@@ -35,7 +35,7 @@ Although we see mostly everything that happens inside the house from Miyako's pe
 
 The story and plot is nothing amazing, it's really just the daily life of two loving sisters and their friends having fun. There's no action or plot-twist to this, it just describes how there's a lot of various families and siblings out there that we might or might not know yet.
 
-Does it sound boring? Probably is. But, do they deliver it spectacularly? Absolutely. I haven't had this much fun watching an anime that I can genuinely laugh and enjoy every single episode it has, ever since [Nichijou](reviews?query=nichijou).
+Does it sound boring? Probably is. But, do they deliver it spectacularly? Absolutely. I haven't had this much fun watching an anime that I can genuinely laugh and enjoy every single episode it has, ever since [Nichijou](reviews?q=nichijou).
 
 ### #{rating:1}!/10 | Artwork & Animation
 
@@ -63,7 +63,7 @@ Perhaps my one and only complaint is Hana. Even as cute and incompetent as she i
 
 ## Verdict
 
-I know most of you agrees with me, even after the first episode, that Miyako is actually a fun but just socially awkward person. The more you get to know her, the more you'll understand why she acts the way she does and the more you'll love her. I can't say much more before spoiling some stuff you'll get to enjoy discovering for yourself, but I can say for certain that she's my favorite character from the whole show. Hinata is second, and last is Noa, perhaps because she reminds me of Elf Yamada from [Eromanga-sensei](reviews?query=eromanga%20sensei) so much.
+I know most of you agrees with me, even after the first episode, that Miyako is actually a fun but just socially awkward person. The more you get to know her, the more you'll understand why she acts the way she does and the more you'll love her. I can't say much more before spoiling some stuff you'll get to enjoy discovering for yourself, but I can say for certain that she's my favorite character from the whole show. Hinata is second, and last is Noa, perhaps because she reminds me of Elf Yamada from [Eromanga-sensei](reviews?q=eromanga+sensei) so much.
 
 My verdict is definitely **recommended**. This show is just a relaxing and wholesome show you'll definitely love to watch in your free time. There's no one thing that fits everyone, and I'm not forcing you to watch this either. I'm just saying you won't regret watching this. Even if you're the type that *only* watches action themed anime and thought that a show full of kids and girls reduces your testosterone&mdash;feel free to think so, I'm not one to talk about how you should live your life&mdash;I'm still certain you'll get a laugh or two out of this.
 

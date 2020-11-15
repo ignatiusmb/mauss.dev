@@ -1,20 +1,23 @@
 <script context="module">
 	export async function preload({ query }) {
 		const data = await this.fetch('reviews.json').then((r) => r.json());
-		const genres = Array.from(new Set(data.flatMap((p) => p.genres))).sort();
 		const categories = Array.from(new Set(data.map((p) => p.category)));
+		const genres = Array.from(new Set(data.flatMap((p) => p.genres))).sort();
 		const verdict = Array.from(new Set(data.map((d) => d.verdict)));
 		return {
 			data,
+			search: query,
 			unique: { categories, genres },
 			verdict: verdict.sort((x, y) => x - y).reverse(),
-			query: query.query,
 		};
 	}
 </script>
 
 <script>
-	export let data, unique, verdict, query;
+	export let data, search, unique, verdict;
+	let { q: query } = search;
+	if (query) query = query.replace(/\+/g, ' ');
+
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
 	const duration = 100;
@@ -82,7 +85,7 @@
 					<span>Date published</span>
 				</label>
 				<label>
-					<input type="radio" bind:group={filters.sort} value="year" />
+					<input type="radio" bind:group={filters.sort} value="released" />
 					<span>Year released</span>
 				</label>
 				<label>

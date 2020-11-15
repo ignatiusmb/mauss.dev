@@ -1,5 +1,5 @@
 ---
-year: 2014
+released: 2014-10-07
 title:en: The Heroes of Olympus: The Blood of Olympus
 genres: adventure, fantasy, mystery
 rating:

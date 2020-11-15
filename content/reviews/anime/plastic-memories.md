@@ -1,5 +1,5 @@
 ---
-year: 2015
+released: 2015-04-05
 title:short:
 title:en: Plastic Memories
 title:jp:

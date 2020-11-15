@@ -1,5 +1,5 @@
 ---
-year: 2020
+released: 2020-10-09
 title:en: Adachi and Shimamura
 title:jp: Adachi to Shimamura
 genres: slice of life, romance, school, shoujo ai

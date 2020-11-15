@@ -1,5 +1,5 @@
 ---
-year: 2018
+released: 2018-10-06
 title:short: Re:ZERO - Memory Snow
 title:en: Re:ZERO -Starting Life in Another World-: Memory Snow
 genres: animation, adventure, fantasy

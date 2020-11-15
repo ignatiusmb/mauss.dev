@@ -1,5 +1,5 @@
 ---
-year: 2017
+released: 2017-04-07
 title:en: The Moon Is Beautiful, as the Moon, So Beautiful
 title:jp: Tsuki ga Kirei
 genres: romance, school
