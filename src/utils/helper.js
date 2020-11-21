@@ -3,8 +3,6 @@ export function capitalize(text, lower) {
 	return text.replace(/(?:^|\s)\S/g, (a) => a.toUpperCase());
 }
 
-export const checkNum = (str) => (isNaN(str) ? str : parseInt(str));
-
 export function compareDate(x, y) {
 	return new Date(y) - new Date(x);
 }
