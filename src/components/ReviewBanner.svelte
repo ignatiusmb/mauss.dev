@@ -1,6 +1,6 @@
 <script>
 	export let post;
-	import { Image } from '@ignatiusmb/elements';
+	import { Image } from 'svelement';
 	import { createPrettyDate } from '../utils/helper';
 	$: ({ backdrop, title, rating, composed, last_seen } = post);
 	$: ({ day, month, year } = createPrettyDate(last_seen));

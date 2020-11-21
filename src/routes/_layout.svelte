@@ -5,7 +5,7 @@
 	import { stores } from '@sapper/app';
 	const { page: local } = stores();
 
-	import { ScrollTop } from '@ignatiusmb/elements';
+	import { ScrollTop } from 'svelement';
 	import Navigation from '../components/Navigation.svelte';
 	import Footer from '../components/Footer.svelte';
 

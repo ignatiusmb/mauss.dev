@@ -1,6 +1,6 @@
 <script>
 	export let post;
-	import { Image, ButtonLink } from '@ignatiusmb/elements';
+	import { Image, ButtonLink } from 'svelement';
 	import { createPrettyDate } from '../utils/helper';
 	const { published, updated } = post.date;
 	const prettyDate = createPrettyDate((updated !== published && updated) || published);

@@ -8,7 +8,7 @@
 	class:neutral={verdict === 0}
 	class:negative={verdict === -1}
 	class:wip={verdict === -2}
-	title={verdict === 2 ? 'Must-watch!' : null}>
+	title={verdict === 2 ? 'Must-watch!' : undefined}>
 	{#if verdict < -1}
 		<span>Pending</span>
 	{:else if verdict < 0}

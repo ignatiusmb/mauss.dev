@@ -23,7 +23,7 @@
 		curated: { heading: 'Recently Curated ⚖️', desc: "Stuffs I've been curating recently:" },
 	};
 
-	import { Link, Image } from '@ignatiusmb/elements';
+	import { Link, Image } from 'svelement';
 	import MetaHead from '../pages/MetaHead.svelte';
 	import Article from '../pages/Article.svelte';
 	import Quote from '../components/Quote.svelte';

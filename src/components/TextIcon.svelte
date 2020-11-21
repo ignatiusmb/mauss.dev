@@ -1,7 +1,7 @@
 <script>
 	export let href = '';
 	export let style = '';
-	import { Link } from '@ignatiusmb/elements';
+	import { Link } from 'svelement';
 </script>
 
 <span on:click {style} class:empty={!href} class="text-icon">
