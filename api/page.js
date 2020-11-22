@@ -15,24 +15,24 @@ module.exports = async (req, res) => {
 		return res.status(200).json({ hits: 1 });
 	} else if (!exists) return res.status(200).json({ hits: 0 });
 
-	const doc = await server.query(q.Get(match));
-	delete doc.data.slug;
+	const { ref, data: old } = await server.query(q.Get(match));
 
 	if (req.method === 'POST') {
 		if (!req.body) {
-			const data = { hits: doc.data.hits + 1 };
-			server.query(q.Update(doc.ref, { data }));
+			const data = { hits: old.hits + 1 };
+			server.query(q.Update(ref, { data }));
 			return res.status(200).json(data);
 		}
 
 		const data = {
-			hits: doc.data.hits,
-			loves: req.body.love && (doc.data.loves || 0) + 1,
+			hits: old.hits,
+			loves: req.body.love && (old.loves || 0) + 1,
 		};
 
-		server.query(q.Update(doc.ref, { data }));
+		server.query(q.Update(ref, { data }));
 		return res.status(200).json(data);
 	}
 
-	return res.status(200).json(...doc.data);
+	delete old.slug;
+	return res.status(200).json(old);
 };
