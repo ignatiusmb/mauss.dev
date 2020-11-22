@@ -15,8 +15,8 @@
 	import MetaHead from '../../pages/MetaHead.svelte';
 	import LayoutPicker from '../../pages/LayoutPicker.svelte';
 
-	import { cSlice as store } from '../../stores';
 	import { sieve, filter } from '../../utils/search';
+	import { cSlice as store } from '../../utils/stores';
 
 	let query, filtered, sieved;
 	let filters = { categories: [], tags: [], sort: 'updated' };

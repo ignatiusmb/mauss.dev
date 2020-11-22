@@ -45,7 +45,7 @@
 	import PerspectiveCarousel from '../../components/PerspectiveCarousel.svelte';
 
 	import { sieve, filter } from '../../utils/search';
-	import { rSlice as store } from '../../stores';
+	import { rSlice as store } from '../../utils/stores';
 	let filters = { categories: [], genres: [], verdict: [], sort_by: 'updated' },
 		sieved,
 		view = 'grid';

@@ -1,7 +1,7 @@
 <script>
 	export let segment;
 
-	import { page } from '../stores';
+	import { page } from '../utils/stores';
 	import { stores } from '@sapper/app';
 	const { page: local } = stores();
 

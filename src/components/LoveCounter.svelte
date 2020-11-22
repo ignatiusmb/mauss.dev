@@ -11,7 +11,7 @@
 	};
 
 	import { Feather } from 'svelement/icons';
-	import { page } from '../stores';
+	import { page } from '../utils/stores';
 	let localCounter, disabled;
 
 	async function increment() {
