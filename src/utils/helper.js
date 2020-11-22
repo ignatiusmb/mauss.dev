@@ -3,8 +3,6 @@ export function capitalize(text, lower) {
 	return text.replace(/(?:^|\s)\S/g, (a) => a.toUpperCase());
 }
 
-export const checkNum = (str) => (isNaN(str) ? str : parseInt(str));
-
 export function compareDate(x, y) {
 	return new Date(y) - new Date(x);
 }
@@ -35,6 +33,14 @@ export function createPrettyDate(date) {
 	const month = dateFormat.toLocaleDateString('default', { month: 'long' });
 	const year = dateFormat.getFullYear();
 	return { weekday, day, month, year, complete: `${day} ${month} ${year}` };
+}
+
+export function debounce(fn, time = 300) {
+	let timeout;
+	return (...args) => {
+		if (timeout) clearTimeout(timeout);
+		timeout = setTimeout(() => fn(...args), time);
+	};
 }
 
 export function isAbbreviated(text) {

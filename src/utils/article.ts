@@ -1,4 +1,4 @@
-import { checkNum } from './helper';
+import { checkNum } from 'svelement/utils';
 export function countAverageRating(ratings: string[]) {
 	if (!ratings || ratings.some((r: any) => isNaN(r))) return 0;
 	const total = ratings.reduce((acc, cur) => acc + parseInt(cur), 0);

@@ -23,14 +23,14 @@ export function sieve(query, data) {
 export function filter(dict, data) {
 	let filtered = data;
 	for (const key in dict) {
-		if (!dict[key].length || key === 'sort') continue;
+		if (!dict[key].length || key === 'sort_by') continue;
 		if (['tags', 'genres', 'verdict'].includes(key)) {
 			filtered = data.filter((p) => compare(p[key], dict[key]));
 		} else if (key === 'categories') {
 			filtered = data.filter((p) => compare(p.category, dict[key]));
 		}
 	}
-	return sort(dict['sort'] || 'updated', filtered);
+	return sort(dict['sort_by'] || 'updated', filtered);
 }
 
 const sortBy = {

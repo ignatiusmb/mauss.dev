@@ -8,7 +8,7 @@
 
 <script>
 	export let category, data;
-	import { ButtonLink } from '@ignatiusmb/elements';
+	import { ButtonLink } from 'svelement';
 	import MetaHead from '../../../pages/MetaHead.svelte';
 
 	import { scale } from 'svelte/transition';

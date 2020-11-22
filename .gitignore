@@ -3,7 +3,7 @@ yarn-error.log
 .env
 *secret.*
 
-**/node_modules/
+/node_modules/
 /src/node_modules/@sapper/
 /coverage/
 /cypress/screenshots/

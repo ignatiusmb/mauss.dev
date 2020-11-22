@@ -20,7 +20,7 @@
 		mal: 'MyAnimeList',
 	};
 
-	import { Link } from '@ignatiusmb/elements';
+	import { Link } from 'svelement';
 	import MetaHead from '../../../pages/MetaHead.svelte';
 	import Article from '../../../pages/Article.svelte';
 
@@ -35,7 +35,7 @@
 	canonical="reviews/{post.slug}"
 	title={title.short ? title.short : title.jp ? title.jp : title.en} />
 
-<Article {post} header counter path="content/reviews/{post.slug}.md" {siblings}>
+<Article {post} header path="content/reviews/{post.slug}.md" {siblings}>
 	<div slot="header">
 		<ReviewBanner {post} />
 

@@ -3,8 +3,9 @@
 	export let post;
 	const size = 16;
 
+	import { Feather } from 'svelement/icons';
+	import { Link } from 'svelement';
 	import { createPrettyDate } from '../utils/helper';
-	import { Feather, Link } from '@ignatiusmb/elements';
 	import TextIcon from '../components/TextIcon.svelte';
 
 	$: ({ author, published, updated } = post.date || {});

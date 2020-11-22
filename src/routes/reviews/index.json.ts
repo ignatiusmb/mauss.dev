@@ -1,6 +1,6 @@
 import type { Request, Response } from 'express';
 import { readdirSync } from 'fs';
-import { checkNum } from '../../utils/helper';
+import { checkNum } from 'svelement/utils';
 import { parseDir } from '../../utils/parser';
 import { countAverageRating, fillSiblings } from '../../utils/article';
 

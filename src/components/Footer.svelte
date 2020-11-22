@@ -1,5 +1,6 @@
 <script>
-	import { Feather, Link } from '@ignatiusmb/elements';
+	import { Link } from 'svelement';
+	import { Feather } from 'svelement/icons';
 </script>
 
 <footer>

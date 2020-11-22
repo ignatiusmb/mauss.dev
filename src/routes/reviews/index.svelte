@@ -3,18 +3,33 @@
 		const data = await this.fetch('reviews.json').then((r) => r.json());
 		const categories = Array.from(new Set(data.map((p) => p.category)));
 		const genres = Array.from(new Set(data.flatMap((p) => p.genres))).sort();
-		const verdict = Array.from(new Set(data.map((d) => d.verdict)));
 		return {
 			data,
 			search: query,
-			unique: { categories, genres },
-			verdict: verdict.sort((x, y) => x - y).reverse(),
+			unique: {
+				categories,
+				genres,
+				verdict: {
+					'2': 'Must-watch!',
+					'1': 'Recommended',
+					'0': 'Contextual',
+					'-1': 'Not recommended',
+					'-2': 'Pending',
+				},
+				sort_by: {
+					updated: 'Last updated',
+					published: 'Date published',
+					released: 'Year released',
+					seen: 'Last seen',
+					rating: 'Rating',
+				},
+			},
 		};
 	}
 </script>
 
 <script>
-	export let data, search, unique, verdict;
+	export let data, search, unique;
 	let { q: query } = search;
 	if (query) query = query.replace(/\+/g, ' ');
 
@@ -22,15 +37,16 @@
 	import { scale } from 'svelte/transition';
 	const duration = 100;
 
-	import { Feather, SearchBar, Pagination } from '@ignatiusmb/elements';
+	import { Feather } from 'svelement/icons';
+	import { SearchBar, Pagination } from 'svelement';
 	import MetaHead from '../../pages/MetaHead.svelte';
 	import LayoutPicker from '../../pages/LayoutPicker.svelte';
 	import ReviewCard from '../../components/ReviewCard.svelte';
 	import PerspectiveCarousel from '../../components/PerspectiveCarousel.svelte';
 
 	import { sieve, filter } from '../../utils/search';
-	import { rSlice as store } from '../../stores';
-	let filters = { categories: [], genres: [], verdict: [], sort: 'updated' },
+	import { rSlice as store } from '../../utils/stores';
+	let filters = { categories: [], genres: [], verdict: [], sort_by: 'updated' },
 		sieved,
 		view = 'grid';
 	$: bound = view === 'grid' ? 12 : 3;
@@ -53,51 +69,7 @@
 	<header slot="header">
 		<h1>DevMauss Reviews</h1>
 
-		<SearchBar bind:query bind:filters {unique}>
-			<section>
-				<h3>Verdict</h3>
-				{#each verdict as rec}
-					<label>
-						<input type="checkbox" bind:group={filters.verdict} value={rec} />
-						{#if rec === 2}
-							<span>Must-watch!</span>
-						{:else if rec === 1}
-							<span>Recommended</span>
-						{:else if rec === 0}
-							<span>Contextual</span>
-						{:else if rec === -1}
-							<span>Not recommended</span>
-						{:else}
-							<span>Pending</span>
-						{/if}
-					</label>
-				{/each}
-			</section>
-
-			<section>
-				<h3>Sort by</h3>
-				<label>
-					<input type="radio" bind:group={filters.sort} value="updated" />
-					<span>Last updated</span>
-				</label>
-				<label>
-					<input type="radio" bind:group={filters.sort} value="published" />
-					<span>Date published</span>
-				</label>
-				<label>
-					<input type="radio" bind:group={filters.sort} value="released" />
-					<span>Year released</span>
-				</label>
-				<label>
-					<input type="radio" bind:group={filters.sort} value="seen" />
-					<span>Last seen</span>
-				</label>
-				<label>
-					<input type="radio" bind:group={filters.sort} value="rating" />
-					<span>Rating</span>
-				</label>
-			</section>
-		</SearchBar>
+		<SearchBar bind:query bind:filters {unique} />
 
 		{#if view !== 'scrollsnap'}
 			<Pagination {store} {total} {bound} {increment} />
