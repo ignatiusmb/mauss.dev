@@ -39,7 +39,7 @@
 			<Feather.Heart />
 		</button>
 	</div>
-{:then page}
+{:then data}
 	<div on:click={increment} class:disabled>
 		<button
 			aria-label="heart incrementer"
@@ -47,7 +47,7 @@
 			class:filled={localCounter >= 10}>
 			<Feather.Heart />
 		</button>
-		<span in:fly={{ y: 10 }}>{page.loves || 0}</span>
+		<span in:fly={{ y: 10 }}>{data.loves || 0}</span>
 	</div>
 {/await}
 
