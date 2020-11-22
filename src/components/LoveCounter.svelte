@@ -6,7 +6,7 @@
 	$: counter = $preloading ? null : counter;
 	$: url = `api/page?slug=${path}`;
 
-	import { Feather } from '@ignatiusmb/elements';
+	import { Feather } from 'svelement/icons';
 	let localCounter, disabled;
 
 	async function increment() {
