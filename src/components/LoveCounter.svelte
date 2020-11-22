@@ -47,7 +47,7 @@
 			class:filled={localCounter >= 10}>
 			<Feather.Heart />
 		</button>
-		<span in:fly={{ y: 10 }}>{data.loves || 0}</span>
+		<span in:fly={{ y: 10 }}>{(data && data.loves) || 0}</span>
 	</div>
 {/await}
 
