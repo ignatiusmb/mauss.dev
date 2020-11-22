@@ -52,7 +52,6 @@ export default {
 				'process.browser': true,
 				'process.dev': dev,
 			}),
-			alias,
 			svelte({
 				dev,
 				preprocess,
@@ -69,6 +68,7 @@ export default {
 				inlineSources: !!sourcemap,
 			}),
 			json(),
+			alias,
 
 			legacy &&
 				babel({
@@ -97,7 +97,6 @@ export default {
 				'process.browser': false,
 				'process.dev': dev,
 			}),
-			alias,
 			svelte({
 				dev,
 				preprocess,
@@ -111,6 +110,7 @@ export default {
 				inlineSources: !!sourcemap,
 			}),
 			json(),
+			alias,
 		],
 	},
 };
