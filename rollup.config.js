@@ -16,7 +16,7 @@ import 'dotenv/config';
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
-const sourceMap = dev ? 'inline' : false;
+const sourcemap = dev ? 'inline' : false;
 const legacy = !!process.env.SAPPER_LEGACY_BUILD;
 
 const onwarn = (warning, onwarn) =>
@@ -44,7 +44,7 @@ const preprocess = [
 export default {
 	client: {
 		input: config.client.input(),
-		output: { ...config.client.output(), sourceMap },
+		output: { ...config.client.output(), sourcemap },
 		preserveEntrySignatures: false,
 		onwarn,
 		plugins: [
@@ -63,10 +63,10 @@ export default {
 				browser: true,
 				dedupe: ['svelte'],
 			}),
-			commonjs({ sourceMap: !!sourceMap }),
+			commonjs({ sourceMap: !!sourcemap }),
 			typescript({
-				sourceMap: !!sourceMap,
-				inlineSources: !!sourceMap,
+				sourceMap: !!sourcemap,
+				inlineSources: !!sourcemap,
 			}),
 			json(),
 
@@ -88,7 +88,7 @@ export default {
 
 	server: {
 		input: config.server.input(),
-		output: { ...config.server.output(), sourceMap },
+		output: { ...config.server.output(), sourcemap },
 		preserveEntrySignatures: 'strict',
 		external: Object.keys(pkg.dependencies).concat(require('module').builtinModules),
 		onwarn,
@@ -105,10 +105,10 @@ export default {
 				generate: 'ssr',
 			}),
 			resolve({ dedupe: ['svelte'] }),
-			commonjs({ sourceMap: !!sourceMap }),
+			commonjs({ sourceMap: !!sourcemap }),
 			typescript({
-				sourceMap: !!sourceMap,
-				inlineSources: !!sourceMap,
+				sourceMap: !!sourcemap,
+				inlineSources: !!sourcemap,
 			}),
 			json(),
 		],
