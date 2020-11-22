@@ -3,7 +3,6 @@
 	export let post = null;
 	export let path = null;
 	export let siblings = null;
-	export let counter = false;
 	import { onMount } from 'svelte';
 	import { Feather } from 'svelement/icons';
 	import { Link, ProgressBar } from 'svelement';
@@ -67,10 +66,6 @@
 		<Siblings {...siblings} />
 	{/if}
 </main>
-
-{#if !process.dev && counter}
-	<LoveCounter />
-{/if}
 
 <style>
 	main {

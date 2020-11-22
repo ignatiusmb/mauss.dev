@@ -35,6 +35,14 @@ export function createPrettyDate(date) {
 	return { weekday, day, month, year, complete: `${day} ${month} ${year}` };
 }
 
+export function debounce(fn, time = 300) {
+	let timeout;
+	return (...args) => {
+		if (timeout) clearTimeout(timeout);
+		timeout = setTimeout(() => fn(...args), time);
+	};
+}
+
 export function isAbbreviated(text) {
 	if (text.length < 4) return true;
 	return isNaN(parseInt(text[3], 10)) ? false : true;
