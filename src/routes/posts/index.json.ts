@@ -1,8 +1,8 @@
 import type { Request, Response } from 'express';
 import { existsSync } from 'fs';
 import { join } from 'path';
-import { parseDir } from '../../utils/parser';
-import { fillSiblings } from '../../utils/article';
+import { parseDir } from '$utils/parser';
+import { fillSiblings } from '$utils/article';
 
 export function get(_: Request, res: Response) {
 	function hydrate(data: RawPost, _: string, filename: string): FinalPost {

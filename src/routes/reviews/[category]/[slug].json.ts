@@ -1,10 +1,10 @@
 import type { Request, Response } from 'express';
-import { checkNum } from 'svelement/utils/helper';
-import { parseFile } from '../../../utils/parser';
-import { countAverageRating, contentParser } from '../../../utils/article';
-import marker from '../../../utils/marker';
+import { checkNum } from 'svelement/utils';
+import { parseFile } from '$utils/parser';
+import { countAverageRating, contentParser } from '$utils/article';
+import marker from '$utils/marker';
 
-export function get(req: Request, res: Response) {
+export function get(req: Request, res: Response): void {
 	const { category, slug } = req.params;
 	const filepath = `content/reviews/${category}/${slug}.md`;
 	function hydrate(data: RawReview, content: string): FinalReview {

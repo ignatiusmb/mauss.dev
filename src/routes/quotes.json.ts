@@ -1,5 +1,5 @@
 import type { Request, Response } from 'express';
-import { parseDir } from '../utils/parser';
+import { parseDir } from '$utils/parser';
 
 export function get(_: Request, res: Response) {
 	const DIR = 'content/quotes';

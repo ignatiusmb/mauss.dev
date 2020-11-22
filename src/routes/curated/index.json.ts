@@ -1,6 +1,6 @@
 import type { Request, Response } from 'express';
 import { readdirSync } from 'fs';
-import { parseDir } from '../../utils/parser';
+import { parseDir } from '$utils/parser';
 
 export function get(_: Request, res: Response) {
 	const DIR = 'content/curated';

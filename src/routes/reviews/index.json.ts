@@ -1,8 +1,8 @@
 import type { Request, Response } from 'express';
 import { readdirSync } from 'fs';
-import { checkNum } from 'svelement/utils/helper';
-import { parseDir } from '../../utils/parser';
-import { countAverageRating, fillSiblings } from '../../utils/article';
+import { checkNum } from 'svelement/utils';
+import { parseDir } from '$utils/parser';
+import { countAverageRating, fillSiblings } from '$utils/article';
 
 const check = (review: RawReview) => !review.rating || !review.verdict;
 

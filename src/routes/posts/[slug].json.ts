@@ -1,5 +1,5 @@
 import type { Request, Response } from 'express';
-import { parseDir } from '../../utils/parser';
+import { parseDir } from '$utils/parser';
 
 export function get(req: Request, res: Response) {
 	const { slug } = req.params;

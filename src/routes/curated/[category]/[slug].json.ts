@@ -1,5 +1,5 @@
 import type { Request, Response } from 'express';
-import { parseFile } from '../../../utils/parser';
+import { parseFile } from '$utils/parser';
 
 const separators = /[\s\][!"#$%&'()*+,./:;<=>?@\\^_{|}~-]/g;
 

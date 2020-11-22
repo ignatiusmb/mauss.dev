@@ -16,12 +16,12 @@
 	const duration = 100;
 
 	import { SearchBar, Pagination } from 'svelement';
-	import MetaHead from '../../pages/MetaHead.svelte';
-	import LayoutPicker from '../../pages/LayoutPicker.svelte';
-	import PostCard from '../../components/PostCard.svelte';
+	import MetaHead from '$pages/MetaHead.svelte';
+	import LayoutPicker from '$pages/LayoutPicker.svelte';
+	import PostCard from '$components/PostCard.svelte';
 
-	import { pSlice as store } from '../../stores';
-	import { sieve, filter } from '../../utils/search';
+	import { sieve, filter } from '$utils/search';
+	import { pSlice as store } from '$utils/stores';
 	let query, filtered, sieved;
 	let filters = { categories: [], tags: [], sort_by: 'updated' };
 

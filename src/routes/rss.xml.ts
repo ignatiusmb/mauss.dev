@@ -1,8 +1,8 @@
 import type { Response, Request } from 'express';
 import { readdirSync } from 'fs';
-import { parseDir } from '../utils/parser';
-import { compareDate } from '../utils/helper';
-import RSS from '../utils/rss';
+import { parseDir } from '$utils/parser';
+import { compareDate } from '$utils/helper';
+import RSS from '$utils/rss';
 
 const channel = {
 	domain: 'mauss.dev',
