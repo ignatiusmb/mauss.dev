@@ -9,6 +9,8 @@ const check = (review: RawReview) => !review.rating || !review.verdict;
 export function get(_: Request, res: Response) {
 	const DIR = 'content/reviews';
 	const reviews = readdirSync(DIR).flatMap((folder) => {
+		if (folder.includes('draft')) return undefined;
+
 		function hydrate(data: RawReview, _: string, filename: string): FinalReview {
 			const [slug] = filename.split('.');
 			const review: FinalReview = {
@@ -25,5 +27,5 @@ export function get(_: Request, res: Response) {
 	});
 
 	res.writeHead(200, { 'Content-Type': 'application/json' });
-	res.end(JSON.stringify(fillSiblings(reviews, 'reviews/', check)));
+	res.end(JSON.stringify(fillSiblings(reviews.filter(Boolean), 'reviews/', check)));
 }
