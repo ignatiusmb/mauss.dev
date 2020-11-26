@@ -1,23 +1,36 @@
 import { checkNum } from 'svelement/utils';
-export function countAverageRating(ratings: string[]) {
-	if (!ratings || ratings.some((r: any) => isNaN(r))) return 0;
+export function countAverageRating(ratings: string[]): number {
+	if (!ratings || ratings.some((r: unknown) => isNaN(r as number))) return 0;
 	const total = ratings.reduce((acc, cur) => acc + parseInt(cur), 0);
 	return Math.round((total / ratings.length + Number.EPSILON) * 100) / 100;
 }
 
-export function contentParser(data: any, content: string) {
-	const traverseData = (meta: any, str: any): string => {
-		for (const key of str.split(':')) meta = meta[checkNum(key)];
-		return meta;
+type GenericData = { [key: string]: string };
+export function contentParser<T extends GenericData>(data: T, content: string): string {
+	const traverseData = <T extends GenericData>(meta: T, propertyKey: string): string => {
+		let metaValue = '';
+		for (const key of propertyKey.split(':')) {
+			metaValue = meta[checkNum(key)];
+		}
+		return metaValue;
 	};
 
 	return content.replace(/#{.+}!/g, (exp) => {
 		const captured = exp.slice(2, exp.length - 2);
-		return captured ? traverseData(data, captured) : exp;
+		return (captured && traverseData(data, captured)) || exp;
 	});
 }
 
-export function fillSiblings(articles: any[], base: string, breakpoint?: Function) {
+export function fillSiblings<
+	T extends {
+		slug: string;
+		title: string;
+		siblings: {
+			prev?: { slug: string; title: string };
+			next?: { slug: string; title: string };
+		};
+	}
+>(articles: T[], base: string, breakpoint?: (next: T) => boolean): T[] {
 	for (let i = 0; i < articles.length; i++) {
 		if (!articles[i]['siblings']) articles[i]['siblings'] = {};
 		const [prev, next] = [articles[i - 1], articles[i + 1]];

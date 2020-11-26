@@ -15,7 +15,7 @@ const clean = (html: string) => {
 	return html.replace(/["'&<>]/g, (c) => `&${chars[c]};`);
 };
 
-export default function RSS(channel: RSSChannel, items: RSSItem[]) {
+export default function RSS(channel: RSSChannel, items: RSSItem[]): string {
 	const createItem = (item: RSSItem) => `
 		<item>
 			<title>${clean(item.title)}</title>
