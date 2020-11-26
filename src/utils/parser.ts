@@ -39,15 +39,16 @@ const extractMeta = (metadata: string) => {
 	}, {} as { [key: string]: any });
 };
 
-export function parseFile(filename: string, hydrate: Function) {
-	const content = readFileSync(filename, 'utf-8');
+type HydrateFn = <T>(data: { frontMatter: T; content: string; filename: string }) => T;
+export function parseFile<T>(pathname: string, hydrate: HydrateFn): T | undefined {
+	const content = readFileSync(pathname, 'utf-8');
 	const fmExpression = /---\r?\n([\s\S]+?)\r?\n---/;
 	const [rawData, metadata] = fmExpression.exec(content) || ['', ''];
 
 	const frontMatter = extractMeta(metadata);
-	const [cleanedFilename] = filename.split(/[/\\]/).slice(-1);
+	const [filename] = pathname.split(/[/\\]/).slice(-1);
 	const article = metadata ? content.slice(rawData.length + 1) : content;
-	const result = hydrate(frontMatter, article, cleanedFilename);
+	const result = hydrate({ frontMatter, content: article, filename });
 	if (!result) return;
 
 	if (result.date && result.date.published && !result.date.updated) {
@@ -60,12 +61,12 @@ export function parseFile(filename: string, hydrate: Function) {
 		result.content = contentParser(rest, content);
 		result.content = marker.render(result.content);
 	}
-	return result;
+	return result as T;
 }
 
-export function parseDir(dirname: string, hydrate: Function) {
+export function parseDir<T>(dirname: string, hydrate: HydrateFn): T[] {
 	return readdirSync(dirname)
 		.filter((name) => !name.startsWith('draft.') && name.endsWith('.md'))
 		.map((filename) => parseFile(join(dirname, filename), hydrate))
-		.sort(sortCompare);
+		.sort(sortCompare) as T[];
 }

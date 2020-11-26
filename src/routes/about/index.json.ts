@@ -1,10 +1,10 @@
 import type { Request, Response } from 'express';
 import { parseDir } from '$utils/parser';
 
-export function get(_: Request, res: Response) {
-	const articles = parseDir('content/about', (data: any, content: string, filename: string) => {
+export async function get(_: Request, res: Response): Promise<void> {
+	const articles = parseDir('content/about', ({ frontMatter, content, filename }) => {
 		const [slug] = filename.split('.');
-		return { slug, ...data, content };
+		return { slug, ...frontMatter, content };
 	}).reduce((acc, cur) => {
 		const { slug, ...res } = cur;
 		return { ...acc, [slug]: res };

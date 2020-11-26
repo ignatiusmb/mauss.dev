@@ -11,11 +11,11 @@ const channel = {
 	description: 'Developed by DevMauss',
 };
 
-export function get(_: Request, res: Response) {
+export async function get(_: Request, res: Response): Promise<void> {
 	const curated = readdirSync('content/curated').flatMap((folder) => {
 		if (folder === 'draft') return;
-		return parseDir(`content/curated/${folder}`, (data: any, _: string, filename: string) => {
-			const { title, date } = data;
+		return parseDir(`content/curated/${folder}`, ({ frontMatter, filename }) => {
+			const { title, date } = frontMatter;
 			return {
 				title,
 				slug: `curated/${folder}/${filename.split('.')[0]}`,
@@ -25,9 +25,9 @@ export function get(_: Request, res: Response) {
 		});
 	});
 
-	const posts = parseDir('content/posts', (data: any, _: string, filename: string) => {
+	const posts = parseDir('content/posts', ({ frontMatter, filename }) => {
 		const [date, slug] = filename.split('.');
-		const { title, description } = data;
+		const { title, description } = frontMatter;
 		return {
 			title,
 			slug: `posts/${slug}`,
@@ -37,8 +37,8 @@ export function get(_: Request, res: Response) {
 	});
 
 	const reviews = readdirSync('content/reviews').flatMap((folder) => {
-		return parseDir(`content/reviews/${folder}`, (data: any, _: string, filename: string) => {
-			const { title, date } = data;
+		return parseDir(`content/reviews/${folder}`, ({ frontMatter, filename }) => {
+			const { title, date } = frontMatter;
 			return {
 				title: title.en,
 				slug: `reviews/${folder}/${filename.split('.')[0]}`,
