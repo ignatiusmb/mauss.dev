@@ -15,17 +15,17 @@ Hey folks, welcome back to our monthly digest! As always, feel free to skip ahea
 
 ### Honorable content mentions
 
-## Music of the month | [Spotify Playlist]({spotify_playlist_uri})
+## Music of the month
 
 ![!YouTube#hb]({youtube_id} "[[Spotify](link)] title")
 
-### Honorable music mentions
+### Honorable music mentions | [Spotify]({spotify_playlist_uri}) / [YouTube]({youtube_music_playlist})
 
-## Video of the month | [YouTube Playlist]({youtube_playlist_link})
+## Video of the month
 
 ![!YouTube#hb]({youtube_id} "title")
 
-### Honorable video mentions
+### Honorable video mentions | [YouTube]({youtube_video_playlist})
 
 ***
 
