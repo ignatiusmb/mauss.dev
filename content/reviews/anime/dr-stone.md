@@ -1,5 +1,5 @@
 ---
-year: 2019
+released: 2019-07-05
 title:en: Dr. Stone
 genres: adventure, sci-fi, shounen
 rating:

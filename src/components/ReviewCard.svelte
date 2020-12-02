@@ -1,16 +1,16 @@
 <script>
 	export let post;
-	import { Image, ButtonLink } from '@ignatiusmb/elements';
+	import { Image, ButtonLink } from 'svelement';
 	import Verdict from '../components/Verdict.svelte';
 
 	import { capitalize } from '../utils/helper';
 	const verdict = parseInt(post.verdict);
-	const disabled = !post.rating || !post.verdict;
+	const disabled = !post.rating || post.verdict === -2;
 </script>
 
 <section>
 	<Image src={post.image.en} alt={post.title.en} lazy overlay ratio={3 / 2}>
-		<h3>{post.year}</h3>
+		<h3>{post.released.split('-')[0]}</h3>
 		{#if post.title.short}
 			<h3>{post.title.short}</h3>
 		{:else if post.title.jp}

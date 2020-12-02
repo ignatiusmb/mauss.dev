@@ -36,7 +36,7 @@ declare class FinalPost implements RawPost {
 
 // Review
 interface RawReview extends RawArticle {
-	year: string;
+	released: string;
 	title: {
 		short?: string;
 		en: string;
@@ -44,7 +44,7 @@ interface RawReview extends RawArticle {
 	};
 	genres: string[];
 	rating: any;
-	verdict: number | undefined;
+	verdict: number | string;
 
 	last_seen: string | Date;
 	date: {
@@ -63,11 +63,11 @@ interface RawReview extends RawArticle {
 declare class FinalReview implements RawReview {
 	slug: string;
 	category: string;
-	year: string;
+	released: string;
 	title: { short?: string; en: string; jp?: string };
 	genres: string[];
 	rating: number;
-	verdict: number | undefined;
+	verdict: number | string;
 
 	last_seen: string | Date;
 	date: {

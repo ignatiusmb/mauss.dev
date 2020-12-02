@@ -1,5 +1,5 @@
 ---
-year: 1988
+released: 1988-04-16
 title:en: Grave of the Fireflies
 title:jp: Hotaru no Haka
 genres: animation, drama, historical

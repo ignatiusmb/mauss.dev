@@ -1,23 +1,24 @@
 <script>
 	import { fly } from 'svelte/transition';
 	import { stores } from '@sapper/app';
-	const { preloading, page } = stores();
-	$: path = ($page.path.endsWith('/') && $page.path.slice(0, 1)) || $page.path;
-	$: counter = $preloading ? null : counter;
+	const { page: local } = stores();
+	$: path = ($local.path.endsWith('/') && $local.path.slice(0, 1)) || $local.path;
 	$: url = `api/page?slug=${path}`;
+	const PostData = {
+		method: 'POST',
+		headers: { 'Content-Type': 'application/json' },
+		body: JSON.stringify({ love: 1 }),
+	};
 
-	import { Feather } from '@ignatiusmb/elements';
+	import { Feather } from 'svelement/icons';
+	import { page } from '../utils/stores';
 	let localCounter, disabled;
 
 	async function increment() {
 		if (disabled || localStorage[path] >= 10) return;
 		localStorage[path] = localCounter = ++localStorage[path];
 		disabled = true;
-		const { loves } = await fetch(url, {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify({ love: 1 }),
-		}).then((r) => r.json());
+		$page = fetch(url, PostData).then((r) => r.json());
 		counter = (loves || 0) + 1;
 		disabled = false;
 	}
@@ -28,21 +29,27 @@
 	}
 </script>
 
-<div on:click={increment} class:disabled>
-	<button
-		aria-label="heart incrementer"
-		class:outlined={localCounter >= 5}
-		class:filled={localCounter >= 10}>
-		<Feather.Heart />
-	</button>
-	{#if counter}
-		<span in:fly={{ y: 10 }}>{counter}</span>
-	{:else if process.browser}
-		{#await fetch(url).then((r) => r.json()) then { loves }}
-			<span in:fly={{ y: 10 }}>{loves || 0}</span>
-		{/await}
-	{/if}
-</div>
+{#await $page}
+	<div class="disabled">
+		<button
+			disabled
+			aria-label="heart incrementer"
+			class:outlined={localCounter >= 5}
+			class:filled={localCounter >= 10}>
+			<Feather.Heart />
+		</button>
+	</div>
+{:then data}
+	<div on:click={increment} class:disabled>
+		<button
+			aria-label="heart incrementer"
+			class:outlined={localCounter >= 5}
+			class:filled={localCounter >= 10}>
+			<Feather.Heart />
+		</button>
+		<span in:fly={{ y: 10 }}>{(data && data.loves) || 0}</span>
+	</div>
+{/await}
 
 <style>
 	div {

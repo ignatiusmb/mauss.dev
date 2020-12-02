@@ -9,7 +9,7 @@
 
 <script>
 	export let post;
-	import { Link } from '@ignatiusmb/elements';
+	import { Link } from 'svelement';
 	import MetaHead from '../../../pages/MetaHead.svelte';
 	import Article from '../../../pages/Article.svelte';
 	$: ({ slug, title, content } = post);
@@ -17,7 +17,7 @@
 
 <MetaHead {post} canonical="curated/{slug}" {title} />
 
-<Article {post} header counter path="content/curated/{slug}.md">
+<Article {post} header path="content/curated/{slug}.md">
 	{#if post.toc.length}
 		<section id="objective" class="info-box">
 			<h3>Quick Links</h3>

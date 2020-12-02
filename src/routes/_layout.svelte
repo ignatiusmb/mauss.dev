@@ -1,10 +1,11 @@
 <script>
 	export let segment;
 
+	import { page } from '../utils/stores';
 	import { stores } from '@sapper/app';
-	const { page } = stores();
+	const { page: local } = stores();
 
-	import { ScrollTop } from '@ignatiusmb/elements';
+	import { ScrollTop } from 'svelement';
 	import Navigation from '../components/Navigation.svelte';
 	import Footer from '../components/Footer.svelte';
 
@@ -15,8 +16,8 @@
 	import '../styles/blog.css';
 	import '../styles/animation.css';
 
-	$: if (!process.dev && process.browser && !$page.error) {
-		fetch(`api/page?slug=${$page.path}`, { method: 'POST' });
+	$: if (!process.dev && process.browser && !$local.error) {
+		$page = fetch(`api/page?slug=${$local.path}`, { method: 'POST' }).then((r) => r.json());
 	}
 </script>
 

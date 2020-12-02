@@ -1,5 +1,5 @@
 ---
-year: 2012
+released: 2012-10-09
 title:en: The Pet Girl of Sakurasou
 title:jp: Sakura-sou no Pet na Kanojo
 genres: slice of life, comedy, drama, romance, school

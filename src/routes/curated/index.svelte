@@ -1,24 +1,22 @@
 <script context="module">
 	export async function preload() {
 		const data = await this.fetch('curated.json').then((r) => r.json());
-		const categories = Array.from(new Set(data.map((p) => p.category)));
-		return { data, categories };
+		return { data };
 	}
 </script>
 
 <script>
-	export let data, categories;
+	export let data;
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
 	const bound = 8;
 
-	import { SearchBar, Pagination, ButtonLink } from '@ignatiusmb/elements';
+	import { SearchBar, Pagination, ButtonLink } from 'svelement';
 	import MetaHead from '../../pages/MetaHead.svelte';
 	import LayoutPicker from '../../pages/LayoutPicker.svelte';
 
-	import { cSlice as store } from '../../stores';
-	import { convertCase } from '../../utils/helper';
 	import { sieve, filter } from '../../utils/search';
+	import { cSlice as store } from '../../utils/stores';
 
 	let query, filtered, sieved;
 	let filters = { categories: [], tags: [], sort: 'updated' };
@@ -35,21 +33,9 @@
 	<link rel="alternate" href="rss.xml" type="application/rss+xml" />
 </MetaHead>
 
-<LayoutPicker header view="grid">
-	<header slot="header">
-		<h1>Curated by DevMauss</h1>
-	</header>
-
-	{#each categories as category (category)}
-		<section animate:flip transition:scale|local>
-			<small>{convertCase('pascal', category)}</small>
-			<ButtonLink href="curated/{category}">view</ButtonLink>
-		</section>
-	{/each}
-</LayoutPicker>
-
 <LayoutPicker header view="grid" itemSize="18em">
 	<header slot="header">
+		<h1>Curated by DevMauss</h1>
 		<SearchBar bind:query />
 		<Pagination {store} {total} {bound} />
 	</header>

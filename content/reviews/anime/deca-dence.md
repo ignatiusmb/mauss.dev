@@ -1,8 +1,6 @@
 ---
-year: 2020
-title:short:
+released: 2020-07-08
 title:en: Deca-Dence
-title:jp:
 genres: action, adventure, sci-fi
 rating: story,artwork,sound,characters
 verdict:

@@ -1,5 +1,5 @@
 ---
-year: 2011
+released: 2011-04-03
 title:short: Nichijou
 title:en: Nichijou: My Ordinary Life
 title:jp:
@@ -27,6 +27,8 @@ link:mal: https://myanimelist.net/anime/10165/Nichijou
 <https://www.reddit.com/r/anime/comments/j1rnyu/all_that_animation_for_just_a_short_and/>
 
 ### #{rating:0}!/10 | Story & Plot
+
+> Your jam was so disgusting, my life flashed before my eyes!
 
 ### #{rating:1}!/10 | Artwork & Animation
 

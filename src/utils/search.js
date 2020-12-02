@@ -1,7 +1,9 @@
 import { compareDate, sortCompare } from './helper';
 
 const exists = (source, query) =>
-	typeof source === 'string' ? source.toLowerCase().includes(query.toLowerCase()) : false;
+	typeof source !== 'string'
+		? source === query
+		: source.toLowerCase().includes(query.toLowerCase());
 const compare = (source, queries) =>
 	Array.isArray(source)
 		? source.filter((s) => compare(s, queries)).length
@@ -21,37 +23,27 @@ export function sieve(query, data) {
 export function filter(dict, data) {
 	let filtered = data;
 	for (const key in dict) {
-		if (!dict[key].length || key === 'sort') continue;
-		if (key === 'tags') {
-			filtered = data.filter((p) => compare(p.tags, dict.tags));
-		} else if (key === 'genres') {
-			filtered = data.filter((p) => compare(p.genres, dict.genres));
+		if (!dict[key].length || key === 'sort_by') continue;
+		if (['tags', 'genres', 'verdict'].includes(key)) {
+			filtered = data.filter((p) => compare(p[key], dict[key]));
 		} else if (key === 'categories') {
-			filtered = data.filter((p) => compare(p.category, dict.categories));
-		} else if (key === 'verdict') {
-			filtered = data.filter((p) => compare(p.verdict, dict.verdict));
-			if (dict.verdict.includes('-2')) filtered = [...filtered, ...data.filter((p) => !p.verdict)];
+			filtered = data.filter((p) => compare(p.category, dict[key]));
 		}
 	}
-	return sort(dict['sort'] || 'updated', filtered);
+	return sort(dict['sort_by'] || 'updated', filtered);
 }
 
-const sortByRatings = (x, y) => {
-	if (x.rating === null || x.rating === undefined) return 1;
-	if (y.rating === null || y.rating === undefined) return 0;
-	return x.rating === y.rating ? sortCompare(x, y) : y.rating - x.rating;
+const sortBy = {
+	rating(x, y) {
+		if (x.rating === null || x.rating === undefined) return 1;
+		if (y.rating === null || y.rating === undefined) return 0;
+		return x.rating === y.rating ? sortCompare(x, y) : y.rating - x.rating;
+	},
+	seen: (x, y) => compareDate(x.last_seen, y.last_seen) || sortCompare(x, y),
+	released: (x, y) => compareDate(x.released, y.released) || sortCompare(x, y),
+	published: (x, y) => compareDate(x.date.published, y.date.published) || sortCompare(x, y),
 };
 
 export function sort(type, data) {
-	if (type === 'updated') return data.sort(sortCompare);
-	if (type === 'rating') return data.sort(sortByRatings);
-	if (type === 'year') return data.sort((x, y) => y.year - x.year || sortCompare(x, y));
-	if (type === 'published')
-		return data.sort((x, y) => {
-			return compareDate(x.date.published, y.date.published) || sortCompare(x, y);
-		});
-	if (type === 'seen')
-		return data.sort((x, y) => {
-			return compareDate(x.last_seen, y.last_seen) || sortCompare(x, y);
-		});
+	return type in sortBy ? data.sort(sortBy[type]) : data.sort(sortCompare);
 }

@@ -1,5 +1,5 @@
 ---
-year: 2018
+released: 2018-10-04
 title:short: Seishun Buta Yarou / Bunny Girl Senpai
 title:en: Rascal Does Not Dream of Bunny Girl Senpai
 title:jp: Seishun Buta Yarou wa Bunny Girl Senpai no Yume wo Minai

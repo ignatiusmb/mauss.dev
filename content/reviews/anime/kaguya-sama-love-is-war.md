@@ -1,5 +1,5 @@
 ---
-year: 2019
+released: 2019-01-12
 title:short: Kaguya-sama: Love is War
 title:en: Kaguya-sama: Love is War
 title:jp: Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen

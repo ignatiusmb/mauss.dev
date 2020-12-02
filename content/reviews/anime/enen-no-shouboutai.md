@@ -1,5 +1,5 @@
 ---
-year: 2019
+released: 2019-07-06
 title:en: Fire Force
 title:jp: Enen no Shouboutai
 genres: action, supernatural, shounen, comedy

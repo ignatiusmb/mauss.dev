@@ -1,13 +1,12 @@
 <script context="module">
 	export async function preload({ params }) {
 		const { category, slug } = params;
+		const list = this.fetch('reviews.json').then((r) => r.json());
 		const res = await this.fetch(`reviews/${category}/${slug}.json`);
 		if (res.status !== 200) return this.error(404, 'Review not found');
 
-		const list = await this.fetch('reviews.json').then((r) => r.json());
 		const post = await res.json();
-
-		for (const review of list) {
+		for (const review of await list) {
 			if (review.slug !== post.slug) continue;
 			post.siblings = review.siblings;
 			return { post };
@@ -21,7 +20,7 @@
 		mal: 'MyAnimeList',
 	};
 
-	import { Link } from '@ignatiusmb/elements';
+	import { Link } from 'svelement';
 	import MetaHead from '../../../pages/MetaHead.svelte';
 	import Article from '../../../pages/Article.svelte';
 
@@ -36,7 +35,7 @@
 	canonical="reviews/{post.slug}"
 	title={title.short ? title.short : title.jp ? title.jp : title.en} />
 
-<Article {post} header counter path="content/reviews/{post.slug}.md" {siblings}>
+<Article {post} header path="content/reviews/{post.slug}.md" {siblings}>
 	<div slot="header">
 		<ReviewBanner {post} />
 

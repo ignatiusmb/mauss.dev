@@ -1,6 +1,6 @@
 <script>
 	export let link;
-	import { Link } from '@ignatiusmb/elements';
+	import { Link } from 'svelement';
 </script>
 
 <section class="info-box warning">

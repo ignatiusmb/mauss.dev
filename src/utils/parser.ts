@@ -16,27 +16,27 @@ const countReadTime = (content: string) => {
 	}, 0);
 	const images = content.match(/(!\[.+\]\(.+\))/g);
 	const total = words + (images || []).length * 12;
-	return Math.round(total / 250) || 1;
+	return Math.round(total / 240) || 1;
 };
 
 const extractMeta = (metadata: string) => {
 	if (!metadata) return {};
 	const lines = metadata.split(/\r?\n/);
-	return lines.reduce((acc: { [key: string]: any }, cur: string) => {
+	return lines.reduce((acc, cur) => {
 		if (!cur.includes(': ')) return acc;
-		const [key, val]: [string, string] = splitAt(cur.indexOf(': '), cur);
+		const [key, val] = splitAt(cur.indexOf(': '), cur);
 
 		if (key.includes(':')) {
 			const [attr, category] = splitAt(key.indexOf(':'), key);
 			if (!acc[attr]) acc[attr] = {};
 			acc[attr][category] = val.trim();
-		} else if (val.includes(',')) {
+		} else if (val.includes(',') && key !== 'description') {
 			const items = val.split(',').map((v) => v.trim());
 			acc[key] = items.filter(Boolean);
 		} else acc[key] = val.trim();
 
 		return acc;
-	}, {});
+	}, {} as { [key: string]: any });
 };
 
 export function parseFile(filename: string, hydrate: Function) {
