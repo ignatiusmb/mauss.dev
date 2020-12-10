@@ -1,5 +1,19 @@
-export interface Post {
-	slug: string;
+interface I18nData {
+	short?: string;
+	en: string;
+	jp?: string;
+}
+
+export interface Child {
+	slug?: string;
+	title: string | I18nData;
+	siblings: {
+		prev?: { slug: string; title: string | I18nData };
+		next?: { slug: string; title: string | I18nData };
+	};
+}
+
+export interface Post extends Child {
 	title: string;
 	tags: string[];
 	category: string;
@@ -14,11 +28,10 @@ export interface Post {
 	content?: string;
 }
 
-export interface Review {
-	slug?: string;
+export interface Review extends Child {
 	category?: string;
 	released: string;
-	title: { short?: string; en: string; jp?: string };
+	title: I18nData;
 	genres: string[];
 	rating: string[] | number;
 	verdict: number | string;
