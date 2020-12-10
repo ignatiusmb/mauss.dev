@@ -1,3 +1,4 @@
+import type { Child } from '$utils/types';
 import { checkNum } from 'svelement/utils';
 export function countAverageRating(ratings: string[]): number {
 	if (!ratings || ratings.some((r: unknown) => isNaN(r as number))) return 0;
@@ -21,16 +22,11 @@ export function contentParser<T extends GenericData>(data: T, content: string): 
 	});
 }
 
-export function fillSiblings<
-	T extends {
-		slug: string;
-		title: string;
-		siblings: {
-			prev?: { slug: string; title: string };
-			next?: { slug: string; title: string };
-		};
-	}
->(articles: T[], base: string, breakpoint?: (next: T) => boolean): T[] {
+export function fillSiblings<T extends Child>(
+	articles: T[],
+	base: string,
+	breakpoint?: (next: T) => boolean
+): T[] {
 	for (let i = 0; i < articles.length; i++) {
 		if (!articles[i]['siblings']) articles[i]['siblings'] = {};
 		const [prev, next] = [articles[i - 1], articles[i + 1]];
