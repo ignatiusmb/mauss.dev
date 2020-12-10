@@ -6,10 +6,6 @@
 <footer>
 	<section>
 		<em>
-			Fully open-source and static, yet interactive site. Built without cookies, analytics, or
-			anything to track you.
-		</em>
-		<em>
 			Read the
 			<Link href="help">help page</Link>
 			for more information
