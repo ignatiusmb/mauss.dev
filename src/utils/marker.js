@@ -26,11 +26,11 @@ marker.renderer.rules.heading_open = (tokens, idx) => {
 };
 marker.renderer.rules.image = (tokens, idx, options, env, slf) => {
 	const token = tokens[idx];
-	token.attrs[token.attrIndex('alt')][1] = slf.renderInlineAsText(token.children, options, env);
+	const altIdx = token.attrIndex('alt');
+	token.attrs[altIdx][1] = slf.renderInlineAsText(token.children, options, env);
 	if (token.attrIndex('title') === -1) return slf.renderToken(tokens, idx, options);
 
 	const caption = token.attrs.pop()[1]; // Pop here so it's not rendered in else block below
-	const altIdx = token.attrIndex('alt');
 	const alt = token.attrs[altIdx][1];
 
 	const media = {
@@ -66,7 +66,7 @@ marker.renderer.rules.image = (tokens, idx, options, env, slf) => {
 	};
 
 	media.data = `<div class="${classes.div.join(' ')}">${media.data}</div>`;
-	const rendered = marker.renderInline(caption);
+	const rendered = slf.renderInline(caption);
 	if (mAttrs.has('disclosure')) {
 		const body = `<summary>${rendered}</summary>${media.data}`;
 		return `<details class="${classes.top.join(' ')}">${body}</details>`;
