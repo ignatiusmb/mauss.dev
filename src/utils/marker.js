@@ -66,7 +66,7 @@ marker.renderer.rules.image = (tokens, idx, options, env, slf) => {
 	};
 
 	media.data = `<div class="${classes.div.join(' ')}">${media.data}</div>`;
-	const rendered = slf.renderInline(caption);
+	const rendered = marker.renderInline(caption);
 	if (mAttrs.has('disclosure')) {
 		const body = `<summary>${rendered}</summary>${media.data}`;
 		return `<details class="${classes.top.join(' ')}">${body}</details>`;
