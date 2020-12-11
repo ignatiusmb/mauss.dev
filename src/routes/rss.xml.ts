@@ -37,6 +37,7 @@ export function get(_: Request, res: Response) {
 	});
 
 	const reviews = readdirSync('content/reviews').flatMap((folder) => {
+		if (folder === 'draft.md') return;
 		return parseDir(`content/reviews/${folder}`, (data: any, _: string, filename: string) => {
 			const { title, date } = data;
 			return {
