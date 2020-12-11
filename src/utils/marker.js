@@ -25,12 +25,15 @@ marker.renderer.rules.heading_open = (tokens, idx) => {
 	return `<${token.tag} id="${tagId}">`;
 };
 marker.renderer.rules.image = (tokens, idx, options, env, slf) => {
+	tokens[idx].attrPush(['loading', 'lazy']); // add browser level lazy loading
 	const token = tokens[idx];
 	const altIdx = token.attrIndex('alt');
+	const titleIdx = token.attrIndex('title');
 	token.attrs[altIdx][1] = slf.renderInlineAsText(token.children, options, env);
-	if (token.attrIndex('title') === -1) return slf.renderToken(tokens, idx, options);
+	if (titleIdx === -1) return slf.renderToken(tokens, idx, options);
 
-	const caption = token.attrs.pop()[1]; // Pop here so it's not rendered in else block below
+	// Pop here so it's not rendered in else block below
+	const caption = token.attrs.splice(titleIdx, 1)[0][1];
 	const alt = token.attrs[altIdx][1];
 
 	const media = {
