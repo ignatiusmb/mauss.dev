@@ -7,7 +7,7 @@
     "dev": "sapper dev",
     "build": "sapper build --legacy",
     "export": "run-s sapper:export static:404",
-    "sapper:export": "sapper export --legacy",
+    "sapper:export": "sapper export --legacy --entry \"/ 404\"",
     "static:404": "run-s static:404:mv static:404:rm",
     "static:404:mv": "mv __sapper__/export/404/index.html __sapper__/export/404.html",
     "static:404:rm": "rmdir \"__sapper__/export/404\"",

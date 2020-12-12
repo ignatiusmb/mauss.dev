@@ -1,7 +1,7 @@
 import type { Response, Request } from 'express';
 import { readdirSync } from 'fs';
 import { parseDir } from '../utils/parser';
-import { compareDate } from '../utils/helper';
+import { sortCompare } from '../utils/helper';
 import RSS from '../utils/rss';
 
 const channel = {
@@ -20,35 +20,36 @@ export function get(_: Request, res: Response) {
 				title,
 				slug: `curated/${folder}/${filename.split('.')[0]}`,
 				description: `${title} curated by DevMauss`,
-				date: date.published || date.updated,
+				date: date.updated || date.published,
 			};
 		});
 	});
 
 	const posts = parseDir('content/posts', (data: any, _: string, filename: string) => {
-		const [date, slug] = filename.split('.');
-		const { title, description } = data;
+		const [published, slug] = filename.split('.');
+		const { title, description, date } = data;
 		return {
 			title,
 			slug: `posts/${slug}`,
 			description,
-			date,
+			date: (date && date.updated) || published,
 		};
 	});
 
 	const reviews = readdirSync('content/reviews').flatMap((folder) => {
+		if (folder === 'draft.md') return;
 		return parseDir(`content/reviews/${folder}`, (data: any, _: string, filename: string) => {
 			const { title, date } = data;
 			return {
 				title: title.en,
 				slug: `reviews/${folder}/${filename.split('.')[0]}`,
 				description: `Review for ${title.en} ${folder}`,
-				date: date.published,
+				date: date.updated || date.published,
 			};
 		});
 	});
 
 	const items = [...curated, ...posts, ...reviews];
 	res.writeHead(200, { 'Content-Type': 'application/xml' });
-	res.end(RSS(channel, items.filter(Boolean).sort(compareDate)));
+	res.end(RSS(channel, items.filter(Boolean).sort(sortCompare)));
 }
