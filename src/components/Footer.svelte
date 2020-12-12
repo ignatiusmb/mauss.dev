@@ -6,10 +6,6 @@
 <footer>
 	<section>
 		<em>
-			Fully open-source and static, yet interactive site. Built without cookies, analytics, or
-			anything to track you.
-		</em>
-		<em>
 			Read the
 			<Link href="help">help page</Link>
 			for more information
@@ -59,13 +55,6 @@
 			&plus;
 			<Link newTab href="https://aqua.mauss.dev/">Aqua</Link>
 		</p>
-		<small>
-			<Link newTab href="https://web.dev/time-to-first-byte/">TTFB:</Link>
-			{#if process.browser}
-				{window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart}
-				ms
-			{/if}
-		</small>
 	</section>
 </footer>
 
