@@ -1,5 +1,5 @@
 import type { Request, Response } from 'express';
-import { checkNum } from 'svelement/utils';
+import { checkNum } from 'mauss/utils';
 import { parseFile } from '../../../utils/parser';
 import { countAverageRating, contentParser } from '../../../utils/article';
 import marker from '../../../utils/marker';

@@ -22,12 +22,11 @@
 
 	import { sieve, filter } from '../../utils/search';
 	import { pSlice as store } from '../../utils/stores';
-	let query, filtered, sieved;
-	let filters = { categories: [], tags: [], sort_by: 'updated' };
+	let filters = { categories: [], tags: [], sort_by: 'updated' },
+		query;
 
 	$: filtered = filter(filters, data);
-	$: sieved = query ? sieve(query, filtered) : filtered;
-	$: total = sieved.length;
+	$: items = query ? sieve(query, filtered) : filtered;
 </script>
 
 <MetaHead canonical="posts" title="Posts" description="Get the latest most recent posts here.">
@@ -38,10 +37,10 @@
 	<header slot="header">
 		<h1>Posts by DevMauss</h1>
 		<SearchBar bind:query bind:filters {unique} />
-		<Pagination {store} {total} {bound} />
+		<Pagination {store} {items} {bound} />
 	</header>
 
-	{#each sieved.slice($store * bound, $store * bound + bound) as post (post.slug)}
+	{#each $store as post (post.slug)}
 		<div animate:flip={{ duration }} transition:scale|local={{ duration }}>
 			<PostCard {post} />
 		</div>

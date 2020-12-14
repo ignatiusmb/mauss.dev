@@ -47,15 +47,11 @@
 	import { sieve, filter } from '../../utils/search';
 	import { rSlice as store } from '../../utils/stores';
 	let filters = { categories: [], genres: [], verdict: [], sort_by: 'updated' },
-		sieved,
 		view = 'grid';
 	$: bound = view === 'grid' ? 12 : 3;
 	$: increment = view === 'carousel' ? 1 : bound;
-
-	$: count = $store * increment;
 	$: filtered = filter(filters, data);
-	$: sieved = query ? sieve(query, filtered) : filtered;
-	$: total = sieved.length;
+	$: items = query ? sieve(query, filtered) : filtered;
 </script>
 
 <MetaHead
@@ -72,7 +68,7 @@
 		<SearchBar bind:query bind:filters {unique} />
 
 		{#if view !== 'scrollsnap'}
-			<Pagination {store} {total} {bound} {increment} />
+			<Pagination {store} {items} {bound} {increment} />
 		{/if}
 	</header>
 
@@ -89,7 +85,7 @@
 	</aside>
 
 	{#if view === 'grid'}
-		{#each sieved.slice(count, count + bound) as post (post.slug)}
+		{#each $store as post (post.slug)}
 			<div animate:flip={{ duration }} transition:scale|local={{ duration }}>
 				<ReviewCard {post} />
 			</div>
@@ -98,7 +94,7 @@
 		{/each}
 	{:else if view === 'carousel'}
 		<PerspectiveCarousel>
-			{#each sieved.slice(count, count + bound) as post, idx (post.slug)}
+			{#each $store as post, idx (post.slug)}
 				<div class:translate-left={idx === 0} class:translate-right={idx === 2}>
 					<ReviewCard {post} />
 				</div>
@@ -106,7 +102,7 @@
 		</PerspectiveCarousel>
 	{:else if view === 'scrollsnap'}
 		<div class="empty" />
-		{#each sieved as post (post.slug)}
+		{#each items as post (post.slug)}
 			<div animate:flip={{ duration }}>
 				<ReviewCard {post} />
 			</div>

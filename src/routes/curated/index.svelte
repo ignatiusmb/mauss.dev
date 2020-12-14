@@ -10,6 +10,7 @@
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
 	const bound = 8;
+	const duration = 100;
 
 	import { SearchBar, Pagination, ButtonLink } from 'svelement';
 	import MetaHead from '../../pages/MetaHead.svelte';
@@ -18,12 +19,11 @@
 	import { sieve, filter } from '../../utils/search';
 	import { cSlice as store } from '../../utils/stores';
 
-	let query, filtered, sieved;
+	let query;
 	let filters = { categories: [], tags: [], sort: 'updated' };
 
 	$: filtered = filter(filters, data);
-	$: sieved = query ? sieve(query, filtered) : filtered;
-	$: total = sieved.length;
+	$: items = query ? sieve(query, filtered) : filtered;
 </script>
 
 <MetaHead
@@ -37,11 +37,11 @@
 	<header slot="header">
 		<h1>Curated by DevMauss</h1>
 		<SearchBar bind:query />
-		<Pagination {store} {total} {bound} />
+		<Pagination {store} {items} {bound} />
 	</header>
 
-	{#each sieved.slice($store * bound, $store * bound + bound) as { slug, title } (slug)}
-		<section animate:flip transition:scale|local>
+	{#each $store as { slug, title } (slug)}
+		<section animate:flip={{ duration }} transition:scale|local={{ duration }}>
 			<small>{title}</small>
 			<ButtonLink href="curated/{slug}">read</ButtonLink>
 		</section>
