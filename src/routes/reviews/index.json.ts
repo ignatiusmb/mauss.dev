@@ -9,10 +9,10 @@ const check = (review: Review) => !review.rating || !review.verdict;
 
 export async function get(_: Request, res: Response): Promise<void> {
 	const DIR = 'content/reviews';
-	const reviews = readdirSync(DIR).flatMap((folder) =>
-		parseDir<Review>(`${DIR}/${folder}`, ({ frontMatter, filename }) => {
-			if (folder.includes('draft')) return undefined;
+	const reviews = readdirSync(DIR).flatMap((folder) => {
+		if (folder.includes('draft')) return;
 
+		return parseDir<Review>(`${DIR}/${folder}`, ({ frontMatter, filename }) => {
 			const [slug] = filename.split('.');
 			const review = {
 				slug: `${folder}/${slug}`,
@@ -22,8 +22,8 @@ export async function get(_: Request, res: Response): Promise<void> {
 				verdict: checkNum(frontMatter.verdict || -2),
 			};
 			return review;
-		})
-	);
+		});
+	});
 
 	res.writeHead(200, { 'Content-Type': 'application/json' });
 	res.end(JSON.stringify(fillSiblings(reviews.filter(Boolean), 'reviews/', check)));
