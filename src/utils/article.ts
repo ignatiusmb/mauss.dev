@@ -1,5 +1,5 @@
 import type { Child } from '$utils/types';
-import { checkNum } from 'svelement/utils';
+import { checkNum } from 'mauss/utils';
 export function countAverageRating(ratings: string[]): number {
 	if (!ratings || ratings.some((r: unknown) => isNaN(r as number))) return 0;
 	const total = ratings.reduce((acc, cur) => acc + parseInt(cur), 0);

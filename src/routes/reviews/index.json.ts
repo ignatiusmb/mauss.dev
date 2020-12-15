@@ -1,7 +1,7 @@
 import type { Request, Response } from 'express';
 import type { Review } from '$utils/types';
 import { readdirSync } from 'fs';
-import { checkNum } from 'svelement/utils';
+import { checkNum } from 'mauss/utils';
 import { parseDir } from '$utils/parser';
 import { countAverageRating, fillSiblings } from '$utils/article';
 
@@ -11,6 +11,8 @@ export async function get(_: Request, res: Response): Promise<void> {
 	const DIR = 'content/reviews';
 	const reviews = readdirSync(DIR).flatMap((folder) =>
 		parseDir<Review>(`${DIR}/${folder}`, ({ frontMatter, filename }) => {
+			if (folder.includes('draft')) return undefined;
+
 			const [slug] = filename.split('.');
 			const review = {
 				slug: `${folder}/${slug}`,
@@ -24,5 +26,5 @@ export async function get(_: Request, res: Response): Promise<void> {
 	);
 
 	res.writeHead(200, { 'Content-Type': 'application/json' });
-	res.end(JSON.stringify(fillSiblings(reviews, 'reviews/', check)));
+	res.end(JSON.stringify(fillSiblings(reviews.filter(Boolean), 'reviews/', check)));
 }

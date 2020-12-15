@@ -4,13 +4,7 @@ export function convertCase(style: string, text: string, sep?: string): string;
 export function createPrettyDate(
 	date: string
 ): { weekday: string; day: string; month: string; year: string; complete: string };
-export function debounce(
-	fn: (...args: unknown[]) => unknown,
-	time: number
-): (args: unknown) => void;
 export function isAbbreviated(text: string): boolean;
 export function lastWords(index: number, text: string): string;
-export function randomInt(max: number, min: number): number;
-export function randomKey(dict: { [key: string]: string }): string;
 export function sortCompare<T>(x: T, y: T): number;
 export function splitAt(index: number, text: string): [string, string];

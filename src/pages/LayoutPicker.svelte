@@ -49,6 +49,9 @@
 		display: grid;
 		gap: 1em;
 	}
+	.header-wrapper :global(.lmns-pagination) {
+		max-width: 32em;
+	}
 	.header-wrapper > .aside-wrapper {
 		width: 100%;
 		position: absolute;

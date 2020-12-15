@@ -25,12 +25,15 @@ marker.renderer.rules.heading_open = (tokens, idx) => {
 	return `<${token.tag} id="${tagId}">`;
 };
 marker.renderer.rules.image = (tokens, idx, options, env, slf) => {
+	tokens[idx].attrPush(['loading', 'lazy']); // add browser level lazy loading
 	const token = tokens[idx];
-	token.attrs[token.attrIndex('alt')][1] = slf.renderInlineAsText(token.children, options, env);
-	if (token.attrIndex('title') === -1) return slf.renderToken(tokens, idx, options);
-
-	const caption = token.attrs.pop()[1]; // Pop here so it's not rendered in else block below
 	const altIdx = token.attrIndex('alt');
+	const titleIdx = token.attrIndex('title');
+	token.attrs[altIdx][1] = slf.renderInlineAsText(token.children, options, env);
+	if (titleIdx === -1) return slf.renderToken(tokens, idx, options);
+
+	// Pop here so it's not rendered in else block below
+	const caption = token.attrs.splice(titleIdx, 1)[0][1];
 	const alt = token.attrs[altIdx][1];
 
 	const media = {
@@ -44,7 +47,7 @@ marker.renderer.rules.image = (tokens, idx, options, env, slf) => {
 		const [type, ...args] = stripped.split('-');
 		if (['yt', 'youtube'].includes(type)) {
 			const prefix = args && args[0] === 's' ? 'videoseries?list=' : '';
-			media.data = `<iframe src="https://www.youtube-nocookie.com/embed/${prefix}${link}" frameborder="0" allowfullscreen></iframe>`;
+			media.data = `<iframe src="https://www.youtube-nocookie.com/embed/${prefix}${link}" srcdoc="<style>*{padding:0;margin:0;overflow:hidden;transition:300ms}html,body{height:100%}a,span{display:flex;align-items:center;justify-content:center}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{width:1.8em;height:1.8em;font-size:3rem;color:white;text-shadow:0 0 0.5em black;background:rgba(0,0,0,0.8);border-radius:50%}a:hover span{background:rgb(255,0,0)}</style><a href=https://www.youtube-nocookie.com/embed/${prefix}${link}?autoplay=1><img src=https://img.youtube.com/vi/${link}/hqdefault.jpg alt='${caption}'><span>&#x25BA;</span></a>" frameborder="0" allowfullscreen title="${caption}"></iframe>`;
 		} else if (['video'].includes(type)) {
 			media.data = `<video controls><source src="${link}" type="video/mp4"></video>`;
 		}
