@@ -17,13 +17,13 @@
 	import AnimatedKey from '../../components/AnimatedKey.svelte';
 	import PostCard from '../../components/PostCard.svelte';
 
-	import { sieve, filter } from '../../utils/search';
+	import { sift, sieve } from '../../utils/search';
 	import { pSlice as store } from '../../utils/stores';
 	let filters = { categories: [], tags: [], sort_by: 'updated' },
 		query;
 
-	$: filtered = filter(filters, data);
-	$: items = query ? sieve(query, filtered) : filtered;
+	$: filtered = sieve(filters, data);
+	$: items = query ? sift(query, filtered) : filtered;
 </script>
 
 <MetaHead canonical="posts" title="Posts" description="Get the latest most recent posts here.">

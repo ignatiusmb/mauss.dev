@@ -12,7 +12,7 @@
 	import MetaHead from '../../pages/MetaHead.svelte';
 	import LayoutPicker from '../../pages/LayoutPicker.svelte';
 
-	import { sieve, filter } from '../../utils/search';
+	import { sift, sieve } from '../../utils/search';
 	import { cSlice as store } from '../../utils/stores';
 	import AnimatedKey from '../../components/AnimatedKey.svelte';
 	import CuratedPost from '../../components/CuratedPost.svelte';
@@ -20,8 +20,8 @@
 	let query;
 	let filters = { categories: [], tags: [], sort: 'updated' };
 
-	$: filtered = filter(filters, data);
-	$: items = query ? sieve(query, filtered) : filtered;
+	$: filtered = sieve(filters, data);
+	$: items = query ? sift(query, filtered) : filtered;
 </script>
 
 <MetaHead
