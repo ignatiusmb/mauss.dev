@@ -112,9 +112,6 @@
 </LayoutPicker>
 
 <style>
-	h1 {
-		text-align: center;
-	}
 	div:not(.empty) {
 		border-radius: var(--b-radius);
 		box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
