@@ -48,6 +48,7 @@
 	import { rSlice as store } from '../../utils/stores';
 	let filters = { categories: [], genres: [], verdict: [], sort_by: 'updated' },
 		view = 'grid';
+	$store = query ? sieve(query, data) : data;
 	$: bound = view === 'grid' ? 12 : 3;
 	$: increment = view === 'carousel' ? 1 : bound;
 	$: filtered = filter(filters, data);
