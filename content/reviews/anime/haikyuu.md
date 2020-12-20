@@ -5,7 +5,7 @@ genres: comedy, sports, drama
 rating:
 verdict:
 
-last_seen: 2020-05-10
+last_seen: 2020-12-19
 date:published: 2020
 date:updated:
 image:en: https://m.media-amazon.com/images/M/MV5BNzQ1MmJjZDUtMmI5OC00ZDk2LThkODQtODgwYmU0MTIzNDhmXkEyXkFqcGdeQXVyNDgyODgxNjE@._V1_.jpg
