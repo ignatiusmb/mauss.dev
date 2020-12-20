@@ -44,14 +44,15 @@
 	import ReviewCard from '../../components/ReviewCard.svelte';
 	import PerspectiveCarousel from '../../components/PerspectiveCarousel.svelte';
 
-	import { sieve, filter } from '../../utils/search';
+	import { sift, sieve } from '../../utils/search';
 	import { rSlice as store } from '../../utils/stores';
 	let filters = { categories: [], genres: [], verdict: [], sort_by: 'updated' },
 		view = 'grid';
+	$store = query ? sift(query, data) : data;
 	$: bound = view === 'grid' ? 12 : 3;
 	$: increment = view === 'carousel' ? 1 : bound;
-	$: filtered = filter(filters, data);
-	$: items = query ? sieve(query, filtered) : filtered;
+	$: filtered = sieve(filters, data);
+	$: items = query ? sift(query, filtered) : filtered;
 </script>
 
 <MetaHead
@@ -112,9 +113,6 @@
 </LayoutPicker>
 
 <style>
-	h1 {
-		text-align: center;
-	}
 	div:not(.empty) {
 		border-radius: var(--b-radius);
 		box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),

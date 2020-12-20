@@ -7,23 +7,21 @@
 
 <script>
 	export let data;
-	import { flip } from 'svelte/animate';
-	import { scale } from 'svelte/transition';
-	const bound = 8;
-	const duration = 100;
 
-	import { SearchBar, Pagination, ButtonLink } from 'svelement';
+	import { SearchBar, Pagination } from 'svelement';
 	import MetaHead from '../../pages/MetaHead.svelte';
 	import LayoutPicker from '../../pages/LayoutPicker.svelte';
 
-	import { sieve, filter } from '../../utils/search';
+	import { sift, sieve } from '../../utils/search';
 	import { cSlice as store } from '../../utils/stores';
+	import AnimatedKey from '../../components/AnimatedKey.svelte';
+	import CuratedPost from '../../components/CuratedPost.svelte';
 
 	let query;
 	let filters = { categories: [], tags: [], sort: 'updated' };
 
-	$: filtered = filter(filters, data);
-	$: items = query ? sieve(query, filtered) : filtered;
+	$: filtered = sieve(filters, data);
+	$: items = query ? sift(query, filtered) : filtered;
 </script>
 
 <MetaHead
@@ -37,35 +35,8 @@
 	<header slot="header">
 		<h1>Curated by DevMauss</h1>
 		<SearchBar bind:query />
-		<Pagination {store} {items} {bound} />
+		<Pagination {store} {items} bound={8} />
 	</header>
 
-	{#each $store as { slug, title } (slug)}
-		<section animate:flip={{ duration }} transition:scale|local={{ duration }}>
-			<small>{title}</small>
-			<ButtonLink href="curated/{slug}">read</ButtonLink>
-		</section>
-	{/each}
+	<AnimatedKey items={$store} component={CuratedPost} />
 </LayoutPicker>
-
-<style>
-	header {
-		text-align: center;
-	}
-	section {
-		width: 100%;
-		min-height: 3em;
-		display: grid;
-		gap: 0.5em;
-		align-items: center;
-		grid-template-columns: 1fr auto;
-		padding: 0.5em;
-		border-radius: var(--b-radius);
-		box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
-			0 1px 3px 0 rgba(0, 0, 0, 0.12);
-		background-color: var(--bg-overlay);
-	}
-	small {
-		padding-left: 0.5em;
-	}
-</style>

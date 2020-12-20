@@ -50,7 +50,8 @@ export function sortCompare(x, y) {
 		const { updated: yu, published: yp } = y.date;
 		if (xu !== yu) return compareDate(xu, yu);
 		if (xp !== yp) return compareDate(xp, yp);
-		if (x.date !== y.date) return compareDate(x.date, y.date);
+		if (typeof x.date === 'string' && typeof y.date === 'string')
+			if (x.date !== y.date) return compareDate(x.date, y.date);
 	}
 
 	if (x.released && y.released && x.released !== y.released)
