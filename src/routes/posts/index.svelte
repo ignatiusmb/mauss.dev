@@ -1,8 +1,8 @@
 <script context="module">
 	export async function preload() {
 		const data = await this.fetch('posts.json').then((r) => r.json());
-		const tags = Array.from(new Set(data.flatMap((p) => p.tags))).sort();
-		const categories = Array.from(new Set(data.map((p) => p.tags[0]))).sort();
+		const tags = [...new Set(data.flatMap((p) => p.tags))].sort();
+		const categories = [...new Set(data.map((p) => p.tags[0]))].sort();
 		const sort_by = { updated: 'Last Updated', published: 'Last Published' };
 		return { data, unique: { categories, tags, sort_by } };
 	}

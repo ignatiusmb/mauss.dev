@@ -1,8 +1,8 @@
 <script context="module">
 	export async function preload({ query }) {
 		const data = await this.fetch('reviews.json').then((r) => r.json());
-		const categories = Array.from(new Set(data.map((p) => p.category)));
-		const genres = Array.from(new Set(data.flatMap((p) => p.genres))).sort();
+		const categories = [...new Set(data.map((p) => p.category))];
+		const genres = [...new Set(data.flatMap((p) => p.genres))].sort();
 		return {
 			data,
 			search: query,
