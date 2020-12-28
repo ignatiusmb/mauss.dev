@@ -6,7 +6,7 @@ genres: comedy, drama, fantasy
 rating: story,artwork,sound,characters
 verdict:
 
-last_seen: 2020-11-29
+last_seen: 2020-12-27
 date:published: 2020
 date:updated: 2020
 image:en: https://image.tmdb.org/t/p/original/vE0GqiDa3uNZ5zXUrFtLO6BYghc.jpg
