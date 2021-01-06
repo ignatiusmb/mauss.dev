@@ -9,7 +9,6 @@
 	import Header from './Header.svelte';
 	import TextIcon from '$components/TextIcon.svelte';
 	import Siblings from '$components/Siblings.svelte';
-	import LoveCounter from '$components/LoveCounter.svelte';
 
 	function offsetAnchor() {
 		if (!window.location.hash.length) return;

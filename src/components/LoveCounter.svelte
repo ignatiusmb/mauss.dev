@@ -19,7 +19,6 @@
 		localStorage[path] = localCounter = ++localStorage[path];
 		disabled = true;
 		$page = fetch(url, PostData).then((r) => r.json());
-		counter = (loves || 0) + 1;
 		disabled = false;
 	}
 
