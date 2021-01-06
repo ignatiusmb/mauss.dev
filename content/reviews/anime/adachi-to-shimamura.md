@@ -6,7 +6,7 @@ genres: slice of life, romance, school, shoujo ai
 rating: story,artwork,sound,characters
 verdict:
 
-last_seen: 2020-10-23
+last_seen: 2020-12-27
 date:published: 2020
 date:updated: 2020
 image:en: https://image.tmdb.org/t/p/original/teSwoEFkqWFdmL2EdSvGVLU6sse.jpg

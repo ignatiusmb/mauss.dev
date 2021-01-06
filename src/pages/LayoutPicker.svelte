@@ -3,7 +3,7 @@
 	export { className as class };
 	export let view = '';
 	export let itemSize = '12em';
-	export let header = null;
+	export let header = false;
 </script>
 
 <div class="{className} layout-wrapper">
@@ -48,6 +48,9 @@
 	.header-wrapper > :global(header) {
 		display: grid;
 		gap: 1em;
+	}
+	.header-wrapper :global(h1) {
+		text-align: center;
 	}
 	.header-wrapper :global(.lmns-pagination) {
 		max-width: 32em;

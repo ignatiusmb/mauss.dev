@@ -10,7 +10,7 @@ const compare = (source, queries) =>
 		: queries.filter((q) => exists(source, q)).length;
 const check = (source, queries) => compare(source, queries) === queries.length;
 
-export function sieve(query, data) {
+export function sift(query, data) {
 	const queries = query.split(' ').filter((q) => q);
 	return data.filter((post) => {
 		const { title } = post;
@@ -20,7 +20,7 @@ export function sieve(query, data) {
 	});
 }
 
-export function filter(dict, data) {
+export function sieve(dict, data) {
 	let filtered = data;
 	for (const key in dict) {
 		if (!dict[key].length || key === 'sort_by') continue;

@@ -1,8 +1,8 @@
 <script context="module">
 	export async function preload() {
 		const data = await this.fetch('posts.json').then((r) => r.json());
-		const tags = Array.from(new Set(data.flatMap((p) => p.tags))).sort();
-		const categories = Array.from(new Set(data.map((p) => p.tags[0]))).sort();
+		const tags = [...new Set(data.flatMap((p) => p.tags))].sort();
+		const categories = [...new Set(data.map((p) => p.tags[0]))].sort();
 		const sort_by = { updated: 'Last Updated', published: 'Last Published' };
 		return { data, unique: { categories, tags, sort_by } };
 	}
@@ -10,23 +10,20 @@
 
 <script>
 	export let data, unique;
-	import { flip } from 'svelte/animate';
-	import { scale } from 'svelte/transition';
-	const bound = 6;
-	const duration = 100;
 
 	import { SearchBar, Pagination } from 'svelement';
 	import MetaHead from '$pages/MetaHead.svelte';
 	import LayoutPicker from '$pages/LayoutPicker.svelte';
+	import AnimatedKey from '$components/AnimatedKey.svelte';
 	import PostCard from '$components/PostCard.svelte';
 
-	import { sieve, filter } from '$utils/search';
+	import { sift, sieve } from '$utils/search';
 	import { pSlice as store } from '$utils/stores';
 	let filters = { categories: [], tags: [], sort_by: 'updated' },
 		query;
 
-	$: filtered = filter(filters, data);
-	$: items = query ? sieve(query, filtered) : filtered;
+	$: filtered = sieve(filters, data);
+	$: items = query ? sift(query, filtered) : filtered;
 </script>
 
 <MetaHead canonical="posts" title="Posts" description="Get the latest most recent posts here.">
@@ -37,21 +34,8 @@
 	<header slot="header">
 		<h1>Posts by DevMauss</h1>
 		<SearchBar bind:query bind:filters {unique} />
-		<Pagination {store} {items} {bound} />
+		<Pagination {store} {items} bound={6} />
 	</header>
 
-	{#each $store as post (post.slug)}
-		<div animate:flip={{ duration }} transition:scale|local={{ duration }}>
-			<PostCard {post} />
-		</div>
-	{/each}
+	<AnimatedKey items={$store} component={PostCard} />
 </LayoutPicker>
-
-<style>
-	h1 {
-		text-align: center;
-	}
-	div {
-		display: grid;
-	}
-</style>
