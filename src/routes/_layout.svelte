@@ -17,7 +17,7 @@
 	import '$styles/animation.css';
 
 	$: if (!process.dev && process.browser && !$local.error) {
-		$page = fetch(`api/page?slug=${$local.path}`, { method: 'POST' }).then((r) => r.json());
+		page.set(fetch(`api/page?slug=${$local.path}`, { method: 'POST' }).then((r) => r.json()));
 	}
 </script>
 

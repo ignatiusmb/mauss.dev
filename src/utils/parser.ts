@@ -36,7 +36,7 @@ const extractMeta = (metadata: string) => {
 		} else acc[key] = val.trim();
 
 		return acc;
-	}, {} as { [key: string]: any });
+	}, {} as Record<string, any>); // eslint-disable-line
 };
 
 type HydrateFn = <T>(data: { frontMatter: T; content: string; filename: string }) => T;
