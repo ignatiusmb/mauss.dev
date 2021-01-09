@@ -13,6 +13,14 @@ export interface Child {
 	};
 }
 
+export interface Curated extends Child {
+	category: string;
+	date: {
+		updated: string;
+		published?: string;
+	};
+}
+
 export interface Post extends Child {
 	title: string;
 	tags: string[];
