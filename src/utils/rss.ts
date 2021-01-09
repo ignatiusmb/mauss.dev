@@ -54,7 +54,7 @@ interface RSSChannel {
 	language?: string;
 }
 
-interface RSSItem {
+export interface RSSItem {
 	title: string;
 	slug: string;
 	description: string;
