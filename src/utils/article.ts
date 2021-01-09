@@ -1,7 +1,9 @@
 import type { Child } from '$utils/types';
 import { checkNum } from 'mauss/utils';
-export function countAverageRating(ratings: string[]): number {
-	if (!ratings || ratings.some((r: unknown) => isNaN(r as number))) return 0;
+
+export function countAverageRating(ratings: string[] | number): number {
+	if (typeof ratings === 'number') return ratings;
+	if (!ratings || ratings.some(Number.isNaN)) return 0;
 	const total = ratings.reduce((acc, cur) => acc + parseInt(cur), 0);
 	return Math.round((total / ratings.length + Number.EPSILON) * 100) / 100;
 }
