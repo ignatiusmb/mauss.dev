@@ -22,7 +22,8 @@ const countReadTime = (content: string) => {
 const extractMeta = (metadata: string) => {
 	if (!metadata) return {};
 	const lines = metadata.split(/\r?\n/);
-	return lines.reduce((acc, cur) => {
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	return lines.reduce((acc: Record<string, any>, cur) => {
 		if (!cur.includes(': ')) return acc;
 		const [key, val] = splitAt(cur.indexOf(': '), cur);
 
@@ -36,11 +37,16 @@ const extractMeta = (metadata: string) => {
 		} else acc[key] = val.trim();
 
 		return acc;
-	}, {} as Record<string, any>); // eslint-disable-line
+	}, {});
 };
 
-type HydrateFn = <T>(data: { frontMatter: T; content: string; filename: string }) => T;
-export function parseFile<T>(pathname: string, hydrate: HydrateFn): T | undefined {
+export interface HydrateFn<T, K = T> {
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	(data: { frontMatter: T | any; content: string; filename: string }): K | undefined;
+}
+
+export function parseFile<T, K = T>(pathname: string, hydrate: HydrateFn<T, K>): K;
+export function parseFile<T, K = T>(pathname: string, hydrate: HydrateFn<T, K>): K | undefined {
 	const content = readFileSync(pathname, 'utf-8');
 	const fmExpression = /---\r?\n([\s\S]+?)\r?\n---/;
 	const [rawData, metadata] = fmExpression.exec(content) || ['', ''];
@@ -48,7 +54,9 @@ export function parseFile<T>(pathname: string, hydrate: HydrateFn): T | undefine
 	const frontMatter = extractMeta(metadata);
 	const [filename] = pathname.split(/[/\\]/).slice(-1);
 	const article = metadata ? content.slice(rawData.length + 1) : content;
-	const result = hydrate({ frontMatter, content: article, filename });
+	const result = <
+		{ date?: { published?: string; updated?: string }; content?: string; read_time?: number }
+	>hydrate({ frontMatter, content: article, filename });
 	if (!result) return;
 
 	if (result.date && result.date.published && !result.date.updated) {
@@ -61,12 +69,13 @@ export function parseFile<T>(pathname: string, hydrate: HydrateFn): T | undefine
 		result.content = contentParser(rest, content);
 		result.content = marker.render(result.content);
 	}
-	return result as T;
+	return result as K;
 }
 
-export function parseDir<T>(dirname: string, hydrate: HydrateFn): T[] {
+export function parseDir<T, K = T>(dirname: string, hydrate: HydrateFn<T, K>): K[];
+export function parseDir<T, K = T>(dirname: string, hydrate: HydrateFn<T, K>): (K | undefined)[] {
 	return readdirSync(dirname)
 		.filter((name) => !name.startsWith('draft.') && name.endsWith('.md'))
 		.map((filename) => parseFile(join(dirname, filename), hydrate))
-		.sort(sortCompare) as T[];
+		.sort(sortCompare);
 }
