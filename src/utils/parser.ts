@@ -40,13 +40,13 @@ const extractMeta = (metadata: string) => {
 	}, {});
 };
 
-export interface HydrateFn<T, K = T> {
+export interface HydrateFn<I, O = I> {
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	(data: { frontMatter: T | any; content: string; filename: string }): K | undefined;
+	(data: { frontMatter: I | any; content: string; filename: string }): O | undefined;
 }
 
-export function parseFile<T, K = T>(pathname: string, hydrate: HydrateFn<T, K>): K;
-export function parseFile<T, K = T>(pathname: string, hydrate: HydrateFn<T, K>): K | undefined {
+export function parseFile<I, O = I>(pathname: string, hydrate: HydrateFn<I, O>): O;
+export function parseFile<I, O = I>(pathname: string, hydrate: HydrateFn<I, O>): O | undefined {
 	const content = readFileSync(pathname, 'utf-8');
 	const fmExpression = /---\r?\n([\s\S]+?)\r?\n---/;
 	const [rawData, metadata] = fmExpression.exec(content) || ['', ''];
@@ -69,11 +69,11 @@ export function parseFile<T, K = T>(pathname: string, hydrate: HydrateFn<T, K>):
 		result.content = contentParser(rest, content);
 		result.content = marker.render(result.content);
 	}
-	return result as K;
+	return result as O;
 }
 
-export function parseDir<T, K = T>(dirname: string, hydrate: HydrateFn<T, K>): K[];
-export function parseDir<T, K = T>(dirname: string, hydrate: HydrateFn<T, K>): (K | undefined)[] {
+export function parseDir<I, O = I>(dirname: string, hydrate: HydrateFn<I, O>): O[];
+export function parseDir<I, O = I>(dirname: string, hydrate: HydrateFn<I, O>): (O | undefined)[] {
 	return readdirSync(dirname)
 		.filter((name) => !name.startsWith('draft.') && name.endsWith('.md'))
 		.map((filename) => parseFile(join(dirname, filename), hydrate))
