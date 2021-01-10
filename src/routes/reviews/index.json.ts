@@ -6,7 +6,7 @@ import { checkNum } from 'mauss/utils';
 import { parseDir } from '$utils/parser';
 import { countAverageRating, fillSiblings } from '$utils/article';
 
-const check = ({ rating, verdict }: Review) => !rating || !verdict;
+const check = ({ rating, verdict }: Review) => !rating || verdict < -1;
 
 export async function get(_: Request, res: Response): Promise<void> {
 	const DIR = 'content/reviews';
