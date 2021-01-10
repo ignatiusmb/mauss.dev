@@ -1,4 +1,6 @@
 import type { Response, Request } from 'express';
+import type { Curated, Post, Review } from '$utils/types';
+import type { RSSItem } from '$utils/rss';
 import { readdirSync } from 'fs';
 import { parseDir } from '$utils/parser';
 import { sortCompare } from '$utils/helper';
@@ -11,45 +13,36 @@ const channel = {
 	description: 'Developed by DevMauss',
 };
 
+function flatScan<T>(path: string): RSSItem[] {
+	const dirs = readdirSync(`content/${path}`).filter((folder) => !folder.includes('draft'));
+	return dirs.flatMap((folder) =>
+		parseDir<T, RSSItem>(
+			`content/${path}/${folder}`,
+			({ frontMatter: { title, date }, filename }) => ({
+				title: typeof title === 'string' ? title : title.en,
+				slug: `${path}/${folder}/${filename.split('.')[0]}`,
+				description: `${title} ${path === 'curated' ? 'curated' : 'reviewed'} by DevMauss`,
+				date: date.updated || date.published,
+			})
+		)
+	);
+}
+
 export async function get(_: Request, res: Response): Promise<void> {
-	const curated = readdirSync('content/curated').flatMap((folder) => {
-		if (folder === 'draft') return;
-		return parseDir(`content/curated/${folder}`, ({ frontMatter, filename }) => {
-			const { title, date } = frontMatter;
-			return {
-				title,
-				slug: `curated/${folder}/${filename.split('.')[0]}`,
-				description: `${title} curated by DevMauss`,
-				date: date.updated || date.published,
-			};
-		});
-	});
+	const items = [
+		...flatScan<Curated>('curated'),
+		...flatScan<Review>('reviews'),
+		...parseDir<Post, RSSItem>(
+			'content/posts',
+			({ frontMatter: { title, description: info, date: dt }, filename }) => {
+				const [published, slug] = filename.split('.');
+				const description = info || 'A post by DevMauss';
+				const date = (dt && dt.updated) || published;
+				return { title, slug: `posts/${slug}`, description, date };
+			}
+		),
+	];
 
-	const posts = parseDir('content/posts', ({ frontMatter, filename }) => {
-		const [published, slug] = filename.split('.');
-		const { title, description, date } = frontMatter;
-		return {
-			title,
-			slug: `posts/${slug}`,
-			description,
-			date: (date && date.updated) || published,
-		};
-	});
-
-	const reviews = readdirSync('content/reviews').flatMap((folder) => {
-		return parseDir(`content/reviews/${folder}`, ({ frontMatter, filename }) => {
-			const { title, date } = frontMatter;
-			if (folder === 'draft.md') return;
-			return {
-				title: title.en,
-				slug: `reviews/${folder}/${filename.split('.')[0]}`,
-				description: `Review for ${title.en} ${folder}`,
-				date: date.updated || date.published,
-			};
-		});
-	});
-
-	const items = [...curated, ...posts, ...reviews];
 	res.writeHead(200, { 'Content-Type': 'application/xml' });
-	res.end(RSS(channel, items.filter(Boolean).sort(sortCompare)));
+	res.end(RSS(channel, items.sort(sortCompare)));
 }
