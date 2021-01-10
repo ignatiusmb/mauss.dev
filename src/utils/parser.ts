@@ -24,14 +24,14 @@ const extractMeta = (metadata: string) => {
 	const lines = metadata.split(/\r?\n/);
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	return lines.reduce((acc: Record<string, any>, cur) => {
-		if (!cur.includes(': ')) return acc;
+		if (!/: /.test(cur)) return acc;
 		const [key, val] = splitAt(cur.indexOf(': '), cur);
 
-		if (key.includes(':')) {
+		if (/:/.test(key)) {
 			const [attr, category] = splitAt(key.indexOf(':'), key);
 			if (!acc[attr]) acc[attr] = {};
 			acc[attr][category] = val.trim();
-		} else if (val.includes(',') && key !== 'description') {
+		} else if (/,/.test(val) && key !== 'description') {
 			const items = val.split(',').map((v) => v.trim());
 			acc[key] = items.filter(Boolean);
 		} else acc[key] = val.trim();

@@ -14,7 +14,7 @@ const channel = {
 };
 
 function flatScan<T>(path: string): RSSItem[] {
-	const dirs = readdirSync(`content/${path}`).filter((folder) => !folder.includes('draft'));
+	const dirs = readdirSync(`content/${path}`).filter((folder) => !/draft/.test(folder));
 	return dirs.flatMap((folder) =>
 		parseDir<T, RSSItem>(
 			`content/${path}/${folder}`,
