@@ -6,7 +6,7 @@ import marker from './marker';
 
 const countReadTime = (content: string) => {
 	const paragraphs = content.split('\n').filter((p) => {
-		return p && !/^[!*]/.test(p); // remove empty and not sentences
+		return !!p && !/^[!*]/.test(p); // remove empty and not sentences
 	});
 	const words = paragraphs.reduce((acc, cur) => {
 		if (cur.trim().startsWith('<!--')) return acc;
