@@ -1,7 +1,4 @@
-export function capitalize(text: string, lower?: boolean): string {
-	text = lower ? text.toLowerCase() : text;
-	return text.replace(/(?:^|\s)\S/g, (a) => a.toUpperCase());
-}
+import { capitalize } from 'mauss/utils';
 
 export function compareDate(x: string, y: string): number {
 	return new Date(y).getTime() - new Date(x).getTime();
