@@ -10,12 +10,11 @@ export function countAverageRating(ratings: string[] | number): number {
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function contentParser<T extends Record<string, any>>(data: T, content: string): string {
-	const traverseData = (meta: T, properties: string): string => {
-		let metaValue = '';
+	const traverseData = (meta: T | string, properties: string): string => {
 		for (const key of properties.split(':')) {
-			metaValue = meta[checkNum(key)];
+			if (typeof meta !== 'string') meta = meta[checkNum(key)];
 		}
-		return metaValue;
+		return meta as string;
 	};
 
 	return content.replace(/#{.+}!/g, (exp) => {
