@@ -16,7 +16,7 @@
 	import '$styles/blog.css';
 	import '$styles/animation.css';
 
-	$: if (!process.dev && process.browser && !$local.error) {
+	$: if (!process.dev && typeof window !== 'undefined' && !$local.error) {
 		page.set(fetch(`api/page?slug=${$local.path}`, { method: 'POST' }).then((r) => r.json()));
 	}
 </script>
