@@ -21,18 +21,6 @@ export const sift = <T extends GenericData>(query: string, data: T[]): T[] =>
 			: !!Object.keys(title).some((key) => check(title[key], cleanSplit(query)))
 	);
 
-export const sieve = <T extends Record<string, any>>(dict: T, data: T[]): T[] => {
-	for (const key in dict) {
-		if (!dict[key].length || key === 'sort_by') continue;
-		if (['tags', 'genres', 'verdict'].includes(key)) {
-			data = data.filter((p) => compare(p[key], dict[key]));
-		} else if (key === 'categories') {
-			data = data.filter((p) => compare(p.category, dict[key]));
-		}
-	}
-	return sort(dict['sort_by'] || 'updated', data);
-};
-
 const sortBy: Record<string, (x: any, y: any) => number> = {
 	rating(x: any, y: any) {
 		if (x.rating === null || x.rating === undefined) return 1;
@@ -47,3 +35,21 @@ const sortBy: Record<string, (x: any, y: any) => number> = {
 
 export const sort = <T extends Record<string, any>>(type: string, data: T[]): T[] =>
 	type in sortBy ? data.sort(sortBy[type]) : data.sort(sortCompare);
+
+export function sieve<T extends Record<string, any>>(dict: T, data: T[]): T[] {
+	const identical = ['tags', 'genres'];
+	const intersect = ['categories', 'verdict'];
+
+	const entries = Object.entries(dict).filter(([k]) => k !== 'sort_by');
+	const cleaned = entries.filter(([k, v]) => !intersect.includes(k) && v.length);
+	const category = entries.find(([k, v]) => k === 'categories' && v.length) || [];
+	const verdict = entries.find(([k, v]) => k === 'verdict' && v.length) || [];
+	const checked = entries.filter(([, v]) => v.length).length;
+	const dFilter = (post: T) =>
+		(verdict.length ? compare(post.verdict, verdict[1]) : true) &&
+		(category.length ? compare(post.category, category[1]) : true) &&
+		(cleaned.length
+			? cleaned.some(([k, v]) => identical.includes(k) && compare(post[k], v))
+			: true);
+	return sort(dict['sort_by'] || 'updated', checked ? data.filter(dFilter) : data);
+}
