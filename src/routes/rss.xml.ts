@@ -21,7 +21,10 @@ function flatScan<T>(path: string): RSSItem[] {
 			({ frontMatter: { title, date }, filename }) => ({
 				title: typeof title === 'string' ? title : title.en,
 				slug: `${path}/${folder}/${filename.split('.')[0]}`,
-				description: `${title} ${path === 'curated' ? 'curated' : 'reviewed'} by DevMauss`,
+				description: `
+					${typeof title === 'string' ? title : title.en}
+					${path !== 'curated' ? 'curated' : 'reviewed'} by DevMauss
+				`,
 				date: date.updated || date.published,
 			})
 		)
