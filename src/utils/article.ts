@@ -8,11 +8,11 @@ export function countAverageRating(ratings: string[] | number): number {
 	return Math.round((total / ratings.length + Number.EPSILON) * 100) / 100;
 }
 
-type GenericData = { [key: string]: string };
-export function contentParser<T extends GenericData>(data: T, content: string): string {
-	const traverseData = <T extends GenericData>(meta: T, propertyKey: string): string => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function contentParser<T extends Record<string, any>>(data: T, content: string): string {
+	const traverseData = (meta: T, properties: string): string => {
 		let metaValue = '';
-		for (const key of propertyKey.split(':')) {
+		for (const key of properties.split(':')) {
 			metaValue = meta[checkNum(key)];
 		}
 		return metaValue;
