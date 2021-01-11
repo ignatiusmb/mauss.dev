@@ -40,7 +40,7 @@ const extractMeta = (metadata: string) => {
 	}, {});
 };
 
-export interface HydrateFn<I, O = I> {
+interface HydrateFn<I, O = I> {
 	(data: { frontMatter: I; content: string; filename: string }): O | undefined;
 }
 
@@ -50,10 +50,12 @@ export function parseFile<I, O = I>(pathname: string, hydrate: HydrateFn<I, O>):
 	const fmExpression = /---\r?\n([\s\S]+?)\r?\n---/;
 	const [rawData, metadata] = fmExpression.exec(content) || ['', ''];
 
-	const frontMatter = extractMeta(metadata);
+	const extracted = extractMeta(metadata);
 	const [filename] = pathname.split(/[/\\]/).slice(-1);
 	const article = metadata ? content.slice(rawData.length + 1) : content;
-	const result = <typeof frontMatter>hydrate({ frontMatter, content: article, filename });
+	const result = <typeof extracted>(
+		hydrate({ frontMatter: <I>extracted, content: article, filename })
+	);
 	if (!result) return;
 
 	if (result.date && result.date.published && !result.date.updated) {
