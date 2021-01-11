@@ -1,13 +1,14 @@
-export function capitalize(text, lower) {
-	text = lower ? text.toLowerCase() : text;
-	return text.replace(/(?:^|\s)\S/g, (a) => a.toUpperCase());
+import { capitalize } from 'mauss/utils';
+
+export function compareDate(x: string, y: string): number {
+	return new Date(y).getTime() - new Date(x).getTime();
 }
 
-export function compareDate(x, y) {
-	return new Date(y) - new Date(x);
-}
-
-export function convertCase(style, text, sep = ' ') {
+export function convertCase(
+	style: 'camel' | 'pascal' | 'snake' | 'kebab',
+	text: string,
+	sep = ' '
+): string | undefined {
 	const exp = /[ |-|.|_]/g;
 	switch (style) {
 		case 'camel':
@@ -25,8 +26,11 @@ export function convertCase(style, text, sep = ' ') {
 	}
 }
 
-export function createPrettyDate(date) {
-	if (!date) return null;
+export function createPrettyDate(date: undefined): undefined;
+export function createPrettyDate(
+	date: string | undefined
+): { weekday: string; day: number; month: string; year: number; complete: string } | undefined {
+	if (!date) return undefined;
 	const dateFormat = new Date(date);
 	const weekday = dateFormat.toLocaleDateString('default', { weekday: 'long' });
 	const day = dateFormat.getDate();
@@ -35,16 +39,17 @@ export function createPrettyDate(date) {
 	return { weekday, day, month, year, complete: `${day} ${month} ${year}` };
 }
 
-export function isAbbreviated(text) {
+export function isAbbreviated(text: string): boolean {
 	if (text.length < 4) return true;
 	return isNaN(parseInt(text[3], 10)) ? false : true;
 }
 
-export function lastWords(index, text) {
+export function lastWords(index: number, text: string): string {
 	return text.split(' ').slice(-index).join(' ');
 }
 
-export function sortCompare(x, y) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function sortCompare<T extends Record<string, any>>(x: T, y: T): number {
 	if (x.date && y.date) {
 		const { updated: xu, published: xp } = x.date;
 		const { updated: yu, published: yp } = y.date;
@@ -67,6 +72,6 @@ export function sortCompare(x, y) {
 	else return x.title.en.localeCompare(y.title.en);
 }
 
-export function splitAt(index, text) {
+export function splitAt(index: number, text: string): [string, string] {
 	return [text.slice(0, index), text.slice(index + 1)];
 }

@@ -9,13 +9,13 @@
 	export let data;
 
 	import { SearchBar, Pagination } from 'svelement';
-	import MetaHead from '../../pages/MetaHead.svelte';
-	import LayoutPicker from '../../pages/LayoutPicker.svelte';
+	import MetaHead from '$pages/MetaHead.svelte';
+	import LayoutPicker from '$pages/LayoutPicker.svelte';
 
-	import { sift, sieve } from '../../utils/search';
-	import { cSlice as store } from '../../utils/stores';
-	import AnimatedKey from '../../components/AnimatedKey.svelte';
-	import CuratedPost from '../../components/CuratedPost.svelte';
+	import { sift, sieve } from '$utils/search';
+	import { cSlice as store } from '$utils/stores';
+	import AnimatedKey from '$components/AnimatedKey.svelte';
+	import CuratedPost from '$components/CuratedPost.svelte';
 
 	let query;
 	let filters = { categories: [], tags: [], sort: 'updated' };

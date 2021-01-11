@@ -1,8 +1,8 @@
 <script>
 	import { Link } from 'svelement';
-	import MetaHead from '../pages/MetaHead.svelte';
-	import Article from '../pages/Article.svelte';
-	import Disclaimer from '../components/Disclaimer.svelte';
+	import MetaHead from '$pages/MetaHead.svelte';
+	import Article from '$pages/Article.svelte';
+	import Disclaimer from '$components/Disclaimer.svelte';
 </script>
 
 <MetaHead

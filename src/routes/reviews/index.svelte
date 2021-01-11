@@ -39,13 +39,13 @@
 
 	import { Feather } from 'svelement/icons';
 	import { SearchBar, Pagination } from 'svelement';
-	import MetaHead from '../../pages/MetaHead.svelte';
-	import LayoutPicker from '../../pages/LayoutPicker.svelte';
-	import ReviewCard from '../../components/ReviewCard.svelte';
-	import PerspectiveCarousel from '../../components/PerspectiveCarousel.svelte';
+	import MetaHead from '$pages/MetaHead.svelte';
+	import LayoutPicker from '$pages/LayoutPicker.svelte';
+	import ReviewCard from '$components/ReviewCard.svelte';
+	import PerspectiveCarousel from '$components/PerspectiveCarousel.svelte';
 
-	import { sift, sieve } from '../../utils/search';
-	import { rSlice as store } from '../../utils/stores';
+	import { sift, sieve } from '$utils/search';
+	import { rSlice as store } from '$utils/stores';
 	let filters = { categories: [], genres: [], verdict: [], sort_by: 'updated' },
 		view = 'grid';
 	$store = query ? sift(query, data) : data;

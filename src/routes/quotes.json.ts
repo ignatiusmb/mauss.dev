@@ -1,22 +1,21 @@
 import type { Request, Response } from 'express';
-import { parseDir } from '../utils/parser';
+import { parseDir } from '$utils/parser';
 
-export function get(_: Request, res: Response) {
-	const DIR = 'content/quotes';
-	const excerpts = parseDir(DIR, (_: any, content: string, filename: string) => {
-		const [author] = filename.split('.');
-		return { author: author.replace('-', ' '), lines: content.split(/\r?\n/) };
-	});
+type Excerpt = { author: string; lines: string[] };
+type Quote = { author: string; quote: string; from: string };
 
-	const quotes = excerpts.reduce((acc: [], cur: { author: string; lines: string[] }) => {
-		const { author, lines } = cur;
-		const content = [];
+export function get(_: Request, res: Response): void {
+	const excerpts = parseDir<Excerpt>('content/quotes', ({ content, filename }) => ({
+		author: filename.split('.')[0].replace('-', ' '),
+		lines: content.split(/\r?\n/).filter(Boolean),
+	}));
+
+	const quotes = excerpts.reduce((acc: Quote[], { author, lines }) => {
 		for (const line of lines) {
-			if (!line) continue;
 			const [quote, from] = line.split('#!/');
-			content.push({ author, quote, from });
+			acc.push({ author, quote, from });
 		}
-		return [...acc, ...content];
+		return acc;
 	}, []);
 
 	res.writeHead(200, { 'Content-Type': 'application/json' });

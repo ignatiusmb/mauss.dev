@@ -10,9 +10,9 @@
 <script>
 	export let section, post;
 	import { Link, WeavedImage } from 'svelement';
-	import MetaHead from '../../pages/MetaHead.svelte';
-	import Article from '../../pages/Article.svelte';
-	import { capitalize } from '../../utils/helper';
+	import MetaHead from '$pages/MetaHead.svelte';
+	import Article from '$pages/Article.svelte';
+	import { capitalize } from 'mauss/utils';
 </script>
 
 <MetaHead
