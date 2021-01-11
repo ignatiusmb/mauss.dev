@@ -41,8 +41,7 @@ const extractMeta = (metadata: string) => {
 };
 
 export interface HydrateFn<I, O = I> {
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	(data: { frontMatter: I | any; content: string; filename: string }): O | undefined;
+	(data: { frontMatter: I; content: string; filename: string }): O | undefined;
 }
 
 export function parseFile<I, O = I>(pathname: string, hydrate: HydrateFn<I, O>): O;
@@ -54,9 +53,7 @@ export function parseFile<I, O = I>(pathname: string, hydrate: HydrateFn<I, O>):
 	const frontMatter = extractMeta(metadata);
 	const [filename] = pathname.split(/[/\\]/).slice(-1);
 	const article = metadata ? content.slice(rawData.length + 1) : content;
-	const result = <
-		{ date?: { published?: string; updated?: string }; content?: string; read_time?: number }
-	>hydrate({ frontMatter, content: article, filename });
+	const result = <typeof frontMatter>hydrate({ frontMatter, content: article, filename });
 	if (!result) return;
 
 	if (result.date && result.date.published && !result.date.updated) {

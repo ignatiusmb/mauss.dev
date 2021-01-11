@@ -13,7 +13,7 @@ const channel = {
 	description: 'Developed by DevMauss',
 };
 
-function flatScan<T>(path: string): RSSItem[] {
+function flatScan<T extends Curated | Review>(path: string): RSSItem[] {
 	const dirs = readdirSync(`content/${path}`).filter((folder) => !/draft/.test(folder));
 	return dirs.flatMap((folder) =>
 		parseDir<T, RSSItem>(
@@ -25,7 +25,7 @@ function flatScan<T>(path: string): RSSItem[] {
 					${typeof title === 'string' ? title : title.en}
 					${path !== 'curated' ? 'curated' : 'reviewed'} by DevMauss
 				`,
-				date: date.updated || date.published,
+				date: (date.updated || date.published) as string,
 			})
 		)
 	);
@@ -40,7 +40,7 @@ export async function get(_: Request, res: Response): Promise<void> {
 			({ frontMatter: { title, description: info, date: dt }, filename }) => {
 				const [published, slug] = filename.split('.');
 				const description = info || 'A post by DevMauss';
-				const date = (dt && dt.updated) || published;
+				const date = ((dt && dt.updated) as string) || published;
 				return { title, slug: `posts/${slug}`, description, date };
 			}
 		),

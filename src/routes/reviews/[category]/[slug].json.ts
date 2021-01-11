@@ -22,7 +22,7 @@ export async function get(req: Request, res: Response): Promise<void> {
 		if (spoilers) review.spoilers = marker.render(contentParser(review, spoilers));
 
 		review.content = contentParser(review, summary);
-		review.rating = countAverageRating(frontMatter.rating as string[]);
+		review.rating = countAverageRating(frontMatter.rating);
 		review.verdict = checkNum(frontMatter.verdict || -2);
 		return review;
 	});
