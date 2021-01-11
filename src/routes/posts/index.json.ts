@@ -19,8 +19,8 @@ export async function get(_: Request, res: Response): Promise<void> {
 			}
 		}
 
-		const date = { published, updated: frontMatter.date && frontMatter.date.updated };
-		return { slug, ...frontMatter, category: frontMatter.tags[0], date };
+		const updated = frontMatter.date && frontMatter.date.updated;
+		return { slug, ...frontMatter, category, date: { published, updated } };
 	});
 
 	res.writeHead(200, { 'Content-Type': 'application/json' });
