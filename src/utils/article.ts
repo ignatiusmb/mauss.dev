@@ -3,7 +3,7 @@ import { checkNum } from 'mauss/utils';
 
 export function countAverageRating(ratings: string[] | number): number {
 	if (typeof ratings === 'number') return ratings;
-	if (!ratings.length || ratings.some(Number.isNaN)) return 0;
+	if (!ratings || ratings.some(Number.isNaN)) return 0;
 	const total = ratings.reduce((acc, cur) => acc + parseInt(cur), 0);
 	return Math.round((total / ratings.length + Number.EPSILON) * 100) / 100;
 }
