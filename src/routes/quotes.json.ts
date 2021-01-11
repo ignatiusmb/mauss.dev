@@ -7,17 +7,15 @@ type Quote = { author: string; quote: string; from: string };
 export function get(_: Request, res: Response): void {
 	const excerpts = parseDir<Excerpt>('content/quotes', ({ content, filename }) => ({
 		author: filename.split('.')[0].replace('-', ' '),
-		lines: content.split(/\r?\n/),
+		lines: content.split(/\r?\n/).filter(Boolean),
 	}));
 
 	const quotes = excerpts.reduce((acc: Quote[], { author, lines }) => {
-		const content = [];
 		for (const line of lines) {
-			if (!line) continue;
 			const [quote, from] = line.split('#!/');
-			content.push({ author, quote, from });
+			acc.push({ author, quote, from });
 		}
-		return [...acc, ...content];
+		return acc;
 	}, []);
 
 	res.writeHead(200, { 'Content-Type': 'application/json' });
