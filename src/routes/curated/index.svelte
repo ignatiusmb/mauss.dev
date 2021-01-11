@@ -18,7 +18,7 @@
 	import CuratedPost from '$components/CuratedPost.svelte';
 
 	let query;
-	let filters = { categories: [], tags: [], sort: 'updated' };
+	let filters = { categories: [], tags: [], sort_by: 'updated' };
 
 	$: filtered = sieve(filters, data);
 	$: items = query ? sift(query, filtered) : filtered;
