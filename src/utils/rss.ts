@@ -1,19 +1,6 @@
-const chars: { [key: string]: string } = {
-	'"': 'quot',
-	"'": '#39',
-	'&': 'amp',
-	'<': 'lt',
-	'>': 'gt',
-};
-
-const formatPubDate = (date: string) => {
-	const formatted = new Date(date);
-	return formatted.toUTCString();
-};
-const clean = (html: string) => {
-	if (!html) return '';
-	return html.replace(/["'&<>]/g, (c) => `&${chars[c]};`);
-};
+const chars: Record<string, string> = { '"': 'quot', "'": '#39', '&': 'amp', '<': 'lt', '>': 'gt' };
+const formatPubDate = (date: string) => new Date(date).toUTCString();
+const clean = (html: string) => (!html ? '' : html.replace(/["'&<>]/g, (c) => `&${chars[c]};`));
 
 export default function RSS(channel: RSSChannel, items: RSSItem[]): string {
 	const createItem = (item: RSSItem) => `
