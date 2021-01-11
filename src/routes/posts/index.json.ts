@@ -1,28 +1,28 @@
 import type { Request, Response } from 'express';
+import type { Post } from '$utils/types';
 import { existsSync } from 'fs';
 import { join } from 'path';
-import { parseDir } from '../../utils/parser';
-import { fillSiblings } from '../../utils/article';
+import { parseDir } from '$utils/parser';
+import { fillSiblings } from '$utils/article';
 
-export function get(_: Request, res: Response) {
-	function hydrate(data: RawPost, _: string, filename: string): FinalPost {
+export async function get(_: Request, res: Response): Promise<void> {
+	const posts = parseDir<Post>('content/posts', ({ frontMatter, filename }) => {
 		const [published, slug] = filename.split('.');
-		const [category] = data.tags;
+		const [category] = frontMatter.tags;
 
-		if (!data.image) {
-			let imagePath = `uploads/${category.toLowerCase()}/thumbnail/${slug}`;
+		if (!frontMatter.image) {
+			const imagePath = `uploads/${category.toLowerCase()}/thumbnail/${slug}`;
 			const rootFolder = `${process.cwd()}/static`;
 			for (const ext of ['png', 'jpg']) {
 				const image = join(rootFolder, `${imagePath}.${ext}`);
-				if (existsSync(image)) data.image = { en: `${imagePath}.${ext}` };
+				if (existsSync(image)) frontMatter.image = { en: `${imagePath}.${ext}` };
 			}
 		}
 
-		const date = { published, updated: data.date && data.date.updated };
-		return { slug, ...data, category: data.tags[0], date };
-	}
+		const updated = frontMatter.date && frontMatter.date.updated;
+		return { slug, ...frontMatter, category, date: { published, updated } };
+	});
 
-	const posts = parseDir('content/posts', hydrate);
 	res.writeHead(200, { 'Content-Type': 'application/json' });
 	res.end(JSON.stringify(fillSiblings(posts, 'posts/')));
 }

@@ -1,23 +1,23 @@
 <script>
 	export let segment;
 
-	import { page } from '../utils/stores';
+	import { page } from '$utils/stores';
 	import { stores } from '@sapper/app';
 	const { page: local } = stores();
 
 	import { ScrollTop } from 'svelement';
-	import Navigation from '../components/Navigation.svelte';
-	import Footer from '../components/Footer.svelte';
+	import Navigation from '$components/Navigation.svelte';
+	import Footer from '$components/Footer.svelte';
 
 	import '@ignatiusmb/aqua/lib/aqua.cbs';
 	import '@ignatiusmb/aqua/lib/aqua.min.css';
-	import '../styles/fonts.css';
-	import '../styles/theme.css';
-	import '../styles/blog.css';
-	import '../styles/animation.css';
+	import '$styles/fonts.css';
+	import '$styles/theme.css';
+	import '$styles/blog.css';
+	import '$styles/animation.css';
 
-	$: if (!process.dev && process.browser && !$local.error) {
-		$page = fetch(`api/page?slug=${$local.path}`, { method: 'POST' }).then((r) => r.json());
+	$: if (!process.dev && typeof window !== 'undefined' && !$local.error) {
+		page.set(fetch(`api/page?slug=${$local.path}`, { method: 'POST' }).then((r) => r.json()));
 	}
 </script>
 

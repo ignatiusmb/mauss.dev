@@ -12,13 +12,13 @@
 	export let data, unique;
 
 	import { SearchBar, Pagination } from 'svelement';
-	import MetaHead from '../../pages/MetaHead.svelte';
-	import LayoutPicker from '../../pages/LayoutPicker.svelte';
-	import AnimatedKey from '../../components/AnimatedKey.svelte';
-	import PostCard from '../../components/PostCard.svelte';
+	import MetaHead from '$pages/MetaHead.svelte';
+	import LayoutPicker from '$pages/LayoutPicker.svelte';
+	import AnimatedKey from '$components/AnimatedKey.svelte';
+	import PostCard from '$components/PostCard.svelte';
 
-	import { sift, sieve } from '../../utils/search';
-	import { pSlice as store } from '../../utils/stores';
+	import { sift, sieve } from '$utils/search';
+	import { pSlice as store } from '$utils/stores';
 	let filters = { categories: [], tags: [], sort_by: 'updated' },
 		query;
 

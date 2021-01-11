@@ -6,8 +6,8 @@
 
 <script>
 	export let post;
-	import MetaHead from '../../pages/MetaHead.svelte';
-	import Article from '../../pages/Article.svelte';
+	import MetaHead from '$pages/MetaHead.svelte';
+	import Article from '$pages/Article.svelte';
 </script>
 
 <MetaHead

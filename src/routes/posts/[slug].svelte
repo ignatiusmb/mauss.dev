@@ -16,9 +16,9 @@
 <script>
 	export let post;
 	import { Link } from 'svelement';
-	import MetaHead from '../../pages/MetaHead.svelte';
-	import Article from '../../pages/Article.svelte';
-	import TagBadge from '../../components/TagBadge.svelte';
+	import MetaHead from '$pages/MetaHead.svelte';
+	import Article from '$pages/Article.svelte';
+	import TagBadge from '$components/TagBadge.svelte';
 </script>
 
 <MetaHead {post} canonical="posts/{post.slug}" title={post.title} />

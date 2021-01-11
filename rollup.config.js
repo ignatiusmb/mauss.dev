@@ -1,3 +1,4 @@
+import aliasFactory from '@rollup/plugin-alias';
 import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
@@ -11,8 +12,8 @@ import { terser } from 'rollup-plugin-terser';
 
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
+import 'dotenv/config';
 
-require('dotenv').config();
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
 const sourcemap = dev ? 'inline' : false;
@@ -22,6 +23,16 @@ const onwarn = (warning, onwarn) =>
 	(warning.code === 'MISSING_EXPORT' && /'preload'/.test(warning.message)) ||
 	(warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message)) ||
 	onwarn(warning);
+
+const rootPath = require('path').resolve(__dirname, 'src');
+const alias = aliasFactory({
+	entries: [
+		{ find: '$components', replacement: `${rootPath}/components` },
+		{ find: '$pages', replacement: `${rootPath}/pages` },
+		{ find: '$styles', replacement: `${rootPath}/styles` },
+		{ find: '$utils', replacement: `${rootPath}/utils` },
+	],
+});
 
 const preprocess = [
 	autoPreprocess({
@@ -57,6 +68,7 @@ export default {
 				inlineSources: !!sourcemap,
 			}),
 			json(),
+			alias,
 
 			legacy &&
 				babel({
@@ -98,22 +110,7 @@ export default {
 				inlineSources: !!sourcemap,
 			}),
 			json(),
+			alias,
 		],
 	},
-
-	// serviceworker: {
-	// 	input: config.serviceworker.input(),
-	// 	output: { ...config.serviceworker.output(), sourcemap },
-	// 	preserveEntrySignatures: false,
-	// 	onwarn,
-	// 	plugins: [
-	// 		resolve(),
-	// 		replace({
-	// 			'process.browser': true,
-	// 			'process.dev': dev,
-	// 		}),
-	// 		commonjs({ sourceMap: !!sourcemap }),
-	// 		!dev && terser(),
-	// 	],
-	// },
 };

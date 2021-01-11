@@ -7,8 +7,8 @@
 	import { Feather } from 'svelement/icons';
 	import { Link, ProgressBar } from 'svelement';
 	import Header from './Header.svelte';
-	import TextIcon from '../components/TextIcon.svelte';
-	import Siblings from '../components/Siblings.svelte';
+	import TextIcon from '$components/TextIcon.svelte';
+	import Siblings from '$components/Siblings.svelte';
 
 	function offsetAnchor() {
 		if (!window.location.hash.length) return;
