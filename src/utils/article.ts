@@ -3,7 +3,7 @@ import { checkNum } from 'mauss/utils';
 
 export function countAverageRating(ratings: string[] | number): number {
 	if (typeof ratings === 'number') return ratings;
-	if (!ratings || ratings.some(Number.isNaN)) return 0;
+	if (!ratings.length || ratings.some(Number.isNaN)) return 0;
 	const total = ratings.reduce((acc, cur) => acc + parseInt(cur), 0);
 	return Math.round((total / ratings.length + Number.EPSILON) * 100) / 100;
 }
@@ -11,9 +11,8 @@ export function countAverageRating(ratings: string[] | number): number {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function contentParser<T extends Record<string, any>>(data: T, content: string): string {
 	const traverseData = (meta: T | string, properties: string): string => {
-		for (const key of properties.split(':')) {
+		for (const key of properties.split(':'))
 			if (typeof meta !== 'string') meta = meta[checkNum(key)];
-		}
 		return meta as string;
 	};
 
