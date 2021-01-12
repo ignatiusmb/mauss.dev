@@ -11,6 +11,7 @@ export interface Child {
 		prev?: { slug: string; title: string | I18nData };
 		next?: { slug: string; title: string | I18nData };
 	};
+	read_time: number;
 }
 
 export interface Curated extends Child {
