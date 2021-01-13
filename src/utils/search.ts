@@ -21,9 +21,9 @@ export const sift = <T extends GenericData>(query: string, data: T[]): T[] =>
 
 const sortBy: Record<string, (x: any, y: any) => number> = {
 	rating(x, y) {
-		if (x.rating === null || x.rating === undefined) return 1;
-		if (y.rating === null || y.rating === undefined) return 0;
-		return x.rating === y.rating ? sortCompare(x, y) : y.rating - x.rating;
+		const xr = Number.isNaN(+x.rating) ? +!!x.rating : x.rating;
+		const yr = Number.isNaN(+y.rating) ? +!!y.rating : y.rating;
+		return xr === yr ? sortCompare(x, y) : yr - xr;
 	},
 	seen: (x, y) => compareDate(x.last_seen, y.last_seen) || sortCompare(x, y),
 	released: (x, y) => compareDate(x.released, y.released) || sortCompare(x, y),
