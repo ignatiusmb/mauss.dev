@@ -12,6 +12,7 @@
     "static:404:mv": "mv __sapper__/export/404/index.html __sapper__/export/404.html",
     "static:404:rm": "rmdir \"__sapper__/export/404\"",
     "lint": "eslint src --ext svelte,js,ts",
+    "lint:markdown": "markdownlint content/**/*.md",
     "check": "prettier -c src",
     "format": "prettier -w src"
   },
@@ -53,6 +54,7 @@
     "markdown-it": "^11.0.0",
     "markdown-it-container": "^3.0.0",
     "markdown-it-mark": "^3.0.0",
+    "markdownlint-cli": "^0.26.0",
     "mauss": "0.0.3",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.0.5",
