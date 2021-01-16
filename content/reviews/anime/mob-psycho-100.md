@@ -15,7 +15,7 @@ link:mal: https://myanimelist.net/anime/32182/Mob_Psycho_100
 ![Backdrop]()
 
 <!-- SEASON DIVIDER -->
-# Season 1
+## Season 1
 
 ## Synopsis
 
@@ -36,29 +36,15 @@ link:mal: https://myanimelist.net/anime/32182/Mob_Psycho_100
 <!-- SPOILERS -->
 
 <!-- SEASON DIVIDER -->
-# Season 2
+## Season 2
 
 <!-- SPOILERS -->
 
-<figure class="youtube">
-    <div>
-        <iframe src="https://www.youtube-nocookie.com/embed/psQY-6KjyIA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <figcaption>
-    'Mob Psycho 100 II OP Breakdown' by Geoff Thew from Mother's Basement
-    </figcaption>
-</figure>
+![!YouTube#hb](psQY-6KjyIA "Mob Psycho 100 II OP Breakdown")
 
 <!-- CLOSING -->
 
-<figure class="youtube">
-    <div>
-        <iframe src="https://www.youtube-nocookie.com/embed/k-DyIWF0h-8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <figcaption>
-    'Mob Psycho 100 - Favorite Anime' by Geoff Thew from Mother's Basement
-    </figcaption>
-</figure>
+![!YouTube#hb](k-DyIWF0h-8 "Mob Psycho 100 - Favorite Anime")
 
 ---
 Reference(s):
