@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-var-requires */
 import type { Options } from 'markdown-it';
-const Aqua = require('@ignatiusmb/aqua');
+import { isExists } from 'mauss/guards';
+import Aqua from '@ignatiusmb/aqua';
 
 function highlight(str: string, language: string): string {
 	const strList = str.split('\n');
@@ -25,7 +26,7 @@ marker.renderer.rules.heading_open = (tokens: any, idx: number) => {
 	const [token, text] = [tokens[idx], tokens[idx + 1].content];
 	if (parseInt(token.tag.slice(-1)) > 3) return `<${token.tag}>`;
 	let tagId = text.split(/ \| /)[0].toLowerCase(); // Take only part before vBar "|"
-	tagId = tagId.replace(separators, '-').split('-').filter(Boolean).join('-');
+	tagId = tagId.replace(separators, '-').split('-').filter(isExists).join('-');
 	return `<${token.tag} id="${tagId}">`;
 };
 marker.renderer.rules.image = (tokens: any, idx: number, options: Options, env: any, slf: any) => {

@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { isExists } from 'mauss/guards';
 import { compareDate, sortCompare } from './helper';
 
 const exists = (source: string | any, query: string | any): boolean =>
@@ -10,7 +11,7 @@ const compare = (source: string[] | string, queries: string[]): number =>
 const check = (source: string[] | string, queries: string[]): boolean =>
 	compare(source, queries) === queries.length;
 
-const cleanSplit = (data: string): string[] => data.split(' ').filter(Boolean);
+const cleanSplit = (data: string): string[] => data.split(' ').filter(isExists);
 type GenericData = { title: string | { en: string; [key: string]: string } };
 export const sift = <T extends GenericData>(query: string, data: T[]): T[] =>
 	data.filter(({ title }) =>
