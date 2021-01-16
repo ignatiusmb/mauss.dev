@@ -21,14 +21,15 @@ const countReadTime = (content: string) => {
 
 const extractMeta = (metadata: string) => {
 	if (!metadata) return {};
-	const lines = metadata.split(/\r?\n/);
+	const lines = metadata.split(/\r?\n/).filter(Boolean);
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	return lines.reduce((acc: Record<string, any>, cur) => {
-		if (!/: /.test(cur)) return acc;
-		const [key, val] = splitAt(cur.indexOf(': '), cur);
+		if (!/: /.test(cur.trim())) return acc;
+		const [key, val] = splitAt(cur.indexOf(': '), cur.trim());
 
-		if (/:/.test(key)) {
-			const [attr, category] = splitAt(key.indexOf(':'), key);
+		const colon = key.indexOf(':');
+		if (colon !== -1) {
+			const [attr, category] = splitAt(colon, key);
 			if (!acc[attr]) acc[attr] = {};
 			acc[attr][category] = val.trim();
 		} else if (/,/.test(val) && key !== 'description') {
