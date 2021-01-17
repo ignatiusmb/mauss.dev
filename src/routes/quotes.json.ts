@@ -1,4 +1,5 @@
 import type { Request, Response } from 'express';
+import { isExists } from 'mauss/guards';
 import { parseDir } from '$utils/parser';
 
 type Excerpt = { author: string; lines: string[] };
@@ -7,7 +8,7 @@ type Quote = { author: string; quote: string; from: string };
 export function get(_: Request, res: Response): void {
 	const excerpts = parseDir<Excerpt>('content/quotes', ({ content, filename }) => ({
 		author: filename.split('.')[0].replace('-', ' '),
-		lines: content.split(/\r?\n/).filter(Boolean),
+		lines: content.split(/\r?\n/).filter(isExists),
 	}));
 
 	const quotes = excerpts.reduce((acc: Quote[], { author, lines }) => {

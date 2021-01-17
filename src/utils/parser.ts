@@ -1,5 +1,6 @@
 import { join } from 'path';
 import { readdirSync, readFileSync } from 'fs';
+import { isExists } from 'mauss/guards';
 import { contentParser } from './article';
 import { sortCompare, splitAt } from './helper';
 import marker from './marker';
@@ -11,7 +12,7 @@ const countReadTime = (content: string) => {
 	const words = paragraphs.reduce((acc, cur) => {
 		if (cur.trim().startsWith('<!--')) return acc;
 		if (cur.trim().match(/^\r?\n<\S+>/)) return acc;
-		const wordCount = cur.split(' ').filter(Boolean);
+		const wordCount = cur.split(' ').filter(isExists);
 		return acc + wordCount.length;
 	}, 0);
 	const images = content.match(/(!\[.+\]\(.+\))/g);
@@ -21,19 +22,20 @@ const countReadTime = (content: string) => {
 
 const extractMeta = (metadata: string) => {
 	if (!metadata) return {};
-	const lines = metadata.split(/\r?\n/);
+	const lines = metadata.split(/\r?\n/).filter(isExists);
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	return lines.reduce((acc: Record<string, any>, cur) => {
-		if (!/: /.test(cur)) return acc;
-		const [key, val] = splitAt(cur.indexOf(': '), cur);
+		if (!/: /.test(cur.trim())) return acc;
+		const [key, val] = splitAt(cur.indexOf(': '), cur.trim());
 
-		if (/:/.test(key)) {
-			const [attr, category] = splitAt(key.indexOf(':'), key);
+		const colon = key.indexOf(':');
+		if (colon !== -1) {
+			const [attr, category] = splitAt(colon, key);
 			if (!acc[attr]) acc[attr] = {};
 			acc[attr][category] = val.trim();
 		} else if (/,/.test(val) && key !== 'description') {
 			const items = val.split(',').map((v) => v.trim());
-			acc[key] = items.filter(Boolean);
+			acc[key] = items.filter(isExists);
 		} else acc[key] = val.trim();
 
 		return acc;

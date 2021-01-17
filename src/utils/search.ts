@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { isExists } from 'mauss/guards';
 import { compareDate, sortCompare } from './helper';
 
 const exists = (source: string | any, query: string | any): boolean =>
@@ -10,7 +11,7 @@ const compare = (source: string[] | string, queries: string[]): number =>
 const check = (source: string[] | string, queries: string[]): boolean =>
 	compare(source, queries) === queries.length;
 
-const cleanSplit = (data: string): string[] => data.split(' ').filter(Boolean);
+const cleanSplit = (data: string): string[] => data.split(' ').filter(isExists);
 type GenericData = { title: string | { en: string; [key: string]: string } };
 export const sift = <T extends GenericData>(query: string, data: T[]): T[] =>
 	data.filter(({ title }) =>
@@ -21,9 +22,9 @@ export const sift = <T extends GenericData>(query: string, data: T[]): T[] =>
 
 const sortBy: Record<string, (x: any, y: any) => number> = {
 	rating(x, y) {
-		if (x.rating === null || x.rating === undefined) return 1;
-		if (y.rating === null || y.rating === undefined) return 0;
-		return x.rating === y.rating ? sortCompare(x, y) : y.rating - x.rating;
+		const xr = Number.isNaN(+x.rating) ? +!!x.rating : x.rating;
+		const yr = Number.isNaN(+y.rating) ? +!!y.rating : y.rating;
+		return xr === yr ? sortCompare(x, y) : yr - xr;
 	},
 	seen: (x, y) => compareDate(x.last_seen, y.last_seen) || sortCompare(x, y),
 	released: (x, y) => compareDate(x.released, y.released) || sortCompare(x, y),

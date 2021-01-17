@@ -53,10 +53,12 @@ export default {
 				'process.dev': dev,
 			}),
 			svelte({
-				dev,
 				preprocess,
-				hydratable: true,
 				emitCss: true,
+				compilerOptions: {
+					dev,
+					hydratable: true,
+				},
 			}),
 			resolve({
 				browser: true,
@@ -98,10 +100,12 @@ export default {
 				'process.dev': dev,
 			}),
 			svelte({
-				dev,
 				preprocess,
-				hydratable: true,
-				generate: 'ssr',
+				compilerOptions: {
+					dev,
+					hydratable: true,
+					generate: 'ssr',
+				},
 			}),
 			resolve({ dedupe: ['svelte'] }),
 			commonjs({ sourceMap: !!sourcemap }),
