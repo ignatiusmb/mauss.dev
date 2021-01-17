@@ -55,9 +55,9 @@
 				<strong>
 					developers should prefer using the correct semantic HTML element over using ARIA,
 				</strong>
-				if such an element exists. For instance, native elements have built-in keyboard
-				accessibility, roles and states. However, if you choose to use ARIA, you are responsible for
-				mimicking (the equivalent) browser behavior in script. Source:
+				if such an element exists. For instance, native elements have built-in keyboard accessibility,
+				roles and states. However, if you choose to use ARIA, you are responsible for mimicking (the
+				equivalent) browser behavior in script. Source:
 				<Link newTab href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">
 					MDN
 				</Link>

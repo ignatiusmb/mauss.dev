@@ -1,13 +1,15 @@
-<script>
-	export let post;
+<script lang="ts">
+	import type { Post } from '$utils/types';
+
+	export let post: Post;
 	import { Image, ButtonLink } from 'svelement';
 	import { createPrettyDate } from '$utils/helper';
 	const { published, updated } = post.date;
-	const prettyDate = createPrettyDate((updated !== published && updated) || published);
+	const { day, month, year } = createPrettyDate((updated !== published && updated) || published);
 </script>
 
 <section>
-	<Image src={post.image ? post.image.en : null} alt={post.title} overlay>
+	<Image src={post.image ? post.image.en : ''} alt={post.title} overlay>
 		<span>{post.title}</span>
 	</Image>
 
@@ -21,7 +23,7 @@
 	<aside>
 		<small>
 			{#if updated && updated !== published}Updated{/if}
-			{prettyDate.day} {prettyDate.month} {prettyDate.year}
+			<span>{day} {month} {year}</span>
 		</small>
 		<small>{post.read_time} min read</small>
 		<ButtonLink href="posts/{post.slug}">read</ButtonLink>

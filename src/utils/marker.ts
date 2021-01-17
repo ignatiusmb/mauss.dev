@@ -1,7 +1,12 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-var-requires */
+import type { Options } from 'markdown-it';
+import { isExists } from 'mauss/guards';
 import Aqua from '@ignatiusmb/aqua';
-function highlight(str, language) {
+
+function highlight(str: string, language: string): string {
 	const strList = str.split('\n');
-	const dataset = { language };
+	const dataset: Record<string, string | number> = { language };
 	if (strList[0][0] === '~') {
 		const [title, lineNumber] = strList[0].split('#');
 		dataset['title'] = title.slice(1);
@@ -17,26 +22,26 @@ const separators = /[\s\][!"#$%&'()*+,./:;<=>?@\\^_{|}~-]/g;
 marker.use(require('markdown-it-mark'));
 
 /** Renderer Override Rules */
-marker.renderer.rules.heading_open = (tokens, idx) => {
+marker.renderer.rules.heading_open = (tokens: any, idx: number) => {
 	const [token, text] = [tokens[idx], tokens[idx + 1].content];
 	if (parseInt(token.tag.slice(-1)) > 3) return `<${token.tag}>`;
 	let tagId = text.split(/ \| /)[0].toLowerCase(); // Take only part before vBar "|"
-	tagId = tagId.replace(separators, '-').split('-').filter(Boolean).join('-');
+	tagId = tagId.replace(separators, '-').split('-').filter(isExists).join('-');
 	return `<${token.tag} id="${tagId}">`;
 };
-marker.renderer.rules.image = (tokens, idx, options, env, slf) => {
+marker.renderer.rules.image = (tokens: any, idx: number, options: Options, env: any, slf: any) => {
 	tokens[idx].attrPush(['loading', 'lazy']); // add browser level lazy loading
 	const token = tokens[idx];
-	const altIdx = token.attrIndex('alt');
-	const titleIdx = token.attrIndex('title');
+	const altIdx: number = token.attrIndex('alt');
+	const titleIdx: number = token.attrIndex('title');
 	token.attrs[altIdx][1] = slf.renderInlineAsText(token.children, options, env);
 	if (titleIdx === -1) return slf.renderToken(tokens, idx, options);
 
 	// Pop here so it's not rendered in else block below
-	const caption = token.attrs.splice(titleIdx, 1)[0][1];
-	const alt = token.attrs[altIdx][1];
+	const caption: string = token.attrs.splice(titleIdx, 1)[0][1];
+	const alt: string = token.attrs[altIdx][1];
 
-	const media = {
+	const media: { type: RegExpMatchArray | null; attrs: string[]; data?: string } = {
 		type: alt.match(/^!(\w+[-\w]+)($|#)/),
 		attrs: (alt.match(/#(\w+)/g) || []).map((a) => a.slice(1)),
 	};
@@ -56,7 +61,7 @@ marker.renderer.rules.image = (tokens, idx, options, env, slf) => {
 		media.data = slf.renderToken(tokens, idx, options);
 	}
 
-	const classMap = {
+	const classMap: Record<string, string> = {
 		d: 'disclosure',
 		f: 'flexible',
 		fb: 'full-bleed',
@@ -69,7 +74,7 @@ marker.renderer.rules.image = (tokens, idx, options, env, slf) => {
 	};
 
 	media.data = `<div class="${classes.div.join(' ')}">${media.data}</div>`;
-	const rendered = marker.renderInline(caption);
+	const rendered: string = marker.renderInline(caption);
 	if (mAttrs.has('disclosure')) {
 		const body = `<summary>${rendered}</summary>${media.data}`;
 		return `<details class="${classes.top.join(' ')}">${body}</details>`;
