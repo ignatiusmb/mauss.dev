@@ -1,8 +1,11 @@
 <script context="module">
+	import { sift, sieve } from '$utils/search';
+	import { rSlice as store } from '$utils/stores';
 	export async function preload({ query }) {
 		const data = await this.fetch('reviews.json').then((r) => r.json());
 		const categories = [...new Set(data.map((p) => p.category))];
 		const genres = [...new Set(data.flatMap((p) => p.genres))].sort();
+		store.set(query.q ? sift(query, data) : data);
 		return {
 			data,
 			search: query,
@@ -44,11 +47,8 @@
 	import ReviewCard from '$components/ReviewCard.svelte';
 	import PerspectiveCarousel from '$components/PerspectiveCarousel.svelte';
 
-	import { sift, sieve } from '$utils/search';
-	import { rSlice as store } from '$utils/stores';
 	let filters = { categories: [], genres: [], verdict: [], sort_by: 'updated' },
 		view = 'grid';
-	$store = query ? sift(query, data) : data;
 	$: bound = view === 'grid' ? 12 : 3;
 	$: increment = view === 'carousel' ? 1 : bound;
 	$: filtered = sieve(filters, data);
