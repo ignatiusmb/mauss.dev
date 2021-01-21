@@ -12,8 +12,8 @@
     "static:404:mv": "mv __sapper__/export/404/index.html __sapper__/export/404.html",
     "static:404:rm": "rmdir \"__sapper__/export/404\"",
     "lint": "run-p lint:**",
-    "lint:svelte": "svelte-check src",
     "lint:script": "eslint src --ext js,ts",
+    "lint:svelte": "svelte-check src --output human",
     "lint:markdown": "markdownlint content/**/*.md",
     "check": "prettier -c src",
     "format": "prettier -w src"
