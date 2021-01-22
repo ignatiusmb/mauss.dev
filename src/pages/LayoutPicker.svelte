@@ -1,12 +1,12 @@
 <script>
-	let className;
+	let className = '';
 	export { className as class };
-	export let view = 'grid';
+	export let view = '';
 	export let itemSize = '12em';
-	export let header = null;
+	export let header = false;
 </script>
 
-<div class="layout-wrapper {className}">
+<div class="{className} layout-wrapper">
 	{#if header}
 		<div class="header-wrapper">
 			<slot name="header" />
@@ -18,6 +18,7 @@
 	{/if}
 
 	<main
+		class:flex={view === 'flex'}
 		class:grid={view === 'grid'}
 		class:column={view === 'column'}
 		class:scrollsnap={view === 'scrollsnap'}
@@ -47,6 +48,12 @@
 	.header-wrapper > :global(header) {
 		display: grid;
 		gap: 1em;
+	}
+	.header-wrapper :global(h1) {
+		text-align: center;
+	}
+	.header-wrapper :global(.lmns-pagination) {
+		max-width: 32em;
 	}
 	.header-wrapper > .aside-wrapper {
 		width: 100%;
@@ -79,6 +86,9 @@
 		display: none;
 	}
 	/* View Specific */
+	main.flex {
+		display: flex;
+	}
 	main.grid,
 	main.column {
 		display: grid;

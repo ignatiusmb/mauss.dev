@@ -1,5 +1,5 @@
 ---
-year: 2019
+released: 2019-12-20
 title:en: My Hero Academia: Heroes Rising
 title:jp: Boku no Hero Academia: Heroes:Rising
 genres: animation,

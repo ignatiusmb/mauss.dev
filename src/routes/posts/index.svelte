@@ -1,35 +1,29 @@
 <script context="module">
 	export async function preload() {
 		const data = await this.fetch('posts.json').then((r) => r.json());
-		const tags = data.flatMap((p) => p.tags);
-		const unique = {
-			categories: data.reduce((a, c) => (a.includes(c.tags[0]) ? a : [...a, c.tags[0]]), []).sort(),
-			tags: tags.reduce((a, c) => (a.includes(c) ? a : c ? [...a, c] : a), []).sort(),
-		};
-		return { data, unique };
+		const tags = [...new Set(data.flatMap((p) => p.tags))].sort();
+		const categories = [...new Set(data.map((p) => p.tags[0]))].sort();
+		const sort_by = { updated: 'Last Updated', published: 'Last Published' };
+		return { data, unique: { categories, tags, sort_by } };
 	}
 </script>
 
 <script>
 	export let data, unique;
-	import { flip } from 'svelte/animate';
-	import { scale } from 'svelte/transition';
-	const bound = 6;
-	const duration = 100;
 
-	import { SearchBar, Pagination } from '@ignatiusmb/elements';
-	import MetaHead from '../../pages/MetaHead.svelte';
-	import LayoutPicker from '../../pages/LayoutPicker.svelte';
-	import PostCard from '../../components/PostCard.svelte';
+	import { SearchBar, Pagination } from 'svelement';
+	import MetaHead from '$pages/MetaHead.svelte';
+	import LayoutPicker from '$pages/LayoutPicker.svelte';
+	import AnimatedKey from '$components/AnimatedKey.svelte';
+	import PostCard from '$components/PostCard.svelte';
 
-	import { pSlice as store } from '../../stores';
-	import { sieve, filter } from '../../utils/search';
-	let query, filtered, sieved;
-	let filters = { categories: [], tags: [], sort: 'updated' };
+	import { sift, sieve } from '$utils/search';
+	import { pSlice as store } from '$utils/stores';
+	let filters = { categories: [], tags: [], sort_by: 'updated' },
+		query;
 
-	$: filtered = filter(filters, data);
-	$: sieved = query ? sieve(query, filtered) : filtered;
-	$: total = sieved.length;
+	$: filtered = sieve(filters, data);
+	$: items = query ? sift(query, filtered) : filtered;
 </script>
 
 <MetaHead canonical="posts" title="Posts" description="Get the latest most recent posts here.">
@@ -39,36 +33,9 @@
 <LayoutPicker header view="grid" itemSize="21em">
 	<header slot="header">
 		<h1>Posts by DevMauss</h1>
-
-		<SearchBar bind:query bind:filters {unique}>
-			<section>
-				<h3>Sort by</h3>
-				<label>
-					<input type="radio" bind:group={filters.sort} value="updated" />
-					<span>Last updated</span>
-				</label>
-				<label>
-					<input type="radio" bind:group={filters.sort} value="published" />
-					<span>Date published</span>
-				</label>
-			</section>
-		</SearchBar>
-
-		<Pagination {store} {total} {bound} />
+		<SearchBar bind:query bind:filters {unique} />
+		<Pagination {store} {items} bound={6} />
 	</header>
 
-	{#each sieved.slice($store * bound, $store * bound + bound) as post (post.slug)}
-		<div animate:flip={{ duration }} transition:scale|local={{ duration }}>
-			<PostCard {post} />
-		</div>
-	{/each}
+	<AnimatedKey items={$store} component={PostCard} />
 </LayoutPicker>
-
-<style>
-	h1 {
-		text-align: center;
-	}
-	div {
-		display: grid;
-	}
-</style>

@@ -1,5 +1,5 @@
 ---
-year: 2004
+released: 2004-11-20
 title:en: Howl's Moving Castle
 genres: animation, adventure, drama, fantasy, romance
 rating: 9,10,9,9

@@ -1,12 +1,12 @@
 ---
-year: 2019
+released: 2019-07-06
 title:en: Fire Force
 title:jp: Enen no Shouboutai
 genres: action, supernatural, shounen, comedy
 rating: story,artwork,sound,characters
 verdict:
 
-last_seen: 2020-09-20
+last_seen: 2020-12-16
 date:published: 2020
 date:updated: 2020
 image:en: https://image.tmdb.org/t/p/original/zLDxWMM0BLImdAsnkqGeeoqjYev.jpg

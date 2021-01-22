@@ -1,21 +1,8 @@
-const chars: { [key: string]: string } = {
-	'"': 'quot',
-	"'": '#39',
-	'&': 'amp',
-	'<': 'lt',
-	'>': 'gt',
-};
+const chars: Record<string, string> = { '"': 'quot', "'": '#39', '&': 'amp', '<': 'lt', '>': 'gt' };
+const formatPubDate = (date: string) => new Date(date).toUTCString();
+const clean = (html: string) => (!html ? '' : html.replace(/["'&<>]/g, (c) => `&${chars[c]};`));
 
-const formatPubDate = (date: string) => {
-	const formatted = new Date(date);
-	return formatted.toUTCString();
-};
-const clean = (html: string) => {
-	if (!html) return '';
-	return html.replace(/["'&<>]/g, (c) => `&${chars[c]};`);
-};
-
-export default function RSS(channel: RSSChannel, items: RSSItem[]) {
+export default function RSS(channel: RSSChannel, items: RSSItem[]): string {
 	const createItem = (item: RSSItem) => `
 		<item>
 			<title>${clean(item.title)}</title>
@@ -43,4 +30,20 @@ export default function RSS(channel: RSSChannel, items: RSSItem[]) {
 	</rss>`;
 
 	return xml.replace(/>[^\S]+/gm, '>').trim();
+}
+
+interface RSSChannel {
+	domain: string;
+	image?: string;
+	title: string;
+	slug: string;
+	description: string;
+	language?: string;
+}
+
+export interface RSSItem {
+	title: string;
+	slug: string;
+	description: string;
+	date: string;
 }

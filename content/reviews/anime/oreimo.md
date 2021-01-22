@@ -1,5 +1,5 @@
 ---
-year: 2010
+released: 2010-10-03
 title:short: OreImo
 title:en: My Little Sister Can't Be This Cute
 title:jp: Ore no Imouto ga Konnani Kawaii Wake ga Nai

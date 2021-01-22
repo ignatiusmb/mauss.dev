@@ -3,13 +3,12 @@
 	export let post = null;
 	export let path = null;
 	export let siblings = null;
-	export let counter = false;
 	import { onMount } from 'svelte';
-	import { Feather, Link, ProgressBar } from '@ignatiusmb/elements';
+	import { Feather } from 'svelement/icons';
+	import { Link, ProgressBar } from 'svelement';
 	import Header from './Header.svelte';
-	import TextIcon from '../components/TextIcon.svelte';
-	import Siblings from '../components/Siblings.svelte';
-	import LoveCounter from '../components/LoveCounter.svelte';
+	import TextIcon from '$components/TextIcon.svelte';
+	import Siblings from '$components/Siblings.svelte';
 
 	function offsetAnchor() {
 		if (!window.location.hash.length) return;
@@ -67,10 +66,6 @@
 	{/if}
 </main>
 
-{#if !process.dev && counter}
-	<LoveCounter />
-{/if}
-
 <style>
 	main {
 		width: 100%;
@@ -86,6 +81,9 @@
 	}
 	main > :global(p:empty) {
 		margin: 0;
+	}
+	main > :global(p:empty + p:empty) {
+		margin-top: 0.5em;
 	}
 
 	main > :global(.half-bleed) {
@@ -168,13 +166,15 @@
 	main :global(h2) {
 		margin-top: 1.5em;
 		font-size: clamp(1.5rem, 4vw, 2rem);
+		color: rgb(255, 225, 0);
 	}
 	main :global(h2 + h3) {
 		margin-top: 0.5em;
 	}
 	main :global(h3) {
-		margin: 1em 0 -0.25em;
+		margin: 1.5em 0 -0.25em;
 		font-size: clamp(1.2rem, 4vw, 1.5rem);
+		color: rgb(0, 160, 120);
 	}
 	main :global(ol + h3),
 	main :global(ul + h3) {
@@ -198,6 +198,10 @@
 	main :global(li > ol),
 	main :global(li > ul) {
 		margin: 0;
+	}
+	main :global(p + ul > li:only-child),
+	main :global(p + ol > li:only-child) {
+		margin-top: 1em;
 	}
 	main :global(blockquote) {
 		line-height: 1.5;

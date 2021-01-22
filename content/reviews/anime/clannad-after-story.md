@@ -1,5 +1,5 @@
 ---
-year: 2008
+released: 2008-10-03
 title:en: Clannad ~After Story~
 title:jp: CLANNAD〜AFTER STORY〜
 genres: comedy, drama, slice of life, romance, supernatural

@@ -1,5 +1,5 @@
 ---
-year: 2011
+released: 2011-04-15
 title:en: anohana: The Flower We Saw That Day
 title:jp:
 genres: drama, slice of life, supernatural

@@ -11,7 +11,14 @@
 		"sourceMap": true,
 		"strict": true,
 		"types": ["svelte"],
-		"typeRoots": ["src/typings"]
+		"typeRoots": ["src/typings"],
+		"baseUrl": "src",
+		"paths": {
+			"$components/*": ["components/*"],
+			"$pages/*": ["pages/*"],
+			"$styles/*": ["styles/*"],
+			"$utils/*": ["utils/*"]
+		}
 	},
 	"include": ["src/**/*", "src/node_modules/**/*"],
 	"exclude": ["node_modules/*", "__sapper__/*", "static/*"]

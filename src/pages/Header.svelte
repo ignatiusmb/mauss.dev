@@ -3,9 +3,10 @@
 	export let post;
 	const size = 16;
 
-	import { createPrettyDate } from '../utils/helper';
-	import { Feather, Link } from '@ignatiusmb/elements';
-	import TextIcon from '../components/TextIcon.svelte';
+	import { Feather } from 'svelement/icons';
+	import { Link } from 'svelement';
+	import { createPrettyDate } from '$utils/helper';
+	import TextIcon from '$components/TextIcon.svelte';
 
 	$: ({ author, published, updated } = post.date || {});
 	$: ({ name, img, link } = author || {});
@@ -78,8 +79,8 @@
 				<TextIcon
 					style="cursor:pointer"
 					on:click={async () => {
-						if (!process.browser && !navigator.share) return;
-						navigator.share({ title: document.title, url: window.location.href });
+						if (typeof window !== 'undefined' && !navigator.share) return;
+						navigator.share({ title: document.title, url: location.href });
 					}}>
 					<span>Share</span>
 					<Feather.Share2 {size} />

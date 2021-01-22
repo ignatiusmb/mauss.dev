@@ -1,5 +1,5 @@
 ---
-year: 2019
+released: 2019-04-06
 title:en: Demon Slayer
 title:jp: Kimetsu no Yaiba
 genres: action, demons, historical, shounen, supernatural

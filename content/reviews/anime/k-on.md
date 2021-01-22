@@ -1,5 +1,5 @@
 ---
-year: 2009
+released: 2009-04-03
 title:en: K-ON!
 genres: music, slice of life, comedy, school
 rating: story,artwork,sound,characters

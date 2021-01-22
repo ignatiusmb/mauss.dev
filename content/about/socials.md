@@ -70,12 +70,12 @@ This is a more personalized playlist series. All playlist with the "IMB" prefix 
 
 1. [Informative](https://www.youtube.com/playlist?list=PLtthNj7yut57pdi5SlSm35eCdU6KsgxPG)
 
-This playlist was created as a compilation of the things I find to be useful and practical to know about, videos that I feel everyone should know at least or have heard about it.
+    This playlist was created as a compilation of the things I find to be useful and practical to know about, videos that I feel everyone should know at least or have heard about it.
 
 2. [TruAF](https://www.youtube.com/playlist?list=PLtthNj7yut56UXDGVE4dDnvoUi3fQ9gLz)
 
-This playlist was created out of the feeling that hits too close to home. Videos that we can feel relatable or we can agree to a degree. Some might say it's the ugly truth.
+    This playlist was created out of the feeling that hits too close to home. Videos that we can feel relatable or we can agree to a degree. Some might say it's the ugly truth.
 
 3. [Curiosity](https://www.youtube.com/playlist?list=PLtthNj7yut57rjEP2KXPlQaK4-2F6tthf)
 
-This playlist is perhaps the one you can relax to. Created just because I had too much time and felt like I need to explore new and obscure things.
+    This playlist is perhaps the one you can relax to. Created just because I had too much time and felt like I need to explore new and obscure things.

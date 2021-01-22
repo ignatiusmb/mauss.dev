@@ -1,5 +1,5 @@
 ---
-year: 2014
+released: 2012-04-08
 title:en: Kuroko's Basketball
 title:jp: Kuroko no Basuke
 genres: sports, school, comedy
@@ -15,10 +15,10 @@ link:mal: https://myanimelist.net/anime/11771/Kuroko_no_Basket
 ---
 
 <!-- SEASON DIVIDER -->
-# Season 1
+## Season 1
 
 <!-- SEASON DIVIDER -->
-# Season 2
+## Season 2
 
 <!-- SEASON DIVIDER -->
-# Season 3
+## Season 3

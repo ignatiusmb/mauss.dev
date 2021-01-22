@@ -8,8 +8,8 @@
 
 <script>
 	export let category, data;
-	import { ButtonLink } from '@ignatiusmb/elements';
-	import MetaHead from '../../../pages/MetaHead.svelte';
+	import { ButtonLink } from 'svelement';
+	import MetaHead from '$pages/MetaHead.svelte';
 
 	import { scale } from 'svelte/transition';
 	import { flip } from 'svelte/animate';

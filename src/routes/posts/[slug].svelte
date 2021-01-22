@@ -1,12 +1,11 @@
 <script context="module">
 	export async function preload({ params }) {
+		const list = this.fetch('posts.json').then((r) => r.json());
 		const res = await this.fetch(`posts/${params.slug}.json`);
 		if (res.status !== 200) return this.error(404, 'Post not found');
 
-		const list = await this.fetch('posts.json').then((r) => r.json());
 		const post = await res.json();
-
-		for (const review of list) {
+		for (const review of await list) {
 			if (review.slug !== post.slug) continue;
 			post.siblings = review.siblings;
 			return { post };
@@ -16,10 +15,10 @@
 
 <script>
 	export let post;
-	import { Link } from '@ignatiusmb/elements';
-	import MetaHead from '../../pages/MetaHead.svelte';
-	import Article from '../../pages/Article.svelte';
-	import TagBadge from '../../components/TagBadge.svelte';
+	import { Link } from 'svelement';
+	import MetaHead from '$pages/MetaHead.svelte';
+	import Article from '$pages/Article.svelte';
+	import TagBadge from '$components/TagBadge.svelte';
 </script>
 
 <MetaHead {post} canonical="posts/{post.slug}" title={post.title} />
@@ -56,9 +55,9 @@
 				<strong>
 					developers should prefer using the correct semantic HTML element over using ARIA,
 				</strong>
-				if such an element exists. For instance, native elements have built-in keyboard
-				accessibility, roles and states. However, if you choose to use ARIA, you are responsible for
-				mimicking (the equivalent) browser behavior in script. Source:
+				if such an element exists. For instance, native elements have built-in keyboard accessibility,
+				roles and states. However, if you choose to use ARIA, you are responsible for mimicking (the
+				equivalent) browser behavior in script. Source:
 				<Link newTab href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">
 					MDN
 				</Link>

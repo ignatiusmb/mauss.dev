@@ -1,7 +1,18 @@
 {
-	"svelteSortOrder": "scripts-markup-styles",
-	"semi": true,
 	"printWidth": 100,
+	"semi": true,
 	"singleQuote": true,
-	"tabWidth": 2
+	"tabWidth": 2,
+	"useTabs": true,
+	"svelteSortOrder": "scripts-markup-styles-options",
+	"svelteStrictMode": false,
+	"svelteBracketNewLine": false,
+	"svelteAllowShorthand": true,
+	"svelteIndentScriptAndStyle": true,
+	"overrides": [
+		{
+			"files": ["README.md", "package.json"],
+			"options": { "useTabs": false }
+		}
+	]
 }

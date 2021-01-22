@@ -1,15 +1,17 @@
 <script context="module">
-	import { compareDate, randomInt } from '../utils/helper';
+	import { compareDate } from '$utils/helper';
 	export async function preload() {
+		const quotes = this.fetch('quotes.json').then((r) => r.json());
+
 		const data = { posts: '', reviews: '', curated: '' };
 		for (const seg in data) {
 			data[seg] = await this.fetch(`${seg}.json`).then((r) => r.json());
 			if (seg === 'curated') data[seg].sort((x, y) => compareDate(x.date.updated, y.date.updated));
-			if (seg === 'reviews') data[seg].filter((p) => p.rating && p.verdict);
+			if (seg === 'reviews') data[seg].filter(({ rating, verdict }) => rating && verdict);
 			if (Array.isArray(data[seg])) data[seg] = data[seg].slice(0, 4);
 		}
 
-		return { data, quotes: await this.fetch('quotes.json').then((r) => r.json()) };
+		return { data, quotes: await quotes };
 	}
 </script>
 
@@ -21,17 +23,18 @@
 		curated: { heading: 'Recently Curated ⚖️', desc: "Stuffs I've been curating recently:" },
 	};
 
-	import { Link, Image } from '@ignatiusmb/elements';
-	import MetaHead from '../pages/MetaHead.svelte';
-	import Article from '../pages/Article.svelte';
-	import Quote from '../components/Quote.svelte';
-	import Navigation from '../components/Navigation.svelte';
+	import { Link, Image } from 'svelement';
+	import { random } from 'mauss/utils';
+	import MetaHead from '$pages/MetaHead.svelte';
+	import Article from '$pages/Article.svelte';
+	import Quote from '$components/Quote.svelte';
+	import Navigation from '$components/Navigation.svelte';
 
-	let quoteIndex = randomInt(quotes.length);
+	let quoteIndex = random.int(quotes.length);
 	let scrollY, innerHeight;
 	const getNewQuote = () => {
 		let newIndex;
-		do newIndex = randomInt(quotes.length);
+		do newIndex = random.int(quotes.length);
 		while (newIndex === quoteIndex);
 		quoteIndex = newIndex;
 	};
@@ -118,6 +121,7 @@
 	header h2,
 	header h3 {
 		width: 100%;
+		color: inherit;
 	}
 	header > :global(a) {
 		position: relative;

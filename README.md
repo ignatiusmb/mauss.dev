@@ -1,6 +1,6 @@
 # [DevMauss](https://mauss.dev)
 
-My personal website, handcrafted with ❤️ using [Svelte](https://svelte.dev) + [Sapper](https://sapper.svelte.dev) + [Aqua](https://aqua.mauss.dev) + [Elements](https://github.com/ignatiusmb/elements)
+My personal website, handcrafted with ❤️ using [Svelte](https://svelte.dev) + [Sapper](https://sapper.svelte.dev) + [Aqua](https://aqua.mauss.dev) + [Svelement](https://github.com/ignatiusmb/svelement)
 
 Contributions are welcome! Please refer to the Style Guide below if you'd like to create a PR
 

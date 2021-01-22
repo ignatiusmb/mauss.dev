@@ -1,5 +1,5 @@
 ---
-year: 2007
+released: 2007-10-05
 title:en: Clannad
 title:jp: CLANNAD
 genres: comedy, drama, romance, school, slice of life, supernatural

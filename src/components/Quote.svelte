@@ -1,6 +1,6 @@
 <script>
 	export let author;
-	import { GradientBorder } from '@ignatiusmb/elements';
+	import { GradientBorder } from 'svelement';
 </script>
 
 <blockquote>
