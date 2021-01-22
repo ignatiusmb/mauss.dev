@@ -36,6 +36,7 @@ const alias = aliasFactory({
 
 const preprocess = [
 	autoPreprocess({
+		defaults: { script: 'typescript' },
 		postcss: { plugins: [require('autoprefixer')()] },
 		sourceMap: dev,
 	}),
