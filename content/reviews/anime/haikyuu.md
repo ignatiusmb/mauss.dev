@@ -16,13 +16,13 @@ link:mal: https://myanimelist.net/anime/20583/Haikyuu
 ![Backdrop](https://image.tmdb.org/t/p/original/dlPVXJglJ4XiIwbGwEFJj5C20Sr.jpg)
 
 <!-- SEASON DIVIDER -->
-# Season 1
+## Season 1
 
 <!-- SEASON DIVIDER -->
-# Season 2
+## Season 2
 
 <!-- SEASON DIVIDER -->
-# Season 3
+## Season 3
 
 <!-- SEASON DIVIDER -->
-# Season 4
+## Season 4
