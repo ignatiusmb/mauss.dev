@@ -1,13 +1,14 @@
 <script context="module">
-	export async function preload({ params }) {
-		const { category } = params;
-		const list = await this.fetch('curated.json').then((r) => r.json());
+	import type { Preload } from '@sapper/common';
+	import type { Curated } from '$utils/types';
+	export const preload: Preload = async function (this, { params: { category } }) {
+		const list: Curated[] = await this.fetch('curated.json').then((r) => r.json());
 		return { category, data: list.filter((p) => p.category === category) };
-	}
+	};
 </script>
 
 <script>
-	export let category, data;
+	export let category: string, data: Curated[];
 	import { ButtonLink } from 'svelement';
 	import MetaHead from '$pages/MetaHead.svelte';
 

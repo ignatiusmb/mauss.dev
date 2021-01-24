@@ -1,9 +1,11 @@
 <script context="module">
+	import type { Preload } from '@sapper/common';
+	import type { I18nData, Quote } from '$utils/types';
 	import { compareDate } from '$utils/helper';
-	export async function preload() {
-		const quotes = this.fetch('quotes.json').then((r) => r.json());
+	export const preload: Preload = async function (this) {
+		const quotes: Promise<Quote[]> = this.fetch('quotes.json').then((r) => r.json());
 
-		const data = { posts: '', reviews: '', curated: '' };
+		const data: Record<string, any[]> = { posts: [], reviews: [], curated: [] };
 		for (const seg in data) {
 			data[seg] = await this.fetch(`${seg}.json`).then((r) => r.json());
 			if (seg === 'curated') data[seg].sort((x, y) => compareDate(x.date.updated, y.date.updated));
@@ -12,12 +14,12 @@
 		}
 
 		return { data, quotes: await quotes };
-	}
+	};
 </script>
 
 <script>
-	export let data, quotes;
-	const section = {
+	export let data: Record<string, { slug: string; title: string | I18nData }[]>, quotes: Quote[];
+	const section: Record<string, { heading: string; desc: string }> = {
 		posts: { heading: 'Recent Posts 📚', desc: "What's on my mind (or life) recently:" },
 		reviews: { heading: 'Recent Reviews ⭐', desc: "Contents I've been reviewing recently:" },
 		curated: { heading: 'Recently Curated ⚖️', desc: "Stuffs I've been curating recently:" },
@@ -27,18 +29,18 @@
 	import { random } from 'mauss/utils';
 	import MetaHead from '$pages/MetaHead.svelte';
 	import Article from '$pages/Article.svelte';
-	import Quote from '$components/Quote.svelte';
+	import Excerpt from '$components/Quote.svelte';
 	import Navigation from '$components/Navigation.svelte';
 
 	let quoteIndex = random.int(quotes.length);
-	let scrollY, innerHeight;
+	let scrollY: number, innerHeight: number;
 	const getNewQuote = () => {
 		let newIndex;
 		do newIndex = random.int(quotes.length);
 		while (newIndex === quoteIndex);
 		quoteIndex = newIndex;
 	};
-	$: scrolled = scrollY >= innerHeight * 0.6;
+	$: scrolled = +(scrollY >= innerHeight * 0.6);
 </script>
 
 <svelte:window bind:scrollY bind:innerHeight />
@@ -62,12 +64,12 @@
 		<h3>I can make any design come true</h3>
 
 		{#each [quotes[quoteIndex]] as { author, quote, from }}
-			<Quote {author} on:click={getNewQuote}>
+			<Excerpt {author} on:click={getNewQuote}>
 				<p>{quote}</p>
 				{#if from}
 					<p class="from">{from}</p>
 				{/if}
-			</Quote>
+			</Excerpt>
 		{/each}
 	</header>
 

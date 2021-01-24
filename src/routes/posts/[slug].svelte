@@ -1,5 +1,7 @@
 <script context="module">
-	export async function preload({ params }) {
+	import type { Preload } from '@sapper/common';
+	import type { Post } from '$utils/types';
+	export const preload: Preload = async function (this, { params }) {
 		const list = this.fetch('posts.json').then((r) => r.json());
 		const res = await this.fetch(`posts/${params.slug}.json`);
 		if (res.status !== 200) return this.error(404, 'Post not found');
@@ -10,11 +12,11 @@
 			post.siblings = review.siblings;
 			return { post };
 		}
-	}
+	};
 </script>
 
 <script>
-	export let post;
+	export let post: Post;
 	import { Link } from 'svelement';
 	import MetaHead from '$pages/MetaHead.svelte';
 	import Article from '$pages/Article.svelte';
@@ -26,7 +28,6 @@
 <Article
 	{post}
 	header
-	counter
 	path="content/posts/{post.date.published}.{post.slug}.md"
 	siblings={post.siblings}>
 	<small slot="header">

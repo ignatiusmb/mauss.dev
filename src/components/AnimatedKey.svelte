@@ -1,5 +1,5 @@
 <script>
-	export let items, component;
+	export let items: any[], component: any;
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
 	const duration = 100;

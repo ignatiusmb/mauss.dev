@@ -1,5 +1,5 @@
 <script>
-	export let verdict;
+	export let verdict: number;
 </script>
 
 <div

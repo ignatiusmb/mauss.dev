@@ -10,7 +10,7 @@ export async function get(req: Request, res: Response): Promise<void> {
 	const filepath = `content/reviews/${category}/${slug}.md`;
 
 	const file = parseFile<Review>(filepath, ({ frontMatter, content }) => {
-		const review = { slug: `${category}/${slug}`, category, ...frontMatter };
+		const review = { slug: `${category}/${slug}`, ...frontMatter, category };
 
 		const dStart = +new Date(frontMatter.date.updated || frontMatter.date.published);
 		review.composed = (dStart - +new Date(frontMatter.last_seen)) / 24 / 60 / 60 / 1000;

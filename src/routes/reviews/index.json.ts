@@ -14,8 +14,8 @@ export async function get(_: Request, res: Response): Promise<void> {
 		(folder) => <(false | Review)[]>(!/draft/.test(folder) &&
 				parseDir<Review>(`${DIR}/${folder}`, ({ frontMatter, filename }) => ({
 					slug: `${folder}/${filename.split('.')[0]}`,
-					category: folder,
 					...frontMatter,
+					category: folder,
 					rating: countAverageRating(frontMatter.rating),
 					verdict: checkNum(frontMatter.verdict || -2),
 				})))

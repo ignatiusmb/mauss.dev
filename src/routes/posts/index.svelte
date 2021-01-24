@@ -1,15 +1,17 @@
 <script context="module">
-	export async function preload() {
-		const data = await this.fetch('posts.json').then((r) => r.json());
+	import type { Preload } from '@sapper/common';
+	import type { Post } from '$utils/types';
+	export const preload: Preload = async function (this) {
+		const data: Post[] = await this.fetch('posts.json').then((r) => r.json());
 		const tags = [...new Set(data.flatMap((p) => p.tags))].sort();
 		const categories = [...new Set(data.map((p) => p.tags[0]))].sort();
 		const sort_by = { updated: 'Last Updated', published: 'Last Published' };
 		return { data, unique: { categories, tags, sort_by } };
-	}
+	};
 </script>
 
 <script>
-	export let data, unique;
+	export let data: Post[], unique: Record<string, any>;
 
 	import { SearchBar, Pagination } from 'svelement';
 	import MetaHead from '$pages/MetaHead.svelte';
@@ -20,7 +22,7 @@
 	import { sift, sieve } from '$utils/search';
 	import { pSlice as store } from '$utils/stores';
 	let filters = { categories: [], tags: [], sort_by: 'updated' },
-		query;
+		query: string;
 
 	$: filtered = sieve(filters, data);
 	$: items = query ? sift(query, filtered) : filtered;

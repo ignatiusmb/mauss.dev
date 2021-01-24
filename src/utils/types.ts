@@ -1,4 +1,4 @@
-interface I18nData {
+export interface I18nData {
 	short?: string;
 	en: string;
 	jp?: string;
@@ -42,11 +42,11 @@ export interface Post extends Child {
 		updated?: string | Date;
 	};
 	image?: { en: string };
-	toc?: string[];
+	toc: string[];
 }
 
 export interface Review extends Child {
-	category?: string;
+	category: string;
 	released: string;
 	title: I18nData;
 	genres: string[];

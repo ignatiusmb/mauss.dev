@@ -34,7 +34,10 @@ const sortBy: Record<string, (x: any, y: any) => number> = {
 export const sort = <T extends Record<string, any>>(type: string, data: T[]): T[] =>
 	type in sortBy ? data.sort(sortBy[type]) : data.sort(sortCompare);
 
-export function sieve<T extends Record<string, any>>(dict: T, data: T[]): T[] {
+export function sieve<T extends Record<string, any>>(
+	dict: Record<string, string | string[]>,
+	data: T[]
+): T[] {
 	const identical = ['tags', 'genres'];
 	const intersect = ['categories', 'verdict'];
 
