@@ -64,7 +64,7 @@ export interface Review extends Child {
 	};
 	backdrop: string;
 
-	link?: {
+	link?: Record<string, string> & {
 		mal?: string;
 	};
 

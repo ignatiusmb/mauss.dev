@@ -1,24 +1,26 @@
 <script context="module">
-	export async function preload({ params }) {
+	import type { Preload } from '@sapper/common';
+	import type { Review } from '$utils/types';
+	export const preload: Preload = async function (this, { params }) {
 		const { category, slug } = params;
-		const list = this.fetch('reviews.json').then((r) => r.json());
-		const res = await this.fetch(`reviews/${category}/${slug}.json`);
+		const list: Promise<Review[]> = this.fetch('reviews.json').then((r) => r.json());
+		const res: Response = await this.fetch(`reviews/${category}/${slug}.json`);
 		if (res.status !== 200) return this.error(404, 'Review not found');
 
-		const post = await res.json();
+		const post: Review = await res.json();
 		for (const review of await list) {
 			if (review.slug !== post.slug) continue;
 			post.siblings = review.siblings;
 			return { post };
 		}
-	}
+	};
+	const linkMap: Record<string, string> & Review['link'] = {
+		mal: 'MyAnimeList',
+	};
 </script>
 
 <script>
-	export let post;
-	const linkMap = {
-		mal: 'MyAnimeList',
-	};
+	export let post: Review;
 
 	import { Link } from 'svelement';
 	import MetaHead from '$pages/MetaHead.svelte';
@@ -44,7 +46,10 @@
 				<span>[</span>
 				{#each Object.keys(post.link) as linkKey}
 					<span>
-						<Link href={post.link[linkKey]} newTab>{linkMap[linkKey]}</Link>
+						<!-- Temporary hack to fix 'Object possibly undefined' -->
+						{#if post.link}
+							<Link href={post.link[linkKey]} newTab>{linkMap[linkKey]}</Link>
+						{/if}
 					</span>
 				{/each}
 				<span>]</span>
