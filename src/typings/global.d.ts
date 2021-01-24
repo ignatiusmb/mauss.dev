@@ -3,3 +3,5 @@ declare namespace NodeJS {
 		dev: boolean;
 	}
 }
+
+declare module '@ignatiusmb/aqua/lib/aqua.cbs';
