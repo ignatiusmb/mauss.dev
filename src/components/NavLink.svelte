@@ -3,7 +3,7 @@
 	export let path = '';
 	export let hover = false;
 
-	$: isCurrent = (to) => (path === to ? 'page' : undefined);
+	$: isCurrent = (p: string) => (path === p ? 'page' : undefined);
 </script>
 
 <a rel="prefetch" aria-current={isCurrent(to)} href="/{to}" class:hover>

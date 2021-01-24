@@ -1,5 +1,9 @@
+<script context="module">
+	import type { Curated } from '$utils/types';
+</script>
+
 <script>
-	export let post;
+	export let post: Curated;
 	import { ButtonLink } from 'svelement';
 </script>
 
