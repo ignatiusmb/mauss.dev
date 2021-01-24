@@ -13,7 +13,7 @@
     "static:404:rm": "rmdir \"__sapper__/export/404\"",
     "lint": "run-p lint:**",
     "lint:script": "eslint src --ext js,ts",
-    "lint:svelte": "svelte-check src --output human",
+    "lint:svelte": "svelte-check src --output human --ignore src/node_modules",
     "lint:markdown": "markdownlint content/**/*.md",
     "check": "prettier -c src",
     "format": "prettier -w src"
