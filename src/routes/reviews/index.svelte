@@ -1,11 +1,14 @@
 <script context="module">
+	import type { Preload } from '@sapper/common';
+	import type { Review } from '$utils/types';
 	import { sift, sieve } from '$utils/search';
 	import { rSlice as store } from '$utils/stores';
-	export async function preload({ query }) {
-		const data = await this.fetch('reviews.json').then((r) => r.json());
+	export const preload: Preload = async function (this, { query }) {
+		const data: Review[] = await this.fetch('reviews.json').then((r) => r.json());
 		const categories = [...new Set(data.map((p) => p.category))];
 		const genres = [...new Set(data.flatMap((p) => p.genres))].sort();
-		store.set(query.q ? sift(query, data) : data);
+		const sifted = query.q && typeof query.q === 'string' && sift(query.q, data);
+		store.set(sifted || data);
 		return {
 			data,
 			search: query,
@@ -28,11 +31,12 @@
 				},
 			},
 		};
-	}
+	};
+	type Uniques = Record<string, Record<string, string>>;
 </script>
 
 <script>
-	export let data, search, unique;
+	export let data: Review[], search: Record<string, string>, unique: Uniques;
 	let { q: query } = search;
 	if (query) query = query.replace(/\+/g, ' ');
 

@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import type { I18nData } from '$utils/types';
 import { isExists } from 'mauss/guards';
 import { compareDate, sortCompare } from './helper';
 
@@ -12,8 +13,7 @@ const check = (source: string[] | string, queries: string[]): boolean =>
 	compare(source, queries) === queries.length;
 
 const cleanSplit = (data: string): string[] => data.split(' ').filter(isExists);
-type GenericData = { title: string | { en: string; [key: string]: string } };
-export const sift = <T extends GenericData>(query: string, data: T[]): T[] =>
+export const sift = <T extends { title: string | I18nData }>(query: string, data: T[]): T[] =>
 	data.filter(({ title }) =>
 		typeof title === 'string'
 			? check(title, cleanSplit(query))

@@ -12,7 +12,7 @@
 
 	import { Feather } from 'svelement/icons';
 	import { page } from '../utils/stores';
-	let localCounter, disabled;
+	let localCounter: number, disabled: boolean;
 
 	async function increment() {
 		if (disabled || localStorage[path] >= 10) return;
@@ -22,7 +22,7 @@
 		disabled = false;
 	}
 
-	$: if (process.browser) {
+	$: if (typeof window !== 'undefined') {
 		if (!localStorage[path]) localStorage[path] = 0;
 		localCounter = +localStorage[path];
 	}
