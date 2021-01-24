@@ -1,12 +1,16 @@
+<script context="module">
+	import type { ArticleDate, Child } from '$utils/types';
+</script>
+
 <script>
-	export let path = null;
-	export let post;
-	const size = 16;
+	export let path: string = '';
+	export let post: Child & { date?: ArticleDate };
 
 	import { Feather } from 'svelement/icons';
 	import { Link } from 'svelement';
 	import { createPrettyDate } from '$utils/helper';
 	import TextIcon from '$components/TextIcon.svelte';
+	const size = 16;
 
 	$: ({ author, published, updated } = post.date || {});
 	$: ({ name, img, link } = author || {});
@@ -32,7 +36,7 @@
 		<div class="details">
 			<span style="font-weight: bolder">{name || 'Ignatius Bagussuputra'}</span>
 
-			{#if published}
+			{#if pretty.published}
 				<div>
 					<TextIcon>
 						<Feather.Calendar {size} />
@@ -50,7 +54,7 @@
 				</div>
 			{/if}
 
-			{#if updated && updated !== published}
+			{#if pretty.updated && updated !== published}
 				<div>
 					{#if path}
 						<TextIcon href="https://github.com/ignatiusmb/mauss/commits/master/{path}">

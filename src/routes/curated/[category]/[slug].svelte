@@ -1,14 +1,16 @@
 <script context="module">
-	export async function preload({ params }) {
+	import type { Preload } from '@sapper/common';
+	import type { Curated } from '$utils/types';
+	export const preload: Preload = async function (this, { params }) {
 		const { category, slug } = params;
 		const res = await this.fetch(`curated/${category}/${slug}.json`);
 		if (res.status !== 200) return this.error(404, 'Curated post not found');
 		return { post: await res.json() };
-	}
+	};
 </script>
 
 <script>
-	export let post;
+	export let post: Curated;
 	import { Link } from 'svelement';
 	import MetaHead from '$pages/MetaHead.svelte';
 	import Article from '$pages/Article.svelte';

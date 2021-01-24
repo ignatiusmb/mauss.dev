@@ -1,9 +1,10 @@
 <script>
-	export let spoilers;
+	export let spoilers: string;
 	import { slide } from 'svelte/transition';
 	import { stores } from '@sapper/app';
 	const { preloading } = stores();
-	$: show = $preloading ? false : show;
+	let show = false;
+	$: if ($preloading) show = false;
 </script>
 
 <section class="info-box note">

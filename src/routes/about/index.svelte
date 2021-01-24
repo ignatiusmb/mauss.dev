@@ -1,15 +1,17 @@
 <script context="module">
-	export async function preload() {
+	import type { Preload } from '@sapper/common';
+	type AboutIndex = { title: string; date: { updated: string }; content: string };
+	export const preload: Preload = async function (this) {
 		const articles = await this.fetch('about.json').then((r) => r.json());
 		return {
 			post: articles['index'],
 			sections: Object.keys(articles).filter((e) => e !== 'index'),
 		};
-	}
+	};
 </script>
 
 <script>
-	export let post, sections;
+	export let post: AboutIndex, sections: string[];
 	import { Link, WeavedImage } from 'svelement';
 	import MetaHead from '$pages/MetaHead.svelte';
 	import Article from '$pages/Article.svelte';

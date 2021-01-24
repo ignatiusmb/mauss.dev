@@ -1,14 +1,16 @@
 <script context="module">
-	export async function preload({ params }) {
+	import type { Preload } from '@sapper/common';
+	import type { Post } from '$utils/types';
+	export const preload: Preload = async function (this, { params }) {
 		const { section } = params;
-		const articles = await this.fetch('about.json').then((r) => r.json());
-		if (!articles[section]) return this.error(404, 'Section not found');
-		return { section, post: articles[section] };
-	}
+		const articles: Post[] = await this.fetch('about.json').then((r) => r.json());
+		if (!articles[+section]) return this.error(404, 'Section not found');
+		return { section, post: articles[+section] };
+	};
 </script>
 
 <script>
-	export let section, post;
+	export let section: string, post: Post;
 	import { Link, WeavedImage } from 'svelement';
 	import MetaHead from '$pages/MetaHead.svelte';
 	import Article from '$pages/Article.svelte';

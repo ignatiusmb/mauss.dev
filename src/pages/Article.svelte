@@ -1,8 +1,12 @@
+<script context="module">
+	import type { Child } from '$utils/types';
+</script>
+
 <script>
 	export let header = false;
-	export let post = null;
-	export let path = null;
-	export let siblings = null;
+	export let post: any = null;
+	export let path: string = '';
+	export let siblings: null | Child['siblings'] = null;
 	import { onMount } from 'svelte';
 	import { Feather } from 'svelement/icons';
 	import { Link, ProgressBar } from 'svelement';
@@ -20,7 +24,10 @@
 	onMount(() => {
 		document.addEventListener('DOMContentLoaded', offsetDelay);
 		const anchors = document.querySelectorAll('a[href*="#"]');
-		for (const hash of anchors) hash.addEventListener('click', offsetDelay);
+		anchors.forEach((hash) => hash.addEventListener('click', offsetDelay));
+		return () => {
+			anchors.forEach((hash) => hash.removeEventListener('click', offsetDelay));
+		};
 	});
 </script>
 

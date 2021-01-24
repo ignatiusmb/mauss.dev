@@ -1,5 +1,9 @@
+<script context="module">
+	import type { Review } from '$utils/types';
+</script>
+
 <script>
-	export let post;
+	export let post: Review;
 	import { Image } from 'svelement';
 	import { createPrettyDate } from '$utils/helper';
 	$: ({ backdrop, title, rating, composed, last_seen } = post);

@@ -1,5 +1,5 @@
 <script>
-	export let tag;
+	export let tag: string;
 </script>
 
 <span class={tag}>#{tag}</span>

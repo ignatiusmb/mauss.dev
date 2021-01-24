@@ -4,6 +4,12 @@ interface I18nData {
 	jp?: string;
 }
 
+export interface ArticleDate {
+	author?: { name?: string; img?: string; link?: string };
+	published?: string;
+	updated?: string;
+}
+
 export interface Child {
 	slug?: string;
 	title: string | I18nData;
@@ -16,11 +22,13 @@ export interface Child {
 }
 
 export interface Curated extends Child {
+	title: string;
 	category: string;
 	date: {
 		updated: string;
 		published?: string;
 	};
+	toc: { id: string; cleaned: string }[];
 }
 
 export interface Post extends Child {
@@ -54,6 +62,7 @@ export interface Review extends Child {
 		en: string;
 		jp?: string;
 	};
+	backdrop: string;
 
 	link?: {
 		mal?: string;
