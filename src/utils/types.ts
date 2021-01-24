@@ -11,6 +11,7 @@ export interface Child {
 		prev?: { slug: string; title: string | I18nData };
 		next?: { slug: string; title: string | I18nData };
 	};
+	content?: string;
 	read_time: number;
 }
 
@@ -34,7 +35,6 @@ export interface Post extends Child {
 	};
 	image?: { en: string };
 	toc?: string[];
-	content?: string;
 }
 
 export interface Review extends Child {
@@ -62,5 +62,15 @@ export interface Review extends Child {
 	composed?: number;
 	spoilers?: string;
 	closing?: string;
-	content?: string;
+}
+
+export interface Uses extends Child {
+	title: string;
+	date: { updated: string };
+}
+
+export interface Quote {
+	author: string;
+	quote: string;
+	from: string;
 }

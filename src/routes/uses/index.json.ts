@@ -1,7 +1,6 @@
 import type { Request, Response } from 'express';
+import type { Uses } from '$utils/types';
 import { parseFile } from '$utils/parser';
-
-type Uses = { title: string; date: { updated: string } };
 
 export function get(_: Request, res: Response): void {
 	const article = parseFile<Uses>('content/uses.md', ({ frontMatter, content }) => ({

@@ -1,9 +1,9 @@
 import type { Request, Response } from 'express';
+import type { Quote } from '$utils/types';
 import { isExists } from 'mauss/guards';
 import { parseDir } from '$utils/parser';
 
 type Excerpt = { author: string; lines: string[] };
-type Quote = { author: string; quote: string; from: string };
 
 export function get(_: Request, res: Response): void {
 	const excerpts = parseDir<Excerpt>('content/quotes', ({ content, filename }) => ({

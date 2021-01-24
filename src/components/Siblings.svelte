@@ -1,6 +1,10 @@
+<script context="module">
+	import type { Child } from '$utils/types';
+</script>
+
 <script>
-	export let prev = null;
-	export let next = null;
+	export let prev: Child['siblings']['prev'] = undefined;
+	export let next: Child['siblings']['next'] = undefined;
 </script>
 
 {#if prev || next}

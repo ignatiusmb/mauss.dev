@@ -1,5 +1,5 @@
 <script>
-	export let status, error;
+	export let status: number, error: { message: string; stack?: string };
 </script>
 
 <svelte:head>

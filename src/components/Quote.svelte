@@ -1,5 +1,5 @@
 <script>
-	export let author;
+	export let author: string;
 	import { GradientBorder } from 'svelement';
 </script>
 

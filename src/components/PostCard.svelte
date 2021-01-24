@@ -1,6 +1,8 @@
-<script lang="ts">
+<script context="module">
 	import type { Post } from '$utils/types';
+</script>
 
+<script>
 	export let post: Post;
 	import { Image, ButtonLink } from 'svelement';
 	import { createPrettyDate } from '$utils/helper';

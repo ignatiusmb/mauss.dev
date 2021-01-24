@@ -1,6 +1,4 @@
 <script>
-	export let scrolled = false;
-
 	import { stores } from '@sapper/app';
 	const { preloading, page } = stores();
 	const sections = ['about', 'curated', 'posts', 'reviews', 'uses'];
@@ -11,6 +9,7 @@
 	import NavGrid from './NavGrid.svelte';
 
 	let opened = false;
+	let scrolled: number;
 	$: path = $page.path.split('/')[1];
 	$: opened = $preloading ? false : opened;
 </script>

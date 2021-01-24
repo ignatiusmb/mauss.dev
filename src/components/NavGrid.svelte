@@ -1,5 +1,5 @@
 <script>
-	export let opened;
+	export let opened: boolean;
 </script>
 
 <div class:opened>

@@ -1,5 +1,5 @@
 <script>
-	export let segment;
+	export let segment: string;
 
 	import { page } from '$utils/stores';
 	import { stores } from '@sapper/app';

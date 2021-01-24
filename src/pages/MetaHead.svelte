@@ -1,9 +1,15 @@
+<script context="module">
+	type MetaPost = { tags?: string[]; [key: string]: any };
+</script>
+
 <script>
-	export let title;
+	export let title: string;
 	export let canonical = '';
 	export let description = '';
-	export let post = null;
-	export let social = {};
+	export let post: MetaPost | undefined = undefined;
+	export let social = {
+		twitter: undefined,
+	};
 
 	const hostTitle = 'DevMauss';
 	const hostname = 'mauss.dev';
