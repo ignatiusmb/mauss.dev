@@ -29,6 +29,7 @@ export function convertCase(
 type PrettyDate = { weekday: string; day: number; month: string; year: number; complete: string };
 export function createPrettyDate(date: undefined): undefined;
 export function createPrettyDate(date: string | Date): PrettyDate;
+export function createPrettyDate(date: string | undefined): PrettyDate | undefined;
 export function createPrettyDate(date: string | Date | undefined): PrettyDate | undefined {
 	if (!date) return undefined;
 	const dateFormat = new Date(date);

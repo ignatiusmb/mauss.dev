@@ -1,7 +1,13 @@
-interface I18nData {
+export interface I18nData {
 	short?: string;
 	en: string;
 	jp?: string;
+}
+
+export interface ArticleDate {
+	author?: { name?: string; img?: string; link?: string };
+	published?: string;
+	updated?: string;
 }
 
 export interface Child {
@@ -11,15 +17,18 @@ export interface Child {
 		prev?: { slug: string; title: string | I18nData };
 		next?: { slug: string; title: string | I18nData };
 	};
+	content?: string;
 	read_time: number;
 }
 
 export interface Curated extends Child {
+	title: string;
 	category: string;
 	date: {
 		updated: string;
 		published?: string;
 	};
+	toc: { id: string; cleaned: string }[];
 }
 
 export interface Post extends Child {
@@ -34,7 +43,6 @@ export interface Post extends Child {
 	};
 	image?: { en: string };
 	toc?: string[];
-	content?: string;
 }
 
 export interface Review extends Child {
@@ -62,5 +70,12 @@ export interface Review extends Child {
 	composed?: number;
 	spoilers?: string;
 	closing?: string;
-	content?: string;
 }
+
+export type SieveDict = {
+	categories?: string[];
+	genres?: string[];
+	tags?: string[];
+	verdict?: string[];
+	sort_by: string;
+};
