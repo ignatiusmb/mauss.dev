@@ -34,14 +34,21 @@ const sortBy: Record<string, (x: any, y: any) => number> = {
 export const sort = <T extends Record<string, any>>(type: string, data: T[]): T[] =>
 	type in sortBy ? data.sort(sortBy[type]) : data.sort(sortCompare);
 
+type SieveDict = {
+	categories?: string[];
+	genres?: string[];
+	tags?: string[];
+	verdict?: string[];
+	sort_by: string;
+};
 export function sieve<T extends Record<string, any>>(
-	dict: Record<string, string | string[]>,
+	{ sort_by, ...dict }: SieveDict,
 	data: T[]
 ): T[] {
 	const identical = ['tags', 'genres'];
 	const intersect = ['categories', 'verdict'];
 
-	const entries = Object.entries(dict).filter(([k]) => k !== 'sort_by');
+	const entries = Object.entries(dict);
 	const cleaned = entries.filter(([k, v]) => !intersect.includes(k) && v.length);
 	const category = entries.find(([k, v]) => k === 'categories' && v.length) || [];
 	const verdict = entries.find(([k, v]) => k === 'verdict' && v.length) || [];
@@ -52,5 +59,5 @@ export function sieve<T extends Record<string, any>>(
 		(cleaned.length
 			? cleaned.some(([k, v]) => identical.includes(k) && compare(post[k], v))
 			: true);
-	return sort(dict['sort_by'] || 'updated', checked ? data.filter(dFilter) : data);
+	return sort(sort_by || 'updated', checked ? data.filter(dFilter) : data);
 }
