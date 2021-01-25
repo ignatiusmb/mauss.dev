@@ -4,4 +4,5 @@ declare namespace NodeJS {
 	}
 }
 
+declare module '@ignatiusmb/aqua';
 declare module '@ignatiusmb/aqua/lib/aqua.cbs';
