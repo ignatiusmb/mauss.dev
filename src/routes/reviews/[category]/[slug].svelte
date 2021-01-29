@@ -12,13 +12,13 @@
 			return { post };
 		}
 	}
+	const linkMap = {
+		mal: 'MyAnimeList',
+	};
 </script>
 
 <script>
 	export let post;
-	const linkMap = {
-		mal: 'MyAnimeList',
-	};
 
 	import { Link } from 'svelement';
 	import MetaHead from '$pages/MetaHead.svelte';

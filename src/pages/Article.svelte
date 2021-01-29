@@ -20,7 +20,10 @@
 	onMount(() => {
 		document.addEventListener('DOMContentLoaded', offsetDelay);
 		const anchors = document.querySelectorAll('a[href*="#"]');
-		for (const hash of anchors) hash.addEventListener('click', offsetDelay);
+		anchors.forEach((hash) => hash.addEventListener('click', offsetDelay));
+		return () => {
+			anchors.forEach((hash) => hash.removeEventListener('click', offsetDelay));
+		};
 	});
 </script>
 

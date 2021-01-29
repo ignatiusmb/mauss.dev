@@ -2,7 +2,7 @@
 	export let title;
 	export let canonical = '';
 	export let description = '';
-	export let post = null;
+	export let post = undefined;
 	export let social = {};
 
 	const hostTitle = 'DevMauss';

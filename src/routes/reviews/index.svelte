@@ -5,7 +5,7 @@
 		const data = await this.fetch('reviews.json').then((r) => r.json());
 		const categories = [...new Set(data.map((p) => p.category))];
 		const genres = [...new Set(data.flatMap((p) => p.genres))].sort();
-		store.set(query.q ? sift(query, data) : data);
+		store.set(query.q ? sift(query.q, data) : data);
 		return {
 			data,
 			search: query,
