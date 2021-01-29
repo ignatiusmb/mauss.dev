@@ -2,9 +2,8 @@
 	import { compareDate } from '$utils/helper';
 	export async function preload() {
 		const quotes = this.fetch('quotes.json').then((r) => r.json());
-
-		const data = { posts: '', reviews: '', curated: '' };
-		for (const seg in data) {
+		const data = {};
+		for (const seg of ['posts', 'reviews', 'curated']) {
 			data[seg] = await this.fetch(`${seg}.json`).then((r) => r.json());
 			if (seg === 'curated') data[seg].sort((x, y) => compareDate(x.date.updated, y.date.updated));
 			if (seg === 'reviews') data[seg].filter(({ rating, verdict }) => rating && verdict);
@@ -38,7 +37,7 @@
 		while (newIndex === quoteIndex);
 		quoteIndex = newIndex;
 	};
-	$: scrolled = scrollY >= innerHeight * 0.6;
+	$: scrolled = +(scrollY >= innerHeight * 0.6);
 </script>
 
 <svelte:window bind:scrollY bind:innerHeight />

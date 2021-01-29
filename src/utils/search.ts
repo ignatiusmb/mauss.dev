@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import type { I18nData, SieveDict } from './types';
 import { isExists } from 'mauss/guards';
 import { compareDate, sortCompare } from './helper';
 
@@ -12,8 +13,7 @@ const check = (source: string[] | string, queries: string[]): boolean =>
 	compare(source, queries) === queries.length;
 
 const cleanSplit = (data: string): string[] => data.split(' ').filter(isExists);
-type GenericData = { title: string | { en: string; [key: string]: string } };
-export const sift = <T extends GenericData>(query: string, data: T[]): T[] =>
+export const sift = <T extends { title: string | I18nData }>(query: string, data: T[]): T[] =>
 	data.filter(({ title }) =>
 		typeof title === 'string'
 			? check(title, cleanSplit(query))
@@ -31,23 +31,22 @@ const sortBy: Record<string, (x: any, y: any) => number> = {
 	published: (x, y) => compareDate(x.date.published, y.date.published) || sortCompare(x, y),
 };
 
-export const sort = <T extends Record<string, any>>(type: string, data: T[]): T[] =>
+type RSA = Record<string, any>;
+export const sort = <T extends RSA>(type: string, data: T[]): T[] =>
 	type in sortBy ? data.sort(sortBy[type]) : data.sort(sortCompare);
 
-export function sieve<T extends Record<string, any>>(dict: T, data: T[]): T[] {
+export function sieve<T extends RSA>({ sort_by = 'updated', ...dict }: SieveDict, data: T[]): T[] {
 	const identical = ['tags', 'genres'];
 	const intersect = ['categories', 'verdict'];
 
-	const entries = Object.entries(dict).filter(([k]) => k !== 'sort_by');
+	const entries = Object.entries(dict);
 	const cleaned = entries.filter(([k, v]) => !intersect.includes(k) && v.length);
 	const category = entries.find(([k, v]) => k === 'categories' && v.length) || [];
 	const verdict = entries.find(([k, v]) => k === 'verdict' && v.length) || [];
 	const checked = entries.filter(([, v]) => v.length).length;
 	const dFilter = (post: T) =>
-		(verdict.length ? compare(post.verdict, verdict[1]) : true) &&
-		(category.length ? compare(post.category, category[1]) : true) &&
-		(cleaned.length
-			? cleaned.some(([k, v]) => identical.includes(k) && compare(post[k], v))
-			: true);
-	return sort(dict['sort_by'] || 'updated', checked ? data.filter(dFilter) : data);
+		(verdict.length && !!post.verdict ? compare(post.verdict, verdict[1]) : 1) &&
+		(category.length && !!post.category ? compare(post.category, category[1]) : 1) &&
+		(cleaned.length ? cleaned.some(([k, v]) => identical.includes(k) && compare(post[k], v)) : 1);
+	return sort(sort_by, checked ? data.filter(dFilter) : data);
 }

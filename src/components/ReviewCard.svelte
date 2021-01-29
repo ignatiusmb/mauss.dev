@@ -4,8 +4,8 @@
 	import Verdict from './Verdict.svelte';
 
 	import { capitalize } from 'mauss/utils';
-	const verdict = parseInt(post.verdict);
-	const disabled = !post.rating || post.verdict === -2;
+	const verdict = +post.verdict;
+	const disabled = !post.rating || verdict === -2;
 </script>
 
 <section>
