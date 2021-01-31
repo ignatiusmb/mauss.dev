@@ -13,10 +13,13 @@
 		absolute
 		ratio={1 / 5} />
 
-	<span class="composed">Credibility: {composed} days since last seen on {day} {month} {year}</span>
+	<span class="composed">
+		Credibility: {composed} day{composed > 1 ? 's' : ''}
+		since last seen on {day}&nbsp;{month}&nbsp;{year}
+	</span>
 	<small>
 		<div class="stars">
-			{#each Array(10) as _, i}
+			{#each { length: 10 } as _, i}
 				<span class:active={rating >= i + 1}>⭐</span>
 			{/each}
 		</div>
