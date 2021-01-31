@@ -28,11 +28,13 @@
 	header
 	path="content/posts/{post.date.published}.{post.slug}.md"
 	siblings={post.siblings}>
-	<small slot="header">
-		{#each post.tags as tag}
-			<TagBadge {tag} />
-		{/each}
-	</small>
+	<slot slot="header">
+		<small class="tags">
+			{#each post.tags as tag}
+				<TagBadge {tag} />
+			{/each}
+		</small>
+	</slot>
 
 	{#if post.title.startsWith('Accessibility!')}
 		<blockquote>
@@ -77,16 +79,3 @@
 
 	{@html post.content}
 </Article>
-
-<style>
-	small {
-		display: flex;
-		flex-wrap: wrap;
-	}
-	small > :global(:not(:last-child)) {
-		margin-right: 0.5em;
-	}
-	small > :global(span) {
-		margin-top: 0.5em;
-	}
-</style>

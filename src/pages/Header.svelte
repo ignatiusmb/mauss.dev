@@ -137,8 +137,9 @@
 	}
 
 	.details > div > :global(:not(:first-child)::before),
-	header > :global(small:not(:first-of-type):not([slot]) > :not(:first-child)::before),
-	header > :global(div > small:not([slot]) > :not(:first-child)::before) {
+	header > :global(small:not(:first-of-type):not([class]) > :not(:first-child)::before),
+	header > :global(div > small:not([class]) > :not(:first-child)::before),
+	header > :global([slot] > small > :not(:first-child)::before) {
 		content: '~';
 		margin: 0 0.5em;
 		color: var(--theme-secondary);
@@ -150,5 +151,13 @@
 	}
 	small time + :global(.lmns-link) {
 		font: 90% var(--aqua-monospace);
+	}
+
+	header > :global(small.tags) {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	header > :global(small.tags:last-of-type :not(:last-child)) {
+		margin-right: 0.5em;
 	}
 </style>
