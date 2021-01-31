@@ -54,7 +54,11 @@
 				<div>
 					{#if path}
 						<TextIcon href="https://github.com/ignatiusmb/mauss/commits/master/{path}">
-							<Feather.GitCommit {size} />
+							{#if published}
+								<Feather.GitCommit {size} />
+							{:else}
+								<Feather.Calendar {size} />
+							{/if}
 							<time datetime={updated}>Updated {pretty.updated.complete}</time>
 						</TextIcon>
 					{:else}
