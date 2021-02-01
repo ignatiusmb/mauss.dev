@@ -8,6 +8,7 @@
 	span {
 		padding: 0.2em 0.4em;
 		border-radius: var(--b-radius);
+		margin-top: 0.5em;
 		font-size: 0.9rem;
 		background: #d6d9e0;
 		color: #606570;

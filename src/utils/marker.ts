@@ -41,14 +41,14 @@ marker.renderer.rules.image = (tokens: any, idx: number, options: Options, env: 
 	const caption: string = token.attrs.splice(titleIdx, 1)[0][1];
 	const alt: string = token.attrs[altIdx][1];
 
-	const media: { type: RegExpMatchArray | null; attrs: string[]; data?: string } = {
-		type: alt.match(/^!(\w+[-\w]+)($|#)/),
+	const media: { type: string; attrs: string[]; data?: string } = {
+		type: (alt.match(/^!(\w+[-\w]+)($|#)/) || ['', ''])[1],
 		attrs: (alt.match(/#(\w+)/g) || []).map((a) => a.slice(1)),
 	};
 
 	const link = token.attrs[token.attrIndex('src')][1];
 	if (media.type) {
-		const stripped = media.type[1].toLowerCase();
+		const stripped = media.type.toLowerCase();
 		const [type, ...args] = stripped.split('-');
 		if (['yt', 'youtube'].includes(type)) {
 			const prefix = args && args[0] === 's' ? 'videoseries?list=' : '';

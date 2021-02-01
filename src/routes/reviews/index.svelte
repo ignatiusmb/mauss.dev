@@ -1,5 +1,4 @@
 <script context="module">
-	import { sift, sieve } from '$utils/search';
 	import { rSlice as store } from '$utils/stores';
 	export async function preload({ query }) {
 		const data = await this.fetch('reviews.json').then((r) => r.json());
@@ -38,6 +37,7 @@
 
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
+	import { sift, sieve } from '$utils/search';
 	const duration = 100;
 
 	import { Feather } from 'svelement/icons';

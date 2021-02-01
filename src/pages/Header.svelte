@@ -54,7 +54,11 @@
 				<div>
 					{#if path}
 						<TextIcon href="https://github.com/ignatiusmb/mauss/commits/master/{path}">
-							<Feather.GitCommit {size} />
+							{#if published}
+								<Feather.GitCommit {size} />
+							{:else}
+								<Feather.Calendar {size} />
+							{/if}
 							<time datetime={updated}>Updated {pretty.updated.complete}</time>
 						</TextIcon>
 					{:else}
@@ -137,8 +141,9 @@
 	}
 
 	.details > div > :global(:not(:first-child)::before),
-	header > :global(small:not(:first-of-type):not([slot]) > :not(:first-child)::before),
-	header > :global(div > small:not([slot]) > :not(:first-child)::before) {
+	header > :global(small:not(:first-of-type):not([class]) > :not(:first-child)::before),
+	header > :global(div > small:not([class]) > :not(:first-child)::before),
+	header > :global([slot] > small > :not(:first-child)::before) {
 		content: '~';
 		margin: 0 0.5em;
 		color: var(--theme-secondary);
@@ -150,5 +155,13 @@
 	}
 	small time + :global(.lmns-link) {
 		font: 90% var(--aqua-monospace);
+	}
+
+	header > :global(small.tags) {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	header > :global(small.tags:last-of-type :not(:last-child)) {
+		margin-right: 0.5em;
 	}
 </style>

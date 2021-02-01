@@ -12,12 +12,23 @@
 	import { Link } from 'svelement';
 	import MetaHead from '$pages/MetaHead.svelte';
 	import Article from '$pages/Article.svelte';
+	import TagBadge from '$components/TagBadge.svelte';
 	$: ({ slug, title, content } = post);
 </script>
 
 <MetaHead {post} canonical="curated/{slug}" {title} />
 
 <Article {post} header path="content/curated/{slug}.md">
+	<slot slot="header">
+		{#if post.tags}
+			<small class="tags">
+				{#each post.tags as tag}
+					<TagBadge {tag} />
+				{/each}
+			</small>
+		{/if}
+	</slot>
+
 	{#if post.toc.length}
 		<section id="objective" class="info-box">
 			<h3>Quick Links</h3>

@@ -146,7 +146,7 @@
 	main :global(p code),
 	main :global(ol code),
 	main :global(ul code) {
-		font-size: clamp(0.8rem, 2vw, 1rem);
+		font-size: clamp(0.8em, 2vw, 1em);
 	}
 	main :global(img),
 	main :global(video) {
