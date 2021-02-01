@@ -42,7 +42,7 @@ marker.renderer.rules.image = (tokens: any, idx: number, options: Options, env: 
 	const alt: string = token.attrs[altIdx][1];
 
 	const media: { type: string; attrs: string[]; data?: string } = {
-		type: (alt.match(/^!(\w+[-\w]+)($|#)/) || [])[1] || '',
+		type: (alt.match(/^!(\w+[-\w]+)($|#)/) || ['', ''])[1],
 		attrs: (alt.match(/#(\w+)/g) || []).map((a) => a.slice(1)),
 	};
 
