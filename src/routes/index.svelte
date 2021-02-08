@@ -93,7 +93,7 @@
 				{#each data[seg] as { slug, title }}
 					<li>
 						<Link href="{seg}/{slug}">
-							{typeof title === 'string' ? title : title.short ? title.short : title.en}
+							{typeof title === 'string' ? title : title.short || title.en}
 						</Link>
 					</li>
 				{/each}
