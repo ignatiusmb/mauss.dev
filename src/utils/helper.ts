@@ -41,8 +41,7 @@ export function createPrettyDate(date: string | Date | undefined): PrettyDate | 
 }
 
 export function isAbbreviated(text: string): boolean {
-	if (text.length < 4) return true;
-	return isNaN(parseInt(text[3], 10)) ? false : true;
+	return text.length < 4 || !Number.isNaN(+text[3]);
 }
 
 export function lastWords(index: number, text: string): string {
