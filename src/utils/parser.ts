@@ -12,12 +12,10 @@ const countReadTime = (content: string) => {
 		return !!p && !/^[!*]/.test(p); // remove empty and not sentences
 	});
 	const words = paragraphs.reduce((acc, cur) => {
-		if (cur.trim().startsWith('<!--')) return acc;
-		if (cur.trim().match(/^\r?\n<\S+>/)) return acc;
-		const wordCount = clean(cur.split(' '));
-		return acc + wordCount.length;
+		if (/^[\t\s]*<.+>/.test(cur.trim())) return acc + 1;
+		return acc + clean(cur.trim().split(' ')).length;
 	}, 0);
-	const images = content.match(/(!\[.+\]\(.+\))/g);
+	const images = content.match(/!\[.+\]\(.+\)/g);
 	const total = words + (images || []).length * 12;
 	return Math.round(total / 240) || 1;
 };
