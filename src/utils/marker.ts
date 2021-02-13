@@ -46,13 +46,16 @@ marker.renderer.rules.image = (tokens: any, idx: number, options: Options, env: 
 		attrs: (alt.match(/#(\w+)/g) || []).map((a) => a.slice(1)),
 	};
 
-	const link = token.attrs[token.attrIndex('src')][1];
+	const link: string = token.attrs[token.attrIndex('src')][1];
 	if (media.type) {
 		const stripped = media.type.toLowerCase();
 		const [type, ...args] = stripped.split('-');
 		if (['yt', 'youtube'].includes(type)) {
-			const prefix = args && args[0] === 's' ? 'videoseries?list=' : '';
-			media.data = `<iframe src="https://www.youtube-nocookie.com/embed/${prefix}${link}" srcdoc="<style>*{padding:0;margin:0;overflow:hidden;transition:300ms}html,body{height:100%}a,span{display:flex;align-items:center;justify-content:center}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{width:1.8em;height:1.8em;font-size:3rem;color:white;text-shadow:0 0 0.5em black;background:rgba(0,0,0,0.8);border-radius:50%}a:hover span{background:rgb(255,0,0)}</style><a href=https://www.youtube-nocookie.com/embed/${prefix}${link}?autoplay=1><img src=https://img.youtube.com/vi/${link}/hqdefault.jpg alt='${caption}'><span>&#x25BA;</span></a>" frameborder="0" allowfullscreen title="${caption}"></iframe>`;
+			const [, yid, params = ''] = link.match(/([-\w]+)\??(.+)?$/) || [];
+			const prefix = args.length && args.includes('s') ? 'videoseries?list=' : '';
+			media.data = prefix
+				? `<iframe src="https://www.youtube-nocookie.com/embed/${prefix}${link}" frameborder="0" allowfullscreen title="${caption}"></iframe>`
+				: `<iframe src="https://www.youtube-nocookie.com/embed/${yid}" srcdoc="<style>*{padding:0;margin:0;overflow:hidden;transition:300ms}html,body{height:100%}a,span{display:flex;align-items:center;justify-content:center}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{width:1.8em;height:1.8em;font-size:3rem;color:white;text-shadow:0 0 0.5em black;background:rgba(0,0,0,0.8);border-radius:50%}a:hover span{background:rgb(255,0,0)}</style><a href=https://www.youtube-nocookie.com/embed/${yid}?autoplay=1&${params}><img src=https://img.youtube.com/vi/${yid}/hqdefault.jpg alt='${caption}'><span>&#x25BA;</span></a>" frameborder="0" allowfullscreen title="${caption}"></iframe>`;
 		} else if (['video'].includes(type)) {
 			media.data = `<video controls><source src="${link}" type="video/mp4"></video>`;
 		}
