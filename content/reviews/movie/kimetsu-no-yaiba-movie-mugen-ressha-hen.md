@@ -6,7 +6,7 @@ genres: animation, action, demons, supernatural, shounen
 rating: 9,10,10,10
 verdict:
 
-last_seen: 2020-01-15
+last_seen: 2021-01-15
 date:published: 2020
 date:updated: 2020
 image:en: https://www.themoviedb.org/t/p/original/h8Rb9gBr48ODIwYUttZNYeMWeUU.jpg
