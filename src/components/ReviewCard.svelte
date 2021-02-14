@@ -23,7 +23,7 @@
 	<aside>
 		<small>
 			<span>{capitalize(post.category)}</span>
-			<span>⭐ {post.rating ? post.rating : '~'}</span>
+			<span>⭐ {post.rating || '~'}</span>
 		</small>
 		<Verdict {verdict} />
 		<ButtonLink href="reviews/{post.slug}" {disabled}>
@@ -55,3 +55,5 @@
 		grid-template-columns: 1fr 1fr;
 	}
 </style>
+
+<svelte:options immutable />

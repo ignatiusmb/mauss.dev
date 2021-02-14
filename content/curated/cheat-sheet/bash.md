@@ -1,6 +1,6 @@
 ---
 title: Complete Bash Utility Cheat Sheet
-date:updated: 2020-09-17
+date:updated: 2021-02-07
 ---
 
 These are my goto scripts to manage my home media server. I'll be compiling all that I remember here so I won't forget it and could quickly search for a reference in the future. I hope most of it would be beneficial to you too.
@@ -50,28 +50,33 @@ cp -al /path/to/source /path/to/destination
 
 ```bash
 ~Find Method
+# (find .) <- dot meaning relative from current path
+
 # Find all empty files and directories
-find /path/to/start/dir -empty
+find . -empty
 
 # Find all files in directory that has no other hard links
-find /path/to/start/dir -links 1
+find . -links 1
 
 # Find all directories with specific group
-find /path/to/start/dir -type d -group root
+find . -type d -group root
+
+# Find and rename certain directories
+find . -depth -type d -name 'dirname' -execdir mv {} 'new-dirname' \;
 
 # Recursively change owner of a directory or file
-find /path/to/start/dir -type d -exec chown user:group {} \;    # for directories
-find /path/to/start/dir -type f -exec chown user:group {} \;    # for files
+find . -type d -exec chown user:group {} \;    # for directories
+find . -type f -exec chown user:group {} \;    # for files
 
 # Recursively delete all files with specific name
-find /path/to/start/dir -type f -name *.nfo -delete             # wildcard scan
-find /path/to/start/dir -iname JaVaScRiPt                       # case insensitive
+find . -type f -name *.nfo -delete             # wildcard scan
+find . -iname JaVaScRiPt                       # case insensitive
 
 # Recursively force delete directories that are not empty
-find /path/to/start/dir -name .unwanted -exec rm -rf {} \;
+find . -name .unwanted -exec rm -rf {} \;
 
 # Recursively remove executable permission from file with all permission
-find /path/to/start/dir -type f -perm 777 -exec chmod -x {} \;
+find . -type f -perm 777 -exec chmod -x {} \;
 ```
 
 `Rename method`, it renames multiple files or folders with a specific regex pattern. One of the most useful scripts to have for media management.
@@ -89,4 +94,6 @@ rename 's/\[.*\]/\[replacement\]/' **/*     # execute rename
 # This recursively find and rename all folders from the start directory
 rename 's/unwantedName/changedName/' path/to/start/**/* -n  # preview changes
 rename 's/unwantedName/changedName/' path/to/start/**/*     # execute rename
+
+# ('s/{}/{}/') is just regex so it's limited to just your knowledge
 ```

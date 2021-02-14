@@ -1,3 +1,5 @@
+Confidence isn't "I believe I won't fail", but rather "Even if I do fail, I will be fine"
+
 Most perfectionist are procrastinators because anxiety makes it difficult to start a project unless you're sure you can do it perfectly.
 
 You miss 100% of the shots you don't take.

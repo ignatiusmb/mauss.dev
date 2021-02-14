@@ -23,7 +23,7 @@ function flatScan<T extends Curated | Review>(path: string): RSSItem[] {
 				slug: `${path}/${folder}/${filename.split('.')[0]}`,
 				description: `
 					${typeof title === 'string' ? title : title.en}
-					${path !== 'curated' ? 'curated' : 'reviewed'} by DevMauss
+					${path === 'curated' ? 'curated' : 'reviewed'} by DevMauss
 				`,
 				date: (date.updated || date.published) as string,
 			})

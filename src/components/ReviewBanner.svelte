@@ -7,11 +7,7 @@
 </script>
 
 <div class="banner">
-	<Image
-		src={backdrop}
-		alt="{title.short ? title.short : title.en} backdrop"
-		absolute
-		ratio={1 / 5} />
+	<Image src={backdrop} alt="{title.short || title.en} backdrop" absolute ratio={1 / 5} />
 
 	<span class="composed">
 		Credibility: {composed} day{composed > 1 ? 's' : ''}
