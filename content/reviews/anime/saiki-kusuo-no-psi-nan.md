@@ -2,11 +2,11 @@
 released: 2016-07-04
 title:en: The Disastrous Life of Saiki K.
 title:jp: Saiki Kusuo no Ψ-nan
-genres: comedy, school, supernatural, slice of life, shounen
+genres: comedy, slice of life, supernatural, school, shounen
 rating: story,artwork,sound,characters
 verdict:
 
-last_seen: 2021-02-10
+last_seen: 2021-02-18
 date:published: 2020
 date:updated: 2020
 image:en: https://www.themoviedb.org/t/p/original/ais8cfoSbS3URahXLP6LwlwIZ6e.jpg
