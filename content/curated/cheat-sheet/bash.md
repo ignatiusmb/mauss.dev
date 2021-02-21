@@ -1,9 +1,26 @@
 ---
 title: Complete Bash Utility Cheat Sheet
-date:updated: 2021-02-07
+date:updated: 2021-02-21
 ---
 
 These are my goto scripts to manage my home media server. I'll be compiling all that I remember here so I won't forget it and could quickly search for a reference in the future. I hope most of it would be beneficial to you too.
+
+## Using Nano Editor
+
+Nano is a lightweight text editor that is present in virtually any OS out there, other alternatives are Vim and Emacs. There's no point in debating which are the best editor, Nano works well for my use case as far as I'm concerned, so here's some tips to make your CLI editing better.
+
+```bash
+# Default arguments for most use cases
+sudo nano -lit filename
+# l - Enables line numbers in front of text
+# i - Automatically indent new lines
+# t - Save on exit by default without prompt
+
+# Use -ET 4 when working with Python files
+sudo nano -litET 4 main.py
+# E - Convert typed tabs to spaces
+# T 4 - Set tab size to 4 instead of 8
+```
 
 ## Resource management
 
