@@ -54,7 +54,7 @@
 	<header slot="header">
 		<Link href="about">
 			<div class="dashed-border" />
-			<Image src="profile/mauss.jpeg" alt="DevMauss Profile" ratio={1} />
+			<Image src="assets/profile/mauss.jpeg" alt="DevMauss Profile" ratio={1} />
 		</Link>
 		<h2>Ignatius Bagussuputra</h2>
 		<span>Developer on Weekdays, Avid Writer on Weekends</span>
