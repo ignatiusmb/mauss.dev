@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-var-requires */
 import type { Options } from 'markdown-it';
-import { isExists } from 'mauss/guards';
 import Aqua from '@ignatiusmb/aqua';
 
 function highlight(str: string, language: string): string {
@@ -25,9 +24,8 @@ marker.use(require('markdown-it-mark'));
 marker.renderer.rules.heading_open = (tokens: any, idx: number) => {
 	const [token, text] = [tokens[idx], tokens[idx + 1].content];
 	if (+token.tag.slice(-1) > 3) return `<${token.tag}>`;
-	let tagId = text.split(/ \| /)[0].toLowerCase(); // Take only part before vBar "|"
-	tagId = tagId.replace(separators, '-').split('-').filter(isExists).join('-');
-	return `<${token.tag} id="${tagId}">`;
+	const tagId: string = text.split(/ \| /)[0].toLowerCase(); // Take only part before vBar "|"
+	return `<${token.tag} id="${tagId.replace(separators, '-').replace(/(-)(?=-*\1)/g, '')}">`;
 };
 marker.renderer.rules.image = (tokens: any, idx: number, options: Options, env: any, slf: any) => {
 	tokens[idx].attrPush(['loading', 'lazy']); // add browser level lazy loading

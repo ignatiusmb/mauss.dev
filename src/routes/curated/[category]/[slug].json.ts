@@ -1,6 +1,5 @@
 import type { Request, Response } from 'express';
 import type { Curated } from '$utils/types';
-import { isExists } from 'mauss/guards';
 import { parseFile } from '$utils/parser';
 
 const separators = /[\s\][!"#$%&'()*+,./:;<=>?@\\^_{|}~-]/g;
@@ -14,7 +13,7 @@ export async function get(req: Request, res: Response): Promise<void> {
 		const toc = headings.map((raw) => {
 			const [cleaned] = raw.split(/ \| /);
 			const tag = cleaned.toLowerCase().replace(separators, '-');
-			return { id: tag.split('-').filter(isExists).join('-'), cleaned };
+			return { id: tag.replace(/(-)(?=-*\1)/g, ''), cleaned };
 		});
 		return { slug: `${category}/${slug}`, ...frontMatter, category, toc, content };
 	});
