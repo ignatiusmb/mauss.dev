@@ -13,6 +13,7 @@
 	import MetaHead from '$pages/MetaHead.svelte';
 	import Article from '$pages/Article.svelte';
 	import TagBadge from '$components/TagBadge.svelte';
+	import '$styles/katex.css';
 	$: ({ slug, title, content } = post);
 </script>
 
