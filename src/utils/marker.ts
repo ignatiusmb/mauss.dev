@@ -10,7 +10,7 @@ function highlight(str: string, language: string): string {
 	if (strList[0][0] === '~') {
 		const [title, lineNumber] = strList[0].split('#');
 		dataset['title'] = title.slice(1);
-		if (lineNumber) dataset['lineStart'] = parseInt(lineNumber);
+		if (lineNumber) dataset['lineStart'] = +lineNumber;
 	}
 	const content = strList.slice(dataset['title'] ? 1 : 0).join('\n');
 	return Aqua.code.highlight(content, dataset);
@@ -24,7 +24,7 @@ marker.use(require('markdown-it-mark'));
 /** Renderer Override Rules */
 marker.renderer.rules.heading_open = (tokens: any, idx: number) => {
 	const [token, text] = [tokens[idx], tokens[idx + 1].content];
-	if (parseInt(token.tag.slice(-1)) > 3) return `<${token.tag}>`;
+	if (+token.tag.slice(-1) > 3) return `<${token.tag}>`;
 	let tagId = text.split(/ \| /)[0].toLowerCase(); // Take only part before vBar "|"
 	tagId = tagId.replace(separators, '-').split('-').filter(isExists).join('-');
 	return `<${token.tag} id="${tagId}">`;
