@@ -19,6 +19,11 @@ const separators = /[\s\][!"#$%&'()*+,./:;<=>?@\\^_{|}~-]/g;
 
 /** Markdown-it Plugins */
 marker.use(require('markdown-it-mark'));
+marker.use(require('markdown-it-texmath'), {
+	engine: require('katex'),
+	delimiters: 'dollars',
+	katexOptions: { macros: { '\\RR': '\\mathbb{R}' } },
+});
 
 /** Renderer Override Rules */
 marker.renderer.rules.heading_open = (tokens: any, idx: number) => {
