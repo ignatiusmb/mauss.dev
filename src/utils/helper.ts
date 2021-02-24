@@ -8,18 +8,18 @@ export function convertCase(
 	style: 'camel' | 'pascal' | 'snake' | 'kebab',
 	text: string,
 	sep = ' '
-): string | undefined {
+): string {
 	const exp = /[ |-|.|_]/g;
 	switch (style) {
 		case 'camel':
-			break;
+			return text;
 		case 'pascal':
 			text = text.replace(/\w+/g, capitalize);
 			return text.replace(exp, sep);
 		case 'snake':
-			break;
+			return text;
 		case 'kebab':
-			break;
+			return text;
 
 		default:
 			return text;

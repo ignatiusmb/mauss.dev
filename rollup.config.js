@@ -49,6 +49,7 @@ export default {
 		onwarn,
 		plugins: [
 			replace({
+				preventAssignment: true,
 				'process.browser': true,
 				'process.dev': dev,
 			}),
@@ -96,6 +97,7 @@ export default {
 		onwarn,
 		plugins: [
 			replace({
+				preventAssignment: true,
 				'process.browser': false,
 				'process.dev': dev,
 			}),
