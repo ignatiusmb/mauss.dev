@@ -63,7 +63,7 @@ marker.renderer.rules.image = (tokens: any, idx: number, options: Options, env: 
 			media.data = `<video controls><source src="${link}" type="video/mp4"></video>`;
 		}
 	} else {
-		tokens[idx].attrs[altIdx][1] = alt.replace(/#(\w+)/g, '');
+		tokens[idx].attrs[altIdx][1] = alt.replace(/#\w+/g, '');
 		media.data = slf.renderToken(tokens, idx, options);
 	}
 
