@@ -1,19 +1,10 @@
 {
-	"extends": "@tsconfig/svelte/tsconfig.json",
+	"extends": "mauss/tsconfig.json",
 	"compilerOptions": {
-		"target": "ES2020",
 		"lib": ["DOM", "ES2020", "WebWorker"],
-		"allowSyntheticDefaultImports": true,
-		"emitDecoratorMetadata": true,
-		"experimentalDecorators": true,
-		"importsNotUsedAsValues": "error",
-		"isolatedModules": true,
-		"moduleResolution": "Node",
-		"skipLibCheck": true,
-		"sourceMap": true,
-		"strict": true,
-		"types": ["svelte"],
 		"typeRoots": ["src/typings"],
+		"types": ["svelte"],
+		"sourceMap": true,
 		"baseUrl": "src",
 		"paths": {
 			"$components/*": ["components/*"],
