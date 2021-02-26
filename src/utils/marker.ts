@@ -22,7 +22,10 @@ marker.use(require('markdown-it-mark'));
 marker.use(require('markdown-it-texmath'), {
 	engine: require('katex'),
 	delimiters: 'dollars',
-	katexOptions: { macros: { '\\RR': '\\mathbb{R}' } },
+	katexOptions: {
+		throwOnError: true,
+		macros: { '\\RR': '\\mathbb{R}' },
+	},
 });
 
 /** Renderer Override Rules */
