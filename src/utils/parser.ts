@@ -2,42 +2,42 @@ import { join } from 'path';
 import { readdirSync, readFileSync } from 'fs';
 import { isExists } from 'mauss/guards';
 import { contentParser } from './article';
-import { sortCompare, splitAt } from './helper';
+import { sortCompare } from './helper';
 import marker from './marker';
+
+const clean = (arr: string[]) => arr.filter(isExists);
 
 const countReadTime = (content: string) => {
 	const paragraphs = content.split('\n').filter((p) => {
 		return !!p && !/^[!*]/.test(p); // remove empty and not sentences
 	});
 	const words = paragraphs.reduce((acc, cur) => {
-		if (cur.trim().startsWith('<!--')) return acc;
-		if (cur.trim().match(/^\r?\n<\S+>/)) return acc;
-		const wordCount = cur.split(' ').filter(isExists);
-		return acc + wordCount.length;
+		if (/^[\t\s]*<.+>/.test(cur.trim())) return acc + 1;
+		return acc + clean(cur.trim().split(' ')).length;
 	}, 0);
-	const images = content.match(/(!\[.+\]\(.+\))/g);
+	const images = content.match(/!\[.+\]\(.+\)/g);
 	const total = words + (images || []).length * 12;
 	return Math.round(total / 240) || 1;
 };
 
-const extractMeta = (metadata: string) => {
-	if (!metadata) return {};
-	const lines = metadata.split(/\r?\n/).filter(isExists);
+const extractMeta = (metadata = '') => {
+	const lines = clean(metadata.split(/\r?\n/));
+	if (!lines.length) return {};
+	const ignored = ['description'];
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	const traverse = (curr: any, keys: string[], val: string | string[]): any => {
+		if (!keys.length) return val instanceof Array ? clean(val) : val;
+		return { ...curr, [keys[0]]: traverse(curr[keys[0]] || {}, keys.slice(1), val) };
+	};
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	return lines.reduce((acc: Record<string, any>, cur) => {
-		if (!/: /.test(cur.trim())) return acc;
-		const [key, val] = splitAt(cur.indexOf(': '), cur.trim());
-
-		const colon = key.indexOf(':');
-		if (colon !== -1) {
-			const [attr, category] = splitAt(colon, key);
-			if (!acc[attr]) acc[attr] = {};
-			acc[attr][category] = val.trim();
-		} else if (/,/.test(val) && key !== 'description') {
-			const items = val.split(',').map((v) => v.trim());
-			acc[key] = items.filter(isExists);
-		} else acc[key] = val.trim();
-
+		const [, key = '', data = ''] = cur.trim().match(/([:\w]+): (.+)/) || [];
+		if (ignored.includes(key)) return (acc[key] = data.trim()), acc;
+		const val = /,/.test(data) ? data.split(',').map((v) => v.trim()) : data.trim();
+		if (/:/.test(key)) {
+			const [attr, ...keys] = clean(key.split(':'));
+			acc[attr] = traverse(acc[attr] || {}, keys, val);
+		} else if (key && val) acc[key] = val instanceof Array ? clean(val) : val;
 		return acc;
 	}, {});
 };
