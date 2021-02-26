@@ -206,6 +206,10 @@
 	main :global(p + ol > li:only-child) {
 		margin-top: 1em;
 	}
+	main :global(p:last-of-type + ul > li:only-child) {
+		/* references list */
+		margin-top: 0;
+	}
 	main :global(blockquote) {
 		line-height: 1.5;
 		text-align: center;
