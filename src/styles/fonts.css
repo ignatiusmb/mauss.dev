@@ -4,42 +4,42 @@
 	font-style: normal;
 	font-weight: 300;
 	font-display: swap;
-	src: url('/fonts/Rubik-Light.ttf');
+	src: url('/assets/fonts/Rubik-Light.ttf');
 }
 @font-face {
 	font-family: 'Rubik';
 	font-style: italic;
 	font-weight: 300;
 	font-display: swap;
-	src: url('/fonts/Rubik-LightItalic.ttf');
+	src: url('/assets/fonts/Rubik-LightItalic.ttf');
 }
 @font-face {
 	font-family: 'Rubik';
 	font-style: normal;
 	font-weight: 400;
 	font-display: swap;
-	src: url('/fonts/Rubik-Regular.ttf');
+	src: url('/assets/fonts/Rubik-Regular.ttf');
 }
 @font-face {
 	font-family: 'Rubik';
 	font-style: italic;
 	font-weight: 400;
 	font-display: swap;
-	src: url('/fonts/Rubik-Italic.ttf');
+	src: url('/assets/fonts/Rubik-Italic.ttf');
 }
 @font-face {
 	font-family: 'Rubik';
 	font-style: normal;
 	font-weight: 500;
 	font-display: swap;
-	src: url('/fonts/Rubik-Medium.ttf');
+	src: url('/assets/fonts/Rubik-Medium.ttf');
 }
 @font-face {
 	font-family: 'Rubik';
 	font-style: italic;
 	font-weight: 500;
 	font-display: swap;
-	src: url('/fonts/Rubik-MediumItalic.ttf');
+	src: url('/assets/fonts/Rubik-MediumItalic.ttf');
 }
 
 /* Heading - Karla */
@@ -48,28 +48,28 @@
 	font-style: normal;
 	font-weight: 400;
 	font-display: swap;
-	src: url('/fonts/Karla-Regular.ttf');
+	src: url('/assets/fonts/Karla-Regular.ttf');
 }
 @font-face {
 	font-family: 'Karla';
 	font-style: italic;
 	font-weight: 400;
 	font-display: swap;
-	src: url('/fonts/Karla-Italic.ttf');
+	src: url('/assets/fonts/Karla-Italic.ttf');
 }
 @font-face {
 	font-family: 'Karla';
 	font-style: normal;
 	font-weight: 600;
 	font-display: swap;
-	src: url('/fonts/Karla-Bold.ttf');
+	src: url('/assets/fonts/Karla-Bold.ttf');
 }
 @font-face {
 	font-family: 'Karla';
 	font-style: italic;
 	font-weight: 600;
 	font-display: swap;
-	src: url('/fonts/Karla-BoldItalic.ttf');
+	src: url('/assets/fonts/Karla-BoldItalic.ttf');
 }
 
 /* Monospace - Fira Code */
@@ -78,26 +78,26 @@
 	font-style: normal;
 	font-weight: 300;
 	font-display: swap;
-	src: url('/fonts/FiraCode-Light.ttf');
+	src: url('/assets/fonts/FiraCode-Light.ttf');
 }
 @font-face {
 	font-family: 'Fira Code';
 	font-style: normal;
 	font-weight: 400;
 	font-display: swap;
-	src: url('/fonts/FiraCode-Regular.ttf');
+	src: url('/assets/fonts/FiraCode-Regular.ttf');
 }
 @font-face {
 	font-family: 'Fira Code';
 	font-style: normal;
 	font-weight: 500;
 	font-display: swap;
-	src: url('/fonts/FiraCode-Medium.ttf');
+	src: url('/assets/fonts/FiraCode-Medium.ttf');
 }
 @font-face {
 	font-family: 'Fira Code';
 	font-style: normal;
 	font-weight: 600;
 	font-display: swap;
-	src: url('/fonts/FiraCode-SemiBold.ttf');
+	src: url('/assets/fonts/FiraCode-SemiBold.ttf');
 }

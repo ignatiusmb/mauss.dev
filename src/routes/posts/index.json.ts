@@ -11,7 +11,7 @@ export async function get(_: Request, res: Response): Promise<void> {
 		const [category] = frontMatter.tags;
 
 		if (!frontMatter.image) {
-			const imagePath = `uploads/${category.toLowerCase()}/thumbnail/${slug}`;
+			const imagePath = `assets/uploads/${category.toLowerCase()}/thumbnail/${slug}`;
 			const rootFolder = `${process.cwd()}/static`;
 			for (const ext of ['png', 'jpg']) {
 				const image = join(rootFolder, `${imagePath}.${ext}`);

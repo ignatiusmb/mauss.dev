@@ -5,6 +5,7 @@ import json from '@rollup/plugin-json';
 import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 import typescript from '@rollup/plugin-typescript';
+import url from '@rollup/plugin-url';
 
 import svelte from 'rollup-plugin-svelte';
 import autoPreprocess from 'svelte-preprocess';
@@ -12,6 +13,7 @@ import { terser } from 'rollup-plugin-terser';
 
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
+import path from 'path';
 import 'dotenv/config';
 
 const mode = process.env.NODE_ENV;
@@ -24,7 +26,7 @@ const onwarn = (warning, onwarn) =>
 	(warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message)) ||
 	onwarn(warning);
 
-const rootPath = require('path').resolve(__dirname, 'src');
+const rootPath = path.resolve(__dirname, 'src');
 const alias = aliasFactory({
 	entries: [
 		{ find: '$components', replacement: `${rootPath}/components` },
@@ -60,6 +62,10 @@ export default {
 					dev,
 					hydratable: true,
 				},
+			}),
+			url({
+				sourceDir: path.resolve(__dirname, 'src/node_modules/images'),
+				publicPath: '/client/',
 			}),
 			resolve({
 				browser: true,
@@ -108,6 +114,11 @@ export default {
 					hydratable: true,
 					generate: 'ssr',
 				},
+			}),
+			url({
+				sourceDir: path.resolve(__dirname, 'src/node_modules/images'),
+				publicPath: '/client/',
+				emitFiles: false, // already emitted by client build
 			}),
 			resolve({ dedupe: ['svelte'] }),
 			commonjs({ sourceMap: !!sourcemap }),

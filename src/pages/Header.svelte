@@ -27,7 +27,7 @@
 
 	<small>
 		<Link href={link || 'about'}>
-			<img src={img || 'profile/mauss.jpeg'} alt="author profile" />
+			<img src={img || 'assets/profile/mauss.jpeg'} alt="author profile" />
 		</Link>
 		<div class="details">
 			<span style="font-weight: bolder">{name || 'Ignatius Bagussuputra'}</span>

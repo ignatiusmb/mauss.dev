@@ -27,7 +27,7 @@
 	</span>
 
 	<NavLink>
-		<img src="favicon.ico" alt="DevMauss" width="24" height="24" />
+		<img src="assets/favicon.ico" alt="DevMauss" width="24" height="24" />
 	</NavLink>
 
 	<NavGrid {opened}>

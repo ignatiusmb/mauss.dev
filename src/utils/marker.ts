@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-var-requires */
 import type { Options } from 'markdown-it';
-import { isExists } from 'mauss/guards';
 import Aqua from '@ignatiusmb/aqua';
 
 function highlight(str: string, language: string): string {
@@ -10,7 +9,7 @@ function highlight(str: string, language: string): string {
 	if (strList[0][0] === '~') {
 		const [title, lineNumber] = strList[0].split('#');
 		dataset['title'] = title.slice(1);
-		if (lineNumber) dataset['lineStart'] = parseInt(lineNumber);
+		if (lineNumber) dataset['lineStart'] = +lineNumber;
 	}
 	const content = strList.slice(dataset['title'] ? 1 : 0).join('\n');
 	return Aqua.code.highlight(content, dataset);
@@ -20,14 +19,21 @@ const separators = /[\s\][!"#$%&'()*+,./:;<=>?@\\^_{|}~-]/g;
 
 /** Markdown-it Plugins */
 marker.use(require('markdown-it-mark'));
+marker.use(require('markdown-it-texmath'), {
+	engine: require('katex'),
+	delimiters: 'dollars',
+	katexOptions: {
+		throwOnError: true,
+		macros: { '\\RR': '\\mathbb{R}' },
+	},
+});
 
 /** Renderer Override Rules */
 marker.renderer.rules.heading_open = (tokens: any, idx: number) => {
 	const [token, text] = [tokens[idx], tokens[idx + 1].content];
-	if (parseInt(token.tag.slice(-1)) > 3) return `<${token.tag}>`;
-	let tagId = text.split(/ \| /)[0].toLowerCase(); // Take only part before vBar "|"
-	tagId = tagId.replace(separators, '-').split('-').filter(isExists).join('-');
-	return `<${token.tag} id="${tagId}">`;
+	if (+token.tag.slice(-1) > 3) return `<${token.tag}>`;
+	const tagId: string = text.split(/ \| /)[0].toLowerCase(); // Take only part before vBar "|"
+	return `<${token.tag} id="${tagId.replace(separators, '-').replace(/(-)(?=-*\1)/g, '')}">`;
 };
 marker.renderer.rules.image = (tokens: any, idx: number, options: Options, env: any, slf: any) => {
 	tokens[idx].attrPush(['loading', 'lazy']); // add browser level lazy loading
@@ -60,7 +66,7 @@ marker.renderer.rules.image = (tokens: any, idx: number, options: Options, env: 
 			media.data = `<video controls><source src="${link}" type="video/mp4"></video>`;
 		}
 	} else {
-		tokens[idx].attrs[altIdx][1] = alt.replace(/#(\w+)/g, '');
+		tokens[idx].attrs[altIdx][1] = alt.replace(/#\w+/g, '');
 		media.data = slf.renderToken(tokens, idx, options);
 	}
 

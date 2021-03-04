@@ -21,7 +21,7 @@ export default function RSS(channel: RSSChannel, items: RSSItem[]): string {
 		<lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
 		<language>${channel.language || 'en'}</language>
 		<image>
-			<url>https://${channel.domain}/${channel.image || 'favicon.ico'}</url>
+			<url>https://${channel.domain}/${channel.image || 'assets/favicon.ico'}</url>
 			<title>${channel.title}</title>
 			<link>https://${channel.domain}/${clean(channel.slug)}</link>
 		</image>
