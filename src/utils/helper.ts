@@ -44,7 +44,7 @@ export function createPrettyDate(date: string | Date | undefined): PrettyDate | 
 export function generateId(title: string): string {
 	const trimmed = title.split(/ \| /)[0].toLowerCase(); // Take only part before vBar "|"
 	const tagId = trimmed.replace(separators, '-').replace(/(-)(?=-*\1)/g, '');
-	return tagId.slice(0, tagId.length - (tagId[tagId.length - 1] === '-' ? 1 : 0));
+	return tagId.slice(0, tagId.length - (tagId.slice(-1) === '-' ? 1 : 0));
 }
 
 export function isAbbreviated(text: string): boolean {
