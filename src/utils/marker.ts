@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-var-requires */
 import type { Options } from 'markdown-it';
+import { generateId } from './helper';
 import Aqua from '@ignatiusmb/aqua';
 
 function highlight(str: string, language: string): string {
@@ -15,7 +16,6 @@ function highlight(str: string, language: string): string {
 	return Aqua.code.highlight(content, dataset);
 }
 const marker = require('markdown-it')({ html: true, typographer: true, highlight });
-const separators = /[\s\][!"#$%&'()*+,./:;<=>?@\\^_{|}~-]/g;
 
 /** Markdown-it Plugins */
 marker.use(require('markdown-it-mark'));
@@ -32,8 +32,7 @@ marker.use(require('markdown-it-texmath'), {
 marker.renderer.rules.heading_open = (tokens: any, idx: number) => {
 	const [token, text] = [tokens[idx], tokens[idx + 1].content];
 	if (+token.tag.slice(-1) > 3) return `<${token.tag}>`;
-	const tagId: string = text.split(/ \| /)[0].toLowerCase(); // Take only part before vBar "|"
-	return `<${token.tag} id="${tagId.replace(separators, '-').replace(/(-)(?=-*\1)/g, '')}">`;
+	return `<${token.tag} id="${generateId(text)}">`;
 };
 marker.renderer.rules.image = (tokens: any, idx: number, options: Options, env: any, slf: any) => {
 	tokens[idx].attrPush(['loading', 'lazy']); // add browser level lazy loading
