@@ -6,7 +6,7 @@ genres: comedy, drama, romance, school, slice of life, supernatural
 rating: story,artwork,sound,characters
 verdict:
 
-last_seen: 2020
+last_seen: 2021-02-12
 date:published: 2020
 date:updated: 2020
 image:en: https://image.tmdb.org/t/p/original/j8RZC51i5aH3UektH0ViKES2Ux3.jpg
