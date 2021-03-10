@@ -1,6 +1,11 @@
 # MD013/line-length
 MD013: false
 
+# MD026/no-trailing-punctuation
+no-trailing-punctuation:
+  # Allowed: !
+  punctuation: .,;:。，；：！
+
 # MD033/no-inline-html
 MD033: false
 
