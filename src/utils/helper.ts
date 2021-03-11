@@ -41,6 +41,11 @@ export function createPrettyDate(date: string | Date | undefined): PrettyDate | 
 	return { weekday, day, month, year, complete: `${day} ${month} ${year}` };
 }
 
+export function cssVars(props: Record<string, string>): string {
+	const vars = Object.entries(props).filter(([key]) => /^--/.test(key));
+	return vars.reduce((css, [key, val]) => `${css}${key}:${val};`, '');
+}
+
 export function generateId(title: string): string {
 	const trimmed = title.split(/ \| /)[0].toLowerCase(); // Take only part before vBar "|"
 	const tagId = trimmed.replace(separators, '-').replace(/(-)(?=-*\1)/g, '');
