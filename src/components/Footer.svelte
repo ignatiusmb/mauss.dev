@@ -13,34 +13,31 @@
 	</section>
 
 	<section class="social-links">
-		<Link newTab href="https://www.facebook.com/ignatiusmb" label="facebook profile">
+		<Link href="https://www.facebook.com/ignatiusmb" label="facebook profile">
 			<Feather.Facebook />
 		</Link>
-		<Link newTab href="https://www.instagram.com/ignatiusmb" label="instagram profile">
+		<Link href="https://www.instagram.com/ignatiusmb" label="instagram profile">
 			<Feather.Instagram />
 		</Link>
-		<Link newTab href="https://www.linkedin.com/in/ignatiusmb" label="linkedin profile">
+		<Link href="https://www.linkedin.com/in/ignatiusmb" label="linkedin profile">
 			<Feather.Linkedin />
 		</Link>
-		<Link newTab href="https://twitter.com/devmauss" label="twitter profile">
+		<Link href="https://twitter.com/devmauss" label="twitter profile">
 			<Feather.Twitter />
 		</Link>
-		<Link newTab href="https://keybase.io/mauss" label="keybase profile">
+		<Link href="https://keybase.io/mauss" label="keybase profile">
 			<Feather.Key />
 		</Link>
-		<Link newTab href="https://github.com/ignatiusmb" label="github profile">
+		<Link href="https://github.com/ignatiusmb" label="github profile">
 			<Feather.Github />
 		</Link>
-		<Link newTab href="https://gitlab.com/ignatiusmb" label="gitlab profile">
+		<Link href="https://gitlab.com/ignatiusmb" label="gitlab profile">
 			<Feather.Gitlab />
 		</Link>
-		<Link newTab href="https://twitch.tv/devmauss" label="twitch profile">
+		<Link href="https://twitch.tv/devmauss" label="twitch profile">
 			<Feather.Twitch />
 		</Link>
-		<Link
-			newTab
-			href="https://www.youtube.com/user/Ignapure/playlists"
-			label="youtube playlist profile">
+		<Link href="https://www.youtube.com/user/Ignapure/playlists" label="youtube playlist profile">
 			<Feather.Youtube />
 		</Link>
 	</section>
@@ -49,11 +46,11 @@
 		<p>Copyright &copy; 2017 &ndash; {new Date().getFullYear()} Ignatius Bagussuputra</p>
 		<p>
 			Handcrafted with ❤️ using
-			<Link newTab href="https://svelte.dev/">Svelte</Link>
+			<Link href="https://svelte.dev/">Svelte</Link>
 			&plus;
-			<Link newTab href="https://sapper.svelte.dev/">Sapper</Link>
+			<Link href="https://sapper.svelte.dev/">Sapper</Link>
 			&plus;
-			<Link newTab href="https://aqua.mauss.dev/">Aqua</Link>
+			<Link href="https://aqua.mauss.dev/">Aqua</Link>
 		</p>
 	</section>
 </footer>
