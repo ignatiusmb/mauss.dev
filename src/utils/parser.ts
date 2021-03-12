@@ -23,7 +23,7 @@ const countReadTime = (content: string) => {
 const extractMeta = (metadata = '') => {
 	const lines = clean(metadata.split(/\r?\n/));
 	if (!lines.length) return {};
-	const ignored = ['description'];
+	const ignored = ['title', 'description'];
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const traverse = (curr: any, keys: string[], val: string | string[]): any => {
 		if (!keys.length) return val instanceof Array ? clean(val) : val;
@@ -31,13 +31,16 @@ const extractMeta = (metadata = '') => {
 	};
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	return lines.reduce((acc: Record<string, any>, cur) => {
-		const [, key = '', data = ''] = cur.trim().match(/([:\w]+): (.+)/) || [];
-		if (ignored.includes(key)) return (acc[key] = data.trim()), acc;
-		const val = /,/.test(data) ? data.split(',').map((v) => v.trim()) : data.trim();
+		const match = cur.trim().match(/([:\w]+): (.+)/);
+		if (!match || (match && !match[2].trim())) return acc;
+		const [key, data] = match.slice(1).map((g) => g.trim());
+		const val = /,/.test(data) ? data.split(',').map((v) => v.trim()) : data;
 		if (/:/.test(key)) {
 			const [attr, ...keys] = clean(key.split(':'));
-			acc[attr] = traverse(acc[attr] || {}, keys, val);
-		} else if (key && val) acc[key] = val instanceof Array ? clean(val) : val;
+			const initial = ignored.includes(attr) ? data : val;
+			acc[attr] = traverse(acc[attr] || {}, keys, initial);
+		} else if (ignored.includes(key)) acc[key] = data;
+		else acc[key] = val instanceof Array ? clean(val) : val;
 		return acc;
 	}, {});
 };
