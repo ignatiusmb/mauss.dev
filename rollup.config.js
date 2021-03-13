@@ -1,5 +1,4 @@
 import aliasFactory from '@rollup/plugin-alias';
-import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
 import resolve from '@rollup/plugin-node-resolve';
@@ -19,7 +18,6 @@ import 'dotenv/config';
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
 const sourcemap = dev ? 'inline' : false;
-const legacy = !!process.env.SAPPER_LEGACY_BUILD;
 
 const onwarn = (warning, onwarn) =>
 	(warning.code === 'MISSING_EXPORT' && /'preload'/.test(warning.message)) ||
@@ -78,18 +76,6 @@ export default {
 			}),
 			json(),
 			alias,
-
-			legacy &&
-				babel({
-					extensions: ['.js', '.mjs', '.html', '.svelte'],
-					babelHelpers: 'runtime',
-					exclude: ['node_modules/@babel/**'],
-					presets: [['@babel/preset-env', { targets: '> 0.25%, not dead' }]],
-					plugins: [
-						'@babel/plugin-syntax-dynamic-import',
-						['@babel/plugin-transform-runtime', { useESModules: true }],
-					],
-				}),
 
 			!dev && terser({ module: true }),
 		],
