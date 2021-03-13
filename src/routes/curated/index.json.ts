@@ -1,7 +1,7 @@
 import type { Request, Response } from 'express';
 import type { Curated } from '$utils/types';
 import { readdirSync } from 'fs';
-import { parseDir } from '$utils/parser';
+import { parseDir } from 'marqua';
 
 export async function get(_: Request, res: Response): Promise<void> {
 	const DIR = 'content/curated';

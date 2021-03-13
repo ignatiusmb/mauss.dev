@@ -1,6 +1,6 @@
 import type { Request, Response } from 'express';
 import type { Post } from '$utils/types';
-import { parseDir } from '$utils/parser';
+import { parseDir } from 'marqua';
 
 export async function get(req: Request, res: Response): Promise<void> {
 	const { slug } = req.params;
@@ -8,8 +8,7 @@ export async function get(req: Request, res: Response): Promise<void> {
 		const [published, filename_slug] = filename.split('.');
 		if (filename_slug !== slug) return undefined;
 		const date = { published, updated: frontMatter.date && frontMatter.date.updated };
-		const toc = Array.from(content.matchAll(/^## (.*)/gm), (v) => v[1]);
-		return { slug, ...frontMatter, category: frontMatter.tags[0], date, toc, content };
+		return { slug, ...frontMatter, category: frontMatter.tags[0], date, content };
 	})[0];
 
 	res.writeHead(200, { 'Content-Type': 'application/json' });

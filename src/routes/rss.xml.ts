@@ -2,7 +2,7 @@ import type { Response, Request } from 'express';
 import type { Curated, Post, Review } from '$utils/types';
 import type { RSSItem } from '$utils/rss';
 import { readdirSync } from 'fs';
-import { parseDir } from '$utils/parser';
+import { parseDir } from 'marqua';
 import { sortCompare } from '$utils/helper';
 import RSS from '$utils/rss';
 

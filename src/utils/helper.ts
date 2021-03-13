@@ -1,5 +1,4 @@
 import { capitalize } from 'mauss/utils';
-const separators = /[\s\][!"#$%&'()*+,./:;<=>?@\\^_{|}~-]/g;
 
 export function compareDate(x: string, y: string): number {
 	return new Date(y).getTime() - new Date(x).getTime();
@@ -44,20 +43,6 @@ export function createPrettyDate(date: string | Date | undefined): PrettyDate | 
 export function cssVars(props: Record<string, string>): string {
 	const vars = Object.entries(props).filter(([key]) => /^--/.test(key));
 	return vars.reduce((css, [key, val]) => `${css}${key}:${val};`, '');
-}
-
-export function generateId(title: string): string {
-	const trimmed = title.split(/ \| /)[0].toLowerCase(); // Take only part before vBar "|"
-	const tagId = trimmed.replace(separators, '-').replace(/(-)(?=-*\1)/g, '');
-	return tagId.slice(0, tagId.length - (tagId.slice(-1) === '-' ? 1 : 0));
-}
-
-export function isAbbreviated(text: string): boolean {
-	return text.length < 4 || !Number.isNaN(+text[3]);
-}
-
-export function lastWords(index: number, text: string): string {
-	return text.split(' ').slice(-index).join(' ');
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

@@ -2,7 +2,7 @@ import type { Request, Response } from 'express';
 import type { Post } from '$utils/types';
 import { existsSync } from 'fs';
 import { join } from 'path';
-import { parseDir } from '$utils/parser';
+import { parseDir } from 'marqua';
 import { fillSiblings } from '$utils/article';
 
 export async function get(_: Request, res: Response): Promise<void> {

@@ -4,5 +4,5 @@ declare namespace NodeJS {
 	}
 }
 
-declare module '@ignatiusmb/aqua';
 declare module '@ignatiusmb/aqua/lib/aqua.cbs';
+declare module 'markdown-it-texmath';

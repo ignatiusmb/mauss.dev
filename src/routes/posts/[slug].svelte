@@ -68,8 +68,8 @@
 		<section id="objective" class="info-box">
 			<h3>Outline & Focus</h3>
 			<ul>
-				{#each post.toc as heading}
-					<li>{heading}</li>
+				{#each post.toc as { id, cleaned }}
+					<li>{cleaned}</li>
 				{/each}
 			</ul>
 		</section>
