@@ -1,8 +1,7 @@
 <script>
 	export let scrolled = false;
 
-	import { stores } from '@sapper/app';
-	const { preloading, page } = stores();
+	import { navigating, page } from '$app/stores';
 	const sections = ['about', 'curated', 'posts', 'reviews', 'uses'];
 
 	import { Feather } from 'svelement/icons';
@@ -12,7 +11,7 @@
 
 	let opened = false;
 	$: path = $page.path.split('/')[1];
-	$: opened = $preloading ? false : opened;
+	$: opened = $navigating ? false : opened;
 </script>
 
 <svelte:window bind:scrollY={scrolled} />

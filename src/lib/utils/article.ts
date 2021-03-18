@@ -1,4 +1,4 @@
-import type { Child } from '$utils/types';
+import type { Child } from '$lib/utils/types';
 import { checkNum } from 'mauss/utils';
 
 export function countAverageRating(ratings: string[] | number): number {

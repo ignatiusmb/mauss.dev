@@ -5,8 +5,8 @@
 
 	import { Feather } from 'svelement/icons';
 	import { Link } from 'svelement';
-	import { createPrettyDate } from '$utils/helper';
-	import TextIcon from '$components/TextIcon.svelte';
+	import { createPrettyDate } from '$lib/utils/helper';
+	import TextIcon from '$lib/components/TextIcon.svelte';
 
 	$: ({ author, published, updated } = post.date || {});
 	$: ({ name, img, link } = author || {});
