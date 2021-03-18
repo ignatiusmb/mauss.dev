@@ -8,13 +8,6 @@ yarn-error.log
 /build
 /functions
 
-/src/node_modules/@sapper/
-/coverage/
-/cypress/screenshots/
-
-/__sapper__/
-functions/
-
 # Local static site config folder
 .netlify
 .vercel

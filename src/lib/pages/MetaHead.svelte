@@ -8,8 +8,8 @@
 	const hostTitle = 'DevMauss';
 	const hostname = 'mauss.dev';
 
+	import { page } from '$app/stores';
 	import { stores } from '@sapper/app';
-	const { page } = stores();
 	$: url = $page.host === hostname ? `https://${hostname}/${canonical}` : null;
 </script>
 
