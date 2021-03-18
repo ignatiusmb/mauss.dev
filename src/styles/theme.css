@@ -22,14 +22,15 @@ html.light {
 html.dark {
 	--bg-inverse: rgba(255, 255, 255, 0.8);
 
-	--bg-cover: rgba(56, 59, 64, 1);
-	--bg-overlay: rgba(45, 47, 52, 1);
-	--bg-surface: rgba(39, 41, 45, 1);
-	--bg-base: rgba(31, 32, 35, 1);
+	/* --bg-cover: rgba(56, 59, 64, 1); */
+	--bg-cover: rgba(45, 47, 52, 1);
+	--bg-overlay: rgba(39, 41, 45, 1);
+	--bg-surface: rgba(31, 32, 35, 1);
+	--bg-base: rgba(24, 24, 24, 1);
 	--bg-overflow: rgba(1, 1, 1, 1);
 
-	--fg-overlay: rgba(255, 255, 255, 0.65);
-	--fg-surface: rgba(255, 255, 255, 0.8);
+	--fg-overlay: rgba(255, 255, 255, 0.8);
+	--fg-surface: rgba(228, 230, 235, 1);
 }
 
 html body {
