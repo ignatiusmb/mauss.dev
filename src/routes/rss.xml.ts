@@ -1,10 +1,9 @@
-import type { Response, Request } from 'express';
-import type { Curated, Post, Review } from '$utils/types';
-import type { RSSItem } from '$utils/rss';
+import type { Curated, Post, Review } from '$lib/utils/types';
+import type { RSSItem } from '$lib/utils/rss';
 import { readdirSync } from 'fs';
-import { parseDir } from '$utils/parser';
-import { sortCompare } from '$utils/helper';
-import RSS from '$utils/rss';
+import { parseDir } from '$lib/utils/parser';
+import { sortCompare } from '$lib/utils/helper';
+import RSS from '$lib/utils/rss';
 
 const channel = {
 	domain: 'mauss.dev',
@@ -30,7 +29,7 @@ function flatScan<T extends Curated | Review>(path: string): RSSItem[] {
 	);
 }
 
-export async function get(_: Request, res: Response): Promise<void> {
+export async function get() {
 	const items = [
 		...flatScan<Curated>('curated'),
 		...flatScan<Review>('reviews'),
@@ -45,6 +44,9 @@ export async function get(_: Request, res: Response): Promise<void> {
 		),
 	];
 
-	res.writeHead(200, { 'Content-Type': 'application/xml' });
-	res.end(RSS(channel, items.sort(sortCompare)));
+	return {
+		status: 200,
+		headers: { 'Content-Type': 'application/json' },
+		body: RSS(channel, items.sort(sortCompare)),
+	};
 }

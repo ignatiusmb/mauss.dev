@@ -1,11 +1,10 @@
-import type { Request, Response } from 'express';
-import type { Post } from '$utils/types';
+import type { Post } from '$lib/utils/types';
 import { existsSync } from 'fs';
 import { join } from 'path';
-import { parseDir } from '$utils/parser';
-import { fillSiblings } from '$utils/article';
+import { parseDir } from '$lib/utils/parser';
+import { fillSiblings } from '$lib/utils/article';
 
-export async function get(_: Request, res: Response): Promise<void> {
+export async function get() {
 	const posts = parseDir<Post>('content/posts', ({ frontMatter, filename }) => {
 		const [published, slug] = filename.split('.');
 		const [category] = frontMatter.tags;
@@ -23,6 +22,9 @@ export async function get(_: Request, res: Response): Promise<void> {
 		return { slug, ...frontMatter, category, date: { published, updated } };
 	});
 
-	res.writeHead(200, { 'Content-Type': 'application/json' });
-	res.end(JSON.stringify(fillSiblings(posts, 'posts/')));
+	return {
+		status: 200,
+		headers: { 'Content-Type': 'application/json' },
+		body: fillSiblings(posts, 'posts/'),
+	};
 }

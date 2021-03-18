@@ -1,14 +1,16 @@
-import type { Request, Response } from 'express';
-import { parseFile } from '$utils/parser';
+import { parseFile } from '$lib/utils/parser';
 
 type Uses = { title: string; date: { updated: string } };
 
-export function get(_: Request, res: Response): void {
+export async function get() {
 	const article = parseFile<Uses>('content/uses.md', ({ frontMatter, content }) => ({
 		...frontMatter,
 		content,
 	}));
 
-	res.writeHead(200, { 'Content-Type': 'application/json' });
-	res.end(JSON.stringify(article));
+	return {
+		status: 200,
+		headers: { 'Content-Type': 'application/json' },
+		body: article,
+	};
 }

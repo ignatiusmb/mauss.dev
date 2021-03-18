@@ -1,9 +1,8 @@
-import type { Request, Response } from 'express';
-import type { Curated } from '$utils/types';
+import type { Curated } from '$lib/utils/types';
 import { readdirSync } from 'fs';
-import { parseDir } from '$utils/parser';
+import { parseDir } from '$lib/utils/parser';
 
-export async function get(_: Request, res: Response): Promise<void> {
+export async function get() {
 	const DIR = 'content/curated';
 	const categories = readdirSync(DIR).filter((folder) => folder !== 'draft');
 	const articles = categories.flatMap((folder) =>
@@ -14,6 +13,9 @@ export async function get(_: Request, res: Response): Promise<void> {
 		}))
 	);
 
-	res.writeHead(200, { 'Content-Type': 'application/json' });
-	res.end(JSON.stringify(articles));
+	return {
+		status: 200,
+		headers: { 'Content-Type': 'application/json' },
+		body: articles,
+	};
 }

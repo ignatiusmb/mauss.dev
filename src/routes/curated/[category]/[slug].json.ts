@@ -1,10 +1,9 @@
-import type { Request, Response } from 'express';
-import type { Curated } from '$utils/types';
-import { generateId } from '$utils/helper';
-import { parseFile } from '$utils/parser';
+import type { Curated } from '$lib/utils/types';
+import { generateId } from '$lib/utils/helper';
+import { parseFile } from '$lib/utils/parser';
 
-export async function get(req: Request, res: Response): Promise<void> {
-	const { category, slug } = req.params;
+export async function get({ params }) {
+	const { category, slug } = params;
 	const filepath = `content/curated/${category}/${slug}.md`;
 
 	const file = parseFile<Curated>(filepath, ({ frontMatter, content }) => {
@@ -13,6 +12,9 @@ export async function get(req: Request, res: Response): Promise<void> {
 		return { slug: `${category}/${slug}`, ...frontMatter, category, toc, content };
 	});
 
-	res.writeHead(200, { 'Content-Type': 'application/json' });
-	res.end(JSON.stringify(file));
+	return {
+		status: 200,
+		headers: { 'Content-Type': 'application/json' },
+		body: file,
+	};
 }

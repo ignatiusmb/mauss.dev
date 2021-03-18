@@ -1,12 +1,11 @@
-import type { Request, Response } from 'express';
-import type { Review } from '$utils/types';
+import type { Review } from '$lib/utils/types';
 import { checkNum } from 'mauss/utils';
-import { parseFile } from '$utils/parser';
-import { countAverageRating, contentParser } from '$utils/article';
-import marker from '$utils/marker';
+import { parseFile } from '$lib/utils/parser';
+import { countAverageRating, contentParser } from '$lib/utils/article';
+import marker from '$lib/utils/marker';
 
-export async function get(req: Request, res: Response): Promise<void> {
-	const { category, slug } = req.params;
+export async function get({ params }) {
+	const { category, slug } = params;
 	const filepath = `content/reviews/${category}/${slug}.md`;
 
 	const file = parseFile<Review>(filepath, ({ frontMatter, content }) => {
@@ -27,6 +26,9 @@ export async function get(req: Request, res: Response): Promise<void> {
 		return review;
 	});
 
-	res.writeHead(200, { 'Content-Type': 'application/json' });
-	res.end(JSON.stringify(file));
+	return {
+		status: 200,
+		headers: { 'Content-Type': 'application/json' },
+		body: file,
+	};
 }

@@ -1,14 +1,13 @@
-import type { Request, Response } from 'express';
-import type { Review } from '$utils/types';
+import type { Review } from '$lib/utils/types';
 import { readdirSync } from 'fs';
 import { isExists } from 'mauss/guards';
 import { checkNum } from 'mauss/utils';
-import { parseDir } from '$utils/parser';
-import { countAverageRating, fillSiblings } from '$utils/article';
+import { parseDir } from '$lib/utils/parser';
+import { countAverageRating, fillSiblings } from '$lib/utils/article';
 
 const check = ({ rating, verdict }: Review) => !rating || verdict < -1;
 
-export async function get(_: Request, res: Response): Promise<void> {
+export async function get() {
 	const DIR = 'content/reviews';
 	const reviews = readdirSync(DIR).flatMap(
 		(folder) => <(false | Review)[]>(!/draft/.test(folder) &&
@@ -21,6 +20,9 @@ export async function get(_: Request, res: Response): Promise<void> {
 				})))
 	);
 
-	res.writeHead(200, { 'Content-Type': 'application/json' });
-	res.end(JSON.stringify(fillSiblings(reviews.filter(isExists), 'reviews/', check)));
+	return {
+		status: 200,
+		headers: { 'Content-Type': 'application/json' },
+		body: fillSiblings(reviews.filter(isExists), 'reviews/', check),
+	};
 }

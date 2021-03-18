@@ -1,11 +1,10 @@
-import type { Request, Response } from 'express';
 import { isExists } from 'mauss/guards';
-import { parseDir } from '$utils/parser';
+import { parseDir } from '$lib/utils/parser';
 
 type Excerpt = { author: string; lines: string[] };
 type Quote = { author: string; quote: string; from: string };
 
-export function get(_: Request, res: Response): void {
+export async function get() {
 	const excerpts = parseDir<Excerpt>('content/quotes', ({ content, filename }) => ({
 		author: filename.split('.')[0].replace('-', ' '),
 		lines: content.split(/\r?\n/).filter(isExists),
@@ -19,6 +18,9 @@ export function get(_: Request, res: Response): void {
 		return acc;
 	}, []);
 
-	res.writeHead(200, { 'Content-Type': 'application/json' });
-	res.end(JSON.stringify(quotes));
+	return {
+		status: 200,
+		headers: { 'Content-Type': 'application/json' },
+		body: quotes,
+	};
 }
