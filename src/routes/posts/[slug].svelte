@@ -1,14 +1,14 @@
 <script context="module">
-	export async function preload({ params }) {
-		const list = this.fetch('posts.json').then((r) => r.json());
-		const res = await this.fetch(`posts/${params.slug}.json`);
-		if (res.status !== 200) return this.error(404, 'Post not found');
+	export async function load({ page, fetch }) {
+		const list = fetch('posts.json').then((r) => r.json());
+		const res = await fetch(`posts/${page.params.slug}.json`);
+		if (!res.ok) return { status: 404, error: 'Post not found' };
 
 		const post = await res.json();
 		for (const review of await list) {
 			if (review.slug !== post.slug) continue;
 			post.siblings = review.siblings;
-			return { post };
+			return { props: { post } };
 		}
 	}
 </script>

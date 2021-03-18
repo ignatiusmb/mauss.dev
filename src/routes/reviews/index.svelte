@@ -1,29 +1,31 @@
 <script context="module">
 	import { rSlice as store } from '$lib/utils/stores';
-	export async function preload({ query }) {
+	export async function load({ page: query, fetch }) {
 		const data = await this.fetch('reviews.json').then((r) => r.json());
 		const categories = [...new Set(data.map((p) => p.category))];
 		const genres = [...new Set(data.flatMap((p) => p.genres))].sort();
-		store.set(query.q ? sift(query.q, data) : data);
+		store.set(query.has('q') ? sift(query.get('q'), data) : data);
 		return {
-			data,
-			search: query,
-			unique: {
-				categories,
-				genres,
-				verdict: {
-					'2': 'Must-watch!',
-					'1': 'Recommended',
-					'0': 'Contextual',
-					'-1': 'Not recommended',
-					'-2': 'Pending',
-				},
-				sort_by: {
-					updated: 'Last updated',
-					published: 'Date published',
-					released: 'Year released',
-					seen: 'Last seen',
-					rating: 'Rating',
+			props: {
+				data,
+				search: query,
+				unique: {
+					categories,
+					genres,
+					verdict: {
+						'2': 'Must-watch!',
+						'1': 'Recommended',
+						'0': 'Contextual',
+						'-1': 'Not recommended',
+						'-2': 'Pending',
+					},
+					sort_by: {
+						updated: 'Last updated',
+						published: 'Date published',
+						released: 'Year released',
+						seen: 'Last seen',
+						rating: 'Rating',
+					},
 				},
 			},
 		};

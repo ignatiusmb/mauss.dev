@@ -1,9 +1,9 @@
 <script context="module">
-	export async function preload({ params }) {
-		const { category, slug } = params;
-		const res = await this.fetch(`curated/${category}/${slug}.json`);
-		if (res.status !== 200) return this.error(404, 'Curated post not found');
-		return { post: await res.json() };
+	export async function load({ page, fetch }) {
+		const { category, slug } = page.params;
+		const res = await fetch(`curated/${category}/${slug}.json`);
+		if (!res.ok) return { status: 404, error: 'Curated post not found' };
+		return { props: { post: await res.json() } };
 	}
 </script>
 

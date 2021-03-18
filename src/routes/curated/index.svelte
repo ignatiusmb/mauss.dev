@@ -1,7 +1,10 @@
 <script context="module">
-	export async function preload() {
-		const data = await this.fetch('curated.json').then((r) => r.json());
-		return { data };
+	export async function load({ fetch }) {
+		return {
+			props: {
+				data: await fetch('curated.json').then((r) => r.json()),
+			},
+		};
 	}
 </script>
 

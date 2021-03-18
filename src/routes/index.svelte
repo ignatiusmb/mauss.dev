@@ -1,16 +1,16 @@
 <script context="module">
 	import { compareDate } from '$lib/utils/helper';
-	export async function preload() {
-		const quotes = this.fetch('quotes.json').then((r) => r.json());
+	export async function load({ fetch }) {
+		const quotes = fetch('quotes.json').then((r) => r.json());
 		const data = {};
 		for (const seg of ['posts', 'reviews', 'curated']) {
-			data[seg] = await this.fetch(`${seg}.json`).then((r) => r.json());
+			data[seg] = await fetch(`${seg}.json`).then((r) => r.json());
 			if (seg === 'curated') data[seg].sort((x, y) => compareDate(x.date.updated, y.date.updated));
 			if (seg === 'reviews') data[seg].filter(({ rating, verdict }) => rating && verdict);
 			if (Array.isArray(data[seg])) data[seg] = data[seg].slice(0, 4);
 		}
 
-		return { data, quotes: await quotes };
+		return { props: { data, quotes: await quotes } };
 	}
 </script>
 

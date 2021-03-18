@@ -1,6 +1,6 @@
 <script context="module">
-	export async function preload() {
-		return { post: await this.fetch('uses.json').then((r) => r.json()) };
+	export async function load({ fetch }) {
+		return { post: await fetch('uses.json').then((r) => r.json()) };
 	}
 </script>
 

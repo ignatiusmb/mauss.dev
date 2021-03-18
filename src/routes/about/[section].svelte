@@ -1,9 +1,13 @@
 <script context="module">
-	export async function preload({ params }) {
-		const { section } = params;
-		const articles = await this.fetch('about.json').then((r) => r.json());
-		if (!articles[section]) return this.error(404, 'Section not found');
-		return { section, post: articles[section] };
+	export async function load({ page, fetch }) {
+		const { section } = page.params;
+		const articles = await fetch('about.json').then((r) => r.json());
+
+		if (!articles[section]) return { status: 404, error: 'Section not found' };
+
+		return {
+			props: { section, post: articles[section] },
+		};
 	}
 </script>
 

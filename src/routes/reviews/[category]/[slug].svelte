@@ -1,15 +1,15 @@
 <script context="module">
-	export async function preload({ params }) {
-		const { category, slug } = params;
-		const list = this.fetch('reviews.json').then((r) => r.json());
-		const res = await this.fetch(`reviews/${category}/${slug}.json`);
-		if (res.status !== 200) return this.error(404, 'Review not found');
+	export async function load({ page, fetch }) {
+		const { category, slug } = page.params;
+		const list = fetch('reviews.json').then((r) => r.json());
+		const res = await fetch(`reviews/${category}/${slug}.json`);
+		if (!res.ok) return { status: 404, error: 'Review not found' };
 
 		const post = await res.json();
 		for (const review of await list) {
 			if (review.slug !== post.slug) continue;
 			post.siblings = review.siblings;
-			return { post };
+			return { props: { post } };
 		}
 	}
 	const linkMap = {

@@ -1,8 +1,11 @@
 <script context="module">
-	export async function preload({ params }) {
-		const { category } = params;
-		const list = await this.fetch('curated.json').then((r) => r.json());
-		return { category, data: list.filter((p) => p.category === category) };
+	export async function load({ page, fetch }) {
+		const { category } = page.params;
+		const list = await fetch('curated.json').then((r) => r.json());
+		const data = list.filter((p) => p.category === category);
+		return {
+			props: { category, data },
+		};
 	}
 </script>
 
