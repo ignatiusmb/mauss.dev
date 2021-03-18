@@ -7,15 +7,14 @@
 
 <script>
 	export let data;
+	import { sift, sieve } from '$lib/utils/search';
+	import { cSlice as store } from '$lib/utils/stores';
 
 	import { SearchBar, Pagination } from 'svelement';
-	import MetaHead from '$pages/MetaHead.svelte';
-	import LayoutPicker from '$pages/LayoutPicker.svelte';
-
-	import { sift, sieve } from '$utils/search';
-	import { cSlice as store } from '$utils/stores';
-	import AnimatedKey from '$components/AnimatedKey.svelte';
-	import CuratedPost from '$components/CuratedPost.svelte';
+	import MetaHead from '$lib/pages/MetaHead.svelte';
+	import LayoutPicker from '$lib/pages/LayoutPicker.svelte';
+	import AnimatedKey from '$lib/components/AnimatedKey.svelte';
+	import CuratedPost from '$lib/components/CuratedPost.svelte';
 
 	let query;
 	let filters = { categories: [], tags: [], sort_by: 'updated' };

@@ -10,9 +10,9 @@
 <script>
 	export let post;
 	import { Link } from 'svelement';
-	import MetaHead from '$pages/MetaHead.svelte';
-	import Article from '$pages/Article.svelte';
-	import TagBadge from '$components/TagBadge.svelte';
+	import MetaHead from '$lib/pages/MetaHead.svelte';
+	import Article from '$lib/pages/Article.svelte';
+	import TagBadge from '$lib/components/TagBadge.svelte';
 	import '$styles/katex.css';
 	$: ({ slug, title, content } = post);
 </script>

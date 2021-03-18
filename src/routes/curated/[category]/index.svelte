@@ -9,7 +9,7 @@
 <script>
 	export let category, data;
 	import { ButtonLink } from 'svelement';
-	import MetaHead from '$pages/MetaHead.svelte';
+	import MetaHead from '$lib/pages/MetaHead.svelte';
 
 	import { scale } from 'svelte/transition';
 	import { flip } from 'svelte/animate';

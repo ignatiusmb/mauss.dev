@@ -6,9 +6,9 @@
 
 <script>
 	export let post;
-	import MetaHead from '$pages/MetaHead.svelte';
-	import Article from '$pages/Article.svelte';
-	import Disclaimer from '$components/Disclaimer.svelte';
+	import MetaHead from '$lib/pages/MetaHead.svelte';
+	import Article from '$lib/pages/Article.svelte';
+	import Disclaimer from '$lib/components/Disclaimer.svelte';
 </script>
 
 <MetaHead canonical="help" title="Help" description="DevMauss help page." />

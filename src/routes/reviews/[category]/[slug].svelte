@@ -21,12 +21,12 @@
 	export let post;
 
 	import { Link } from 'svelement';
-	import MetaHead from '$pages/MetaHead.svelte';
-	import Article from '$pages/Article.svelte';
+	import MetaHead from '$lib/pages/MetaHead.svelte';
+	import Article from '$lib/pages/Article.svelte';
 
-	import ReviewBanner from '$components/ReviewBanner.svelte';
-	import Disclaimer from '$components/Disclaimer.svelte';
-	import Spoilers from '$components/SpoilerSection.svelte';
+	import ReviewBanner from '$lib/components/ReviewBanner.svelte';
+	import Disclaimer from '$lib/components/Disclaimer.svelte';
+	import Spoilers from '$lib/components/SpoilerSection.svelte';
 	$: ({ title, spoilers, siblings } = post);
 </script>
 

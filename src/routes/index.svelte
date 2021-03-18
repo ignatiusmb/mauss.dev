@@ -1,5 +1,5 @@
 <script context="module">
-	import { compareDate } from '$utils/helper';
+	import { compareDate } from '$lib/utils/helper';
 	export async function preload() {
 		const quotes = this.fetch('quotes.json').then((r) => r.json());
 		const data = {};
@@ -24,10 +24,10 @@
 
 	import { Link, Image } from 'svelement';
 	import { random } from 'mauss/utils';
-	import MetaHead from '$pages/MetaHead.svelte';
-	import Article from '$pages/Article.svelte';
-	import Quote from '$components/Quote.svelte';
-	import Navigation from '$components/Navigation.svelte';
+	import MetaHead from '$lib/pages/MetaHead.svelte';
+	import Article from '$lib/pages/Article.svelte';
+	import Quote from '$lib/components/Quote.svelte';
+	import Navigation from '$lib/components/Navigation.svelte';
 
 	let quoteIndex = random.int(quotes.length);
 	let scrollY, innerHeight;

@@ -1,5 +1,5 @@
 <script context="module">
-	import { rSlice as store } from '$utils/stores';
+	import { rSlice as store } from '$lib/utils/stores';
 	export async function preload({ query }) {
 		const data = await this.fetch('reviews.json').then((r) => r.json());
 		const categories = [...new Set(data.map((p) => p.category))];
@@ -37,15 +37,15 @@
 
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
-	import { sift, sieve } from '$utils/search';
+	import { sift, sieve } from '$lib/utils/search';
 	const duration = 100;
 
 	import { Feather } from 'svelement/icons';
 	import { SearchBar, Pagination } from 'svelement';
-	import MetaHead from '$pages/MetaHead.svelte';
-	import LayoutPicker from '$pages/LayoutPicker.svelte';
-	import ReviewCard from '$components/ReviewCard.svelte';
-	import PerspectiveCarousel from '$components/PerspectiveCarousel.svelte';
+	import MetaHead from '$lib/pages/MetaHead.svelte';
+	import LayoutPicker from '$lib/pages/LayoutPicker.svelte';
+	import ReviewCard from '$lib/components/ReviewCard.svelte';
+	import PerspectiveCarousel from '$lib/components/PerspectiveCarousel.svelte';
 
 	let filters = { categories: [], genres: [], verdict: [], sort_by: 'updated' },
 		view = 'grid';
