@@ -2,7 +2,6 @@
 	"extends": "mauss/tsconfig.json",
 	"compilerOptions": {
 		"lib": ["DOM", "ES2020", "WebWorker"],
-		"typeRoots": ["src/typings"],
 		"types": ["svelte"],
 		"sourceMap": true,
 		"baseUrl": ".",
