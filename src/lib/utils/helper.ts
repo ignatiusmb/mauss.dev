@@ -1,30 +1,7 @@
-import { capitalize } from 'mauss/utils';
 const separators = /[\s\][!"#$%&'()*+,./:;<=>?@\\^_{|}~-]/g;
 
 export function compareDate(x: string, y: string): number {
 	return new Date(y).getTime() - new Date(x).getTime();
-}
-
-export function convertCase(
-	style: 'camel' | 'pascal' | 'snake' | 'kebab',
-	text: string,
-	sep = ' '
-): string {
-	const exp = /[ |-|.|_]/g;
-	switch (style) {
-		case 'camel':
-			return text;
-		case 'pascal':
-			text = text.replace(/\w+/g, capitalize);
-			return text.replace(exp, sep);
-		case 'snake':
-			return text;
-		case 'kebab':
-			return text;
-
-		default:
-			return text;
-	}
 }
 
 type PrettyDate = { weekday: string; day: number; month: string; year: number; complete: string };
