@@ -4,6 +4,10 @@ yarn-error.log
 *secret.*
 
 /node_modules/
+/.svelte
+/build
+/functions
+
 /src/node_modules/@sapper/
 /coverage/
 /cypress/screenshots/

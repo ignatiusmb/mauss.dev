@@ -5,14 +5,11 @@
 		"typeRoots": ["src/typings"],
 		"types": ["svelte"],
 		"sourceMap": true,
-		"baseUrl": "src",
+		"baseUrl": ".",
 		"paths": {
-			"$components/*": ["components/*"],
-			"$pages/*": ["pages/*"],
-			"$styles/*": ["styles/*"],
-			"$utils/*": ["utils/*"]
+			"$app/*": [".svelte/dev/runtime/app/*", ".svelte/build/runtime/app/*"],
+			"$lib/*": ["src/lib/*"]
 		}
 	},
-	"include": ["src/**/*", "src/node_modules/**/*"],
-	"exclude": ["node_modules/*", "__sapper__/*", "static/*"]
+	"include": ["src/**/*.js", "src/**/*.ts", "src/**/*.svelte"]
 }
