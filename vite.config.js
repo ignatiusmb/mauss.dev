@@ -7,7 +7,15 @@ const pkg = JSON.parse(readFileSync(join(cwd(), 'package.json')));
 
 /** @type {import('vite').UserConfig} */
 export default {
+	optimizeDeps: {
+		exclude: ['mauss', 'svelement', 'svelement/icons'],
+	},
 	ssr: {
-		noExternal: Object.keys(pkg.dependencies || {}),
+		noExternal: [
+			'@ignatiusmb/aqua',
+			'svelement',
+			'svelement/icons',
+			...Object.keys(pkg.dependencies || {}),
+		],
 	},
 };

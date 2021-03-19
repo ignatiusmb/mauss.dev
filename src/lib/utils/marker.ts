@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-var-requires */
-import type { Options } from 'markdown-it';
+import MarkIt, { Options } from 'markdown-it';
+// import TeXMath from 'markdown-it-texmath';
+// import KaTeX from 'katex';
 import { generateId } from './helper';
 import Aqua from '@ignatiusmb/aqua';
 
@@ -15,18 +17,17 @@ function highlight(str: string, language: string): string {
 	const content = strList.slice(dataset['title'] ? 1 : 0).join('\n');
 	return Aqua.code.highlight(content, dataset);
 }
-const marker = require('markdown-it')({ html: true, typographer: true, highlight });
+const marker = MarkIt({ html: true, typographer: true, highlight });
 
 /** Markdown-it Plugins */
-marker.use(require('markdown-it-mark'));
-marker.use(require('markdown-it-texmath'), {
-	engine: require('katex'),
-	delimiters: 'dollars',
-	katexOptions: {
-		throwOnError: true,
-		macros: { '\\RR': '\\mathbb{R}' },
-	},
-});
+// marker.use(TeXMath, {
+// 	engine: KaTeX,
+// 	delimiters: 'dollars',
+// 	katexOptions: {
+// 		throwOnError: true,
+// 		macros: { '\\RR': '\\mathbb{R}' },
+// 	},
+// });
 
 /** Renderer Override Rules */
 marker.renderer.rules.heading_open = (tokens: any, idx: number) => {

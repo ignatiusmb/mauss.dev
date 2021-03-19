@@ -3,7 +3,7 @@
 	export let post;
 	const size = 16;
 
-	import { Feather } from 'svelement/icons';
+	// import { Feather } from 'svelement/icons';
 	import { Link } from 'svelement';
 	import { createPrettyDate } from '$lib/utils/helper';
 	import TextIcon from '$lib/components/TextIcon.svelte';
@@ -35,7 +35,7 @@
 			{#if published}
 				<div>
 					<TextIcon>
-						<Feather.Calendar {size} />
+						<!-- <Feather.Calendar {size} /> -->
 						<time datetime={published}>
 							{#if updated && updated !== published}Published on{/if}
 							{pretty.published.weekday}, {pretty.published.complete}
@@ -44,7 +44,7 @@
 					{#if path && (!updated || (updated && updated === published))}
 						<TextIcon href="https://github.com/ignatiusmb/mauss/edit/master/{path}">
 							<span>Edit</span>
-							<Feather.Edit {size} />
+							<!-- <Feather.Edit {size} /> -->
 						</TextIcon>
 					{/if}
 				</div>
@@ -55,9 +55,9 @@
 					{#if path}
 						<TextIcon href="https://github.com/ignatiusmb/mauss/commits/master/{path}">
 							{#if published}
-								<Feather.GitCommit {size} />
+								<!-- <Feather.GitCommit {size} /> -->
 							{:else}
-								<Feather.Calendar {size} />
+								<!-- <Feather.Calendar {size} /> -->
 							{/if}
 							<time datetime={updated}>Updated {pretty.updated.complete}</time>
 						</TextIcon>
@@ -69,7 +69,7 @@
 					{#if path}
 						<TextIcon href="https://github.com/ignatiusmb/mauss/edit/master/{path}">
 							<span>Edit</span>
-							<Feather.Edit {size} />
+							<!-- <Feather.Edit {size} /> -->
 						</TextIcon>
 					{/if}
 				</div>
@@ -77,7 +77,7 @@
 
 			<div>
 				<TextIcon>
-					<Feather.Clock {size} />
+					<!-- <Feather.Clock {size} /> -->
 					<span>{post.read_time} min read</span>
 				</TextIcon>
 				<TextIcon
@@ -87,7 +87,7 @@
 						navigator.share({ title: document.title, url: location.href });
 					}}>
 					<span>Share</span>
-					<Feather.Share2 {size} />
+					<!-- <Feather.Share2 {size} /> -->
 				</TextIcon>
 			</div>
 		</div>

@@ -42,7 +42,7 @@
 	import { sift, sieve } from '$lib/utils/search';
 	const duration = 100;
 
-	import { Feather } from 'svelement/icons';
+	// import { Feather } from 'svelement/icons';
 	import { SearchBar, Pagination } from 'svelement';
 	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import LayoutPicker from '$lib/pages/LayoutPicker.svelte';
@@ -77,13 +77,13 @@
 
 	<aside slot="picker">
 		<button class:active={view === 'grid'} on:click={() => (view = 'grid')}>
-			<Feather.Grid />
+			<!-- <Feather.Grid /> -->
 		</button>
 		<button class:active={view === 'carousel'} on:click={() => (view = 'carousel')}>
-			<Feather.Layers />
+			<!-- <Feather.Layers /> -->
 		</button>
 		<button class:active={view === 'scrollsnap'} on:click={() => (view = 'scrollsnap')}>
-			<Feather.Columns />
+			<!-- <Feather.Columns /> -->
 		</button>
 	</aside>
 

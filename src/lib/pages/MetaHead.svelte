@@ -9,7 +9,6 @@
 	const hostname = 'mauss.dev';
 
 	import { page } from '$app/stores';
-	import { stores } from '@sapper/app';
 	$: url = $page.host === hostname ? `https://${hostname}/${canonical}` : null;
 </script>
 
