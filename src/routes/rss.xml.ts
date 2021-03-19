@@ -46,7 +46,7 @@ export async function get() {
 
 	return {
 		status: 200,
-		headers: { 'Content-Type': 'application/json' },
+		headers: { 'Content-Type': 'application/xml' },
 		body: RSS(channel, items.sort(sortCompare)),
 	};
 }
