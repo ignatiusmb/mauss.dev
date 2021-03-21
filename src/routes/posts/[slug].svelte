@@ -69,7 +69,9 @@
 			<h3>Outline & Focus</h3>
 			<ul>
 				{#each post.toc as { id, cleaned }}
-					<li>{cleaned}</li>
+					<li style="color: #f48fb1">
+						<Link href="posts/{post.slug}#{id}" inherit>{cleaned}</Link>
+					</li>
 				{/each}
 			</ul>
 		</section>
