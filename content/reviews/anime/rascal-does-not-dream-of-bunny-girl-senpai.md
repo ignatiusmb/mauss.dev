@@ -36,6 +36,10 @@ link:mal: https://myanimelist.net/anime/37450/Seishun_Buta_Yarou_wa_Bunny_Girl_S
 
 <!-- SPOILERS -->
 
+![sisters in anime vs real life#f](https://i.redd.it/426yvo4gn7g61.jpg "[[Reddit](https://www.reddit.com/r/Animemes/comments/lf74m7/its_a_terrible_day_for_rain/)] A terrible day for rain")
+
+![you said you could go to school tomorrow#f](https://i.redd.it/8p0kn0nofmg61.jpg "[[Reddit](https://www.reddit.com/r/Animemes/comments/lgqbpr/i_went_in_expecting_anime_tiddies_and_i_left_with/)] Went in expecting anime tiddies and left with crippling depression")
+
 <!-- CLOSING -->
 
 ---

@@ -10,12 +10,13 @@
 	import NavLink from './NavLink.svelte';
 	import NavGrid from './NavGrid.svelte';
 
+	let innerWidth;
 	let opened = false;
 	$: path = $page.path.split('/')[1];
 	$: opened = $preloading ? false : opened;
 </script>
 
-<svelte:window bind:scrollY={scrolled} />
+<svelte:window bind:innerWidth bind:scrollY={scrolled} />
 
 <nav class:scrolled>
 	<span on:click={() => (opened = !opened)}>
@@ -30,13 +31,15 @@
 		<img src="assets/favicon.ico" alt="DevMauss" width="24" height="24" />
 	</NavLink>
 
-	<NavGrid {opened}>
-		{#each sections as to}
-			<NavLink {path} {to} hover>{to}</NavLink>
-		{/each}
-	</NavGrid>
+	{#if innerWidth > 600 || opened}
+		<NavGrid>
+			{#each sections as to}
+				<NavLink {path} {to} hover>{to}</NavLink>
+			{/each}
+		</NavGrid>
+	{/if}
 
-	<Link inherit newTab href="rss.xml" label="Get RSS">
+	<Link inherit href="rss.xml" label="Get RSS">
 		<Feather.Rss />
 	</Link>
 	<Link inherit href="help" label="See help page">

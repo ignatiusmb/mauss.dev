@@ -4,9 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "sapper dev",
-    "build": "sapper build --legacy",
     "export": "run-s sapper:export static:404",
-    "sapper:export": "sapper export --legacy --entry \"/ 404\"",
+    "sapper:export": "sapper export --entry \"/ 404\"",
     "static:404": "run-s static:404:mv static:404:rm",
     "static:404:mv": "mv __sapper__/export/404/index.html __sapper__/export/404.html",
     "static:404:rm": "rmdir \"__sapper__/export/404\"",
@@ -18,9 +17,6 @@
     "check": "prettier -c src",
     "format": "prettier -w src"
   },
-  "engines": {
-    "node": ">=12.x"
-  },
   "dependencies": {
     "compression": "^1.7.4",
     "dotenv": "^8.2.0",
@@ -29,18 +25,7 @@
     "sirv": "^1.0.11"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "@babel/plugin-proposal-class-properties": "^7.12.1",
-    "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
-    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
-    "@babel/plugin-transform-object-assign": "^7.12.1",
-    "@babel/plugin-transform-runtime": "^7.12.10",
-    "@babel/preset-env": "^7.12.11",
-    "@babel/preset-typescript": "^7.12.7",
-    "@babel/runtime": "^7.12.5",
-    "@ignatiusmb/aqua": "^20.3.2",
     "@rollup/plugin-alias": "^3.1.2",
-    "@rollup/plugin-babel": "^5.2.3",
     "@rollup/plugin-commonjs": "^17.1.0",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^11.1.1",
@@ -48,7 +33,6 @@
     "@rollup/plugin-typescript": "^8.1.1",
     "@rollup/plugin-url": "^6.0.0",
     "@types/express": "^4.17.11",
-    "@types/markdown-it": "^12.0.1",
     "@types/node": "^14.14.22",
     "@typescript-eslint/eslint-plugin": "^4.14.1",
     "@typescript-eslint/parser": "^4.14.1",
@@ -56,11 +40,11 @@
     "eslint": "^7.19.0",
     "eslint-plugin-svelte3": "^3.0.0",
     "katex": "^0.12.0",
-    "markdown-it": "^12.0.4",
     "markdown-it-container": "^3.0.0",
     "markdown-it-mark": "^3.0.1",
     "markdown-it-texmath": "^0.8.0",
     "markdownlint-cli": "^0.27.1",
+    "marqua": "^0.0.3",
     "mauss": "^0.0.7",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.2.4",

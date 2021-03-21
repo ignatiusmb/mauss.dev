@@ -1,9 +1,8 @@
 import type { Request, Response } from 'express';
 import type { Review } from '$utils/types';
 import { checkNum } from 'mauss/utils';
-import { parseFile } from '$utils/parser';
+import { marker, parseFile } from 'marqua';
 import { countAverageRating, contentParser } from '$utils/article';
-import marker from '$utils/marker';
 
 export async function get(req: Request, res: Response): Promise<void> {
 	const { category, slug } = req.params;

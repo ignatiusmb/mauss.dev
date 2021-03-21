@@ -3,7 +3,7 @@ import type { Review } from '$utils/types';
 import { readdirSync } from 'fs';
 import { isExists } from 'mauss/guards';
 import { checkNum } from 'mauss/utils';
-import { parseDir } from '$utils/parser';
+import { parseDir } from 'marqua';
 import { countAverageRating, fillSiblings } from '$utils/article';
 
 const check = ({ rating, verdict }: Review) => !rating || verdict < -1;
