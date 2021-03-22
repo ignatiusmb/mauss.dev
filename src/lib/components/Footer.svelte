@@ -49,11 +49,11 @@
 		<p>Copyright &copy; 2017 &ndash; {new Date().getFullYear()} Ignatius Bagussuputra</p>
 		<p>
 			Handcrafted with ❤️ using
-			<Link newTab href="https://svelte.dev/">Svelte</Link>
+			<Link href="https://svelte.dev/">Svelte</Link>
 			&plus;
-			<Link newTab href="https://sapper.svelte.dev/">Sapper</Link>
+			<Link href="https://sapper.svelte.dev/">Sapper</Link>
 			&plus;
-			<Link newTab href="https://aqua.mauss.dev/">Aqua</Link>
+			<Link href="https://aqua.mauss.dev/">Aqua</Link>
 		</p>
 	</section>
 </footer>

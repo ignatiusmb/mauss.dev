@@ -59,9 +59,7 @@
 				if such an element exists. For instance, native elements have built-in keyboard accessibility,
 				roles and states. However, if you choose to use ARIA, you are responsible for mimicking (the
 				equivalent) browser behavior in script. Source:
-				<Link newTab href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">
-					MDN
-				</Link>
+				<Link href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">MDN</Link>
 			</p>
 		</section>
 	{/if}
@@ -70,8 +68,10 @@
 		<section id="objective" class="info-box">
 			<h3>Outline & Focus</h3>
 			<ul>
-				{#each post.toc as heading}
-					<li>{heading}</li>
+				{#each post.toc as { id, cleaned }}
+					<li style="color: #f48fb1">
+						<Link href="posts/{post.slug}#{id}" inherit>{cleaned}</Link>
+					</li>
 				{/each}
 			</ul>
 		</section>

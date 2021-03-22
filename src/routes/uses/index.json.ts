@@ -1,12 +1,10 @@
-import { parseFile } from '$lib/utils/parser';
+import { parseFile } from 'marqua';
 
-type Uses = { title: string; date: { updated: string } };
-
-export async function get() {
-	const article = parseFile<Uses>('content/uses.md', ({ frontMatter, content }) => ({
-		...frontMatter,
-		content,
-	}));
+export function get() {
+	const article = parseFile<{ title: string; date: { updated: string } }>(
+		'content/uses.md',
+		({ frontMatter, content }) => ({ ...frontMatter, content })
+	);
 
 	return {
 		status: 200,

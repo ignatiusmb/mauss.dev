@@ -42,9 +42,9 @@
 		{#if post.link}
 			<small>
 				<span>[</span>
-				{#each Object.keys(post.link) as linkKey}
+				{#each Object.entries(post.link) as [key, href]}
 					<span>
-						<Link href={post.link[linkKey]} newTab>{linkMap[linkKey]}</Link>
+						<Link {href}>{linkMap[key]}</Link>
 					</span>
 				{/each}
 				<span>]</span>

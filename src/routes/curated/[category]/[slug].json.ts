@@ -1,15 +1,23 @@
-import type { Curated } from '$lib/utils/types';
-import { generateId } from '$lib/utils/helper';
-import { parseFile } from '$lib/utils/parser';
+import type { Curated } from '$utils/types';
+import TexMath from 'markdown-it-texmath';
+import KaTeX from 'katex';
+import { marker, parseFile } from 'marqua';
+
+marker.use(TexMath, {
+	engine: KaTeX,
+	delimiters: 'dollars',
+	katexOptions: {
+		throwOnError: true,
+		macros: { '\\RR': '\\mathbb{R}' },
+	},
+});
 
 export async function get({ params }) {
 	const { category, slug } = params;
 	const filepath = `content/curated/${category}/${slug}.md`;
 
 	const file = parseFile<Curated>(filepath, ({ frontMatter, content }) => {
-		const headings = Array.from(content.matchAll(/^## (.*)/gm), (v) => v[1]);
-		const toc = headings.map((raw) => ({ id: generateId(raw), cleaned: raw.split(' | ')[0] }));
-		return { slug: `${category}/${slug}`, ...frontMatter, category, toc, content };
+		return { slug: `${category}/${slug}`, ...frontMatter, category, content };
 	});
 
 	return {

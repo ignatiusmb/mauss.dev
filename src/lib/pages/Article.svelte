@@ -52,9 +52,9 @@
 			</p>
 			<p>
 				Just create a new
-				<Link newTab href="https://github.com/ignatiusmb/mauss/issues">Issue</Link>
+				<Link href="https://github.com/ignatiusmb/mauss/issues">Issue</Link>
 				or
-				<Link newTab href="https://github.com/ignatiusmb/mauss/pulls">PR</Link>
+				<Link href="https://github.com/ignatiusmb/mauss/pulls">PR</Link>
 				on GitHub, any fix or addition is much appreciated!
 				<TextIcon href="https://github.com/ignatiusmb/mauss/edit/master/{path}">
 					<span>Edit</span>

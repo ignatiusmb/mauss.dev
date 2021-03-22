@@ -7,7 +7,7 @@
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
     "export": "run-s sapper:export static:404",
-    "sapper:export": "sapper export --legacy --entry \"/ 404\"",
+    "sapper:export": "sapper export --entry \"/ 404\"",
     "static:404": "run-s static:404:mv static:404:rm",
     "static:404:mv": "mv __sapper__/export/404/index.html __sapper__/export/404.html",
     "static:404:rm": "rmdir \"__sapper__/export/404\"",
@@ -18,9 +18,6 @@
     "lint:markdown": "markdownlint content/**/*.md",
     "check": "prettier -c src",
     "format": "prettier -w src"
-  },
-  "engines": {
-    "node": ">=12.x"
   },
   "dependencies": {
     "faunadb": "^4.0.2",
@@ -38,11 +35,11 @@
     "eslint": "^7.19.0",
     "eslint-plugin-svelte3": "^3.0.0",
     "katex": "^0.12.0",
-    "markdown-it": "^12.0.4",
     "markdown-it-container": "^3.0.0",
     "markdown-it-mark": "^3.0.1",
     "markdown-it-texmath": "^0.8.0",
     "markdownlint-cli": "^0.27.1",
+    "marqua": "^0.0.3",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.2.4",
     "prettier": "^2.2.1",

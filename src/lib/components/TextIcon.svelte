@@ -6,7 +6,7 @@
 
 <span on:click {style} class:empty={!href} class="text-icon">
 	{#if href}
-		<Link {href} newTab invert>
+		<Link {href} invert>
 			<slot />
 		</Link>
 	{:else}

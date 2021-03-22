@@ -1,22 +1,22 @@
 import { isExists } from 'mauss/guards';
-import { parseDir } from '$lib/utils/parser';
+import { parseDir } from 'marqua';
 
-type Excerpt = { author: string; lines: string[] };
-type Quote = { author: string; quote: string; from: string };
+export function get() {
+	const excerpts = parseDir<{ author: string; lines: string[] }>(
+		'content/quotes',
+		({ content, filename }) => ({
+			author: filename.split('.')[0].replace('-', ' '),
+			lines: content.split(/\r?\n/).filter(isExists),
+		})
+	);
 
-export async function get() {
-	const excerpts = parseDir<Excerpt>('content/quotes', ({ content, filename }) => ({
-		author: filename.split('.')[0].replace('-', ' '),
-		lines: content.split(/\r?\n/).filter(isExists),
-	}));
-
-	const quotes = excerpts.reduce((acc: Quote[], { author, lines }) => {
+	const quotes = excerpts.reduce((acc, { author, lines }) => {
 		for (const line of lines) {
 			const [quote, from] = line.split('#!/');
 			acc.push({ author, quote, from });
 		}
 		return acc;
-	}, []);
+	}, [] as Array<{ author: string; quote: string; from: string }>);
 
 	return {
 		status: 200,

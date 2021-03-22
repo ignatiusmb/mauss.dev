@@ -1,4 +1,4 @@
-import { parseDir } from '$lib/utils/parser';
+import { parseDir } from 'marqua';
 
 type About = { slug: string; title: string; date: { updated: string } };
 

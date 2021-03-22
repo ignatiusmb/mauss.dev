@@ -1,6 +1,6 @@
 import type { Curated } from '$lib/utils/types';
 import { readdirSync } from 'fs';
-import { parseDir } from '$lib/utils/parser';
+import { parseDir } from 'marqua';
 
 export async function get() {
 	const DIR = 'content/curated';

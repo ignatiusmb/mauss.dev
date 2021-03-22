@@ -1,9 +1,7 @@
-import { parseFile } from '$lib/utils/parser';
-
-type Help = { title: string };
+import { parseFile } from 'marqua';
 
 export async function get() {
-	const article = parseFile<Help>('content/help.md', ({ frontMatter, content }) => ({
+	const article = parseFile<{ title: string }>('content/help.md', ({ frontMatter, content }) => ({
 		...frontMatter,
 		content,
 	}));

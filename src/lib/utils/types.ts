@@ -28,7 +28,7 @@ export interface Curated extends Child {
 		updated: string;
 		published?: string;
 	};
-	toc: { id: string; cleaned: string }[];
+	toc: Array<{ id: string; cleaned: string }>;
 }
 
 export interface Post extends Child {
@@ -42,7 +42,6 @@ export interface Post extends Child {
 		updated?: string | Date;
 	};
 	image?: { en: string };
-	toc?: string[];
 }
 
 export interface Review extends Child {

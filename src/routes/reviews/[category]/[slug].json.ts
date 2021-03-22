@@ -1,8 +1,7 @@
 import type { Review } from '$lib/utils/types';
 import { checkNum } from 'mauss/utils';
-import { parseFile } from '$lib/utils/parser';
+import { marker, parseFile } from 'marqua';
 import { countAverageRating, contentParser } from '$lib/utils/article';
-import marker from '$lib/utils/marker';
 
 export async function get({ params }) {
 	const { category, slug } = params;

@@ -1,7 +1,7 @@
 import type { Curated, Post, Review } from '$lib/utils/types';
 import type { RSSItem } from '$lib/utils/rss';
 import { readdirSync } from 'fs';
-import { parseDir } from '$lib/utils/parser';
+import { parseDir } from 'marqua';
 import { sortCompare } from '$lib/utils/helper';
 import RSS from '$lib/utils/rss';
 

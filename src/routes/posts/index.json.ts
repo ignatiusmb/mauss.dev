@@ -1,7 +1,7 @@
 import type { Post } from '$lib/utils/types';
 import { existsSync } from 'fs';
 import { join } from 'path';
-import { parseDir } from '$lib/utils/parser';
+import { parseDir } from 'marqua';
 import { fillSiblings } from '$lib/utils/article';
 
 export async function get() {
