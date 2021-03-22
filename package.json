@@ -6,11 +6,6 @@
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
-    "export": "run-s sapper:export static:404",
-    "sapper:export": "sapper export --entry \"/ 404\"",
-    "static:404": "run-s static:404:mv static:404:rm",
-    "static:404:mv": "mv __sapper__/export/404/index.html __sapper__/export/404.html",
-    "static:404:rm": "rmdir \"__sapper__/export/404\"",
     "lint": "run-p lint:**",
     "lint:eslint": "eslint src --ext js,ts",
     "lint:svelte": "svelte-check src --output human --ignore src/node_modules",
