@@ -7,7 +7,6 @@ export function get() {
 	);
 
 	return {
-		status: 200,
 		headers: { 'Content-Type': 'application/json' },
 		body: article,
 	};

@@ -19,7 +19,6 @@ export function get() {
 	}, [] as Array<{ author: string; quote: string; from: string }>);
 
 	return {
-		status: 200,
 		headers: { 'Content-Type': 'application/json' },
 		body: quotes,
 	};

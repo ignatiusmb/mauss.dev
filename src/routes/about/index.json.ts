@@ -9,7 +9,6 @@ export async function get() {
 	}).reduce((acc, { slug, ...res }) => ({ ...acc, [slug]: res }), {});
 
 	return {
-		status: 200,
 		headers: { 'Content-Type': 'application/json' },
 		body: articles,
 	};

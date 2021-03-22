@@ -11,7 +11,6 @@ export async function get({ params }) {
 	})[0];
 
 	return {
-		status: 200,
 		headers: { 'Content-Type': 'application/json' },
 		body: post,
 	};

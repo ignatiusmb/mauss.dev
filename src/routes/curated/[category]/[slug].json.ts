@@ -1,4 +1,4 @@
-import type { Curated } from '$utils/types';
+import type { Curated } from '$lib/utils/types';
 import TexMath from 'markdown-it-texmath';
 import KaTeX from 'katex';
 import { marker, parseFile } from 'marqua';
@@ -21,7 +21,6 @@ export async function get({ params }) {
 	});
 
 	return {
-		status: 200,
 		headers: { 'Content-Type': 'application/json' },
 		body: file,
 	};
