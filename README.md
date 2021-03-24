@@ -39,5 +39,5 @@ DevMauss | <a href="LICENSE">MIT License</a>
 ---
 
 <h5 align="center"><pre>
-Copyright &copy; 2019 &ndash; 2020 <a href="https://mauss.dev">Ignatius Bagussuputra</a>
+Copyright &copy; 2019 &ndash; 2021 <a href="https://mauss.dev">Ignatius Bagussuputra</a>
 </pre></h5>
