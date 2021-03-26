@@ -1,8 +1,9 @@
+import type { RequestHandler } from '@sveltejs/kit';
 import type { Curated } from '$lib/utils/types';
 import { readdirSync } from 'fs';
 import { parseDir } from 'marqua';
 
-export async function get() {
+export const get: RequestHandler = async () => {
 	const DIR = 'content/curated';
 	const categories = readdirSync(DIR).filter((folder) => folder !== 'draft');
 	const articles = categories.flatMap((folder) =>
@@ -17,4 +18,4 @@ export async function get() {
 		headers: { 'Content-Type': 'application/json' },
 		body: articles,
 	};
-}
+};

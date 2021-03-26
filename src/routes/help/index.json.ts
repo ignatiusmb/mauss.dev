@@ -1,6 +1,7 @@
+import type { RequestHandler } from '@sveltejs/kit';
 import { parseFile } from 'marqua';
 
-export async function get() {
+export const get: RequestHandler = async () => {
 	const article = parseFile<{ title: string }>('content/help.md', ({ frontMatter, content }) => ({
 		...frontMatter,
 		content,
@@ -10,4 +11,4 @@ export async function get() {
 		headers: { 'Content-Type': 'application/json' },
 		body: article,
 	};
-}
+};

@@ -1,3 +1,4 @@
+import type { RequestHandler } from '@sveltejs/kit';
 import type { Curated, Post, Review } from '$lib/utils/types';
 import type { RSSItem } from '$lib/utils/rss';
 import { readdirSync } from 'fs';
@@ -29,7 +30,7 @@ function flatScan<T extends Curated | Review>(path: string): RSSItem[] {
 	);
 }
 
-export async function get() {
+export const get: RequestHandler = async () => {
 	const items = [
 		...flatScan<Curated>('curated'),
 		...flatScan<Review>('reviews'),
@@ -48,4 +49,4 @@ export async function get() {
 		headers: { 'Content-Type': 'application/xml' },
 		body: RSS(channel, items.sort(sortCompare)),
 	};
-}
+};

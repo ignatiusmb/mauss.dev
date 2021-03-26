@@ -1,3 +1,4 @@
+import type { RequestHandler } from '@sveltejs/kit';
 import type { Review } from '$lib/utils/types';
 import { readdirSync } from 'fs';
 import { isExists } from 'mauss/guards';
@@ -7,7 +8,7 @@ import { countAverageRating, fillSiblings } from '$lib/utils/article';
 
 const check = ({ rating, verdict }: Review) => !rating || verdict < -1;
 
-export async function get() {
+export const get: RequestHandler = async () => {
 	const DIR = 'content/reviews';
 	const reviews = readdirSync(DIR).flatMap(
 		(folder) => <(false | Review)[]>(!/draft/.test(folder) &&
@@ -24,4 +25,4 @@ export async function get() {
 		headers: { 'Content-Type': 'application/json' },
 		body: fillSiblings(reviews.filter(isExists), 'reviews/', check),
 	};
-}
+};

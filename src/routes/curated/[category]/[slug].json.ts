@@ -1,3 +1,4 @@
+import type { RequestHandler } from '@sveltejs/kit';
 import type { Curated } from '$lib/utils/types';
 import TexMath from 'markdown-it-texmath';
 import KaTeX from 'katex';
@@ -12,7 +13,7 @@ marker.use(TexMath, {
 	},
 });
 
-export async function get({ params }) {
+export const get: RequestHandler = async ({ params }) => {
 	const { category, slug } = params;
 	const filepath = `content/curated/${category}/${slug}.md`;
 
@@ -24,4 +25,4 @@ export async function get({ params }) {
 		headers: { 'Content-Type': 'application/json' },
 		body: file,
 	};
-}
+};

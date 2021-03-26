@@ -1,7 +1,8 @@
+import type { RequestHandler } from '@sveltejs/kit';
 import type { Post } from '$lib/utils/types';
 import { parseDir } from 'marqua';
 
-export async function get({ params }) {
+export const get: RequestHandler = async ({ params }) => {
 	const { slug } = params;
 	const post = parseDir<Post>('content/posts', ({ frontMatter, content, filename }) => {
 		const [published, filename_slug] = filename.split('.');
@@ -14,4 +15,4 @@ export async function get({ params }) {
 		headers: { 'Content-Type': 'application/json' },
 		body: post,
 	};
-}
+};

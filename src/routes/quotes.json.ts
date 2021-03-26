@@ -1,7 +1,8 @@
+import type { RequestHandler } from '@sveltejs/kit';
 import { isExists } from 'mauss/guards';
 import { parseDir } from 'marqua';
 
-export function get() {
+export const get: RequestHandler = async () => {
 	const excerpts = parseDir<{ author: string; lines: string[] }>(
 		'content/quotes',
 		({ content, filename }) => ({
@@ -22,4 +23,4 @@ export function get() {
 		headers: { 'Content-Type': 'application/json' },
 		body: quotes,
 	};
-}
+};

@@ -1,10 +1,11 @@
+import type { RequestHandler } from '@sveltejs/kit';
 import type { Post } from '$lib/utils/types';
 import { existsSync } from 'fs';
 import { join } from 'path';
 import { parseDir } from 'marqua';
 import { fillSiblings } from '$lib/utils/article';
 
-export async function get() {
+export const get: RequestHandler = async () => {
 	const posts = parseDir<Post>('content/posts', ({ frontMatter, filename }) => {
 		const [published, slug] = filename.split('.');
 		const [category] = frontMatter.tags;
@@ -26,4 +27,4 @@ export async function get() {
 		headers: { 'Content-Type': 'application/json' },
 		body: fillSiblings(posts, 'posts/'),
 	};
-}
+};

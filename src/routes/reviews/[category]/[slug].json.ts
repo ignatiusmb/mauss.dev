@@ -1,9 +1,10 @@
+import type { RequestHandler } from '@sveltejs/kit';
 import type { Review } from '$lib/utils/types';
 import { checkNum } from 'mauss/utils';
 import { marker, parseFile } from 'marqua';
 import { countAverageRating, contentParser } from '$lib/utils/article';
 
-export async function get({ params }) {
+export const get: RequestHandler = async ({ params }) => {
 	const { category, slug } = params;
 	const filepath = `content/reviews/${category}/${slug}.md`;
 
@@ -29,4 +30,4 @@ export async function get({ params }) {
 		headers: { 'Content-Type': 'application/json' },
 		body: file,
 	};
-}
+};
