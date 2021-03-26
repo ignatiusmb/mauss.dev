@@ -1,6 +1,4 @@
 <script>
-	export let segment;
-
 	import { post } from 'mauss/api';
 	import { browser, dev } from '$app/env';
 	import { page as local } from '$app/stores';
@@ -24,7 +22,7 @@
 
 <ScrollTop />
 
-{#if segment}
+{#if $local.path !== '/'}
 	<Navigation />
 {/if}
 <slot />
