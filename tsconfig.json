@@ -1,8 +1,7 @@
 {
 	"extends": "mauss/tsconfig.json",
 	"compilerOptions": {
-		"lib": ["DOM", "ES2020", "WebWorker"],
-		"types": ["svelte"],
+		"target": "ES2020",
 		"sourceMap": true,
 		"baseUrl": ".",
 		"paths": {
@@ -10,5 +9,5 @@
 			"$lib/*": ["src/lib/*"]
 		}
 	},
-	"include": ["src/**/*.js", "src/**/*.ts", "src/**/*.svelte"]
+	"include": ["src/**/*"]
 }
