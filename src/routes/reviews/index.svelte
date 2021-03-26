@@ -1,7 +1,7 @@
 <script context="module">
 	import { rSlice as store } from '$lib/utils/stores';
-	export async function load({ page: query, fetch }) {
-		const data = await this.fetch('reviews.json').then((r) => r.json());
+	export async function load({ page: { query }, fetch }) {
+		const data = await fetch('reviews.json').then((r) => r.json());
 		const categories = [...new Set(data.map((p) => p.category))];
 		const genres = [...new Set(data.flatMap((p) => p.genres))].sort();
 		store.set(query.has('q') ? sift(query.get('q'), data) : data);
