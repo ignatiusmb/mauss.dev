@@ -8,18 +8,18 @@ module.exports = {
 	kit: {
 		adapter: adapter(),
 		target: '#svelte',
-		vite: () => ({
-			optimizeDeps: {
-				exclude: ['mauss', 'svelement', 'svelement/icons'],
-			},
+		vite: {
 			ssr: {
 				noExternal: [
 					'@ignatiusmb/aqua',
+					'mauss/guards',
+					'mauss/utils',
+					'marqua',
 					'svelement',
 					'svelement/icons',
 					...Object.keys(pkg.dependencies || {}),
 				],
 			},
-		}),
+		},
 	},
 };
