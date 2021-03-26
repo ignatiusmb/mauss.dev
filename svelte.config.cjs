@@ -12,6 +12,8 @@ module.exports = {
 			ssr: {
 				noExternal: [
 					'@ignatiusmb/aqua',
+					'@ignatiusmb/aqua/lib/aqua.cbs',
+					'mauss/api',
 					'mauss/guards',
 					'mauss/utils',
 					'marqua',
