@@ -1,12 +1,10 @@
-const sveltePreprocess = require('svelte-preprocess');
-const adapter = require('@sveltejs/adapter-static');
 const pkg = require('./package.json');
 
 /** @type {import('@sveltejs/kit').Config} */
 module.exports = {
-	preprocess: sveltePreprocess(),
+	preprocess: require('svelte-preprocess')(),
 	kit: {
-		adapter: adapter(),
+		adapter: require('@sveltejs/adapter-static')(),
 		target: '#svelte',
 		vite: {
 			ssr: {
@@ -19,6 +17,7 @@ module.exports = {
 					'marqua',
 					'svelement',
 					'svelement/icons',
+					'svelement/icons/feather',
 					...Object.keys(pkg.dependencies || {}),
 				],
 			},
