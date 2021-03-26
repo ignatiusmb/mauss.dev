@@ -6,7 +6,7 @@ import { parseDir } from 'marqua';
 export const get: RequestHandler = async () => {
 	const DIR = 'content/curated';
 	const categories = readdirSync(DIR).filter((folder) => folder !== 'draft');
-	const articles = categories.flatMap((folder) =>
+	const body = categories.flatMap((folder) =>
 		parseDir<Curated>(`${DIR}/${folder}`, ({ frontMatter, filename }) => ({
 			slug: `${folder}/${filename.split('.')[0]}`,
 			...frontMatter,
@@ -14,8 +14,5 @@ export const get: RequestHandler = async () => {
 		}))
 	);
 
-	return {
-		headers: { 'Content-Type': 'application/json' },
-		body: articles,
-	};
+	return { body };
 };

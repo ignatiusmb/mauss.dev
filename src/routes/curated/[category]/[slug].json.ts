@@ -17,12 +17,9 @@ export const get: RequestHandler = async ({ params }) => {
 	const { category, slug } = params;
 	const filepath = `content/curated/${category}/${slug}.md`;
 
-	const file = parseFile<Curated>(filepath, ({ frontMatter, content }) => {
+	const body = parseFile<Curated>(filepath, ({ frontMatter, content }) => {
 		return { slug: `${category}/${slug}`, ...frontMatter, category, content };
 	});
 
-	return {
-		headers: { 'Content-Type': 'application/json' },
-		body: file,
-	};
+	return { body };
 };

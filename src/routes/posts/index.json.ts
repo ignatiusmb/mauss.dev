@@ -23,8 +23,5 @@ export const get: RequestHandler = async () => {
 		return { slug, ...frontMatter, category, date: { published, updated } };
 	});
 
-	return {
-		headers: { 'Content-Type': 'application/json' },
-		body: fillSiblings(posts, 'posts/'),
-	};
+	return { body: fillSiblings(posts, 'posts/') };
 };

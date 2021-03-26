@@ -8,7 +8,7 @@ export const get: RequestHandler = async ({ params }) => {
 	const { category, slug } = params;
 	const filepath = `content/reviews/${category}/${slug}.md`;
 
-	const file = parseFile<Review>(filepath, ({ frontMatter, content }) => {
+	const body = parseFile<Review>(filepath, ({ frontMatter, content }) => {
 		const review = { slug: `${category}/${slug}`, category, ...frontMatter };
 
 		const dStart = +new Date(frontMatter.date.updated || frontMatter.date.published);
@@ -26,8 +26,5 @@ export const get: RequestHandler = async ({ params }) => {
 		return review;
 	});
 
-	return {
-		headers: { 'Content-Type': 'application/json' },
-		body: file,
-	};
+	return { body };
 };

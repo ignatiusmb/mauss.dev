@@ -11,7 +11,7 @@ export const get: RequestHandler = async () => {
 		})
 	);
 
-	const quotes = excerpts.reduce((acc, { author, lines }) => {
+	const body = excerpts.reduce((acc, { author, lines }) => {
 		for (const line of lines) {
 			const [quote, from] = line.split('#!/');
 			acc.push({ author, quote, from });
@@ -19,8 +19,5 @@ export const get: RequestHandler = async () => {
 		return acc;
 	}, [] as Array<{ author: string; quote: string; from: string }>);
 
-	return {
-		headers: { 'Content-Type': 'application/json' },
-		body: quotes,
-	};
+	return { body };
 };

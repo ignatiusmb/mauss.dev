@@ -21,8 +21,5 @@ export const get: RequestHandler = async () => {
 				})))
 	);
 
-	return {
-		headers: { 'Content-Type': 'application/json' },
-		body: fillSiblings(reviews.filter(isExists), 'reviews/', check),
-	};
+	return { body: fillSiblings(reviews.filter(isExists), 'reviews/', check) };
 };
