@@ -1,13 +1,8 @@
 yarn-error.log
 .DS_Store
 .env
-*secret.*
 
-/node_modules/
-/.svelte
+node_modules
+.svelte
 /build
 /functions
-
-# Local static site config folder
-.netlify
-.vercel
