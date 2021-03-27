@@ -1,10 +1,8 @@
 <script context="module">
-	export async function load({ page, fetch }) {
+	export async function load({ fetch, page }) {
 		const { section } = page.params;
-		const articles = await fetch('about.json').then((r) => r.json());
-
+		const articles = await fetch('/about.json').then((r) => r.json());
 		if (!articles[section]) return { status: 404, error: 'Section not found' };
-
 		return {
 			props: { section, post: articles[section] },
 		};
@@ -29,7 +27,7 @@
 	<WeavedImage src="/assets/profile/mauss.jpeg" alt="DevMauss Profile" />
 
 	<section>
-		<Link href="about">
+		<Link href="/about">
 			<h2>About</h2>
 		</Link>
 	</section>

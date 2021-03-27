@@ -1,6 +1,7 @@
 <script context="module">
-	export async function load({ fetch }) {
-		return { post: await fetch('uses.json').then((r) => r.json()) };
+	export async function load({ fetch, page: { path } }) {
+		const post = await fetch(`${path}.json`).then((r) => r.json());
+		return { props: { post } };
 	}
 </script>
 
@@ -18,7 +19,5 @@
 	and other stuffs." />
 
 <Article header {post}>
-	<section>
-		{@html post.content}
-	</section>
+	{@html post.content}
 </Article>

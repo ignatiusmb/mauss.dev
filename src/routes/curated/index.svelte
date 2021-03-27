@@ -1,10 +1,7 @@
 <script context="module">
-	export async function load({ fetch }) {
-		return {
-			props: {
-				data: await fetch('curated.json').then((r) => r.json()),
-			},
-		};
+	export async function load({ fetch, page: { path } }) {
+		const data = await fetch(`${path}.json`).then((r) => r.json());
+		return { props: { data } };
 	}
 </script>
 

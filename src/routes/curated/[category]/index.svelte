@@ -1,11 +1,8 @@
 <script context="module">
-	export async function load({ page, fetch }) {
-		const { category } = page.params;
-		const list = await fetch('curated.json').then((r) => r.json());
-		const data = list.filter((p) => p.category === category);
-		return {
-			props: { category, data },
-		};
+	export async function load({ fetch, page: { path, params } }) {
+		const list = await fetch('/curated.json').then((r) => r.json());
+		const data = list.filter((p) => p.category === params.category);
+		return { props: { category: params.category, data } };
 	}
 </script>
 
@@ -27,10 +24,10 @@
 </header>
 
 <main>
-	{#each data as { slug, title } (slug)}
+	{#each data as { slug: href, title } (href)}
 		<section animate:flip transition:scale|local>
 			<small>{title}</small>
-			<ButtonLink href="curated/{slug}">read</ButtonLink>
+			<ButtonLink {href}>read</ButtonLink>
 		</section>
 	{/each}
 </main>

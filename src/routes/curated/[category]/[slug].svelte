@@ -1,7 +1,6 @@
 <script context="module">
-	export async function load({ page, fetch }) {
-		const { category, slug } = page.params;
-		const res = await fetch(`curated/${category}/${slug}.json`);
+	export async function load({ fetch, page: { path } }) {
+		const res = await fetch(`${path}.json`);
 		if (!res.ok) return { status: 404, error: 'Curated post not found' };
 		return { props: { post: await res.json() } };
 	}
@@ -36,7 +35,7 @@
 			<ul>
 				{#each post.toc as { id, cleaned }}
 					<li style="color: #f48fb1">
-						<Link href="curated/{post.slug}#{id}" inherit>{cleaned}</Link>
+						<Link href="#{id}" inherit>{cleaned}</Link>
 					</li>
 				{/each}
 			</ul>

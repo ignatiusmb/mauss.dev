@@ -1,7 +1,7 @@
 <script context="module">
-	export async function load({ page, fetch }) {
-		const list = fetch('posts.json').then((r) => r.json());
-		const res = await fetch(`posts/${page.params.slug}.json`);
+	export async function load({ fetch, page: { path } }) {
+		const list = fetch('/posts.json').then((r) => r.json());
+		const res = await fetch(`${path}.json`);
 		if (!res.ok) return { status: 404, error: 'Post not found' };
 
 		const post = await res.json();
@@ -70,7 +70,7 @@
 			<ul>
 				{#each post.toc as { id, cleaned }}
 					<li style="color: #f48fb1">
-						<Link href="posts/{post.slug}#{id}" inherit>{cleaned}</Link>
+						<Link href="#{id}" inherit>{cleaned}</Link>
 					</li>
 				{/each}
 			</ul>

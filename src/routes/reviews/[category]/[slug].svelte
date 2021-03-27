@@ -1,8 +1,7 @@
 <script context="module">
-	export async function load({ page, fetch }) {
-		const { category, slug } = page.params;
-		const list = fetch('reviews.json').then((r) => r.json());
-		const res = await fetch(`reviews/${category}/${slug}.json`);
+	export async function load({ page: { path }, fetch }) {
+		const list = fetch('/reviews.json').then((r) => r.json());
+		const res = await fetch(`${path}.json`);
 		if (!res.ok) return { status: 404, error: 'Review not found' };
 
 		const post = await res.json();

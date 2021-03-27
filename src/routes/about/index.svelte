@@ -1,6 +1,6 @@
 <script context="module">
-	export async function load({ fetch }) {
-		const articles = await fetch('about.json').then((r) => r.json());
+	export async function load({ fetch, page: { path } }) {
+		const articles = await fetch(`${path}.json`).then((r) => r.json());
 		return {
 			props: {
 				post: articles['index'],
