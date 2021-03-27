@@ -21,16 +21,15 @@
 		} catch (error) {}
 
 	</script>
+	<script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+		data-cf-beacon='{"token": "402cd91137d14890a1117569bda0ee41"}'></script>
+
 	<link rel="manifest" href="/site.webmanifest" crossorigin="use-credentials">
 	<link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
 	<link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
 	%svelte.head%
 </head>
 
-<body>
-	<div id="svelte">%svelte.body%</div>
-	<script defer src="https://static.cloudflareinsights.com/beacon.min.js"
-		data-cf-beacon='{"token": "402cd91137d14890a1117569bda0ee41"}'></script>
-</body>
+<body>%svelte.body%</body>
 
 </html>
