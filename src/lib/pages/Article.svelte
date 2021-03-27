@@ -4,7 +4,7 @@
 	export let path = null;
 	export let siblings = null;
 	import { onMount } from 'svelte';
-	// import { Feather } from 'svelement/icons';
+	import { Edit } from 'svelement/icons/feather';
 	import { Link, ProgressBar } from 'svelement';
 	import Header from './Header.svelte';
 	import TextIcon from '$lib/components/TextIcon.svelte';
@@ -58,7 +58,7 @@
 				on GitHub, any fix or addition is much appreciated!
 				<TextIcon href="https://github.com/ignatiusmb/mauss/edit/master/{path}">
 					<span>Edit</span>
-					<!-- <Feather.Edit size="17" /> -->
+					<Edit size="17" />
 				</TextIcon>
 			</p>
 		</section>

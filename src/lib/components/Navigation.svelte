@@ -4,7 +4,7 @@
 	import { navigating, page } from '$app/stores';
 	const sections = ['about', 'curated', 'posts', 'reviews', 'uses'];
 
-	// import { Feather } from 'svelement/icons';
+	import * as Feather from 'svelement/icons/feather';
 	import { ThemeSwitcher, Link } from 'svelement';
 	import NavLink from './NavLink.svelte';
 	import NavGrid from './NavGrid.svelte';
@@ -20,9 +20,9 @@
 <nav class:scrolled>
 	<span on:click={() => (opened = !opened)}>
 		{#if opened}
-			<!-- <Feather.X /> -->
+			<Feather.X />
 		{:else}
-			<!-- <Feather.Menu /> -->
+			<Feather.Menu />
 		{/if}
 	</span>
 
@@ -39,16 +39,16 @@
 	{/if}
 
 	<Link inherit newTab href="rss.xml" label="Get RSS">
-		<!-- <Feather.Rss /> -->
+		<Feather.Rss />
 	</Link>
 	<Link inherit href="help" label="See help page">
-		<!-- <Feather.HelpCircle /> -->
+		<Feather.HelpCircle />
 	</Link>
 	<ThemeSwitcher let:current>
 		{#if current === 'light'}
-			<!-- <Feather.Sun /> -->
+			<Feather.Sun />
 		{:else if current === 'dark'}
-			<!-- <Feather.Moon /> -->
+			<Feather.Moon />
 		{/if}
 	</ThemeSwitcher>
 </nav>

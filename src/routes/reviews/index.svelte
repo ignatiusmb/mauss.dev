@@ -42,7 +42,7 @@
 	import { sift, sieve } from '$lib/utils/search';
 	const duration = 100;
 
-	// import { Feather } from 'svelement/icons';
+	import { Grid, Layers, Columns } from 'svelement/icons/feather';
 	import { SearchBar, Pagination } from 'svelement';
 	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import LayoutPicker from '$lib/pages/LayoutPicker.svelte';
@@ -51,6 +51,7 @@
 
 	let filters = { categories: [], genres: [], verdict: [], sort_by: 'updated' },
 		view = 'grid';
+	const changeView = (name) => () => (view = name);
 	$: bound = view === 'grid' ? 12 : 3;
 	$: increment = view === 'carousel' ? 1 : bound;
 	$: filtered = sieve(filters, data);
@@ -76,15 +77,9 @@
 	</header>
 
 	<aside slot="picker">
-		<button class:active={view === 'grid'} on:click={() => (view = 'grid')}>
-			<!-- <Feather.Grid /> -->
-		</button>
-		<button class:active={view === 'carousel'} on:click={() => (view = 'carousel')}>
-			<!-- <Feather.Layers /> -->
-		</button>
-		<button class:active={view === 'scrollsnap'} on:click={() => (view = 'scrollsnap')}>
-			<!-- <Feather.Columns /> -->
-		</button>
+		<button class:active={view === 'grid'} on:click={changeView(view)}><Grid /></button>
+		<button class:active={view === 'carousel'} on:click={changeView(view)}><Layers /></button>
+		<button class:active={view === 'scrollsnap'} on:click={changeView(view)}><Columns /></button>
 	</aside>
 
 	{#if view === 'grid'}
