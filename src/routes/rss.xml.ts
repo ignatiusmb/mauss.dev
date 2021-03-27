@@ -29,24 +29,21 @@ function flatScan<T extends Curated | Review>(path: string): RSSItem[] {
 		)
 	);
 }
+const items = [
+	...flatScan<Curated>('curated'),
+	...flatScan<Review>('reviews'),
+	...parseDir<Post, RSSItem>(
+		'content/posts',
+		({ frontMatter: { title, description: info, date: dt }, filename }) => {
+			const [published, slug] = filename.split('.');
+			const description = info || 'A post by DevMauss';
+			const date = ((dt && dt.updated) as string) || published;
+			return { title, slug: `posts/${slug}`, description, date };
+		}
+	),
+];
 
-export const get: RequestHandler = async () => {
-	const items = [
-		...flatScan<Curated>('curated'),
-		...flatScan<Review>('reviews'),
-		...parseDir<Post, RSSItem>(
-			'content/posts',
-			({ frontMatter: { title, description: info, date: dt }, filename }) => {
-				const [published, slug] = filename.split('.');
-				const description = info || 'A post by DevMauss';
-				const date = ((dt && dt.updated) as string) || published;
-				return { title, slug: `posts/${slug}`, description, date };
-			}
-		),
-	];
-
-	return {
-		headers: { 'Content-Type': 'application/xml' },
-		body: RSS(channel, items.sort(sortCompare)),
-	};
-};
+export const get: RequestHandler = async () => ({
+	headers: { 'Content-Type': 'application/xml' },
+	body: RSS(channel, items.sort(sortCompare)),
+});
