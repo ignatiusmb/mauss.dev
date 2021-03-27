@@ -7,6 +7,10 @@ module.exports = {
 		adapter: require('@sveltejs/adapter-static')(),
 		target: '#svelte',
 		vite: {
+			optimizeDeps: {
+				exclude: ['marqua'],
+				include: ['markdown-it'],
+			},
 			ssr: {
 				noExternal: [
 					'@ignatiusmb/aqua',
