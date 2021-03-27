@@ -16,7 +16,8 @@
   },
   "dependencies": {
     "faunadb": "^4.0.2",
-    "mauss": "^0.0.7"
+    "mauss": "^0.0.8",
+    "svelement": "^0.0.11"
   },
   "devDependencies": {
     "@ignatiusmb/aqua": "^20.3.2",
@@ -39,7 +40,6 @@
     "postcss": "^8.2.4",
     "prettier": "^2.2.1",
     "prettier-plugin-svelte": "^2.1.1",
-    "svelement": "^0.0.10",
     "svelte": "^3.32.1",
     "svelte-check": "^1.1.31",
     "svelte-preprocess": "^4.6.5",
