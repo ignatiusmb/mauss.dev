@@ -27,7 +27,7 @@
 	canonical="curated"
 	title="Curated"
 	description="Curated content for all kinds of programming, lifestyle, and many more.">
-	<link rel="alternate" href="rss.xml" type="application/rss+xml" />
+	<link rel="alternate" href="/rss.xml" type="application/rss+xml" />
 </MetaHead>
 
 <LayoutPicker header view="grid" itemSize="18em">

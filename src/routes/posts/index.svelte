@@ -27,7 +27,7 @@
 </script>
 
 <MetaHead canonical="posts" title="Posts" description="Get the latest most recent posts here.">
-	<link rel="alternate" href="rss.xml" type="application/rss+xml" />
+	<link rel="alternate" href="/rss.xml" type="application/rss+xml" />
 </MetaHead>
 
 <LayoutPicker header view="grid" itemSize="21em">

@@ -266,7 +266,7 @@ This is the show's tagline. Haruka and Sora did in fact went somewhere else, the
 
 Now, if you'll excuse me, I'm going to find something less depressing to think about...
 
-Thankfully, I was watching [Eromanga-sensei](reviews/anime/eromanga-sensei) at the same time. Perhaps it could lighten up your mood just like it did for me.
+Thankfully, I was watching [Eromanga-sensei](/reviews/anime/eromanga-sensei) at the same time. Perhaps it could lighten up your mood just like it did for me.
 
 ## $CLOSING
 

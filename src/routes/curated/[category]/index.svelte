@@ -16,7 +16,7 @@
 </script>
 
 <MetaHead canonical="curated" title="Curated" description="Curated content for {category} stuff.">
-	<link rel="alternate" href="rss.xml" type="application/rss+xml" />
+	<link rel="alternate" href="/rss.xml" type="application/rss+xml" />
 </MetaHead>
 
 <header>
