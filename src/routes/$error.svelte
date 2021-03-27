@@ -7,17 +7,13 @@
 </svelte:head>
 
 <article>
-	<section>
-		<h1>{status}</h1>
-		<p>{error.message}</p>
-	</section>
+	<h1>{status}</h1>
+	<p>{error.message}</p>
 </article>
 
 <style>
 	article {
 		margin-top: auto;
-	}
-	section:first-of-type {
 		text-align: center;
 	}
 
