@@ -13,11 +13,7 @@ module.exports = {
 				include: ['markdown-it'],
 			},
 			ssr: {
-				noExternal: [
-					'@ignatiusmb/aqua',
-					'@ignatiusmb/aqua/lib/aqua.cbs',
-					...Object.keys(pkg.dependencies || {}),
-				],
+				noExternal: Object.keys(pkg.dependencies || {}),
 			},
 		},
 	},
