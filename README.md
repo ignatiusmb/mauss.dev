@@ -1,33 +1,34 @@
 # [DevMauss](https://mauss.dev)
 
-My personal website, handcrafted with ❤️ using [Svelte](https://svelte.dev) + [Sapper](https://sapper.svelte.dev) + [Aqua](https://aqua.mauss.dev) + [Svelement](https://github.com/ignatiusmb/svelement)
+Personal website, handcrafted with ❤️ using these tools
 
-Contributions are welcome! Please refer to the Style Guide below if you'd like to create a PR
+|                             Framework                              |                      Components                      |             Style              |                     Parser                     |
+| :----------------------------------------------------------------: | :--------------------------------------------------: | :----------------------------: | :--------------------------------------------: |
+| [Svelte](https://svelte.dev) + [Sapper](https://sapper.svelte.dev) | [Svelement](https://github.com/ignatiusmb/svelement) | [Aqua](https://aqua.mauss.dev) | [Marqua](https://github.com/ignatiusmb/marqua) |
 
-## Notes
+## Contributing
 
-- PR typos or obvious minor fixes are welcome (no issue necessary)
-- Please discuss your topic for an article with me first if you'd like to write one
-- Content is managed under `/content` directory
+Contributions are welcome! Here's a quick guide for getting started
 
-## Steps
+```bash
+# 1. Fork and clone this repository to your machine
+#  ; Because this uses git submodules, we need to add this flag
+git clone --recurse-submodules <url>
 
-1. Fork and clone this repository to your machine, then run the following
+# 2. Initialize git submodules using the following
+#  ; You can skip this step if you cloned with the flag above
+git submodule update --init
 
-    ```bash
-    npm install
-    npm run dev
-    ```
+# 3. Install the dependencies and run the development server
+npm install
 
-2. After making your change, checkout to a new branch and create a PR
+# 4. Run the development server
+npm run dev
+```
 
-## Markdown
+### Content
 
-Content is written in markdown (`.md`), posts must only have h2 and h3 tags
-
-### Posts
-
-All h2 tags in `content/posts` will automatically be compiled into a table of content format and generated at the top of the article.
+Content is managed as a submodule in [devmauss/content](https://github.com/devmauss/content), any changes made to the content should be placed there ([open a new PR](https://github.com/devmauss/content/compare)).
 
 ---
 
@@ -38,5 +39,5 @@ DevMauss | <a href="LICENSE">MIT License</a>
 ---
 
 <h5 align="center"><pre>
-Copyright &copy; 2019 &ndash; 2020 <a href="https://mauss.dev">Ignatius Bagussuputra</a>
+Copyright &copy; 2019 &ndash; 2021 <a href="https://mauss.dev">Ignatius Bagussuputra</a>
 </pre></h5>
