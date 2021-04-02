@@ -30,6 +30,11 @@ npm run dev
 
 Content is managed as a submodule in [devmauss/content](https://github.com/devmauss/content), any changes made to the content should be placed there ([open a new PR](https://github.com/devmauss/content/compare)).
 
+```bash
+# Update to the latest version using
+git submodule update --remote --merge
+```
+
 ---
 
 <h3 align="center"><pre>
