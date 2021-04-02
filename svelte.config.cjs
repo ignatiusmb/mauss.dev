@@ -4,6 +4,7 @@ const pkg = require('./package.json');
 module.exports = {
 	preprocess: require('svelte-preprocess')({
 		defaults: { script: 'javascript' },
+		postcss: { plugins: [require('autoprefixer')()] },
 	}),
 	kit: {
 		adapter: require('@sveltejs/adapter-static')(),
