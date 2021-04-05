@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "faunadb": "^4.0.2",
-    "marqua": "^0.0.4",
+    "marqua": "^0.0.5",
     "mauss": "^0.0.8",
     "svelement": "^0.0.11"
   },
