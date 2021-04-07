@@ -49,7 +49,7 @@ export interface Review extends Child {
 	released: string;
 	title: I18nData;
 	genres: string[];
-	rating: string[] | number;
+	rating?: string[] | number;
 	verdict: number | string;
 
 	last_seen: string | Date;
