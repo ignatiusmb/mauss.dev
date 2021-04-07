@@ -16,7 +16,7 @@
 	import '$lib/styles/animation.css';
 
 	$: if (!dev && browser) {
-		page.set(post(`api/page?slug=${$local.path}`));
+		page.set(post(`/api/page?slug=${$local.path}`));
 	}
 </script>
 

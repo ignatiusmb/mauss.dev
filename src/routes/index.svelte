@@ -1,10 +1,10 @@
 <script context="module">
 	import { compareDate } from '$lib/utils/helper';
 	export async function load({ fetch }) {
-		const quotes = fetch('quotes.json').then((r) => r.json());
+		const quotes = fetch('/quotes.json').then((r) => r.json());
 		const data = {};
 		for (const seg of ['posts', 'reviews', 'curated']) {
-			data[seg] = await fetch(`${seg}.json`).then((r) => r.json());
+			data[seg] = await fetch(`/${seg}.json`).then((r) => r.json());
 			if (seg === 'curated') data[seg].sort((x, y) => compareDate(x.date.updated, y.date.updated));
 			if (seg === 'reviews') data[seg].filter(({ rating, verdict }) => rating && verdict);
 			if (Array.isArray(data[seg])) data[seg] = data[seg].slice(0, 4);
@@ -17,9 +17,9 @@
 <script>
 	export let data, quotes;
 	const section = {
-		posts: { heading: 'Recent Posts 📚', desc: "What's on my mind (or life) recently:" },
-		reviews: { heading: 'Recent Reviews ⭐', desc: "Contents I've been reviewing recently:" },
-		curated: { heading: 'Recently Curated ⚖️', desc: "Stuffs I've been curating recently:" },
+		posts: { heading: '📚 Recent Posts', desc: "What's on my mind (or life)" },
+		reviews: { heading: '⭐ Recent Reviews', desc: "Contents I've been reviewing" },
+		curated: { heading: '⚖️ Recently Curated', desc: "Stuffs I've been curating" },
 	};
 
 	import { Link, Image } from 'svelement';
@@ -52,7 +52,7 @@
 
 <Article>
 	<header slot="header">
-		<Link href="about">
+		<Link href="/about">
 			<div class="dashed-border" />
 			<Image src="/assets/profile/mauss.jpeg" alt="DevMauss Profile" ratio={1} />
 		</Link>
@@ -82,17 +82,17 @@
 			love, that's why I'm passionate about my websites. I also like to build things IRL.
 		</p>
 		<br />
-		<Link href="about">More info...</Link>
+		<Link href="/about">More info...</Link>
 	</section>
 
 	{#each Object.keys(data) as seg}
 		<section>
 			<h2>{section[seg]['heading']}</h2>
-			<p>{section[seg]['desc']}</p>
+			<p>{section[seg]['desc']} recently:</p>
 			<ul>
 				{#each data[seg] as { slug, title }}
 					<li>
-						<Link href="{seg}/{slug}">
+						<Link href="/{seg}/{slug}">
 							{typeof title === 'string' ? title : title.short || title.en}
 						</Link>
 					</li>

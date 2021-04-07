@@ -26,7 +26,7 @@
 			<span>⭐ {post.rating || '~'}</span>
 		</small>
 		<Verdict {verdict} />
-		<ButtonLink href="reviews/{post.slug}" {disabled}>
+		<ButtonLink href="/reviews/{post.slug}" {disabled}>
 			{disabled ? 'Work-in-Progress' : 'read'}
 		</ButtonLink>
 	</aside>
