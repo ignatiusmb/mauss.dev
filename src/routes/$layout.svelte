@@ -8,7 +8,7 @@
 	import Navigation from '$lib/components/Navigation.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 
-	import '@ignatiusmb/aqua/lib/aqua.cbs';
+	import '@ignatiusmb/aqua/lib/aqua.cbs.js';
 	import '@ignatiusmb/aqua/lib/aqua.min.css';
 	import '$lib/styles/fonts.css';
 	import '$lib/styles/theme.css';
