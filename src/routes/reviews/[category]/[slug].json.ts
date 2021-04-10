@@ -1,14 +1,14 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import type { Review } from '$lib/utils/types';
 import { checkNum } from 'mauss/utils';
-import { marker, parseFile } from 'marqua';
+import { marker, compile } from 'marqua';
 import { countAverageRating, contentParser } from '$lib/utils/article';
 
 export const get: RequestHandler = async ({ params }) => {
 	const { category, slug } = params;
 	const filepath = `content/reviews/${category}/${slug}.md`;
 
-	const body = parseFile<Review>(filepath, ({ frontMatter, content }) => {
+	const body = compile<Review>(filepath, ({ frontMatter, content }) => {
 		const review = { slug: `${category}/${slug}`, category, ...frontMatter };
 
 		const dStart = +new Date(frontMatter.date.updated || frontMatter.date.published);

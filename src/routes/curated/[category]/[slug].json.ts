@@ -2,7 +2,7 @@ import type { RequestHandler } from '@sveltejs/kit';
 import type { Curated } from '$lib/utils/types';
 import TexMath from 'markdown-it-texmath';
 import KaTeX from 'katex';
-import { marker, parseFile } from 'marqua';
+import { marker, compile } from 'marqua';
 
 marker.use(TexMath, {
 	engine: KaTeX,
@@ -17,7 +17,7 @@ export const get: RequestHandler = async ({ params }) => {
 	const { category, slug } = params;
 	const filepath = `content/curated/${category}/${slug}.md`;
 
-	const body = parseFile<Curated>(filepath, ({ frontMatter, content }) => {
+	const body = compile<Curated>(filepath, ({ frontMatter, content }) => {
 		return { slug: `${category}/${slug}`, ...frontMatter, category, content };
 	});
 

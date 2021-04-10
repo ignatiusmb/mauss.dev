@@ -1,9 +1,9 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import { isExists } from 'mauss/guards';
-import { parseDir } from 'marqua';
+import { traverse } from 'marqua';
 
 export const get: RequestHandler = async () => {
-	const excerpts = parseDir<{ author: string; lines: string[] }>(
+	const excerpts = traverse<{ author: string; lines: string[] }>(
 		'content/quotes',
 		({ content, filename }) => ({
 			author: filename.split('.')[0].replace('-', ' '),

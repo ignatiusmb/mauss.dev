@@ -2,7 +2,7 @@ import type { RequestHandler } from '@sveltejs/kit';
 import type { Curated, Post, Review } from '$lib/utils/types';
 import type { RSSItem } from '$lib/utils/rss';
 import { readdirSync } from 'fs';
-import { parseDir } from 'marqua';
+import { traverse } from 'marqua';
 import { sortCompare } from '$lib/utils/helper';
 import RSS from '$lib/utils/rss';
 
@@ -16,7 +16,7 @@ const channel = {
 function flatScan<T extends Curated | Review>(path: string): RSSItem[] {
 	const dirs = readdirSync(`content/${path}`).filter((folder) => !/draft/.test(folder));
 	return dirs.flatMap((folder) =>
-		parseDir<T, RSSItem>(
+		traverse<T, RSSItem>(
 			`content/${path}/${folder}`,
 			({ frontMatter: { title, date }, filename }) => ({
 				title: typeof title === 'string' ? title : title.en,
@@ -32,7 +32,7 @@ function flatScan<T extends Curated | Review>(path: string): RSSItem[] {
 const items = [
 	...flatScan<Curated>('curated'),
 	...flatScan<Review>('reviews'),
-	...parseDir<Post, RSSItem>(
+	...traverse<Post, RSSItem>(
 		'content/posts',
 		({ frontMatter: { title, description: info, date: dt }, filename }) => {
 			const [published, slug] = filename.split('.');

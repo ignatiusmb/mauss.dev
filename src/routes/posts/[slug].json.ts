@@ -1,10 +1,10 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import type { Post } from '$lib/utils/types';
-import { parseDir } from 'marqua';
+import { traverse } from 'marqua';
 
 export const get: RequestHandler = async ({ params }) => {
 	const { slug } = params;
-	const body = parseDir<Post>('content/posts', ({ frontMatter, content, filename }) => {
+	const body = traverse<Post>('content/posts', ({ frontMatter, content, filename }) => {
 		const [published, filename_slug] = filename.split('.');
 		if (filename_slug !== slug) return undefined;
 		const date = { published, updated: frontMatter.date && frontMatter.date.updated };

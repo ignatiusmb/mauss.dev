@@ -1,11 +1,6 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import { parseFile } from 'marqua';
+import { compile } from 'marqua';
 
 export const get: RequestHandler = async () => {
-	const body = parseFile<{ title: string }>('content/help.md', ({ frontMatter, content }) => ({
-		...frontMatter,
-		content,
-	}));
-
-	return { body };
+	return { body: compile('content/help.md') };
 };
