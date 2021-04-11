@@ -64,18 +64,5 @@
 		</section>
 	{/if}
 
-	{#if post.toc.length}
-		<section id="objective" class="info-box">
-			<h3>Outline & Focus</h3>
-			<ul>
-				{#each post.toc as { id, cleaned }}
-					<li style="color: #f48fb1">
-						<Link href="#{id}" inherit>{cleaned}</Link>
-					</li>
-				{/each}
-			</ul>
-		</section>
-	{/if}
-
 	{@html post.content}
 </Article>

@@ -29,18 +29,5 @@
 		{/if}
 	</slot>
 
-	{#if post.toc.length}
-		<section id="objective" class="info-box">
-			<h3>Quick Links</h3>
-			<ul>
-				{#each post.toc as { id, cleaned }}
-					<li style="color: #f48fb1">
-						<Link href="#{id}" inherit>{cleaned}</Link>
-					</li>
-				{/each}
-			</ul>
-		</section>
-	{/if}
-
 	{@html content}
 </Article>

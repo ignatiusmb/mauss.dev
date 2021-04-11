@@ -42,10 +42,23 @@
 		<slot name="header" />
 	{/if}
 
+	{#if post.toc.length}
+		<section id="objective" class="info-box">
+			<h3>Table of Contents</h3>
+			<ul>
+				{#each post.toc as { id, title }}
+					<li style="color: #f48fb1">
+						<Link href="#{id}" inherit>{title}</Link>
+					</li>
+				{/each}
+			</ul>
+		</section>
+	{/if}
+
 	<slot />
 
 	{#if path}
-		<section>
+		<section id="end-card">
 			<p>
 				Find an issue with this post? Have something to add, update, or clarify? All my posts here
 				are editable.
@@ -122,7 +135,7 @@
 	main > :global(section:first-of-type) {
 		margin-top: 4em;
 	}
-	section {
+	main section#end-card {
 		padding: 0.4em 0.8em;
 		border-left: 2px solid var(--theme-secondary);
 		background-color: rgba(0, 0, 0, 0.05);
