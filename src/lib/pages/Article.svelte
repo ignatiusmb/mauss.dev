@@ -42,7 +42,7 @@
 		<slot name="header" />
 	{/if}
 
-	{#if post.toc.length}
+	{#if post && post.toc.length}
 		<section id="objective" class="info-box">
 			<h3>Table of Contents</h3>
 			<ul>
