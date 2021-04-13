@@ -4,7 +4,7 @@ import { traverse } from 'marqua';
 
 export const get: RequestHandler = async () => {
 	const excerpts = traverse<{ author: string; lines: string[] }>(
-		'content/quotes',
+		'content/src/quotes',
 		({ content, filename }) => ({
 			author: filename.split('.')[0].replace('-', ' '),
 			lines: content.split(/\r?\n/).filter(isExists),

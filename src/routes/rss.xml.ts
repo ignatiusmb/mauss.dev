@@ -33,7 +33,7 @@ const items = [
 	...flatScan<Curated>('curated'),
 	...flatScan<Review>('reviews'),
 	...traverse<Post, RSSItem>(
-		'content/posts',
+		'content/src/posts',
 		({ frontMatter: { title, description: info, date: dt }, filename }) => {
 			const [published, slug] = filename.split('.');
 			const description = info || 'A post by DevMauss';

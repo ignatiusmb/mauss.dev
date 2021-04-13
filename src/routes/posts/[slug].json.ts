@@ -4,12 +4,12 @@ import { traverse } from 'marqua';
 
 export const get: RequestHandler = async ({ params }) => {
 	const { slug } = params;
-	const body = traverse<Post>('content/posts', ({ frontMatter, content, filename }) => {
+	const [body] = traverse<Post>('content/src/posts', ({ frontMatter, content, filename }) => {
 		const [published, filename_slug] = filename.split('.');
 		if (filename_slug !== slug) return undefined;
 		const date = { published, updated: frontMatter.date && frontMatter.date.updated };
 		return { slug, ...frontMatter, category: frontMatter.tags[0], date, content };
-	})[0];
+	});
 
 	return { body };
 };

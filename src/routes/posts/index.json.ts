@@ -6,7 +6,7 @@ import { traverse } from 'marqua';
 import { fillSiblings } from '$lib/utils/article';
 
 export const get: RequestHandler = async () => {
-	const posts = traverse<Post>('content/posts', ({ frontMatter, filename }) => {
+	const posts = traverse<Post>('content/src/posts', ({ frontMatter, filename }) => {
 		const [published, slug] = filename.split('.');
 		const [category] = frontMatter.tags;
 

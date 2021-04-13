@@ -9,7 +9,7 @@ import { countAverageRating, fillSiblings } from '$lib/utils/article';
 const check = ({ rating, verdict }: Review) => !rating || verdict < -1;
 
 export const get: RequestHandler = async () => {
-	const DIR = 'content/reviews';
+	const DIR = 'content/src/reviews';
 	const reviews = readdirSync(DIR).flatMap(
 		(folder) => <(false | Review)[]>(!/draft/.test(folder) &&
 				traverse<Review>(`${DIR}/${folder}`, ({ frontMatter, filename }) => ({
