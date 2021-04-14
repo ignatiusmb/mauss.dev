@@ -38,21 +38,21 @@
 		<Header {post} {path}>
 			<slot name="header" />
 		</Header>
+
+		{#if post && post.toc.length}
+			<section id="objective" class="info-box">
+				<h3>Table of Contents</h3>
+				<ul>
+					{#each post.toc as { id, title }}
+						<li style="color: #f48fb1">
+							<Link href="#{id}" inherit>{title}</Link>
+						</li>
+					{/each}
+				</ul>
+			</section>
+		{/if}
 	{:else}
 		<slot name="header" />
-	{/if}
-
-	{#if post && post.toc.length}
-		<section id="objective" class="info-box">
-			<h3>Table of Contents</h3>
-			<ul>
-				{#each post.toc as { id, title }}
-					<li style="color: #f48fb1">
-						<Link href="#{id}" inherit>{title}</Link>
-					</li>
-				{/each}
-			</ul>
-		</section>
 	{/if}
 
 	<slot />
