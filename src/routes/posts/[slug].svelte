@@ -1,6 +1,7 @@
 <script context="module">
-	export async function load({ fetch, page: { path } }) {
-		const res = await fetch(`/${page.path}.json`);
+	export async function load({ fetch, page }) {
+		const { slug } = page.params;
+		const res = await fetch(`/posts/${slug}.json`);
 		if (!res.ok) return { status: 404, error: 'Post not found' };
 		const post = await res.json();
 

@@ -1,8 +1,8 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import type { Curated } from '$lib/utils/types';
+import { marker, compile } from 'marqua';
 import TexMath from 'markdown-it-texmath';
 import KaTeX from 'katex';
-import { marker, compile } from 'marqua';
 
 marker.use(TexMath, {
 	engine: KaTeX,

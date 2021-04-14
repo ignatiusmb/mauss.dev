@@ -1,8 +1,9 @@
 <script context="module">
-	export async function load({ fetch, page: { params } }) {
+	export async function load({ fetch, page }) {
+		const { category } = page.params;
 		const list = await fetch('/curated.json').then((r) => r.json());
-		const data = list.filter((p) => p.category === params.category);
-		return { props: { category: params.category, data } };
+		const data = list.filter((p) => p.category === category);
+		return { props: { category, data } };
 	}
 </script>
 
