@@ -1,3 +1,7 @@
+<script context="module">
+	export const load = (props) => ({ props });
+</script>
+
 <script>
 	export let status, error;
 </script>
