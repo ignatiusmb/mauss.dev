@@ -1,8 +1,9 @@
 <script context="module">
-	export async function load({ fetch, page: { path } }) {
-		const res = await fetch(`${path}.json`);
-		if (!res.ok) return { status: 404, error: 'Curated post not found' };
-		return { props: { post: await res.json() } };
+	export async function load({ context: post }) {
+		if (!Object.keys(post).length) {
+			return { status: 404, error: 'Curated post not found' };
+		}
+		return { props: { post } };
 	}
 </script>
 

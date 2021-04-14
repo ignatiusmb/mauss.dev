@@ -1,6 +1,6 @@
 <script context="module">
-	export async function load({ fetch, page: { path } }) {
-		const data = await fetch(`${path}.json`).then((r) => r.json());
+	export async function load({ context }) {
+		const data = Object.values(context); // gets serialized into object
 		const tags = [...new Set(data.flatMap((p) => p.tags))].sort();
 		const categories = [...new Set(data.map((p) => p.tags[0]))].sort();
 		const sort_by = { updated: 'Last Updated', published: 'Last Published' };

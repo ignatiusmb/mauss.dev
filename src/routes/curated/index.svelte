@@ -1,6 +1,6 @@
 <script context="module">
-	export async function load({ fetch, page: { path } }) {
-		const data = await fetch(`${path}.json`).then((r) => r.json());
+	export async function load({ context }) {
+		const data = Object.values(context);
 		return { props: { data } };
 	}
 </script>

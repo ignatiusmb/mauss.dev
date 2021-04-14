@@ -1,11 +1,11 @@
 <script context="module">
-	export async function load({ fetch, page: { path } }) {
-		const list = fetch('/posts.json').then((r) => r.json());
-		const res = await fetch(`${path}.json`);
-		if (!res.ok) return { status: 404, error: 'Post not found' };
+	export async function load({ fetch, page: { path }, context: post }) {
+		if (!Object.keys(post).length) {
+			return { status: 404, error: 'Post not found' };
+		}
 
-		const post = await res.json();
-		for (const review of await list) {
+		const list = await fetch('/posts.json');
+		for (const review of await list.json()) {
 			if (review.slug !== post.slug) continue;
 			post.siblings = review.siblings;
 			return { props: { post } };

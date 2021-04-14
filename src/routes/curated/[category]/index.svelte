@@ -1,5 +1,5 @@
 <script context="module">
-	export async function load({ fetch, page: { path, params } }) {
+	export async function load({ fetch, page: { params } }) {
 		const list = await fetch('/curated.json').then((r) => r.json());
 		const data = list.filter((p) => p.category === params.category);
 		return { props: { category: params.category, data } };

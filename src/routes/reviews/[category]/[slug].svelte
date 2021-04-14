@@ -1,19 +1,20 @@
 <script context="module">
-	export async function load({ page: { path }, fetch }) {
-		const list = fetch('/reviews.json').then((r) => r.json());
-		const res = await fetch(`${path}.json`);
-		if (!res.ok) return { status: 404, error: 'Review not found' };
+	export async function load({ fetch, context: post }) {
+		if (!Object.keys(post).length) {
+			return { status: 404, error: 'Review not found' };
+		}
 
-		const post = await res.json();
-		for (const review of await list) {
+		const list = await fetch('/reviews.json');
+		for (const review of await list.json()) {
 			if (review.slug !== post.slug) continue;
 			post.siblings = review.siblings;
 			return { props: { post } };
 		}
 	}
-	const linkMap = {
-		mal: 'MyAnimeList',
-	};
+	const links = new Map([
+		['mal', 'MyAnimeList'],
+		['tmdb', 'TheMovieDB'],
+	]);
 </script>
 
 <script>
@@ -43,7 +44,7 @@
 				<span>[</span>
 				{#each Object.entries(post.link) as [key, href]}
 					<span>
-						<Link {href}>{linkMap[key]}</Link>
+						<Link {href}>{links.get(key)}</Link>
 					</span>
 				{/each}
 				<span>]</span>
