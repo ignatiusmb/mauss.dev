@@ -37,7 +37,7 @@
 <Footer />
 
 <style>
-	:global(#svelte) {
+	:global(body) {
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
