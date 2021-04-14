@@ -3,11 +3,9 @@ import { traverse } from 'marqua';
 
 type About = { slug: string; title: string; date: { updated: string } };
 
-export const get: RequestHandler = async () => {
-	const body = traverse<About>('content/src/about', ({ frontMatter, content, filename }) => {
+export const get: RequestHandler = async ({ context: { entry } }) => ({
+	body: traverse<About>(entry, ({ frontMatter, content, filename }) => {
 		const [slug] = filename.split('.');
 		return { ...frontMatter, slug, content };
-	}).reduce((acc, { slug, ...res }) => ({ ...acc, [slug]: res }), {});
-
-	return { body };
-};
+	}).reduce((acc, { slug, ...res }) => ({ ...acc, [slug]: res }), {}),
+});

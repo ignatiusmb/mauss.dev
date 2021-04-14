@@ -14,10 +14,10 @@ const channel = {
 };
 
 function flatScan<T extends Curated | Review>(path: string): RSSItem[] {
-	const dirs = readdirSync(`content/${path}`).filter((folder) => !/draft/.test(folder));
+	const dirs = readdirSync(`content/src/${path}`).filter((folder) => !/draft/.test(folder));
 	return dirs.flatMap((folder) =>
 		traverse<T, RSSItem>(
-			`content/${path}/${folder}`,
+			`content/src/${path}/${folder}`,
 			({ frontMatter: { title, date }, filename }) => ({
 				title: typeof title === 'string' ? title : title.en,
 				slug: `${path}/${folder}/${filename.split('.')[0]}`,

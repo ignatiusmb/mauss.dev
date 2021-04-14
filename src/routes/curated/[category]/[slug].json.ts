@@ -13,13 +13,8 @@ marker.use(TexMath, {
 	},
 });
 
-export const get: RequestHandler = async ({ params }) => {
-	const { category, slug } = params;
-	const filepath = `content/curated/${category}/${slug}.md`;
-
-	const body = compile<Curated>(filepath, ({ frontMatter, content }) => {
+export const get: RequestHandler = async ({ params: { category, slug }, context }) => ({
+	body: compile<Curated>(`${context.entry}.md`, ({ frontMatter, content }) => {
 		return { slug: `${category}/${slug}`, ...frontMatter, category, content };
-	});
-
-	return { body };
-};
+	}),
+});

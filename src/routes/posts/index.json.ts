@@ -5,8 +5,8 @@ import { join } from 'path';
 import { traverse } from 'marqua';
 import { fillSiblings } from '$lib/utils/article';
 
-export const get: RequestHandler = async () => {
-	const posts = traverse<Post>('content/src/posts', ({ frontMatter, filename }) => {
+export const get: RequestHandler = async ({ context: { entry } }) => {
+	const posts = traverse<Post>(entry, ({ frontMatter, filename }) => {
 		const [published, slug] = filename.split('.');
 		const [category] = frontMatter.tags;
 

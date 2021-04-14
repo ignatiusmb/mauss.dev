@@ -1,14 +1,15 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import type { Review } from '$lib/utils/types';
+import { existsSync } from 'fs';
 import { checkNum } from 'mauss/utils';
 import { marker, compile } from 'marqua';
 import { countAverageRating, contentParser } from '$lib/utils/article';
 
-export const get: RequestHandler = async ({ params }) => {
-	const { category, slug } = params;
-	const filepath = `content/reviews/${category}/${slug}.md`;
+export const get: RequestHandler = async ({ params, context: { entry } }) => {
+	if (!existsSync(`${entry}.md`)) return { status: 404 };
 
-	const body = compile<Review>(filepath, ({ frontMatter, content }) => {
+	const { category, slug } = params;
+	const body = compile<Review>(`${entry}.md`, ({ frontMatter, content }) => {
 		const review = { slug: `${category}/${slug}`, category, ...frontMatter };
 
 		const dStart = +new Date(frontMatter.date.updated || frontMatter.date.published);
