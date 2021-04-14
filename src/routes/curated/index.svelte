@@ -1,7 +1,7 @@
 <script context="module">
-	export async function load({ context }) {
-		const data = Object.values(context);
-		return { props: { data } };
+	export async function load({ fetch }) {
+		const res = await fetch('/curated.json');
+		return { props: { data: await res.json() } };
 	}
 </script>
 

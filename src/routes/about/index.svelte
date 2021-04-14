@@ -1,9 +1,10 @@
 <script context="module">
-	export async function load({ context }) {
+	export async function load({ fetch }) {
+		const articles = await fetch('/about.json').then((r) => r.json());
 		return {
 			props: {
-				post: context.index,
-				sections: Object.keys(context).filter((e) => e !== 'index'),
+				post: articles.index,
+				sections: Object.keys(articles).filter((e) => e !== 'index'),
 			},
 		};
 	}

@@ -1,8 +1,8 @@
 <script context="module">
-	export async function load({ fetch, page: { path }, context: post }) {
-		if (!Object.keys(post).length) {
-			return { status: 404, error: 'Post not found' };
-		}
+	export async function load({ fetch, page: { path } }) {
+		const res = await fetch(`/${page.path}.json`);
+		if (!res.ok) return { status: 404, error: 'Post not found' };
+		const post = await res.json();
 
 		const list = await fetch('/posts.json');
 		for (const review of await list.json()) {

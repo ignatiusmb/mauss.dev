@@ -1,11 +1,3 @@
-<script context="module">
-	export async function load({ fetch, page }) {
-		const res = await fetch(`${page.path}.json`);
-		if (!res.ok) return {};
-		return { context: await res.json() };
-	}
-</script>
-
 <script>
 	import { post } from 'mauss/api';
 	import { browser, dev } from '$app/env';
