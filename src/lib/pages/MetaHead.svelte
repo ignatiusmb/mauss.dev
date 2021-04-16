@@ -54,8 +54,8 @@
 		{#if social.twitter}
 			<meta name="generator" content="Ignatius on SvelteKit!" />
 			<meta name="twitter:card" content="summary" />
-			<meta name="twitter:site" content="@ignatiusmbs" />
-			<meta name="twitter:creator" content="@ignatiusmbs" />
+			<meta name="twitter:site" content="@devmauss" />
+			<meta name="twitter:creator" content="@devmauss" />
 			{#if url}
 				<meta name="twitter:url" content={url} />
 			{/if}
