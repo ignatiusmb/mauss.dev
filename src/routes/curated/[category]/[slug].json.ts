@@ -8,8 +8,7 @@ marker.use(TexMath, {
 	engine: KaTeX,
 	delimiters: 'dollars',
 	katexOptions: {
-		throwOnError: true,
-		macros: { '\\RR': '\\mathbb{R}' },
+		strict: (code: string) => (code === 'newLineInDisplayMode' ? 'ignore' : 'warn'),
 	},
 });
 
