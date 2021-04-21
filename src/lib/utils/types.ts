@@ -4,13 +4,10 @@ export interface I18nData {
 	jp?: string;
 }
 
-export interface ArticleDate {
-	author?: { name?: string; img?: string; link?: string };
-	published?: string;
-	updated?: string;
-}
-
 export interface Child {
+	author?: { name?: string; img?: string; link?: string };
+
+	/** Main Properties */
 	slug?: string;
 	title: string | I18nData;
 	siblings: {

@@ -1,6 +1,6 @@
 <script>
 	export let path = null;
-	export let post;
+	export let post = {};
 	const size = 16;
 
 	import * as Feather from 'svelement/icons/feather';
@@ -8,8 +8,8 @@
 	import { createPrettyDate } from '$lib/utils/helper';
 	import TextIcon from '$lib/components/TextIcon.svelte';
 
-	$: ({ author, published, updated } = post.date || {});
-	$: ({ name, img, link } = author || {});
+	$: ({ author = {}, date = {} } = post);
+	$: ({ published, updated } = date);
 	$: pretty = {
 		published: createPrettyDate(published),
 		updated: createPrettyDate(updated),
@@ -26,11 +26,11 @@
 	{/if}
 
 	<small>
-		<Link href={link || '/about'}>
-			<img src={img || '/assets/profile/mauss.jpeg'} alt="author profile" />
+		<Link href={author.link || '/about'}>
+			<img src={author.img || '/assets/profile/mauss.jpeg'} alt="author profile" />
 		</Link>
 		<div class="details">
-			<span style="font-weight: bolder">{name || 'Ignatius Bagussuputra'}</span>
+			<span style="font-weight: bolder">{author.name || 'Ignatius Bagussuputra'}</span>
 
 			{#if published}
 				<div>
