@@ -1,16 +1,20 @@
 <script context="module">
 	import { compareDate } from '$lib/utils/helper';
 	export async function load({ fetch }) {
-		const quotes = fetch('/quotes.json').then((r) => r.json());
-		const data = {};
-		for (const seg of ['posts', 'reviews', 'curated']) {
-			data[seg] = await fetch(`/${seg}.json`).then((r) => r.json());
-			if (seg === 'curated') data[seg].sort((x, y) => compareDate(x.date.updated, y.date.updated));
-			if (seg === 'reviews') data[seg].filter(({ rating, verdict }) => rating && verdict);
-			if (Array.isArray(data[seg])) data[seg] = data[seg].slice(0, 4);
-		}
+		const quotes = await fetch('/quotes.json').then((r) => r.json());
+		const data = {
+			posts: (await fetch('/posts.json').then((r) => r.json())).slice(0, 4),
+			reviews: (await fetch('/reviews.json').then((r) => r.json()))
+				.filter((x) => x.rating && x.verdict !== -2)
+				.slice(0, 4),
+			curated: (await fetch('/curated.json').then((r) => r.json()))
+				.sort((x, y) => compareDate(x.date.updated, y.date.updated))
+				.slice(0, 4),
+		};
 
-		return { props: { data, quotes: await quotes } };
+		return {
+			props: { data, quotes: quotes.slice(0, quotes.length / 2) },
+		};
 	}
 </script>
 
@@ -23,20 +27,12 @@
 	};
 
 	import { Link, Image } from 'svelement';
-	import { random } from 'mauss/utils';
 	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import Article from '$lib/pages/Article.svelte';
 	import Quote from '$lib/components/Quote.svelte';
 	import Navigation from '$lib/components/Navigation.svelte';
 
-	let quoteIndex = random.int(quotes.length);
 	let scrollY, innerHeight;
-	const getNewQuote = () => {
-		let newIndex;
-		do newIndex = random.int(quotes.length);
-		while (newIndex === quoteIndex);
-		quoteIndex = newIndex;
-	};
 	$: scrolled = +(scrollY >= innerHeight * 0.6);
 </script>
 
@@ -58,28 +54,18 @@
 		</Link>
 		<h2>Ignatius Bagussuputra</h2>
 		<span>Developer on Weekdays, Avid Writer on Weekends</span>
-		<h3>I can make any design come true</h3>
+		<h3>I make stuff</h3>
 
-		{#each [quotes[quoteIndex]] as { author, quote, from }}
-			<Quote {author} on:click={getNewQuote}>
-				<p>{quote}</p>
-				{#if from}
-					<p class="from">{from}</p>
-				{/if}
-			</Quote>
-		{/each}
+		<Quote {quotes} />
 	</header>
 
 	<section>
-		<h2>About Me</h2>
+		<h2>👋 About Me</h2>
+		<p>Hello! My name's Ignatius, an undergraduate CS student.</p>
 		<p>
-			Hey there 👋! My name is Ignatius Bagussuputra, a student at the University of Indonesia
-			pursuing a Computer Science degree.
-		</p>
-		<p>
-			Have been developing since I started college, I love Open Source and enjoy making applications
-			I think would be helpful or especially useful for me. Building interfaces is also something I
-			love, that's why I'm passionate about my websites. I also like to build things IRL.
+			I've been developing ever since I started college. I enjoy creating stuff that makes life
+			easier, I'm also an Open Source enthusiast. I'm also passionate about my websites and just
+			beautiful interfaces in general. I also like to build things IRL.
 		</p>
 		<br />
 		<Link href="/about">More info...</Link>
