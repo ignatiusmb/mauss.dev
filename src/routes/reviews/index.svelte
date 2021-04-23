@@ -48,11 +48,7 @@
 	import ReviewCard from '$lib/components/ReviewCard.svelte';
 	import PerspectiveCarousel from '$lib/components/PerspectiveCarousel.svelte';
 
-	let filters = { categories: [], genres: [], verdict: [], sort_by: 'updated' },
-		view = 'grid';
-	const changeView = (name) => () => (view = name);
-	$: bound = view === 'grid' ? 12 : 3;
-	$: increment = view === 'carousel' ? 1 : bound;
+	let filters = { categories: [], genres: [], verdict: [], sort_by: 'updated' };
 	$: filtered = sieve(filters, data);
 	$: items = query ? sift(query, filtered) : filtered;
 </script>
@@ -64,48 +60,20 @@
 	<link rel="alternate" href="/rss.xml" type="application/rss+xml" />
 </MetaHead>
 
-<LayoutPicker header {view}>
-	<header slot="header">
+<LayoutPicker header>
+	<svelte:fragment slot="header">
 		<h1>DevMauss Reviews</h1>
-
 		<SearchBar bind:query bind:filters {unique} />
+		<Pagination {store} {items} bound={12} increment={12} />
+	</svelte:fragment>
 
-		{#if view !== 'scrollsnap'}
-			<Pagination {store} {items} {bound} {increment} />
-		{/if}
-	</header>
-
-	<aside slot="picker">
-		<button class:active={view === 'grid'} on:click={changeView(view)}><Grid /></button>
-		<button class:active={view === 'carousel'} on:click={changeView(view)}><Layers /></button>
-		<button class:active={view === 'scrollsnap'} on:click={changeView(view)}><Columns /></button>
-	</aside>
-
-	{#if view === 'grid'}
-		{#each $store as post (post.slug)}
-			<div animate:flip={{ duration }} transition:scale|local={{ duration }}>
-				<ReviewCard {post} />
-			</div>
-		{:else}
-			<h2>There are no matching {query ? 'titles' : 'filters'}</h2>
-		{/each}
-	{:else if view === 'carousel'}
-		<PerspectiveCarousel>
-			{#each $store as post, idx (post.slug)}
-				<div class:translate-left={idx === 0} class:translate-right={idx === 2}>
-					<ReviewCard {post} />
-				</div>
-			{/each}
-		</PerspectiveCarousel>
-	{:else if view === 'scrollsnap'}
-		<div class="empty" />
-		{#each items as post (post.slug)}
-			<div animate:flip={{ duration }}>
-				<ReviewCard {post} />
-			</div>
-		{/each}
-		<div class="empty" />
-	{/if}
+	{#each $store as post (post.slug)}
+		<div animate:flip={{ duration }} transition:scale|local={{ duration }}>
+			<ReviewCard {post} />
+		</div>
+	{:else}
+		<h2>There are no matching {query ? 'titles' : 'filters'}</h2>
+	{/each}
 </LayoutPicker>
 
 <style>

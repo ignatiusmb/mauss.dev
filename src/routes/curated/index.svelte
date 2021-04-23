@@ -30,12 +30,12 @@
 	<link rel="alternate" href="/rss.xml" type="application/rss+xml" />
 </MetaHead>
 
-<LayoutPicker header view="grid" itemSize="18em">
-	<header slot="header">
+<LayoutPicker header itemSize="18em">
+	<svelte:fragment slot="header">
 		<h1>Curated by DevMauss</h1>
 		<SearchBar bind:query />
 		<Pagination {store} {items} bound={8} />
-	</header>
+	</svelte:fragment>
 
 	<AnimatedKey items={$store} component={CuratedPost} />
 </LayoutPicker>
