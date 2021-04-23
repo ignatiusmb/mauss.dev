@@ -1,7 +1,7 @@
 <script>
 	export let quotes;
-	import { fly } from 'svelte/transition';
 	import { random } from 'mauss/utils';
+	import { fly } from 'svelte/transition';
 	import { GradientBorder } from 'svelement';
 
 	let quoteIndex = random.int(quotes.length);

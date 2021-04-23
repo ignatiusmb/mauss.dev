@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { I18nData, SieveDict } from './types';
+import { compare as c } from 'mauss';
 import { isExists } from 'mauss/guards';
-import { compareDate, sortCompare } from './helper';
+import { sortCompare } from './helper';
 
 const exists = (source: string | any, query: string | any): boolean =>
 	typeof source !== 'string' ? source === query : new RegExp(query, 'i').test(source);
@@ -26,9 +27,9 @@ const sortBy: Record<string, (x: any, y: any) => number> = {
 		const yr = Number.isNaN(+y.rating) ? +!!y.rating : y.rating;
 		return xr === yr ? sortCompare(x, y) : yr - xr;
 	},
-	seen: (x, y) => compareDate(x.last_seen, y.last_seen) || sortCompare(x, y),
-	released: (x, y) => compareDate(x.released, y.released) || sortCompare(x, y),
-	published: (x, y) => compareDate(x.date.published, y.date.published) || sortCompare(x, y),
+	seen: (x, y) => c.date(x.last_seen, y.last_seen) || sortCompare(x, y),
+	released: (x, y) => c.date(x.released, y.released) || sortCompare(x, y),
+	published: (x, y) => c.date(x.date.published, y.date.published) || sortCompare(x, y),
 };
 
 type RSA = Record<string, any>;

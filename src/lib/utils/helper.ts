@@ -1,6 +1,4 @@
-export function compareDate(x: string, y: string): number {
-	return new Date(y).getTime() - new Date(x).getTime();
-}
+import { compare } from 'mauss';
 
 type PrettyDate = { weekday: string; day: number; month: string; year: number; complete: string };
 export function createPrettyDate(date: undefined): undefined;
@@ -16,35 +14,26 @@ export function createPrettyDate(date: string | Date | undefined): PrettyDate | 
 	return { weekday, day, month, year, complete: `${day} ${month} ${year}` };
 }
 
-export function cssVars(props: Record<string, string>): string {
-	const vars = Object.entries(props).filter(([key]) => /^--/.test(key));
-	return vars.reduce((css, [key, val]) => `${css}${key}:${val};`, '');
-}
-
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function sortCompare<T extends Record<string, any>>(x: T, y: T): number {
 	if (x.date && y.date) {
 		const { updated: xu, published: xp } = x.date;
 		const { updated: yu, published: yp } = y.date;
-		if (xu !== yu) return compareDate(xu, yu);
-		if (xp !== yp) return compareDate(xp, yp);
+		if (xu !== yu) return compare.date(xu, yu);
+		if (xp !== yp) return compare.date(xp, yp);
 		if (typeof x.date === 'string' && typeof y.date === 'string')
-			if (x.date !== y.date) return compareDate(x.date, y.date);
+			if (x.date !== y.date) return compare.date(x.date, y.date);
 	}
 
 	if (x.released && y.released && x.released !== y.released)
-		return compareDate(x.released, y.released);
+		return compare.date(x.released, y.released);
 
-	if (x.author && y.author) return x.author.localeCompare(y.author);
+	if (x.author && y.author) return compare.string(x.author, y.author);
 
 	const xt = typeof x.title === 'string' && x.title;
 	const yt = typeof y.title === 'string' && y.title;
-	if (xt && yt) return x.title.localeCompare(y.title);
-	else if (xt) return x.title.localeCompare(y.title.en);
-	else if (yt) return x.title.en.localeCompare(y.title);
-	else return x.title.en.localeCompare(y.title.en);
-}
-
-export function splitAt(index: number, text: string): [string, string] {
-	return [text.slice(0, index), text.slice(index + 1)];
+	if (xt && yt) return compare.string(x.title, y.title);
+	else if (xt) return compare.string(x.title, y.title.en);
+	else if (yt) return compare.string(x.title.en, y.title);
+	else return compare.string(x.title.en, y.title.en);
 }

@@ -6,13 +6,6 @@ import { traverse } from 'marqua';
 import { sortCompare } from '$lib/utils/helper';
 import RSS from '$lib/utils/rss';
 
-const channel = {
-	domain: 'mauss.dev',
-	title: 'Ignatius Bagussuputra • DevMauss',
-	slug: '',
-	description: 'Developed by DevMauss',
-};
-
 function flatScan<T extends Curated | Review>(path: string): RSSItem[] {
 	const dirs = readdirSync(`content/src/${path}`).filter((folder) => !/draft/.test(folder));
 	return dirs.flatMap((folder) =>
@@ -21,9 +14,7 @@ function flatScan<T extends Curated | Review>(path: string): RSSItem[] {
 			({ frontMatter: { title, date }, filename }) => ({
 				title: typeof title === 'string' ? title : title.en,
 				slug: `${path}/${folder}/${filename.split('.')[0]}`,
-				description: `${typeof title === 'string' ? title : title.en} ${
-					path === 'curated' ? 'curated' : 'reviewed'
-				} by DevMauss`,
+				description: `${typeof title === 'string' ? title : title.en} ${path === 'curated' ? 'curated' : 'reviewed'} by DevMauss`, // prettier-ignore
 				date: (date.updated || date.published) as string,
 			})
 		)
@@ -42,6 +33,12 @@ const items = [
 		}
 	),
 ];
+
+const channel = {
+	domain: 'mauss.dev',
+	title: 'Ignatius Bagussuputra • DevMauss',
+	description: 'Developed by DevMauss',
+};
 
 export const get: RequestHandler = async () => ({
 	headers: { 'Content-Type': 'application/xml' },

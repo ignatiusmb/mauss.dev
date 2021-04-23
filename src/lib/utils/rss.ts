@@ -16,14 +16,14 @@ export default function RSS(channel: RSSChannel, items: RSSItem[]): string {
 	<rss version="2.0">
 	<channel>
 		<title>${clean(channel.title)}</title>
-		<link>https://${channel.domain}/${clean(channel.slug)}</link>
+		<link>https://${channel.domain}/${clean(channel.slug || '')}</link>
 		<description>${clean(channel.description)}</description>
 		<lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
 		<language>${channel.language || 'en'}</language>
 		<image>
 			<url>https://${channel.domain}/${channel.image || 'assets/favicon.ico'}</url>
 			<title>${channel.title}</title>
-			<link>https://${channel.domain}/${clean(channel.slug)}</link>
+			<link>https://${channel.domain}/${clean(channel.slug || '')}</link>
 		</image>
 		${items.map(createItem).join('')}
 	</channel>
@@ -36,7 +36,7 @@ interface RSSChannel {
 	domain: string;
 	image?: string;
 	title: string;
-	slug: string;
+	slug?: string;
 	description: string;
 	language?: string;
 }

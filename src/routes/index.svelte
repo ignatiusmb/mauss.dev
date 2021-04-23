@@ -1,5 +1,5 @@
 <script context="module">
-	import { compareDate } from '$lib/utils/helper';
+	import { compare } from 'mauss';
 	export async function load({ fetch }) {
 		const quotes = await fetch('/quotes.json').then((r) => r.json());
 		const data = {
@@ -8,7 +8,7 @@
 				.filter((x) => x.rating && x.verdict !== -2)
 				.slice(0, 4),
 			curated: (await fetch('/curated.json').then((r) => r.json()))
-				.sort((x, y) => compareDate(x.date.updated, y.date.updated))
+				.sort((x, y) => compare.date(x.date.updated, y.date.updated))
 				.slice(0, 4),
 		};
 
@@ -56,7 +56,7 @@
 		<span>Developer on Weekdays, Avid Writer on Weekends</span>
 		<h3>I make stuff</h3>
 
-		<Quote {quotes} />
+		<!-- <Quote {quotes} /> -->
 	</header>
 
 	<section>
