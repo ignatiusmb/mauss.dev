@@ -1,13 +1,13 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import type { Post } from '$lib/utils/types';
+import type { Context, Post } from '$lib/utils/types';
 import { existsSync } from 'fs';
 import { join } from 'path';
 import { traverse } from 'marqua';
 import { fillSiblings } from '$lib/utils/article';
 
-export const get: RequestHandler = async ({ context: { entry } }) => {
-	const posts = traverse<Post>(entry, ({ frontMatter, filename }) => {
-		const [published, slug] = filename.split('.');
+export const get: RequestHandler<Context> = async ({ context: { entry } }) => {
+	const posts = traverse<Post>(entry, ({ frontMatter, breadcrumb }) => {
+		const [published, slug] = breadcrumb[breadcrumb.length - 1].split('.');
 		const [category] = frontMatter.tags;
 
 		if (!frontMatter.image) {

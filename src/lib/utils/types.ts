@@ -4,6 +4,10 @@ export interface I18nData {
 	jp?: string;
 }
 
+export interface Context {
+	entry: string;
+}
+
 export interface Child {
 	author?: { name?: string; img?: string; link?: string };
 

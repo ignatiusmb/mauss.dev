@@ -1,11 +1,11 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import type { Review } from '$lib/utils/types';
+import type { Context, Review } from '$lib/utils/types';
 import { existsSync } from 'fs';
 import { checkNum } from 'mauss/utils';
 import { marker, compile } from 'marqua';
 import { countAverageRating, contentParser } from '$lib/utils/article';
 
-export const get: RequestHandler = async ({ params, context: { entry } }) => {
+export const get: RequestHandler<Context> = async ({ params, context: { entry } }) => {
 	if (!existsSync(`${entry}.md`)) return { status: 404 };
 
 	const { category, slug } = params;

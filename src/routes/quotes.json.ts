@@ -1,10 +1,12 @@
 import type { RequestHandler } from '@sveltejs/kit';
+import type { Context } from '$lib/utils/types';
 import { isExists } from 'mauss/guards';
 import { traverse } from 'marqua';
 
-export const get: RequestHandler = async ({ context: { entry } }) => {
+export const get: RequestHandler<Context> = async ({ context: { entry } }) => {
 	const body: Array<{ author: string; quote: string; from: string }> = [];
-	traverse(entry, ({ content, filename }) => {
+	traverse(entry, ({ content, breadcrumb }) => {
+		const [filename] = breadcrumb.slice(-1);
 		const author = filename.slice(0, -3).replace(/-/g, ' ');
 		for (const line of content.split(/\r?\n/).filter(isExists)) {
 			const [quote, from] = line.split('#!/');

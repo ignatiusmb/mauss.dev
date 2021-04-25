@@ -11,9 +11,9 @@ function flatScan<T extends Curated | Review>(path: string): RSSItem[] {
 	return dirs.flatMap((folder) =>
 		traverse<T, RSSItem>(
 			`content/src/${path}/${folder}`,
-			({ frontMatter: { title, date }, filename }) => ({
+			({ frontMatter: { title, date }, breadcrumb }) => ({
 				title: typeof title === 'string' ? title : title.en,
-				slug: `${path}/${folder}/${filename.split('.')[0]}`,
+				slug: `${path}/${folder}/${breadcrumb[breadcrumb.length - 1].split('.')[0]}`,
 				description: `${typeof title === 'string' ? title : title.en} ${path === 'curated' ? 'curated' : 'reviewed'} by DevMauss`, // prettier-ignore
 				date: (date.updated || date.published) as string,
 			})
@@ -25,8 +25,8 @@ const items = [
 	...flatScan<Review>('reviews'),
 	...traverse<Post, RSSItem>(
 		'content/src/posts',
-		({ frontMatter: { title, description: info, date: dt }, filename }) => {
-			const [published, slug] = filename.split('.');
+		({ frontMatter: { title, description: info, date: dt }, breadcrumb }) => {
+			const [published, slug] = breadcrumb[breadcrumb.length - 1].split('.');
 			const description = info || 'A post by DevMauss';
 			const date = ((dt && dt.updated) as string) || published;
 			return { title, slug: `posts/${slug}`, description, date };
