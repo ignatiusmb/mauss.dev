@@ -42,7 +42,7 @@
 						</time>
 					</TextIcon>
 					{#if path && (!updated || (updated && updated === published))}
-						<TextIcon href="https://github.com/ignatiusmb/mauss/edit/master/{path}">
+						<TextIcon href="https://github.com/ignatiusmb/mauss.dev/edit/master/{path}">
 							<span>Edit</span>
 							<Feather.Edit {size} />
 						</TextIcon>
@@ -53,7 +53,7 @@
 			{#if updated && updated !== published}
 				<div>
 					{#if path}
-						<TextIcon href="https://github.com/ignatiusmb/mauss/commits/master/{path}">
+						<TextIcon href="https://github.com/ignatiusmb/mauss.dev/commits/master/{path}">
 							{#if published}
 								<Feather.GitCommit {size} />
 							{:else}
@@ -67,7 +67,7 @@
 						</span>
 					{/if}
 					{#if path}
-						<TextIcon href="https://github.com/ignatiusmb/mauss/edit/master/{path}">
+						<TextIcon href="https://github.com/ignatiusmb/mauss.dev/edit/master/{path}">
 							<span>Edit</span>
 							<Feather.Edit {size} />
 						</TextIcon>
