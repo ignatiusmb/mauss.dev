@@ -1,7 +1,7 @@
-import type { GetContext } from '@sveltejs/kit';
+import type { Handle } from '@sveltejs/kit';
 
-export const getContext: GetContext = async ({ path }) => {
-	return {
-		entry: `content/src/${path.slice(1, path.lastIndexOf('.'))}`,
-	};
+export const handle: Handle = async ({ request, render }) => {
+	const { path } = request;
+	request.locals.entry = `content/src/${path.slice(1, path.lastIndexOf('.'))}`;
+	return await render(request);
 };
