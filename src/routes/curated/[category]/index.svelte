@@ -1,8 +1,11 @@
 <script context="module">
+	import { compare } from 'mauss';
 	export async function load({ fetch, page }) {
 		const { category } = page.params;
 		const list = await fetch('/curated.json').then((r) => r.json());
-		const data = list.filter((p) => p.category === category);
+		const data = list
+			.filter((p) => p.category === category)
+			.sort((x, y) => compare.date(x.date.updated, y.date.updated));
 		return { props: { category, data } };
 	}
 </script>
