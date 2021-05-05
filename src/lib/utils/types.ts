@@ -30,6 +30,10 @@ export interface Curated extends Child {
 	title: string;
 	category: string;
 	toc: Array<{ id: string; cleaned: string }>;
+	date: {
+		updated: string;
+		published?: string;
+	};
 }
 
 export interface Post extends Child {
@@ -38,6 +42,10 @@ export interface Post extends Child {
 	category: string;
 	description?: string;
 
+	date: {
+		published: string;
+		updated?: string;
+	};
 	image?: { en: string };
 }
 
@@ -49,6 +57,10 @@ export interface Review extends Child {
 	rating?: string[] | number;
 	verdict: number | string;
 
+	date: {
+		published: string;
+		updated?: string;
+	};
 	last_seen: string | Date;
 	image: {
 		en: string;
