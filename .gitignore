@@ -3,6 +3,6 @@ yarn-error.log
 .env
 
 node_modules
-.svelte
+/.svelte-kit
 /build
 /functions
