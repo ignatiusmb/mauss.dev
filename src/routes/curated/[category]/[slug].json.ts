@@ -1,5 +1,5 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import type { Context, Curated } from '$lib/utils/types';
+import type { Locals } from '$lib/utils/types';
 import { marker, compile } from 'marqua';
 import TexMath from 'markdown-it-texmath';
 import KaTeX from 'katex';
@@ -12,8 +12,8 @@ marker.use(TexMath, {
 	},
 });
 
-export const get: RequestHandler<Context> = async ({ params: { category, slug }, context }) => ({
-	body: compile<Curated>(`${context.entry}.md`, ({ frontMatter, content }) => {
+export const get: RequestHandler<Locals> = async ({ params: { category, slug }, locals }) => ({
+	body: compile(`${locals.entry}.md`, ({ frontMatter, content }) => {
 		return { slug: `${category}/${slug}`, ...frontMatter, category, content };
 	}),
 });

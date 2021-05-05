@@ -1,24 +1,33 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import type { Context, Review } from '$lib/utils/types';
-import { readdirSync } from 'fs';
-import { isExists } from 'mauss/guards';
-import { checkNum } from 'mauss/utils';
-import { traverse } from 'marqua';
+import type { Locals, Review } from '$lib/utils/types';
 import { countAverageRating, fillSiblings } from '$lib/utils/article';
+import { sortCompare } from '$lib/utils/helper';
+import { traverse, forge } from 'marqua';
+import { checkNum } from 'mauss/utils';
 
-const check = ({ rating, verdict }: Review) => !rating || verdict < -1;
+export const get: RequestHandler<Locals> = async ({ locals: { entry } }) => {
+	const config = forge.traverse({ entry, recurse: true });
+	const reviews = traverse<typeof config, Review>(config, ({ frontMatter, breadcrumb }) => {
+		const [folder, filename] = breadcrumb.slice(-2);
+		if (filename.includes('draft')) return;
+		return {
+			slug: `${folder}/${filename.split('.')[0]}`,
+			category: folder,
+			...frontMatter,
+			rating: countAverageRating(frontMatter.rating),
+			verdict: checkNum(frontMatter.verdict || -2),
+		};
+	}).sort((x, y) => {
+		const { rating: xr, verdict: xv } = x;
+		const { rating: yr, verdict: yv } = y;
+		const score = xr && xv >= -1 ? -1 : yr && yv >= -1 ? 1 : 0;
+		return score || sortCompare(x, y);
+	});
 
-export const get: RequestHandler<Context> = async ({ context: { entry } }) => {
-	const reviews = readdirSync(entry).flatMap(
-		(folder) => <(false | Review)[]>(!/draft/.test(folder) &&
-				traverse<Review>(`${entry}/${folder}`, ({ frontMatter, breadcrumb }) => ({
-					slug: `${folder}/${breadcrumb[breadcrumb.length - 1].split('.')[0]}`,
-					category: folder,
-					...frontMatter,
-					rating: countAverageRating(frontMatter.rating),
-					verdict: checkNum(frontMatter.verdict || -2),
-				})))
-	);
+	// const cutoff = reviews.findIndex((x) => !x.rating && x.verdict < -1);
+	// console.log([...reviews.slice(0, cutoff), ...reviews.slice(cutoff)]);
 
-	return { body: fillSiblings(reviews.filter(isExists), 'reviews/', check) };
+	return {
+		body: fillSiblings(reviews, 'reviews/', ({ rating, verdict }) => !rating || verdict < -1),
+	};
 };

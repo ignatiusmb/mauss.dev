@@ -1,38 +1,42 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import type { Curated, Post, Review } from '$lib/utils/types';
-import type { RSSItem } from '$lib/utils/rss';
-import { readdirSync } from 'fs';
-import { traverse } from 'marqua';
-import { sortCompare } from '$lib/utils/helper';
-import RSS from '$lib/utils/rss';
+import RSS, { RSSItem } from '$lib/utils/rss';
+import { traverse, forge } from 'marqua';
+import { compare } from 'mauss';
 
-function flatScan<T extends Curated | Review>(path: string): RSSItem[] {
-	const dirs = readdirSync(`content/src/${path}`).filter((folder) => !/draft/.test(folder));
-	return dirs.flatMap((folder) =>
-		traverse<T, RSSItem>(
-			`content/src/${path}/${folder}`,
-			({ frontMatter: { title, date }, breadcrumb }) => ({
-				title: typeof title === 'string' ? title : title.en,
-				slug: `${path}/${folder}/${breadcrumb[breadcrumb.length - 1].split('.')[0]}`,
-				description: `${typeof title === 'string' ? title : title.en} ${path === 'curated' ? 'curated' : 'reviewed'} by DevMauss`, // prettier-ignore
+const items = <RSSItem[]>traverse(
+	{ entry: 'content/src', recurse: true },
+	({ frontMatter, breadcrumb }) => {
+		if (breadcrumb[breadcrumb.length - 1].includes('draft')) return;
+
+		if (breadcrumb.includes('curated')) {
+			const { title, date } = frontMatter as Curated;
+			const [folder, filename] = breadcrumb.slice(-2);
+			return {
+				title,
+				slug: `curated/${folder}/${filename.split('.')[0]}`,
+				description: `${title} curated by DevMauss`,
 				date: (date.updated || date.published) as string,
-			})
-		)
-	);
-}
-const items = [
-	...flatScan<Curated>('curated'),
-	...flatScan<Review>('reviews'),
-	...traverse<Post, RSSItem>(
-		'content/src/posts',
-		({ frontMatter: { title, description: info, date: dt }, breadcrumb }) => {
+			};
+		} else if (breadcrumb.includes('reviews')) {
+			const { title, date } = frontMatter as Review;
+			const [folder, filename] = breadcrumb.slice(-2);
+			return {
+				title: typeof title === 'string' ? title : title.en,
+				slug: `reviews/${folder}/${filename.split('.')[0]}`,
+				description: `${typeof title === 'string' ? title : title.en} reviewed by DevMauss`,
+				date: (date.updated || date.published) as string,
+			};
+		} else if (breadcrumb.includes('posts')) {
+			const { title, description: info, date: dt } = frontMatter as Post;
 			const [published, slug] = breadcrumb[breadcrumb.length - 1].split('.');
 			const description = info || 'A post by DevMauss';
 			const date = ((dt && dt.updated) as string) || published;
 			return { title, slug: `posts/${slug}`, description, date };
-		}
-	),
-];
+		} else return;
+	},
+	forge.types<Curated | Post | Review, RSSItem>()
+).sort((x, y) => compare.date(x.date, y.date) || compare.string(x.title, y.title));
 
 const channel = {
 	domain: 'mauss.dev',
@@ -42,5 +46,5 @@ const channel = {
 
 export const get: RequestHandler = async () => ({
 	headers: { 'Content-Type': 'application/xml' },
-	body: RSS(channel, items.sort(sortCompare)),
+	body: RSS(channel, items),
 });

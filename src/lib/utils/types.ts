@@ -4,7 +4,7 @@ export interface I18nData {
 	jp?: string;
 }
 
-export interface Context {
+export interface Locals {
 	entry: string;
 }
 
@@ -14,6 +14,10 @@ export interface Child {
 	/** Main Properties */
 	slug?: string;
 	title: string | I18nData;
+	date: {
+		updated?: string;
+		published?: string;
+	};
 	siblings: {
 		prev?: { slug: string; title: string | I18nData };
 		next?: { slug: string; title: string | I18nData };
@@ -25,10 +29,6 @@ export interface Child {
 export interface Curated extends Child {
 	title: string;
 	category: string;
-	date: {
-		updated: string;
-		published?: string;
-	};
 	toc: Array<{ id: string; cleaned: string }>;
 }
 
@@ -38,10 +38,6 @@ export interface Post extends Child {
 	category: string;
 	description?: string;
 
-	date: {
-		published: string | Date;
-		updated?: string | Date;
-	};
 	image?: { en: string };
 }
 
@@ -54,10 +50,6 @@ export interface Review extends Child {
 	verdict: number | string;
 
 	last_seen: string | Date;
-	date: {
-		published: string | Date;
-		updated?: string | Date;
-	};
 	image: {
 		en: string;
 		jp?: string;

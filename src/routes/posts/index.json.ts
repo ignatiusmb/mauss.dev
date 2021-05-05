@@ -1,13 +1,16 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import type { Context, Post } from '$lib/utils/types';
+import type { Locals, Post } from '$lib/utils/types';
 import { existsSync } from 'fs';
 import { join } from 'path';
 import { traverse } from 'marqua';
 import { fillSiblings } from '$lib/utils/article';
 
-export const get: RequestHandler<Context> = async ({ context: { entry } }) => {
-	const posts = traverse<Post>(entry, ({ frontMatter, breadcrumb }) => {
-		const [published, slug] = breadcrumb[breadcrumb.length - 1].split('.');
+export const get: RequestHandler<Locals> = async ({ locals: { entry } }) => {
+	const posts = traverse<{ entry: string }, Post>(entry, ({ frontMatter, breadcrumb }) => {
+		const filename = breadcrumb[breadcrumb.length - 1];
+		if (filename.includes('draft')) return;
+
+		const [published, slug] = filename.split('.');
 		const [category] = frontMatter.tags;
 
 		if (!frontMatter.image) {
@@ -23,5 +26,7 @@ export const get: RequestHandler<Context> = async ({ context: { entry } }) => {
 		return { slug, ...frontMatter, category, date: { published, updated } };
 	});
 
-	return { body: fillSiblings(posts, 'posts/') };
+	return {
+		body: fillSiblings(posts.reverse(), 'posts/'),
+	};
 };
