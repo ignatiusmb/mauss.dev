@@ -5,6 +5,7 @@ import { checkNum } from 'mauss/utils';
 import { marker, compile } from 'marqua';
 import { countAverageRating, contentParser } from '$lib/utils/article';
 
+// @ts-expect-error: awaiting Typify from 'mauss/typings' for Review
 export const get: RequestHandler<Locals> = async ({ params, locals: { entry } }) => {
 	if (!existsSync(`${entry}.md`)) return { status: 404 };
 
@@ -15,7 +16,7 @@ export const get: RequestHandler<Locals> = async ({ params, locals: { entry } })
 		const dStart = +new Date(frontMatter.date.updated || frontMatter.date.published);
 		review.composed = (dStart - +new Date(frontMatter.last_seen)) / 24 / 60 / 60 / 1000;
 
-		const [article, closing] = ((content as unknown) as string).split(/^## \$CLOSING/m);
+		const [article, closing] = (content as unknown as string).split(/^## \$CLOSING/m);
 		if (closing) review.closing = marker.render(contentParser(review, closing));
 
 		const [summary, spoilers] = article.split(/^## \$SPOILERS/m);

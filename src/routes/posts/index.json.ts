@@ -5,6 +5,7 @@ import { join } from 'path';
 import { traverse } from 'marqua';
 import { fillSiblings } from '$lib/utils/article';
 
+// @ts-expect-error: awaiting Typify from 'mauss/typings' for Post
 export const get: RequestHandler<Locals> = async ({ locals: { entry } }) => {
 	const posts = traverse<{ entry: string }, Post>(entry, ({ frontMatter, breadcrumb }) => {
 		const filename = breadcrumb[breadcrumb.length - 1];

@@ -12,6 +12,7 @@ marker.use(TexMath, {
 	},
 });
 
+// @ts-expect-error: awaiting Typify to be merged into 'marqua'
 export const get: RequestHandler<Locals> = async ({ params: { category, slug }, locals }) => ({
 	body: compile(`${locals.entry}.md`, ({ frontMatter, content }) => {
 		return { slug: `${category}/${slug}`, ...frontMatter, category, content };

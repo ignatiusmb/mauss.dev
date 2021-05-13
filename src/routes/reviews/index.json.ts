@@ -1,10 +1,11 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import type { Locals, Review } from '$lib/utils/types';
 import { countAverageRating, fillSiblings } from '$lib/utils/article';
-import { sortCompare } from '$lib/utils/helper';
 import { traverse, forge } from 'marqua';
 import { checkNum } from 'mauss/utils';
+import { compare } from 'mauss';
 
+// @ts-expect-error: awaiting Typify from 'mauss/typings' for Review
 export const get: RequestHandler<Locals> = async ({ locals: { entry } }) => {
 	const config = forge.traverse({ entry, recurse: true });
 	const reviews = traverse<typeof config, Review>(config, ({ frontMatter, breadcrumb }) => {
@@ -17,15 +18,9 @@ export const get: RequestHandler<Locals> = async ({ locals: { entry } }) => {
 			rating: countAverageRating(frontMatter.rating),
 			verdict: checkNum(frontMatter.verdict || -2),
 		};
-	}).sort((x, y) => {
-		const { rating: xr, verdict: xv } = x;
-		const { rating: yr, verdict: yv } = y;
-		const score = xr && xv >= -1 ? -1 : yr && yv >= -1 ? 1 : 0;
-		return score || sortCompare(x, y);
-	});
-
-	// const cutoff = reviews.findIndex((x) => !x.rating && x.verdict < -1);
-	// console.log([...reviews.slice(0, cutoff), ...reviews.slice(cutoff)]);
+	}).sort((x, y) =>
+		compare.date(x.date.updated || x.date.published, y.date.updated || y.date.published)
+	);
 
 	return {
 		body: fillSiblings(reviews, 'reviews/', ({ rating, verdict }) => !rating || verdict < -1),
