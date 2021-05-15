@@ -14,10 +14,11 @@
     "check": "prettier -c src",
     "format": "prettier -w src"
   },
+  "prettier": "mauss/prettier.json",
   "dependencies": {
     "faunadb": "^4.0.2",
     "marqua": "^0.2.0",
-    "mauss": "^0.0.10",
+    "mauss": "^0.0.11",
     "svelement": "^0.0.11"
   },
   "devDependencies": {
