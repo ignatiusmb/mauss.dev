@@ -2,7 +2,7 @@ import type { RequestHandler } from '@sveltejs/kit';
 import type { Locals, Review } from '$lib/utils/types';
 import { countAverageRating, fillSiblings } from '$lib/utils/article';
 import { traverse, forge } from 'marqua';
-import { checkNum } from 'mauss/utils';
+import { tryNumber } from 'mauss/utils';
 import { compare } from 'mauss';
 
 // @ts-expect-error: awaiting Typify from 'mauss/typings' for Review
@@ -16,7 +16,7 @@ export const get: RequestHandler<Locals> = async ({ locals: { entry } }) => {
 			category: folder,
 			...frontMatter,
 			rating: countAverageRating(frontMatter.rating),
-			verdict: checkNum(frontMatter.verdict || -2),
+			verdict: tryNumber(frontMatter.verdict || -2),
 		};
 	}).sort((x, y) =>
 		compare.date(x.date.updated || x.date.published, y.date.updated || y.date.published)

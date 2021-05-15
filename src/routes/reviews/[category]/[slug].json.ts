@@ -1,14 +1,11 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import type { Locals, Review } from '$lib/utils/types';
-import { existsSync } from 'fs';
-import { checkNum } from 'mauss/utils';
-import { marker, compile } from 'marqua';
 import { countAverageRating, contentParser } from '$lib/utils/article';
+import { tryNumber } from 'mauss/utils';
+import { marker, compile } from 'marqua';
 
 // @ts-expect-error: awaiting Typify from 'mauss/typings' for Review
 export const get: RequestHandler<Locals> = async ({ params, locals: { entry } }) => {
-	if (!existsSync(`${entry}.md`)) return { status: 404 };
-
 	const { category, slug } = params;
 	const body = compile<{ entry: string }, Review>(`${entry}.md`, ({ frontMatter, content }) => {
 		const review = { slug: `${category}/${slug}`, category, ...frontMatter };
@@ -24,9 +21,9 @@ export const get: RequestHandler<Locals> = async ({ params, locals: { entry } })
 
 		review.content = contentParser(review, summary);
 		review.rating = countAverageRating(frontMatter.rating);
-		review.verdict = checkNum(frontMatter.verdict || -2);
+		review.verdict = tryNumber(frontMatter.verdict || -2);
 		return review;
 	});
 
-	return { body };
+	return body ? { body } : { status: 404 };
 };

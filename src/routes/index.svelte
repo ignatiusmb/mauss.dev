@@ -56,7 +56,7 @@
 		<span>Developer on Weekdays, Avid Writer on Weekends</span>
 		<h3>I make stuff</h3>
 
-		<!-- <Quote {quotes} /> -->
+		<Quote {quotes} />
 	</header>
 
 	<section>

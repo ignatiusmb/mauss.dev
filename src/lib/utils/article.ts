@@ -1,5 +1,5 @@
 import type { Child } from '$lib/utils/types';
-import { checkNum } from 'mauss/utils';
+import { tryNumber } from 'mauss/utils';
 
 export function countAverageRating(ratings?: string[] | number): number | undefined {
 	if (typeof ratings === 'number') return ratings;
@@ -12,7 +12,7 @@ export function countAverageRating(ratings?: string[] | number): number | undefi
 export function contentParser<T extends Record<string, any>>(data: T, content: string): string {
 	const traverse = (meta: T | string, properties: string): string => {
 		for (const key of properties.split(':'))
-			if (typeof meta !== 'string') meta = meta[checkNum(key)];
+			if (typeof meta !== 'string') meta = meta[tryNumber(key)];
 		return meta as string;
 	};
 

@@ -9,7 +9,7 @@
 	$: ({ author, quote, from } = newQuote);
 </script>
 
-{#key newQuote}
+{#key quoteIndex}
 	<blockquote in:fly={{ y: -10 }}>
 		<p>{quote}</p>
 		{#if from}
