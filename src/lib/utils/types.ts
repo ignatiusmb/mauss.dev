@@ -1,3 +1,5 @@
+import type { Overwrite, Typify } from 'mauss/typings';
+
 export interface I18nData {
 	short?: string;
 	en: string;
@@ -36,45 +38,55 @@ export interface Curated extends Child {
 	};
 }
 
-export interface Post extends Child {
-	title: string;
-	tags: string[];
-	category: string;
-	description?: string;
+export type Post = Typify<
+	Overwrite<
+		Child,
+		{
+			title: string;
+			tags: string[];
+			category: string;
+			description?: string;
 
-	date: {
-		published: string;
-		updated?: string;
-	};
-	image?: { en: string };
-}
+			date: {
+				published: string;
+				updated?: string;
+			};
+			image?: { en: string };
+		}
+	>
+>;
 
-export interface Review extends Child {
-	category?: string;
-	released: string;
-	title: I18nData;
-	genres: string[];
-	rating?: string[] | number;
-	verdict: number | string;
+export type Review = Typify<
+	Overwrite<
+		Child,
+		{
+			category?: string;
+			released: string;
+			title: I18nData;
+			genres: string[];
+			rating?: string[] | number;
+			verdict: number | string;
 
-	date: {
-		published: string;
-		updated?: string;
-	};
-	last_seen: string | Date;
-	image: {
-		en: string;
-		jp?: string;
-	};
+			date: {
+				published: string;
+				updated?: string;
+			};
+			last_seen: string;
+			image: {
+				en: string;
+				jp?: string;
+			};
 
-	link?: {
-		mal?: string;
-	};
+			link?: {
+				mal?: string;
+			};
 
-	composed?: number;
-	spoilers?: string;
-	closing?: string;
-}
+			composed?: number;
+			spoilers?: string;
+			closing?: string;
+		}
+	>
+>;
 
 export type SieveDict = {
 	categories?: string[];

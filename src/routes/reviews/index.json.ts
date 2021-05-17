@@ -5,7 +5,6 @@ import { traverse, forge } from 'marqua';
 import { tryNumber } from 'mauss/utils';
 import { compare } from 'mauss';
 
-// @ts-expect-error: awaiting Typify from 'mauss/typings' for Review
 export const get: RequestHandler<Locals> = async ({ locals: { entry } }) => {
 	const config = forge.traverse({ entry, recurse: true });
 	const reviews = traverse<typeof config, Review>(config, ({ frontMatter, breadcrumb }) => {

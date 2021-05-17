@@ -4,7 +4,6 @@ import { countAverageRating, contentParser } from '$lib/utils/article';
 import { tryNumber } from 'mauss/utils';
 import { marker, compile } from 'marqua';
 
-// @ts-expect-error: awaiting Typify from 'mauss/typings' for Review
 export const get: RequestHandler<Locals> = async ({ params, locals: { entry } }) => {
 	const { category, slug } = params;
 	const body = compile<{ entry: string }, Review>(`${entry}.md`, ({ frontMatter, content }) => {
