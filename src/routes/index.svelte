@@ -162,8 +162,10 @@
 		background-color: var(--theme-secondary);
 	}
 
-	.fixed-nav > :global(nav) {
+	.fixed-nav {
+		z-index: 9;
 		position: fixed;
+		width: 100%;
 	}
 
 	@media only screen and (min-width: 600px) {
