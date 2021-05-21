@@ -12,7 +12,6 @@ export const get: RequestHandler<Locals> = async ({ locals: { entry } }) => {
 			const [quote, from] = line.split('#!/');
 			body.push({ author, quote, from });
 		}
-		return undefined;
 	});
 	return { body };
 };
