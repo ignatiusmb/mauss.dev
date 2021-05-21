@@ -45,7 +45,7 @@
 				<span>[</span>
 				{#each Object.entries(post.link) as [key, href]}
 					<span>
-						<Link {href}>{links.get(key)}</Link>
+						<Link {href}>{links.get(key) || key.toUpperCase()}</Link>
 					</span>
 				{/each}
 				<span>]</span>
