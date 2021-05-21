@@ -1,11 +1,15 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import type { Curated, Post, Review } from '$lib/utils/types';
 import RSS, { RSSItem } from '$lib/utils/rss';
-import { traverse, forge } from 'marqua';
+import { forge, traverse } from 'marqua';
 import { compare } from 'mauss';
 
-const items = <RSSItem[]>traverse(
-	{ entry: 'content/src', recurse: true },
+const items = traverse(
+	{
+		entry: 'content/src',
+		recurse: true,
+		sort: (x, y) => compare.date(x.date, y.date) || compare.string(x.title, y.title),
+	},
 	({ frontMatter, breadcrumb }) => {
 		if (breadcrumb[breadcrumb.length - 1].includes('draft')) return;
 
@@ -33,10 +37,10 @@ const items = <RSSItem[]>traverse(
 			const description = info || 'A post by DevMauss';
 			const date = ((dt && dt.updated) as string) || published;
 			return { title, slug: `posts/${slug}`, description, date };
-		} else return;
+		} else return undefined;
 	},
 	forge.types<Curated | Post | Review, RSSItem>()
-).sort((x, y) => compare.date(x.date, y.date) || compare.string(x.title, y.title));
+);
 
 const channel = {
 	domain: 'mauss.dev',
