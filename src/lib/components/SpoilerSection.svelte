@@ -1,9 +1,8 @@
 <script>
 	export let spoilers;
 	import { slide } from 'svelte/transition';
-	import { stores } from '@sapper/app';
-	const { preloading } = stores();
-	$: show = $preloading ? false : show;
+	import { navigating } from '$app/stores';
+	$: show = $navigating ? false : show;
 </script>
 
 <section class="info-box note">

@@ -1,21 +1,20 @@
 <script context="module">
-	export async function preload() {
-		const data = await this.fetch('curated.json').then((r) => r.json());
-		return { data };
+	export async function load({ fetch }) {
+		const res = await fetch('/curated.json');
+		return { props: { data: await res.json() } };
 	}
 </script>
 
 <script>
 	export let data;
+	import { sift, sieve } from '$lib/utils/search';
+	import { cSlice as store } from '$lib/utils/stores';
 
 	import { SearchBar, Pagination } from 'svelement';
-	import MetaHead from '$pages/MetaHead.svelte';
-	import LayoutPicker from '$pages/LayoutPicker.svelte';
-
-	import { sift, sieve } from '$utils/search';
-	import { cSlice as store } from '$utils/stores';
-	import AnimatedKey from '$components/AnimatedKey.svelte';
-	import CuratedPost from '$components/CuratedPost.svelte';
+	import MetaHead from '$lib/pages/MetaHead.svelte';
+	import LayoutPicker from '$lib/pages/LayoutPicker.svelte';
+	import AnimatedKey from '$lib/components/AnimatedKey.svelte';
+	import CuratedPost from '$lib/components/CuratedPost.svelte';
 
 	let query;
 	let filters = { categories: [], tags: [], sort_by: 'updated' };
@@ -28,15 +27,15 @@
 	canonical="curated"
 	title="Curated"
 	description="Curated content for all kinds of programming, lifestyle, and many more.">
-	<link rel="alternate" href="rss.xml" type="application/rss+xml" />
+	<link rel="alternate" href="/rss.xml" type="application/rss+xml" />
 </MetaHead>
 
-<LayoutPicker header view="grid" itemSize="18em">
-	<header slot="header">
+<LayoutPicker header itemSize="18em">
+	<svelte:fragment slot="header">
 		<h1>Curated by DevMauss</h1>
 		<SearchBar bind:query />
 		<Pagination {store} {items} bound={8} />
-	</header>
+	</svelte:fragment>
 
 	<AnimatedKey items={$store} component={CuratedPost} />
 </LayoutPicker>

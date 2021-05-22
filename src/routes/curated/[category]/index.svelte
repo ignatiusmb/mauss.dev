@@ -1,22 +1,26 @@
 <script context="module">
-	export async function preload({ params }) {
-		const { category } = params;
-		const list = await this.fetch('curated.json').then((r) => r.json());
-		return { category, data: list.filter((p) => p.category === category) };
+	import { compare } from 'mauss';
+	export async function load({ fetch, page }) {
+		const { category } = page.params;
+		const list = await fetch('/curated.json').then((r) => r.json());
+		const data = list
+			.filter((p) => p.category === category)
+			.sort((x, y) => compare.date(x.date.updated, y.date.updated));
+		return { props: { category, data } };
 	}
 </script>
 
 <script>
 	export let category, data;
 	import { ButtonLink } from 'svelement';
-	import MetaHead from '$pages/MetaHead.svelte';
+	import MetaHead from '$lib/pages/MetaHead.svelte';
 
 	import { scale } from 'svelte/transition';
 	import { flip } from 'svelte/animate';
 </script>
 
 <MetaHead canonical="curated" title="Curated" description="Curated content for {category} stuff.">
-	<link rel="alternate" href="rss.xml" type="application/rss+xml" />
+	<link rel="alternate" href="/rss.xml" type="application/rss+xml" />
 </MetaHead>
 
 <header>
@@ -24,10 +28,10 @@
 </header>
 
 <main>
-	{#each data as { slug, title } (slug)}
+	{#each data as { slug: href, title } (href)}
 		<section animate:flip transition:scale|local>
 			<small>{title}</small>
-			<ButtonLink href="curated/{slug}">read</ButtonLink>
+			<ButtonLink {href}>read</ButtonLink>
 		</section>
 	{/each}
 </main>

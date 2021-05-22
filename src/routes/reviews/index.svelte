@@ -1,29 +1,31 @@
 <script context="module">
-	import { rSlice as store } from '$utils/stores';
-	export async function preload({ query }) {
-		const data = await this.fetch('reviews.json').then((r) => r.json());
+	import { rSlice as store } from '$lib/utils/stores';
+	export async function load({ fetch, page: { query } }) {
+		const data = await fetch('/reviews.json').then((r) => r.json());
 		const categories = [...new Set(data.map((p) => p.category))];
 		const genres = [...new Set(data.flatMap((p) => p.genres))].sort();
-		store.set(query.q ? sift(query.q, data) : data);
+		store.set(query.has('q') ? sift(query.get('q'), data) : data);
 		return {
-			data,
-			search: query,
-			unique: {
-				categories,
-				genres,
-				verdict: {
-					'2': 'Must-watch!',
-					'1': 'Recommended',
-					'0': 'Contextual',
-					'-1': 'Not recommended',
-					'-2': 'Pending',
-				},
-				sort_by: {
-					updated: 'Last updated',
-					published: 'Date published',
-					released: 'Year released',
-					seen: 'Last seen',
-					rating: 'Rating',
+			props: {
+				data,
+				search: query,
+				unique: {
+					categories,
+					genres,
+					verdict: {
+						'2': 'Must-watch!',
+						'1': 'Recommended',
+						'0': 'Contextual',
+						'-1': 'Not recommended',
+						'-2': 'Pending',
+					},
+					sort_by: {
+						updated: 'Last updated',
+						published: 'Date published',
+						released: 'Year released',
+						seen: 'Last seen',
+						rating: 'Rating',
+					},
 				},
 			},
 		};
@@ -32,25 +34,21 @@
 
 <script>
 	export let data, search, unique;
-	let { q: query } = search;
-	if (query) query = query.replace(/\+/g, ' ');
+	let query = (search.has('q') && search.get('q').replace(/\+/g, ' ')) || '';
 
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
-	import { sift, sieve } from '$utils/search';
+	import { sift, sieve } from '$lib/utils/search';
 	const duration = 100;
 
-	import { Feather } from 'svelement/icons';
+	import { Grid, Layers, Columns } from 'svelement/icons/feather';
 	import { SearchBar, Pagination } from 'svelement';
-	import MetaHead from '$pages/MetaHead.svelte';
-	import LayoutPicker from '$pages/LayoutPicker.svelte';
-	import ReviewCard from '$components/ReviewCard.svelte';
-	import PerspectiveCarousel from '$components/PerspectiveCarousel.svelte';
+	import MetaHead from '$lib/pages/MetaHead.svelte';
+	import LayoutPicker from '$lib/pages/LayoutPicker.svelte';
+	import ReviewCard from '$lib/components/ReviewCard.svelte';
+	import PerspectiveCarousel from '$lib/components/PerspectiveCarousel.svelte';
 
-	let filters = { categories: [], genres: [], verdict: [], sort_by: 'updated' },
-		view = 'grid';
-	$: bound = view === 'grid' ? 12 : 3;
-	$: increment = view === 'carousel' ? 1 : bound;
+	let filters = { categories: [], genres: [], verdict: [], sort_by: 'updated' };
 	$: filtered = sieve(filters, data);
 	$: items = query ? sift(query, filtered) : filtered;
 </script>
@@ -59,57 +57,23 @@
 	canonical="reviews"
 	title="Reviews"
 	description="Personalized reviews for all kinds of anime, books, movies, shows, etc.">
-	<link rel="alternate" href="rss.xml" type="application/rss+xml" />
+	<link rel="alternate" href="/rss.xml" type="application/rss+xml" />
 </MetaHead>
 
-<LayoutPicker header {view}>
-	<header slot="header">
+<LayoutPicker header>
+	<svelte:fragment slot="header">
 		<h1>DevMauss Reviews</h1>
-
 		<SearchBar bind:query bind:filters {unique} />
+		<Pagination {store} {items} bound={12} increment={12} />
+	</svelte:fragment>
 
-		{#if view !== 'scrollsnap'}
-			<Pagination {store} {items} {bound} {increment} />
-		{/if}
-	</header>
-
-	<aside slot="picker">
-		<button class:active={view === 'grid'} on:click={() => (view = 'grid')}>
-			<Feather.Grid />
-		</button>
-		<button class:active={view === 'carousel'} on:click={() => (view = 'carousel')}>
-			<Feather.Layers />
-		</button>
-		<button class:active={view === 'scrollsnap'} on:click={() => (view = 'scrollsnap')}>
-			<Feather.Columns />
-		</button>
-	</aside>
-
-	{#if view === 'grid'}
-		{#each $store as post (post.slug)}
-			<div animate:flip={{ duration }} transition:scale|local={{ duration }}>
-				<ReviewCard {post} />
-			</div>
-		{:else}
-			<h2>There are no matching {query ? 'titles' : 'filters'}</h2>
-		{/each}
-	{:else if view === 'carousel'}
-		<PerspectiveCarousel>
-			{#each $store as post, idx (post.slug)}
-				<div class:translate-left={idx === 0} class:translate-right={idx === 2}>
-					<ReviewCard {post} />
-				</div>
-			{/each}
-		</PerspectiveCarousel>
-	{:else if view === 'scrollsnap'}
-		<div class="empty" />
-		{#each items as post (post.slug)}
-			<div animate:flip={{ duration }}>
-				<ReviewCard {post} />
-			</div>
-		{/each}
-		<div class="empty" />
-	{/if}
+	{#each $store as post (post.slug)}
+		<div animate:flip={{ duration }} transition:scale|local={{ duration }}>
+			<ReviewCard {post} />
+		</div>
+	{:else}
+		<h2>There are no matching {query ? 'titles' : 'filters'}</h2>
+	{/each}
 </LayoutPicker>
 
 <style>

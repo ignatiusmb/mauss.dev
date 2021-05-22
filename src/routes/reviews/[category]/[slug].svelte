@@ -1,32 +1,33 @@
 <script context="module">
-	export async function preload({ params }) {
-		const { category, slug } = params;
-		const list = this.fetch('reviews.json').then((r) => r.json());
-		const res = await this.fetch(`reviews/${category}/${slug}.json`);
-		if (res.status !== 200) return this.error(404, 'Review not found');
-
+	export async function load({ fetch, page }) {
+		const { category, slug } = page.params;
+		const res = await fetch(`/reviews/${category}/${slug}.json`);
+		if (!res.ok) return { status: 404, error: 'Review not found' };
 		const post = await res.json();
-		for (const review of await list) {
+
+		const list = await fetch('/reviews.json');
+		for (const review of await list.json()) {
 			if (review.slug !== post.slug) continue;
 			post.siblings = review.siblings;
-			return { post };
+			return { props: { post } };
 		}
 	}
-	const linkMap = {
-		mal: 'MyAnimeList',
-	};
+	const links = new Map([
+		['mal', 'MyAnimeList'],
+		['tmdb', 'TheMovieDB'],
+	]);
 </script>
 
 <script>
 	export let post;
 
 	import { Link } from 'svelement';
-	import MetaHead from '$pages/MetaHead.svelte';
-	import Article from '$pages/Article.svelte';
+	import MetaHead from '$lib/pages/MetaHead.svelte';
+	import Article from '$lib/pages/Article.svelte';
 
-	import ReviewBanner from '$components/ReviewBanner.svelte';
-	import Disclaimer from '$components/Disclaimer.svelte';
-	import Spoilers from '$components/SpoilerSection.svelte';
+	import ReviewBanner from '$lib/components/ReviewBanner.svelte';
+	import Disclaimer from '$lib/components/Disclaimer.svelte';
+	import Spoilers from '$lib/components/SpoilerSection.svelte';
 	$: ({ title, spoilers, siblings } = post);
 </script>
 
@@ -44,7 +45,7 @@
 				<span>[</span>
 				{#each Object.entries(post.link) as [key, href]}
 					<span>
-						<Link {href}>{linkMap[key]}</Link>
+						<Link {href}>{links.get(key) || key.toUpperCase()}</Link>
 					</span>
 				{/each}
 				<span>]</span>

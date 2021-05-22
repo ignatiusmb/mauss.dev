@@ -1,14 +1,15 @@
 <script context="module">
-	export async function preload({ params }) {
-		const list = this.fetch('posts.json').then((r) => r.json());
-		const res = await this.fetch(`posts/${params.slug}.json`);
-		if (res.status !== 200) return this.error(404, 'Post not found');
-
+	export async function load({ fetch, page }) {
+		const { slug } = page.params;
+		const res = await fetch(`/posts/${slug}.json`);
+		if (!res.ok) return { status: 404, error: 'Post not found' };
 		const post = await res.json();
-		for (const review of await list) {
+
+		const list = await fetch('/posts.json');
+		for (const review of await list.json()) {
 			if (review.slug !== post.slug) continue;
 			post.siblings = review.siblings;
-			return { post };
+			return { props: { post } };
 		}
 	}
 </script>
@@ -16,9 +17,9 @@
 <script>
 	export let post;
 	import { Link } from 'svelement';
-	import MetaHead from '$pages/MetaHead.svelte';
-	import Article from '$pages/Article.svelte';
-	import TagBadge from '$components/TagBadge.svelte';
+	import MetaHead from '$lib/pages/MetaHead.svelte';
+	import Article from '$lib/pages/Article.svelte';
+	import TagBadge from '$lib/components/TagBadge.svelte';
 </script>
 
 <MetaHead {post} canonical="posts/{post.slug}" title={post.title} />
@@ -61,19 +62,6 @@
 				equivalent) browser behavior in script. Source:
 				<Link href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">MDN</Link>
 			</p>
-		</section>
-	{/if}
-
-	{#if post.toc.length}
-		<section id="objective" class="info-box">
-			<h3>Outline & Focus</h3>
-			<ul>
-				{#each post.toc as { id, cleaned }}
-					<li style="color: #f48fb1">
-						<Link href="posts/{post.slug}#{id}" inherit>{cleaned}</Link>
-					</li>
-				{/each}
-			</ul>
 		</section>
 	{/if}
 

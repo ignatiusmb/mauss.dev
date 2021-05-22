@@ -1,19 +1,21 @@
 <script context="module">
-	export async function preload() {
-		const articles = await this.fetch('about.json').then((r) => r.json());
+	export async function load({ fetch }) {
+		const articles = await fetch('/about.json').then((r) => r.json());
 		return {
-			post: articles['index'],
-			sections: Object.keys(articles).filter((e) => e !== 'index'),
+			props: {
+				post: articles.index,
+				sections: Object.keys(articles).filter((e) => e !== 'index'),
+			},
 		};
 	}
 </script>
 
 <script>
 	export let post, sections;
-	import { Link, WeavedImage } from 'svelement';
-	import MetaHead from '$pages/MetaHead.svelte';
-	import Article from '$pages/Article.svelte';
 	import { capitalize } from 'mauss/utils';
+	import { Link, WeavedImage } from 'svelement';
+	import MetaHead from '$lib/pages/MetaHead.svelte';
+	import Article from '$lib/pages/Article.svelte';
 </script>
 
 <MetaHead
@@ -23,11 +25,11 @@
 	description="Get to know Ignatius Bagussuputra from his About page." />
 
 <Article {post}>
-	<WeavedImage src="assets/profile/mauss.jpeg" alt="DevMauss Profile" />
+	<WeavedImage src="/assets/profile/mauss.jpeg" alt="DevMauss Profile" />
 
 	<section>
 		{#each sections as section}
-			<Link href="about/{section}">
+			<Link href="/about/{section}">
 				<h2>{capitalize(section)}</h2>
 			</Link>
 		{/each}

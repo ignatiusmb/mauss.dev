@@ -1,20 +1,21 @@
 <script>
 	let className = '';
 	export { className as class };
-	export let view = '';
 	export let itemSize = '12em';
 	export let header = false;
+
+	let view = 'grid';
 </script>
 
 <div class="{className} layout-wrapper">
 	{#if header}
-		<div class="header-wrapper">
+		<header>
 			<slot name="header" />
 
-			<div class="aside-wrapper">
+			<aside>
 				<slot name="picker" />
-			</div>
-		</div>
+			</aside>
+		</header>
 	{/if}
 
 	<main
@@ -23,7 +24,7 @@
 		class:column={view === 'column'}
 		class:scrollsnap={view === 'scrollsnap'}
 		style="--grid-minval: {itemSize}">
-		<slot />
+		<slot {view} />
 	</main>
 </div>
 
@@ -39,33 +40,31 @@
 	}
 
 	.layout-wrapper > main,
-	.layout-wrapper > .header-wrapper {
+	.layout-wrapper > header {
 		max-width: 86em;
 		width: 100%;
 		position: relative;
 		margin: 0 auto;
 	}
-	.header-wrapper > :global(header) {
+	header {
 		display: grid;
 		gap: 1em;
 	}
-	.header-wrapper :global(h1) {
+	header :global(h1) {
 		text-align: center;
 	}
-	.header-wrapper :global(.lmns-pagination) {
+	header :global(.lmns-pagination) {
 		max-width: 32em;
 	}
-	.header-wrapper > .aside-wrapper {
+	aside {
 		width: 100%;
 		position: absolute;
-		transform: translateY(calc(2em - 50%));
-	}
-	.aside-wrapper > :global(aside) {
 		display: grid;
 		gap: 1em;
 		grid-auto-flow: column;
+		transform: translateY(calc(2em - 50%));
 	}
-	.aside-wrapper :global(button) {
+	aside :global(button) {
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -78,7 +77,7 @@
 		color: var(--fg-surface);
 		background-color: var(--bg-overlay);
 	}
-	.aside-wrapper :global(button:hover) {
+	aside :global(button:hover) {
 		filter: brightness(1.2);
 	}
 
@@ -140,7 +139,7 @@
 	}
 
 	@media only screen and (min-width: 480px) {
-		.header-wrapper > .aside-wrapper {
+		header > aside {
 			width: unset;
 			right: 0;
 		}

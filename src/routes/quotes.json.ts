@@ -1,24 +1,18 @@
-import type { Request, Response } from 'express';
+import type { RequestHandler } from '@sveltejs/kit';
+import type { Locals } from '$lib/utils/types';
 import { isExists } from 'mauss/guards';
-import { parseDir } from 'marqua';
+import { traverse } from 'marqua';
 
-export function get(_: Request, res: Response): void {
-	const excerpts = parseDir<{ author: string; lines: string[] }>(
-		'content/quotes',
-		({ content, filename }) => ({
-			author: filename.split('.')[0].replace('-', ' '),
-			lines: content.split(/\r?\n/).filter(isExists),
-		})
-	);
-
-	const quotes = excerpts.reduce((acc, { author, lines }) => {
-		for (const line of lines) {
+export const get: RequestHandler<Locals> = async ({ locals: { entry } }) => {
+	const body: Array<{ author: string; quote: string; from: string }> = [];
+	traverse({ entry, minimal: true }, ({ content, breadcrumb }) => {
+		const [filename] = breadcrumb.slice(-1);
+		const author = filename.slice(0, -3).replace(/-/g, ' ');
+		for (const line of content.split(/\r?\n/).filter(isExists)) {
 			const [quote, from] = line.split('#!/');
-			acc.push({ author, quote, from });
+			body.push({ author, quote, from });
 		}
-		return acc;
-	}, [] as Array<{ author: string; quote: string; from: string }>);
-
-	res.writeHead(200, { 'Content-Type': 'application/json' });
-	res.end(JSON.stringify(quotes));
-}
+		return undefined;
+	});
+	return { body };
+};

@@ -1,4 +1,7 @@
+.svelte/**
+static/**
+build/**
 node_modules
 package-lock.json
 LICENSE
-template.html
+app.html

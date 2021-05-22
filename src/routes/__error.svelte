@@ -1,3 +1,7 @@
+<script context="module">
+	export const load = (props) => ({ props });
+</script>
+
 <script>
 	export let status, error;
 </script>
@@ -7,20 +11,13 @@
 </svelte:head>
 
 <article>
-	<section>
-		<h1>{status}</h1>
-		<p>{error.message}</p>
-		{#if process.dev && error.stack}
-			<pre>{error.stack}</pre>
-		{/if}
-	</section>
+	<h1>{status}</h1>
+	<p>{error.message}</p>
 </article>
 
 <style>
 	article {
 		margin-top: auto;
-	}
-	section:first-of-type {
 		text-align: center;
 	}
 
@@ -30,11 +27,5 @@
 	}
 	p {
 		font-size: 2em;
-	}
-	pre {
-		display: flex;
-		justify-content: center;
-		margin-top: 1em;
-		text-align: left;
 	}
 </style>

@@ -1,18 +1,12 @@
 {
 	"extends": "mauss/tsconfig.json",
 	"compilerOptions": {
-		"lib": ["DOM", "ES2020", "WebWorker"],
-		"typeRoots": ["src/typings"],
-		"types": ["svelte"],
+		"target": "ES2020",
 		"sourceMap": true,
-		"baseUrl": "src",
+		"baseUrl": ".",
 		"paths": {
-			"$components/*": ["components/*"],
-			"$pages/*": ["pages/*"],
-			"$styles/*": ["styles/*"],
-			"$utils/*": ["utils/*"]
+			"$lib/*": ["src/lib/*"]
 		}
 	},
-	"include": ["src/**/*", "src/node_modules/**/*"],
-	"exclude": ["node_modules/*", "__sapper__/*", "static/*"]
+	"include": ["src/**/*"]
 }

@@ -1,42 +1,38 @@
 <script context="module">
-	import { compareDate } from '$utils/helper';
-	export async function preload() {
-		const quotes = this.fetch('quotes.json').then((r) => r.json());
-		const data = {};
-		for (const seg of ['posts', 'reviews', 'curated']) {
-			data[seg] = await this.fetch(`${seg}.json`).then((r) => r.json());
-			if (seg === 'curated') data[seg].sort((x, y) => compareDate(x.date.updated, y.date.updated));
-			if (seg === 'reviews') data[seg].filter(({ rating, verdict }) => rating && verdict);
-			if (Array.isArray(data[seg])) data[seg] = data[seg].slice(0, 4);
-		}
+	import { compare } from 'mauss';
+	export async function load({ fetch }) {
+		const quotes = await fetch('/quotes.json').then((r) => r.json());
+		const data = {
+			posts: (await fetch('/posts.json').then((r) => r.json())).slice(0, 4),
+			reviews: (await fetch('/reviews.json').then((r) => r.json()))
+				.filter((x) => x.rating && x.verdict !== -2)
+				.slice(0, 4),
+			curated: (await fetch('/curated.json').then((r) => r.json()))
+				.sort((x, y) => compare.date(x.date.updated, y.date.updated))
+				.slice(0, 4),
+		};
 
-		return { data, quotes: await quotes };
+		return {
+			props: { data, quotes: quotes.slice(0, quotes.length / 2) },
+		};
 	}
 </script>
 
 <script>
 	export let data, quotes;
 	const section = {
-		posts: { heading: 'Recent Posts 📚', desc: "What's on my mind (or life) recently:" },
-		reviews: { heading: 'Recent Reviews ⭐', desc: "Contents I've been reviewing recently:" },
-		curated: { heading: 'Recently Curated ⚖️', desc: "Stuffs I've been curating recently:" },
+		posts: { heading: '📚 Recent Posts', desc: "What's on my mind (or life)" },
+		reviews: { heading: '⭐ Recent Reviews', desc: "Contents I've been reviewing" },
+		curated: { heading: '⚖️ Recently Curated', desc: "Stuffs I've been curating" },
 	};
 
 	import { Link, Image } from 'svelement';
-	import { random } from 'mauss/utils';
-	import MetaHead from '$pages/MetaHead.svelte';
-	import Article from '$pages/Article.svelte';
-	import Quote from '$components/Quote.svelte';
-	import Navigation from '$components/Navigation.svelte';
+	import MetaHead from '$lib/pages/MetaHead.svelte';
+	import Article from '$lib/pages/Article.svelte';
+	import Quote from '$lib/components/Quote.svelte';
+	import Navigation from '$lib/components/Navigation.svelte';
 
-	let quoteIndex = random.int(quotes.length);
 	let scrollY, innerHeight;
-	const getNewQuote = () => {
-		let newIndex;
-		do newIndex = random.int(quotes.length);
-		while (newIndex === quoteIndex);
-		quoteIndex = newIndex;
-	};
 	$: scrolled = +(scrollY >= innerHeight * 0.6);
 </script>
 
@@ -52,47 +48,37 @@
 
 <Article>
 	<header slot="header">
-		<Link href="about">
+		<Link href="/about">
 			<div class="dashed-border" />
-			<Image src="assets/profile/mauss.jpeg" alt="DevMauss Profile" ratio={1} />
+			<Image src="/assets/profile/mauss.jpeg" alt="DevMauss Profile" ratio={1} />
 		</Link>
 		<h2>Ignatius Bagussuputra</h2>
 		<span>Developer on Weekdays, Avid Writer on Weekends</span>
-		<h3>I can make any design come true</h3>
+		<h3>I make stuff</h3>
 
-		{#each [quotes[quoteIndex]] as { author, quote, from }}
-			<Quote {author} on:click={getNewQuote}>
-				<p>{quote}</p>
-				{#if from}
-					<p class="from">{from}</p>
-				{/if}
-			</Quote>
-		{/each}
+		<Quote {quotes} />
 	</header>
 
 	<section>
-		<h2>About Me</h2>
+		<h2>👋 About Me</h2>
+		<p>Hello! My name's Ignatius, an undergraduate CS student.</p>
 		<p>
-			Hey there 👋! My name is Ignatius Bagussuputra, a student at the University of Indonesia
-			pursuing a Computer Science degree.
-		</p>
-		<p>
-			Have been developing since I started college, I love Open Source and enjoy making applications
-			I think would be helpful or especially useful for me. Building interfaces is also something I
-			love, that's why I'm passionate about my websites. I also like to build things IRL.
+			I've been developing ever since I started college. I enjoy creating stuff that makes life
+			easier, I'm also an Open Source enthusiast. I'm also passionate about my websites and just
+			beautiful interfaces in general. I also like to build things IRL.
 		</p>
 		<br />
-		<Link href="about">More info...</Link>
+		<Link href="/about">More info...</Link>
 	</section>
 
 	{#each Object.keys(data) as seg}
 		<section>
 			<h2>{section[seg]['heading']}</h2>
-			<p>{section[seg]['desc']}</p>
+			<p>{section[seg]['desc']} recently:</p>
 			<ul>
 				{#each data[seg] as { slug, title }}
 					<li>
-						<Link href="{seg}/{slug}">
+						<Link href="/{seg}/{slug}">
 							{typeof title === 'string' ? title : title.short || title.en}
 						</Link>
 					</li>
@@ -176,8 +162,10 @@
 		background-color: var(--theme-secondary);
 	}
 
-	.fixed-nav > :global(nav) {
+	.fixed-nav {
+		z-index: 9;
 		position: fixed;
+		width: 100%;
 	}
 
 	@media only screen and (min-width: 600px) {

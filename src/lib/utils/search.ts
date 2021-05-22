@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import type { I18nData, SieveDict } from './types';
+import type { Child, SieveDict } from './types';
+import { compare as c } from 'mauss';
 import { isExists } from 'mauss/guards';
-import { compareDate, sortCompare } from './helper';
+import { sortCompare } from './helper';
 
 const exists = (source: string | any, query: string | any): boolean =>
 	typeof source !== 'string' ? source === query : new RegExp(query, 'i').test(source);
@@ -13,12 +14,13 @@ const check = (source: string[] | string, queries: string[]): boolean =>
 	compare(source, queries) === queries.length;
 
 const cleanSplit = (data: string): string[] => data.split(' ').filter(isExists);
-export const sift = <T extends { title: string | I18nData }>(query: string, data: T[]): T[] =>
-	data.filter(({ title }) =>
-		typeof title === 'string'
-			? check(title, cleanSplit(query))
-			: Object.values(title).some((val) => check(val, cleanSplit(query)))
+export const sift = <T extends Child>(query: string, data: T[]): T[] => {
+	return data.filter((x) =>
+		typeof x.title === 'string'
+			? check(x.title, cleanSplit(query))
+			: Object.values(x.title).some((val) => check(val, cleanSplit(query)))
 	);
+};
 
 const sortBy: Record<string, (x: any, y: any) => number> = {
 	rating(x, y) {
@@ -26,16 +28,18 @@ const sortBy: Record<string, (x: any, y: any) => number> = {
 		const yr = Number.isNaN(+y.rating) ? +!!y.rating : y.rating;
 		return xr === yr ? sortCompare(x, y) : yr - xr;
 	},
-	seen: (x, y) => compareDate(x.last_seen, y.last_seen) || sortCompare(x, y),
-	released: (x, y) => compareDate(x.released, y.released) || sortCompare(x, y),
-	published: (x, y) => compareDate(x.date.published, y.date.published) || sortCompare(x, y),
+	seen: (x, y) => c.date(x.last_seen, y.last_seen) || sortCompare(x, y),
+	released: (x, y) => c.date(x.released, y.released) || sortCompare(x, y),
+	published: (x, y) => c.date(x.date.published, y.date.published) || sortCompare(x, y),
 };
 
-type RSA = Record<string, any>;
-export const sort = <T extends RSA>(type: string, data: T[]): T[] =>
+export const sort = <T extends Child>(type: string, data: T[]): T[] =>
 	type in sortBy ? data.sort(sortBy[type]) : data.sort(sortCompare);
 
-export function sieve<T extends RSA>({ sort_by = 'updated', ...dict }: SieveDict, data: T[]): T[] {
+export function sieve<T extends Child & Record<string, any>>(
+	{ sort_by = 'updated', ...dict }: SieveDict,
+	data: T[]
+): T[] {
 	const identical = ['tags', 'genres'];
 	const intersect = ['categories', 'verdict'];
 

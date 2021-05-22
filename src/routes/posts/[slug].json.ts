@@ -1,16 +1,18 @@
-import type { Request, Response } from 'express';
-import type { Post } from '$utils/types';
-import { parseDir } from 'marqua';
+import type { RequestHandler } from '@sveltejs/kit';
+import type { Locals, Post } from '$lib/utils/types';
+import { traverse } from 'marqua';
 
-export async function get(req: Request, res: Response): Promise<void> {
-	const { slug } = req.params;
-	const post = parseDir<Post>('content/posts', ({ frontMatter, content, filename }) => {
-		const [published, filename_slug] = filename.split('.');
-		if (filename_slug !== slug) return undefined;
-		const date = { published, updated: frontMatter.date && frontMatter.date.updated };
-		return { slug, ...frontMatter, category: frontMatter.tags[0], date, content };
-	})[0];
+export const get: RequestHandler<Locals> = async ({ params: { slug } }) => {
+	const [body] = traverse<{ entry: string }, Post>(
+		'content/src/posts',
+		({ frontMatter, content, breadcrumb }) => {
+			const filename = breadcrumb[breadcrumb.length - 1];
+			const [published, filename_slug] = filename.split('.');
+			if (filename.includes('draft') || filename_slug !== slug) return;
+			const date = { published, updated: frontMatter.date && frontMatter.date.updated };
+			return { slug, ...frontMatter, category: frontMatter.tags[0], date, content };
+		}
+	);
 
-	res.writeHead(200, { 'Content-Type': 'application/json' });
-	res.end(JSON.stringify(post));
-}
+	return { body };
+};

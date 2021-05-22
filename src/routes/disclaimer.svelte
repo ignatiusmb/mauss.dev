@@ -1,8 +1,8 @@
 <script>
 	import { Link } from 'svelement';
-	import MetaHead from '$pages/MetaHead.svelte';
-	import Article from '$pages/Article.svelte';
-	import Disclaimer from '$components/Disclaimer.svelte';
+	import MetaHead from '$lib/pages/MetaHead.svelte';
+	import Article from '$lib/pages/Article.svelte';
+	import Disclaimer from '$lib/components/Disclaimer.svelte';
 </script>
 
 <MetaHead
@@ -23,8 +23,8 @@
 	<p>
 		All of that being said, I hope that we can move past blaming or hating what I said. If you
 		disagree with something, I would welcome a discussion. It would be my privilege to learn from
-		what you have to teach me. Direct contributions are also welcome at this
-		<Link href="https://github.com/ignatiusmb/mauss">GitHub repository</Link>
+		what you have to teach me. Direct contributions are also welcome at the
+		<Link href="https://github.com/ignatiusmb/mauss.dev">GitHub repo</Link>
 	</p>
 </Article>
 

@@ -1,5 +1,5 @@
 <script>
-	import ErrorPage from './_error.svelte';
+	import ErrorPage from './__error.svelte';
 </script>
 
 <ErrorPage status={404} error={{ message: 'Page not found' }} />

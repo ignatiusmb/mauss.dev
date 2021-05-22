@@ -1,13 +1,13 @@
 <script>
 	import { Link } from 'svelement';
-	import { Feather } from 'svelement/icons';
+	import * as Feather from 'svelement/icons/feather';
 </script>
 
 <footer>
 	<section>
 		<em>
 			Read the
-			<Link href="help">help page</Link>
+			<Link href="/help">help page</Link>
 			for more information
 		</em>
 	</section>
@@ -46,9 +46,7 @@
 		<p>Copyright &copy; 2017 &ndash; {new Date().getFullYear()} Ignatius Bagussuputra</p>
 		<p>
 			Handcrafted with ❤️ using
-			<Link href="https://svelte.dev/">Svelte</Link>
-			&plus;
-			<Link href="https://sapper.svelte.dev/">Sapper</Link>
+			<Link href="https://kit.svelte.dev/">SvelteKit</Link>
 			&plus;
 			<Link href="https://aqua.mauss.dev/">Aqua</Link>
 		</p>

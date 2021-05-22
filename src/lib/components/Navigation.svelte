@@ -1,11 +1,10 @@
 <script>
 	export let scrolled = false;
 
-	import { stores } from '@sapper/app';
-	const { preloading, page } = stores();
+	import { navigating, page } from '$app/stores';
 	const sections = ['about', 'curated', 'posts', 'reviews', 'uses'];
 
-	import { Feather } from 'svelement/icons';
+	import * as Feather from 'svelement/icons/feather';
 	import { ThemeSwitcher, Link } from 'svelement';
 	import NavLink from './NavLink.svelte';
 	import NavGrid from './NavGrid.svelte';
@@ -13,7 +12,7 @@
 	let innerWidth;
 	let opened = false;
 	$: path = $page.path.split('/')[1];
-	$: opened = $preloading ? false : opened;
+	$: opened = $navigating ? false : opened;
 </script>
 
 <svelte:window bind:innerWidth bind:scrollY={scrolled} />
@@ -28,7 +27,7 @@
 	</span>
 
 	<NavLink>
-		<img src="assets/favicon.ico" alt="DevMauss" width="24" height="24" />
+		<img src="/assets/favicon.ico" alt="DevMauss" width="24" height="24" />
 	</NavLink>
 
 	{#if innerWidth > 600 || opened}
@@ -39,10 +38,10 @@
 		</NavGrid>
 	{/if}
 
-	<Link inherit href="rss.xml" label="Get RSS">
+	<Link inherit href="/rss.xml" label="Get RSS">
 		<Feather.Rss />
 	</Link>
-	<Link inherit href="help" label="See help page">
+	<Link inherit href="/help" label="See help page">
 		<Feather.HelpCircle />
 	</Link>
 	<ThemeSwitcher let:current>

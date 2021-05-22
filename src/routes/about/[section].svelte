@@ -1,18 +1,20 @@
 <script context="module">
-	export async function preload({ params }) {
-		const { section } = params;
-		const articles = await this.fetch('about.json').then((r) => r.json());
-		if (!articles[section]) return this.error(404, 'Section not found');
-		return { section, post: articles[section] };
+	export async function load({ fetch, page }) {
+		const { section } = page.params;
+		const articles = await fetch('/about.json').then((r) => r.json());
+		if (!articles[section]) return { status: 404, error: 'Section not found' };
+		return {
+			props: { section, post: articles[section] },
+		};
 	}
 </script>
 
 <script>
 	export let section, post;
-	import { Link, WeavedImage } from 'svelement';
-	import MetaHead from '$pages/MetaHead.svelte';
-	import Article from '$pages/Article.svelte';
 	import { capitalize } from 'mauss/utils';
+	import { Link, WeavedImage } from 'svelement';
+	import MetaHead from '$lib/pages/MetaHead.svelte';
+	import Article from '$lib/pages/Article.svelte';
 </script>
 
 <MetaHead
@@ -22,10 +24,10 @@
 	description="Get to know Ignatius Bagussuputra from his About page." />
 
 <Article {post}>
-	<WeavedImage src="assets/profile/mauss.jpeg" alt="DevMauss Profile" />
+	<WeavedImage src="/assets/profile/mauss.jpeg" alt="DevMauss Profile" />
 
 	<section>
-		<Link href="about">
+		<Link href="/about">
 			<h2>About</h2>
 		</Link>
 	</section>

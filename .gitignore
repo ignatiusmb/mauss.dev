@@ -1,16 +1,8 @@
 yarn-error.log
 .DS_Store
 .env
-*secret.*
 
-/node_modules/
-/src/node_modules/@sapper/
-/coverage/
-/cypress/screenshots/
-
-/__sapper__/
-functions/
-
-# Local static site config folder
-.netlify
-.vercel
+node_modules
+/.svelte-kit
+/build
+/functions

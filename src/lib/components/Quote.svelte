@@ -1,14 +1,31 @@
 <script>
-	export let author;
+	export let quotes;
+	import { random } from 'mauss/utils';
+	import { fly } from 'svelte/transition';
 	import { GradientBorder } from 'svelement';
+
+	let quoteIndex = random.int(quotes.length);
+	$: newQuote = quotes[quoteIndex];
+	$: ({ author, quote, from } = newQuote);
 </script>
 
-<blockquote>
-	<slot />
-	<small on:click>
-		<GradientBorder>&mdash;{author}</GradientBorder>
-	</small>
-</blockquote>
+{#key quoteIndex}
+	<blockquote in:fly={{ y: -10 }}>
+		<p>{quote}</p>
+		{#if from}
+			<p class="from">{from}</p>
+		{/if}
+		<small
+			on:click={() => {
+				let newIndex;
+				do newIndex = random.int(quotes.length);
+				while (newIndex === quoteIndex);
+				quoteIndex = newIndex;
+			}}>
+			<GradientBorder>&mdash;{author}</GradientBorder>
+		</small>
+	</blockquote>
+{/key}
 
 <style>
 	blockquote {

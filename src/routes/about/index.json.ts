@@ -1,14 +1,12 @@
-import type { Request, Response } from 'express';
-import { parseDir } from 'marqua';
+import type { RequestHandler } from '@sveltejs/kit';
+import type { Locals } from '$lib/utils/types';
+import { traverse } from 'marqua';
 
 type About = { slug: string; title: string; date: { updated: string } };
 
-export async function get(_: Request, res: Response): Promise<void> {
-	const articles = parseDir<About>('content/about', ({ frontMatter, content, filename }) => {
-		const [slug] = filename.split('.');
+export const get: RequestHandler<Locals> = async ({ locals: { entry } }) => ({
+	body: traverse<{ entry: string }, About>(entry, ({ frontMatter, content, breadcrumb }) => {
+		const [slug] = breadcrumb[breadcrumb.length - 1].split('.');
 		return { ...frontMatter, slug, content };
-	}).reduce((acc, { slug, ...res }) => ({ ...acc, [slug]: res }), {});
-
-	res.writeHead(200, { 'Content-Type': 'application/json' });
-	res.end(JSON.stringify(articles));
-}
+	}).reduce((acc, { slug, ...res }) => ({ ...acc, [slug]: res }), {}),
+});

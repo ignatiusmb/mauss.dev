@@ -1,12 +1,7 @@
-import type { Request, Response } from 'express';
-import { parseFile } from 'marqua';
+import type { RequestHandler } from '@sveltejs/kit';
+import type { Locals } from '$lib/utils/types';
+import { compile } from 'marqua';
 
-export function get(_: Request, res: Response): void {
-	const article = parseFile<{ title: string; date: { updated: string } }>(
-		'content/uses.md',
-		({ frontMatter, content }) => ({ ...frontMatter, content })
-	);
-
-	res.writeHead(200, { 'Content-Type': 'application/json' });
-	res.end(JSON.stringify(article));
-}
+export const get: RequestHandler<Locals> = async ({ locals }) => ({
+	body: compile(`${locals.entry}.md`),
+});

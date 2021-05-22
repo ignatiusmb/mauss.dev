@@ -1,12 +1,15 @@
-import type { Request, Response } from 'express';
-import type { Post } from '$utils/types';
+import type { RequestHandler } from '@sveltejs/kit';
+import type { Locals, Post } from '$lib/utils/types';
 import { existsSync } from 'fs';
 import { join } from 'path';
-import { parseDir } from 'marqua';
-import { fillSiblings } from '$utils/article';
+import { traverse } from 'marqua';
+import { fillSiblings } from '$lib/utils/article';
 
-export async function get(_: Request, res: Response): Promise<void> {
-	const posts = parseDir<Post>('content/posts', ({ frontMatter, filename }) => {
+export const get: RequestHandler<Locals> = async ({ locals: { entry } }) => {
+	const posts = traverse<{ entry: string }, Post>(entry, ({ frontMatter, breadcrumb }) => {
+		const filename = breadcrumb[breadcrumb.length - 1];
+		if (filename.includes('draft')) return;
+
 		const [published, slug] = filename.split('.');
 		const [category] = frontMatter.tags;
 
@@ -23,6 +26,7 @@ export async function get(_: Request, res: Response): Promise<void> {
 		return { slug, ...frontMatter, category, date: { published, updated } };
 	});
 
-	res.writeHead(200, { 'Content-Type': 'application/json' });
-	res.end(JSON.stringify(fillSiblings(posts, 'posts/')));
-}
+	return {
+		body: fillSiblings(posts.reverse(), 'posts/'),
+	};
+};

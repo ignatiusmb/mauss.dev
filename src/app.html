@@ -19,20 +19,17 @@
 				html.classList.remove(event.matches ? 'light' : 'dark');
 			});
 		} catch (error) {}
-	</script>
-	%sapper.base%
-	<link rel="manifest" href="site.webmanifest" crossorigin="use-credentials">
-	<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-	<link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
-	%sapper.styles%
-	%sapper.scripts%
-	%sapper.head%
-</head>
 
-<body>
-	<div id="sapper">%sapper.html%</div>
+	</script>
 	<script defer src="https://static.cloudflareinsights.com/beacon.min.js"
 		data-cf-beacon='{"token": "402cd91137d14890a1117569bda0ee41"}'></script>
-</body>
+
+	<link rel="manifest" href="/site.webmanifest" crossorigin="use-credentials">
+	<link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
+	%svelte.head%
+</head>
+
+<body>%svelte.body%</body>
 
 </html>

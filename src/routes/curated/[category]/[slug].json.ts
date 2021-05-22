@@ -1,25 +1,19 @@
-import type { Request, Response } from 'express';
-import type { Curated } from '$utils/types';
+import type { RequestHandler } from '@sveltejs/kit';
+import type { Locals } from '$lib/utils/types';
+import { marker, compile } from 'marqua';
 import TexMath from 'markdown-it-texmath';
-import { marker, parseFile } from 'marqua';
+import KaTeX from 'katex';
 
 marker.use(TexMath, {
-	engine: require('katex'),
+	engine: KaTeX,
 	delimiters: 'dollars',
 	katexOptions: {
-		throwOnError: true,
-		macros: { '\\RR': '\\mathbb{R}' },
+		strict: (code: string) => (code === 'newLineInDisplayMode' ? 'ignore' : 'warn'),
 	},
 });
 
-export async function get(req: Request, res: Response): Promise<void> {
-	const { category, slug } = req.params;
-	const filepath = `content/curated/${category}/${slug}.md`;
-
-	const file = parseFile<Curated>(filepath, ({ frontMatter, content }) => {
+export const get: RequestHandler<Locals> = async ({ params: { category, slug }, locals }) => ({
+	body: compile(`${locals.entry}.md`, ({ frontMatter, content }) => {
 		return { slug: `${category}/${slug}`, ...frontMatter, category, content };
-	});
-
-	res.writeHead(200, { 'Content-Type': 'application/json' });
-	res.end(JSON.stringify(file));
-}
+	}),
+});

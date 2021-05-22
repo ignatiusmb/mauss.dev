@@ -2,9 +2,9 @@
 
 Personal website, handcrafted with ❤️ using these tools
 
-|                             Framework                              |                      Components                      |             Style              |                     Parser                     |
-| :----------------------------------------------------------------: | :--------------------------------------------------: | :----------------------------: | :--------------------------------------------: |
-| [Svelte](https://svelte.dev) + [Sapper](https://sapper.svelte.dev) | [Svelement](https://github.com/ignatiusmb/svelement) | [Aqua](https://aqua.mauss.dev) | [Marqua](https://github.com/ignatiusmb/marqua) |
+|              Framework              |                      Components                      |             Style              |                     Parser                     |
+| :---------------------------------: | :--------------------------------------------------: | :----------------------------: | :--------------------------------------------: |
+| [SvelteKit](https://kit.svelte.dev) | [Svelement](https://github.com/ignatiusmb/svelement) | [Aqua](https://aqua.mauss.dev) | [Marqua](https://github.com/ignatiusmb/marqua) |
 
 ## Contributing
 
@@ -29,6 +29,11 @@ npm run dev
 ### Content
 
 Content is managed as a submodule in [devmauss/content](https://github.com/devmauss/content), any changes made to the content should be placed there ([open a new PR](https://github.com/devmauss/content/compare)).
+
+```bash
+# Update to the latest version using
+git submodule update --remote --merge
+```
 
 ---
 

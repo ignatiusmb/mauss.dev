@@ -1,9 +1,9 @@
-import type { Child } from '$utils/types';
-import { checkNum } from 'mauss/utils';
+import type { Child } from '$lib/utils/types';
+import { tryNumber } from 'mauss/utils';
 
-export function countAverageRating(ratings: string[] | number): number {
+export function countAverageRating(ratings?: string[] | number): number | undefined {
 	if (typeof ratings === 'number') return ratings;
-	if (!ratings || ratings.some(Number.isNaN)) return 0;
+	if (!ratings || ratings.some((n) => Number.isNaN(+n))) return;
 	const total = ratings.reduce((acc, cur) => +cur + acc, 0);
 	return Math.round((total / ratings.length + Number.EPSILON) * 100) / 100;
 }
@@ -12,7 +12,7 @@ export function countAverageRating(ratings: string[] | number): number {
 export function contentParser<T extends Record<string, any>>(data: T, content: string): string {
 	const traverse = (meta: T | string, properties: string): string => {
 		for (const key of properties.split(':'))
-			if (typeof meta !== 'string') meta = meta[checkNum(key)];
+			if (typeof meta !== 'string') meta = meta[tryNumber(key)];
 		return meta as string;
 	};
 

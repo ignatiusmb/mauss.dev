@@ -1,26 +1,33 @@
-import type { Request, Response } from 'express';
-import type { Review } from '$utils/types';
-import { readdirSync } from 'fs';
-import { isExists } from 'mauss/guards';
-import { checkNum } from 'mauss/utils';
-import { parseDir } from 'marqua';
-import { countAverageRating, fillSiblings } from '$utils/article';
+import type { RequestHandler } from '@sveltejs/kit';
+import type { Locals, Review } from '$lib/utils/types';
+import { countAverageRating, fillSiblings } from '$lib/utils/article';
+import { traverse, forge } from 'marqua';
+import { tryNumber } from 'mauss/utils';
+import { compare } from 'mauss';
 
-const check = ({ rating, verdict }: Review) => !rating || verdict < -1;
+export const get: RequestHandler<Locals> = async ({ locals: { entry } }) => {
+	const config = forge.traverse({
+		entry,
+		recurse: true,
+		sort(x: Review, y: Review) {
+			const xd = x.date.updated || x.date.published;
+			const yd = y.date.updated || y.date.published;
+			return compare.date(xd, yd);
+		},
+	});
+	const reviews = traverse<typeof config, Review>(config, ({ frontMatter, breadcrumb }) => {
+		const [folder, filename] = breadcrumb.slice(-2);
+		if (filename.includes('draft')) return;
+		return {
+			slug: `${folder}/${filename.split('.')[0]}`,
+			category: folder,
+			...frontMatter,
+			rating: countAverageRating(frontMatter.rating),
+			verdict: tryNumber(frontMatter.verdict || -2),
+		};
+	});
 
-export async function get(_: Request, res: Response): Promise<void> {
-	const DIR = 'content/reviews';
-	const reviews = readdirSync(DIR).flatMap(
-		(folder) => <(false | Review)[]>(!/draft/.test(folder) &&
-				parseDir<Review>(`${DIR}/${folder}`, ({ frontMatter, filename }) => ({
-					slug: `${folder}/${filename.split('.')[0]}`,
-					category: folder,
-					...frontMatter,
-					rating: countAverageRating(frontMatter.rating),
-					verdict: checkNum(frontMatter.verdict || -2),
-				})))
-	);
-
-	res.writeHead(200, { 'Content-Type': 'application/json' });
-	res.end(JSON.stringify(fillSiblings(reviews.filter(isExists), 'reviews/', check)));
-}
+	return {
+		body: fillSiblings(reviews, 'reviews/', ({ rating, verdict }) => !rating || verdict < -1),
+	};
+};

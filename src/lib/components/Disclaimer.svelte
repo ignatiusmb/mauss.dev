@@ -5,14 +5,14 @@
 
 <section class="info-box warning">
 	{#if link}
-		<Link href="disclaimer" inherit>
+		<Link href="/disclaimer" inherit>
 			<h2>READ DISCLAIMER</h2>
 		</Link>
 	{:else}
 		<h1>DISCLAIMER</h1>
 
 		<p>
-			All views expressed here is entirely my own opinion and personal take on the subject and do
+			All views expressed here are entirely my own opinion and personal take on the subject and do
 			not represent the opinion of any entity whatsoever with which I have been, am now, or will be
 			affiliated.
 		</p>

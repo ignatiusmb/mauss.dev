@@ -4,11 +4,11 @@
 	export let path = null;
 	export let siblings = null;
 	import { onMount } from 'svelte';
-	import { Feather } from 'svelement/icons';
+	import { Edit } from 'svelement/icons/feather';
 	import { Link, ProgressBar } from 'svelement';
 	import Header from './Header.svelte';
-	import TextIcon from '$components/TextIcon.svelte';
-	import Siblings from '$components/Siblings.svelte';
+	import TextIcon from '$lib/components/TextIcon.svelte';
+	import Siblings from '$lib/components/Siblings.svelte';
 
 	function offsetAnchor() {
 		if (!window.location.hash.length) return;
@@ -38,6 +38,19 @@
 		<Header {post} {path}>
 			<slot name="header" />
 		</Header>
+
+		{#if post && post.toc.length}
+			<section id="objective" class="info-box">
+				<h3>Table of Contents</h3>
+				<ul>
+					{#each post.toc as { id, title }}
+						<li style="color: #f48fb1">
+							<Link href="#{id}" inherit>{title}</Link>
+						</li>
+					{/each}
+				</ul>
+			</section>
+		{/if}
 	{:else}
 		<slot name="header" />
 	{/if}
@@ -45,20 +58,20 @@
 	<slot />
 
 	{#if path}
-		<section>
+		<section id="end-card">
 			<p>
 				Find an issue with this post? Have something to add, update, or clarify? All my posts here
 				are editable.
 			</p>
 			<p>
 				Just create a new
-				<Link href="https://github.com/ignatiusmb/mauss/issues">Issue</Link>
+				<Link href="https://github.com/ignatiusmb/mauss.dev/issues">Issue</Link>
 				or
-				<Link href="https://github.com/ignatiusmb/mauss/pulls">PR</Link>
+				<Link href="https://github.com/ignatiusmb/mauss.dev/pulls">PR</Link>
 				on GitHub, any fix or addition is much appreciated!
-				<TextIcon href="https://github.com/ignatiusmb/mauss/edit/master/{path}">
+				<TextIcon href="https://github.com/ignatiusmb/mauss.dev/edit/master/{path}">
 					<span>Edit</span>
-					<Feather.Edit size="17" />
+					<Edit size="17" />
 				</TextIcon>
 			</p>
 		</section>
@@ -122,7 +135,7 @@
 	main > :global(section:first-of-type) {
 		margin-top: 4em;
 	}
-	section {
+	main section#end-card {
 		padding: 0.4em 0.8em;
 		border-left: 2px solid var(--theme-secondary);
 		background-color: rgba(0, 0, 0, 0.05);

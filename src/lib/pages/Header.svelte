@@ -1,15 +1,15 @@
 <script>
 	export let path = null;
-	export let post;
+	export let post = {};
 	const size = 16;
 
-	import { Feather } from 'svelement/icons';
+	import * as Feather from 'svelement/icons/feather';
 	import { Link } from 'svelement';
-	import { createPrettyDate } from '$utils/helper';
-	import TextIcon from '$components/TextIcon.svelte';
+	import { createPrettyDate } from '$lib/utils/helper';
+	import TextIcon from '$lib/components/TextIcon.svelte';
 
-	$: ({ author, published, updated } = post.date || {});
-	$: ({ name, img, link } = author || {});
+	$: ({ author = {}, date = {} } = post);
+	$: ({ published, updated } = date);
 	$: pretty = {
 		published: createPrettyDate(published),
 		updated: createPrettyDate(updated),
@@ -26,11 +26,11 @@
 	{/if}
 
 	<small>
-		<Link href={link || 'about'}>
-			<img src={img || 'assets/profile/mauss.jpeg'} alt="author profile" />
+		<Link href={author.link || '/about'}>
+			<img src={author.img || '/assets/profile/mauss.jpeg'} alt="author profile" />
 		</Link>
 		<div class="details">
-			<span style="font-weight: bolder">{name || 'Ignatius Bagussuputra'}</span>
+			<span style="font-weight: bolder">{author.name || 'Ignatius Bagussuputra'}</span>
 
 			{#if published}
 				<div>
@@ -42,7 +42,7 @@
 						</time>
 					</TextIcon>
 					{#if path && (!updated || (updated && updated === published))}
-						<TextIcon href="https://github.com/ignatiusmb/mauss/edit/master/{path}">
+						<TextIcon href="https://github.com/ignatiusmb/mauss.dev/edit/master/{path}">
 							<span>Edit</span>
 							<Feather.Edit {size} />
 						</TextIcon>
@@ -53,7 +53,7 @@
 			{#if updated && updated !== published}
 				<div>
 					{#if path}
-						<TextIcon href="https://github.com/ignatiusmb/mauss/commits/master/{path}">
+						<TextIcon href="https://github.com/ignatiusmb/mauss.dev/commits/master/{path}">
 							{#if published}
 								<Feather.GitCommit {size} />
 							{:else}
@@ -67,7 +67,7 @@
 						</span>
 					{/if}
 					{#if path}
-						<TextIcon href="https://github.com/ignatiusmb/mauss/edit/master/{path}">
+						<TextIcon href="https://github.com/ignatiusmb/mauss.dev/edit/master/{path}">
 							<span>Edit</span>
 							<Feather.Edit {size} />
 						</TextIcon>

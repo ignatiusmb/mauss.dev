@@ -8,8 +8,7 @@
 	const hostTitle = 'DevMauss';
 	const hostname = 'mauss.dev';
 
-	import { stores } from '@sapper/app';
-	const { page } = stores();
+	import { page } from '$app/stores';
 	$: url = $page.host === hostname ? `https://${hostname}/${canonical}` : null;
 </script>
 
@@ -53,10 +52,10 @@
 		{/if}
 
 		{#if social.twitter}
-			<meta name="generator" content="Ignatius on Svelte + Sapper!" />
+			<meta name="generator" content="Ignatius on SvelteKit!" />
 			<meta name="twitter:card" content="summary" />
-			<meta name="twitter:site" content="@ignatiusmbs" />
-			<meta name="twitter:creator" content="@ignatiusmbs" />
+			<meta name="twitter:site" content="@devmauss" />
+			<meta name="twitter:creator" content="@devmauss" />
 			{#if url}
 				<meta name="twitter:url" content={url} />
 			{/if}
