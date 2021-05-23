@@ -10,9 +10,9 @@ export const get: RequestHandler<Locals> = async ({ params, locals: { entry } })
 		const review = { slug: `${category}/${slug}`, category, ...frontMatter };
 
 		const dStart = +new Date(frontMatter.date.updated || frontMatter.date.published);
-		review.composed = (dStart - +new Date(frontMatter.last_seen)) / 24 / 60 / 60 / 1000;
+		review.composed = (dStart - +new Date(frontMatter.seen.first)) / 24 / 60 / 60 / 1000;
 
-		const [article, closing] = (content as unknown as string).split(/^## \$CLOSING/m);
+		const [article, closing] = (content as string).split(/^## \$CLOSING/m);
 		if (closing) review.closing = marker.render(contentParser(review, closing));
 
 		const [summary, spoilers] = article.split(/^## \$SPOILERS/m);

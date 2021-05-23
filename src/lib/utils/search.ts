@@ -28,7 +28,7 @@ const sortBy: Record<string, (x: any, y: any) => number> = {
 		const yr = Number.isNaN(+y.rating) ? +!!y.rating : y.rating;
 		return xr === yr ? sortCompare(x, y) : yr - xr;
 	},
-	seen: (x, y) => c.date(x.last_seen, y.last_seen) || sortCompare(x, y),
+	seen: (x, y) => c.date(x.seen.first, y.seen.first) || sortCompare(x, y),
 	released: (x, y) => c.date(x.released, y.released) || sortCompare(x, y),
 	published: (x, y) => c.date(x.date.published, y.date.published) || sortCompare(x, y),
 };
