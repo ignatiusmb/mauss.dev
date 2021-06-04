@@ -1,8 +1,8 @@
 <script>
 	import { post } from 'mauss/api';
 	import { browser, dev } from '$app/env';
-	import { page as local } from '$app/stores';
-	import { page } from '$lib/utils/stores';
+	import { page } from '$app/stores';
+	import { current } from '$lib/utils/stores';
 
 	import { ScrollTop } from 'svelement';
 	import Navigation from '$lib/components/Navigation.svelte';
@@ -16,13 +16,13 @@
 	import '$lib/styles/animation.css';
 
 	$: if (!dev && browser) {
-		page.set(post(`/api/page?slug=${$local.path}`));
+		current.set(post(`/api/page?slug=${$page.path}`));
 	}
 </script>
 
 <ScrollTop />
 
-{#if $local.path !== '/'}
+{#if $page.path !== '/'}
 	<Navigation />
 {/if}
 <slot />
