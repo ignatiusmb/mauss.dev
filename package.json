@@ -18,7 +18,7 @@
   "dependencies": {
     "faunadb": "^4.0.2",
     "marqua": "^0.2.0",
-    "mauss": "^0.0.11",
+    "mauss": "^0.1.0",
     "svelement": "^0.0.13"
   },
   "devDependencies": {
