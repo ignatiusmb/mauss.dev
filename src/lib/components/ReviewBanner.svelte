@@ -2,8 +2,8 @@
 	export let post;
 	import { Image } from 'svelement';
 	import { createPrettyDate } from '$lib/utils/helper';
-	$: ({ backdrop, title, rating, composed, last_seen } = post);
-	$: ({ day, month, year } = createPrettyDate(last_seen));
+	$: ({ backdrop, title, rating, composed, seen } = post);
+	$: ({ day, month, year } = createPrettyDate(seen.first));
 </script>
 
 <div class="banner">

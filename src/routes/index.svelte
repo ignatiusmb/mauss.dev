@@ -3,12 +3,12 @@
 	export async function load({ fetch }) {
 		const quotes = await fetch('/quotes.json').then((r) => r.json());
 		const data = {
+			curated: (await fetch('/curated.json').then((r) => r.json()))
+				.sort((x, y) => compare.date(x.date.updated, y.date.updated))
+				.slice(0, 4),
 			posts: (await fetch('/posts.json').then((r) => r.json())).slice(0, 4),
 			reviews: (await fetch('/reviews.json').then((r) => r.json()))
 				.filter((x) => x.rating && x.verdict !== -2)
-				.slice(0, 4),
-			curated: (await fetch('/curated.json').then((r) => r.json()))
-				.sort((x, y) => compare.date(x.date.updated, y.date.updated))
 				.slice(0, 4),
 		};
 
@@ -21,9 +21,9 @@
 <script>
 	export let data, quotes;
 	const section = {
+		curated: { heading: '⚖️ Recently Curated', desc: "Stuffs I've been curating" },
 		posts: { heading: '📚 Recent Posts', desc: "What's on my mind (or life)" },
 		reviews: { heading: '⭐ Recent Reviews', desc: "Contents I've been reviewing" },
-		curated: { heading: '⚖️ Recently Curated', desc: "Stuffs I've been curating" },
 	};
 
 	import { Link, Image } from 'svelement';
@@ -33,7 +33,7 @@
 	import Navigation from '$lib/components/Navigation.svelte';
 
 	let scrollY, innerHeight;
-	$: scrolled = +(scrollY >= innerHeight * 0.6);
+	$: scrolled = scrollY > 0;
 </script>
 
 <svelte:window bind:scrollY bind:innerHeight />

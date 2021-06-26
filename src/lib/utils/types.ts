@@ -71,7 +71,10 @@ export type Review = Typify<
 				published: string;
 				updated?: string;
 			};
-			last_seen: string;
+			seen: {
+				first: string;
+				last?: string;
+			};
 			image: {
 				en: string;
 				jp?: string;
