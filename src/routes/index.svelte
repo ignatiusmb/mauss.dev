@@ -33,7 +33,7 @@
 	import Navigation from '$lib/components/Navigation.svelte';
 
 	let scrollY, innerHeight;
-	$: scrolled = +(scrollY >= innerHeight * 0.6);
+	$: scrolled = scrollY > 0;
 </script>
 
 <svelte:window bind:scrollY bind:innerHeight />
