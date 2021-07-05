@@ -39,8 +39,7 @@
 <svelte:window bind:scrollY bind:innerHeight />
 <MetaHead
 	title="Ignatius Bagussuputra"
-	description="DevMauss. Personal website of Ignatius Bagussuputra. A Computer Science undergraduate
-	from University of Indonesia." />
+	description="DevMauss. Personal website of Ignatius Bagussuputra. A Computer Science undergraduate from University of Indonesia." />
 
 <div class="fixed-nav" class:scrolled>
 	<Navigation bind:scrolled />
