@@ -4,7 +4,7 @@
 	import { page } from '$app/stores';
 	import { current } from '$lib/utils/stores';
 
-	import { ScrollTop } from 'svelement';
+	import { ScrollTop } from 'syv';
 	import Navigation from '$lib/components/Navigation.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 

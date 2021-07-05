@@ -2,7 +2,7 @@
 	import type { Post } from '$lib/utils/types';
 
 	export let post: Post;
-	import { Image, ButtonLink } from 'svelement';
+	import { Image, ButtonLink } from 'syv';
 	import { createPrettyDate } from '$lib/utils/helper';
 	const { published, updated } = post.date;
 	const { day, month, year } = createPrettyDate((updated !== published && updated) || published);
@@ -40,7 +40,7 @@
 		background-color: var(--bg-overlay);
 		transform: translate(0%);
 	}
-	section > :global(.lmns-image) {
+	section > :global(.syv-image) {
 		cursor: pointer;
 		border-bottom-right-radius: 0;
 		border-bottom-left-radius: 0;

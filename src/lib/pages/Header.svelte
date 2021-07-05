@@ -3,8 +3,8 @@
 	export let post = {};
 	const size = 16;
 
-	import * as Feather from 'svelement/icons/feather';
-	import { Link } from 'svelement';
+	import { Feather } from 'syv/icons';
+	import { Link } from 'syv';
 	import { createPrettyDate } from '$lib/utils/helper';
 	import TextIcon from '$lib/components/TextIcon.svelte';
 
@@ -153,7 +153,7 @@
 		content: '' !important;
 		margin: 0 !important;
 	}
-	small time + :global(.lmns-link) {
+	small time + :global(.syv-link) {
 		font: 90% var(--aqua-monospace);
 	}
 

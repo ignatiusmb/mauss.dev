@@ -1,5 +1,5 @@
 <script>
-	import { Link } from 'svelement';
+	import { Link } from 'syv';
 	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import Article from '$lib/pages/Article.svelte';
 	import Disclaimer from '$lib/components/Disclaimer.svelte';

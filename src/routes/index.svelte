@@ -26,7 +26,7 @@
 		reviews: { heading: '⭐ Recent Reviews', desc: "Contents I've been reviewing" },
 	};
 
-	import { Link, Image } from 'svelement';
+	import { Link, Image } from 'syv';
 	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import Article from '$lib/pages/Article.svelte';
 	import Quote from '$lib/components/Quote.svelte';
@@ -117,7 +117,7 @@
 	header > h3 {
 		margin-bottom: auto;
 	}
-	header :global(.lmns-image img) {
+	header :global(.syv-image img) {
 		padding: 0.5em;
 		border: none;
 		border-radius: inherit;

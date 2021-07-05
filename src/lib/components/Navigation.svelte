@@ -4,8 +4,8 @@
 	import { navigating, page } from '$app/stores';
 	const sections = ['about', 'curated', 'posts', 'reviews', 'uses'];
 
-	import * as Feather from 'svelement/icons/feather';
-	import { ThemeSwitcher, Link } from 'svelement';
+	import { Feather } from 'syv/icons';
+	import { ThemeSwitcher, Link } from 'syv';
 	import NavLink from './NavLink.svelte';
 	import NavGrid from './NavGrid.svelte';
 
@@ -77,7 +77,7 @@
 	}
 
 	nav > span,
-	nav > :global(a.lmns-link) {
+	nav > :global(a.syv-link) {
 		display: inline-flex;
 	}
 
@@ -91,7 +91,7 @@
 		margin-right: 1em;
 	}
 
-	nav > :global(.lmns-theme-switcher path) {
+	nav > :global(.syv-theme-switcher path) {
 		fill: none;
 	}
 
