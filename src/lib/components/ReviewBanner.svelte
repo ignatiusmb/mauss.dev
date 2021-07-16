@@ -1,6 +1,6 @@
 <script>
 	export let post;
-	import { Image } from 'svelement';
+	import { Image } from 'syv';
 	import { createPrettyDate } from '$lib/utils/helper';
 	$: ({ backdrop, title, rating, composed, seen } = post);
 	$: ({ day, month, year } = createPrettyDate(seen.first));
@@ -39,7 +39,7 @@
 		border-radius: inherit;
 		background-color: rgba(0, 0, 0, 0.5);
 	}
-	.banner :global(.lmns-image img) {
+	.banner :global(.syv-image img) {
 		display: flex;
 		align-items: flex-end;
 		justify-content: center;

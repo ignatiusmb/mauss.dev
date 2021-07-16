@@ -13,7 +13,7 @@
 	import { sift, sieve } from '$lib/utils/search';
 	import { pSlice as store } from '$lib/utils/stores';
 
-	import { SearchBar, Pagination } from 'svelement';
+	import { SearchBar, Pagination } from 'syv';
 	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import LayoutPicker from '$lib/pages/LayoutPicker.svelte';
 	import AnimatedKey from '$lib/components/AnimatedKey.svelte';

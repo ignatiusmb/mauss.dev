@@ -12,11 +12,11 @@
 
 <script>
 	export let category, data;
-	import { ButtonLink } from 'svelement';
-	import MetaHead from '$lib/pages/MetaHead.svelte';
-
 	import { scale } from 'svelte/transition';
 	import { flip } from 'svelte/animate';
+
+	import { ButtonLink } from 'syv';
+	import MetaHead from '$lib/pages/MetaHead.svelte';
 </script>
 
 <MetaHead canonical="curated" title="Curated" description="Curated content for {category} stuff.">

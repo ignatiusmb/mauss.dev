@@ -53,7 +53,7 @@
 	header :global(h1) {
 		text-align: center;
 	}
-	header :global(.lmns-pagination) {
+	header :global(.syv-pagination) {
 		max-width: 32em;
 	}
 	aside {

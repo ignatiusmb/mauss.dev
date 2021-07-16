@@ -2,9 +2,9 @@
 
 Personal website, handcrafted with ❤️ using these tools
 
-|              Framework              |                      Components                      |             Style              |                     Parser                     |
-| :---------------------------------: | :--------------------------------------------------: | :----------------------------: | :--------------------------------------------: |
-| [SvelteKit](https://kit.svelte.dev) | [Svelement](https://github.com/ignatiusmb/svelement) | [Aqua](https://aqua.mauss.dev) | [Marqua](https://github.com/ignatiusmb/marqua) |
+|              Framework              |                Components                |             Style              |                     Parser                     |
+| :---------------------------------: | :--------------------------------------: | :----------------------------: | :--------------------------------------------: |
+| [SvelteKit](https://kit.svelte.dev) | [Syv](https://github.com/ignatiusmb/syv) | [Aqua](https://aqua.mauss.dev) | [Marqua](https://github.com/ignatiusmb/marqua) |
 
 ## Contributing
 
@@ -35,14 +35,10 @@ Content is managed as a submodule in [devmauss/content](https://github.com/devma
 git submodule update --remote --merge
 ```
 
----
+***
 
-<h3 align="center"><pre>
-DevMauss | <a href="LICENSE">MIT License</a>
-</pre></h3>
+<h3 align="center"><pre>DevMauss | <a href="LICENSE">MIT License</a></pre></h3>
 
----
+***
 
-<h5 align="center"><pre>
-Copyright &copy; 2019 &ndash; 2021 <a href="https://mauss.dev">Ignatius Bagussuputra</a>
-</pre></h5>
+<h5 align="center"><pre>Copyright &copy; 2019 &ndash; 2021 <a href="https://mauss.dev">Ignatius Bagussuputra</a></pre></h5>

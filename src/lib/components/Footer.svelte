@@ -1,6 +1,6 @@
 <script>
-	import { Link } from 'svelement';
-	import * as Feather from 'svelement/icons/feather';
+	import { Feather } from 'syv/icons';
+	import { Link } from 'syv';
 </script>
 
 <footer>

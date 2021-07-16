@@ -13,7 +13,7 @@
 <script>
 	export let post, sections;
 	import { capitalize } from 'mauss/utils';
-	import { Link, WeavedImage } from 'svelement';
+	import { Link, WeavedImage } from 'syv';
 	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import Article from '$lib/pages/Article.svelte';
 </script>

@@ -1,6 +1,6 @@
 <script>
 	export let post;
-	import { ButtonLink } from 'svelement';
+	import { ButtonLink } from 'syv';
 </script>
 
 <section>
