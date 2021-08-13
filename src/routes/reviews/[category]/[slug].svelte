@@ -21,7 +21,7 @@
 <script>
 	export let post;
 
-	import { Link } from 'svelement';
+	import { Link } from 'syv';
 	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import Article from '$lib/pages/Article.svelte';
 

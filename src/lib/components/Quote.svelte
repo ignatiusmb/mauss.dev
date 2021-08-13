@@ -2,7 +2,7 @@
 	export let quotes;
 	import { random } from 'mauss/utils';
 	import { fly } from 'svelte/transition';
-	import { GradientBorder } from 'svelement';
+	import { GradientBorder } from 'syv';
 
 	let quoteIndex = random.int(quotes.length);
 	$: newQuote = quotes[quoteIndex];

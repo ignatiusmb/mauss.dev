@@ -41,8 +41,7 @@
 	import { sift, sieve } from '$lib/utils/search';
 	const duration = 100;
 
-	import { Grid, Layers, Columns } from 'svelement/icons/feather';
-	import { SearchBar, Pagination } from 'svelement';
+	import { SearchBar, Pagination } from 'syv';
 	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import LayoutPicker from '$lib/pages/LayoutPicker.svelte';
 	import ReviewCard from '$lib/components/ReviewCard.svelte';
