@@ -1,3 +1,5 @@
+<svelte:options immutable />
+
 <script>
 	export let post;
 	import { Image, ButtonLink } from 'syv';
@@ -55,5 +57,3 @@
 		grid-template-columns: 1fr 1fr;
 	}
 </style>
-
-<svelte:options immutable />

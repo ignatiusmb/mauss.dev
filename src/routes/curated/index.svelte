@@ -26,7 +26,8 @@
 <MetaHead
 	canonical="curated"
 	title="Curated"
-	description="Curated content for all kinds of programming, lifestyle, and many more.">
+	description="Curated content for all kinds of programming, lifestyle, and many more."
+>
 	<link rel="alternate" href="/rss.xml" type="application/rss+xml" />
 </MetaHead>
 

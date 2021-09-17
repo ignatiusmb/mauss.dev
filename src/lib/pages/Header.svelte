@@ -85,7 +85,8 @@
 					on:click={async () => {
 						if (typeof window !== 'undefined' && !navigator.share) return;
 						navigator.share({ title: document.title, url: location.href });
-					}}>
+					}}
+				>
 					<span>Share</span>
 					<Feather.Share2 {size} />
 				</TextIcon>

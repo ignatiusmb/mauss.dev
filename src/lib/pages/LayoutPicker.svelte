@@ -23,7 +23,8 @@
 		class:grid={view === 'grid'}
 		class:column={view === 'column'}
 		class:scrollsnap={view === 'scrollsnap'}
-		style="--grid-minval: {itemSize}">
+		style="--grid-minval: {itemSize}"
+	>
 		<slot {view} />
 	</main>
 </div>

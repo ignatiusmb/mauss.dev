@@ -39,7 +39,8 @@
 <svelte:window bind:scrollY bind:innerHeight />
 <MetaHead
 	title="Ignatius Bagussuputra"
-	description="DevMauss. Personal website of Ignatius Bagussuputra. A Computer Science undergraduate from University of Indonesia." />
+	description="DevMauss. Personal website of Ignatius Bagussuputra."
+/>
 
 <div class="fixed-nav" class:scrolled>
 	<Navigation bind:scrolled />
@@ -60,11 +61,10 @@
 
 	<section>
 		<h2>👋 About Me</h2>
-		<p>Hello! My name's Ignatius, an undergraduate CS student.</p>
 		<p>
-			I've been developing ever since I started college. I enjoy creating stuff that makes life
-			easier, I'm also an Open Source enthusiast. I'm also passionate about my websites and just
-			beautiful interfaces in general. I also like to build things IRL.
+			Hello! I've been developing ever since I started college. I enjoy creating stuff that makes
+			life easier, I'm also an Open Source enthusiast. I'm also passionate about my websites and
+			just beautiful interfaces in general. I also like to build things IRL.
 		</p>
 		<br />
 		<Link href="/about">More info...</Link>

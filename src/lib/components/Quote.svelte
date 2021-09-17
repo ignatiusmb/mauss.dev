@@ -21,7 +21,8 @@
 				do newIndex = random.int(quotes.length);
 				while (newIndex === quoteIndex);
 				quoteIndex = newIndex;
-			}}>
+			}}
+		>
 			<GradientBorder>&mdash;{author}</GradientBorder>
 		</small>
 	</blockquote>

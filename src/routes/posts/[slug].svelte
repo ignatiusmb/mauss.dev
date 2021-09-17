@@ -28,7 +28,8 @@
 	{post}
 	header
 	path="content/posts/{post.date.published}.{post.slug}.md"
-	siblings={post.siblings}>
+	siblings={post.siblings}
+>
 	<slot slot="header">
 		<small class="tags">
 			{#each post.tags as tag}

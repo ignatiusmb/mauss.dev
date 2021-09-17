@@ -34,7 +34,8 @@
 <MetaHead
 	{post}
 	canonical="reviews/{post.slug}"
-	title={title.short ? title.short : title.jp ? title.jp : title.en} />
+	title={title.short ? title.short : title.jp ? title.jp : title.en}
+/>
 
 <Article {post} header path="content/reviews/{post.slug}.md" {siblings}>
 	<div slot="header">

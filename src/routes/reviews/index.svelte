@@ -55,7 +55,8 @@
 <MetaHead
 	canonical="reviews"
 	title="Reviews"
-	description="Personalized reviews for all kinds of anime, books, movies, shows, etc.">
+	description="Personalized reviews for all kinds of anime, books, movies, shows, etc."
+>
 	<link rel="alternate" href="/rss.xml" type="application/rss+xml" />
 </MetaHead>
 
