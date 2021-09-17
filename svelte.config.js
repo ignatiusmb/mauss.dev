@@ -5,7 +5,6 @@ import autoprefixer from 'autoprefixer';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	preprocess: preprocess({
-		defaults: { script: 'javascript' },
 		postcss: { plugins: [autoprefixer()] },
 	}),
 	kit: {
