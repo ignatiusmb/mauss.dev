@@ -31,6 +31,7 @@
 	import Article from '$lib/pages/Article.svelte';
 	import Quote from '$lib/components/Quote.svelte';
 	import Navigation from '$lib/components/Navigation.svelte';
+	import RotatingBorder from '$lib/components/RotatingBorder.svelte';
 
 	let scrollY, innerHeight;
 	$: scrolled = scrollY > 0;
@@ -49,7 +50,7 @@
 <Article>
 	<header slot="header">
 		<Link href="/about">
-			<div class="dashed-border" />
+			<RotatingBorder />
 			<Image src="/assets/profile/mauss.jpeg" alt="DevMauss Profile" ratio={1} />
 		</Link>
 		<h2>Ignatius Bagussuputra</h2>
@@ -97,8 +98,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding-top: 30%;
-		padding-bottom: 15%;
+		justify-content: center;
 		text-align: center;
 		font-family: var(--aqua-heading);
 	}
@@ -107,6 +107,9 @@
 		width: 100%;
 		color: inherit;
 	}
+	header h3 {
+		margin: 1.5em 0 2em;
+	}
 	header > :global(a) {
 		position: relative;
 		width: 14em;
@@ -114,21 +117,10 @@
 		justify-self: center;
 		border-radius: 50%;
 	}
-	header > h3 {
-		margin-bottom: auto;
-	}
 	header :global(.syv-core-image img) {
 		padding: 0.5em;
 		border: none;
 		border-radius: inherit;
-	}
-	header .dashed-border {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		border: 0.25em dashed var(--theme-primary);
-		border-radius: inherit;
-		animation: 28s infinite linear rotate;
 	}
 
 	h2 {
@@ -168,10 +160,6 @@
 	}
 
 	@media only screen and (min-width: 600px) {
-		header {
-			padding-top: 25%;
-			padding-bottom: 0;
-		}
 		.fixed-nav > :global(nav) {
 			bottom: unset;
 			transform: translateY(-100%);
