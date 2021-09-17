@@ -2,7 +2,7 @@
 
 <script>
 	export let post;
-	import { Image, ButtonLink } from 'syv';
+	import { ButtonLink, Image } from 'syv';
 	import Verdict from './Verdict.svelte';
 
 	import { capitalize } from 'mauss/utils';
@@ -42,7 +42,7 @@
 		border-top-left-radius: inherit;
 		border-top-right-radius: inherit;
 	}
-	section > :global(.syv-image) {
+	section > :global(.syv-core-image) {
 		cursor: pointer;
 	}
 	aside {

@@ -39,7 +39,7 @@
 		border-radius: inherit;
 		background-color: rgba(0, 0, 0, 0.5);
 	}
-	.banner :global(.syv-image img) {
+	.banner :global(.syv-core-image img) {
 		display: flex;
 		align-items: flex-end;
 		justify-content: center;

@@ -40,7 +40,7 @@
 		background-color: var(--bg-overlay);
 		transform: translate(0%);
 	}
-	section > :global(.syv-image) {
+	section > :global(.syv-core-image) {
 		cursor: pointer;
 		border-bottom-right-radius: 0;
 		border-bottom-left-radius: 0;

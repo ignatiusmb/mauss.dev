@@ -117,7 +117,7 @@
 	header > h3 {
 		margin-bottom: auto;
 	}
-	header :global(.syv-image img) {
+	header :global(.syv-core-image img) {
 		padding: 0.5em;
 		border: none;
 		border-radius: inherit;

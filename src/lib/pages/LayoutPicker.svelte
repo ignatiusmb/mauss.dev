@@ -54,7 +54,7 @@
 	header :global(h1) {
 		text-align: center;
 	}
-	header :global(.syv-pagination) {
+	header :global(.syv-core-pagination) {
 		max-width: 32em;
 	}
 	aside {
