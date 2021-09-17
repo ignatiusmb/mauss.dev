@@ -1,14 +1,12 @@
 <script context="module">
 	import { rSlice as store } from '$lib/utils/stores';
-	export async function load({ fetch, page: { query } }) {
+	export async function load({ fetch }) {
 		const data = await fetch('/reviews.json').then((r) => r.json());
 		const categories = [...new Set(data.map((p) => p.category))];
 		const genres = [...new Set(data.flatMap((p) => p.genres))].sort();
-		store.set(query.has('q') ? sift(query.get('q'), data) : data);
 		return {
 			props: {
 				data,
-				search: query,
 				unique: {
 					categories,
 					genres,
@@ -33,11 +31,13 @@
 </script>
 
 <script>
-	export let data, search, unique;
-	let query = (search.has('q') && search.get('q').replace(/\+/g, ' ')) || '';
+	export let data, unique;
+
+	let query = (browser && location.search.replace(/\+/g, ' ')) || '';
 
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
+	import { browser } from '$app/env';
 	import { sift, sieve } from '$lib/utils/search';
 	const duration = 100;
 
