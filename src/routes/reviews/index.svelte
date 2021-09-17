@@ -33,7 +33,8 @@
 <script>
 	export let data, unique;
 
-	let query = (browser && location.search.replace(/\+/g, ' ')) || '';
+	let search = browser && new URLSearchParams(location.search).get('q');
+	let query = (search && search.replace(/\+/g, ' ')) || '';
 
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
