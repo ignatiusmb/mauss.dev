@@ -30,13 +30,13 @@
 	path="content/posts/{post.date.published}.{post.slug}.md"
 	siblings={post.siblings}
 >
-	<slot slot="header">
+	<svelte:fragment slot="header">
 		<small class="tags">
 			{#each post.tags as tag}
 				<TagBadge {tag} />
 			{/each}
 		</small>
-	</slot>
+	</svelte:fragment>
 
 	{#if post.title.startsWith('Accessibility!')}
 		<blockquote>

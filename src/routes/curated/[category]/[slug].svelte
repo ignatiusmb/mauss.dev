@@ -20,7 +20,7 @@
 <MetaHead {post} canonical="curated/{slug}" {title} />
 
 <Article {post} header path="content/curated/{slug}.md">
-	<slot slot="header">
+	<svelte:fragment slot="header">
 		{#if post.tags}
 			<small class="tags">
 				{#each post.tags as tag}
@@ -28,7 +28,7 @@
 				{/each}
 			</small>
 		{/if}
-	</slot>
+	</svelte:fragment>
 
 	{@html content}
 </Article>
