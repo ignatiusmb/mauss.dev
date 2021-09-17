@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { Post } from '$lib/utils/types';
-
 	export let post: Post;
-	import { Image, ButtonLink } from 'syv';
+
+	import type { Post } from '$lib/utils/types';
 	import { createPrettyDate } from '$lib/utils/helper';
+	import { Image, ButtonLink } from 'syv';
 	const { published, updated } = post.date;
 	const { day, month, year } = createPrettyDate((updated !== published && updated) || published);
 </script>
