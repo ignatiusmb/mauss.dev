@@ -1,6 +1,6 @@
-<script>
-	export let path = null;
-	export let post = {};
+<script lang="ts">
+	export let path = '';
+	export let post: any = {};
 	const size = 16;
 
 	import { Feather } from 'syv/icons';
@@ -11,8 +11,8 @@
 	$: ({ author = {}, date = {} } = post);
 	$: ({ published, updated } = date);
 	$: pretty = {
-		published: createPrettyDate(published),
-		updated: createPrettyDate(updated),
+		published: createPrettyDate(date.published as string),
+		updated: createPrettyDate(date.updated as string),
 	};
 </script>
 

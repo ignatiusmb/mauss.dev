@@ -46,7 +46,6 @@
 	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import LayoutPicker from '$lib/pages/LayoutPicker.svelte';
 	import ReviewCard from '$lib/components/ReviewCard.svelte';
-	import PerspectiveCarousel from '$lib/components/PerspectiveCarousel.svelte';
 
 	let filters = { categories: [], genres: [], verdict: [], sort_by: 'updated' };
 	$: filtered = sieve(filters, data);
