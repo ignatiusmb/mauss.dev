@@ -57,6 +57,9 @@
 	header :global(.syv-core-pagination) {
 		max-width: 32em;
 	}
+	header :global(.syv-core-search-bar) {
+		border-radius: var(--b-radius);
+	}
 	aside {
 		width: 100%;
 		position: absolute;
