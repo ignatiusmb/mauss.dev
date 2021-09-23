@@ -63,20 +63,25 @@
 	<section>
 		<h2>👋 About Me</h2>
 		<p>
-			Hello! I've been developing ever since I started college. I enjoy creating stuff that makes
-			life easier, I'm also an Open Source enthusiast. I'm also passionate about my websites and
-			just beautiful interfaces in general. I also like to build things IRL.
+			Hello! I've been enjoying creating stuff that makes life easier ever since I learn software
+			engineering, this is one of the reasons why I love Open Source, to give back and make stuff
+			that can hopefully be useful to others as well.
+		</p>
+		<p>
+			I'm passionate about my websites, code and design-wise. I like nice interfaces and treat them
+			as challenges. I also like to build/assemble things IRL, especially those do-it-yourself IKEA
+			style furnitures, it calms my mind and forces me to relax for a while.
 		</p>
 		<br />
 		<Link href="/about">More info...</Link>
 	</section>
 
-	{#each Object.keys(data) as seg}
+	{#each Object.entries(data) as [seg, item]}
 		<section>
 			<h2>{section[seg]['heading']}</h2>
 			<p>{section[seg]['desc']} recently:</p>
 			<ul>
-				{#each data[seg] as { slug, title }}
+				{#each item as { slug, title }}
 					<li>
 						<Link href="/{seg}/{slug}">
 							{typeof title === 'string' ? title : title.short || title.en}
