@@ -8,7 +8,8 @@
 <MetaHead
 	canonical="disclaimer"
 	title="Disclaimer"
-	description="Disclaimer page for all the content in this website." />
+	description="Disclaimer page for all the content in this website."
+/>
 
 <Article>
 	<Disclaimer>

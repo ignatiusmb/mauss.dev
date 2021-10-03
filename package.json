@@ -38,7 +38,7 @@
     "svelte": "^3.32.1",
     "svelte-check": "^2.0.0",
     "svelte-preprocess": "^4.6.5",
-    "syv": "^0.0.1",
+    "syv": "latest",
     "typescript": "^4.1.3"
   }
 }

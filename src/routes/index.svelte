@@ -31,6 +31,7 @@
 	import Article from '$lib/pages/Article.svelte';
 	import Quote from '$lib/components/Quote.svelte';
 	import Navigation from '$lib/components/Navigation.svelte';
+	import RotatingBorder from '$lib/components/RotatingBorder.svelte';
 
 	let scrollY, innerHeight;
 	$: scrolled = scrollY > 0;
@@ -39,7 +40,8 @@
 <svelte:window bind:scrollY bind:innerHeight />
 <MetaHead
 	title="Ignatius Bagussuputra"
-	description="DevMauss. Personal website of Ignatius Bagussuputra. A Computer Science undergraduate from University of Indonesia." />
+	description="DevMauss. Personal website of Ignatius Bagussuputra."
+/>
 
 <div class="fixed-nav" class:scrolled>
 	<Navigation bind:scrolled />
@@ -48,7 +50,7 @@
 <Article>
 	<header slot="header">
 		<Link href="/about">
-			<div class="dashed-border" />
+			<RotatingBorder />
 			<Image src="/assets/profile/mauss.jpeg" alt="DevMauss Profile" ratio={1} />
 		</Link>
 		<h2>Ignatius Bagussuputra</h2>
@@ -60,22 +62,26 @@
 
 	<section>
 		<h2>👋 About Me</h2>
-		<p>Hello! My name's Ignatius, an undergraduate CS student.</p>
 		<p>
-			I've been developing ever since I started college. I enjoy creating stuff that makes life
-			easier, I'm also an Open Source enthusiast. I'm also passionate about my websites and just
-			beautiful interfaces in general. I also like to build things IRL.
+			Hello! I've been enjoying creating stuff that makes life easier ever since I learn software
+			engineering, this is one of the reasons why I love Open Source, to give back and make stuff
+			that can hopefully be useful to others as well.
+		</p>
+		<p>
+			I'm passionate about my websites, code and design-wise. I like nice interfaces and treat them
+			as challenges. I also like to build/assemble things IRL, especially those do-it-yourself IKEA
+			style furnitures, it calms my mind and forces me to relax for a while.
 		</p>
 		<br />
 		<Link href="/about">More info...</Link>
 	</section>
 
-	{#each Object.keys(data) as seg}
+	{#each Object.entries(data) as [seg, item]}
 		<section>
 			<h2>{section[seg]['heading']}</h2>
 			<p>{section[seg]['desc']} recently:</p>
 			<ul>
-				{#each data[seg] as { slug, title }}
+				{#each item as { slug, title }}
 					<li>
 						<Link href="/{seg}/{slug}">
 							{typeof title === 'string' ? title : title.short || title.en}
@@ -97,8 +103,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding-top: 30%;
-		padding-bottom: 15%;
+		justify-content: center;
 		text-align: center;
 		font-family: var(--aqua-heading);
 	}
@@ -107,6 +112,9 @@
 		width: 100%;
 		color: inherit;
 	}
+	header h3 {
+		margin: 1.5em 0 2em;
+	}
 	header > :global(a) {
 		position: relative;
 		width: 14em;
@@ -114,21 +122,10 @@
 		justify-self: center;
 		border-radius: 50%;
 	}
-	header > h3 {
-		margin-bottom: auto;
-	}
-	header :global(.syv-image img) {
+	header :global(.syv-core-image img) {
 		padding: 0.5em;
 		border: none;
 		border-radius: inherit;
-	}
-	header .dashed-border {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		border: 0.25em dashed var(--theme-primary);
-		border-radius: inherit;
-		animation: 28s infinite linear rotate;
 	}
 
 	h2 {
@@ -168,10 +165,6 @@
 	}
 
 	@media only screen and (min-width: 600px) {
-		header {
-			padding-top: 25%;
-			padding-bottom: 0;
-		}
 		.fixed-nav > :global(nav) {
 			bottom: unset;
 			transform: translateY(-100%);

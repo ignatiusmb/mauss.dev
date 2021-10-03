@@ -10,6 +10,7 @@
 
 	import { page } from '$app/stores';
 	$: url = $page.host === hostname ? `https://${hostname}/${canonical}` : null;
+	// https://opengraph.githubassets.com/0/ignatiusmb/mauss.dev
 </script>
 
 <svelte:head>

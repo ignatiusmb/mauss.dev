@@ -22,7 +22,8 @@
 	{post}
 	canonical="about"
 	title="About"
-	description="Get to know Ignatius Bagussuputra from his About page." />
+	description="Get to know Ignatius Bagussuputra from his About page."
+/>
 
 <Article {post}>
 	<WeavedImage src="/assets/profile/mauss.jpeg" alt="DevMauss Profile" />

@@ -1,14 +1,12 @@
 <script context="module">
 	import { rSlice as store } from '$lib/utils/stores';
-	export async function load({ fetch, page: { query } }) {
+	export async function load({ fetch }) {
 		const data = await fetch('/reviews.json').then((r) => r.json());
 		const categories = [...new Set(data.map((p) => p.category))];
 		const genres = [...new Set(data.flatMap((p) => p.genres))].sort();
-		store.set(query.has('q') ? sift(query.get('q'), data) : data);
 		return {
 			props: {
 				data,
-				search: query,
 				unique: {
 					categories,
 					genres,
@@ -33,11 +31,14 @@
 </script>
 
 <script>
-	export let data, search, unique;
-	let query = (search.has('q') && search.get('q').replace(/\+/g, ' ')) || '';
+	export let data, unique;
+
+	let search = browser && new URLSearchParams(location.search).get('q');
+	let query = (search && search.replace(/\+/g, ' ')) || '';
 
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
+	import { browser } from '$app/env';
 	import { sift, sieve } from '$lib/utils/search';
 	const duration = 100;
 
@@ -45,7 +46,6 @@
 	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import LayoutPicker from '$lib/pages/LayoutPicker.svelte';
 	import ReviewCard from '$lib/components/ReviewCard.svelte';
-	import PerspectiveCarousel from '$lib/components/PerspectiveCarousel.svelte';
 
 	let filters = { categories: [], genres: [], verdict: [], sort_by: 'updated' };
 	$: filtered = sieve(filters, data);
@@ -55,7 +55,8 @@
 <MetaHead
 	canonical="reviews"
 	title="Reviews"
-	description="Personalized reviews for all kinds of anime, books, movies, shows, etc.">
+	description="Personalized reviews for all kinds of anime, books, movies, shows, etc."
+>
 	<link rel="alternate" href="/rss.xml" type="application/rss+xml" />
 </MetaHead>
 

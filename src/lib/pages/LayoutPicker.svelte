@@ -23,7 +23,8 @@
 		class:grid={view === 'grid'}
 		class:column={view === 'column'}
 		class:scrollsnap={view === 'scrollsnap'}
-		style="--grid-minval: {itemSize}">
+		style="--grid-minval: {itemSize}"
+	>
 		<slot {view} />
 	</main>
 </div>
@@ -53,8 +54,11 @@
 	header :global(h1) {
 		text-align: center;
 	}
-	header :global(.syv-pagination) {
+	header :global(.syv-core-pagination) {
 		max-width: 32em;
+	}
+	header :global(.syv-core-search-bar) {
+		border-radius: var(--b-radius);
 	}
 	aside {
 		width: 100%;

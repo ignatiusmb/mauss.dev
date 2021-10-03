@@ -5,7 +5,7 @@
 	const sections = ['about', 'curated', 'posts', 'reviews', 'uses'];
 
 	import { Feather } from 'syv/icons';
-	import { ThemeSwitcher, Link } from 'syv';
+	import { Link, ThemeSwitcher } from 'syv';
 	import NavLink from './NavLink.svelte';
 	import NavGrid from './NavGrid.svelte';
 
@@ -77,7 +77,7 @@
 	}
 
 	nav > span,
-	nav > :global(a.syv-link) {
+	nav > :global(a.syv-core-link) {
 		display: inline-flex;
 	}
 
@@ -91,7 +91,7 @@
 		margin-right: 1em;
 	}
 
-	nav > :global(.syv-theme-switcher path) {
+	nav > :global(.syv-core-theme-switcher path) {
 		fill: none;
 	}
 
