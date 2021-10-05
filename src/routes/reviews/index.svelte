@@ -38,7 +38,9 @@
 
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
+	import { qpm } from '$lib/syv';
 	import { browser } from '$app/env';
+	import { goto } from '$app/navigation';
 	import { sift, sieve } from '$lib/utils/search';
 	const duration = 100;
 
@@ -50,6 +52,9 @@
 	let filters = { categories: [], genres: [], verdict: [], sort_by: 'updated' };
 	$: filtered = sieve(filters, data);
 	$: items = query ? sift(query, filtered) : filtered;
+
+	$: shareable = qpm({ q: query }).replace(/%2B/g, '+');
+	$: browser && goto(shareable, { replaceState: true, keepfocus: true });
 </script>
 
 <MetaHead
