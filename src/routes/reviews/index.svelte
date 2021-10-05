@@ -33,14 +33,12 @@
 <script>
 	export let data, unique;
 
-	let search = browser && new URLSearchParams(location.search).get('q');
-	let query = (search && search.replace(/\+/g, ' ')) || '';
-
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
 	import { qpm } from '$lib/syv';
 	import { browser } from '$app/env';
 	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
 	import { sift, sieve } from '$lib/utils/search';
 	const duration = 100;
 
@@ -49,6 +47,8 @@
 	import LayoutPicker from '$lib/pages/LayoutPicker.svelte';
 	import ReviewCard from '$lib/components/ReviewCard.svelte';
 
+	let search = $page.query.get('q');
+	let query = (search && search.replace(/\+/g, ' ')) || '';
 	let filters = { categories: [], genres: [], verdict: [], sort_by: 'updated' };
 	$: filtered = sieve(filters, data);
 	$: items = query ? sift(query, filtered) : filtered;
