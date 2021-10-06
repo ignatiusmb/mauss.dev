@@ -35,7 +35,7 @@
 
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
-	import { qpm } from '$lib/syv';
+	import { qpm } from '$lib/mauss';
 	import { browser } from '$app/env';
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
