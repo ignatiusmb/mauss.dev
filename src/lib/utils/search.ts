@@ -2,10 +2,11 @@
 import type { Child, SieveDict } from './types';
 import { compare as c } from 'mauss';
 import { isExists } from 'mauss/guards';
+import { regexp } from '$lib/mauss';
 import { sortCompare } from './helper';
 
 const exists = (source: string | any, query: string | any): boolean =>
-	typeof source !== 'string' ? source === query : new RegExp(query, 'i').test(source);
+	typeof source !== 'string' ? source === query : regexp(query, 'i').test(source);
 const compare = (source: string[] | string, queries: string[]): number =>
 	Array.isArray(source)
 		? source.filter((s) => compare(s, queries)).length
