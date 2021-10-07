@@ -1,8 +1,8 @@
-# [DevMauss](https://mauss.dev)
+# [Alchemauss](https://mauss.dev)
 
 Personal website, handcrafted with ❤️ using these tools
 
-|              Framework              |                Components                |             Style              |                     Parser                     |
+|              Framework              |                 Library                  |             Style              |                     Parser                     |
 | :---------------------------------: | :--------------------------------------: | :----------------------------: | :--------------------------------------------: |
 | [SvelteKit](https://kit.svelte.dev) | [Syv](https://github.com/ignatiusmb/syv) | [Aqua](https://aqua.mauss.dev) | [Marqua](https://github.com/ignatiusmb/marqua) |
 
@@ -28,7 +28,7 @@ npm run dev
 
 ### Content
 
-Content is managed as a submodule in [devmauss/content](https://github.com/devmauss/content), any changes made to the content should be placed there ([open a new PR](https://github.com/devmauss/content/compare)).
+Content is managed as a submodule in [alchemauss/content](https://github.com/alchemauss/content), any changes made to the content should be placed there ([open a new PR](https://github.com/alchemauss/content/compare)).
 
 ```bash
 # Update to the latest version using
@@ -37,7 +37,7 @@ git submodule update --remote --merge
 
 ***
 
-<h3 align="center"><pre>DevMauss | <a href="LICENSE">MIT License</a></pre></h3>
+<h3 align="center"><pre>Alchemauss | <a href="LICENSE">MIT License</a></pre></h3>
 
 ***
 

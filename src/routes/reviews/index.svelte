@@ -67,7 +67,7 @@
 
 <LayoutPicker header>
 	<svelte:fragment slot="header">
-		<h1>DevMauss Reviews</h1>
+		<h1>Alchemauss Reviews</h1>
 		<SearchBar bind:query bind:filters {unique} />
 		<Pagination {store} {items} bound={12} increment={12} />
 	</svelte:fragment>

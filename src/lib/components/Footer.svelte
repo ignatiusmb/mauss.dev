@@ -22,7 +22,7 @@
 		<Link href="https://www.linkedin.com/in/ignatiusmb" label="linkedin profile">
 			<Feather.Linkedin />
 		</Link>
-		<Link href="https://twitter.com/devmauss" label="twitter profile">
+		<Link href="https://twitter.com/alchemauss" label="twitter profile">
 			<Feather.Twitter />
 		</Link>
 		<Link href="https://keybase.io/mauss" label="keybase profile">
@@ -34,7 +34,7 @@
 		<Link href="https://gitlab.com/ignatiusmb" label="gitlab profile">
 			<Feather.Gitlab />
 		</Link>
-		<Link href="https://twitch.tv/devmauss" label="twitch profile">
+		<Link href="https://twitch.tv/alchemauss" label="twitch profile">
 			<Feather.Twitch />
 		</Link>
 		<Link href="https://www.youtube.com/user/Ignapure/playlists" label="youtube playlist profile">

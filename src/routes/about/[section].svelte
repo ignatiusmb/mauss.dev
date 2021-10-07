@@ -25,7 +25,7 @@
 />
 
 <Article {post}>
-	<WeavedImage src="/assets/profile/mauss.jpeg" alt="DevMauss Profile" />
+	<WeavedImage src="/assets/profile/mauss.jpeg" alt="Mauss Profile" />
 
 	<section>
 		<Link href="/about">

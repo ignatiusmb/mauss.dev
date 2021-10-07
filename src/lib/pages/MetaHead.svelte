@@ -5,7 +5,7 @@
 	export let post = undefined;
 	export let social = {};
 
-	const hostTitle = 'DevMauss';
+	const hostTitle = 'Alchemauss';
 	const hostname = 'mauss.dev';
 
 	import { page } from '$app/stores';
@@ -55,8 +55,8 @@
 		{#if social.twitter}
 			<meta name="generator" content="Ignatius on SvelteKit!" />
 			<meta name="twitter:card" content="summary" />
-			<meta name="twitter:site" content="@devmauss" />
-			<meta name="twitter:creator" content="@devmauss" />
+			<meta name="twitter:site" content="@alchemauss" />
+			<meta name="twitter:creator" content="@alchemauss" />
 			{#if url}
 				<meta name="twitter:url" content={url} />
 			{/if}
