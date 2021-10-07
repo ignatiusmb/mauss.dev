@@ -20,7 +20,7 @@ export function qpm(bound: Record<string, string>): string {
 
 /**
  * regexp - implementation of global RegExp constructor with escaped pattern
- * @param exp pattern in the form of string or literal notation
+ * @param exp pattern in the form of string literal
  * @param flags unique set of characters from `d|g|i|m|s|u|y`
  * @returns dynamically constructed RegExp object
  */
