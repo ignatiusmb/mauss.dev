@@ -65,11 +65,11 @@
 			</p>
 			<p>
 				Just create a new
-				<Link href="https://github.com/ignatiusmb/mauss.dev/issues">Issue</Link>
+				<Link href="https://github.com/alchemauss/content/issues">Issue</Link>
 				or
-				<Link href="https://github.com/ignatiusmb/mauss.dev/pulls">PR</Link>
+				<Link href="https://github.com/alchemauss/content/pulls">PR</Link>
 				on GitHub, any fix or addition is much appreciated!
-				<TextIcon href="https://github.com/ignatiusmb/mauss.dev/edit/master/{path}">
+				<TextIcon href="https://github.com/alchemauss/content/edit/master/{path}">
 					<span>Edit</span>
 					<Feather.Edit size="17" />
 				</TextIcon>
