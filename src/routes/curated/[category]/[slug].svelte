@@ -19,7 +19,7 @@
 
 <MetaHead {post} canonical="curated/{slug}" {title} />
 
-<Article {post} header path="content/curated/{slug}.md">
+<Article {post} header path="src/curated/{slug}.md">
 	<svelte:fragment slot="header">
 		{#if post.tags}
 			<small class="tags">

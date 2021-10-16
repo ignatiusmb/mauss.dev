@@ -37,7 +37,7 @@
 	title={title.short ? title.short : title.jp ? title.jp : title.en}
 />
 
-<Article {post} header path="content/reviews/{post.slug}.md" {siblings}>
+<Article {post} header path="src/reviews/{post.slug}.md" {siblings}>
 	<div slot="header">
 		<ReviewBanner {post} />
 

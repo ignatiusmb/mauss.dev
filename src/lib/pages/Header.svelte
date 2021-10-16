@@ -42,7 +42,7 @@
 						</time>
 					</TextIcon>
 					{#if path && (!updated || (updated && updated === published))}
-						<TextIcon href="https://github.com/ignatiusmb/mauss.dev/edit/master/{path}">
+						<TextIcon href="https://github.com/alchemauss/content/edit/master/{path}">
 							<span>Edit</span>
 							<Feather.Edit {size} />
 						</TextIcon>
@@ -53,7 +53,7 @@
 			{#if updated && updated !== published}
 				<div>
 					{#if path}
-						<TextIcon href="https://github.com/ignatiusmb/mauss.dev/commits/master/{path}">
+						<TextIcon href="https://github.com/alchemauss/content/commits/master/{path}">
 							{#if published}
 								<Feather.GitCommit {size} />
 							{:else}
@@ -67,7 +67,7 @@
 						</span>
 					{/if}
 					{#if path}
-						<TextIcon href="https://github.com/ignatiusmb/mauss.dev/edit/master/{path}">
+						<TextIcon href="https://github.com/alchemauss/content/edit/master/{path}">
 							<span>Edit</span>
 							<Feather.Edit {size} />
 						</TextIcon>
@@ -81,8 +81,9 @@
 					<span>{post.read_time} min read</span>
 				</TextIcon>
 				<TextIcon
-					style="cursor:pointer"
+					style="cursor: pointer"
 					on:click={async () => {
+						// TODO: show snackbar that navigator.share is not available
 						if (typeof window !== 'undefined' && !navigator.share) return;
 						navigator.share({ title: document.title, url: location.href });
 					}}
