@@ -24,8 +24,9 @@
 	<p>
 		All of that being said, I hope that we can move past blaming or hating what I said. If you
 		disagree with something, I would welcome a discussion. It would be my privilege to learn from
-		what you have to teach me. Direct contributions are also welcome at the
-		<Link href="https://github.com/ignatiusmb/mauss.dev">GitHub repo</Link>
+		what you have to teach me. Direct contributions are also welcome, take a look at the
+		<Link href="https://github.com/ignatiusmb/mauss.dev">source code</Link> or
+		<Link href="https://github.com/alchemauss/content">content repository</Link>
 	</p>
 </Article>
 
