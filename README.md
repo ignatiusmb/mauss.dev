@@ -28,7 +28,7 @@ npm run dev
 
 ### Content
 
-Content is managed as a submodule in [devmauss/content](https://github.com/devmauss/content), any changes made to the content should be placed there ([open a new PR](https://github.com/devmauss/content/compare)).
+Content is managed as a submodule in [alchemauss/content](https://github.com/alchemauss/content), any changes made to the content should be placed there ([open a new PR](https://github.com/alchemauss/content/compare)).
 
 ```bash
 # Update to the latest version using
