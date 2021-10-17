@@ -27,7 +27,7 @@
 <Article
 	{post}
 	header
-	path="content/posts/{post.date.published}.{post.slug}.md"
+	path="src/posts/{post.date.published}.{post.slug}.md"
 	siblings={post.siblings}
 >
 	<svelte:fragment slot="header">
