@@ -52,7 +52,7 @@
 		</Link>
 		<h2>Ignatius Bagussuputra</h2>
 		<span>Developer on Weekdays, Avid Writer on Weekends</span>
-		<h3>I make stuff</h3>
+		<h3>Software Alchemist</h3>
 
 		<Quote {quotes} />
 	</header>
