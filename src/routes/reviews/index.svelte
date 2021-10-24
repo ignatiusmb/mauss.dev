@@ -53,7 +53,7 @@
 	$: filtered = sieve(filters, data);
 	$: items = query ? sift(query, filtered) : filtered;
 
-	$: shareable = qpm({ q: query }).replace(/(%20|%2B)+/g, '+');
+	$: shareable = qpm({ q: query }).replace(/(%20)+/g, '+');
 	$: browser && goto(shareable, { replaceState: true, keepfocus: true });
 </script>
 
