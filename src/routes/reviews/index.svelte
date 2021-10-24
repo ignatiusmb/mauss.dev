@@ -33,6 +33,7 @@
 <script>
 	export let data, unique;
 
+	import { debounce } from 'mauss';
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
 	import { duration } from 'syv/options';
@@ -50,11 +51,14 @@
 	let search = $page.query.get('q');
 	let query = (search && search.replace(/\+/g, ' ')) || '';
 	let filters = { categories: [], genres: [], verdict: [], sort_by: 'updated' };
+
+	const share = debounce((url) => goto(url, { replaceState: true, keepfocus: true }), 500);
+
 	$: filtered = sieve(filters, data);
 	$: items = query ? sift(query, filtered) : filtered;
 
 	$: shareable = qpm({ q: query }).replace(/(%20)+/g, '+');
-	$: browser && goto(shareable, { replaceState: true, keepfocus: true });
+	$: shareable && share(shareable);
 </script>
 
 <MetaHead
