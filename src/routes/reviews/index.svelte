@@ -35,12 +35,12 @@
 
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
+	import { duration } from 'syv/options';
 	import { qpm } from '$lib/mauss';
 	import { browser } from '$app/env';
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { sift, sieve } from '$lib/utils/search';
-	const duration = 100;
 
 	import { SearchBar, Pagination } from 'syv';
 	import MetaHead from '$lib/pages/MetaHead.svelte';

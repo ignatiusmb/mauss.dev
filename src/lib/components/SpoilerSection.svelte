@@ -1,6 +1,7 @@
 <script>
 	export let spoilers;
 	import { slide } from 'svelte/transition';
+	import { duration } from 'syv/options';
 	import { navigating } from '$app/stores';
 	$: show = $navigating ? false : show;
 </script>
@@ -23,7 +24,7 @@
 </section>
 
 {#if show}
-	<section class="spoilers" transition:slide={{ duration: 100 }}>
+	<section class="spoilers" transition:slide={{ duration }}>
 		{@html spoilers}
 	</section>
 {/if}
