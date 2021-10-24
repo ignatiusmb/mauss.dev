@@ -11,7 +11,7 @@
 	import Disclaimer from '$lib/components/Disclaimer.svelte';
 </script>
 
-<MetaHead canonical="help" title="Help" description="DevMauss help page." />
+<MetaHead canonical="help" title="Help" description="Alchemauss help page." />
 
 <Article>
 	<Disclaimer link />

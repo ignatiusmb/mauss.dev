@@ -27,7 +27,7 @@
 	</span>
 
 	<NavLink>
-		<img src="/assets/favicon.ico" alt="DevMauss" width="24" height="24" />
+		<img src="/favicon.ico" alt="Alchemauss" width="24" height="24" />
 	</NavLink>
 
 	{#if innerWidth > 600 || opened}

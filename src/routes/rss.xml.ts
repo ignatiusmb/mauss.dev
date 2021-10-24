@@ -19,7 +19,7 @@ const items = traverse(
 			return {
 				title,
 				slug: `curated/${folder}/${filename.split('.')[0]}`,
-				description: `${title} curated by DevMauss`,
+				description: `${title} curated by Alchemauss`,
 				date: (date.updated || date.published) as string,
 			};
 		} else if (breadcrumb.includes('reviews')) {
@@ -28,13 +28,13 @@ const items = traverse(
 			return {
 				title: typeof title === 'string' ? title : title.en,
 				slug: `reviews/${folder}/${filename.split('.')[0]}`,
-				description: `${typeof title === 'string' ? title : title.en} reviewed by DevMauss`,
+				description: `${typeof title === 'string' ? title : title.en} reviewed by Alchemauss`,
 				date: (date.updated || date.published) as string,
 			};
 		} else if (breadcrumb.includes('posts')) {
 			const { title, description: info, date: dt } = frontMatter as Post;
 			const [published, slug] = breadcrumb[breadcrumb.length - 1].split('.');
-			const description = info || 'A post by DevMauss';
+			const description = info || 'A post by Alchemauss';
 			const date = ((dt && dt.updated) as string) || published;
 			return { title, slug: `posts/${slug}`, description, date };
 		} else return undefined;
@@ -44,8 +44,8 @@ const items = traverse(
 
 const channel = {
 	domain: 'mauss.dev',
-	title: 'Ignatius Bagussuputra • DevMauss',
-	description: 'Developed by DevMauss',
+	title: 'Ignatius Bagussuputra • Alchemauss',
+	description: 'Developed by Alchemauss',
 };
 
 export const get: RequestHandler = async () => ({

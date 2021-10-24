@@ -1,8 +1,9 @@
 <script>
 	import { slide } from 'svelte/transition';
+	import { duration } from 'syv/options';
 </script>
 
-<div transition:slide={{ duration: 250 }}>
+<div transition:slide={{ duration }}>
 	<slot />
 </div>
 

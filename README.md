@@ -1,8 +1,8 @@
-# [DevMauss](https://mauss.dev)
+# [Alchemauss](https://mauss.dev)
 
 Personal website, handcrafted with ❤️ using these tools
 
-|              Framework              |                Components                |             Style              |                     Parser                     |
+|              Framework              |                 Library                  |             Style              |                     Parser                     |
 | :---------------------------------: | :--------------------------------------: | :----------------------------: | :--------------------------------------------: |
 | [SvelteKit](https://kit.svelte.dev) | [Syv](https://github.com/ignatiusmb/syv) | [Aqua](https://aqua.mauss.dev) | [Marqua](https://github.com/ignatiusmb/marqua) |
 
@@ -37,7 +37,7 @@ git submodule update --remote --merge
 
 ***
 
-<h3 align="center"><pre>DevMauss | <a href="LICENSE">MIT License</a></pre></h3>
+<h3 align="center"><pre>Alchemauss | <a href="LICENSE">MIT License</a></pre></h3>
 
 ***
 

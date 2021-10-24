@@ -33,14 +33,15 @@
 <script>
 	export let data, unique;
 
+	import { debounce } from 'mauss';
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
+	import { duration } from 'syv/options';
 	import { qpm } from '$lib/mauss';
 	import { browser } from '$app/env';
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { sift, sieve } from '$lib/utils/search';
-	const duration = 100;
 
 	import { SearchBar, Pagination } from 'syv';
 	import MetaHead from '$lib/pages/MetaHead.svelte';
@@ -50,11 +51,14 @@
 	let search = $page.query.get('q');
 	let query = (search && search.replace(/\+/g, ' ')) || '';
 	let filters = { categories: [], genres: [], verdict: [], sort_by: 'updated' };
+
+	const share = debounce((url) => goto(url, { replaceState: true, keepfocus: true }), 500);
+
 	$: filtered = sieve(filters, data);
 	$: items = query ? sift(query, filtered) : filtered;
 
-	$: shareable = qpm({ q: query }).replace(/(%20|%2B)+/g, '+');
-	$: browser && goto(shareable, { replaceState: true, keepfocus: true });
+	$: shareable = qpm({ q: query }).replace(/(%20)+/g, '+');
+	$: shareable && share(shareable);
 </script>
 
 <MetaHead
@@ -67,7 +71,7 @@
 
 <LayoutPicker header>
 	<svelte:fragment slot="header">
-		<h1>DevMauss Reviews</h1>
+		<h1>Alchemauss Reviews</h1>
 		<SearchBar bind:query bind:filters {unique} />
 		<Pagination {store} {items} bound={12} increment={12} />
 	</svelte:fragment>

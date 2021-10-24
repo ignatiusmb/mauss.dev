@@ -38,10 +38,7 @@
 </script>
 
 <svelte:window bind:scrollY bind:innerHeight />
-<MetaHead
-	title="Ignatius Bagussuputra"
-	description="DevMauss. Personal website of Ignatius Bagussuputra."
-/>
+<MetaHead title="Ignatius Bagussuputra" description="Alchemauss - Mauss Studio" />
 
 <div class="fixed-nav" class:scrolled>
 	<Navigation bind:scrolled />
@@ -51,11 +48,11 @@
 	<header slot="header">
 		<Link href="/about">
 			<RotatingBorder />
-			<Image src="/assets/profile/mauss.jpeg" alt="DevMauss Profile" ratio={1} />
+			<Image src="/assets/profile/mauss.jpeg" alt="Mauss Profile" ratio={1} />
 		</Link>
 		<h2>Ignatius Bagussuputra</h2>
 		<span>Developer on Weekdays, Avid Writer on Weekends</span>
-		<h3>I make stuff</h3>
+		<h3>Software Alchemist</h3>
 
 		<Quote {quotes} />
 	</header>

@@ -33,7 +33,7 @@
 
 <LayoutPicker header itemSize="18em">
 	<svelte:fragment slot="header">
-		<h1>Curated by DevMauss</h1>
+		<h1>Curated by Alchemauss</h1>
 		<SearchBar bind:query />
 		<Pagination {store} {items} bound={8} />
 	</svelte:fragment>

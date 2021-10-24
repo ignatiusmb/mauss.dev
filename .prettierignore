@@ -1,6 +1,5 @@
-.svelte-kit/**
-static/**
-build/**
+/.svelte-kit
+/build
 node_modules
 package-lock.json
 LICENSE
