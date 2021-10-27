@@ -1,5 +1,6 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
-import { Client, query as q } from 'faunadb';
+import faunadb, { query as Q } from 'faunadb';
+const { Client, query: q } = faunadb;
 const server = new Client({ secret: process.env.FAUNADB_SECRET });
 
 export default async (req: VercelRequest, res: VercelResponse): Promise<unknown> => {
@@ -18,7 +19,7 @@ export default async (req: VercelRequest, res: VercelResponse): Promise<unknown>
 	} else if (!exists) return res.status(200).json({ hits: 0 });
 
 	const { ref, data: old } = await server.query<{
-		ref: q.ExprArg;
+		ref: Q.ExprArg;
 		data: { slug: string; hits: number; loves?: number };
 	}>(q.Get(match));
 
