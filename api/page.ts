@@ -1,9 +1,11 @@
+import { VercelRequest, VercelResponse } from '@vercel/node';
 import { Client, query as q } from 'faunadb';
 const server = new Client({ secret: process.env.FAUNADB_SECRET });
 
-module.exports = async (req, res) => {
+export default async (req: VercelRequest, res: VercelResponse): Promise<unknown> => {
 	const query = req.query.slug;
-	if (!query) return res.status(400).json({ message: 'Slug not provided' });
+	if (!query || typeof query !== 'string')
+		return res.status(400).json({ message: 'Slug not provided' });
 
 	const slug = (query.endsWith('/') && query.slice(0, -1)) || query;
 	const match = q.Match(q.Index('pages_by_slug'), slug);
