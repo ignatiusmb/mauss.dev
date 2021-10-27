@@ -17,7 +17,10 @@ export default async (req: VercelRequest, res: VercelResponse): Promise<unknown>
 		return res.status(200).json({ hits: 1 });
 	} else if (!exists) return res.status(200).json({ hits: 0 });
 
-	const { ref, data: old } = await server.query(q.Get(match));
+	const { ref, data: old } = await server.query<{
+		ref: q.ExprArg;
+		data: { slug: string; hits: number; loves?: number };
+	}>(q.Get(match));
 
 	if (req.method === 'POST') {
 		if (!req.body) {
