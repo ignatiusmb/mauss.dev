@@ -1,8 +1,5 @@
 <script>
-	import { post } from 'mauss/api';
-	import { browser, dev } from '$app/env';
 	import { page } from '$app/stores';
-	import { current } from '$lib/utils/stores';
 
 	import { ScrollTop } from 'syv';
 	import Navigation from '$lib/components/Navigation.svelte';
@@ -14,10 +11,6 @@
 	import '$lib/styles/theme.css';
 	import '$lib/styles/blog.css';
 	import '$lib/styles/animation.css';
-
-	$: if (!dev && browser) {
-		current.set(post(`/api/page?slug=${$page.path}`));
-	}
 </script>
 
 <ScrollTop />
