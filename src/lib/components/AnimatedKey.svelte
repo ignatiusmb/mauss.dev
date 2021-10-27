@@ -6,7 +6,7 @@
 </script>
 
 {#each items as post (post.slug)}
-	<div animate:flip={{ duration }} transition:scale={{ duration }}>
+	<div animate:flip={{ duration }} transition:scale|local={{ duration }}>
 		{#if component}
 			<svelte:component this={component} {post} />
 		{:else}
