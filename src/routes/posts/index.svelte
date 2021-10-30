@@ -37,5 +37,7 @@
 		<Pagination {store} {items} bound={6} />
 	</svelte:fragment>
 
-	<AnimatedKey items={$store} component={PostCard} />
+	<AnimatedKey items={$store} component={PostCard}>
+		<h2 slot="empty">There are no matching {query ? 'titles' : 'filters'}</h2>
+	</AnimatedKey>
 </LayoutPicker>
