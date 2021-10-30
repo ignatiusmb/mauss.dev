@@ -85,6 +85,7 @@
 		filter: brightness(1.2);
 	}
 
+	main :global(img[src='']),
 	main :global(img:not([src])) {
 		display: none;
 	}
