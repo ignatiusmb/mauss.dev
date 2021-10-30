@@ -88,6 +88,10 @@
 	main :global(img:not([src])) {
 		display: none;
 	}
+	main :global(h2[slot='empty']) {
+		grid-column: 1 / -1;
+		text-align: center;
+	}
 	/* View Specific */
 	main.flex {
 		display: flex;

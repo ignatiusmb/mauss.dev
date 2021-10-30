@@ -77,12 +77,3 @@
 		<h2 slot="empty">There are no matching {query ? 'titles' : 'filters'}</h2>
 	</AnimatedKey>
 </LayoutPicker>
-
-<style>
-	h2 {
-		position: absolute;
-		width: 100%;
-		text-align: center;
-		word-break: break-word;
-	}
-</style>
