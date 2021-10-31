@@ -34,11 +34,7 @@
 	export let data, unique;
 
 	import { debounce } from 'mauss';
-	import { flip } from 'svelte/animate';
-	import { scale } from 'svelte/transition';
-	import { duration } from 'syv/options';
 	import { qpm } from '$lib/mauss';
-	import { browser } from '$app/env';
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { sift, sieve } from '$lib/utils/search';
@@ -46,6 +42,7 @@
 	import { SearchBar, Pagination } from 'syv';
 	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import LayoutPicker from '$lib/pages/LayoutPicker.svelte';
+	import AnimatedKey from '$lib/components/AnimatedKey.svelte';
 	import ReviewCard from '$lib/components/ReviewCard.svelte';
 
 	let search = $page.query.get('q');
@@ -76,26 +73,7 @@
 		<Pagination {store} {items} bound={12} increment={12} />
 	</svelte:fragment>
 
-	{#each $store as post (post.slug)}
-		<div animate:flip={{ duration }} transition:scale|local={{ duration }}>
-			<ReviewCard {post} />
-		</div>
-	{:else}
-		<h2>There are no matching {query ? 'titles' : 'filters'}</h2>
-	{/each}
+	<AnimatedKey items={$store} component={ReviewCard}>
+		<h2 slot="empty">There are no matching {query ? 'titles' : 'filters'}</h2>
+	</AnimatedKey>
 </LayoutPicker>
-
-<style>
-	div:not(.empty) {
-		border-radius: var(--b-radius);
-		box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
-			0 1px 3px 0 rgba(0, 0, 0, 0.12);
-		background-color: var(--bg-overlay);
-	}
-	h2 {
-		position: absolute;
-		width: 100%;
-		text-align: center;
-		word-break: break-word;
-	}
-</style>
