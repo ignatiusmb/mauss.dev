@@ -16,7 +16,6 @@
   },
   "prettier": "mauss/prettier.json",
   "dependencies": {
-    "@vercel/node": "^1.12.1",
     "faunadb": "^4.0.2"
   },
   "devDependencies": {
