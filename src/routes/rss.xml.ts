@@ -11,11 +11,11 @@ const items = traverse(
 		sort: (x, y) => compare.date(x.date, y.date) || compare.string(x.title, y.title),
 	},
 	({ frontMatter, breadcrumb }) => {
-		if (breadcrumb[breadcrumb.length - 1].includes('draft')) return;
+		if (breadcrumb[0].includes('draft')) return;
 
 		if (breadcrumb.includes('curated')) {
 			const { title, date } = frontMatter as Curated;
-			const [folder, filename] = breadcrumb.slice(-2);
+			const [filename, folder] = breadcrumb;
 			return {
 				title,
 				slug: `curated/${folder}/${filename.split('.')[0]}`,
@@ -24,7 +24,7 @@ const items = traverse(
 			};
 		} else if (breadcrumb.includes('reviews')) {
 			const { title, date } = frontMatter as Review;
-			const [folder, filename] = breadcrumb.slice(-2);
+			const [filename, folder] = breadcrumb;
 			return {
 				title: typeof title === 'string' ? title : title.en,
 				slug: `reviews/${folder}/${filename.split('.')[0]}`,
@@ -33,7 +33,7 @@ const items = traverse(
 			};
 		} else if (breadcrumb.includes('posts')) {
 			const { title, description: info, date: dt } = frontMatter as Post;
-			const [published, slug] = breadcrumb[breadcrumb.length - 1].split('.');
+			const [published, slug] = breadcrumb[0].split('.');
 			const description = info || 'A post by Alchemauss';
 			const date = ((dt && dt.updated) as string) || published;
 			return { title, slug: `posts/${slug}`, description, date };
