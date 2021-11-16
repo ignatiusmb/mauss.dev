@@ -35,8 +35,8 @@
 
 	import { debounce } from 'mauss';
 	import { qpm } from '$lib/mauss';
+	import { browser } from '$app/env';
 	import { goto } from '$app/navigation';
-	import { page } from '$app/stores';
 	import { sift, sieve } from '$lib/utils/search';
 
 	import { SearchBar, Pagination } from 'syv';
@@ -45,11 +45,12 @@
 	import AnimatedKey from '$lib/components/AnimatedKey.svelte';
 	import ReviewCard from '$lib/components/ReviewCard.svelte';
 
-	let search = $page.query.get('q');
+	const share = debounce((url) => goto(url, { replaceState: true, keepfocus: true }), 500);
+	const params = browser ? new URLSearchParams(location.search) : '';
+
+	let search = params ? params.get('q') : '';
 	let query = (search && search.replace(/\+/g, ' ')) || '';
 	let filters = { categories: [], genres: [], verdict: [], sort_by: 'updated' };
-
-	const share = debounce((url) => goto(url, { replaceState: true, keepfocus: true }), 500);
 
 	$: filtered = sieve(filters, data);
 	$: items = query ? sift(query, filtered) : filtered;
