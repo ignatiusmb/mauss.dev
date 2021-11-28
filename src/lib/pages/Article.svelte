@@ -17,7 +17,7 @@
 	}
 
 	const offsetDelay = () => setTimeout(offsetAnchor, 0);
-	onMount(async () => {
+	onMount(() => {
 		document.addEventListener('DOMContentLoaded', offsetDelay);
 		const anchors = document.querySelectorAll('a[href*="#"]');
 		anchors.forEach((hash) => hash.addEventListener('click', offsetDelay));
