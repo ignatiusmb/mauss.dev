@@ -9,25 +9,7 @@
 	import Header from './Header.svelte';
 	import TextIcon from '$lib/components/TextIcon.svelte';
 	import Siblings from '$lib/components/Siblings.svelte';
-
-	function offsetAnchor() {
-		if (!window.location.hash.length) return;
-		const offset = window.innerWidth < 600 ? 10 : 50;
-		window.scrollTo(window.scrollX, window.scrollY - offset);
-	}
-
-	const offsetDelay = () => setTimeout(offsetAnchor, 0);
-	onMount(async () => {
-		document.addEventListener('DOMContentLoaded', offsetDelay);
-		const anchors = document.querySelectorAll('a[href*="#"]');
-		anchors.forEach((hash) => hash.addEventListener('click', offsetDelay));
-		return () => {
-			anchors.forEach((hash) => hash.removeEventListener('click', offsetDelay));
-		};
-	});
 </script>
-
-<svelte:window on:load={offsetDelay} />
 
 {#if header}
 	<ProgressBar />
