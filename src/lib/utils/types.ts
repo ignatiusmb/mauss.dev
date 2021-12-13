@@ -72,8 +72,8 @@ export type Review = Typify<
 				updated?: string;
 			};
 			seen: {
-				first: string;
-				last?: string;
+				first: string | Record<string, string>;
+				last?: string | Record<string, string>;
 			};
 			image: {
 				en: string;
