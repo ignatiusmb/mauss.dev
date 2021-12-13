@@ -19,6 +19,9 @@ export const get: RequestHandler<Locals> = async ({ locals: { entry } }) => {
 		config,
 		({ frontMatter, breadcrumb: [filename, folder] }) => {
 			if (filename.includes('draft')) return;
+			if (typeof frontMatter.seen.first !== 'string') {
+				frontMatter.seen.first = frontMatter.seen.first[0];
+			}
 			return {
 				slug: `${folder}/${filename.split('.')[0]}`,
 				category: folder,
