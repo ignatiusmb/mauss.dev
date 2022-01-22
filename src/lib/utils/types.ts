@@ -11,6 +11,7 @@ export interface Locals {
 }
 
 export interface Child {
+	draft?: boolean;
 	author?: { name?: string; img?: string; link?: string };
 
 	/** Main Properties */

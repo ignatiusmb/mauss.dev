@@ -18,7 +18,7 @@ export const get: RequestHandler<Locals> = async ({ locals: { entry } }) => {
 	const reviews = traverse<typeof config, Review>(
 		config,
 		({ frontMatter, breadcrumb: [filename, folder] }) => {
-			if (filename.includes('draft')) return;
+			if (filename.includes('draft') || frontMatter.draft) return;
 			if (typeof frontMatter.seen.first !== 'string') {
 				frontMatter.seen.first = frontMatter.seen.first[0];
 			}
