@@ -68,13 +68,14 @@ export type Review = Typify<
 			rating?: string[] | number;
 			verdict: number | string;
 
-			date: {
-				published: string;
-				updated?: string;
-			};
+			completed: string | string[];
 			seen: {
 				first: string | Record<string, string>;
 				last?: string | Record<string, string>;
+			};
+			date: {
+				published: string;
+				updated?: string;
 			};
 			image: {
 				en: string;
