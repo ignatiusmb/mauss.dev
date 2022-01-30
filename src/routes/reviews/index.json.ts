@@ -2,7 +2,6 @@ import type { RequestHandler } from '@sveltejs/kit';
 import type { Locals, Review } from '$lib/utils/types';
 import { countAverageRating, fillSiblings } from '$lib/utils/article';
 import { traverse, forge } from 'marqua';
-import { tryNumber } from 'mauss/utils';
 import { compare } from 'mauss';
 
 export const get: RequestHandler<Locals> = async ({ locals: { entry } }) => {
@@ -27,12 +26,12 @@ export const get: RequestHandler<Locals> = async ({ locals: { entry } }) => {
 				category: folder,
 				...frontMatter,
 				rating: countAverageRating(frontMatter.rating),
-				verdict: tryNumber(frontMatter.verdict || -2),
+				verdict: frontMatter.verdict || 'pending',
 			};
 		}
 	);
 
 	return {
-		body: fillSiblings(reviews, 'reviews/', ({ rating, verdict }) => !rating || verdict < -1),
+		body: fillSiblings(reviews, 'reviews/', (r) => !r.rating || r.verdict !== 'pending'),
 	};
 };

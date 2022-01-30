@@ -66,7 +66,7 @@ export type Review = Typify<
 			title: I18nData;
 			genres: string[];
 			rating?: string[] | number;
-			verdict: number | string;
+			verdict: typeof import('$lib/constants')['VERDICTS'][number];
 
 			completed: string | string[];
 			seen: {
