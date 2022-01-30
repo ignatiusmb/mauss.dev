@@ -15,17 +15,22 @@ export const get: RequestHandler<Locals> = async ({ locals: { entry } }) => {
 			return compare.date(xd, yd);
 		},
 	});
-	const reviews = traverse<typeof config, Review>(config, ({ frontMatter, breadcrumb }) => {
-		const [folder, filename] = breadcrumb.slice(-2);
-		if (filename.includes('draft')) return;
-		return {
-			slug: `${folder}/${filename.split('.')[0]}`,
-			category: folder,
-			...frontMatter,
-			rating: countAverageRating(frontMatter.rating),
-			verdict: tryNumber(frontMatter.verdict || -2),
-		};
-	});
+	const reviews = traverse<typeof config, Review>(
+		config,
+		({ frontMatter, breadcrumb: [filename, folder] }) => {
+			if (filename.includes('draft') || frontMatter.draft) return;
+			if (typeof frontMatter.seen.first !== 'string') {
+				frontMatter.seen.first = frontMatter.seen.first[0];
+			}
+			return {
+				slug: `${folder}/${filename.split('.')[0]}`,
+				category: folder,
+				...frontMatter,
+				rating: countAverageRating(frontMatter.rating),
+				verdict: tryNumber(frontMatter.verdict || -2),
+			};
+		}
+	);
 
 	return {
 		body: fillSiblings(reviews, 'reviews/', ({ rating, verdict }) => !rating || verdict < -1),

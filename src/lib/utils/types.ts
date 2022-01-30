@@ -11,6 +11,7 @@ export interface Locals {
 }
 
 export interface Child {
+	draft?: boolean;
 	author?: { name?: string; img?: string; link?: string };
 
 	/** Main Properties */
@@ -67,13 +68,14 @@ export type Review = Typify<
 			rating?: string[] | number;
 			verdict: number | string;
 
+			completed: string | string[];
+			seen: {
+				first: string | Record<string, string>;
+				last?: string | Record<string, string>;
+			};
 			date: {
 				published: string;
 				updated?: string;
-			};
-			seen: {
-				first: string;
-				last?: string;
 			};
 			image: {
 				en: string;

@@ -10,6 +10,9 @@ export const get: RequestHandler<Locals> = async ({ params, locals: { entry } })
 		const review = { slug: `${category}/${slug}`, category, ...frontMatter };
 
 		const dStart = +new Date(frontMatter.date.updated || frontMatter.date.published);
+		if (typeof frontMatter.seen.first !== 'string') {
+			frontMatter.seen.first = frontMatter.seen.first[0];
+		}
 		review.composed = (dStart - +new Date(frontMatter.seen.first)) / 24 / 60 / 60 / 1000;
 
 		const [article, closing] = (content as string).split(/^## \$CLOSING/m);
