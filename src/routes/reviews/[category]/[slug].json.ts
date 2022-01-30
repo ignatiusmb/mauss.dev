@@ -1,7 +1,6 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import type { Locals, Review } from '$lib/utils/types';
 import { countAverageRating, contentParser } from '$lib/utils/article';
-import { tryNumber } from 'mauss/utils';
 import { marker, compile } from 'marqua';
 
 export const get: RequestHandler<Locals> = async ({ params, locals: { entry } }) => {
@@ -23,7 +22,7 @@ export const get: RequestHandler<Locals> = async ({ params, locals: { entry } })
 
 		review.content = contentParser(review, summary);
 		review.rating = countAverageRating(frontMatter.rating);
-		review.verdict = tryNumber(frontMatter.verdict || -2);
+		review.verdict = frontMatter.verdict || 'pending';
 		return review;
 	});
 
