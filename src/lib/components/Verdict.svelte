@@ -34,6 +34,16 @@
 		background: #5cb85c;
 	}
 	.must-watch {
-		background: linear-gradient(90deg, rgba(92, 184, 92, 1) 0%, rgba(206, 32, 41, 1) 100%);
+		background: linear-gradient(
+			90deg,
+			#ce2029,
+			#c8460e,
+			#be6100,
+			#b07700,
+			#9f8b00,
+			#8c9c12,
+			#76ab39,
+			#5cb85c
+		);
 	}
 </style>
