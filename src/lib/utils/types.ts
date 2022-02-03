@@ -57,16 +57,41 @@ export type Post = Typify<
 	>
 >;
 
+export type RawReview = Overwrite<
+	Child,
+	{
+		released: string;
+		title: I18nData;
+		genres: string[];
+		rating: string[];
+		verdict: typeof import('$lib/constants')['VERDICTS'][number];
+
+		completed: string;
+		seen: {
+			first: string | Record<string, string>;
+			last?: string | Record<string, string>;
+		};
+		date: {
+			published: string;
+			updated?: string;
+		};
+		image: Omit<I18nData, 'short'>;
+
+		link: {
+			mal?: string;
+		};
+	}
+>;
 export type Review = Typify<
 	Overwrite<
 		Child,
 		{
-			category?: string;
+			category: string;
 			released: string;
 			title: I18nData;
 			genres: string[];
 			rating?: string[] | number;
-			verdict: number | string;
+			verdict: typeof import('$lib/constants')['VERDICTS'][number];
 
 			completed: string | string[];
 			seen: {

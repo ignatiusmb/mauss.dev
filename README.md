@@ -41,4 +41,4 @@ git submodule update --remote --merge
 
 ***
 
-<h5 align="center"><pre>Copyright &copy; 2019 &ndash; 2021 <a href="https://mauss.dev">Ignatius Bagussuputra</a></pre></h5>
+<h5 align="center"><pre>Copyright &copy; 2019 &ndash; 2022 <a href="https://mauss.dev">Ignatius Bagussuputra</a></pre></h5>

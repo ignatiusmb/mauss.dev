@@ -1,13 +1,12 @@
 <svelte:options immutable />
 
-<script>
-	export let post;
+<script lang="ts">
+	export let post: import('$lib/utils/types').Review;
 	import { ButtonLink, Image } from 'syv';
 	import Verdict from './Verdict.svelte';
 
 	import { capitalize } from 'mauss/utils';
-	const verdict = +post.verdict;
-	const disabled = !post.rating || verdict === -2;
+	const disabled = !post.rating || post.verdict === 'pending';
 </script>
 
 <section>
@@ -27,7 +26,7 @@
 			<span>{capitalize(post.category)}</span>
 			<span>⭐ {post.rating || '~'}</span>
 		</small>
-		<Verdict {verdict} />
+		<Verdict verdict={post.verdict} />
 		<ButtonLink href="/reviews/{post.slug}" {disabled}>
 			{disabled ? 'Work-in-Progress' : 'read'}
 		</ButtonLink>

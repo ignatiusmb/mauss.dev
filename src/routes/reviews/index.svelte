@@ -1,5 +1,6 @@
 <script context="module">
-	import { rSlice as store } from '$lib/utils/stores';
+	import { capitalize } from 'mauss/utils';
+	import { VERDICTS } from '$lib/constants';
 	export async function load({ fetch }) {
 		const data = await fetch('/reviews.json').then((r) => r.json());
 		const categories = [...new Set(data.map((p) => p.category))];
@@ -10,13 +11,7 @@
 				unique: {
 					categories,
 					genres,
-					verdict: {
-						'2': 'Must-watch!',
-						'1': 'Recommended',
-						'0': 'Contextual',
-						'-1': 'Not recommended',
-						'-2': 'Pending',
-					},
+					verdict: VERDICTS.reduce((a, c) => ({ ...a, [c]: capitalize(c.replace('-', ' ')) }), {}),
 					sort_by: {
 						updated: 'Last updated',
 						published: 'Date published',
@@ -38,6 +33,7 @@
 	import { browser } from '$app/env';
 	import { goto } from '$app/navigation';
 	import { sift, sieve } from '$lib/utils/search';
+	import { rSlice as store } from '$lib/utils/stores';
 
 	import { SearchBar, Pagination } from 'syv';
 	import MetaHead from '$lib/pages/MetaHead.svelte';
