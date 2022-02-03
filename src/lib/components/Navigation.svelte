@@ -11,7 +11,7 @@
 
 	let innerWidth;
 	let opened = false;
-	$: path = $page.path.split('/')[1];
+	$: path = $page.url.pathname.split('/')[1];
 	$: opened = $navigating ? false : opened;
 </script>
 
