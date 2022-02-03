@@ -1,8 +1,7 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import type { Locals } from '$lib/utils/types';
 import { traverse } from 'marqua';
 
-export const get: RequestHandler<Locals> = async ({ locals: { entry } }) => {
+export const get: RequestHandler = async ({ locals: { entry } }) => {
 	return {
 		body: traverse({ entry, recurse: true }, ({ frontMatter, breadcrumb: [filename, folder] }) => {
 			if (filename.includes('draft')) return;

@@ -1,10 +1,10 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import type { Locals, RawReview, Review } from '$lib/utils/types';
+import type { RawReview, Review } from '$lib/utils/types';
 import { countAverageRating, fillSiblings } from '$lib/utils/article';
 import { traverse, forge } from 'marqua';
 import { compare } from 'mauss';
 
-export const get: RequestHandler<Locals> = async ({ locals: { entry } }) => {
+export const get: RequestHandler = async ({ locals: { entry } }) => {
 	const config = forge.traverse({
 		entry,
 		recurse: true,

@@ -1,11 +1,11 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import type { Locals, Post } from '$lib/utils/types';
+import type { Post } from '$lib/utils/types';
 import { existsSync } from 'fs';
 import { join } from 'path';
 import { traverse } from 'marqua';
 import { fillSiblings } from '$lib/utils/article';
 
-export const get: RequestHandler<Locals> = async ({ locals: { entry } }) => {
+export const get: RequestHandler = async ({ locals: { entry } }) => {
 	const posts = traverse<{ entry: string }, Post>(
 		entry,
 		({ frontMatter, breadcrumb: [filename] }) => {
