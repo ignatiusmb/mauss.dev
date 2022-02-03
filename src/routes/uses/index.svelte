@@ -14,8 +14,7 @@
 	{post}
 	canonical="uses"
 	title="Uses"
-	description="Ignatius Bagussuputra's collections, detailing his setup, applications, workstations,
-	and other stuffs."
+	description="Ignatius Bagussuputra's collections, detailing his setup, applications, workstations, and other stuffs."
 />
 
 <Article header {post}>
