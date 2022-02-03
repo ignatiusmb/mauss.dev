@@ -1,6 +1,5 @@
 <script context="module">
-	export async function load({ fetch, page }) {
-		const { section } = page.params;
+	export async function load({ fetch, params: { section } }) {
 		const articles = await fetch('/about.json').then((r) => r.json());
 		if (!articles[section]) return { status: 404, error: 'Section not found' };
 		return {

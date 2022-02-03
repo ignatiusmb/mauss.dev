@@ -1,7 +1,6 @@
 <script context="module">
 	import { compare } from 'mauss';
-	export async function load({ fetch, page }) {
-		const { category } = page.params;
+	export async function load({ fetch, params: { category } }) {
 		const list = await fetch('/curated.json').then((r) => r.json());
 		const data = list
 			.filter((p) => p.category === category)
