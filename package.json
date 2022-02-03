@@ -15,9 +15,6 @@
     "format": "prettier -w src"
   },
   "prettier": "mauss/prettier.json",
-  "dependencies": {
-    "faunadb": "^4.0.2"
-  },
   "devDependencies": {
     "@sveltejs/adapter-static": "next",
     "@sveltejs/kit": "next",
