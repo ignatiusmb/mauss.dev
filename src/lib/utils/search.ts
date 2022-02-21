@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import type { Entries } from 'mauss/typings';
 import type { Child, SieveDict } from './types';
 import { compare as c } from 'mauss';
 import { truthy } from 'mauss/guards';
@@ -44,7 +45,7 @@ export function sieve<T extends Child & Record<string, any>>(
 	const identical = ['tags', 'genres'];
 	const intersect = ['categories', 'verdict'];
 
-	const entries = Object.entries(dict);
+	const entries = Object.entries(dict) as Entries<Required<typeof dict>>;
 	const cleaned = entries.filter(([k, v]) => !intersect.includes(k) && v.length);
 	const category = entries.find(([k, v]) => k === 'categories' && v.length) || [];
 	const verdict = entries.find(([k, v]) => k === 'verdict' && v.length) || [];
