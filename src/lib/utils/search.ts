@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Child, SieveDict } from './types';
 import { compare as c } from 'mauss';
-import { isExists } from 'mauss/guards';
+import { truthy } from 'mauss/guards';
 import { regexp } from '$lib/mauss';
 import { sortCompare } from './helper';
 
@@ -14,7 +14,7 @@ const compare = (source: string[] | string, queries: string[]): number =>
 const check = (source: string[] | string, queries: string[]): boolean =>
 	compare(source, queries) === queries.length;
 
-const cleanSplit = (data: string): string[] => data.split(' ').filter(isExists);
+const cleanSplit = (data: string): string[] => data.split(' ').filter(truthy);
 export const sift = <T extends Child>(query: string, data: T[]): T[] => {
 	return data.filter((x) =>
 		typeof x.title === 'string'
