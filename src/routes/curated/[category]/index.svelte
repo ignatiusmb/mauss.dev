@@ -30,7 +30,7 @@
 	{#each data as { slug, title } (slug)}
 		<section animate:flip transition:scale|local>
 			<small>{title}</small>
-			<ButtonLink href="/{slug}">read</ButtonLink>
+			<ButtonLink href="/curated/{slug}">read</ButtonLink>
 		</section>
 	{/each}
 </main>
