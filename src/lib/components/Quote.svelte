@@ -1,5 +1,5 @@
-<script>
-	export let quotes;
+<script lang="ts">
+	export let quotes: import('$lib/types').Quote[];
 	import { random } from 'mauss/utils';
 	import { fly } from 'svelte/transition';
 	import { GradientBorder } from 'syv';

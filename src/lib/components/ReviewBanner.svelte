@@ -1,5 +1,5 @@
-<script>
-	export let post;
+<script lang="ts">
+	export let post: import('$lib/types').Review;
 	import { Image } from 'syv';
 	import { createPrettyDate } from '$lib/utils/helper';
 	$: ({ backdrop, title, rating, composed, seen } = post);
@@ -16,7 +16,7 @@
 	<small>
 		<div class="stars">
 			{#each { length: 10 } as _, i}
-				<span class:active={rating >= i + 1}>⭐</span>
+				<span class:active={rating && rating >= i + 1}>⭐</span>
 			{/each}
 		</div>
 	</small>

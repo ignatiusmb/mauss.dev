@@ -37,13 +37,11 @@
 	import Navigation from '$lib/components/Navigation.svelte';
 	import RotatingBorder from '$lib/components/RotatingBorder.svelte';
 
-	let scrollY: number, innerHeight: number;
-	$: scrolled = scrollY > 0;
+	let scrolled: number;
 
 	const entries = <T>(o: T) => Object.entries(o) as import('mauss/typings').Entries<T>;
 </script>
 
-<svelte:window bind:scrollY bind:innerHeight />
 <MetaHead title="Ignatius Bagussuputra" description="Alchemauss - Mauss Studio" />
 
 <div class="fixed-nav" class:scrolled>

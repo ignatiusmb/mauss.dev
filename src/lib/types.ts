@@ -89,6 +89,8 @@ export type RawReview = Overwrite<
 		link: {
 			mal?: string;
 		};
+
+		composed?: number;
 	}
 >;
 export type Review = Typify<
@@ -99,13 +101,13 @@ export type Review = Typify<
 			released: string;
 			title: I18nData;
 			genres: string[];
-			rating?: string[] | number;
+			rating?: number;
 			verdict: typeof import('$lib/constants')['VERDICTS'][number];
 
 			completed: string | string[];
 			seen: {
-				first: string | Record<string, string>;
-				last?: string | Record<string, string>;
+				first: string;
+				last?: string;
 			};
 			date: {
 				published: string;
@@ -115,12 +117,13 @@ export type Review = Typify<
 				en: string;
 				jp?: string;
 			};
+			backdrop?: string;
 
 			link?: {
 				mal?: string;
 			};
 
-			composed?: number;
+			composed: number;
 			spoilers?: string;
 			closing?: string;
 		}
@@ -134,3 +137,9 @@ export type SieveDict = {
 	verdict?: string[];
 	sort_by: string;
 };
+
+export type Quote = Typify<{
+	author: string;
+	quote: string;
+	from: string;
+}>;

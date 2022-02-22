@@ -1,8 +1,10 @@
 <script>
+	/** @type {string} */
 	export let spoilers;
 	import { slide } from 'svelte/transition';
 	import { duration } from 'syv/options';
 	import { navigating } from '$app/stores';
+	/** @type {boolean} */
 	$: show = $navigating ? false : show;
 </script>
 

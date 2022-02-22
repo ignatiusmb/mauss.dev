@@ -1,5 +1,5 @@
-<script>
-	export let post;
+<script lang="ts">
+	export let post: import('$lib/types').Curated;
 	import { ButtonLink } from 'syv';
 </script>
 

@@ -1,9 +1,10 @@
 import type { RequestHandler } from '@sveltejs/kit';
+import type { Quote } from '$lib/types';
 import { exists } from 'mauss/guards';
 import { traverse } from 'marqua';
 
 export const get: RequestHandler = async ({ locals: { entry } }) => {
-	const body: Array<{ author: string; quote: string; from: string }> = [];
+	const body: Array<Quote> = [];
 	traverse({ entry, minimal: true }, ({ content, breadcrumb: [filename] }) => {
 		const author = filename.slice(0, -3).replace(/-/g, ' ');
 		for (const line of content.split(/\r?\n/).filter(exists)) {
