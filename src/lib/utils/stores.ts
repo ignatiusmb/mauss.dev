@@ -1,4 +1,4 @@
-import type { Curated, Post, Review } from './types';
+import type { Curated, Post, Review } from '../types';
 import { readable, writable } from 'svelte/store';
 
 export const current = writable<Promise<{ loves: number }> | null>(null);

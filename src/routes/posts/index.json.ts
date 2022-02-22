@@ -1,5 +1,5 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import type { Post } from '$lib/utils/types';
+import type { Post } from '$lib/types';
 import { existsSync } from 'fs';
 import { join } from 'path';
 import { traverse } from 'marqua';

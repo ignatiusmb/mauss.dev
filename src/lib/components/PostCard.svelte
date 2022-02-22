@@ -1,7 +1,7 @@
 <script lang="ts">
 	export let post: Post;
 
-	import type { Post } from '$lib/utils/types';
+	import type { Post } from '$lib/types';
 	import { createPrettyDate } from '$lib/utils/helper';
 	import { Image, ButtonLink } from 'syv';
 	const { published, updated } = post.date;

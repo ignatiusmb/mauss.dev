@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Entries } from 'mauss/typings';
-import type { Child, SieveDict } from './types';
+import type { Child, SieveDict } from '../types';
 import { compare as c } from 'mauss';
 import { truthy } from 'mauss/guards';
 import { regexp } from '$lib/mauss';

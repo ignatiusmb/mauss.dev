@@ -1,5 +1,5 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import type { RawReview, Review } from '$lib/utils/types';
+import type { RawReview, Review } from '$lib/types';
 import { countAverageRating, fillSiblings } from '$lib/utils/article';
 import { traverse, forge } from 'marqua';
 import { compare } from 'mauss';
