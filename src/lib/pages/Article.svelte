@@ -1,10 +1,10 @@
 <script lang="ts">
-	type Siblings = import('$lib/types').SiblingPair;
+	type SiblingsProp = null | import('$lib/types').SiblingPair;
 
 	export let header = false;
 	export let post: any = null;
-	export let path: string = '';
-	export let siblings: null | Siblings = null;
+	export let path = '';
+	export let siblings: SiblingsProp = null;
 
 	import { Feather } from 'syv/icons';
 	import { Link, ProgressBar } from 'syv';
