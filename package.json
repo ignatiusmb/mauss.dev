@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
-    "lint": "npm run lint:eslint && npm run lint:svelte && npm run lint:ts && npm run lint:md",
-    "lint:eslint": "eslint src --ext js,ts",
-    "lint:svelte": "svelte-check src --output human",
+    "lint": "npm run lint:es && npm run lint:sv && npm run lint:ts && npm run lint:md",
+    "lint:es": "eslint src --ext js,ts",
+    "lint:sv": "svelte-check src --output human",
     "lint:ts": "tsc --strict --noEmit --skipLibCheck",
     "lint:md": "markdownlint content/**/*.md",
     "check": "prettier -c src",
