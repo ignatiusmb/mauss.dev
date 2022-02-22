@@ -1,4 +1,5 @@
 <script context="module">
+	/** @type {import('@sveltejs/kit').ErrorLoad} */
 	export const load = (props) => ({ props });
 </script>
 

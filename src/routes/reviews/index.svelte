@@ -1,8 +1,8 @@
-<script context="module">
+<script context="module" lang="ts">
 	import { capitalize } from 'mauss/utils';
 	import { VERDICTS } from '$lib/constants';
-	export async function load({ fetch }) {
-		const data = await fetch('/reviews.json').then((r) => r.json());
+	export const load: import('@sveltejs/kit').Load = async ({ fetch }) => {
+		const data: any[] = await fetch('/reviews.json').then((r) => r.json());
 		const categories = [...new Set(data.map((p) => p.category))];
 		const genres = [...new Set(data.flatMap((p) => p.genres))].sort();
 		return {
@@ -22,11 +22,11 @@
 				},
 			},
 		};
-	}
+	};
 </script>
 
-<script>
-	export let data, unique;
+<script lang="ts">
+	export let data: any, unique: any;
 
 	import { debounce } from 'mauss';
 	import { qpm } from '$lib/mauss';
@@ -41,7 +41,7 @@
 	import AnimatedKey from '$lib/components/AnimatedKey.svelte';
 	import ReviewCard from '$lib/components/ReviewCard.svelte';
 
-	const share = debounce((url) => goto(url, { replaceState: true, keepfocus: true }), 500);
+	const share = debounce((url: string) => goto(url, { replaceState: true, keepfocus: true }), 500);
 	const params = browser ? new URLSearchParams(location.search) : '';
 
 	let search = params ? params.get('q') : '';

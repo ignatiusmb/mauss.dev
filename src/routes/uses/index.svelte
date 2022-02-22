@@ -1,11 +1,5 @@
-<script context="module">
-	export const load = async ({ fetch }) => ({
-		props: { post: await fetch('/uses.json').then((r) => r.json()) },
-	});
-</script>
-
-<script>
-	export let post;
+<script lang="ts">
+	export let post: import('$lib/types').PageMeta;
 	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import Article from '$lib/pages/Article.svelte';
 </script>

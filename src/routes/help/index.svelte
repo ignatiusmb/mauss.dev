@@ -1,11 +1,6 @@
-<script context="module">
-	export const load = async ({ fetch }) => ({
-		props: { post: await fetch('/help.json').then((r) => r.json()) },
-	});
-</script>
+<script lang="ts">
+	export let post: import('$lib/types').PageMeta;
 
-<script>
-	export let post;
 	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import Article from '$lib/pages/Article.svelte';
 	import Disclaimer from '$lib/components/Disclaimer.svelte';

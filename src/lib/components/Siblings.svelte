@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { Child } from '$lib/types';
-	export let prev: null | Child = null;
-	export let next: null | Child = null;
+	import type { Sibling } from '$lib/types';
+	export let prev: null | Sibling = null;
+	export let next: null | Sibling = null;
 </script>
 
 {#if prev || next}

@@ -11,6 +11,16 @@ export interface PageMeta {
 	content: string;
 }
 
+export interface Sibling {
+	slug: string;
+	title: string | I18nData;
+}
+
+export interface SiblingPair {
+	prev?: Sibling;
+	next?: Sibling;
+}
+
 export interface Child {
 	draft?: boolean;
 	author?: { name?: string; img?: string; link?: string };
@@ -22,10 +32,7 @@ export interface Child {
 		updated?: string;
 		published?: string;
 	};
-	siblings: {
-		prev?: { slug: string; title: string | I18nData };
-		next?: { slug: string; title: string | I18nData };
-	};
+	siblings: SiblingPair;
 	content?: string;
 	read_time: number;
 }
@@ -38,6 +45,7 @@ export interface Curated extends Child {
 		updated: string;
 		published?: string;
 	};
+	tags?: string[];
 }
 
 export type Post = Typify<

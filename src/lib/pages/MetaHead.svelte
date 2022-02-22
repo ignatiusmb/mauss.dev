@@ -1,19 +1,9 @@
-<script>
-	/** @type {string} */
-	export let title;
+<script lang="ts">
+	export let title: string;
 	export let canonical = '';
 	export let description = '';
-	/**
-	 * @type {undefined | {
-	 * 		title: string;
-	 *		description: string;
-	 *		date?: { updated: string; published?: string };
-	 *		tags?: string[];
-	 * }}
-	 */
-	export let post = undefined;
-	/** @type {{ twitter?: boolean; }} */
-	export let social = {};
+	export let post: any = undefined;
+	export let social: { twitter?: boolean } = {};
 
 	const hostTitle = 'Alchemauss';
 	const hostname = 'mauss.dev';

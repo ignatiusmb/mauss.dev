@@ -1,9 +1,11 @@
-<script>
+<script lang="ts">
+	type Siblings = import('$lib/types').SiblingPair;
+
 	export let header = false;
-	export let post = null;
-	export let path = null;
-	export let siblings = null;
-	import { onMount } from 'svelte';
+	export let post: any = null;
+	export let path: string = '';
+	export let siblings: null | Siblings = null;
+
 	import { Feather } from 'syv/icons';
 	import { Link, ProgressBar } from 'syv';
 	import Header from './Header.svelte';
@@ -53,7 +55,7 @@
 				on GitHub, any fix or addition is much appreciated!
 				<TextIcon href="https://github.com/alchemauss/content/edit/master/{path}">
 					<span>Edit</span>
-					<Feather.Edit size="17" />
+					<Feather.Edit size={17} />
 				</TextIcon>
 			</p>
 		</section>
