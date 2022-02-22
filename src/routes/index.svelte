@@ -136,8 +136,7 @@
 
 	section h2 {
 		grid-template-columns: auto auto 1fr;
-		font-family: 'Inconsolata';
-		font-family: var(--aqua-monospace);
+		font-family: var(--aqua-monospace, 'Inconsolata');
 	}
 	section h2::before {
 		counter-increment: title;
