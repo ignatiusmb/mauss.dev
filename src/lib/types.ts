@@ -6,6 +6,11 @@ export interface I18nData {
 	jp?: string;
 }
 
+export interface PageMeta {
+	title: string;
+	content: string;
+}
+
 export interface Child {
 	draft?: boolean;
 	author?: { name?: string; img?: string; link?: string };
