@@ -1,5 +1,5 @@
 <script>
-	export let link = '';
+	export let link = false;
 
 	import { Link } from 'syv';
 </script>
