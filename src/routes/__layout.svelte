@@ -15,14 +15,14 @@
 
 <ScrollTop />
 
-{#if $page.path !== '/'}
+{#if $page.url.pathname !== '/'}
 	<Navigation />
 {/if}
 <slot />
 <Footer />
 
 <style>
-	:global(body > #svelte) {
+	:global(#mauss) {
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;

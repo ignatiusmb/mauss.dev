@@ -26,7 +26,7 @@
 			<span>{day} {month} {year}</span>
 		</small>
 		<small>{post.read_time} min read</small>
-		<ButtonLink href="posts/{post.slug}">read</ButtonLink>
+		<ButtonLink href="/posts/{post.slug}/">read</ButtonLink>
 	</aside>
 </section>
 

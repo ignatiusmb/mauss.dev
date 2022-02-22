@@ -6,10 +6,6 @@ export interface I18nData {
 	jp?: string;
 }
 
-export interface Locals {
-	entry: string;
-}
-
 export interface Child {
 	draft?: boolean;
 	author?: { name?: string; img?: string; link?: string };

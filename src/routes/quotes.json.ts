@@ -1,9 +1,8 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import type { Locals } from '$lib/utils/types';
 import { isExists } from 'mauss/guards';
 import { traverse } from 'marqua';
 
-export const get: RequestHandler<Locals> = async ({ locals: { entry } }) => {
+export const get: RequestHandler = async ({ locals: { entry } }) => {
 	const body: Array<{ author: string; quote: string; from: string }> = [];
 	traverse({ entry, minimal: true }, ({ content, breadcrumb: [filename] }) => {
 		const author = filename.slice(0, -3).replace(/-/g, ' ');

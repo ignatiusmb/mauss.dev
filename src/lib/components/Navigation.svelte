@@ -11,7 +11,7 @@
 
 	let innerWidth;
 	let opened = false;
-	$: path = $page.path.split('/')[1];
+	$: path = $page.url.pathname.split('/')[1];
 	$: opened = $navigating ? false : opened;
 </script>
 
@@ -41,7 +41,7 @@
 	<Link inherit href="/rss.xml" label="Get RSS">
 		<Feather.Rss />
 	</Link>
-	<Link inherit href="/help" label="See help page">
+	<Link inherit href="/help/" label="See help page">
 		<Feather.HelpCircle />
 	</Link>
 	<ThemeSwitcher let:current>

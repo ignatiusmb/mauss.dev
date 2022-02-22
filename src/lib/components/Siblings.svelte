@@ -6,7 +6,7 @@
 {#if prev || next}
 	<footer>
 		{#if prev}
-			<a sveltekit:prefetch href="/{prev.slug}" style="text-align: left">
+			<a sveltekit:prefetch href="/{prev.slug}/" style="text-align: left">
 				<strong>&larr; Prev</strong>
 				{#if typeof prev.title === 'string'}
 					<span>{prev.title}</span>
@@ -18,7 +18,7 @@
 			</a>
 		{/if}
 		{#if next}
-			<a sveltekit:prefetch href="/{next.slug}" style="text-align: right">
+			<a sveltekit:prefetch href="/{next.slug}/" style="text-align: right">
 				<strong>Next &rarr;</strong>
 				{#if typeof next.title === 'string'}
 					<span>{next.title}</span>

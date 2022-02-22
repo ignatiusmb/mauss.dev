@@ -9,7 +9,7 @@ const config = {
 	}),
 	kit: {
 		adapter: adapter(),
-		target: '#svelte',
+		trailingSlash: 'always',
 		vite: {
 			optimizeDeps: {
 				exclude: ['marqua'],

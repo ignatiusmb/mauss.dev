@@ -1,8 +1,8 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import type { Locals, Post } from '$lib/utils/types';
+import type { Post } from '$lib/utils/types';
 import { traverse } from 'marqua';
 
-export const get: RequestHandler<Locals> = async ({ params: { slug } }) => {
+export const get: RequestHandler = async ({ params: { slug } }) => {
 	const [body] = traverse<{ entry: string }, Post>(
 		'content/src/posts',
 		({ frontMatter, content, breadcrumb: [filename] }) => {

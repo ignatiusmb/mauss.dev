@@ -26,7 +26,7 @@
 	{/if}
 
 	<small>
-		<Link href={author.link || '/about'}>
+		<Link href={author.link || '/about/'}>
 			<img src={author.img || '/assets/profile/mauss.jpeg'} alt="author profile" />
 		</Link>
 		<div class="details">

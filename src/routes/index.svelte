@@ -46,7 +46,7 @@
 
 <Article>
 	<header slot="header">
-		<Link href="/about">
+		<Link href="/about/">
 			<RotatingBorder />
 			<Image src="/assets/profile/mauss.jpeg" alt="Mauss Profile" ratio={1} />
 		</Link>
@@ -70,7 +70,7 @@
 			style furnitures, it calms my mind and forces me to relax for a while.
 		</p>
 		<br />
-		<Link href="/about">More info...</Link>
+		<Link href="/about/">More info...</Link>
 	</section>
 
 	{#each Object.entries(data) as [seg, item]}
@@ -80,13 +80,13 @@
 			<ul>
 				{#each item as { slug, title }}
 					<li>
-						<Link href="/{seg}/{slug}">
+						<Link href="/{seg}/{slug}/">
 							{typeof title === 'string' ? title : title.short || title.en}
 						</Link>
 					</li>
 				{/each}
 				<li>
-					<Link href={seg}>More {seg}{seg === 'curated' ? ' stuffs ' : ''}...</Link>
+					<Link href="/{seg}/">More {seg}{seg === 'curated' ? ' stuffs ' : ''}...</Link>
 				</li>
 			</ul>
 		</section>

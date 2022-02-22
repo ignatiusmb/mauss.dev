@@ -7,7 +7,7 @@
 	<section>
 		<em>
 			Read the
-			<Link href="/help">help page</Link>
+			<Link href="/help/">help page</Link>
 			for more information
 		</em>
 	</section>

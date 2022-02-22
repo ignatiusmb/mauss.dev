@@ -15,12 +15,9 @@
     "format": "prettier -w src"
   },
   "prettier": "mauss/prettier.json",
-  "dependencies": {
-    "faunadb": "^4.0.2"
-  },
   "devDependencies": {
-    "@sveltejs/adapter-static": "^1.0.0-next.3",
-    "@sveltejs/kit": "^1.0.0-next.111",
+    "@sveltejs/adapter-static": "next",
+    "@sveltejs/kit": "next",
     "@typescript-eslint/eslint-plugin": "^4.14.1",
     "@typescript-eslint/parser": "^4.14.1",
     "autoprefixer": "^10.2.4",
