@@ -5,7 +5,7 @@
 
 <section>
 	<small>{post.title}</small>
-	<ButtonLink href="/curated/{post.slug}">read</ButtonLink>
+	<ButtonLink href="/curated/{post.slug}/">read</ButtonLink>
 </section>
 
 <style>
