@@ -1,15 +1,25 @@
 <script>
+	/** @type {string} */
 	export let title;
 	export let canonical = '';
 	export let description = '';
+	/**
+	 * @type {undefined | {
+	 * 		title: string;
+	 *		description: string;
+	 *		date?: { updated: string; published?: string };
+	 *		tags?: string[];
+	 * }}
+	 */
 	export let post = undefined;
+	/** @type {{ twitter?: boolean; }} */
 	export let social = {};
 
 	const hostTitle = 'Alchemauss';
 	const hostname = 'mauss.dev';
 
 	import { page } from '$app/stores';
-	$: url = $page.host === hostname ? `https://${hostname}/${canonical}` : null;
+	$: url = $page.url.host === hostname ? `https://${hostname}/${canonical}/` : null;
 	// https://opengraph.githubassets.com/0/ignatiusmb/mauss.dev
 </script>
 
