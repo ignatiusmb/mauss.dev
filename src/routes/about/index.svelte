@@ -30,7 +30,7 @@
 
 	<section>
 		{#each sections as section}
-			<Link href="/about/{section}">
+			<Link href="/about/{section}/">
 				<h2>{capitalize(section)}</h2>
 			</Link>
 		{/each}

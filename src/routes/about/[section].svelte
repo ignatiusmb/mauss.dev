@@ -27,7 +27,7 @@
 	<WeavedImage src="/assets/profile/mauss.jpeg" alt="Mauss Profile" />
 
 	<section>
-		<Link href="/about">
+		<Link href="/about/">
 			<h2>About</h2>
 		</Link>
 	</section>

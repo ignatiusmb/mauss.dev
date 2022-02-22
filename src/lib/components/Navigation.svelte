@@ -41,7 +41,7 @@
 	<Link inherit href="/rss.xml" label="Get RSS">
 		<Feather.Rss />
 	</Link>
-	<Link inherit href="/help" label="See help page">
+	<Link inherit href="/help/" label="See help page">
 		<Feather.HelpCircle />
 	</Link>
 	<ThemeSwitcher let:current>
