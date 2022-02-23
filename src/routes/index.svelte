@@ -30,6 +30,8 @@
 		reviews: { heading: '⭐ Recent Reviews', desc: "Contents I've been reviewing" },
 	};
 
+	import { entries } from '$lib/mauss';
+
 	import { Link, Image } from 'syv';
 	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import Article from '$lib/pages/Article.svelte';
@@ -37,9 +39,7 @@
 	import Navigation from '$lib/components/Navigation.svelte';
 	import RotatingBorder from '$lib/components/RotatingBorder.svelte';
 
-	let scrolled: number;
-
-	const entries = <T>(o: T) => Object.entries(o) as import('mauss/typings').Entries<T>;
+	let scrolled = 0;
 </script>
 
 <MetaHead title="Ignatius Bagussuputra" description="Alchemauss - Mauss Studio" />

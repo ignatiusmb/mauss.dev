@@ -1,9 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Entries } from 'mauss/typings';
 import type { Child, SieveDict } from '../types';
-import { compare as c } from 'mauss';
+import { compare as c, regexp } from 'mauss';
 import { truthy } from 'mauss/guards';
-import { regexp } from '$lib/mauss';
 import { sortCompare } from './helper';
 
 const exists = (source: string | any, query: string | any): boolean =>

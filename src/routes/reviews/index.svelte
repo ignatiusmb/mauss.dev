@@ -29,7 +29,7 @@
 	export let data: any, unique: any;
 
 	import { debounce } from 'mauss';
-	import { qpm } from '$lib/mauss';
+	import { qpm } from 'mauss/web';
 	import { browser } from '$app/env';
 	import { goto } from '$app/navigation';
 	import { sift, sieve } from '$lib/utils/search';
