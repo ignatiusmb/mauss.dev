@@ -14,17 +14,22 @@ export const get: RequestHandler = async ({ locals: { entry } }) => {
 			return compare.date(xd, yd);
 		},
 	});
-	const reviews = traverse<typeof config, RawReview, Review>(
+	const reviews = traverse<typeof config, RawReview, Omit<Review, 'composed'>>(
 		config,
 		({ frontMatter, breadcrumb: [filename, folder] }) => {
 			if (filename.includes('draft') || frontMatter.draft) return;
+			const seen = {} as { first: string; last?: string };
 			if (typeof frontMatter.seen.first !== 'string') {
-				frontMatter.seen.first = frontMatter.seen.first[0];
+				seen.first = frontMatter.seen.first[0];
+			}
+			if (typeof frontMatter.seen.last !== 'string') {
+				seen.last = frontMatter.seen.last?.[0];
 			}
 			return {
 				slug: `${folder}/${filename.split('.')[0]}`,
 				category: folder,
 				...frontMatter,
+				seen,
 				rating: countAverageRating(frontMatter.rating),
 				verdict: frontMatter.verdict || 'pending',
 			};

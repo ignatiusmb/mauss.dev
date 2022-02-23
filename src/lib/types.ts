@@ -77,8 +77,8 @@ export type RawReview = Overwrite<
 
 		completed: string;
 		seen: {
-			first: string | Record<string, string>;
-			last?: string | Record<string, string>;
+			first: string | string[];
+			last?: string | string[];
 		};
 		date: {
 			published: string;
