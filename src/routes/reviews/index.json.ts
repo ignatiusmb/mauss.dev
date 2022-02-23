@@ -18,13 +18,17 @@ export const get: RequestHandler = async ({ locals: { entry } }) => {
 		config,
 		({ frontMatter, breadcrumb: [filename, folder] }) => {
 			if (filename.includes('draft') || frontMatter.draft) return;
+
 			const seen = {} as { first: string; last?: string };
 			if (typeof frontMatter.seen.first !== 'string') {
 				seen.first = frontMatter.seen.first[0];
+			} else seen.first = frontMatter.seen.first;
+			if (frontMatter.seen.last) {
+				if (typeof frontMatter.seen.last !== 'string') {
+					seen.last = frontMatter.seen.last[0];
+				} else seen.last = frontMatter.seen.last;
 			}
-			if (typeof frontMatter.seen.last !== 'string') {
-				seen.last = frontMatter.seen.last?.[0];
-			}
+
 			return {
 				slug: `${folder}/${filename.split('.')[0]}`,
 				category: folder,
