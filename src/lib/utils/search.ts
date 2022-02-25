@@ -1,9 +1,7 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import type { Child, SieveDict } from './types';
-import { compare as c } from 'mauss';
-import { isExists } from 'mauss/guards';
-import { regexp } from '$lib/mauss';
-import { sortCompare } from './helper';
+import type { Entries } from 'mauss/typings';
+import type { Child, SieveDict } from '../types';
+import { comparator, compare as c, regexp } from 'mauss';
+import { truthy } from 'mauss/guards';
 
 const exists = (source: string | any, query: string | any): boolean =>
 	typeof source !== 'string' ? source === query : regexp(query, 'i').test(source);
@@ -14,7 +12,7 @@ const compare = (source: string[] | string, queries: string[]): number =>
 const check = (source: string[] | string, queries: string[]): boolean =>
 	compare(source, queries) === queries.length;
 
-const cleanSplit = (data: string): string[] => data.split(' ').filter(isExists);
+const cleanSplit = (data: string): string[] => data.split(' ').filter(truthy);
 export const sift = <T extends Child>(query: string, data: T[]): T[] => {
 	return data.filter((x) =>
 		typeof x.title === 'string'
@@ -22,6 +20,23 @@ export const sift = <T extends Child>(query: string, data: T[]): T[] => {
 			: Object.values(x.title).some((val) => check(val, cleanSplit(query)))
 	);
 };
+
+function sortCompare<T extends Record<string, any>>(x: T, y: T): number {
+	if (x.date && y.date) {
+		if (typeof x.date === 'string' && typeof y.date === 'string')
+			if (x.date !== y.date) return c.date(x.date, y.date);
+		const { updated: xu = '', published: xp = '' } = x.date;
+		const { updated: yu = '', published: yp = '' } = y.date;
+		if (xu && yu && xu !== yu) return c.date(xu, yu);
+		if (xp && yp && xp !== yp) return c.date(xp, yp);
+	}
+
+	if (x.released && y.released && x.released !== y.released) return c.date(x.released, y.released);
+
+	if (x.author && y.author) return c.string(x.author, y.author);
+
+	return comparator(x, y);
+}
 
 const sortBy: Record<string, (x: any, y: any) => number> = {
 	rating(x, y) {
@@ -44,7 +59,7 @@ export function sieve<T extends Child & Record<string, any>>(
 	const identical = ['tags', 'genres'];
 	const intersect = ['categories', 'verdict'];
 
-	const entries = Object.entries(dict);
+	const entries = Object.entries(dict) as Entries<Required<typeof dict>>;
 	const cleaned = entries.filter(([k, v]) => !intersect.includes(k) && v.length);
 	const category = entries.find(([k, v]) => k === 'categories' && v.length) || [];
 	const verdict = entries.find(([k, v]) => k === 'verdict' && v.length) || [];

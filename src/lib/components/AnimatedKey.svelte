@@ -1,5 +1,5 @@
-<script>
-	export let items, component;
+<script lang="ts">
+	export let items: any[], component: typeof import('svelte').SvelteComponent;
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
 	import { duration } from 'syv/options';

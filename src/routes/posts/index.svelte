@@ -1,15 +1,15 @@
-<script context="module">
-	export async function load({ fetch }) {
-		const data = await fetch('/posts.json').then((r) => r.json());
+<script context="module" lang="ts">
+	export const load: import('@sveltejs/kit').Load = async ({ fetch }) => {
+		const data: any[] = await fetch('/posts.json').then((r) => r.json());
 		const tags = [...new Set(data.flatMap((p) => p.tags))].sort();
 		const categories = [...new Set(data.map((p) => p.tags[0]))].sort();
 		const sort_by = { updated: 'Last Updated', published: 'Last Published' };
 		return { props: { data, unique: { categories, tags, sort_by } } };
-	}
+	};
 </script>
 
-<script>
-	export let data, unique;
+<script lang="ts">
+	export let data: any, unique: typeof filters;
 	import { sift, sieve } from '$lib/utils/search';
 	import { pSlice as store } from '$lib/utils/stores';
 
@@ -20,7 +20,7 @@
 	import PostCard from '$lib/components/PostCard.svelte';
 
 	let filters = { categories: [], tags: [], sort_by: 'updated' },
-		query;
+		query: string;
 
 	$: filtered = sieve(filters, data);
 	$: items = query ? sift(query, filtered) : filtered;

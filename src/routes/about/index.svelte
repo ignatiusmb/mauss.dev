@@ -1,17 +1,7 @@
-<script context="module">
-	export async function load({ fetch }) {
-		const articles = await fetch('/about.json').then((r) => r.json());
-		return {
-			props: {
-				post: articles.index,
-				sections: Object.keys(articles).filter((e) => e !== 'index'),
-			},
-		};
-	}
-</script>
+<script lang="ts">
+	type AboutIndex = Record<'index', import('$lib/types').PageMeta>;
+	export let data: AboutIndex, sections: string[];
 
-<script>
-	export let post, sections;
 	import { capitalize } from 'mauss/utils';
 	import { Link, WeavedImage } from 'syv';
 	import MetaHead from '$lib/pages/MetaHead.svelte';
@@ -19,13 +9,13 @@
 </script>
 
 <MetaHead
-	{post}
+	post={data.index}
 	canonical="about"
 	title="About"
 	description="Get to know Ignatius Bagussuputra from his About page."
 />
 
-<Article {post}>
+<Article post={data.index}>
 	<WeavedImage src="/assets/profile/mauss.jpeg" alt="Mauss Profile" />
 
 	<section>
@@ -36,7 +26,7 @@
 		{/each}
 	</section>
 
-	{@html post.content}
+	{@html data.index.content}
 </Article>
 
 <style>

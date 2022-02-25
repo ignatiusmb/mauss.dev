@@ -1,7 +1,10 @@
-<script context="module">
-	export async function load({ fetch, params: { category, slug } }) {
+<script context="module" lang="ts">
+	export const load: import('@sveltejs/kit').Load = async ({ fetch, params }) => {
+		const { category, slug } = params;
 		const res = await fetch(`/reviews/${category}/${slug}.json`);
-		if (!res.ok) return { status: 404, error: 'Review not found' };
+
+		const absent = { status: 404, error: 'Review not found' };
+		if (!res.ok) return absent;
 		const post = await res.json();
 
 		const list = await fetch('/reviews.json');
@@ -10,15 +13,16 @@
 			post.siblings = review.siblings;
 			return { props: { post } };
 		}
-	}
+		return absent;
+	};
 	const links = new Map([
 		['mal', 'MyAnimeList'],
 		['tmdb', 'TheMovieDB'],
 	]);
 </script>
 
-<script>
-	export let post;
+<script lang="ts">
+	export let post: import('$lib/types').Review;
 
 	import { Link } from 'syv';
 	import MetaHead from '$lib/pages/MetaHead.svelte';

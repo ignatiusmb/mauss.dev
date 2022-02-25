@@ -6,6 +6,21 @@ export interface I18nData {
 	jp?: string;
 }
 
+export interface PageMeta {
+	title: string;
+	content: string;
+}
+
+export interface Sibling {
+	slug: string;
+	title: string | I18nData;
+}
+
+export interface SiblingPair {
+	prev?: Sibling;
+	next?: Sibling;
+}
+
 export interface Child {
 	draft?: boolean;
 	author?: { name?: string; img?: string; link?: string };
@@ -17,10 +32,7 @@ export interface Child {
 		updated?: string;
 		published?: string;
 	};
-	siblings: {
-		prev?: { slug: string; title: string | I18nData };
-		next?: { slug: string; title: string | I18nData };
-	};
+	siblings: SiblingPair;
 	content?: string;
 	read_time: number;
 }
@@ -33,6 +45,7 @@ export interface Curated extends Child {
 		updated: string;
 		published?: string;
 	};
+	tags?: string[];
 }
 
 export type Post = Typify<
@@ -64,8 +77,8 @@ export type RawReview = Overwrite<
 
 		completed: string;
 		seen: {
-			first: string | Record<string, string>;
-			last?: string | Record<string, string>;
+			first: string | string[];
+			last?: string | string[];
 		};
 		date: {
 			published: string;
@@ -76,6 +89,8 @@ export type RawReview = Overwrite<
 		link: {
 			mal?: string;
 		};
+
+		composed?: number;
 	}
 >;
 export type Review = Typify<
@@ -86,13 +101,13 @@ export type Review = Typify<
 			released: string;
 			title: I18nData;
 			genres: string[];
-			rating?: string[] | number;
+			rating?: number;
 			verdict: typeof import('$lib/constants')['VERDICTS'][number];
 
 			completed: string | string[];
 			seen: {
-				first: string | Record<string, string>;
-				last?: string | Record<string, string>;
+				first: string;
+				last?: string;
 			};
 			date: {
 				published: string;
@@ -102,12 +117,13 @@ export type Review = Typify<
 				en: string;
 				jp?: string;
 			};
+			backdrop?: string;
 
 			link?: {
 				mal?: string;
 			};
 
-			composed?: number;
+			composed: number;
 			spoilers?: string;
 			closing?: string;
 		}
@@ -121,3 +137,9 @@ export type SieveDict = {
 	verdict?: string[];
 	sort_by: string;
 };
+
+export type Quote = Typify<{
+	author: string;
+	quote: string;
+	from: string;
+}>;

@@ -1,16 +1,17 @@
-<script context="module">
+<script context="module" lang="ts">
 	import { compare } from 'mauss';
-	export async function load({ fetch, params: { category } }) {
-		const list = await fetch('/curated.json').then((r) => r.json());
+	export const load: import('@sveltejs/kit').Load = async ({ fetch, params: { category } }) => {
+		const { data: list } = await fetch('/curated/__data.json').then((r) => r.json());
 		const data = list
-			.filter((p) => p.category === category)
-			.sort((x, y) => compare.date(x.date.updated, y.date.updated));
+			.filter((p: any) => p.category === category)
+			.sort((x: any, y: any) => compare.date(x.date.updated, y.date.updated));
 		return { props: { category, data } };
-	}
+	};
 </script>
 
-<script>
-	export let category, data;
+<script lang="ts">
+	export let category: string, data: any;
+
 	import { scale } from 'svelte/transition';
 	import { flip } from 'svelte/animate';
 

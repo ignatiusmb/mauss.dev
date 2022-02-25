@@ -1,11 +1,11 @@
 <script lang="ts">
-	export let post: Post;
+	export let post: import('$lib/types').Post;
 
-	import type { Post } from '$lib/utils/types';
-	import { createPrettyDate } from '$lib/utils/helper';
+	import { dt } from 'mauss/utils';
 	import { Image, ButtonLink } from 'syv';
+
 	const { published, updated } = post.date;
-	const { day, month, year } = createPrettyDate((updated !== published && updated) || published);
+	const date = (updated !== published && updated) || published;
 </script>
 
 <section>
@@ -23,7 +23,7 @@
 	<aside>
 		<small>
 			{#if updated && updated !== published}Updated{/if}
-			<span>{day} {month} {year}</span>
+			<span>{dt.format(date, 'DD MMMM YYYY')}</span>
 		</small>
 		<small>{post.read_time} min read</small>
 		<ButtonLink href="/posts/{post.slug}/">read</ButtonLink>

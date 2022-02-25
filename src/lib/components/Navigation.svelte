@@ -1,5 +1,5 @@
-<script>
-	export let scrolled = false;
+<script lang="ts">
+	export let scrolled = 0;
 
 	import { navigating, page } from '$app/stores';
 	const sections = ['about', 'curated', 'posts', 'reviews', 'uses'];
@@ -9,7 +9,7 @@
 	import NavLink from './NavLink.svelte';
 	import NavGrid from './NavGrid.svelte';
 
-	let innerWidth;
+	let innerWidth: number;
 	let opened = false;
 	$: path = $page.url.pathname.split('/')[1];
 	$: opened = $navigating ? false : opened;

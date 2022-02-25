@@ -1,15 +1,16 @@
-<script context="module">
-	export async function load({ fetch, params: { section } }) {
-		const articles = await fetch('/about.json').then((r) => r.json());
-		if (!articles[section]) return { status: 404, error: 'Section not found' };
+<script context="module" lang="ts">
+	export const load: import('@sveltejs/kit').Load = async ({ fetch, params: { section } }) => {
+		const { data } = await fetch('/about/__data.json').then((r) => r.json());
+		if (!data[section]) return { status: 404, error: 'Section not found' };
 		return {
-			props: { section, post: articles[section] },
+			props: { section, post: data[section] },
 		};
-	}
+	};
 </script>
 
-<script>
-	export let section, post;
+<script lang="ts">
+	export let section: string, post: import('$lib/types').PageMeta;
+
 	import { capitalize } from 'mauss/utils';
 	import { Link, WeavedImage } from 'syv';
 	import MetaHead from '$lib/pages/MetaHead.svelte';

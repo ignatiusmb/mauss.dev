@@ -1,9 +1,10 @@
-<script>
-	export let post;
+<script lang="ts">
+	export let post: import('$lib/types').Review;
+
+	import { dt } from 'mauss/utils';
 	import { Image } from 'syv';
-	import { createPrettyDate } from '$lib/utils/helper';
+
 	$: ({ backdrop, title, rating, composed, seen } = post);
-	$: ({ day, month, year } = createPrettyDate(seen.first));
 </script>
 
 <div class="banner">
@@ -11,12 +12,12 @@
 
 	<span class="composed">
 		Credibility: {composed} day{composed > 1 ? 's' : ''}
-		since last seen on {day}&nbsp;{month}&nbsp;{year}
+		since last seen on {dt.format(seen.first, 'DD MMMM YYYY')}
 	</span>
 	<small>
 		<div class="stars">
 			{#each { length: 10 } as _, i}
-				<span class:active={rating >= i + 1}>⭐</span>
+				<span class:active={rating && rating >= i + 1}>⭐</span>
 			{/each}
 		</div>
 	</small>

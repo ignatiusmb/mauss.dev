@@ -1,30 +1,36 @@
-<script context="module">
+<script context="module" lang="ts">
 	import { compare } from 'mauss';
-	export async function load({ fetch }) {
+	export const load: import('@sveltejs/kit').Load = async ({ fetch }) => {
 		const quotes = await fetch('/quotes.json').then((r) => r.json());
+		const { data: curated } = await fetch('/curated/__data.json').then((r) => r.json());
+		const posts: any[] = await fetch('/posts.json').then((r) => r.json());
+		const reviews: any[] = await fetch('/reviews.json').then((r) => r.json());
+
 		const data = {
-			curated: (await fetch('/curated.json').then((r) => r.json()))
-				.sort((x, y) => compare.date(x.date.updated, y.date.updated))
+			curated: curated
+				.sort((x: any, y: any) => compare.date(x.date.updated, y.date.updated))
 				.slice(0, 4),
-			posts: (await fetch('/posts.json').then((r) => r.json())).slice(0, 4),
-			reviews: (await fetch('/reviews.json').then((r) => r.json()))
-				.filter((x) => x.rating && x.verdict !== -2)
-				.slice(0, 4),
+			posts: posts.slice(0, 4),
+			reviews: reviews.filter((x) => x.rating && x.verdict !== -2).slice(0, 4),
 		};
 
 		return {
 			props: { data, quotes: quotes.slice(0, quotes.length / 2) },
 		};
-	}
+	};
 </script>
 
-<script>
-	export let data, quotes;
+<script lang="ts">
+	type Item = { slug: string; title: string | import('$lib/types').I18nData };
+	export let data: Record<keyof typeof section, Array<Item>>, quotes: any[];
+
 	const section = {
 		curated: { heading: '⚖️ Recently Curated', desc: "Stuffs I've been curating" },
 		posts: { heading: '📚 Recent Posts', desc: "What's on my mind (or life)" },
 		reviews: { heading: '⭐ Recent Reviews', desc: "Contents I've been reviewing" },
 	};
+
+	import { entries } from '$lib/mauss';
 
 	import { Link, Image } from 'syv';
 	import MetaHead from '$lib/pages/MetaHead.svelte';
@@ -33,11 +39,9 @@
 	import Navigation from '$lib/components/Navigation.svelte';
 	import RotatingBorder from '$lib/components/RotatingBorder.svelte';
 
-	let scrollY, innerHeight;
-	$: scrolled = scrollY > 0;
+	let scrolled = 0;
 </script>
 
-<svelte:window bind:scrollY bind:innerHeight />
 <MetaHead title="Ignatius Bagussuputra" description="Alchemauss - Mauss Studio" />
 
 <div class="fixed-nav" class:scrolled>
@@ -73,7 +77,7 @@
 		<Link href="/about/">More info...</Link>
 	</section>
 
-	{#each Object.entries(data) as [seg, item]}
+	{#each entries(data) as [seg, item]}
 		<section>
 			<h2>{section[seg]['heading']}</h2>
 			<p>{section[seg]['desc']} recently:</p>
@@ -136,8 +140,7 @@
 
 	section h2 {
 		grid-template-columns: auto auto 1fr;
-		font-family: 'Inconsolata';
-		font-family: var(--aqua-monospace);
+		font-family: var(--aqua-monospace, 'Inconsolata');
 	}
 	section h2::before {
 		counter-increment: title;

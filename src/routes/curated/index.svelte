@@ -1,12 +1,5 @@
-<script context="module">
-	export async function load({ fetch }) {
-		const res = await fetch('/curated.json');
-		return { props: { data: await res.json() } };
-	}
-</script>
-
-<script>
-	export let data;
+<script lang="ts">
+	export let data: import('$lib/types').Curated[];
 	import { sift, sieve } from '$lib/utils/search';
 	import { cSlice as store } from '$lib/utils/stores';
 
@@ -16,7 +9,7 @@
 	import AnimatedKey from '$lib/components/AnimatedKey.svelte';
 	import CuratedPost from '$lib/components/CuratedPost.svelte';
 
-	let query;
+	let query: string;
 	let filters = { categories: [], tags: [], sort_by: 'updated' };
 
 	$: filtered = sieve(filters, data);

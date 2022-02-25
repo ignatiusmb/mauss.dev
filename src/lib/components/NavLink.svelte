@@ -3,7 +3,7 @@
 	export let path = '';
 	export let hover = false;
 
-	$: isCurrent = (p) => (path === p ? 'page' : undefined);
+	$: isCurrent = (/** @type {string} */ p) => (path === p ? 'page' : undefined);
 </script>
 
 <a sveltekit:prefetch aria-current={isCurrent(to)} href="/{to}" class:hover>

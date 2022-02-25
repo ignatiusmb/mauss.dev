@@ -1,5 +1,5 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import type { RawReview, Review } from '$lib/utils/types';
+import type { RawReview, Review } from '$lib/types';
 import { countAverageRating, fillSiblings } from '$lib/utils/article';
 import { traverse, forge } from 'marqua';
 import { compare } from 'mauss';
@@ -14,17 +14,26 @@ export const get: RequestHandler = async ({ locals: { entry } }) => {
 			return compare.date(xd, yd);
 		},
 	});
-	const reviews = traverse<typeof config, RawReview, Review>(
+	const reviews = traverse<typeof config, RawReview, Omit<Review, 'composed'>>(
 		config,
 		({ frontMatter, breadcrumb: [filename, folder] }) => {
 			if (filename.includes('draft') || frontMatter.draft) return;
+
+			const seen = {} as { first: string; last?: string };
 			if (typeof frontMatter.seen.first !== 'string') {
-				frontMatter.seen.first = frontMatter.seen.first[0];
+				seen.first = frontMatter.seen.first[0];
+			} else seen.first = frontMatter.seen.first;
+			if (frontMatter.seen.last) {
+				if (typeof frontMatter.seen.last !== 'string') {
+					seen.last = frontMatter.seen.last[0];
+				} else seen.last = frontMatter.seen.last;
 			}
+
 			return {
 				slug: `${folder}/${filename.split('.')[0]}`,
 				category: folder,
 				...frontMatter,
+				seen,
 				rating: countAverageRating(frontMatter.rating),
 				verdict: frontMatter.verdict || 'pending',
 			};

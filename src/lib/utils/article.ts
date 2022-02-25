@@ -1,4 +1,4 @@
-import type { Child } from '$lib/utils/types';
+import type { Child } from '$lib/types';
 import { tryNumber } from 'mauss/utils';
 
 export function countAverageRating(ratings?: string[] | number): number | undefined {
@@ -8,7 +8,6 @@ export function countAverageRating(ratings?: string[] | number): number | undefi
 	return Math.round((total / ratings.length + Number.EPSILON) * 100) / 100;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function contentParser<T extends Record<string, any>>(data: T, content: string): string {
 	const traverse = (meta: T | string, properties: string): string => {
 		for (const key of properties.split(':'))

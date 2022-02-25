@@ -1,5 +1,5 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import type { RawReview, Review } from '$lib/utils/types';
+import type { RawReview, Review } from '$lib/types';
 import { countAverageRating, contentParser } from '$lib/utils/article';
 import { marker, compile } from 'marqua';
 
@@ -8,7 +8,12 @@ export const get: RequestHandler = async ({ params, locals: { entry } }) => {
 	const body = compile<{ entry: string }, RawReview, Review>(
 		`${entry}.md`,
 		({ frontMatter, content }) => {
-			const review = { slug: `${category}/${slug}`, category, ...frontMatter } as Review;
+			const review = {
+				slug: `${category}/${slug}`,
+				category,
+				...frontMatter,
+				rating: countAverageRating(frontMatter.rating),
+			} as Review;
 
 			const dStart = +new Date(frontMatter.date.updated || frontMatter.date.published);
 			if (typeof frontMatter.seen.first !== 'string') {
@@ -23,7 +28,6 @@ export const get: RequestHandler = async ({ params, locals: { entry } }) => {
 			if (spoilers) review.spoilers = marker.render(contentParser(review, spoilers));
 
 			review.content = contentParser(review, summary);
-			review.rating = countAverageRating(frontMatter.rating);
 			review.verdict = frontMatter.verdict || 'pending';
 			return review;
 		}

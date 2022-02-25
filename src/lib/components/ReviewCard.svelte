@@ -1,7 +1,7 @@
 <svelte:options immutable />
 
 <script lang="ts">
-	export let post: import('$lib/utils/types').Review;
+	export let post: import('$lib/types').Review;
 	import { ButtonLink, Image } from 'syv';
 	import Verdict from './Verdict.svelte';
 
