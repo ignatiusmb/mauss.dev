@@ -30,7 +30,7 @@
 
 	// import { debounce } from 'mauss';
 	// import { qpm } from 'mauss/web';
-	// import { browser } from '$app/env';
+	import { prerendering } from '$app/env';
 	// import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { sift, sieve } from '$lib/utils/search';
@@ -46,7 +46,7 @@
 	// 	goto(url, { replaceState: true, keepfocus: true });
 	// }, 500);
 
-	let search = $page.url.searchParams.get('q') || '';
+	let search = (!prerendering && $page.url.searchParams.get('q')) || '';
 	let query = (search && search.replace(/\+/g, ' ')) || '';
 	let filters = { categories: [], genres: [], verdict: [], sort_by: 'updated' };
 
