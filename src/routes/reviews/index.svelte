@@ -28,10 +28,11 @@
 <script lang="ts">
 	export let data: any, unique: any;
 
-	import { debounce } from 'mauss';
-	import { qpm } from 'mauss/web';
-	import { browser } from '$app/env';
-	import { goto } from '$app/navigation';
+	// import { debounce } from 'mauss';
+	// import { qpm } from 'mauss/web';
+	// import { browser } from '$app/env';
+	// import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
 	import { sift, sieve } from '$lib/utils/search';
 	import { rSlice as store } from '$lib/utils/stores';
 
@@ -41,18 +42,19 @@
 	import AnimatedKey from '$lib/components/AnimatedKey.svelte';
 	import ReviewCard from '$lib/components/ReviewCard.svelte';
 
-	const share = debounce((url: string) => goto(url, { replaceState: true, keepfocus: true }), 500);
-	const params = browser ? new URLSearchParams(location.search) : '';
+	// const share = debounce((url: string) => {
+	// 	goto(url, { replaceState: true, keepfocus: true });
+	// }, 500);
 
-	let search = params ? params.get('q') : '';
+	let search = $page.url.searchParams.get('q') || '';
 	let query = (search && search.replace(/\+/g, ' ')) || '';
 	let filters = { categories: [], genres: [], verdict: [], sort_by: 'updated' };
 
 	$: filtered = sieve(filters, data);
 	$: items = query ? sift(query, filtered) : filtered;
 
-	$: shareable = qpm({ q: query }).replace(/(%20)+/g, '+');
-	$: shareable && share(shareable);
+	// $: shareable = qpm({ q: query }).replace(/(%20)+/g, '+');
+	// $: shareable && share(shareable);
 </script>
 
 <MetaHead
