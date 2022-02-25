@@ -3,17 +3,13 @@
 	export let post: any = {};
 	const size = 16;
 
+	import { dt } from 'mauss/utils';
 	import { Feather } from 'syv/icons';
 	import { Link } from 'syv';
-	import { createPrettyDate } from '$lib/utils/helper';
 	import TextIcon from '$lib/components/TextIcon.svelte';
 
 	$: ({ author = {}, date = {} } = post);
 	$: ({ published, updated } = date);
-	$: pretty = {
-		published: createPrettyDate(date.published as string),
-		updated: createPrettyDate(date.updated as string),
-	};
 </script>
 
 <header>
@@ -38,7 +34,7 @@
 						<Feather.Calendar {size} />
 						<time datetime={published}>
 							{#if updated && updated !== published}Published on{/if}
-							{pretty.published.weekday}, {pretty.published.complete}
+							{dt.format(published, 'DDDD, DD MMMM YYYY')}
 						</time>
 					</TextIcon>
 					{#if path && (!updated || (updated && updated === published))}
@@ -59,11 +55,11 @@
 							{:else}
 								<Feather.Calendar {size} />
 							{/if}
-							<time datetime={updated}>Updated {pretty.updated.complete}</time>
+							<time datetime={updated}>Updated {dt.format(updated, 'DD MMMM YYYY')}</time>
 						</TextIcon>
 					{:else}
 						<span>
-							<time datetime={updated}>Updated {pretty.updated.complete}</time>
+							<time datetime={updated}>Updated {dt.format(updated, 'DD MMMM YYYY')}</time>
 						</span>
 					{/if}
 					{#if path}
