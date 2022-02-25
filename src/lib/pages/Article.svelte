@@ -160,6 +160,7 @@
 	}
 	main :global(h2),
 	main :global(h3) {
+		scroll-margin-top: 4rem;
 		font-weight: bold;
 		font-family: var(--aqua-heading);
 	}
