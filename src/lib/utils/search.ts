@@ -1,9 +1,7 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Entries } from 'mauss/typings';
 import type { Child, SieveDict } from '../types';
-import { compare as c, regexp } from 'mauss';
+import { comparator, compare as c, regexp } from 'mauss';
 import { truthy } from 'mauss/guards';
-import { sortCompare } from './helper';
 
 const exists = (source: string | any, query: string | any): boolean =>
 	typeof source !== 'string' ? source === query : regexp(query, 'i').test(source);
@@ -22,6 +20,23 @@ export const sift = <T extends Child>(query: string, data: T[]): T[] => {
 			: Object.values(x.title).some((val) => check(val, cleanSplit(query)))
 	);
 };
+
+function sortCompare<T extends Record<string, any>>(x: T, y: T): number {
+	if (x.date && y.date) {
+		if (typeof x.date === 'string' && typeof y.date === 'string')
+			if (x.date !== y.date) return c.date(x.date, y.date);
+		const { updated: xu = '', published: xp = '' } = x.date;
+		const { updated: yu = '', published: yp = '' } = y.date;
+		if (xu && yu && xu !== yu) return c.date(xu, yu);
+		if (xp && yp && xp !== yp) return c.date(xp, yp);
+	}
+
+	if (x.released && y.released && x.released !== y.released) return c.date(x.released, y.released);
+
+	if (x.author && y.author) return c.string(x.author, y.author);
+
+	return comparator(x, y);
+}
 
 const sortBy: Record<string, (x: any, y: any) => number> = {
 	rating(x, y) {
