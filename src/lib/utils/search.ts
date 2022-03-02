@@ -63,7 +63,7 @@ export function sieve<T extends Child & Record<string, any>>(meta: SieveDict, da
 	const verdict = entries.find(([k, v]) => k === 'verdict' && v.length) || [];
 	const checked = entries.filter(([, v]) => v.length).length;
 	const dFilter = (post: T) =>
-		(verdict.length ? compare(post.verdict, verdict[1]) : 1) &&
+		(verdict.length ? verdict[1].includes(post.verdict) : 1) &&
 		(category.length && !!post.category ? compare(post.category, category[1]) : 1) &&
 		(cleaned.length ? cleaned.some(([k, v]) => identical.includes(k) && compare(post[k], v)) : 1);
 	return sort(sort_by, checked ? data.filter(dFilter) : data);
