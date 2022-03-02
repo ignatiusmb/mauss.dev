@@ -52,13 +52,11 @@ const sortBy: Record<string, (x: any, y: any) => number> = {
 export const sort = <T extends Child>(type: string, data: T[]): T[] =>
 	type in sortBy ? data.sort(sortBy[type]) : data.sort(sortCompare);
 
-export function sieve<T extends Child & Record<string, any>>(
-	{ sort_by = 'updated', ...dict }: SieveDict,
-	data: T[]
-): T[] {
+export function sieve<T extends Child & Record<string, any>>(meta: SieveDict, data: T[]): T[] {
 	const identical = ['tags', 'genres'];
 	const intersect = ['categories', 'verdict'];
 
+	const { sort_by = 'updated', ...dict } = meta;
 	const entries = Object.entries(dict) as Entries<Required<typeof dict>>;
 	const cleaned = entries.filter(([k, v]) => !intersect.includes(k) && v.length);
 	const category = entries.find(([k, v]) => k === 'categories' && v.length) || [];
