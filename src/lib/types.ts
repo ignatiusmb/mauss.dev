@@ -28,6 +28,7 @@ export interface Child {
 	/** Main Properties */
 	slug?: string;
 	title: string | I18nData;
+	description?: string;
 	date: {
 		updated?: string;
 		published?: string;

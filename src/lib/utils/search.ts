@@ -29,35 +29,48 @@ function record(set: Set<string>, entries: string[]) {
 	entries.forEach((entry) => set.add(entry));
 }
 
-export function sift<T extends Child>(query: string, data: T[]): T[] {
+function sifter(query = '') {
 	const tokens = tokenizer(query);
 
-	const sifted = [];
-	for (let i = 0, t = 0; i < data.length; i++, t = 0) {
-		const { title, description } = data[i];
+	return <Data, Transformer extends (i: Data) => Set<string>>(
+		data: Array<string | Data>,
+		transform?: Transformer
+	) => {
+		const sifted: any[] = [];
+		if (!tokens.length) return sifted;
+
+		for (let i = 0, t = 0; i < data.length; i += 1, t = 0) {
+			const refs = transform ? transform(data[i] as Data) : new Set((data[i] as string).split(' '));
+
+			let valid = true;
+			while (valid && t < tokens.length) {
+				const { q, rgx } = tokens[t++];
+				let matched = false;
+				for (const ref of refs.values()) {
+					if (q.length > ref.length) continue;
+					if (rgx.test(ref)) matched = true;
+					if (matched) break;
+				}
+				if (!matched) valid = false;
+			}
+			if (!valid) continue;
+			sifted.push(data[i]);
+		}
+
+		return sifted;
+	};
+}
+
+export const sift = <T extends Child>(query = '', data: T[]) =>
+	sifter(query)(data, (item) => {
+		const { title, description } = item;
 		const refs = new Set(
 			(typeof title === 'string' && normalize(title).split(' ')) ||
 				Object.values(title).flatMap((t) => normalize(t).split(' '))
 		);
 		if (description) record(refs, normalize(description).split(' '));
-
-		let valid = true;
-		while (valid && t < tokens.length) {
-			const { q, rgx } = tokens[t++];
-			let matched = false;
-			for (const ref of refs.values()) {
-				if (q.length > ref.length) continue;
-				if (rgx.test(ref)) matched = true;
-				if (matched) break;
-			}
-			if (!matched) valid = false;
-		}
-		if (!valid) continue;
-		sifted.push(data[i]);
-	}
-
-	return sifted;
-}
+		return refs;
+	});
 
 function sortCompare<T extends Record<string, any>>(x: T, y: T): number {
 	if (x.date && y.date) {
