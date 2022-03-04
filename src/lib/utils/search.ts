@@ -12,12 +12,13 @@ const cmp = (source: string[] | string, queries: string[]): number =>
 const check = (source: string[] | string, queries: string[]): boolean =>
 	cmp(source, queries) === queries.length;
 
-const cleanSplit = (data: string): string[] => data.split(' ').filter(truthy);
 export const sift = <T extends Child>(query: string, data: T[]): T[] => {
+	const keywords = query.split(' ').filter(truthy);
+
 	return data.filter((x) =>
 		typeof x.title === 'string'
-			? check(x.title, cleanSplit(query))
-			: Object.values(x.title).some((val) => check(val, cleanSplit(query)))
+			? check(x.title, keywords)
+			: Object.values(x.title).some((val) => check(val, keywords))
 	);
 };
 
