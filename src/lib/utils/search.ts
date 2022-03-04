@@ -1,25 +1,70 @@
 import type { Entries } from 'mauss/typings';
 import type { Child, SieveDict } from '../types';
 import { comparator, compare, regexp } from 'mauss';
-import { truthy } from 'mauss/guards';
 
-const exists = (source: string | any, query: string | any): boolean =>
-	typeof source !== 'string' ? source === query : regexp(query, 'i').test(source);
-const cmp = (source: string[] | string, queries: string[]): number =>
-	Array.isArray(source)
-		? source.filter((s) => cmp(s, queries)).length
-		: queries.filter((q) => exists(source, q)).length;
-const check = (source: string[] | string, queries: string[]): boolean =>
-	cmp(source, queries) === queries.length;
+const IGNORED = /[(){}[\]<>"']/g;
+function normalize(str: string) {
+	str = str.replace(IGNORED, '');
+	return str.toLowerCase();
+}
 
-const cleanSplit = (data: string): string[] => data.split(' ').filter(truthy);
-export const sift = <T extends Child>(query: string, data: T[]): T[] => {
-	return data.filter((x) =>
-		typeof x.title === 'string'
-			? check(x.title, cleanSplit(query))
-			: Object.values(x.title).some((val) => check(val, cleanSplit(query)))
-	);
-};
+const EXP = Object.create(null) as { [k: string]: RegExp };
+function tokenizer(query: string) {
+	const tokens = [];
+	for (const q of normalize(query).split(' ')) {
+		if (q === '') continue;
+		if (!EXP[q]) EXP[q] = regexp(q);
+		tokens.push({ q, rgx: EXP[q] });
+	}
+	return tokens;
+}
+
+function record(set: Set<string>, entries: string[]) {
+	entries.forEach((entry) => set.add(entry));
+}
+
+function sifter(query = '') {
+	const tokens = tokenizer(query);
+
+	return <Data, Transformer extends (i: Data) => Set<string>>(
+		data: Array<string | Data>,
+		transform?: Transformer
+	) => {
+		if (!tokens.length) return data;
+
+		const sifted = [];
+		for (let i = 0, t = 0; i < data.length; i += 1, t = 0) {
+			const refs = transform ? transform(data[i] as Data) : new Set((data[i] as string).split(' '));
+
+			let valid = true;
+			while (valid && t < tokens.length) {
+				const { q, rgx } = tokens[t++];
+				let matched = false;
+				for (const ref of refs.values()) {
+					if (q.length > ref.length) continue;
+					if (rgx.test(ref)) matched = true;
+					if (matched) break;
+				}
+				if (!matched) valid = false;
+			}
+			if (!valid) continue;
+			sifted.push(data[i]);
+		}
+
+		return sifted;
+	};
+}
+
+export const sift = <T extends Child>(query = '', data: T[]) =>
+	sifter(query)(data, (item) => {
+		const { title, description } = item;
+		const refs = new Set(
+			(typeof title === 'string' && normalize(title).split(' ')) ||
+				Object.values(title).flatMap((t) => normalize(t).split(' '))
+		);
+		if (description) record(refs, normalize(description).split(' '));
+		return refs;
+	});
 
 function sortCompare<T extends Record<string, any>>(x: T, y: T): number {
 	if (x.date && y.date) {
@@ -72,9 +117,17 @@ export function sieve<T extends Child & Record<string, any>>(meta: SieveDict, da
 	const category = entries.find(([k, v]) => k === 'categories' && v.length) || [];
 	const verdict = entries.find(([k, v]) => k === 'verdict' && v.length) || [];
 	const checked = entries.filter(([, v]) => v.length).length;
+
+	const cross = (post: T, [key, val]: typeof cleaned[number]) => {
+		const method = identical.includes(key) ? 'every' : 'some';
+		if (Array.isArray(post[key])) return val[method]((v) => post[key].includes(v));
+
+		const fallback = sifter(post[key])(val).length;
+		return method === 'some' ? fallback : fallback === val.length;
+	};
 	const dFilter = (post: T) =>
 		(verdict.length ? verdict[1].includes(post.verdict) : 1) &&
-		(category.length && !!post.category ? cmp(post.category, category[1]) : 1) &&
-		(cleaned.length ? cleaned.some(([k, v]) => identical.includes(k) && cmp(post[k], v)) : 1);
+		(category.length ? sifter(post.category)(category[1]).length : 1) &&
+		(cleaned.length ? cleaned.some((item) => cross(post, item)) : 1);
 	return sort(sort_by, checked ? data.filter(dFilter) : data);
 }

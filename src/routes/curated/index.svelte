@@ -13,7 +13,7 @@
 	let filters = { categories: [], tags: [], sort_by: 'updated' };
 
 	$: filtered = sieve(filters, data);
-	$: items = query ? sift(query, filtered) : filtered;
+	$: items = sift(query, filtered);
 </script>
 
 <MetaHead

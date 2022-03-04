@@ -51,7 +51,7 @@
 	let filters = { categories: [], genres: [], verdict: [], sort_by: 'updated' };
 
 	$: filtered = sieve(filters, data);
-	$: items = query ? sift(query, filtered) : filtered;
+	$: items = sift(query, filtered);
 
 	// $: shareable = qpm({ q: query }).replace(/(%20)+/g, '+');
 	// $: shareable && share(shareable);
