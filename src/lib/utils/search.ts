@@ -2,13 +2,6 @@ import type { Entries } from 'mauss/typings';
 import type { Child, SieveDict } from '../types';
 import { comparator, compare, regexp } from 'mauss';
 
-const exists = (source: string | any, query: string | any): boolean =>
-	typeof source !== 'string' ? source === query : regexp(query, 'i').test(source);
-const cmp = (source: string[] | string, queries: string[]): number =>
-	Array.isArray(source)
-		? source.filter((s) => cmp(s, queries)).length
-		: queries.filter((q) => exists(source, q)).length;
-
 const IGNORED = /[(){}[\]<>"']/g;
 function normalize(str: string) {
 	str = str.replace(IGNORED, '');
@@ -19,6 +12,7 @@ const EXP = Object.create(null) as { [k: string]: RegExp };
 function tokenizer(query: string) {
 	const tokens = [];
 	for (const q of normalize(query).split(' ')) {
+		if (q === '') continue;
 		if (!EXP[q]) EXP[q] = regexp(q);
 		tokens.push({ q, rgx: EXP[q] });
 	}
@@ -37,7 +31,7 @@ function sifter(query = '') {
 		transform?: Transformer
 	) => {
 		const sifted: any[] = [];
-		if (!tokens.length) return sifted;
+		if (!tokens.length) return data;
 
 		for (let i = 0, t = 0; i < data.length; i += 1, t = 0) {
 			const refs = transform ? transform(data[i] as Data) : new Set((data[i] as string).split(' '));
@@ -123,9 +117,17 @@ export function sieve<T extends Child & Record<string, any>>(meta: SieveDict, da
 	const category = entries.find(([k, v]) => k === 'categories' && v.length) || [];
 	const verdict = entries.find(([k, v]) => k === 'verdict' && v.length) || [];
 	const checked = entries.filter(([, v]) => v.length).length;
+
+	const cross = (post: T, [key, val]: typeof cleaned[number]) => {
+		const method = identical.includes(key) ? 'every' : 'some';
+		if (Array.isArray(post[key])) return val[method]((v) => post[key].includes(v));
+
+		const fallback = sifter(post[key])(val).length;
+		return method === 'some' ? fallback : fallback === val.length;
+	};
 	const dFilter = (post: T) =>
 		(verdict.length ? verdict[1].includes(post.verdict) : 1) &&
-		(category.length && !!post.category ? cmp(post.category, category[1]) : 1) &&
-		(cleaned.length ? cleaned.some(([k, v]) => identical.includes(k) && cmp(post[k], v)) : 1);
+		(category.length ? sifter(post.category)(category[1]).length : 1) &&
+		(cleaned.length ? cleaned.some((item) => cross(post, item)) : 1);
 	return sort(sort_by, checked ? data.filter(dFilter) : data);
 }
