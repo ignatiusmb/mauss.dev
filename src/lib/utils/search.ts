@@ -30,9 +30,9 @@ function sifter(query = '') {
 		data: Array<string | Data>,
 		transform?: Transformer
 	) => {
-		const sifted: any[] = [];
 		if (!tokens.length) return data;
 
+		const sifted = [];
 		for (let i = 0, t = 0; i < data.length; i += 1, t = 0) {
 			const refs = transform ? transform(data[i] as Data) : new Set((data[i] as string).split(' '));
 
