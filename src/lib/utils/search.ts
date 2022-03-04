@@ -1,7 +1,6 @@
 import type { Entries } from 'mauss/typings';
 import type { Child, SieveDict } from '../types';
 import { comparator, compare, regexp } from 'mauss';
-import { truthy } from 'mauss/guards';
 
 const exists = (source: string | any, query: string | any): boolean =>
 	typeof source !== 'string' ? source === query : regexp(query, 'i').test(source);
@@ -9,18 +8,56 @@ const cmp = (source: string[] | string, queries: string[]): number =>
 	Array.isArray(source)
 		? source.filter((s) => cmp(s, queries)).length
 		: queries.filter((q) => exists(source, q)).length;
-const check = (source: string[] | string, queries: string[]): boolean =>
-	cmp(source, queries) === queries.length;
 
-export const sift = <T extends Child>(query: string, data: T[]): T[] => {
-	const keywords = query.split(' ').filter(truthy);
+const IGNORED = /[(){}[\]<>"']/g;
+function normalize(str: string) {
+	str = str.replace(IGNORED, '');
+	return str.toLowerCase();
+}
 
-	return data.filter((x) =>
-		typeof x.title === 'string'
-			? check(x.title, keywords)
-			: Object.values(x.title).some((val) => check(val, keywords))
-	);
-};
+const EXP = Object.create(null) as { [k: string]: RegExp };
+function tokenizer(query: string) {
+	const tokens = [];
+	for (const q of normalize(query).split(' ')) {
+		if (!EXP[q]) EXP[q] = regexp(q);
+		tokens.push({ q, rgx: EXP[q] });
+	}
+	return tokens;
+}
+
+function record(set: Set<string>, entries: string[]) {
+	entries.forEach((entry) => set.add(entry));
+}
+
+export function sift<T extends Child>(query: string, data: T[]): T[] {
+	const tokens = tokenizer(query);
+
+	const sifted = [];
+	for (let i = 0, t = 0; i < data.length; i++, t = 0) {
+		const { title, description } = data[i];
+		const refs = new Set(
+			(typeof title === 'string' && normalize(title).split(' ')) ||
+				Object.values(title).flatMap((t) => normalize(t).split(' '))
+		);
+		if (description) record(refs, normalize(description).split(' '));
+
+		let valid = true;
+		while (valid && t < tokens.length) {
+			const { q, rgx } = tokens[t++];
+			let matched = false;
+			for (const ref of refs.values()) {
+				if (q.length > ref.length) continue;
+				if (rgx.test(ref)) matched = true;
+				if (matched) break;
+			}
+			if (!matched) valid = false;
+		}
+		if (!valid) continue;
+		sifted.push(data[i]);
+	}
+
+	return sifted;
+}
 
 function sortCompare<T extends Record<string, any>>(x: T, y: T): number {
 	if (x.date && y.date) {
