@@ -1,12 +1,3 @@
 {
-	"extends": "mauss/tsconfig.json",
-	"compilerOptions": {
-		"target": "ES2020",
-		"sourceMap": true,
-		"baseUrl": ".",
-		"paths": {
-			"$lib/*": ["src/lib/*"]
-		}
-	},
-	"include": ["src/**/*"]
+	"extends": "./.svelte-kit/tsconfig.json"
 }
