@@ -17,7 +17,7 @@
 		{/if}
 		<small
 			on:click={() => {
-				let newIndex;
+				let newIndex = quoteIndex;
 				do newIndex = random.int(quotes.length);
 				while (newIndex === quoteIndex);
 				quoteIndex = newIndex;

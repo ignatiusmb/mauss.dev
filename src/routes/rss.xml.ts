@@ -1,6 +1,6 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import type { Curated, Post, Review } from '$lib/types';
-import RSS, { RSSItem } from '$lib/utils/rss';
+import RSS, { type RSSItem } from '$lib/utils/rss';
 import { forge, traverse } from 'marqua';
 import { compare } from 'mauss';
 
