@@ -1,4 +1,4 @@
-import type { RequestHandler } from '@sveltejs/kit';
+import type { RequestHandler } from './__types/[slug].json';
 import { marker, compile } from 'marqua';
 import TexMath from 'markdown-it-texmath';
 import KaTeX from 'katex';

@@ -1,5 +1,3 @@
-import type { Overwrite, Typify } from 'mauss/typings';
-
 export interface I18nData {
 	short?: string;
 	en: string;
@@ -49,98 +47,85 @@ export interface Curated extends Child {
 	tags?: string[];
 }
 
-export type Post = Typify<
-	Overwrite<
-		Child,
-		{
-			title: string;
-			tags: string[];
-			category: string;
-			description?: string;
+export interface Post extends Child {
+	title: string;
+	tags: string[];
+	category: string;
+	description?: string;
 
-			date: {
-				published: string;
-				updated?: string;
-			};
-			image?: { en: string };
-		}
-	>
->;
+	date: {
+		published: string;
+		updated?: string;
+	};
+	image?: { en: string };
+}
 
-export type RawReview = Overwrite<
-	Child,
-	{
-		released: string;
-		title: I18nData;
-		genres: string[];
-		rating: string[];
-		verdict: typeof import('$lib/constants')['VERDICTS'][number];
+export interface RawReview extends Child {
+	released: string;
+	title: I18nData;
+	genres: string[];
+	rating: string[];
+	verdict: typeof import('$lib/constants')['VERDICTS'][number];
 
-		completed: string;
-		seen: {
-			first: string | string[];
-			last?: string | string[];
-		};
-		date: {
-			published: string;
-			updated?: string;
-		};
-		image: Omit<I18nData, 'short'>;
+	completed: string;
+	seen: {
+		first: string | string[];
+		last?: string | string[];
+	};
+	date: {
+		published: string;
+		updated?: string;
+	};
+	image: Omit<I18nData, 'short'>;
 
-		link: {
-			mal?: string;
-		};
+	link: {
+		mal?: string;
+	};
 
-		composed?: number;
-	}
->;
-export type Review = Typify<
-	Overwrite<
-		Child,
-		{
-			category: string;
-			released: string;
-			title: I18nData;
-			genres: string[];
-			rating?: number;
-			verdict: typeof import('$lib/constants')['VERDICTS'][number];
+	composed?: number;
+}
+export interface Review extends Child {
+	category: string;
+	released: string;
+	title: I18nData;
+	genres: string[];
+	rating?: number;
+	verdict: typeof import('$lib/constants')['VERDICTS'][number];
 
-			completed: string | string[];
-			seen: {
-				first: string;
-				last?: string;
-			};
-			date: {
-				published: string;
-				updated?: string;
-			};
-			image: {
-				en: string;
-				jp?: string;
-			};
-			backdrop?: string;
+	completed: string | string[];
+	seen: {
+		first: string;
+		last?: string;
+	};
+	date: {
+		published: string;
+		updated?: string;
+	};
+	image: {
+		en: string;
+		jp?: string;
+	};
+	backdrop?: string;
 
-			link?: {
-				mal?: string;
-			};
+	link?: {
+		mal?: string;
+	};
 
-			composed: number;
-			spoilers?: string;
-			closing?: string;
-		}
-	>
->;
+	composed: number;
+	spoilers?: string;
+	closing?: string;
+}
 
-export type SieveDict = {
+export interface SieveDict {
 	categories?: string[];
 	genres?: string[];
 	tags?: string[];
 	verdict?: string[];
 	sort_by: string;
-};
+}
 
-export type Quote = Typify<{
+export interface Quote {
 	author: string;
 	quote: string;
 	from: string;
-}>;
+}

@@ -1,8 +1,8 @@
-import type { RequestHandler } from '@sveltejs/kit';
+import type { RequestHandler } from './__types/[slug].json';
 import type { Post } from '$lib/types';
 import { traverse } from 'marqua';
 
-export const get: RequestHandler = async ({ params: { slug } }) => {
+export const get: RequestHandler<Post> = async ({ params: { slug } }) => {
 	const [body] = traverse<{ entry: string }, Post>(
 		'content/src/posts',
 		({ frontMatter, content, breadcrumb: [filename] }) => {

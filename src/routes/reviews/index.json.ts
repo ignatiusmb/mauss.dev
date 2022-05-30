@@ -1,10 +1,12 @@
-import type { RequestHandler } from '@sveltejs/kit';
+import type { RequestHandler } from './__types/index.json';
 import type { RawReview, Review } from '$lib/types';
 import { countAverageRating, fillSiblings } from '$lib/utils/article';
 import { traverse, forge } from 'marqua';
 import { compare } from 'mauss';
 
-export const get: RequestHandler = async ({ locals: { entry } }) => {
+type Returned = Omit<Review, 'composed'>;
+
+export const get: RequestHandler<Returned[]> = async ({ locals: { entry } }) => {
 	const config = forge.traverse({
 		entry,
 		recurse: true,
@@ -14,7 +16,7 @@ export const get: RequestHandler = async ({ locals: { entry } }) => {
 			return compare.date(xd, yd);
 		},
 	});
-	const reviews = traverse<typeof config, RawReview, Omit<Review, 'composed'>>(
+	const reviews = traverse<typeof config, RawReview, Returned>(
 		config,
 		({ frontMatter, breadcrumb: [filename, folder] }) => {
 			if (filename.includes('draft') || frontMatter.draft) return;

@@ -1,9 +1,9 @@
-import type { RequestHandler } from '@sveltejs/kit';
+import type { RequestHandler } from './__types/[slug].json';
 import type { RawReview, Review } from '$lib/types';
 import { countAverageRating, contentParser } from '$lib/utils/article';
 import { marker, compile } from 'marqua';
 
-export const get: RequestHandler = async ({ params, locals: { entry } }) => {
+export const get: RequestHandler<Review> = async ({ params, locals: { entry } }) => {
 	const { category, slug } = params;
 	const body = compile<{ entry: string }, RawReview, Review>(
 		`${entry}.md`,
