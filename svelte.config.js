@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-auto';
 import preprocess from 'svelte-preprocess';
 import autoprefixer from 'autoprefixer';
 
@@ -9,7 +9,9 @@ const config = {
 	}),
 	kit: {
 		adapter: adapter(),
-		trailingSlash: 'always',
+		prerender: {
+			default: true,
+		},
 		vite: {
 			optimizeDeps: {
 				exclude: ['marqua'],

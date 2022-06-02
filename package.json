@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
+    "prepare": "svelte-kit sync",
     "lint": "npm run lint:es && npm run lint:sv && npm run lint:ts && npm run lint:md",
     "lint:es": "eslint src --ext js,ts,svelte",
     "lint:sv": "svelte-check src --tsconfig tsconfig.json",
@@ -16,7 +17,7 @@
   },
   "prettier": "mauss/prettier.json",
   "devDependencies": {
-    "@sveltejs/adapter-static": "next",
+    "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
     "@typescript-eslint/eslint-plugin": "^5.12.0",
     "@typescript-eslint/parser": "^5.12.0",
