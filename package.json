@@ -33,7 +33,7 @@
     "postcss": "^8.2.4",
     "prettier": "^2.2.1",
     "prettier-plugin-svelte": "^2.1.1",
-    "svelte": "^3.32.1",
+    "svelte": "^3.49.0",
     "svelte-check": "^2.0.0",
     "svelte-preprocess": "^4.6.5",
     "syv": "latest",
