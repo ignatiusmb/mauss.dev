@@ -3,7 +3,7 @@ import { traverse } from 'marqua';
 
 type About = { slug: string; title: string; date: { updated: string } };
 
-export const get: RequestHandler = async () => {
+export const GET: RequestHandler = async () => {
 	const parsed = traverse<{ entry: string }, About>(
 		'content/src/about',
 		({ frontMatter, content, breadcrumb: [filename] }) => {
