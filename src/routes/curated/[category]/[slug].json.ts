@@ -11,7 +11,7 @@ marker.use(TexMath, {
 	},
 });
 
-export const get: RequestHandler = async ({ params: { category, slug }, locals }) => ({
+export const GET: RequestHandler = async ({ params: { category, slug }, locals }) => ({
 	body: compile(`${locals.entry}.md`, ({ frontMatter, content }) => {
 		return { slug: `${category}/${slug}`, ...frontMatter, category, content };
 	}),
