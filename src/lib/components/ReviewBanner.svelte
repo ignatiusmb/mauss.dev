@@ -12,7 +12,7 @@
 
 	<span class="composed">
 		Credibility: {composed} day{composed > 1 ? 's' : ''}
-		since last seen on {dt.format(seen.first, 'DD MMMM YYYY')}
+		since last seen on {dt.format(seen.first)('DD MMMM YYYY')}
 	</span>
 	<small>
 		<div class="stars">

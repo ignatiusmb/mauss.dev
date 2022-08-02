@@ -34,7 +34,7 @@
 						<Feather.Calendar {size} />
 						<time datetime={published}>
 							{#if updated && updated !== published}Published on{/if}
-							{dt.format(published, 'DDDD, DD MMMM YYYY')}
+							{dt.format(published)('DDDD, DD MMMM YYYY')}
 						</time>
 					</TextIcon>
 					{#if path && (!updated || (updated && updated === published))}
@@ -47,6 +47,8 @@
 			{/if}
 
 			{#if updated && updated !== published}
+				{@const formatted = dt.format(updated)('DD MMMM YYYY')}
+
 				<div>
 					{#if path}
 						<TextIcon href="https://github.com/alchemauss/content/commits/master/{path}">
@@ -55,11 +57,11 @@
 							{:else}
 								<Feather.Calendar {size} />
 							{/if}
-							<time datetime={updated}>Updated {dt.format(updated, 'DD MMMM YYYY')}</time>
+							<time datetime={updated}>Updated {formatted}</time>
 						</TextIcon>
 					{:else}
 						<span>
-							<time datetime={updated}>Updated {dt.format(updated, 'DD MMMM YYYY')}</time>
+							<time datetime={updated}>Updated {formatted}</time>
 						</span>
 					{/if}
 					{#if path}
