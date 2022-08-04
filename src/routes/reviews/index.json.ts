@@ -6,7 +6,7 @@ import { compare } from 'mauss';
 
 type Returned = Omit<Review, 'composed'>;
 
-export const get: RequestHandler<Returned[]> = async ({ locals: { entry } }) => {
+export const GET: RequestHandler<Returned[]> = async ({ locals: { entry } }) => {
 	const config = forge.traverse({
 		entry,
 		recurse: true,

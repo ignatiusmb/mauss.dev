@@ -48,7 +48,7 @@ const channel = {
 	description: 'Developed by Alchemauss',
 };
 
-export const get: RequestHandler = async () => ({
+export const GET: RequestHandler = async () => ({
 	headers: { 'Content-Type': 'application/xml' },
 	body: RSS(channel, items),
 });

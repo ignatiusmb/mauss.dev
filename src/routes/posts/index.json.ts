@@ -5,7 +5,7 @@ import { join } from 'path';
 import { traverse } from 'marqua';
 import { fillSiblings } from '$lib/utils/article';
 
-export const get: RequestHandler<Post[]> = async ({ locals: { entry } }) => {
+export const GET: RequestHandler<Post[]> = async ({ locals: { entry } }) => {
 	const posts = traverse<{ entry: string }, Post>(
 		entry,
 		({ frontMatter, breadcrumb: [filename] }) => {

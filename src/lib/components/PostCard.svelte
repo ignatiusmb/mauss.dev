@@ -23,7 +23,7 @@
 	<aside>
 		<small>
 			{#if updated && updated !== published}Updated{/if}
-			<span>{dt.format(date, 'DD MMMM YYYY')}</span>
+			<span>{dt.format(date)('DD MMMM YYYY')}</span>
 		</small>
 		<small>{post.read_time} min read</small>
 		<ButtonLink href="/posts/{post.slug}/">read</ButtonLink>

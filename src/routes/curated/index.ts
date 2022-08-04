@@ -1,7 +1,7 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import { traverse } from 'marqua';
 
-export const get: RequestHandler = async () => {
+export const GET: RequestHandler = async () => {
 	const data = traverse(
 		{ entry: 'content/src/curated', recurse: true },
 		({ frontMatter, breadcrumb: [filename, folder] }) => {

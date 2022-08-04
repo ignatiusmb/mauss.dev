@@ -12,15 +12,6 @@ const config = {
 		prerender: {
 			default: true,
 		},
-		vite: {
-			optimizeDeps: {
-				exclude: ['marqua'],
-				include: ['markdown-it'],
-			},
-			ssr: {
-				noExternal: ['mauss', 'marqua'],
-			},
-		},
 	},
 };
 
