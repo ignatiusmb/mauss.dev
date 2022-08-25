@@ -1,28 +1,5 @@
-<script context="module" lang="ts">
-	import { compare } from 'mauss';
-	export const load: import('@sveltejs/kit').Load = async ({ fetch }) => {
-		const quotes = await fetch('/quotes.json').then((r) => r.json());
-		const { data: curated } = await fetch('/curated/__data.json').then((r) => r.json());
-		const posts: any[] = await fetch('/posts.json').then((r) => r.json());
-		const reviews: any[] = await fetch('/reviews.json').then((r) => r.json());
-
-		const data = {
-			curated: curated
-				.sort((x: any, y: any) => compare.date(x.date.updated, y.date.updated))
-				.slice(0, 4),
-			posts: posts.slice(0, 4),
-			reviews: reviews.filter((x) => x.rating && x.verdict !== -2).slice(0, 4),
-		};
-
-		return {
-			props: { data, quotes: quotes.slice(0, quotes.length / 2) },
-		};
-	};
-</script>
-
 <script lang="ts">
-	type Item = { slug: string; title: string | import('$lib/types').I18nData };
-	export let data: Record<keyof typeof section, Array<Item>>, quotes: any[];
+	export let data: import('./$types').PageData;
 
 	const section = {
 		curated: { heading: '⚖️ Recently Curated', desc: "Stuffs I've been curating" },
@@ -58,7 +35,7 @@
 		<span>Developer on Weekdays, Avid Writer on Weekends</span>
 		<h3>Software Alchemist</h3>
 
-		<Quote {quotes} />
+		<Quote quotes={data.quotes} />
 	</header>
 
 	<section>
@@ -78,22 +55,24 @@
 	</section>
 
 	{#each entries(data) as [seg, item]}
-		<section>
-			<h2>{section[seg]['heading']}</h2>
-			<p>{section[seg]['desc']} recently:</p>
-			<ul>
-				{#each item as { slug, title }}
+		{#if seg !== 'quotes'}
+			<section>
+				<h2>{section[seg]['heading']}</h2>
+				<p>{section[seg]['desc']} recently:</p>
+				<ul>
+					{#each item as { slug, title }}
+						<li>
+							<Link href="/{seg}/{slug}/">
+								{typeof title === 'string' ? title : title.short || title.en}
+							</Link>
+						</li>
+					{/each}
 					<li>
-						<Link href="/{seg}/{slug}/">
-							{typeof title === 'string' ? title : title.short || title.en}
-						</Link>
+						<Link href="/{seg}/">More {seg}{seg === 'curated' ? ' stuffs ' : ''}...</Link>
 					</li>
-				{/each}
-				<li>
-					<Link href="/{seg}/">More {seg}{seg === 'curated' ? ' stuffs ' : ''}...</Link>
-				</li>
-			</ul>
-		</section>
+				</ul>
+			</section>
+		{/if}
 	{/each}
 </Article>
 

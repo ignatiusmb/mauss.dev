@@ -1,32 +1,5 @@
-<script context="module" lang="ts">
-	import { capitalize } from 'mauss/utils';
-	import { VERDICTS } from '$lib/constants';
-	export const load: import('@sveltejs/kit').Load = async ({ fetch }) => {
-		const data: any[] = await fetch('/reviews.json').then((r) => r.json());
-		const categories = [...new Set(data.map((p) => p.category))];
-		const genres = [...new Set(data.flatMap((p) => p.genres))].sort();
-		return {
-			props: {
-				data,
-				unique: {
-					categories,
-					genres,
-					verdict: VERDICTS.reduce((a, c) => ({ ...a, [c]: capitalize(c.replace('-', ' ')) }), {}),
-					sort_by: {
-						updated: 'Last updated',
-						published: 'Date published',
-						released: 'Year released',
-						seen: 'Last seen',
-						rating: 'Rating',
-					},
-				},
-			},
-		};
-	};
-</script>
-
 <script lang="ts">
-	export let data: any, unique: any;
+	export let data: import('./$types').PageData;
 
 	// import { debounce } from 'mauss';
 	// import { qpm } from 'mauss/web';
@@ -50,7 +23,7 @@
 	let query = (search && search.replace(/\+/g, ' ')) || '';
 	let filters = { categories: [], genres: [], verdict: [], sort_by: 'updated' };
 
-	$: filtered = sieve(filters, data);
+	$: filtered = sieve(filters, data.reviews);
 	$: items = sift(query, filtered);
 
 	// $: shareable = qpm({ q: query }).replace(/(%20)+/g, '+');
@@ -68,7 +41,7 @@
 <LayoutPicker header>
 	<svelte:fragment slot="header">
 		<h1>Alchemauss Reviews</h1>
-		<SearchBar bind:query bind:filters {unique} />
+		<SearchBar unique={data.unique} bind:query bind:filters />
 		<Pagination {store} {items} bound={12} increment={12} />
 	</svelte:fragment>
 

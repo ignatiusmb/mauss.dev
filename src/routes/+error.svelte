@@ -1,26 +1,17 @@
-<script context="module">
-	/** @type {import('@sveltejs/kit').Load} */
-	export const load = (props) => ({ props });
-</script>
-
 <script>
-	/** @type {number} */
-	export let status;
-	/** @type {Error} */
-	export let error;
-
 	import { dev } from '$app/env';
+	import { page } from '$app/stores';
 </script>
 
 <svelte:head>
-	<title>{status}</title>
+	<title>{$page.status}</title>
 </svelte:head>
 
 <article>
-	<h1>{status}</h1>
-	<p>{error.message}</p>
+	<h1>{$page.status}</h1>
+	<p>{$page.error?.message}</p>
 	{#if dev}
-		<pre>{error.stack}</pre>
+		<pre>{$page.error?.stack}</pre>
 	{/if}
 </article>
 

@@ -1,15 +1,6 @@
-<script context="module" lang="ts">
-	export const load: import('@sveltejs/kit').Load = async ({ fetch }) => {
-		const data: any[] = await fetch('/posts.json').then((r) => r.json());
-		const tags = [...new Set(data.flatMap((p) => p.tags))].sort();
-		const categories = [...new Set(data.map((p) => p.tags[0]))].sort();
-		const sort_by = { updated: 'Last Updated', published: 'Last Published' };
-		return { props: { data, unique: { categories, tags, sort_by } } };
-	};
-</script>
-
 <script lang="ts">
-	export let data: any, unique: typeof filters;
+	export let data: import('./$types').PageData;
+
 	import { sift, sieve } from '$lib/utils/search';
 	import { pSlice as store } from '$lib/utils/stores';
 
@@ -22,7 +13,7 @@
 	let filters = { categories: [], tags: [], sort_by: 'updated' },
 		query: string;
 
-	$: filtered = sieve(filters, data);
+	$: filtered = sieve(filters, data.posts);
 	$: items = sift(query, filtered);
 </script>
 
@@ -33,7 +24,7 @@
 <LayoutPicker header itemSize="21em">
 	<svelte:fragment slot="header">
 		<h1>Posts by Alchemauss</h1>
-		<SearchBar bind:query bind:filters {unique} />
+		<SearchBar unique={data.unique} bind:query bind:filters />
 		<Pagination {store} {items} bound={6} />
 	</svelte:fragment>
 

@@ -1,9 +1,9 @@
-import type { RequestHandler } from './__types/[slug].json';
 import type { RawReview, Review } from '$lib/types';
+import { error, json } from '@sveltejs/kit';
 import { countAverageRating, contentParser } from '$lib/utils/article';
 import { marker, compile } from 'marqua';
 
-export const GET: RequestHandler<Review> = async ({ params, locals: { entry } }) => {
+export const GET: import('./$types').RequestHandler = async ({ params, locals: { entry } }) => {
 	const { category, slug } = params;
 	const body = compile<{ entry: string }, RawReview, Review>(
 		`${entry}.md`,
@@ -33,5 +33,7 @@ export const GET: RequestHandler<Review> = async ({ params, locals: { entry } })
 		}
 	);
 
-	return body ? { body } : { status: 404 };
+	if (!body) throw error(404);
+
+	return json(body);
 };

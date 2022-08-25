@@ -1,8 +1,8 @@
-import type { RequestHandler } from './__types/[slug].json';
 import type { Post } from '$lib/types';
+import { json } from '@sveltejs/kit';
 import { traverse } from 'marqua';
 
-export const GET: RequestHandler<Post> = async ({ params: { slug } }) => {
+export const GET: import('./$types').RequestHandler = async ({ params: { slug } }) => {
 	const [body] = traverse<{ entry: string }, Post>(
 		'content/src/posts',
 		({ frontMatter, content, breadcrumb: [filename] }) => {
@@ -13,5 +13,5 @@ export const GET: RequestHandler<Post> = async ({ params: { slug } }) => {
 		}
 	);
 
-	return { body };
+	return json(body);
 };

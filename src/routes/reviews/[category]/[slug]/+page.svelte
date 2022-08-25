@@ -1,28 +1,5 @@
-<script context="module" lang="ts">
-	export const load: import('@sveltejs/kit').Load = async ({ fetch, params }) => {
-		const { category, slug } = params;
-		const res = await fetch(`/reviews/${category}/${slug}.json`);
-
-		const absent = { status: 404, error: 'Review not found' };
-		if (!res.ok) return absent;
-		const post = await res.json();
-
-		const list = await fetch('/reviews.json');
-		for (const review of await list.json()) {
-			if (review.slug !== post.slug) continue;
-			post.siblings = review.siblings;
-			return { props: { post } };
-		}
-		return absent;
-	};
-	const links = new Map([
-		['mal', 'MyAnimeList'],
-		['tmdb', 'TheMovieDB'],
-	]);
-</script>
-
 <script lang="ts">
-	export let post: import('$lib/types').Review;
+	export let data: import('./$types').PageData;
 
 	import { Link } from 'syv';
 	import MetaHead from '$lib/pages/MetaHead.svelte';
@@ -31,23 +8,29 @@
 	import ReviewBanner from '$lib/components/ReviewBanner.svelte';
 	import Disclaimer from '$lib/components/Disclaimer.svelte';
 	import Spoilers from '$lib/components/SpoilerSection.svelte';
-	$: ({ title, spoilers, siblings } = post);
+
+	const links = new Map([
+		['mal', 'MyAnimeList'],
+		['tmdb', 'TheMovieDB'],
+	]);
+
+	$: ({ title, spoilers, siblings } = data);
 </script>
 
 <MetaHead
-	{post}
-	canonical="reviews/{post.slug}"
+	post={data}
+	canonical="reviews/{data.slug}"
 	title={title.short ? title.short : title.jp ? title.jp : title.en}
 />
 
-<Article {post} header path="src/reviews/{post.slug}.md" {siblings}>
+<Article post={data} header path="src/reviews/{data.slug}.md" {siblings}>
 	<div slot="header">
-		<ReviewBanner {post} />
+		<ReviewBanner post={data} />
 
-		{#if post.link}
+		{#if data.link}
 			<small>
 				<span>[</span>
-				{#each Object.entries(post.link) as [key, href]}
+				{#each Object.entries(data.link) as [key, href]}
 					<span>
 						<Link {href}>{links.get(key) || key.toUpperCase()}</Link>
 					</span>
@@ -59,14 +42,14 @@
 
 	<Disclaimer link />
 
-	{@html post.content}
+	{@html data.content}
 
 	{#if spoilers}
 		<Spoilers {spoilers} />
 	{/if}
 
-	{#if post.closing}
-		{@html post.closing}
+	{#if data.closing}
+		{@html data.closing}
 	{/if}
 </Article>
 

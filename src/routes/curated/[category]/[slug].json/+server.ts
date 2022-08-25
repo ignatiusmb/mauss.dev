@@ -1,5 +1,5 @@
-import type { RequestHandler } from './__types/[slug].json';
 import { marker, compile } from 'marqua';
+import { json } from '@sveltejs/kit';
 import TexMath from 'markdown-it-texmath';
 import KaTeX from 'katex';
 
@@ -11,8 +11,12 @@ marker.use(TexMath, {
 	},
 });
 
-export const GET: RequestHandler = async ({ params: { category, slug }, locals }) => ({
-	body: compile(`${locals.entry}.md`, ({ frontMatter, content }) => {
-		return { slug: `${category}/${slug}`, ...frontMatter, category, content };
-	}),
-});
+export const GET: import('./$types').RequestHandler = async ({ params, locals }) => {
+	const { category, slug } = params;
+
+	return json(
+		compile(`${locals.entry}.md`, ({ frontMatter, content }) => {
+			return { slug: `${category}/${slug}`, ...frontMatter, category, content };
+		})
+	);
+};

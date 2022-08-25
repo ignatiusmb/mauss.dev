@@ -1,15 +1,5 @@
-<script context="module" lang="ts">
-	export const load: import('@sveltejs/kit').Load = async ({ fetch, params: { section } }) => {
-		const { data } = await fetch('/about/__data.json').then((r) => r.json());
-		if (!data[section]) return { status: 404, error: 'Section not found' };
-		return {
-			props: { section, post: data[section] },
-		};
-	};
-</script>
-
 <script lang="ts">
-	export let section: string, post: import('$lib/types').PageMeta;
+	export let data: import('./$types').PageData;
 
 	import { capitalize } from 'mauss/utils';
 	import { Link, WeavedImage } from 'syv';
@@ -18,13 +8,13 @@
 </script>
 
 <MetaHead
-	{post}
-	canonical="about/{section}"
-	title="About - {capitalize(section)}"
+	post={data.article}
+	canonical="about/{data.section}"
+	title="About - {capitalize(data.section)}"
 	description="Get to know Ignatius Bagussuputra from his About page."
 />
 
-<Article {post}>
+<Article post={data.article}>
 	<WeavedImage src="/assets/profile/mauss.jpeg" alt="Mauss Profile" />
 
 	<section>
@@ -33,7 +23,7 @@
 		</Link>
 	</section>
 
-	{@html post.content}
+	{@html data.article.content}
 </Article>
 
 <style>

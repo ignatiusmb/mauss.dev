@@ -1,9 +1,9 @@
-import type { RequestHandler } from '@sveltejs/kit';
+import type { PageServerLoad } from '@sveltejs/kit';
 import { traverse } from 'marqua';
 
 type About = { slug: string; title: string; date: { updated: string } };
 
-export const GET: RequestHandler = async () => {
+export const load: PageServerLoad = async () => {
 	const parsed = traverse<{ entry: string }, About>(
 		'content/src/about',
 		({ frontMatter, content, breadcrumb: [filename] }) => {
@@ -12,9 +12,7 @@ export const GET: RequestHandler = async () => {
 		}
 	);
 
-	const data = parsed.reduce((acc, { slug, ...res }) => ({ ...acc, [slug]: res }), {});
+	const article = parsed.reduce((acc, { slug, ...res }) => ({ ...acc, [slug]: res }), {});
 
-	return {
-		body: { data, sections: Object.keys(data).filter((v) => v !== 'index') },
-	};
+	return { article, sections: Object.keys(article).filter((v) => v !== 'index') };
 };

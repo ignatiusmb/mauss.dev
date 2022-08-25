@@ -1,30 +1,21 @@
-<script context="module" lang="ts">
-	export const load: import('@sveltejs/kit').Load = async ({ fetch, params }) => {
-		const { category, slug } = params;
-		const res = await fetch(`/curated/${category}/${slug}.json`);
-		if (!res.ok) return { status: 404, error: 'Curated post not found' };
-		return { props: { post: await res.json() } };
-	};
-</script>
-
 <script lang="ts">
-	export let post: import('$lib/types').Curated;
+	export let data: import('./$types').PageData;
 
 	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import Article from '$lib/pages/Article.svelte';
 	import TagBadge from '$lib/components/TagBadge.svelte';
 	import '$lib/styles/katex.css';
 
-	$: ({ slug, title, content } = post);
+	$: ({ slug, title, content } = data);
 </script>
 
-<MetaHead {post} {title} canonical="curated/{slug}" />
+<MetaHead post={data} {title} canonical="curated/{slug}" />
 
-<Article {post} header path="src/curated/{slug}.md">
+<Article post={data} header path="src/curated/{slug}.md">
 	<svelte:fragment slot="header">
-		{#if post.tags}
+		{#if data.tags}
 			<small class="tags">
-				{#each post.tags as tag}
+				{#each data.tags as tag}
 					<TagBadge {tag} />
 				{/each}
 			</small>

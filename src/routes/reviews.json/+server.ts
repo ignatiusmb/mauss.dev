@@ -1,12 +1,12 @@
-import type { RequestHandler } from './__types/index.json';
 import type { RawReview, Review } from '$lib/types';
+import { json } from '@sveltejs/kit';
 import { countAverageRating, fillSiblings } from '$lib/utils/article';
 import { traverse, forge } from 'marqua';
 import { compare } from 'mauss';
 
 type Returned = Omit<Review, 'composed'>;
 
-export const GET: RequestHandler<Returned[]> = async ({ locals: { entry } }) => {
+export const GET: import('./$types').RequestHandler = async ({ locals: { entry } }) => {
 	const config = forge.traverse({
 		entry,
 		recurse: true,
@@ -42,7 +42,5 @@ export const GET: RequestHandler<Returned[]> = async ({ locals: { entry } }) => 
 		}
 	);
 
-	return {
-		body: fillSiblings(reviews, 'reviews/', (r) => !r.rating || r.verdict !== 'pending'),
-	};
+	return json(fillSiblings(reviews, 'reviews/', (r) => !r.rating || r.verdict !== 'pending'));
 };

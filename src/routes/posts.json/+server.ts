@@ -1,11 +1,11 @@
-import type { RequestHandler } from './__types/index.json';
 import type { Post } from '$lib/types';
+import { json } from '@sveltejs/kit';
 import { existsSync } from 'fs';
 import { join } from 'path';
 import { traverse } from 'marqua';
 import { fillSiblings } from '$lib/utils/article';
 
-export const GET: RequestHandler<Post[]> = async ({ locals: { entry } }) => {
+export const GET: import('./$types').RequestHandler = async ({ locals: { entry } }) => {
 	const posts = traverse<{ entry: string }, Post>(
 		entry,
 		({ frontMatter, breadcrumb: [filename] }) => {
@@ -28,7 +28,5 @@ export const GET: RequestHandler<Post[]> = async ({ locals: { entry } }) => {
 		}
 	);
 
-	return {
-		body: fillSiblings(posts.reverse(), 'posts/'),
-	};
+	return json(fillSiblings(posts.reverse(), 'posts/'));
 };
