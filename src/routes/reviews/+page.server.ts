@@ -11,7 +11,10 @@ export const load: import('./$types').PageServerLoad = async () => {
 		unique: {
 			categories,
 			genres,
-			verdict: VERDICTS.reduce((a, c) => ({ ...a, [c]: capitalize(c.replace('-', ' ')) }), {}),
+			verdict: VERDICTS.reduce(
+				(a, c) => ({ ...a, [c]: capitalize(c.replace('-', ' ')) }),
+				{} as { [k in typeof VERDICTS[number]]: string }
+			),
 			sort_by: {
 				updated: 'Last updated',
 				published: 'Date published',

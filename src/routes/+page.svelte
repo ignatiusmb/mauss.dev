@@ -1,13 +1,14 @@
 <script lang="ts">
 	export let data: import('./$types').PageData;
 
+	const showcase = <[keyof typeof section, any][]>(
+		Object.entries(data).filter(([k]) => k !== 'quotes')
+	);
 	const section = {
 		curated: { heading: '⚖️ Recently Curated', desc: "Stuffs I've been curating" },
 		posts: { heading: '📚 Recent Posts', desc: "What's on my mind (or life)" },
 		reviews: { heading: '⭐ Recent Reviews', desc: "Contents I've been reviewing" },
 	};
-
-	import { entries } from '$lib/mauss';
 
 	import { Link, Image } from 'syv';
 	import MetaHead from '$lib/pages/MetaHead.svelte';
@@ -54,25 +55,23 @@
 		<Link href="/about/">More info...</Link>
 	</section>
 
-	{#each entries(data) as [seg, item]}
-		{#if seg !== 'quotes'}
-			<section>
-				<h2>{section[seg]['heading']}</h2>
-				<p>{section[seg]['desc']} recently:</p>
-				<ul>
-					{#each item as { slug, title }}
-						<li>
-							<Link href="/{seg}/{slug}/">
-								{typeof title === 'string' ? title : title.short || title.en}
-							</Link>
-						</li>
-					{/each}
+	{#each showcase as [seg, item]}
+		<section>
+			<h2>{section[seg]['heading']}</h2>
+			<p>{section[seg]['desc']} recently:</p>
+			<ul>
+				{#each item as { slug, title }}
 					<li>
-						<Link href="/{seg}/">More {seg}{seg === 'curated' ? ' stuffs ' : ''}...</Link>
+						<Link href="/{seg}/{slug}/">
+							{typeof title === 'string' ? title : title.short || title.en}
+						</Link>
 					</li>
-				</ul>
-			</section>
-		{/if}
+				{/each}
+				<li>
+					<Link href="/{seg}/">More {seg}{seg === 'curated' ? ' stuffs ' : ''}...</Link>
+				</li>
+			</ul>
+		</section>
 	{/each}
 </Article>
 

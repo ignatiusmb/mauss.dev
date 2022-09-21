@@ -1,4 +1,5 @@
-import { compile, marker, traverse } from 'marqua';
+import type { Curated } from '$lib/types';
+import { compile, forge, marker, traverse } from 'marqua';
 
 import TexMath from 'markdown-it-texmath';
 import KaTeX from 'katex';
@@ -13,14 +14,19 @@ export function init() {
 }
 
 export function all() {
-	const curated = traverse(
-		{ entry: 'content/src/curated', recurse: true },
+	const config = forge.traverse({
+		entry: 'content/src/curated',
+		recurse: true,
+	});
+
+	const curated = traverse<typeof config, Curated, Curated>(
+		config,
 		({ frontMatter, breadcrumb: [filename, folder] }) => {
 			if (frontMatter.draft || filename.includes('draft')) return;
 			return {
+				...frontMatter,
 				slug: `${folder}/${filename.split('.')[0]}`,
 				category: folder,
-				...frontMatter,
 			};
 		}
 	);
