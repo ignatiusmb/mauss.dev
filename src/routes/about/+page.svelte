@@ -8,13 +8,13 @@
 </script>
 
 <MetaHead
-	post={data.article.index}
+	post={data.article}
 	canonical="about"
 	title="About"
 	description="Get to know Ignatius Bagussuputra from his About page."
 />
 
-<Article post={data.article.index}>
+<Article post={data.article}>
 	<WeavedImage src="/assets/profile/mauss.jpeg" alt="Mauss Profile" />
 
 	<section>
@@ -25,7 +25,7 @@
 		{/each}
 	</section>
 
-	{@html data.article.index.content}
+	{@html data.article.content}
 </Article>
 
 <style>

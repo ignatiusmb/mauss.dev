@@ -1,3 +1,5 @@
 import { compile } from 'marqua';
 
-export const load: import('./$types').PageServerLoad = async () => compile('content/src/uses.md');
+export const load: import('./$types').PageServerLoad = async () => {
+	return compile('content/src/uses.md');
+};

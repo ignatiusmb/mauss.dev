@@ -1,12 +1,13 @@
 import { capitalize } from 'mauss/utils';
 import { VERDICTS } from '$lib/constants';
+import { reviews } from '$lib/content';
 
-export const load: import('./$types').PageLoad = async ({ fetch }) => {
-	const reviews: any[] = await fetch('/reviews.json').then((r) => r.json());
-	const categories = [...new Set(reviews.map((p) => p.category))];
-	const genres = [...new Set(reviews.flatMap((p) => p.genres))].sort();
+export const load: import('./$types').PageServerLoad = async () => {
+	const content = reviews.all();
+	const categories = [...new Set(content.map((p) => p.category))];
+	const genres = [...new Set(content.flatMap((p) => p.genres))].sort();
 	return {
-		reviews,
+		reviews: content,
 		unique: {
 			categories,
 			genres,

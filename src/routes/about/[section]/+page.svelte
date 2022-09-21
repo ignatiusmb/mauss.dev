@@ -2,19 +2,21 @@
 	export let data: import('./$types').PageData;
 
 	import { capitalize } from 'mauss/utils';
+	import { page } from '$app/stores';
+
 	import { Link, WeavedImage } from 'syv';
 	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import Article from '$lib/pages/Article.svelte';
 </script>
 
 <MetaHead
-	post={data.article}
-	canonical="about/{data.section}"
-	title="About - {capitalize(data.section)}"
+	post={data}
+	canonical="about/{$page.params.section}"
+	title="About - {capitalize($page.params.section)}"
 	description="Get to know Ignatius Bagussuputra from his About page."
 />
 
-<Article post={data.article}>
+<Article post={data}>
 	<WeavedImage src="/assets/profile/mauss.jpeg" alt="Mauss Profile" />
 
 	<section>
@@ -23,7 +25,7 @@
 		</Link>
 	</section>
 
-	{@html data.article.content}
+	{@html data.content}
 </Article>
 
 <style>

@@ -13,7 +13,7 @@
 	let query: string;
 	let filters = { categories: [], tags: [], sort_by: 'updated' };
 
-	$: filtered = sieve(filters, data);
+	$: filtered = sieve(filters, data.list);
 	$: items = sift(query, filtered);
 </script>
 

@@ -1,13 +1,12 @@
 import type { Post } from '$lib/types';
-import { json } from '@sveltejs/kit';
 import { existsSync } from 'fs';
 import { join } from 'path';
 import { traverse } from 'marqua';
 import { fillSiblings } from '$lib/utils/article';
 
-export const GET: import('./$types').RequestHandler = async ({ locals: { entry } }) => {
+export function all() {
 	const posts = traverse<{ entry: string }, Post>(
-		entry,
+		'content/src/posts',
 		({ frontMatter, breadcrumb: [filename] }) => {
 			if (filename.includes('draft')) return;
 
@@ -28,5 +27,19 @@ export const GET: import('./$types').RequestHandler = async ({ locals: { entry }
 		}
 	);
 
-	return json(fillSiblings(posts.reverse(), 'posts/'));
-};
+	return fillSiblings(posts.reverse(), 'posts/');
+}
+
+export function get(slug: string) {
+	const [body] = traverse<{ entry: string }, Post>(
+		'content/src/posts',
+		({ frontMatter, content, breadcrumb: [filename] }) => {
+			const [published, filename_slug] = filename.split('.');
+			if (filename.includes('draft') || filename_slug !== slug) return;
+			const date = { published, updated: frontMatter.date && frontMatter.date.updated };
+			return { slug, ...frontMatter, category: frontMatter.tags[0], date, content };
+		}
+	);
+
+	return body;
+}
