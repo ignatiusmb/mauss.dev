@@ -19,7 +19,7 @@ export function all() {
 		recurse: true,
 	});
 
-	const curated = traverse<typeof config, Curated, Curated>(
+	const curated = traverse<typeof config, Curated>(
 		config,
 		({ frontMatter, breadcrumb: [filename, folder] }) => {
 			if (frontMatter.draft || filename.includes('draft')) return;
@@ -35,7 +35,7 @@ export function all() {
 }
 
 export function get(category: string, slug: string) {
-	const content = compile(
+	const content = compile<{ entry: string }, Curated>(
 		`content/src/curated/${category}/${slug}.md`,
 		({ frontMatter, content }) => {
 			return { slug: `${category}/${slug}`, ...frontMatter, category, content };

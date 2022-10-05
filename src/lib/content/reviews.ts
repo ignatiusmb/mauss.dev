@@ -20,7 +20,7 @@ export function all() {
 		({ frontMatter, breadcrumb: [filename, folder] }) => {
 			if (filename.includes('draft') || frontMatter.draft) return;
 
-			const seen = {} as { first: string; last?: string };
+			const seen = {} as Review['seen'];
 			if (typeof frontMatter.seen.first !== 'string') {
 				seen.first = frontMatter.seen.first[0];
 			} else seen.first = frontMatter.seen.first;
