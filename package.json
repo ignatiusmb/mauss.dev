@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "lint": "npm run lint:es && npm run lint:sv && npm run lint:ts && npm run lint:md",
+    "lint": "svelte-kit sync && npm run lint:es && npm run lint:sv && npm run lint:ts && npm run lint:md",
     "lint:es": "eslint src --ext js,ts,svelte",
     "lint:sv": "svelte-check src --tsconfig tsconfig.json",
     "lint:ts": "tsc --strict --noEmit --skipLibCheck",
