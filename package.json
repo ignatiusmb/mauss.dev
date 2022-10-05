@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build",
+    "build": "svelte-kit sync && vite build",
     "lint": "svelte-kit sync && npm run lint:es && npm run lint:sv && npm run lint:ts && npm run lint:md",
     "lint:es": "eslint src --ext js,ts,svelte",
     "lint:sv": "svelte-check src --tsconfig tsconfig.json",
