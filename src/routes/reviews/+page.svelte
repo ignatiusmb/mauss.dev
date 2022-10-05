@@ -3,7 +3,7 @@
 
 	// import { debounce } from 'mauss';
 	// import { qpm } from 'mauss/web';
-	import { prerendering } from '$app/env';
+	import { prerendering } from '$app/environment';
 	// import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { sift, sieve } from '$lib/utils/search';

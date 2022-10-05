@@ -1,5 +1,5 @@
 <script>
-	import { dev } from '$app/env';
+	import { dev } from '$app/environment';
 	import { page } from '$app/stores';
 </script>
 
@@ -9,9 +9,8 @@
 
 <article>
 	<h1>{$page.status}</h1>
-	<p>{$page.error?.message}</p>
 	{#if dev}
-		<pre>{$page.error?.stack}</pre>
+		<pre>{$page.error?.message}</pre>
 	{/if}
 </article>
 
@@ -27,9 +26,6 @@
 	h1 {
 		font-family: var(--aqua-monospace);
 		font-size: 5em;
-	}
-	p {
-		font-size: 2em;
 	}
 	pre {
 		text-align: left;
