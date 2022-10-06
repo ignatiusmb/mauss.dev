@@ -1,15 +1,13 @@
-name: Quality-CI
+name: QA
 
 on:
   push:
     branches:
       - master
   pull_request:
-    branches:
-      - master
 
 jobs:
-  check-lint:
+  style:
     runs-on: ubuntu-latest
 
     steps:
@@ -17,10 +15,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - name: Lint Check
-        run: npm install && npm run lint
+      - run: npm install && npm run check
 
-  check-style:
+  lint:
     runs-on: ubuntu-latest
 
     steps:
@@ -28,5 +25,4 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - name: Style Check
-        run: npm install && npm run check
+      - run: npm install && npm run lint
