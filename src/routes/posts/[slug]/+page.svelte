@@ -1,23 +1,5 @@
-<script context="module" lang="ts">
-	export const load: import('@sveltejs/kit').Load = async ({ fetch, params: { slug } }) => {
-		const res = await fetch(`/posts/${slug}.json`);
-
-		const absent = { status: 404, error: 'Post not found' };
-		if (!res.ok) return absent;
-		const post = await res.json();
-
-		const list = await fetch('/posts.json');
-		for (const review of await list.json()) {
-			if (review.slug !== post.slug) continue;
-			post.siblings = review.siblings;
-			return { props: { post } };
-		}
-		return absent;
-	};
-</script>
-
 <script lang="ts">
-	export let post: any;
+	export let data: import('./$types').PageData;
 
 	import { Link } from 'syv';
 	import MetaHead from '$lib/pages/MetaHead.svelte';
@@ -25,23 +7,23 @@
 	import TagBadge from '$lib/components/TagBadge.svelte';
 </script>
 
-<MetaHead {post} canonical="posts/{post.slug}" title={post.title} />
+<MetaHead post={data} canonical="posts/{data.slug}" title={data.title} />
 
 <Article
-	{post}
+	post={data}
 	header
-	path="src/posts/{post.date.published}.{post.slug}.md"
-	siblings={post.siblings}
+	path="src/posts/{data.date.published}.{data.slug}.md"
+	siblings={data.siblings}
 >
 	<svelte:fragment slot="header">
 		<small class="tags">
-			{#each post.tags as tag}
+			{#each data.tags as tag}
 				<TagBadge {tag} />
 			{/each}
 		</small>
 	</svelte:fragment>
 
-	{#if post.title.startsWith('Accessibility!')}
+	{#if data.title.startsWith('Accessibility!')}
 		<blockquote>
 			<p>
 				Making the web accessible isn't doing anyone a favor, it's you doing your job properly as a
@@ -69,5 +51,5 @@
 		</section>
 	{/if}
 
-	{@html post.content}
+	{@html data.content}
 </Article>

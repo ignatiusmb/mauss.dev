@@ -1,6 +1,5 @@
 <script lang="ts">
-	type AboutIndex = Record<'index', import('$lib/types').PageMeta>;
-	export let data: AboutIndex, sections: string[];
+	export let data: import('./$types').PageData;
 
 	import { capitalize } from 'mauss/utils';
 	import { Link, WeavedImage } from 'syv';
@@ -9,24 +8,24 @@
 </script>
 
 <MetaHead
-	post={data.index}
+	post={data.article}
 	canonical="about"
 	title="About"
 	description="Get to know Ignatius Bagussuputra from his About page."
 />
 
-<Article post={data.index}>
+<Article post={data.article}>
 	<WeavedImage src="/assets/profile/mauss.jpeg" alt="Mauss Profile" />
 
 	<section>
-		{#each sections as section}
+		{#each data.sections as section}
 			<Link href="/about/{section}/">
 				<h2>{capitalize(section)}</h2>
 			</Link>
 		{/each}
 	</section>
 
-	{@html data.index.content}
+	{@html data.article.content}
 </Article>
 
 <style>

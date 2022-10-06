@@ -1,5 +1,6 @@
 <script lang="ts">
-	export let data: import('$lib/types').Curated[];
+	export let data: import('./$types').PageData;
+
 	import { sift, sieve } from '$lib/utils/search';
 	import { cSlice as store } from '$lib/utils/stores';
 
@@ -12,7 +13,7 @@
 	let query: string;
 	let filters = { categories: [], tags: [], sort_by: 'updated' };
 
-	$: filtered = sieve(filters, data);
+	$: filtered = sieve(filters, data.list);
 	$: items = sift(query, filtered);
 </script>
 

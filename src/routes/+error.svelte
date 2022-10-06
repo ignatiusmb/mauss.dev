@@ -1,26 +1,16 @@
-<script context="module">
-	/** @type {import('@sveltejs/kit').Load} */
-	export const load = (props) => ({ props });
-</script>
-
 <script>
-	/** @type {number} */
-	export let status;
-	/** @type {Error} */
-	export let error;
-
 	import { dev } from '$app/env';
+	import { page } from '$app/stores';
 </script>
 
 <svelte:head>
-	<title>{status}</title>
+	<title>{$page.status}</title>
 </svelte:head>
 
 <article>
-	<h1>{status}</h1>
-	<p>{error.message}</p>
+	<h1>{$page.status}</h1>
 	{#if dev}
-		<pre>{error.stack}</pre>
+		<pre>{$page.error?.message}</pre>
 	{/if}
 </article>
 
@@ -36,9 +26,6 @@
 	h1 {
 		font-family: var(--aqua-monospace);
 		font-size: 5em;
-	}
-	p {
-		font-size: 2em;
 	}
 	pre {
 		text-align: left;

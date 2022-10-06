@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let post: import('$lib/types').PageMeta;
+	export let data: import('./$types').PageData;
 
 	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import Article from '$lib/pages/Article.svelte';
@@ -11,5 +11,5 @@
 <Article>
 	<Disclaimer link />
 
-	{@html post.content}
+	{@html data.content}
 </Article>

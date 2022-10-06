@@ -1,4 +1,3 @@
-import type { RequestHandler } from '@sveltejs/kit';
 import type { Curated, Post, Review } from '$lib/types';
 import RSS, { type RSSItem } from '$lib/utils/rss';
 import { forge, traverse } from 'marqua';
@@ -48,7 +47,5 @@ const channel = {
 	description: 'Developed by Alchemauss',
 };
 
-export const GET: RequestHandler = async () => ({
-	headers: { 'Content-Type': 'application/xml' },
-	body: RSS(channel, items),
-});
+export const GET: import('./$types').RequestHandler = async () =>
+	new Response(RSS(channel, items), { headers: { 'Content-Type': 'application/xml' } });

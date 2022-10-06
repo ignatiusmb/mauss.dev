@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build",
-    "lint": "npm run lint:es && npm run lint:sv && npm run lint:ts && npm run lint:md",
+    "build": "svelte-kit sync && vite build",
+    "lint": "svelte-kit sync && npm run lint:es && npm run lint:sv && npm run lint:ts && npm run lint:md",
     "lint:es": "eslint src --ext js,ts,svelte",
     "lint:sv": "svelte-check src --tsconfig tsconfig.json",
     "lint:ts": "tsc --strict --noEmit --skipLibCheck",
@@ -35,7 +35,7 @@
     "svelte": "^3.32.1",
     "svelte-check": "^2.0.0",
     "svelte-preprocess": "^4.6.5",
-    "syv": "^0.0.13",
+    "syv": "^0.0.14",
     "typescript": "^4.1.3",
     "vite": "^3.0.3"
   }

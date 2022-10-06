@@ -1,16 +1,5 @@
-<script context="module" lang="ts">
-	import { compare } from 'mauss';
-	export const load: import('@sveltejs/kit').Load = async ({ fetch, params: { category } }) => {
-		const { data: list } = await fetch('/curated/__data.json').then((r) => r.json());
-		const data = list
-			.filter((p: any) => p.category === category)
-			.sort((x: any, y: any) => compare.date(x.date.updated, y.date.updated));
-		return { props: { category, data } };
-	};
-</script>
-
 <script lang="ts">
-	export let category: string, data: any;
+	export let data: import('./$types').PageData;
 
 	import { scale } from 'svelte/transition';
 	import { flip } from 'svelte/animate';
@@ -19,7 +8,11 @@
 	import MetaHead from '$lib/pages/MetaHead.svelte';
 </script>
 
-<MetaHead canonical="curated" title="Curated" description="Curated content for {category} stuff.">
+<MetaHead
+	canonical="curated"
+	title="Curated"
+	description="Curated content for {data.category} stuff."
+>
 	<link rel="alternate" href="/rss.xml" type="application/rss+xml" />
 </MetaHead>
 
@@ -28,7 +21,7 @@
 </header>
 
 <main>
-	{#each data as { slug, title } (slug)}
+	{#each data.curated as { slug, title } (slug)}
 		<section animate:flip transition:scale|local>
 			<small>{title}</small>
 			<ButtonLink href="/curated/{slug}/">read</ButtonLink>
