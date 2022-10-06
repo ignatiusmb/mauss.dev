@@ -16,7 +16,7 @@
   },
   "prettier": "mauss/prettier.json",
   "devDependencies": {
-    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/adapter-vercel": "next",
     "@sveltejs/kit": "next",
     "@typescript-eslint/eslint-plugin": "^5.12.0",
     "@typescript-eslint/parser": "^5.12.0",
