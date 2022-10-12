@@ -29,7 +29,7 @@
 				<ul>
 					{#each post.toc as { id, title }}
 						<li style="color: #f48fb1">
-							<Link href="#{id}" inherit>{title}</Link>
+							<Link href="#{id}">{title}</Link>
 						</li>
 					{/each}
 				</ul>
