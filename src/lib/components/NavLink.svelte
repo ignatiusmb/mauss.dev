@@ -6,7 +6,7 @@
 	$: isCurrent = (/** @type {string} */ p) => (path === p ? 'page' : undefined);
 </script>
 
-<a sveltekit:prefetch aria-current={isCurrent(to)} href="/{to}" class:hover>
+<a aria-current={isCurrent(to)} href="/{to}" class:hover>
 	<slot />
 </a>
 
