@@ -1,10 +1,10 @@
 <script lang="ts">
 	export let data: import('./$types').PageData;
 
-	import { capitalize } from 'mauss/utils';
-	import { Link, WeavedImage } from 'syv';
+	import { WeavedImage } from 'syv';
 	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import Article from '$lib/pages/Article.svelte';
+	import Link from '$lib/components/Link.svelte';
 </script>
 
 <MetaHead
@@ -20,7 +20,7 @@
 	<section>
 		{#each data.sections as section}
 			<Link href="/about/{section}/">
-				<h2>{capitalize(section)}</h2>
+				<h2>{section}</h2>
 			</Link>
 		{/each}
 	</section>
@@ -29,19 +29,20 @@
 </Article>
 
 <style>
-	section:first-of-type {
+	section {
 		display: grid;
+		gap: 1rem;
 		grid-template-columns: repeat(3, 1fr);
 		grid-auto-flow: row;
-		border: 0.1em solid var(--fg-surface);
+	}
+	section :global(a) {
+		padding: 0 0.5em;
+		border: 2px solid var(--fg-surface);
 		border-radius: var(--b-radius);
 	}
-	section:first-of-type :global(a) {
-		padding: 0 0.5em;
-		border: 0.1em solid var(--fg-surface);
-	}
-	section:first-of-type h2 {
+	section h2 {
 		margin-top: 0;
+		text-transform: capitalize;
 		text-align: center;
 	}
 </style>

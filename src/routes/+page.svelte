@@ -10,11 +10,12 @@
 		reviews: { heading: '⭐ Recent Reviews', desc: "Contents I've been reviewing" },
 	};
 
-	import { Link, Image } from 'syv';
+	import { Image } from 'syv';
 	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import Article from '$lib/pages/Article.svelte';
-	import Quote from '$lib/components/Quote.svelte';
+	import Link from '$lib/components/Link.svelte';
 	import Navigation from '$lib/components/Navigation.svelte';
+	import Quote from '$lib/components/Quote.svelte';
 	import RotatingBorder from '$lib/components/RotatingBorder.svelte';
 
 	let scrolled = 0;
@@ -28,10 +29,10 @@
 
 <Article>
 	<header slot="header">
-		<Link href="/about/">
+		<a href="/about/">
 			<RotatingBorder />
 			<Image src="/assets/profile/mauss.jpeg" alt="Mauss Profile" ratio={1} />
-		</Link>
+		</a>
 		<h2>Ignatius Bagussuputra</h2>
 		<span>Developer on Weekdays, Avid Writer on Weekends</span>
 		<h3>Software Alchemist</h3>

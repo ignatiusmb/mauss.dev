@@ -5,9 +5,10 @@
 	const sections = ['about', 'curated', 'posts', 'reviews', 'uses'];
 
 	import { Feather } from 'syv/icons';
-	import { Link, ThemeSwitcher } from 'syv';
-	import NavLink from './NavLink.svelte';
-	import NavGrid from './NavGrid.svelte';
+	import { ThemeSwitcher } from 'syv';
+	import Link from '$lib/components/Link.svelte';
+	import NavGrid from '$lib/components/NavGrid.svelte';
+	import NavLink from '$lib/components/NavLink.svelte';
 
 	let innerWidth: number;
 	let opened = false;
@@ -38,10 +39,10 @@
 		</NavGrid>
 	{/if}
 
-	<Link inherit href="/rss.xml" label="Get RSS">
+	<Link href="/rss.xml" label="Get RSS">
 		<Feather.Rss />
 	</Link>
-	<Link inherit href="/help/" label="See help page">
+	<Link href="/help/" label="See help page">
 		<Feather.HelpCircle />
 	</Link>
 	<ThemeSwitcher let:current>

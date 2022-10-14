@@ -1,6 +1,6 @@
 <script>
 	import { Feather } from 'syv/icons';
-	import { Link } from 'syv';
+	import Link from '$lib/components/Link.svelte';
 </script>
 
 <footer>

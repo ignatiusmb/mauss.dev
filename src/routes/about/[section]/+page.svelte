@@ -4,9 +4,10 @@
 	import { capitalize } from 'mauss/utils';
 	import { page } from '$app/stores';
 
-	import { Link, WeavedImage } from 'syv';
+	import { WeavedImage } from 'syv';
 	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import Article from '$lib/pages/Article.svelte';
+	import Link from '$lib/components/Link.svelte';
 </script>
 
 <MetaHead
@@ -29,11 +30,16 @@
 </Article>
 
 <style>
-	section:first-of-type {
-		border: 0.2em solid var(--fg-surface);
+	section {
+		display: grid;
+		gap: 1rem;
+		grid-auto-flow: row;
+	}
+	section :global(a) {
+		border: 2px solid var(--fg-surface);
 		border-radius: var(--b-radius);
 	}
-	section:first-of-type h2 {
+	section h2 {
 		margin-top: 0;
 		text-align: center;
 	}

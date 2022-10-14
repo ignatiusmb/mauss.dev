@@ -1,18 +1,12 @@
 <script lang="ts">
 	export let data: import('./$types').PageData;
 
-	import { Link } from 'syv';
 	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import Article from '$lib/pages/Article.svelte';
 
+	import Link from '$lib/components/Link.svelte';
 	import ReviewBanner from '$lib/components/ReviewBanner.svelte';
-	import Disclaimer from '$lib/components/Disclaimer.svelte';
 	import Spoilers from '$lib/components/SpoilerSection.svelte';
-
-	const links = new Map([
-		['mal', 'MyAnimeList'],
-		['tmdb', 'TheMovieDB'],
-	]);
 
 	$: ({ title, spoilers, siblings } = data);
 </script>
@@ -28,19 +22,26 @@
 		<ReviewBanner post={data} />
 
 		{#if data.link}
+			{@const links = new Map([
+				['mal', 'MyAnimeList'],
+				['tmdb', 'TheMovieDB'],
+			])}
+
 			<small>
 				<span>[</span>
 				{#each Object.entries(data.link) as [key, href]}
-					<span>
-						<Link {href}>{links.get(key) || key.toUpperCase()}</Link>
-					</span>
+					<Link {href}>{links.get(key) || key.toUpperCase()}</Link>
 				{/each}
 				<span>]</span>
 			</small>
 		{/if}
 	</div>
 
-	<Disclaimer link />
+	<section class="info-box warning">
+		<Link href="/disclaimer/" style="danger">
+			<h2>READ DISCLAIMER</h2>
+		</Link>
+	</section>
 
 	{@html data.content}
 
@@ -54,6 +55,13 @@
 </Article>
 
 <style>
+	section {
+		text-align: center;
+	}
+	section h2 {
+		margin-top: 0;
+		color: inherit;
+	}
 	div small {
 		justify-content: center;
 	}

@@ -5,14 +5,4 @@ declare module '@ignatiusmb/aqua/lib/aqua.cbs.js';
 declare module 'markdown-it-texmath';
 declare module 'katex';
 
-declare namespace App {
-	interface Locals {
-		entry: string;
-	}
-
-	// interface Platform {}
-
-	// interface Session {}
-
-	// interface Stuff {}
-}
+declare namespace App {}

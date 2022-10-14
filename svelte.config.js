@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-vercel';
 import preprocess from 'svelte-preprocess';
 import autoprefixer from 'autoprefixer';
 
@@ -9,9 +9,6 @@ const config = {
 	}),
 	kit: {
 		adapter: adapter(),
-		prerender: {
-			default: true,
-		},
 	},
 };
 

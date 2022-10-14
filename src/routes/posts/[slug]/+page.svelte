@@ -1,9 +1,9 @@
 <script lang="ts">
 	export let data: import('./$types').PageData;
 
-	import { Link } from 'syv';
 	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import Article from '$lib/pages/Article.svelte';
+	import Link from '$lib/components/Link.svelte';
 	import TagBadge from '$lib/components/TagBadge.svelte';
 </script>
 

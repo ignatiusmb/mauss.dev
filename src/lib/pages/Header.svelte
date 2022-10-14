@@ -5,7 +5,7 @@
 
 	import { dt } from 'mauss/utils';
 	import { Feather } from 'syv/icons';
-	import { Link } from 'syv';
+	import Link from '$lib/components/Link.svelte';
 	import TextIcon from '$lib/components/TextIcon.svelte';
 
 	$: ({ author = {}, date = {} } = post);

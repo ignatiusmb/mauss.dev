@@ -2,8 +2,10 @@
 
 <script lang="ts">
 	export let post: import('$lib/types').Review;
-	import { ButtonLink, Image } from 'syv';
-	import Verdict from './Verdict.svelte';
+
+	import { Image } from 'syv';
+	import Link from '$lib/components/Link.svelte';
+	import Verdict from '$lib/components/Verdict.svelte';
 
 	import { capitalize } from 'mauss/utils';
 	const disabled = !post.rating || post.verdict === 'pending';
@@ -27,9 +29,9 @@
 			<span>⭐ {post.rating || '~'}</span>
 		</small>
 		<Verdict verdict={post.verdict} />
-		<ButtonLink href="/reviews/{post.slug}/" {disabled}>
-			{disabled ? 'Work-in-Progress' : 'read'}
-		</ButtonLink>
+		<Link href="/reviews/{post.slug}/" style="primary" {disabled}>
+			{disabled ? 'Work-in-Progress' : 'READ'}
+		</Link>
 	</aside>
 </section>
 

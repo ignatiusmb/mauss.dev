@@ -4,8 +4,8 @@
 	import { scale } from 'svelte/transition';
 	import { flip } from 'svelte/animate';
 
-	import { ButtonLink } from 'syv';
 	import MetaHead from '$lib/pages/MetaHead.svelte';
+	import Link from '$lib/components/Link.svelte';
 </script>
 
 <MetaHead
@@ -24,7 +24,7 @@
 	{#each data.curated as { slug, title } (slug)}
 		<section animate:flip transition:scale|local>
 			<small>{title}</small>
-			<ButtonLink href="/curated/{slug}/">read</ButtonLink>
+			<Link href="/curated/{slug}/" style="primary">READ</Link>
 		</section>
 	{/each}
 </main>
