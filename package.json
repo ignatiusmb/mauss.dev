@@ -6,13 +6,13 @@
   "scripts": {
     "dev": "vite dev",
     "build": "svelte-kit sync && vite build",
-    "lint": "svelte-kit sync && npm run lint:es && npm run lint:sv && npm run lint:ts && npm run lint:md",
-    "lint:es": "eslint src --ext js,ts,svelte",
-    "lint:sv": "svelte-check src --tsconfig tsconfig.json",
-    "lint:ts": "tsc --strict --noEmit --skipLibCheck",
-    "lint:md": "markdownlint content/**/*.md",
-    "check": "prettier -c src",
-    "format": "prettier -w src"
+    "format": "prettier -w src",
+    "check": "svelte-kit sync && pnpm check:style && pnpm check:lint && pnpm check:svelte && pnpm check:types && pnpm check:content",
+    "check:style": "prettier -c src",
+    "check:lint": "eslint src --ext js,ts,svelte",
+    "check:svelte": "svelte-check src --tsconfig tsconfig.json",
+    "check:types": "tsc --strict --noEmit --skipLibCheck",
+    "check:content": "markdownlint content/**/*.md"
   },
   "prettier": "mauss/prettier.json",
   "devDependencies": {

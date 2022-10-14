@@ -20,10 +20,10 @@ git clone --recurse-submodules <url>
 git submodule update --init
 
 # 3. Install the dependencies and run the development server
-npm install
+pnpm install
 
 # 4. Run the development server
-npm run dev
+pnpm dev
 ```
 
 ### Content
