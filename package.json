@@ -1,6 +1,4 @@
 {
-  "name": "mauss.dev",
-  "version": "3.0.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -14,6 +12,7 @@
     "check:types": "tsc --strict --noEmit --skipLibCheck",
     "check:content": "markdownlint content/**/*.md"
   },
+  "packageManager": "pnpm@7.13.4",
   "prettier": "mauss/prettier.json",
   "devDependencies": {
     "@sveltejs/adapter-vercel": "next",
