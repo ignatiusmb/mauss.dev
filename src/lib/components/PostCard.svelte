@@ -2,7 +2,8 @@
 	export let post: import('$lib/types').Post;
 
 	import { dt } from 'mauss/utils';
-	import { Image, ButtonLink } from 'syv';
+	import { Image } from 'syv';
+	import Link from '$lib/components/Link.svelte';
 
 	const { published, updated } = post.date;
 	const date = (updated !== published && updated) || published;
@@ -26,7 +27,7 @@
 			<span>{dt.format(date)('DD MMMM YYYY')}</span>
 		</small>
 		<small>{post.read_time} min read</small>
-		<ButtonLink href="/posts/{post.slug}/">read</ButtonLink>
+		<Link href="/posts/{post.slug}/" style="primary">READ</Link>
 	</aside>
 </section>
 
@@ -69,5 +70,10 @@
 	}
 	aside :global(:last-child) {
 		justify-self: end;
+	}
+
+	/* TODO: fix in syv */
+	small + :global(span a) {
+		color: inherit;
 	}
 </style>

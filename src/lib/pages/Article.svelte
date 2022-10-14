@@ -7,14 +7,15 @@
 	export let siblings: SiblingsProp = null;
 
 	import { Feather } from 'syv/icons';
-	import { Link, ProgressBar } from 'syv';
+	import { ProgressBar } from 'syv';
 	import Header from './Header.svelte';
-	import TextIcon from '$lib/components/TextIcon.svelte';
+	import Link from '$lib/components/Link.svelte';
 	import Siblings from '$lib/components/Siblings.svelte';
+	import TextIcon from '$lib/components/TextIcon.svelte';
 </script>
 
 {#if header}
-	<ProgressBar />
+	<ProgressBar height="4px" />
 {/if}
 
 <main>
@@ -26,9 +27,9 @@
 		{#if post && post.toc.length}
 			<section id="objective" class="info-box">
 				<h3>Table of Contents</h3>
-				<ul>
+				<ul style="color: #f48fb1">
 					{#each post.toc as { id, title }}
-						<li style="color: #f48fb1">
+						<li style="color: inherit;">
 							<Link href="#{id}">{title}</Link>
 						</li>
 					{/each}

@@ -1,11 +1,11 @@
 <script lang="ts">
 	export let post: import('$lib/types').Curated;
-	import { ButtonLink } from 'syv';
+	import Link from '$lib/components/Link.svelte';
 </script>
 
 <section>
 	<small>{post.title}</small>
-	<ButtonLink href="/curated/{post.slug}/">read</ButtonLink>
+	<Link href="/curated/{post.slug}/" style="primary">READ</Link>
 </section>
 
 <style>
