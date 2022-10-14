@@ -4,14 +4,9 @@
 	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import Article from '$lib/pages/Article.svelte';
 
+	import Link from '$lib/components/Link.svelte';
 	import ReviewBanner from '$lib/components/ReviewBanner.svelte';
 	import Spoilers from '$lib/components/SpoilerSection.svelte';
-	import Link from '$lib/components/Link.svelte';
-
-	const links = new Map([
-		['mal', 'MyAnimeList'],
-		['tmdb', 'TheMovieDB'],
-	]);
 
 	$: ({ title, spoilers, siblings } = data);
 </script>
@@ -27,6 +22,11 @@
 		<ReviewBanner post={data} />
 
 		{#if data.link}
+			{@const links = new Map([
+				['mal', 'MyAnimeList'],
+				['tmdb', 'TheMovieDB'],
+			])}
+
 			<small>
 				<span>[</span>
 				{#each Object.entries(data.link) as [key, href]}

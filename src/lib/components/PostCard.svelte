@@ -71,9 +71,4 @@
 	aside :global(:last-child) {
 		justify-self: end;
 	}
-
-	/* TODO: fix in syv */
-	small + :global(span a) {
-		color: inherit;
-	}
 </style>
