@@ -12,17 +12,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - uses: pnpm/action-setup@v2
-      - id: pnpm
-        run: echo "cache=$(pnpm store path)" >> $GITHUB_ENV
-      - uses: actions/cache@v3
-        with:
-          path: ${{ env.cache }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: ${{ runner.os }}-pnpm-store-
+          cache: pnpm
 
       - run: pnpm install
       - run: pnpm check
