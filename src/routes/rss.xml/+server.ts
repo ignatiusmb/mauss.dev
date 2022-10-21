@@ -5,7 +5,7 @@ import { compare } from 'mauss';
 
 const items = traverse(
 	{
-		entry: 'content/src',
+		entry: 'content/sites/dev.mauss',
 		recurse: true,
 		sort: (x, y) => compare.date(x.date, y.date) || compare.string(x.title, y.title),
 	},

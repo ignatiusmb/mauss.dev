@@ -6,7 +6,7 @@ import { fillSiblings } from '$lib/utils/article';
 
 export function all() {
 	const posts = traverse<{ entry: string }, Post>(
-		'content/src/posts',
+		'content/sites/dev.mauss/posts',
 		({ frontMatter, breadcrumb: [filename] }) => {
 			if (filename.includes('draft')) return;
 
@@ -32,7 +32,7 @@ export function all() {
 
 export function get(slug: string) {
 	const [body] = traverse<{ entry: string }, Post>(
-		'content/src/posts',
+		'content/sites/dev.mauss/posts',
 		({ frontMatter, content, breadcrumb: [filename] }) => {
 			const [published, filename_slug] = filename.split('.');
 			if (filename.includes('draft') || filename_slug !== slug) return;

@@ -4,7 +4,7 @@ type About = { slug: string; title: string; date: { updated: string } };
 
 export const load: import('./$types').PageServerLoad = async () => {
 	const parsed = traverse<{ entry: string }, About>(
-		'content/src/about',
+		'content/sites/dev.mauss/about',
 		({ frontMatter, content, breadcrumb: [filename] }) => {
 			const [slug] = filename.split('.');
 			return { ...frontMatter, slug, content };
