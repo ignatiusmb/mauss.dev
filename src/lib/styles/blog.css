@@ -13,9 +13,6 @@ var a {
 	color: white;
 }
 
-.dark section.info-box[id] {
-	filter: invert() hue-rotate(180deg);
-}
 section.info-box {
 	padding: 1rem 1.5rem;
 	border-radius: 0.25em;
@@ -23,6 +20,9 @@ section.info-box {
 	margin: 2rem 0;
 	font-family: 'Karla', sans-serif;
 	transition: var(--t-duration) var(--t-function);
+}
+section.info-box[id] {
+	filter: invert() hue-rotate(180deg);
 }
 section.info-box:not([id]) {
 	margin-left: -0.25em;
@@ -107,12 +107,8 @@ section.info-box.tip code {
 section.info-box[data-info='important'],
 section.info-box.important {
 	border-left-color: rgba(226, 177, 0, 1);
-	background: rgba(254, 239, 179, 0.5);
-	color: rgba(226, 177, 0, 1);
-}
-.dark section.info-box[data-info='important'],
-.dark section.info-box.important {
 	background: rgba(254, 239, 179, 0.2);
+	color: rgba(226, 177, 0, 1);
 }
 section.info-box[data-info='important'] var,
 section.info-box[data-info='important'] code,

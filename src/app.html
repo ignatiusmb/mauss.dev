@@ -5,22 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="theme-color" content="#ffffff">
-	<script>
-		try {
-			const html = document.querySelector('html');
-			const preferDark = window.matchMedia('(prefers-color-scheme: dark)');
-			const initial = preferDark.matches ? 'dark' : 'light';
-			if (!localStorage.theme) localStorage.theme = initial;
-			html.classList.add(localStorage.theme);
-			preferDark.addEventListener('change', function (event) {
-				const theme = event.matches ? 'dark' : 'light';
-				html.classList.add(theme), localStorage.theme = theme;
-				html.classList.remove(event.matches ? 'light' : 'dark');
-			});
-		} catch (error) {}
+	<meta name="theme-color" content="#181818">
 
-	</script>
 	<script defer src="https://static.cloudflareinsights.com/beacon.min.js"
 		data-cf-beacon='{"token": "402cd91137d14890a1117569bda0ee41"}'></script>
 

@@ -5,7 +5,6 @@
 	const sections = ['about', 'curated', 'posts', 'reviews', 'uses'];
 
 	import { Feather } from 'syv/icons';
-	import { ThemeSwitcher } from 'syv';
 	import Link from '$lib/components/Link.svelte';
 	import NavGrid from '$lib/components/NavGrid.svelte';
 	import NavLink from '$lib/components/NavLink.svelte';
@@ -45,19 +44,12 @@
 	<Link href="/help/" label="See help page">
 		<Feather.HelpCircle />
 	</Link>
-	<ThemeSwitcher let:current>
-		{#if current === 'light'}
-			<Feather.Sun />
-		{:else if current === 'dark'}
-			<Feather.Moon />
-		{/if}
-	</ThemeSwitcher>
 </nav>
 
 <style>
-	:global(html.dark) nav :global(a),
-	:global(html.dark) nav :global(a:focus),
-	:global(html.dark) nav :global(a:hover) {
+	nav :global(a),
+	nav :global(a:focus),
+	nav :global(a:hover) {
 		color: var(--fg-surface);
 	}
 
@@ -90,10 +82,6 @@
 	nav > :global(:nth-last-child(2)) {
 		margin-left: 1em;
 		margin-right: 1em;
-	}
-
-	nav > :global(.syv-core-theme-switcher path) {
-		fill: none;
 	}
 
 	@media only screen and (max-width: 599px) {
