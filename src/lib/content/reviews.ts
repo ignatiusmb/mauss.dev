@@ -5,7 +5,7 @@ import { contentParser, fillSiblings } from '$lib/utils/article';
 
 export function all() {
 	const config = forge.traverse({
-		entry: 'content/src/reviews',
+		entry: 'content/sites/dev.mauss/reviews',
 		recurse: true,
 		sort(x: Review, y: Review) {
 			const xd = x.date.updated || x.date.published;
@@ -46,7 +46,7 @@ export function all() {
 
 export function get(category: string, slug: string) {
 	const body = compile<{ entry: string }, RawReview, Review>(
-		`content/src/reviews/${category}/${slug}.md`,
+		`content/sites/dev.mauss/reviews/${category}/${slug}.md`,
 		({ frontMatter, content }) => {
 			const review = {
 				slug: `${category}/${slug}`,

@@ -5,7 +5,7 @@ import { exists } from 'mauss/guards';
 export function all() {
 	const body: Array<Quote> = [];
 	traverse(
-		{ entry: 'content/src/quotes', minimal: true },
+		{ entry: 'content/sites/dev.mauss/quotes', minimal: true },
 		({ content, breadcrumb: [filename] }) => {
 			const author = filename.slice(0, -3).replace(/-/g, ' ');
 			for (const line of content.split(/\r?\n/).filter(exists)) {

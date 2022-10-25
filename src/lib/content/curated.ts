@@ -15,7 +15,7 @@ export function init() {
 
 export function all() {
 	const config = forge.traverse({
-		entry: 'content/src/curated',
+		entry: 'content/sites/dev.mauss/curated',
 		recurse: true,
 	});
 
@@ -36,7 +36,7 @@ export function all() {
 
 export function get(category: string, slug: string) {
 	const content = compile<{ entry: string }, Curated>(
-		`content/src/curated/${category}/${slug}.md`,
+		`content/sites/dev.mauss/curated/${category}/${slug}.md`,
 		({ frontMatter, content }) => {
 			return { slug: `${category}/${slug}`, ...frontMatter, category, content };
 		}
