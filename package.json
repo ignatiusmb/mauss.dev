@@ -12,7 +12,7 @@
     "check:types": "tsc --strict --noEmit --skipLibCheck",
     "check:content": "markdownlint content/**/*.md"
   },
-  "packageManager": "pnpm@7.13.5",
+  "packageManager": "pnpm@7.14.0",
   "prettier": "mauss/prettier.json",
   "devDependencies": {
     "@sveltejs/adapter-vercel": "next",
