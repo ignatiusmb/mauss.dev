@@ -8,18 +8,7 @@
 	--t-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-html,
-html.light {
-	--bg-inverse: rgba(33, 33, 33, 1);
-
-	--bg-overlay: rgba(238, 238, 238, 1);
-	--bg-surface: rgba(255, 255, 255, 1);
-	--bg-base: rgba(255, 255, 255, 1);
-
-	--fg-overlay: rgba(0, 0, 0, 0.6);
-	--fg-surface: rgba(0, 0, 0, 0.9);
-}
-html.dark {
+html {
 	--bg-inverse: rgba(255, 255, 255, 0.8);
 
 	/* --bg-cover: rgba(56, 59, 64, 1); */
@@ -40,15 +29,8 @@ html body {
 }
 
 a {
-	color: #5183f5;
-}
-a:hover {
-	color: #2161f2;
-}
-
-html.dark a {
 	color: #6ab0f3;
 }
-html.dark a:hover {
+a:hover {
 	color: #5183f5;
 }
