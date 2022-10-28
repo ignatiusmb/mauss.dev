@@ -5,7 +5,7 @@
     "dev": "vite dev",
     "build": "svelte-kit sync && vite build",
     "format": "prettier -w src",
-    "check": "svelte-kit sync && pnpm check:style && pnpm check:lint && pnpm check:svelte && pnpm check:types && pnpm check:content",
+    "check": "svelte-kit sync && pnpm check:style && pnpm check:lint && pnpm check:svelte && pnpm check:types",
     "check:style": "prettier -c src",
     "check:lint": "eslint src --ext js,ts,svelte",
     "check:svelte": "svelte-check src --tsconfig tsconfig.json",
