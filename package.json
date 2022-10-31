@@ -4,26 +4,26 @@
   "scripts": {
     "dev": "vite dev",
     "build": "svelte-kit sync && vite build",
-    "format": "prettier -w src",
-    "check": "svelte-kit sync && pnpm check:style && pnpm check:lint && pnpm check:svelte && pnpm check:types && pnpm check:content",
-    "check:style": "prettier -c src",
+    "format": "prettier --write src",
+    "check": "svelte-kit sync && pnpm check:style && pnpm check:lint && pnpm check:svelte && pnpm check:types",
+    "check:style": "prettier --check src",
     "check:lint": "eslint src --ext js,ts,svelte",
-    "check:svelte": "svelte-check src --tsconfig tsconfig.json",
+    "check:svelte": "svelte-check src --tsconfig ./tsconfig.json",
     "check:types": "tsc --strict --noEmit --skipLibCheck",
-    "check:content": "markdownlint content/**/*.md"
+    "check:content": "cd content && markdownlint sites/**/*.md"
   },
   "packageManager": "pnpm@7.14.0",
   "prettier": "mauss/prettier.json",
   "devDependencies": {
     "@sveltejs/adapter-vercel": "next",
     "@sveltejs/kit": "next",
-    "@typescript-eslint/eslint-plugin": "^5.40.1",
-    "@typescript-eslint/parser": "^5.40.1",
-    "autoprefixer": "^10.4.12",
-    "eslint": "^8.25.0",
+    "@typescript-eslint/eslint-plugin": "^5.41.0",
+    "@typescript-eslint/parser": "^5.41.0",
+    "autoprefixer": "^10.4.13",
+    "eslint": "^8.26.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-svelte3": "^4.0.0",
-    "katex": "^0.16.2",
+    "katex": "^0.16.3",
     "markdown-it-texmath": "^1.0.0",
     "markdownlint-cli": "^0.32.2",
     "marqua": "^0.3.1",
@@ -36,6 +36,6 @@
     "svelte-preprocess": "^4.10.7",
     "syv": "^0.0.15",
     "typescript": "^4.8.4",
-    "vite": "^3.1.8"
+    "vite": "^3.2.1"
   }
 }
