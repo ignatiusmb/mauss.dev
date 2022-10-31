@@ -4,11 +4,11 @@
   "scripts": {
     "dev": "vite dev",
     "build": "svelte-kit sync && vite build",
-    "format": "prettier -w src",
+    "format": "prettier --write src",
     "check": "svelte-kit sync && pnpm check:style && pnpm check:lint && pnpm check:svelte && pnpm check:types",
-    "check:style": "prettier -c src",
+    "check:style": "prettier --check src",
     "check:lint": "eslint src --ext js,ts,svelte",
-    "check:svelte": "svelte-check src --tsconfig tsconfig.json",
+    "check:svelte": "svelte-check src --tsconfig ./tsconfig.json",
     "check:types": "tsc --strict --noEmit --skipLibCheck",
     "check:content": "cd content && markdownlint sites/**/*.md"
   },
