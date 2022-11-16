@@ -17,25 +17,25 @@
   "devDependencies": {
     "@sveltejs/adapter-vercel": "next",
     "@sveltejs/kit": "next",
-    "@typescript-eslint/eslint-plugin": "^5.41.0",
-    "@typescript-eslint/parser": "^5.41.0",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/parser": "^5.43.0",
     "autoprefixer": "^10.4.13",
-    "eslint": "^8.26.0",
+    "eslint": "^8.27.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-svelte3": "^4.0.0",
     "katex": "^0.16.3",
     "markdown-it-texmath": "^1.0.0",
     "markdownlint-cli": "^0.32.2",
     "marqua": "^0.3.1",
-    "mauss": "^0.3.3",
-    "postcss": "^8.4.18",
+    "mauss": "^0.4.1",
+    "postcss": "^8.4.19",
     "prettier": "^2.7.1",
     "prettier-plugin-svelte": "^2.8.0",
-    "svelte": "^3.52.0",
+    "svelte": "^3.53.1",
     "svelte-check": "^2.9.2",
     "svelte-preprocess": "^4.10.7",
     "syv": "^0.0.15",
-    "typescript": "^4.8.4",
-    "vite": "^3.2.1"
+    "typescript": "^4.9.3",
+    "vite": "^3.2.4"
   }
 }

@@ -1,6 +1,6 @@
 import type { Entries } from 'mauss/typings';
 import type { Child, SieveDict } from '../types';
-import { comparator, compare, regexp } from 'mauss';
+import { compare, regexp } from 'mauss';
 
 const IGNORED = /[(){}[\]<>"']/g;
 function normalize(str: string) {
@@ -81,7 +81,7 @@ function sortCompare<T extends Record<string, any>>(x: T, y: T): number {
 
 	if (x.author && y.author) return compare.string(x.author, y.author);
 
-	return comparator(x, y);
+	return compare.inspect(x, y);
 }
 
 const sortBy: Record<string, (x: any, y: any) => number> = {
