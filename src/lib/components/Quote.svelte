@@ -15,7 +15,7 @@
 		{#if from}
 			<p class="from">{from}</p>
 		{/if}
-		<small
+		<button
 			on:click={() => {
 				let newIndex = quoteIndex;
 				do newIndex = random.int(quotes.length);
@@ -24,7 +24,7 @@
 			}}
 		>
 			<GradientBorder>&mdash;{author}</GradientBorder>
-		</small>
+		</button>
 	</blockquote>
 {/key}
 
@@ -41,8 +41,7 @@
 		text-align: justify;
 		font-size: 1.25rem;
 	}
-	blockquote small {
-		cursor: pointer;
+	blockquote button {
 		user-select: none;
 		position: absolute;
 		right: -1.5em;
