@@ -2,9 +2,9 @@
 
 Personal website, handcrafted with ❤️ using these tools
 
-|              Framework              |                 Library                  |             Style              |                     Parser                     |
-| :---------------------------------: | :--------------------------------------: | :----------------------------: | :--------------------------------------------: |
-| [SvelteKit](https://kit.svelte.dev) | [Syv](https://github.com/ignatiusmb/syv) | [Aqua](https://aqua.mauss.dev) | [Marqua](https://github.com/ignatiusmb/marqua) |
+|              Framework              |                 Library                  |               Parser               |
+| :---------------------------------: | :--------------------------------------: | :--------------------------------: |
+| [SvelteKit](https://kit.svelte.dev) | [Syv](https://github.com/ignatiusmb/syv) | [Marqua](https://marqua.mauss.dev) |
 
 ## Contributing
 

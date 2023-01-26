@@ -1,23 +1,15 @@
 import type { RawReview, Review } from '$lib/types';
-import { compile, forge, marker, traverse } from 'marqua';
+import { marker } from 'marqua/artisan';
+import { compile, traverse } from 'marqua/fs';
+import { pipe, chain } from 'marqua/transform';
 import { compare } from 'mauss';
 import { contentParser, fillSiblings } from '$lib/utils/article';
 
 export function all() {
-	const config = forge.traverse({
-		entry: 'content/sites/dev.mauss/reviews',
-		recurse: true,
-		sort(x: Review, y: Review) {
-			const xd = x.date.updated || x.date.published;
-			const yd = y.date.updated || y.date.published;
-			return compare.date(xd, yd);
-		},
-	});
-
 	type Returned = Omit<Review, 'composed'>;
-	const reviews = traverse<typeof config, RawReview, Returned>(
-		config,
-		({ frontMatter, breadcrumb: [filename, folder] }) => {
+	const reviews = traverse(
+		{ entry: 'content/sites/dev.mauss/reviews', depth: -1 },
+		({ breadcrumb: [filename, folder], frontMatter }) => {
 			if (filename.includes('draft') || frontMatter.draft) return;
 
 			const seen = {} as Review['seen'];
@@ -38,14 +30,26 @@ export function all() {
 				rating: countAverageRating(frontMatter.rating),
 				verdict: frontMatter.verdict || 'pending',
 			};
-		}
+		},
+		pipe(
+			(items: Returned[]) =>
+				items.sort((x, y) => {
+					const xd = x.date.updated || x.date.published;
+					const yd = y.date.updated || y.date.published;
+					return compare.date(xd, yd);
+				}),
+			chain({
+				base: 'reviews/',
+				breakpoint: (r) => !r.rating || r.verdict !== 'pending',
+			})
+		)
 	);
 
 	return fillSiblings(reviews, 'reviews/', (r) => !r.rating || r.verdict !== 'pending');
 }
 
 export function get(category: string, slug: string) {
-	const body = compile<{ entry: string }, RawReview, Review>(
+	const body = compile(
 		`content/sites/dev.mauss/reviews/${category}/${slug}.md`,
 		({ frontMatter, content }) => {
 			const review = {

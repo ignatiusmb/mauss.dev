@@ -66,7 +66,7 @@
 
 		transition: var(--t-duration) var(--t-function);
 		background-color: var(--bg-surface);
-		font-family: var(--aqua-heading);
+		font-family: var(--mrq-heading);
 	}
 
 	nav > span,

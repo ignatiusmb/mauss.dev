@@ -6,6 +6,8 @@
 	export let path = '';
 	export let siblings: SiblingsProp = null;
 
+	import { hydrate } from 'marqua/browser';
+	import { navigating } from '$app/stores';
 	import { Feather } from 'syv/icons';
 	import { ProgressBar } from 'syv';
 	import Header from './Header.svelte';
@@ -18,7 +20,7 @@
 	<ProgressBar height="4px" />
 {/if}
 
-<main>
+<main use:hydrate={$navigating}>
 	{#if header}
 		<Header {post} {path}>
 			<slot name="header" />
@@ -163,7 +165,7 @@
 	main :global(h3) {
 		scroll-margin-top: 4rem;
 		font-weight: bold;
-		font-family: var(--aqua-heading);
+		font-family: var(--mrq-heading);
 	}
 	main :global(h2) {
 		margin-top: 1.5em;
@@ -239,11 +241,11 @@
 	main :global(figure figcaption) {
 		padding: 0.5em 0.25em 0;
 		text-align: center;
-		font: 90% var(--aqua-monospace);
+		font: 90% var(--font-monospace);
 	}
 	main :global(details summary) {
 		padding: 0 0.25em;
-		font-family: var(--aqua-monospace);
+		font-family: var(--font-monospace);
 	}
 	main :global(details > div.captioned),
 	main :global(figure > div.captioned) {
@@ -277,11 +279,11 @@
 		width: 100%;
 	}
 
-	main :global(.aqua.code-box) {
+	main :global(.mrq[data-mrq='pre']) {
 		line-height: unset;
 		font-size: 0.8rem;
 	}
-	main :global(.aqua.code-header) {
+	main :global(.mrq[data-mrq='header']) {
 		line-height: 1;
 	}
 

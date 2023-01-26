@@ -48,7 +48,7 @@
 			Handcrafted with ❤️ using
 			<Link href="https://kit.svelte.dev/">SvelteKit</Link>
 			&plus;
-			<Link href="https://aqua.mauss.dev/">Aqua</Link>
+			<Link href="https://marqua.mauss.dev/">Marqua</Link>
 		</p>
 	</section>
 </footer>
@@ -64,7 +64,7 @@
 		margin: auto auto 3em;
 		text-align: center;
 		line-height: 1.5;
-		font-family: var(--aqua-monospace);
+		font-family: var(--font-monospace);
 		font-size: clamp(0.8em, 3vw, 1em);
 	}
 	.social-links {

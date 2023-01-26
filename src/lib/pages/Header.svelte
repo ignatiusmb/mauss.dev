@@ -102,7 +102,7 @@
 		display: grid;
 		gap: 0.8em;
 		line-height: 1;
-		font-family: var(--aqua-heading);
+		font-family: var(--mrq-heading);
 	}
 
 	h1 {
@@ -154,7 +154,7 @@
 		margin: 0 !important;
 	}
 	small time + :global(.syv-link) {
-		font: 90% var(--aqua-monospace);
+		font: 90% var(--font-monospace);
 	}
 
 	header > :global(small.tags) {

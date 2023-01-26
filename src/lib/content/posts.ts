@@ -1,13 +1,13 @@
 import type { Post } from '$lib/types';
 import { existsSync } from 'fs';
 import { join } from 'path';
-import { traverse } from 'marqua';
-import { fillSiblings } from '$lib/utils/article';
+import { traverse } from 'marqua/fs';
+import { chain } from 'marqua/transform';
 
-export function all() {
-	const posts = traverse<{ entry: string }, Post>(
-		'content/sites/dev.mauss/posts',
-		({ frontMatter, breadcrumb: [filename] }) => {
+export function all(): Post[] {
+	const posts = traverse(
+		{ entry: 'content/sites/dev.mauss/posts' },
+		({ breadcrumb: [filename], frontMatter }) => {
 			if (filename.includes('draft')) return;
 
 			const [published, slug] = filename.split('.');
@@ -23,17 +23,19 @@ export function all() {
 			}
 
 			const updated = frontMatter.date && frontMatter.date.updated;
-			return { slug, ...frontMatter, category, date: { published, updated } };
-		}
+			return { slug, ...frontMatter, category, date: { published, updated }, content: '' };
+		},
+		chain({ base: 'posts/' })
 	);
 
-	return fillSiblings(posts.reverse(), 'posts/');
+	return posts as any;
+	// return fillSiblings(posts.reverse(), 'posts/');
 }
 
-export function get(slug: string) {
-	const [body] = traverse<{ entry: string }, Post>(
-		'content/sites/dev.mauss/posts',
-		({ frontMatter, content, breadcrumb: [filename] }) => {
+export function get(slug: string): Post {
+	const [body] = traverse(
+		{ entry: 'content/sites/dev.mauss/posts' },
+		({ breadcrumb: [filename], frontMatter, content }) => {
 			const [published, filename_slug] = filename.split('.');
 			if (filename.includes('draft') || filename_slug !== slug) return;
 			const date = { published, updated: frontMatter.date && frontMatter.date.updated };
@@ -41,5 +43,5 @@ export function get(slug: string) {
 		}
 	);
 
-	return body;
+	return body as any;
 }

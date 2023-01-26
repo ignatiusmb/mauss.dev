@@ -85,7 +85,7 @@
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-		font-family: var(--aqua-heading);
+		font-family: var(--mrq-heading);
 	}
 	header h2,
 	header h3 {
@@ -119,13 +119,13 @@
 
 	section h2 {
 		grid-template-columns: auto auto 1fr;
-		font-family: var(--aqua-monospace, 'Inconsolata');
+		font-family: var(--font-monospace, 'Inconsolata');
 	}
 	section h2::before {
 		counter-increment: title;
 		content: '0' counter(title) '.';
 		margin-right: -0.15em;
-		color: var(--aqua-primary);
+		color: var(--mrq-primary);
 		font-size: 90%;
 	}
 
