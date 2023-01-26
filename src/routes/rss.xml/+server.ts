@@ -1,14 +1,10 @@
 import type { Curated, Post, Review } from '$lib/types';
 import RSS, { type RSSItem } from '$lib/utils/rss';
-import { forge, traverse } from 'marqua';
+import { traverse } from 'marqua/fs';
 import { compare } from 'mauss';
 
 const items = traverse(
-	{
-		entry: 'content/sites/dev.mauss',
-		recurse: true,
-		sort: (x, y) => compare.date(x.date, y.date) || compare.string(x.title, y.title),
-	},
+	{ entry: 'content/sites/dev.mauss', depth: -1 },
 	({ frontMatter, breadcrumb }) => {
 		if (breadcrumb[0].includes('draft')) return;
 
@@ -38,7 +34,7 @@ const items = traverse(
 			return { title, slug: `posts/${slug}`, description, date };
 		} else return undefined;
 	},
-	forge.types<Curated | Post | Review, RSSItem>()
+	(items) => items.sort((x, y) => compare.date(x.date, y.date) || compare.string(x.title, y.title))
 );
 
 const channel = {
@@ -47,5 +43,7 @@ const channel = {
 	description: 'Developed by Alchemauss',
 };
 
-export const GET: import('./$types').RequestHandler = async () =>
-	new Response(RSS(channel, items), { headers: { 'Content-Type': 'application/xml' } });
+export const GET: import('./$types').RequestHandler = async () => {
+	const headers = { 'Content-Type': 'application/xml' };
+	return new Response(RSS(channel, items), { headers });
+};

@@ -1,5 +1,5 @@
-import { compile } from 'marqua';
+import { compile } from 'marqua/fs';
 
 export const load: import('./$types').PageServerLoad = () => {
-	return compile('content/sites/dev.mauss/help.md') as { content: string };
+	return compile('content/sites/dev.mauss/help.md');
 };
