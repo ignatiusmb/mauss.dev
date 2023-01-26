@@ -18,8 +18,8 @@
 	%sveltekit.head%
 </head>
 
-<body>
-	<div id="mauss" data-sveltekit-prefetch>%sveltekit.body%</div>
+<body data-sveltekit-preload-data="hover" data-sveltekit-preload-code="viewport">
+	<div style="display: contents">%sveltekit.body%</div>
 </body>
 
 </html>
