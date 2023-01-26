@@ -14,7 +14,7 @@
   "packageManager": "pnpm@7.25.1",
   "prettier": "mauss/prettier.json",
   "devDependencies": {
-    "@ignatiusmb/styles": "^0.1.0",
+    "@ignatiusmb/styles": "^0.1.1",
     "@sveltejs/adapter-vercel": "next",
     "@sveltejs/kit": "next",
     "autoprefixer": "^10.4.13",
