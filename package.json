@@ -4,9 +4,9 @@
   "scripts": {
     "dev": "vite dev",
     "build": "svelte-kit sync && vite build",
-    "format": "prettier --write src",
+    "format": "prettier -w src --plugin-search-dir=.",
     "check": "svelte-kit sync && pnpm check:style && pnpm check:svelte && pnpm check:types",
-    "check:style": "prettier --check src",
+    "check:style": "prettier -c src --plugin-search-dir=.",
     "check:svelte": "svelte-check src --tsconfig ./tsconfig.json",
     "check:types": "tsc --strict --noEmit --skipLibCheck",
     "check:content": "cd content && markdownlint sites/**/*.md"
