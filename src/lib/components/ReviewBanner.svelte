@@ -1,8 +1,8 @@
 <script lang="ts">
-	export let post: import('$lib/types').Review;
-
-	import { dt } from 'mauss/utils';
 	import { Image } from 'syv';
+	import { dt } from 'mauss/utils';
+
+	export let post: import('$lib/content/reviews').Review;
 
 	$: ({ backdrop, title, rating, composed, seen } = post);
 </script>

@@ -1,5 +1,4 @@
 import type { Entries } from 'mauss/typings';
-import type { Child, SieveDict } from '../types';
 import { compare, regexp } from 'mauss';
 
 const IGNORED = /[(){}[\]<>"']/g;
@@ -55,7 +54,9 @@ function sifter(query = '') {
 	};
 }
 
-export const sift = <T extends Child>(query = '', data: T[]) =>
+type Metadata = { title: string | Record<string, any>; description?: string };
+
+export const sift = <T extends Metadata>(query = '', data: T[]) =>
 	sifter(query)(data, (item) => {
 		const { title, description } = item;
 		const refs = new Set(
@@ -104,10 +105,18 @@ const sortBy: Record<string, (x: any, y: any) => number> = {
 		sortCompare(x, y),
 };
 
-export const sort = <T extends Child>(type: string, data: T[]): T[] =>
+export const sort = <T extends Record<string, any>>(type: string, data: T[]): T[] =>
 	type in sortBy ? data.sort(sortBy[type]) : data.sort(sortCompare);
 
-export function sieve<T extends Child & Record<string, any>>(meta: SieveDict, data: T[]): T[] {
+interface SieveDict {
+	categories?: string[];
+	genres?: string[];
+	tags?: string[];
+	verdict?: string[];
+	sort_by: string;
+}
+
+export function sieve<T extends Record<string, any>>(meta: SieveDict, data: T[]): T[] {
 	const identical = ['tags', 'genres'];
 	const intersect = ['categories', 'verdict'];
 

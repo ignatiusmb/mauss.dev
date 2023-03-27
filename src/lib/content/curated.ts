@@ -1,4 +1,3 @@
-import type { Curated } from '$lib/types';
 import { marker } from 'marqua/artisan';
 import { compile, traverse } from 'marqua/fs';
 
@@ -12,6 +11,20 @@ export function init() {
 			strict: (code: string) => (code === 'newLineInDisplayMode' ? 'ignore' : 'warn'),
 		},
 	});
+}
+
+export interface Curated {
+	slug: string;
+
+	title: string;
+	category: string;
+	tags?: string[];
+	date: {
+		updated: string;
+		published?: string;
+	};
+
+	content?: string;
 }
 
 export function all(): Curated[] {

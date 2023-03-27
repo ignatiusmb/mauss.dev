@@ -1,20 +1,21 @@
 <script lang="ts">
-	export let data: import('./$types').PageData;
+	import { SearchBar, Pagination } from 'syv';
+	import AnimatedKey from '$lib/components/AnimatedKey.svelte';
+	import ReviewCard from '$lib/components/ReviewCard.svelte';
+	import MetaHead from '$lib/pages/MetaHead.svelte';
+	import LayoutPicker from '$lib/pages/LayoutPicker.svelte';
 
 	// import { debounce } from 'mauss';
 	// import { qpm } from 'mauss/web';
+	import { writable } from 'svelte/store';
 	// import { building } from '$app/environment';
 	// import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { sift, sieve } from '$lib/utils/search';
-	import { rSlice as store } from '$lib/utils/stores';
 
-	import { SearchBar, Pagination } from 'syv';
-	import MetaHead from '$lib/pages/MetaHead.svelte';
-	import LayoutPicker from '$lib/pages/LayoutPicker.svelte';
-	import AnimatedKey from '$lib/components/AnimatedKey.svelte';
-	import ReviewCard from '$lib/components/ReviewCard.svelte';
+	export let data: import('./$types').PageData;
 
+	const store = writable([]);
 	// const share = debounce((url: string) => {
 	// 	goto(url, { replaceState: true, keepfocus: true });
 	// }, 500);

@@ -1,7 +1,6 @@
-import type { Curated, Post, Review } from '$lib/types';
-import RSS, { type RSSItem } from '$lib/utils/rss';
 import { traverse } from 'marqua/fs';
 import { compare } from 'mauss';
+import RSS from '$lib/utils/rss';
 
 const items = traverse(
 	{ entry: 'content/sites/dev.mauss', depth: -1 },
@@ -9,7 +8,7 @@ const items = traverse(
 		if (breadcrumb[0].includes('draft')) return;
 
 		if (breadcrumb.includes('curated')) {
-			const { title, date } = frontMatter as Curated;
+			const { title, date } = frontMatter;
 			const [filename, folder] = breadcrumb;
 			return {
 				title,
@@ -18,7 +17,7 @@ const items = traverse(
 				date: (date.updated || date.published) as string,
 			};
 		} else if (breadcrumb.includes('reviews')) {
-			const { title, date } = frontMatter as Review;
+			const { title, date } = frontMatter;
 			const [filename, folder] = breadcrumb;
 			return {
 				title: typeof title === 'string' ? title : title.en,
@@ -27,7 +26,7 @@ const items = traverse(
 				date: (date.updated || date.published) as string,
 			};
 		} else if (breadcrumb.includes('posts')) {
-			const { title, description: info, date: dt } = frontMatter as Post;
+			const { title, description: info, date: dt } = frontMatter;
 			const [published, slug] = breadcrumb[0].split('.');
 			const description = info || 'A post by Alchemauss';
 			const date = ((dt && dt.updated) as string) || published;

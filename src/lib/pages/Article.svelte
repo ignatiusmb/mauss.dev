@@ -1,19 +1,19 @@
 <script lang="ts">
-	type SiblingsProp = null | import('$lib/types').SiblingPair;
+	import { Feather } from 'syv/icons';
+	import { ProgressBar } from 'syv';
+	import Link from '$lib/components/Link.svelte';
+	import Siblings from '$lib/components/Siblings.svelte';
+	import TextIcon from '$lib/components/TextIcon.svelte';
+	import Header from './Header.svelte';
+
+	import type { ComponentProps } from 'svelte';
+	import { hydrate } from 'marqua/browser';
+	import { navigating } from '$app/stores';
 
 	export let header = false;
 	export let post: any = null;
 	export let path = '';
-	export let siblings: SiblingsProp = null;
-
-	import { hydrate } from 'marqua/browser';
-	import { navigating } from '$app/stores';
-	import { Feather } from 'syv/icons';
-	import { ProgressBar } from 'syv';
-	import Header from './Header.svelte';
-	import Link from '$lib/components/Link.svelte';
-	import Siblings from '$lib/components/Siblings.svelte';
-	import TextIcon from '$lib/components/TextIcon.svelte';
+	export let flank: null | ComponentProps<Siblings> = null;
 </script>
 
 {#if header}
@@ -64,8 +64,8 @@
 		</section>
 	{/if}
 
-	{#if siblings}
-		<Siblings {...siblings} />
+	{#if flank}
+		<Siblings {...flank} />
 	{/if}
 </main>
 

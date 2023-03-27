@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let verdict: import('$lib/types').Review['verdict'];
+	export let verdict: import('$lib/content/reviews').Review['verdict'];
 	type VerdictRecord = Record<typeof verdict, typeof verdict>;
 	const mapper: Partial<VerdictRecord> = {
 		'must-watch': 'recommended',

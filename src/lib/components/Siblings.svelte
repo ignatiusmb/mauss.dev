@@ -1,20 +1,20 @@
 <script lang="ts">
-	import type { Sibling } from '$lib/types';
-	export let prev: null | Sibling = null;
+	type Sibling = { slug: string; title: string | Record<string, any> };
+	export let back: null | Sibling = null;
 	export let next: null | Sibling = null;
 </script>
 
-{#if prev || next}
+{#if back || next}
 	<footer>
-		{#if prev}
-			<a href="/{prev.slug}/" style="text-align: left">
+		{#if back}
+			<a href="/{back.slug}/" style="text-align: left">
 				<strong>&larr; Prev</strong>
-				{#if typeof prev.title === 'string'}
-					<span>{prev.title}</span>
-				{:else if prev.title.jp}
-					<span>{prev.title.jp}</span>
+				{#if typeof back.title === 'string'}
+					<span>{back.title}</span>
+				{:else if back.title.jp}
+					<span>{back.title.jp}</span>
 				{:else}
-					<span>{prev.title.en}</span>
+					<span>{back.title.en}</span>
 				{/if}
 			</a>
 		{/if}

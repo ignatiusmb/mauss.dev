@@ -1,11 +1,13 @@
-import type { Post } from '$lib/types';
 import { existsSync } from 'fs';
 import { join } from 'path';
 import { traverse } from 'marqua/fs';
 import { chain } from 'marqua/transform';
 
-export function all(): Post[] {
-	const posts = traverse(
+export type Post = ReturnType<typeof get>;
+export type PostIndex = ReturnType<typeof all>;
+
+export function all() {
+	return traverse(
 		{ entry: 'content/sites/dev.mauss/posts' },
 		({ breadcrumb: [filename], frontMatter }) => {
 			if (filename.includes('draft')) return;
@@ -22,26 +24,43 @@ export function all(): Post[] {
 				}
 			}
 
-			const updated = frontMatter.date && frontMatter.date.updated;
-			return { slug, ...frontMatter, category, date: { published, updated }, content: '' };
+			return {
+				slug,
+				category,
+				title: frontMatter.title,
+				tags: frontMatter.tags,
+				description: frontMatter.description,
+				date: {
+					published,
+					updated: frontMatter.date && frontMatter.date.updated,
+				},
+				image: frontMatter.image,
+			};
 		},
 		chain({ base: 'posts/' })
 	);
-
-	return posts as any;
-	// return fillSiblings(posts.reverse(), 'posts/');
 }
 
-export function get(slug: string): Post {
-	const [body] = traverse(
+export function get(slug: string) {
+	return traverse(
 		{ entry: 'content/sites/dev.mauss/posts' },
 		({ breadcrumb: [filename], frontMatter, content }) => {
-			const [published, filename_slug] = filename.split('.');
-			if (filename.includes('draft') || filename_slug !== slug) return;
-			const date = { published, updated: frontMatter.date && frontMatter.date.updated };
-			return { slug, ...frontMatter, category: frontMatter.tags[0], date, content };
-		}
-	);
+			const [published, id] = filename.split('.');
+			if (filename.includes('draft') || id !== slug) return;
 
-	return body as any;
+			return {
+				slug,
+				category: frontMatter.tags[0],
+				title: frontMatter.title,
+				tags: frontMatter.tags,
+				description: frontMatter.description,
+				date: {
+					published,
+					updated: frontMatter.date && frontMatter.date.updated,
+				},
+				image: frontMatter.image,
+				content,
+			};
+		}
+	)[0];
 }

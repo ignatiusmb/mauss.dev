@@ -1,6 +1,7 @@
 <script lang="ts">
-	export let post: import('$lib/types').Curated;
 	import Link from '$lib/components/Link.svelte';
+
+	export let post: import('$lib/content/curated').Curated;
 </script>
 
 <section>
