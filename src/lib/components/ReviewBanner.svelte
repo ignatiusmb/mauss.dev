@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Image } from 'syv';
+	import Image from 'syv/core/Image.svelte';
 	import { dt } from 'mauss/utils';
 
 	export let post: import('$lib/content/reviews').Review;

@@ -8,7 +8,10 @@ export const load: import('./$types').PageServerLoad = async () => {
 			return { slug, date: frontMatter.date, content };
 		},
 		(parsed) =>
-			parsed.reduce((a, c) => ({ ...a, [c.slug]: c }), {} as Record<string, typeof parsed[number]>)
+			parsed.reduce(
+				(a, c) => ({ ...a, [c.slug]: c }),
+				{} as Record<string, (typeof parsed)[number]>
+			)
 	);
 
 	return { content };

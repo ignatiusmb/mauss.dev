@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { SearchBar, Pagination } from 'syv';
+	import SearchBar from 'syv/core/SearchBar.svelte';
+	import Pagination from 'syv/core/Pagination.svelte';
 	import AnimatedKey from '$lib/components/AnimatedKey.svelte';
 	import ReviewCard from '$lib/components/ReviewCard.svelte';
 	import MetaHead from '$lib/pages/MetaHead.svelte';

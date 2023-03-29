@@ -13,7 +13,7 @@ export const load: import('./$types').PageServerLoad = async () => {
 			genres,
 			verdict: VERDICTS.reduce(
 				(a, c) => ({ ...a, [c]: capitalize(c.replace('-', ' ')) }),
-				{} as { [k in typeof VERDICTS[number]]: string }
+				{} as { [k in (typeof VERDICTS)[number]]: string }
 			),
 			sort_by: {
 				updated: 'Last updated',

@@ -127,7 +127,7 @@ export function sieve<T extends Record<string, any>>(meta: SieveDict, data: T[])
 	const verdict = entries.find(([k, v]) => k === 'verdict' && v.length) || [];
 	const checked = entries.filter(([, v]) => v.length).length;
 
-	const cross = (post: T, [key, val]: typeof cleaned[number]) => {
+	const cross = (post: T, [key, val]: (typeof cleaned)[number]) => {
 		const method = identical.includes(key) ? 'every' : 'some';
 		if (Array.isArray(post[key])) return val[method]((v) => post[key].includes(v));
 

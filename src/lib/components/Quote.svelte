@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { GradientBorder } from 'syv';
+	import GradientBorder from 'syv/core/GradientBorder.svelte';
 
 	import { random } from 'mauss/utils';
 	import { fly } from 'svelte/transition';

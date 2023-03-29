@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Image } from 'syv';
+	import Image from 'syv/core/Image.svelte';
 	import Link from '$lib/components/Link.svelte';
 
 	import { dt } from 'mauss/utils';

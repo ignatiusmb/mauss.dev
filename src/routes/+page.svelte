@@ -1,4 +1,12 @@
 <script lang="ts">
+	import Image from 'syv/core/Image.svelte';
+	import MetaHead from '$lib/pages/MetaHead.svelte';
+	import Article from '$lib/pages/Article.svelte';
+	import Link from '$lib/components/Link.svelte';
+	import Navigation from '$lib/components/Navigation.svelte';
+	import Quote from '$lib/components/Quote.svelte';
+	import RotatingBorder from '$lib/components/RotatingBorder.svelte';
+
 	export let data: import('./$types').PageData;
 
 	const showcase = <[keyof typeof section, any][]>(
@@ -9,14 +17,6 @@
 		posts: { heading: '📚 Recent Posts', desc: "What's on my mind (or life)" },
 		reviews: { heading: '⭐ Recent Reviews', desc: "Contents I've been reviewing" },
 	};
-
-	import { Image } from 'syv';
-	import MetaHead from '$lib/pages/MetaHead.svelte';
-	import Article from '$lib/pages/Article.svelte';
-	import Link from '$lib/components/Link.svelte';
-	import Navigation from '$lib/components/Navigation.svelte';
-	import Quote from '$lib/components/Quote.svelte';
-	import RotatingBorder from '$lib/components/RotatingBorder.svelte';
 
 	let scrolled = 0;
 </script>

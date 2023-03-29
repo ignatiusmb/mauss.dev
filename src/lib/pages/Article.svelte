@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Feather } from 'syv/icons';
-	import { ProgressBar } from 'syv';
+	import ProgressBar from 'syv/core/ProgressBar.svelte';
+	import Feather from 'syv/icons/Feather.svelte';
 	import Link from '$lib/components/Link.svelte';
 	import Siblings from '$lib/components/Siblings.svelte';
 	import TextIcon from '$lib/components/TextIcon.svelte';
@@ -26,11 +26,11 @@
 			<slot name="header" />
 		</Header>
 
-		{#if post && post.toc.length}
+		{#if post && post.table.length}
 			<section id="objective" class="info-box">
 				<h3>Table of Contents</h3>
 				<ul style="color: #f48fb1">
-					{#each post.toc as { id, title }}
+					{#each post.table as { id, title }}
 						<li style="color: inherit;">
 							<Link href="#{id}">{title}</Link>
 						</li>
@@ -58,7 +58,7 @@
 				on GitHub, any fix or addition is much appreciated!
 				<TextIcon href="https://github.com/alchemauss/content/edit/master/{path}">
 					<span>Edit</span>
-					<Feather.Edit size={17} />
+					<Feather icon={import('syv/icons/feather/edit')} scale={17 / 16} />
 				</TextIcon>
 			</p>
 		</section>
@@ -164,7 +164,7 @@
 	main :global(h2),
 	main :global(h3) {
 		scroll-margin-top: 4rem;
-		font-weight: bold;
+		font-weight: 500;
 		font-family: var(--mrq-heading);
 	}
 	main :global(h2) {

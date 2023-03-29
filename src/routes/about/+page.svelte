@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { WeavedImage } from 'syv';
+	import WeavedImage from 'syv/core/WeavedImage.svelte';
 	import Link from '$lib/components/Link.svelte';
 	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import Article from '$lib/pages/Article.svelte';
