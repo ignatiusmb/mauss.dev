@@ -8,6 +8,10 @@ const config = {
 	kit: {
 		adapter: adapter(),
 
+		alias: process.env.NODE_ENV === 'development' && {
+			syv: '../ignatiusmb[syv]/src/lib',
+		},
+
 		typescript: {
 			config: (settings) => ({ extends: 'mauss/tsconfig.json', ...settings }),
 		},
