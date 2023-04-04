@@ -24,18 +24,9 @@ export function all() {
 				}
 			}
 
-			return {
-				slug,
-				category,
-				title: frontMatter.title,
-				tags: frontMatter.tags,
-				description: frontMatter.description,
-				date: {
-					published,
-					updated: frontMatter.date && frontMatter.date.updated,
-				},
-				image: frontMatter.image,
-			};
+			const updated = frontMatter.date && frontMatter.date.updated;
+
+			return { ...frontMatter, slug, category, date: { published, updated } };
 		},
 		chain({ base: 'posts/' })
 	);
@@ -48,19 +39,10 @@ export function get(slug: string) {
 			const [published, id] = filename.split('.');
 			if (filename.includes('draft') || id !== slug) return;
 
-			return {
-				slug,
-				category: frontMatter.tags[0],
-				title: frontMatter.title,
-				tags: frontMatter.tags,
-				description: frontMatter.description,
-				date: {
-					published,
-					updated: frontMatter.date && frontMatter.date.updated,
-				},
-				image: frontMatter.image,
-				content,
-			};
+			const [category] = frontMatter.tags;
+			const date = { published, updated: frontMatter.date && frontMatter.date.updated };
+
+			return { ...frontMatter, slug, category, date, content };
 		}
 	)[0];
 }
