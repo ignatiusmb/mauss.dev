@@ -1,6 +1,10 @@
 import adapter from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 
+function developing(condition) {
+	return (process.env.NODE_ENV === 'development' && condition) || undefined;
+}
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	preprocess: [vitePreprocess()],
@@ -8,9 +12,9 @@ const config = {
 	kit: {
 		adapter: adapter(),
 
-		alias: process.env.NODE_ENV === 'development' && {
+		alias: developing({
 			syv: '../ignatiusmb[syv]/src/lib',
-		},
+		}),
 
 		typescript: {
 			config: (settings) => ({ extends: 'mauss/tsconfig.json', ...settings }),
