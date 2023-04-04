@@ -20,7 +20,7 @@
     "katex": "^0.16.4",
     "markdown-it-texmath": "^1.0.0",
     "markdownlint-cli": "^0.32.2",
-    "marqua": "^0.4.1",
+    "marqua": "^0.4.3",
     "mauss": "^0.4.10",
     "prettier": "^2.8.7",
     "prettier-plugin-svelte": "^2.10.0",

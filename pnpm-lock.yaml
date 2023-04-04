@@ -8,7 +8,7 @@ specifiers:
   katex: ^0.16.4
   markdown-it-texmath: ^1.0.0
   markdownlint-cli: ^0.32.2
-  marqua: ^0.4.1
+  marqua: ^0.4.3
   mauss: ^0.4.10
   prettier: ^2.8.7
   prettier-plugin-svelte: ^2.10.0
@@ -26,7 +26,7 @@ devDependencies:
   katex: 0.16.4
   markdown-it-texmath: 1.0.0
   markdownlint-cli: 0.32.2
-  marqua: 0.4.1
+  marqua: 0.4.3
   mauss: 0.4.10
   prettier: 2.8.7
   prettier-plugin-svelte: 2.10.0_5ir2xprf4ygk6mygilwnltaw3a
@@ -1078,6 +1078,10 @@ packages:
     resolution: {integrity: sha512-DRf0QjnNeCUds3xTjKlQQ3DpJD51GvDjJfnxUVWg6PZTo2otSm+slzNAxU/35hF8/oJIKoG9slq30JYOsF2azg==}
     dev: true
 
+  /jsonc-parser/3.2.0:
+    resolution: {integrity: sha512-gfFQZrcTc8CnKXp6Y4/CBT3fTc0OVuDofpre4aEeEpSBPV5X5v4+Vmx+8snU7RLPrNHPKSgLxGo9YuQzz20o+w==}
+    dev: true
+
   /katex/0.16.4:
     resolution: {integrity: sha512-WudRKUj8yyBeVDI4aYMNxhx5Vhh2PjpzQw1GRu/LVGqL4m1AxwD1GcUp0IMbdJaf5zsjtj8ghP0DOQRYhroNkw==}
     hasBin: true
@@ -1175,17 +1179,21 @@ packages:
       markdown-it: 13.0.1
     dev: true
 
-  /marqua/0.4.1:
-    resolution: {integrity: sha512-dO4hZLD1Fux7BdSICaJFvbP0VDfuawTx/L9HDKFd99Jw2e/qY/jTJTko/tTV6ug/v3/t5IUpxAL4pOYXDFzHDA==}
+  /marqua/0.4.3:
+    resolution: {integrity: sha512-7dQkew/IItNerGWib9zaVRomM5vXDX3GwtPQC73N2b8ZlINL1T6o8BL/U9IKkvL3ZWnLTj1eFJx1ez/yuREhqg==}
     engines: {node: '>=14.8'}
     dependencies:
       markdown-it: 13.0.1
-      mauss: 0.4.10
+      mauss: 0.4.11
       shiki: 0.11.1
     dev: true
 
   /mauss/0.4.10:
     resolution: {integrity: sha512-FJyGGND0dqUgqkF528RyspeTVRqZVzN77xb8nmIXDDgfjTVOYHxRz3gZ1OolL100Bta+HhtXXzjxQJds9+5BSg==}
+    dev: true
+
+  /mauss/0.4.11:
+    resolution: {integrity: sha512-xAMCTgi7pCeMbp0qp9EGPKPZc5XEiAlias0SZBLlbBF4ce/T5PpowZ5K32vO0yabz5GgD0CYQQHo4A6z616/ng==}
     dev: true
 
   /mdurl/1.0.1:
@@ -1512,7 +1520,7 @@ packages:
   /shiki/0.11.1:
     resolution: {integrity: sha512-EugY9VASFuDqOexOgXR18ZV+TbFrQHeCpEYaXamO+SZlsnT/2LxuLBX25GGtIrwaEVFXUAbUQ601SWE2rMwWHA==}
     dependencies:
-      jsonc-parser: 3.1.0
+      jsonc-parser: 3.2.0
       vscode-oniguruma: 1.7.0
       vscode-textmate: 6.0.0
     dev: true
