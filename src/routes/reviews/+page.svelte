@@ -9,7 +9,7 @@
 	// import { debounce } from 'mauss';
 	// import { qpm } from 'mauss/web';
 	import { writable } from 'svelte/store';
-	// import { building } from '$app/environment';
+	import { building } from '$app/environment';
 	// import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { sift, sieve } from '$lib/utils/search';
@@ -21,7 +21,7 @@
 	// 	goto(url, { replaceState: true, keepfocus: true });
 	// }, 500);
 
-	let search = $page.url.searchParams.get('q') || '';
+	let search = (!building && $page.url.searchParams.get('q')) || '';
 	let query = (search && search.replace(/\+/g, ' ')) || '';
 	let filters = { categories: [], genres: [], verdict: [], sort_by: 'updated' };
 
