@@ -16,6 +16,10 @@ const config = {
 			syv: '../ignatiusmb[syv]/src/lib',
 		}),
 
+		prerender: {
+			handleMissingId: 'warn',
+		},
+
 		typescript: {
 			config: (settings) => ({ extends: 'mauss/tsconfig.json', ...settings }),
 		},
