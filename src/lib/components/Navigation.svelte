@@ -18,13 +18,13 @@
 <svelte:window bind:innerWidth bind:scrollY={scrolled} />
 
 <nav class:scrolled>
-	<span on:click={() => (opened = !opened)}>
+	<button on:click={() => (opened = !opened)}>
 		{#if opened}
 			<Feather icon={import('syv/icons/feather/x')} />
 		{:else}
 			<Feather icon={import('syv/icons/feather/menu')} />
 		{/if}
-	</span>
+	</button>
 
 	<NavLink>
 		<img src="/favicon.ico" alt="Alchemauss" width="24" height="24" />
@@ -69,7 +69,7 @@
 		font-family: var(--mrq-heading);
 	}
 
-	nav > span,
+	nav > button,
 	nav > :global(a.syv-core-link) {
 		display: inline-flex;
 	}
@@ -105,10 +105,10 @@
 			transition: var(--t-duration) var(--t-function);
 			background-color: var(--bg-surface);
 		}
-		nav > span:first-child {
+		nav > button:first-child {
 			display: none;
 		}
-		nav > span:first-child + :global(a) {
+		nav > button:first-child + :global(a) {
 			margin: 0;
 		}
 	}

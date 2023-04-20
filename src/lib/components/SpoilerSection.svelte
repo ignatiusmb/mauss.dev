@@ -13,8 +13,10 @@
 	<p>Be sure to come back and check out the spoilers section below when you're done.</p>
 </section>
 
-<section class="info-box important" on:click={() => (show = !show)} class:show>
-	<h2>CLICK TO {show ? 'HIDE' : 'REVEAL'} SPOILERS</h2>
+<section class="info-box important" class:show>
+	<button on:click={() => (show = !show)}>
+		CLICK TO {show ? 'HIDE' : 'REVEAL'} SPOILERS
+	</button>
 	{#if !show}
 		<p>
 			Clicking this card will reveal the another section below which will contain major spoilers as

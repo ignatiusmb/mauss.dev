@@ -4,7 +4,7 @@
 	import Link from '$lib/components/Link.svelte';
 </script>
 
-<span on:click {style} class:empty={!href} class="text-icon">
+<span {style} class:empty={!href} class="text-icon">
 	{#if href}
 		<Link {href}><slot /></Link>
 	{:else}
