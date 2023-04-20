@@ -6,6 +6,21 @@ import { chain } from 'marqua/transform';
 export type Post = ReturnType<typeof get>;
 export type PostIndex = ReturnType<typeof all>;
 
+export interface frontMatter {
+	slug: string;
+	title: string;
+	description?: string;
+	category: string;
+	tags: string[];
+	date: {
+		published: string | Date;
+		updated?: string | Date;
+	};
+	image?: {
+		en?: string;
+	};
+}
+
 export function all() {
 	return traverse(
 		{ entry: 'content/sites/dev.mauss/posts' },
@@ -24,9 +39,18 @@ export function all() {
 				}
 			}
 
-			const updated = frontMatter.date && frontMatter.date.updated;
+			const specified: frontMatter = {
+				slug,
+				title: frontMatter.title,
+				category,
+				tags: frontMatter.tags,
+				date: {
+					published,
+					updated: frontMatter.date && frontMatter.date.updated,
+				},
+			};
 
-			return { ...frontMatter, slug, category, date: { published, updated } };
+			return { ...frontMatter, ...specified };
 		},
 		chain({ base: 'posts/' })
 	);
@@ -39,10 +63,18 @@ export function get(slug: string) {
 			const [published, id] = filename.split('.');
 			if (filename.includes('draft') || id !== slug) return;
 
-			const [category] = frontMatter.tags;
-			const date = { published, updated: frontMatter.date && frontMatter.date.updated };
+			const specified: frontMatter = {
+				slug,
+				title: frontMatter.title,
+				category: frontMatter.tags[0],
+				tags: frontMatter.tags,
+				date: {
+					published,
+					updated: frontMatter.date && frontMatter.date.updated,
+				},
+			};
 
-			return { ...frontMatter, slug, category, date, content };
+			return { ...frontMatter, ...specified, content };
 		}
 	)[0];
 }

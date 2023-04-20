@@ -2,9 +2,9 @@
 	import SearchBar from 'syv/core/SearchBar.svelte';
 	import Pagination from 'syv/core/Pagination.svelte';
 	import AnimatedKey from '$lib/components/AnimatedKey.svelte';
-	import PostCard from '$lib/components/PostCard.svelte';
 	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import LayoutPicker from '$lib/pages/LayoutPicker.svelte';
+	import PostCard from './PostCard.svelte';
 
 	import { writable } from 'svelte/store';
 	import { sift, sieve } from '$lib/utils/search';
