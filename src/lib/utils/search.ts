@@ -1,6 +1,5 @@
 import type { Entries } from 'mauss/typings';
-import type { Child, SieveDict } from '../types';
-import { comparator, compare, regexp } from 'mauss';
+import { compare, regexp } from 'mauss';
 
 const IGNORED = /[(){}[\]<>"']/g;
 function normalize(str: string) {
@@ -55,7 +54,9 @@ function sifter(query = '') {
 	};
 }
 
-export const sift = <T extends Child>(query = '', data: T[]) =>
+type Metadata = { title: string | Record<string, any>; description?: string };
+
+export const sift = <T extends Metadata>(query = '', data: T[]) =>
 	sifter(query)(data, (item) => {
 		const { title, description } = item;
 		const refs = new Set(
@@ -81,7 +82,7 @@ function sortCompare<T extends Record<string, any>>(x: T, y: T): number {
 
 	if (x.author && y.author) return compare.string(x.author, y.author);
 
-	return comparator(x, y);
+	return compare.inspect(x, y);
 }
 
 const sortBy: Record<string, (x: any, y: any) => number> = {
@@ -104,10 +105,18 @@ const sortBy: Record<string, (x: any, y: any) => number> = {
 		sortCompare(x, y),
 };
 
-export const sort = <T extends Child>(type: string, data: T[]): T[] =>
+export const sort = <T extends Record<string, any>>(type: string, data: T[]): T[] =>
 	type in sortBy ? data.sort(sortBy[type]) : data.sort(sortCompare);
 
-export function sieve<T extends Child & Record<string, any>>(meta: SieveDict, data: T[]): T[] {
+interface SieveDict {
+	categories?: string[];
+	genres?: string[];
+	tags?: string[];
+	verdict?: string[];
+	sort_by: string;
+}
+
+export function sieve<T extends Record<string, any>>(meta: SieveDict, data: T[]): T[] {
 	const identical = ['tags', 'genres'];
 	const intersect = ['categories', 'verdict'];
 
@@ -118,7 +127,7 @@ export function sieve<T extends Child & Record<string, any>>(meta: SieveDict, da
 	const verdict = entries.find(([k, v]) => k === 'verdict' && v.length) || [];
 	const checked = entries.filter(([, v]) => v.length).length;
 
-	const cross = (post: T, [key, val]: typeof cleaned[number]) => {
+	const cross = (post: T, [key, val]: (typeof cleaned)[number]) => {
 		const method = identical.includes(key) ? 'every' : 'some';
 		if (Array.isArray(post[key])) return val[method]((v) => post[key].includes(v));
 

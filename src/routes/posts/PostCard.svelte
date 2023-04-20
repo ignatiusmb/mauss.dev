@@ -1,9 +1,10 @@
 <script lang="ts">
-	export let post: import('$lib/types').Post;
+	import Image from 'syv/core/Image.svelte';
+	import Link from '$lib/components/Link.svelte';
 
 	import { dt } from 'mauss/utils';
-	import { Image } from 'syv';
-	import Link from '$lib/components/Link.svelte';
+
+	export let post: import('$lib/content/posts').Post;
 
 	const { published, updated } = post.date;
 	const date = (updated !== published && updated) || published;
@@ -26,7 +27,7 @@
 			{#if updated && updated !== published}Updated{/if}
 			<span>{dt.format(date)('DD MMMM YYYY')}</span>
 		</small>
-		<small>{post.read_time} min read</small>
+		<small>{post.estimate} min read</small>
 		<Link href="/posts/{post.slug}/" style="primary">READ</Link>
 	</aside>
 </section>

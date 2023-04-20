@@ -1,14 +1,36 @@
 import adapter from '@sveltejs/adapter-vercel';
-import preprocess from 'svelte-preprocess';
-import autoprefixer from 'autoprefixer';
+import { vitePreprocess } from '@sveltejs/kit/vite';
+
+function developing(condition) {
+	return (process.env.NODE_ENV === 'development' && condition) || undefined;
+}
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	preprocess: preprocess({
-		postcss: { plugins: [autoprefixer()] },
-	}),
+	preprocess: [vitePreprocess()],
+
 	kit: {
 		adapter: adapter(),
+
+		alias: developing({
+			syv: '../ignatiusmb[syv]/src/lib',
+		}),
+
+		prerender: {
+			handleMissingId: 'warn',
+		},
+
+		typescript: {
+			config: (settings) => ({ extends: 'mauss/tsconfig.json', ...settings }),
+		},
+	},
+
+	vitePlugin: {
+		experimental: {
+			inspector: {
+				holdMode: true,
+			},
+		},
 	},
 };
 

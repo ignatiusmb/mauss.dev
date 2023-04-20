@@ -1,13 +1,14 @@
 <svelte:options immutable />
 
 <script lang="ts">
-	export let post: import('$lib/types').Review;
-
-	import { Image } from 'syv';
+	import Image from 'syv/core/Image.svelte';
 	import Link from '$lib/components/Link.svelte';
 	import Verdict from '$lib/components/Verdict.svelte';
 
 	import { capitalize } from 'mauss/utils';
+
+	export let post: import('$lib/content/reviews').Review;
+
 	const disabled = !post.rating || post.verdict === 'pending';
 </script>
 

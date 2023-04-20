@@ -1,13 +1,30 @@
-import type { Post } from '$lib/types';
 import { existsSync } from 'fs';
 import { join } from 'path';
-import { traverse } from 'marqua';
-import { fillSiblings } from '$lib/utils/article';
+import { traverse } from 'marqua/fs';
+import { chain } from 'marqua/transform';
+
+export type Post = ReturnType<typeof get>;
+export type PostIndex = ReturnType<typeof all>;
+
+export interface frontMatter {
+	slug: string;
+	title: string;
+	description?: string;
+	category: string;
+	tags: string[];
+	date: {
+		published: string | Date;
+		updated?: string | Date;
+	};
+	image?: {
+		en?: string;
+	};
+}
 
 export function all() {
-	const posts = traverse<{ entry: string }, Post>(
-		'content/sites/dev.mauss/posts',
-		({ frontMatter, breadcrumb: [filename] }) => {
+	return traverse(
+		{ entry: 'content/sites/dev.mauss/posts' },
+		({ breadcrumb: [filename], frontMatter }) => {
 			if (filename.includes('draft')) return;
 
 			const [published, slug] = filename.split('.');
@@ -22,24 +39,42 @@ export function all() {
 				}
 			}
 
-			const updated = frontMatter.date && frontMatter.date.updated;
-			return { slug, ...frontMatter, category, date: { published, updated } };
-		}
-	);
+			const specified: frontMatter = {
+				slug,
+				title: frontMatter.title,
+				category,
+				tags: frontMatter.tags,
+				date: {
+					published,
+					updated: frontMatter.date && frontMatter.date.updated,
+				},
+			};
 
-	return fillSiblings(posts.reverse(), 'posts/');
+			return { ...frontMatter, ...specified };
+		},
+		chain({ base: 'posts/' })
+	);
 }
 
 export function get(slug: string) {
-	const [body] = traverse<{ entry: string }, Post>(
-		'content/sites/dev.mauss/posts',
-		({ frontMatter, content, breadcrumb: [filename] }) => {
-			const [published, filename_slug] = filename.split('.');
-			if (filename.includes('draft') || filename_slug !== slug) return;
-			const date = { published, updated: frontMatter.date && frontMatter.date.updated };
-			return { slug, ...frontMatter, category: frontMatter.tags[0], date, content };
-		}
-	);
+	return traverse(
+		{ entry: 'content/sites/dev.mauss/posts' },
+		({ breadcrumb: [filename], frontMatter, content }) => {
+			const [published, id] = filename.split('.');
+			if (filename.includes('draft') || id !== slug) return;
 
-	return body;
+			const specified: frontMatter = {
+				slug,
+				title: frontMatter.title,
+				category: frontMatter.tags[0],
+				tags: frontMatter.tags,
+				date: {
+					published,
+					updated: frontMatter.date && frontMatter.date.updated,
+				},
+			};
+
+			return { ...frontMatter, ...specified, content };
+		}
+	)[0];
 }

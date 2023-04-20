@@ -1,12 +1,13 @@
 <script lang="ts">
-	export let path = '';
-	export let post: any = {};
-	const size = 16;
-
-	import { dt } from 'mauss/utils';
-	import { Feather } from 'syv/icons';
+	import Feather from 'syv/icons/Feather.svelte';
 	import Link from '$lib/components/Link.svelte';
 	import TextIcon from '$lib/components/TextIcon.svelte';
+
+	import { dt } from 'mauss/utils';
+
+	export let path = '';
+	export let post: any = {};
+	const scale = 1;
 
 	$: ({ author = {}, date = {} } = post);
 	$: ({ published, updated } = date);
@@ -26,12 +27,12 @@
 			<img src={author.img || '/assets/profile/mauss.jpeg'} alt="author profile" />
 		</Link>
 		<div class="details">
-			<span style="font-weight: bolder">{author.name || 'Ignatius Bagussuputra'}</span>
+			<span style:font-weight="500">{author.name || 'Ignatius Bagussuputra'}</span>
 
 			{#if published}
 				<div>
 					<TextIcon>
-						<Feather.Calendar {size} />
+						<Feather icon={import('syv/icons/feather/calendar')} {scale} />
 						<time datetime={published}>
 							{#if updated && updated !== published}Published on{/if}
 							{dt.format(published)('DDDD, DD MMMM YYYY')}
@@ -40,7 +41,7 @@
 					{#if path && (!updated || (updated && updated === published))}
 						<TextIcon href="https://github.com/alchemauss/content/edit/master/{path}">
 							<span>Edit</span>
-							<Feather.Edit {size} />
+							<Feather icon={import('syv/icons/feather/edit')} {scale} />
 						</TextIcon>
 					{/if}
 				</div>
@@ -53,31 +54,31 @@
 					{#if path}
 						<TextIcon href="https://github.com/alchemauss/content/commits/master/{path}">
 							{#if published}
-								<Feather.GitCommit {size} />
+								<Feather icon={import('syv/icons/feather/git-commit')} {scale} />
 							{:else}
-								<Feather.Calendar {size} />
+								<Feather icon={import('syv/icons/feather/calendar')} {scale} />
 							{/if}
 							<time datetime={updated}>Updated {formatted}</time>
+						</TextIcon>
+
+						<TextIcon href="https://github.com/alchemauss/content/edit/master/{path}">
+							<span>Edit</span>
+							<Feather icon={import('syv/icons/feather/edit')} {scale} />
 						</TextIcon>
 					{:else}
 						<span>
 							<time datetime={updated}>Updated {formatted}</time>
 						</span>
 					{/if}
-					{#if path}
-						<TextIcon href="https://github.com/alchemauss/content/edit/master/{path}">
-							<span>Edit</span>
-							<Feather.Edit {size} />
-						</TextIcon>
-					{/if}
 				</div>
 			{/if}
 
 			<div>
 				<TextIcon>
-					<Feather.Clock {size} />
-					<span>{post.read_time} min read</span>
+					<Feather icon={import('syv/icons/feather/clock')} {scale} />
+					<span>{post.estimate} min read</span>
 				</TextIcon>
+
 				<TextIcon
 					style="cursor: pointer"
 					on:click={async () => {
@@ -87,7 +88,7 @@
 					}}
 				>
 					<span>Share</span>
-					<Feather.Share2 {size} />
+					<Feather icon={import('syv/icons/feather/share-2')} {scale} />
 				</TextIcon>
 			</div>
 		</div>
@@ -102,7 +103,7 @@
 		display: grid;
 		gap: 0.8em;
 		line-height: 1;
-		font-family: var(--aqua-heading);
+		font-family: var(--mrq-heading);
 	}
 
 	h1 {
@@ -147,14 +148,14 @@
 		content: '~';
 		margin: 0 0.5em;
 		color: var(--theme-secondary);
-		font-weight: bolder;
+		font-weight: 600;
 	}
 	small > :global(span.no-tilde::before) {
 		content: '' !important;
 		margin: 0 !important;
 	}
 	small time + :global(.syv-link) {
-		font: 90% var(--aqua-monospace);
+		font: 90% var(--font-monospace);
 	}
 
 	header > :global(small.tags) {

@@ -1,19 +1,17 @@
-import { traverse } from 'marqua';
-
-type About = { slug: string; title: string; date: { updated: string } };
+import { traverse } from 'marqua/fs';
 
 export const load: import('./$types').PageServerLoad = async () => {
-	const parsed = traverse<{ entry: string }, About>(
-		'content/sites/dev.mauss/about',
+	const content = traverse(
+		{ entry: 'content/sites/dev.mauss/about' },
 		({ frontMatter, content, breadcrumb: [filename] }) => {
 			const [slug] = filename.split('.');
-			return { ...frontMatter, slug, content };
-		}
-	);
-
-	const content = parsed.reduce(
-		(acc, { slug, ...res }) => ({ ...acc, [slug]: res }),
-		{} as { [key: string]: any }
+			return { slug, date: frontMatter.date, content };
+		},
+		(parsed) =>
+			parsed.reduce(
+				(a, c) => ({ ...a, [c.slug]: c }),
+				{} as Record<string, (typeof parsed)[number]>
+			)
 	);
 
 	return { content };

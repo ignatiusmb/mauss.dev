@@ -1,16 +1,16 @@
 <script>
-	import { page } from '$app/stores';
-
-	import { ScrollTop } from 'syv';
-	import Navigation from '$lib/components/Navigation.svelte';
-	import Footer from '$lib/components/Footer.svelte';
-
-	import '@ignatiusmb/aqua/lib/aqua.cbs.js';
-	import '@ignatiusmb/aqua/lib/aqua.min.css';
+	import '@ignatiusmb/styles/core.css';
+	import 'marqua/styles/code.css';
 	import '$lib/styles/fonts.css';
 	import '$lib/styles/theme.css';
 	import '$lib/styles/blog.css';
 	import '$lib/styles/animation.css';
+
+	import ScrollTop from 'syv/core/ScrollTop.svelte';
+	import Navigation from '$lib/components/Navigation.svelte';
+	import Footer from '$lib/components/Footer.svelte';
+
+	import { page } from '$app/stores';
 </script>
 
 <ScrollTop />
@@ -22,10 +22,9 @@
 <Footer />
 
 <style>
-	:global(#mauss) {
+	:global(body) {
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
-		font-family: var(--aqua-default);
 	}
 </style>

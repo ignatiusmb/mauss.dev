@@ -1,4 +1,12 @@
 <script lang="ts">
+	import Image from 'syv/core/Image.svelte';
+	import MetaHead from '$lib/pages/MetaHead.svelte';
+	import Article from '$lib/pages/Article.svelte';
+	import Link from '$lib/components/Link.svelte';
+	import Navigation from '$lib/components/Navigation.svelte';
+	import Quote from '$lib/components/Quote.svelte';
+	import RotatingBorder from '$lib/components/RotatingBorder.svelte';
+
 	export let data: import('./$types').PageData;
 
 	const showcase = <[keyof typeof section, any][]>(
@@ -9,14 +17,6 @@
 		posts: { heading: '📚 Recent Posts', desc: "What's on my mind (or life)" },
 		reviews: { heading: '⭐ Recent Reviews', desc: "Contents I've been reviewing" },
 	};
-
-	import { Image } from 'syv';
-	import MetaHead from '$lib/pages/MetaHead.svelte';
-	import Article from '$lib/pages/Article.svelte';
-	import Link from '$lib/components/Link.svelte';
-	import Navigation from '$lib/components/Navigation.svelte';
-	import Quote from '$lib/components/Quote.svelte';
-	import RotatingBorder from '$lib/components/RotatingBorder.svelte';
 
 	let scrolled = 0;
 </script>
@@ -85,7 +85,7 @@
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-		font-family: var(--aqua-heading);
+		font-family: var(--mrq-heading);
 	}
 	header h2,
 	header h3 {
@@ -119,13 +119,13 @@
 
 	section h2 {
 		grid-template-columns: auto auto 1fr;
-		font-family: var(--aqua-monospace, 'Inconsolata');
+		font-family: var(--font-monospace, 'Inconsolata');
 	}
 	section h2::before {
 		counter-increment: title;
 		content: '0' counter(title) '.';
 		margin-right: -0.15em;
-		color: var(--aqua-primary);
+		color: var(--mrq-primary);
 		font-size: 90%;
 	}
 

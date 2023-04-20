@@ -1,12 +1,13 @@
 <script lang="ts">
-	export let items: any[], component: typeof import('svelte').SvelteComponent;
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
-	import { duration } from 'syv/options';
+	import { TIME } from 'syv/options';
+
+	export let items: any[], component: typeof import('svelte').SvelteComponent;
 </script>
 
 {#each items as post (post.slug)}
-	<div animate:flip={{ duration }} transition:scale|local={{ duration }}>
+	<div animate:flip={{ duration: TIME.SLIDE }} transition:scale|local={{ duration: TIME.SLIDE }}>
 		{#if component}
 			<svelte:component this={component} {post} />
 		{:else}

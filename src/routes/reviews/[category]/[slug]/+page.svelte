@@ -8,7 +8,7 @@
 	import ReviewBanner from '$lib/components/ReviewBanner.svelte';
 	import Spoilers from '$lib/components/SpoilerSection.svelte';
 
-	$: ({ title, spoilers, siblings } = data);
+	$: ({ title, spoilers, flank } = data);
 </script>
 
 <MetaHead
@@ -17,7 +17,7 @@
 	title={title.short ? title.short : title.jp ? title.jp : title.en}
 />
 
-<Article post={data} header path="src/reviews/{data.slug}.md" {siblings}>
+<Article post={data} header path="src/reviews/{data.slug}.md" {flank}>
 	<div slot="header">
 		<ReviewBanner post={data} />
 
