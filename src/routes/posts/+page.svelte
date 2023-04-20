@@ -11,10 +11,9 @@
 
 	export let data: import('./$types').PageData;
 
-	const store = writable([]);
-
-	let filters = { categories: [], tags: [], sort_by: 'updated' },
-		query: string;
+	const store = writable(data.posts);
+	let filters = { categories: [], tags: [], sort_by: 'updated' };
+	let query = '';
 
 	$: filtered = sieve(filters, data.posts);
 	$: items = sift(query, filtered);

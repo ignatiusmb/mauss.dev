@@ -2,19 +2,18 @@
 	import SearchBar from 'syv/core/SearchBar.svelte';
 	import Pagination from 'syv/core/Pagination.svelte';
 	import AnimatedKey from '$lib/components/AnimatedKey.svelte';
-	import CuratedPost from '$lib/components/CuratedPost.svelte';
 	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import LayoutPicker from '$lib/pages/LayoutPicker.svelte';
+	import CuratedPost from './CuratedPost.svelte';
 
 	import { writable } from 'svelte/store';
 	import { sift, sieve } from '$lib/utils/search';
 
 	export let data: import('./$types').PageData;
 
-	const store = writable([]);
-
-	let query: string;
+	const store = writable(data.list);
 	let filters = { categories: [], tags: [], sort_by: 'updated' };
+	let query = '';
 
 	$: filtered = sieve(filters, data.list);
 	$: items = sift(query, filtered);
