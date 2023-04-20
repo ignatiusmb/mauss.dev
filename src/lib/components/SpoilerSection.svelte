@@ -1,10 +1,11 @@
-<script>
-	/** @type {string} */
-	export let spoilers;
+<script lang="ts">
 	import { slide } from 'svelte/transition';
-	import { duration } from 'syv/options';
+	import { TIME } from 'syv/options';
 	import { navigating } from '$app/stores';
-	/** @type {boolean} */
+
+	export let spoilers: string;
+
+	let show = false;
 	$: show = $navigating ? false : show;
 </script>
 
@@ -24,7 +25,7 @@
 </section>
 
 {#if show}
-	<section class="spoilers" transition:slide={{ duration }}>
+	<section class="spoilers" transition:slide={{ duration: TIME.SLIDE }}>
 		{@html spoilers}
 	</section>
 {/if}

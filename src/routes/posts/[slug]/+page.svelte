@@ -1,10 +1,10 @@
 <script lang="ts">
-	export let data: import('./$types').PageData;
-
-	import MetaHead from '$lib/pages/MetaHead.svelte';
-	import Article from '$lib/pages/Article.svelte';
 	import Link from '$lib/components/Link.svelte';
 	import TagBadge from '$lib/components/TagBadge.svelte';
+	import MetaHead from '$lib/pages/MetaHead.svelte';
+	import Article from '$lib/pages/Article.svelte';
+
+	export let data: import('./$types').PageData;
 </script>
 
 <MetaHead post={data} canonical="posts/{data.slug}" title={data.title} />
@@ -13,7 +13,7 @@
 	post={data}
 	header
 	path="src/posts/{data.date.published}.{data.slug}.md"
-	siblings={data.siblings}
+	flank={data.flank}
 >
 	<svelte:fragment slot="header">
 		<small class="tags">

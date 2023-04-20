@@ -1,10 +1,10 @@
 <script lang="ts">
-	export let data: import('./$types').PageData;
-
-	import { WeavedImage } from 'syv';
+	import WeavedImage from 'syv/core/WeavedImage.svelte';
+	import Link from '$lib/components/Link.svelte';
 	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import Article from '$lib/pages/Article.svelte';
-	import Link from '$lib/components/Link.svelte';
+
+	export let data: import('./$types').PageData;
 </script>
 
 <MetaHead

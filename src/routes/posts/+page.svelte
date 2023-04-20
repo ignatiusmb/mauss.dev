@@ -1,17 +1,19 @@
 <script lang="ts">
-	export let data: import('./$types').PageData;
-
-	import { sift, sieve } from '$lib/utils/search';
-	import { pSlice as store } from '$lib/utils/stores';
-
-	import { SearchBar, Pagination } from 'syv';
+	import SearchBar from 'syv/core/SearchBar.svelte';
+	import Pagination from 'syv/core/Pagination.svelte';
+	import AnimatedKey from '$lib/components/AnimatedKey.svelte';
 	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import LayoutPicker from '$lib/pages/LayoutPicker.svelte';
-	import AnimatedKey from '$lib/components/AnimatedKey.svelte';
-	import PostCard from '$lib/components/PostCard.svelte';
+	import PostCard from './PostCard.svelte';
 
-	let filters = { categories: [], tags: [], sort_by: 'updated' },
-		query: string;
+	import { writable } from 'svelte/store';
+	import { sift, sieve } from '$lib/utils/search';
+
+	export let data: import('./$types').PageData;
+
+	const store = writable(data.posts);
+	let filters = { categories: [], tags: [], sort_by: 'updated' };
+	let query = '';
 
 	$: filtered = sieve(filters, data.posts);
 	$: items = sift(query, filtered);

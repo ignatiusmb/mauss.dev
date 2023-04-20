@@ -4,7 +4,7 @@
 	import { navigating, page } from '$app/stores';
 	const sections = ['about', 'curated', 'posts', 'reviews', 'uses'];
 
-	import { Feather } from 'syv/icons';
+	import Feather from 'syv/icons/Feather.svelte';
 	import Link from '$lib/components/Link.svelte';
 	import NavGrid from '$lib/components/NavGrid.svelte';
 	import NavLink from '$lib/components/NavLink.svelte';
@@ -20,9 +20,9 @@
 <nav class:scrolled>
 	<span on:click={() => (opened = !opened)}>
 		{#if opened}
-			<Feather.X />
+			<Feather icon={import('syv/icons/feather/x')} />
 		{:else}
-			<Feather.Menu />
+			<Feather icon={import('syv/icons/feather/menu')} />
 		{/if}
 	</span>
 
@@ -39,10 +39,10 @@
 	{/if}
 
 	<Link href="/rss.xml" label="Get RSS">
-		<Feather.Rss />
+		<Feather icon={import('syv/icons/feather/rss')} />
 	</Link>
 	<Link href="/help/" label="See help page">
-		<Feather.HelpCircle />
+		<Feather icon={import('syv/icons/feather/help-circle')} />
 	</Link>
 </nav>
 
@@ -66,7 +66,7 @@
 
 		transition: var(--t-duration) var(--t-function);
 		background-color: var(--bg-surface);
-		font-family: var(--aqua-heading);
+		font-family: var(--mrq-heading);
 	}
 
 	nav > span,

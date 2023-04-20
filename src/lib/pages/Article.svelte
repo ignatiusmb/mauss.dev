@@ -1,34 +1,36 @@
 <script lang="ts">
-	type SiblingsProp = null | import('$lib/types').SiblingPair;
+	import ProgressBar from 'syv/core/ProgressBar.svelte';
+	import Feather from 'syv/icons/Feather.svelte';
+	import Link from '$lib/components/Link.svelte';
+	import Siblings from '$lib/components/Siblings.svelte';
+	import TextIcon from '$lib/components/TextIcon.svelte';
+	import Header from './Header.svelte';
+
+	import type { ComponentProps } from 'svelte';
+	import { hydrate } from 'marqua/browser';
+	import { navigating } from '$app/stores';
 
 	export let header = false;
 	export let post: any = null;
 	export let path = '';
-	export let siblings: SiblingsProp = null;
-
-	import { Feather } from 'syv/icons';
-	import { ProgressBar } from 'syv';
-	import Header from './Header.svelte';
-	import Link from '$lib/components/Link.svelte';
-	import Siblings from '$lib/components/Siblings.svelte';
-	import TextIcon from '$lib/components/TextIcon.svelte';
+	export let flank: null | ComponentProps<Siblings> = null;
 </script>
 
 {#if header}
 	<ProgressBar height="4px" />
 {/if}
 
-<main>
+<main use:hydrate={$navigating}>
 	{#if header}
 		<Header {post} {path}>
 			<slot name="header" />
 		</Header>
 
-		{#if post && post.toc.length}
+		{#if post && post.table.length}
 			<section id="objective" class="info-box">
 				<h3>Table of Contents</h3>
 				<ul style="color: #f48fb1">
-					{#each post.toc as { id, title }}
+					{#each post.table as { id, title }}
 						<li style="color: inherit;">
 							<Link href="#{id}">{title}</Link>
 						</li>
@@ -56,14 +58,14 @@
 				on GitHub, any fix or addition is much appreciated!
 				<TextIcon href="https://github.com/alchemauss/content/edit/master/{path}">
 					<span>Edit</span>
-					<Feather.Edit size={17} />
+					<Feather icon={import('syv/icons/feather/edit')} scale={17 / 16} />
 				</TextIcon>
 			</p>
 		</section>
 	{/if}
 
-	{#if siblings}
-		<Siblings {...siblings} />
+	{#if flank}
+		<Siblings {...flank} />
 	{/if}
 </main>
 
@@ -162,8 +164,8 @@
 	main :global(h2),
 	main :global(h3) {
 		scroll-margin-top: 4rem;
-		font-weight: bold;
-		font-family: var(--aqua-heading);
+		font-weight: 500;
+		font-family: var(--mrq-heading);
 	}
 	main :global(h2) {
 		margin-top: 1.5em;
@@ -239,11 +241,11 @@
 	main :global(figure figcaption) {
 		padding: 0.5em 0.25em 0;
 		text-align: center;
-		font: 90% var(--aqua-monospace);
+		font: 90% var(--font-monospace);
 	}
 	main :global(details summary) {
 		padding: 0 0.25em;
-		font-family: var(--aqua-monospace);
+		font-family: var(--font-monospace);
 	}
 	main :global(details > div.captioned),
 	main :global(figure > div.captioned) {
@@ -277,11 +279,11 @@
 		width: 100%;
 	}
 
-	main :global(.aqua.code-box) {
+	main :global(.mrq[data-mrq='pre']) {
 		line-height: unset;
 		font-size: 0.8rem;
 	}
-	main :global(.aqua.code-header) {
+	main :global(.mrq[data-mrq='header']) {
 		line-height: 1;
 	}
 

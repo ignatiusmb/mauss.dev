@@ -1,33 +1,28 @@
 <script lang="ts">
-	export let data: import('./$types').PageData;
-
-	// import { debounce } from 'mauss';
-	// import { qpm } from 'mauss/web';
-	import { prerendering } from '$app/environment';
-	// import { goto } from '$app/navigation';
-	import { page } from '$app/stores';
-	import { sift, sieve } from '$lib/utils/search';
-	import { rSlice as store } from '$lib/utils/stores';
-
-	import { SearchBar, Pagination } from 'syv';
+	import SearchBar from 'syv/core/SearchBar.svelte';
+	import Pagination from 'syv/core/Pagination.svelte';
 	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import LayoutPicker from '$lib/pages/LayoutPicker.svelte';
-	import AnimatedKey from '$lib/components/AnimatedKey.svelte';
-	import ReviewCard from '$lib/components/ReviewCard.svelte';
+	import ReviewCard from './ReviewCard.svelte';
 
-	// const share = debounce((url: string) => {
-	// 	goto(url, { replaceState: true, keepfocus: true });
-	// }, 500);
+	import { TIME } from 'syv/options';
+	import { flip } from 'svelte/animate';
+	import { writable } from 'svelte/store';
+	import { scale } from 'svelte/transition';
+	import { building } from '$app/environment';
+	import { page } from '$app/stores';
+	import { sift, sieve } from '$lib/utils/search';
 
-	let search = (!prerendering && $page.url.searchParams.get('q')) || '';
+	export let data: import('./$types').PageData;
+
+	const store = writable(data.reviews);
+	let search = (!building && $page.url.searchParams.get('q')) || '';
 	let query = (search && search.replace(/\+/g, ' ')) || '';
 	let filters = { categories: [], genres: [], verdict: [], sort_by: 'updated' };
 
 	$: filtered = sieve(filters, data.reviews);
 	$: items = sift(query, filtered);
-
 	// $: shareable = qpm({ q: query }).replace(/(%20)+/g, '+');
-	// $: shareable && share(shareable);
 </script>
 
 <MetaHead
@@ -45,7 +40,28 @@
 		<Pagination {store} {items} bound={12} increment={12} />
 	</svelte:fragment>
 
-	<AnimatedKey items={$store} component={ReviewCard}>
-		<h2 slot="empty">There are no matching {query ? 'titles' : 'filters'}</h2>
-	</AnimatedKey>
+	{#each $store as post (post.slug)}
+		<div animate:flip={{ duration: TIME.SLIDE }} transition:scale|local={{ duration: TIME.SLIDE }}>
+			<ReviewCard {post} />
+		</div>
+	{:else}
+		<h2>There are no matching {query ? 'titles' : 'filters'}</h2>
+	{/each}
 </LayoutPicker>
+
+<style>
+	div {
+		display: grid;
+	}
+	div:not(.empty) {
+		border-radius: var(--b-radius);
+		box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+			0 1px 3px 0 rgba(0, 0, 0, 0.12);
+		background-color: var(--bg-overlay);
+	}
+
+	h2 {
+		grid-column: 1 / -1;
+		text-align: center;
+	}
+</style>

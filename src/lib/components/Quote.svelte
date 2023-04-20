@@ -1,8 +1,10 @@
 <script lang="ts">
-	export let quotes: import('$lib/types').Quote[];
+	import GradientBorder from 'syv/core/GradientBorder.svelte';
+
 	import { random } from 'mauss/utils';
 	import { fly } from 'svelte/transition';
-	import { GradientBorder } from 'syv';
+
+	export let quotes: ReturnType<typeof import('$lib/content/quotes').all>;
 
 	let quoteIndex = random.int(quotes.length);
 	$: newQuote = quotes[quoteIndex];

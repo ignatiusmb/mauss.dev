@@ -47,11 +47,11 @@
 <style>
 	h1 {
 		font-size: clamp(2rem, 6vw, 3rem);
-		font-weight: bold;
+		font-weight: 500;
 	}
 	h2 {
 		margin-top: 0.5em;
 		font-size: clamp(1.5rem, 4vw, 2rem);
-		font-weight: bold;
+		font-weight: 500;
 	}
 </style>

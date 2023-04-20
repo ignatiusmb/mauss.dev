@@ -1,8 +1,8 @@
 <script lang="ts">
-	export let post: import('$lib/types').Review;
-
+	import Image from 'syv/core/Image.svelte';
 	import { dt } from 'mauss/utils';
-	import { Image } from 'syv';
+
+	export let post: import('$lib/content/reviews').Review;
 
 	$: ({ backdrop, title, rating, composed, seen } = post);
 </script>

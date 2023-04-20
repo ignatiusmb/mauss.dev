@@ -1,5 +1,5 @@
 <script>
-	import { Feather } from 'syv/icons';
+	import Feather from 'syv/icons/Feather.svelte';
 	import Link from '$lib/components/Link.svelte';
 </script>
 
@@ -12,33 +12,33 @@
 		</em>
 	</section>
 
-	<section class="social-links">
+	<section class="social">
 		<Link href="https://www.facebook.com/ignatiusmb" label="facebook profile">
-			<Feather.Facebook />
+			<Feather icon={import('syv/icons/feather/facebook')} />
 		</Link>
 		<Link href="https://www.instagram.com/ignatiusmb" label="instagram profile">
-			<Feather.Instagram />
+			<Feather icon={import('syv/icons/feather/instagram')} />
 		</Link>
 		<Link href="https://www.linkedin.com/in/ignatiusmb" label="linkedin profile">
-			<Feather.Linkedin />
+			<Feather icon={import('syv/icons/feather/linkedin')} />
 		</Link>
 		<Link href="https://twitter.com/alchemauss" label="twitter profile">
-			<Feather.Twitter />
+			<Feather icon={import('syv/icons/feather/twitter')} />
 		</Link>
 		<Link href="https://keybase.io/mauss" label="keybase profile">
-			<Feather.Key />
+			<Feather icon={import('syv/icons/feather/key')} />
 		</Link>
 		<Link href="https://github.com/ignatiusmb" label="github profile">
-			<Feather.Github />
+			<Feather icon={import('syv/icons/feather/github')} />
 		</Link>
 		<Link href="https://gitlab.com/ignatiusmb" label="gitlab profile">
-			<Feather.Gitlab />
+			<Feather icon={import('syv/icons/feather/gitlab')} />
 		</Link>
 		<Link href="https://twitch.tv/alchemauss" label="twitch profile">
-			<Feather.Twitch />
+			<Feather icon={import('syv/icons/feather/twitch')} />
 		</Link>
 		<Link href="https://www.youtube.com/user/Ignapure/playlists" label="youtube playlist profile">
-			<Feather.Youtube />
+			<Feather icon={import('syv/icons/feather/youtube')} />
 		</Link>
 	</section>
 
@@ -48,7 +48,7 @@
 			Handcrafted with ❤️ using
 			<Link href="https://kit.svelte.dev/">SvelteKit</Link>
 			&plus;
-			<Link href="https://aqua.mauss.dev/">Aqua</Link>
+			<Link href="https://marqua.mauss.dev/">Marqua</Link>
 		</p>
 	</section>
 </footer>
@@ -56,53 +56,53 @@
 <style>
 	footer {
 		width: 100%;
-		max-width: 53em;
+		max-width: 53rem;
 		position: relative;
 		display: grid;
-		gap: 0.5em;
-		padding: 3em 1em;
-		margin: auto auto 3em;
+		gap: 0.5rem;
+		padding: 3rem 1rem;
+		margin: auto auto 3rem;
 		text-align: center;
 		line-height: 1.5;
-		font-family: var(--aqua-monospace);
-		font-size: clamp(0.8em, 3vw, 1em);
+		font-family: var(--font-monospace);
+		font-size: clamp(0.8rem, 3vw, 1rem);
 	}
-	.social-links {
+	.social {
 		width: 100%;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		padding: 0 0 0.5em;
+		padding-bottom: 0.75rem;
 		margin: auto;
 	}
-	.social-links > :global(a) {
-		flex: 0 1 5em;
-		padding-top: 1em;
+	.social > :global(a) {
+		flex: 0 1 5rem;
+		padding-top: 1rem;
 	}
-	.social-links :global(a),
-	.social-links :global(a:visited) {
+	.social :global(a),
+	.social :global(a:visited) {
 		transition: var(--t-duration);
 		transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 		color: var(--fg-surface);
 	}
-	.social-links :global(a:hover),
-	.social-links :global(a:focus) {
+	.social :global(a:hover),
+	.social :global(a:focus) {
 		transition: var(--t-duration);
 		transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 		color: var(--theme-secondary);
 	}
-	.social-links :global(a:hover:nth-child(odd)),
-	.social-links :global(a:focus:nth-child(odd)) {
+	.social :global(a:hover:nth-child(odd)),
+	.social :global(a:focus:nth-child(odd)) {
 		transform: rotate(6deg) scale(1.2) translateY(-20%);
 	}
-	.social-links :global(a:hover:nth-child(even)),
-	.social-links :global(a:focus:nth-child(even)) {
+	.social :global(a:hover:nth-child(even)),
+	.social :global(a:focus:nth-child(even)) {
 		transform: rotate(-6deg) scale(1.2) translateY(-20%);
 	}
 	section:last-of-type {
 		display: grid;
 		grid-template-rows: repeat(2, 1fr);
 		place-items: center;
-		gap: 0.5em;
+		gap: 0.5rem;
 	}
 </style>

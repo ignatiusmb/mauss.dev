@@ -66,7 +66,7 @@ section.info-box#objective h3 {
 section.info-box[data-info='objective'] h4,
 section.info-box#objective h4 {
 	margin: 1em 0 0.5em;
-	font-weight: bold;
+	font-weight: 500;
 }
 section.info-box[data-info='objective'] var,
 section.info-box[data-info='objective'] code,
