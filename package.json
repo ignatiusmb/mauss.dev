@@ -10,7 +10,7 @@
     "check:svelte": "svelte-check src --tsconfig ./tsconfig.json",
     "check:content": "cd content && markdownlint sites/**/*.md"
   },
-  "packageManager": "pnpm@7.28.0",
+  "packageManager": "pnpm@8.3.1",
   "prettier": "mauss/prettier.json",
   "devDependencies": {
     "@ignatiusmb/styles": "^0.1.1",
