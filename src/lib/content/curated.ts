@@ -13,44 +13,50 @@ export function init() {
 	});
 }
 
-export interface Curated {
+interface FrontMatter {
 	slug: string;
-
 	title: string;
 	category: string;
 	tags?: string[];
-	date: {
-		updated: string;
-		published?: string;
-	};
+	date: string | Date;
 
 	content?: string;
 }
 
-export function all(): Curated[] {
+export function all() {
 	const curated = traverse(
 		{ entry: 'content/sites/dev.mauss/curated', depth: -1 },
-		({ breadcrumb: [filename, folder], frontMatter }) => {
-			if (frontMatter.draft || filename.includes('draft')) return;
-			return {
-				...frontMatter,
+		({ breadcrumb: [filename, folder], buffer, parse }) => {
+			const { metadata } = parse(buffer.toString('utf-8'));
+			if (metadata.draft || filename.includes('draft')) return;
+			const specified: FrontMatter = {
 				slug: `${folder}/${filename.split('.')[0]}`,
+				title: metadata.title,
 				category: folder,
-				content: '',
+				date: metadata.date,
 			};
+			return { ...metadata, ...specified };
 		}
 	);
 
-	return curated as any;
+	return curated;
 }
 
-export function get(category: string, slug: string): Curated {
+export function get(category: string, slug: string) {
 	const content = compile(
 		`content/sites/dev.mauss/curated/${category}/${slug}.md`,
-		({ frontMatter, content }) => {
-			return { ...frontMatter, slug: `${category}/${slug}`, category, content };
+		({ buffer, parse }) => {
+			const { content, metadata } = parse(buffer.toString('utf-8'));
+
+			const specified: FrontMatter = {
+				slug: `${category}/${slug}`,
+				title: metadata.title,
+				category,
+				date: metadata.date,
+			};
+			return { ...metadata, ...specified, content };
 		}
 	);
 
-	return content as any;
+	return content;
 }

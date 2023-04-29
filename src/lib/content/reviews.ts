@@ -47,25 +47,25 @@ export interface Review {
 export function all() {
 	return traverse(
 		{ entry: 'content/sites/dev.mauss/reviews', depth: -1 },
-		({ breadcrumb: [filename, folder], frontMatter }) => {
-			if (filename.includes('draft') || frontMatter.draft) return;
+		({ breadcrumb: [filename, folder], buffer, parse }) => {
+			const { metadata } = parse(buffer.toString('utf-8'));
+			if (filename.includes('draft') || metadata.draft) return;
 
-			frontMatter = frontMatter as Review;
-			if (Array.isArray(frontMatter.seen.first)) {
-				const last = frontMatter.seen.first.length - 1;
-				frontMatter.seen.first = frontMatter.seen.first[last];
+			if (Array.isArray(metadata.seen.first)) {
+				const last = metadata.seen.first.length - 1;
+				metadata.seen.first = metadata.seen.first[last];
 			}
-			if (frontMatter.seen.last && Array.isArray(frontMatter.seen.last)) {
-				const last = frontMatter.seen.last.length - 1;
-				frontMatter.seen.last = frontMatter.seen.last[last];
+			if (metadata.seen.last && Array.isArray(metadata.seen.last)) {
+				const last = metadata.seen.last.length - 1;
+				metadata.seen.last = metadata.seen.last[last];
 			}
 
 			return {
-				...frontMatter,
+				...metadata,
 				slug: `${folder}/${filename.split('.')[0]}`,
 				category: folder,
-				rating: countAverageRating(frontMatter.rating),
-				verdict: frontMatter.verdict || 'pending',
+				rating: countAverageRating(metadata.rating),
+				verdict: metadata.verdict || 'pending',
 			} as Review;
 		},
 		chain({
@@ -83,30 +83,30 @@ export function all() {
 export function get(category: string, slug: string) {
 	const body = compile(
 		`content/sites/dev.mauss/reviews/${category}/${slug}.md`,
-		({ frontMatter, content }) => {
-			frontMatter = frontMatter as Review;
-			if (Array.isArray(frontMatter.seen.first)) {
-				const last = frontMatter.seen.first.length - 1;
-				frontMatter.seen.first = frontMatter.seen.first[last];
+		({ buffer, parse }) => {
+			const { content, metadata } = parse(buffer.toString('utf-8'));
+			if (Array.isArray(metadata.seen.first)) {
+				const last = metadata.seen.first.length - 1;
+				metadata.seen.first = metadata.seen.first[last];
 			}
-			if (frontMatter.seen.last && Array.isArray(frontMatter.seen.last)) {
-				const last = frontMatter.seen.last.length - 1;
-				frontMatter.seen.last = frontMatter.seen.last[last];
+			if (metadata.seen.last && Array.isArray(metadata.seen.last)) {
+				const last = metadata.seen.last.length - 1;
+				metadata.seen.last = metadata.seen.last[last];
 			}
 
-			const dStart = +new Date(frontMatter.date.updated || frontMatter.date.published);
-			const composed = (dStart - +new Date(frontMatter.seen.first)) / 24 / 60 / 60 / 1000;
+			const dStart = +new Date(metadata.date.updated || metadata.date.published);
+			const composed = (dStart - +new Date(metadata.seen.first)) / 24 / 60 / 60 / 1000;
 
 			const review: Record<string, any> = {
-				...frontMatter,
+				...metadata,
 				category,
 				composed,
 				slug: `${category}/${slug}`,
-				rating: countAverageRating(frontMatter.rating),
-				verdict: frontMatter.verdict || 'pending',
+				rating: countAverageRating(metadata.rating),
+				verdict: metadata.verdict || 'pending',
 			};
 
-			const [article, closing] = (content as string).split(/^## \$CLOSING/m);
+			const [article, closing] = content.split(/^## \$CLOSING/m);
 			if (closing) review.closing = marker.render(contentParser(review, closing));
 
 			const [summary, spoilers] = article.split(/^## \$SPOILERS/m);

@@ -5,13 +5,10 @@
 	import { dt } from 'mauss/utils';
 
 	export let post: import('$lib/content/posts').Post;
-
-	const { published, updated } = post.date;
-	const date = (updated !== published && updated) || published;
 </script>
 
 <section>
-	<Image src={post.image ? post.image.en : ''} alt={post.title} overlay>
+	<Image src={post.thumbnail || ''} alt={post.title} overlay>
 		<span>{post.title}</span>
 	</Image>
 
@@ -23,10 +20,7 @@
 	</div>
 
 	<aside>
-		<small>
-			{#if updated && updated !== published}Updated{/if}
-			<span>{dt.format(date)('DD MMMM YYYY')}</span>
-		</small>
+		<time datetime={post.date}>{dt.format(post.date)('DD MMMM YYYY')}</time>
 		<small>{post.estimate} min read</small>
 		<Link href="/posts/{post.slug}/" style="primary">READ</Link>
 	</aside>
@@ -64,7 +58,10 @@
 		padding-left: 1em;
 		border-radius: var(--b-radius);
 	}
-	aside small:not(:first-of-type)::before {
+	aside time {
+		font-size: 0.8rem;
+	}
+	aside small::before {
 		content: '•';
 		color: var(--theme-secondary);
 		margin-right: 0.5rem;
