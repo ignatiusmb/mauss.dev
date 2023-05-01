@@ -23,8 +23,8 @@ devDependencies:
     specifier: ^0.33.0
     version: 0.33.0
   marqua:
-    specifier: ^0.4.4
-    version: 0.4.4
+    specifier: ^0.5.0
+    version: 0.5.0
   mauss:
     specifier: ^0.4.11
     version: 0.4.11
@@ -1257,8 +1257,8 @@ packages:
       markdown-it: 13.0.1
     dev: true
 
-  /marqua@0.4.4:
-    resolution: {integrity: sha512-neQNTEeT1tqeR/WUwH/kFm8eU8eLyFoBtwIUeF07C2LvywSdKeCLBRt2Bz3Em4UHfjf3qsfxm1xoxyn0lKLDew==}
+  /marqua@0.5.0:
+    resolution: {integrity: sha512-aqIg/lVoXhlDJ9FiGDxYGbZBf8O0xuNvMeP7ZmF31Eii4SBc2UgZQw0apcuMSGDGBIGeeBAJmZzG4J+Xk0sdmQ==}
     engines: {node: '>=14.8'}
     dependencies:
       markdown-it: 13.0.1
