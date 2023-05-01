@@ -56,7 +56,10 @@ export function get(category: string, slug: string) {
 			};
 			return { ...metadata, ...specified, content };
 		}
-	);
+	)!;
 
 	return content;
 }
+
+export type Curated = ReturnType<typeof get>;
+export type CuratedIndex = ReturnType<typeof all>;

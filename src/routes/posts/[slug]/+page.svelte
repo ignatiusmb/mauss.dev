@@ -9,12 +9,7 @@
 
 <MetaHead post={data} canonical="posts/{data.slug}" title={data.title} />
 
-<Article
-	post={data}
-	header
-	path="src/posts/{data.date.published}.{data.slug}.md"
-	flank={data.flank}
->
+<Article post={data} header path="sites/dev.mauss/posts/{data.slug}/+article.md" flank={data.flank}>
 	<svelte:fragment slot="header">
 		<small class="tags">
 			{#each data.tags as tag}

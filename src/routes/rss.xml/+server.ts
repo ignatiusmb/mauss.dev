@@ -4,34 +4,34 @@ import RSS from '$lib/utils/rss';
 
 const items = traverse(
 	{ entry: 'content/sites/dev.mauss', depth: -1 },
-	({ frontMatter, breadcrumb }) => {
+	({ breadcrumb, buffer, parse }) => {
 		if (breadcrumb[0].includes('draft')) return;
 
+		const { metadata } = parse(buffer.toString('utf-8'));
+		const { title, date, description: info } = metadata;
+		const [file, folder] = breadcrumb;
 		if (breadcrumb.includes('curated')) {
-			const { title, date } = frontMatter;
-			const [filename, folder] = breadcrumb;
+			const slug = `curated/${folder}/${file.replace('.md', '')}`;
 			return {
+				slug,
 				title,
-				slug: `curated/${folder}/${filename.split('.')[0]}`,
 				description: `${title} curated by Alchemauss`,
 				date: (date.updated || date.published) as string,
 			};
 		} else if (breadcrumb.includes('reviews')) {
-			const { title, date } = frontMatter;
-			const [filename, folder] = breadcrumb;
+			const slug = `reviews/${folder}/${file.replace('.md', '')}`;
 			return {
+				slug,
 				title: typeof title === 'string' ? title : title.en,
-				slug: `reviews/${folder}/${filename.split('.')[0]}`,
 				description: `${typeof title === 'string' ? title : title.en} reviewed by Alchemauss`,
 				date: (date.updated || date.published) as string,
 			};
 		} else if (breadcrumb.includes('posts')) {
-			const { title, description: info, date: dt } = frontMatter;
-			const [published, slug] = breadcrumb[0].split('.');
+			const slug = `posts/${file.replace('.md', '')}`;
 			const description = info || 'A post by Alchemauss';
-			const date = ((dt && dt.updated) as string) || published;
-			return { title, slug: `posts/${slug}`, description, date };
-		} else return undefined;
+			return { slug, title, description, date };
+		}
+		return;
 	},
 	(items) => items.sort((x, y) => compare.date(x.date, y.date) || compare.string(x.title, y.title))
 );

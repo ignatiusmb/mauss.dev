@@ -4,9 +4,6 @@ import { chain } from 'marqua/transform';
 import { regexp } from 'mauss';
 import { optimize } from './image';
 
-export type Post = ReturnType<typeof get>;
-export type PostIndex = ReturnType<typeof all>;
-
 interface FrontMatter {
 	slug: string;
 	title: string;
@@ -83,3 +80,6 @@ export function get(slug: string) {
 
 	return { ...article, content };
 }
+
+export type Post = ReturnType<typeof get>;
+export type PostIndex = ReturnType<typeof all>;

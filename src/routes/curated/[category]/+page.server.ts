@@ -5,6 +5,6 @@ export const load: import('./$types').PageServerLoad = async ({ params }) => {
 	const content = curated
 		.all()
 		.filter((p) => p.category === params.category)
-		.sort(compare.key('date.updated', compare.date));
+		.sort(compare.key('date', compare.date));
 	return { curated: content, category: params.category };
 };
