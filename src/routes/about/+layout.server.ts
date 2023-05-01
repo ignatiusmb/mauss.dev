@@ -14,5 +14,11 @@ export const load: import('./$types').PageServerLoad = async () => {
 			)
 	);
 
-	return { content };
+	return {
+		content,
+		meta: {
+			title: 'About',
+			description: 'Who, what, and why?',
+		},
+	};
 };

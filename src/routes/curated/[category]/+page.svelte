@@ -1,20 +1,10 @@
 <script lang="ts">
-	export let data: import('./$types').PageData;
-
+	import Link from '$lib/components/Link.svelte';
 	import { scale } from 'svelte/transition';
 	import { flip } from 'svelte/animate';
 
-	import MetaHead from '$lib/pages/MetaHead.svelte';
-	import Link from '$lib/components/Link.svelte';
+	export let data: import('./$types').PageData;
 </script>
-
-<MetaHead
-	canonical="curated"
-	title="Curated"
-	description="Curated content for {data.category} stuff."
->
-	<link rel="alternate" href="/rss.xml" type="application/rss+xml" />
-</MetaHead>
 
 <header>
 	<h1>Curated by Alchemauss</h1>

@@ -23,5 +23,10 @@ export const load: import('./$types').PageServerLoad = async () => {
 				rating: 'Rating',
 			},
 		},
+		meta: {
+			canonical: 'reviews',
+			title: 'Reviews',
+			description: 'Personalized reviews for all kinds of anime, books, movies, shows, etc.',
+		},
 	};
 };

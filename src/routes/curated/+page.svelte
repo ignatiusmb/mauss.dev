@@ -2,7 +2,6 @@
 	import SearchBar from 'syv/core/SearchBar.svelte';
 	import Pagination from 'syv/core/Pagination.svelte';
 	import AnimatedKey from '$lib/components/AnimatedKey.svelte';
-	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import LayoutPicker from '$lib/pages/LayoutPicker.svelte';
 	import CuratedPost from './CuratedPost.svelte';
 
@@ -18,14 +17,6 @@
 	$: filtered = sieve(filters, data.list);
 	$: items = sift(query, filtered);
 </script>
-
-<MetaHead
-	canonical="curated"
-	title="Curated"
-	description="Curated content for all kinds of programming, lifestyle, and many more."
->
-	<link rel="alternate" href="/rss.xml" type="application/rss+xml" />
-</MetaHead>
 
 <LayoutPicker header itemSize="18em">
 	<svelte:fragment slot="header">

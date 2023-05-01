@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Image from 'syv/core/Image.svelte';
-	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import Article from '$lib/pages/Article.svelte';
 	import Link from '$lib/components/Link.svelte';
 	import Navigation from '$lib/components/Navigation.svelte';
@@ -20,8 +19,6 @@
 
 	let scrolled = 0;
 </script>
-
-<MetaHead title="Ignatius Bagussuputra" description="Alchemauss - Mauss Studio" />
 
 <div class="fixed-nav" class:scrolled>
 	<Navigation bind:scrolled />

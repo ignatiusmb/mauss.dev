@@ -1,18 +1,10 @@
 <script lang="ts">
 	import WeavedImage from 'syv/core/WeavedImage.svelte';
 	import Link from '$lib/components/Link.svelte';
-	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import Article from '$lib/pages/Article.svelte';
 
 	export let data: import('./$types').PageData;
 </script>
-
-<MetaHead
-	post={data.article}
-	canonical="about"
-	title="About"
-	description="Get to know Ignatius Bagussuputra from his About page."
-/>
 
 <Article post={data.article}>
 	<WeavedImage src="/assets/profile/mauss.jpeg" alt="Mauss Profile" />

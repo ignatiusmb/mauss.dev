@@ -1,14 +1,7 @@
 <script>
-	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import Article from '$lib/pages/Article.svelte';
 	import Link from '$lib/components/Link.svelte';
 </script>
-
-<MetaHead
-	canonical="disclaimer"
-	title="Disclaimer"
-	description="Disclaimer page for all the content in this website."
-/>
 
 <Article>
 	<section class="info-box warning">
