@@ -18,6 +18,10 @@ const config = {
 
 		prerender: {
 			handleMissingId: 'warn',
+			handleHttpError({ path, message }) {
+				if (path.endsWith('.webp')) return;
+				throw new Error(message);
+			},
 		},
 
 		typescript: {
