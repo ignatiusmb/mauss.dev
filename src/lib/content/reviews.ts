@@ -4,7 +4,7 @@ import { chain } from 'marqua/transform';
 import { tryNumber } from 'mauss/utils';
 import { compare } from 'mauss';
 
-export interface Review {
+interface FrontMatter {
 	slug: string;
 	category: string;
 	composed: number;
@@ -37,9 +37,6 @@ export interface Review {
 		mal?: string;
 	};
 
-	estimate: number;
-	table: any;
-	content?: string;
 	spoilers?: string;
 	closing?: string;
 }
@@ -51,22 +48,29 @@ export function all() {
 			const { metadata } = parse(buffer.toString('utf-8'));
 			if (filename.includes('draft') || metadata.draft) return;
 
-			if (Array.isArray(metadata.seen.first)) {
-				const last = metadata.seen.first.length - 1;
-				metadata.seen.first = metadata.seen.first[last];
-			}
-			if (metadata.seen.last && Array.isArray(metadata.seen.last)) {
-				const last = metadata.seen.last.length - 1;
-				metadata.seen.last = metadata.seen.last[last];
-			}
-
-			return {
-				...metadata,
-				slug: `${folder}/${filename.split('.')[0]}`,
+			const specified: FrontMatter = {
+				slug: `${folder}/${filename.replace(/\.[^/.]+$/, '')}`,
 				category: folder,
+				composed: metadata.composed,
+				released: metadata.released,
+				title: metadata.title,
+				genres: metadata.genres,
 				rating: countAverageRating(metadata.rating),
 				verdict: metadata.verdict || 'pending',
-			} as Review;
+				completed: metadata.completed,
+				seen: {
+					first: Array.isArray(metadata.seen.first)
+						? metadata.seen.first[metadata.seen.first.length - 1]
+						: metadata.seen.first,
+					last: Array.isArray(metadata.seen.last)
+						? metadata.seen.last[metadata.seen.last.length - 1]
+						: metadata.seen.last,
+				},
+				date: metadata.date,
+				image: metadata.image,
+			};
+
+			return { ...metadata, ...specified };
 		},
 		chain({
 			base: 'reviews/',
@@ -97,23 +101,43 @@ export function get(category: string, slug: string) {
 			const dStart = +new Date(metadata.date.updated || metadata.date.published);
 			const composed = (dStart - +new Date(metadata.seen.first)) / 24 / 60 / 60 / 1000;
 
-			const review: Record<string, any> = {
+			const specified: FrontMatter = {
 				...metadata,
+				slug: `${category}/${slug}`,
 				category,
 				composed,
-				slug: `${category}/${slug}`,
+				released: metadata.released,
+				title: metadata.title,
+				genres: metadata.genres,
 				rating: countAverageRating(metadata.rating),
 				verdict: metadata.verdict || 'pending',
+				completed: metadata.completed,
+				seen: {
+					first: Array.isArray(metadata.seen.first)
+						? metadata.seen.first[metadata.seen.first.length - 1]
+						: metadata.seen.first,
+					last: Array.isArray(metadata.seen.last)
+						? metadata.seen.last[metadata.seen.last.length - 1]
+						: metadata.seen.last,
+				},
+				date: metadata.date,
+				image: metadata.image,
 			};
 
+			// TODO: separate into their own files
 			const [article, closing] = content.split(/^## \$CLOSING/m);
-			if (closing) review.closing = marker.render(contentParser(review, closing));
-
+			if (closing) {
+				specified.closing = marker.render(contentParser(specified, closing));
+			}
 			const [summary, spoilers] = article.split(/^## \$SPOILERS/m);
-			if (spoilers) review.spoilers = marker.render(contentParser(review, spoilers));
+			if (spoilers) {
+				specified.spoilers = marker.render(contentParser(specified, spoilers));
+			}
 
-			review.content = contentParser(review, summary);
-			return review as Review;
+			return {
+				...specified,
+				content: contentParser(specified, summary),
+			};
 		}
 	);
 
@@ -136,3 +160,6 @@ function countAverageRating(ratings?: string[] | number): number | undefined {
 	const total = ratings.reduce((acc, cur) => +cur + acc, 0);
 	return Math.round((total / ratings.length + Number.EPSILON) * 100) / 100;
 }
+
+export type Review = ReturnType<typeof get>;
+export type ReviewIndex = ReturnType<typeof all>;

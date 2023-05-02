@@ -23,8 +23,7 @@ export function all() {
 	const thumbnails: Record<string, string> = {};
 	const contents = traverse(
 		{ entry: 'content/sites/dev.mauss/posts', depth: 1 },
-		({ breadcrumb, buffer, parse }) => {
-			const [file, slug] = breadcrumb;
+		({ breadcrumb: [file, slug], buffer, parse }) => {
 			if (file !== '+article.md') {
 				if (!/\.(jpe?g|png|svg)$/.test(file)) return;
 				mkdirSync(`${ROOT}/uploads/posts/${slug}`, { recursive: true });

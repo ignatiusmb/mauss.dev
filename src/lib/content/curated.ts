@@ -18,19 +18,17 @@ interface FrontMatter {
 	title: string;
 	category: string;
 	tags?: string[];
-	date: string | Date;
-
-	content?: string;
+	date: string;
 }
 
 export function all() {
 	const curated = traverse(
 		{ entry: 'content/sites/dev.mauss/curated', depth: -1 },
-		({ breadcrumb: [filename, folder], buffer, parse }) => {
+		({ breadcrumb: [file, folder], buffer, parse }) => {
 			const { metadata } = parse(buffer.toString('utf-8'));
-			if (metadata.draft || filename.includes('draft')) return;
+			if (metadata.draft || file.includes('draft')) return;
 			const specified: FrontMatter = {
-				slug: `${folder}/${filename.split('.')[0]}`,
+				slug: `${folder}/${file.replace(/\.[^/.]+$/, '')}`,
 				title: metadata.title,
 				category: folder,
 				date: metadata.date,

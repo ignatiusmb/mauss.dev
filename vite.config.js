@@ -5,7 +5,7 @@ import * as md from './src/lib/content';
 export default defineConfig(({ command }) => {
 	if (command === 'build') {
 		for (const key in md) {
-			md[key].all();
+			void md[key].all();
 		}
 	}
 
