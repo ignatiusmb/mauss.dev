@@ -26,10 +26,12 @@ export function all() {
 		({ breadcrumb, buffer, parse }) => {
 			const [file, slug] = breadcrumb;
 			if (file !== '+article.md') {
-				if (!file.startsWith('thumbnail.')) return;
+				if (!/\.(jpe?g|png|svg)$/.test(file)) return;
 				mkdirSync(`${ROOT}/uploads/posts/${slug}`, { recursive: true });
-				thumbnails[slug] = `/uploads/posts/${slug}/thumbnail.webp`;
-				return void optimize(buffer).toFile(ROOT + thumbnails[slug]);
+				const name = file.replace(/\.[^/.]+$/, '.webp');
+				const path = `/uploads/posts/${slug}/${name}`;
+				if (file.startsWith('thumbnail.')) thumbnails[slug] = path;
+				return void optimize(buffer).toFile(ROOT + path);
 			}
 
 			const { metadata } = parse(buffer.toString('utf-8'));
