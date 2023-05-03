@@ -6,12 +6,7 @@
 	export let data: import('./$types').PageData;
 </script>
 
-<Article
-	header
-	post={data.article}
-	path="src/posts/{data.article.date.published}.{data.article.slug}.md"
-	flank={data.article.flank}
->
+<Article post={data} header path="sites/dev.mauss/posts/{data.slug}/+article.md" flank={data.flank}>
 	<svelte:fragment slot="header">
 		<small class="tags">
 			{#each data.article.tags as tag}

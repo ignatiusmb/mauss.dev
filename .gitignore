@@ -4,3 +4,6 @@ node_modules
 /build
 
 .DS_Store
+
+# generated / copied files
+/static/uploads 

@@ -3,9 +3,10 @@ import { traverse } from 'marqua/fs';
 export const load: import('./$types').PageServerLoad = async () => {
 	const content = traverse(
 		{ entry: 'content/sites/dev.mauss/about' },
-		({ frontMatter, content, breadcrumb: [filename] }) => {
+		({ breadcrumb: [filename], buffer, parse }) => {
 			const [slug] = filename.split('.');
-			return { slug, date: frontMatter.date, content };
+			const { content, metadata } = parse(buffer.toString('utf-8'));
+			return { slug, date: metadata.date, content };
 		},
 		(parsed) =>
 			parsed.reduce(
