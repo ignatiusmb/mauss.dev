@@ -7,7 +7,7 @@
 
 	import { capitalize } from 'mauss/utils';
 
-	export let post: import('$lib/content/reviews').Review;
+	export let post: import('$lib/content/reviews').ReviewIndex[number];
 
 	const disabled = !post.rating || post.verdict === 'pending';
 </script>

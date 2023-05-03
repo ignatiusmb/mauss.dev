@@ -139,7 +139,7 @@ export function get(category: string, slug: string) {
 				content: contentParser(specified, summary),
 			};
 		}
-	);
+	)!;
 
 	return body;
 }
