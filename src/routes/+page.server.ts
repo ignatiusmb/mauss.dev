@@ -6,7 +6,7 @@ export const load: import('./$types').PageServerLoad = async () => {
 
 	return {
 		quotes: content[0].slice(0, content[0].length / 2),
-		curated: content[1].sort(compare.key('date.updated', compare.date)).slice(0, 4),
+		curated: content[1].sort(compare.key('date', compare.date)).slice(0, 4),
 		posts: content[2].slice(0, 4),
 		reviews: content[3].filter((x) => x.rating && x.verdict !== 'pending').slice(0, 4),
 	};

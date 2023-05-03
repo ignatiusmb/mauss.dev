@@ -1,80 +1,86 @@
-import { existsSync } from 'fs';
-import { join } from 'path';
+import { mkdirSync } from 'fs';
 import { traverse } from 'marqua/fs';
 import { chain } from 'marqua/transform';
+import { regexp } from 'mauss';
+import { optimize } from './image';
 
-export type Post = ReturnType<typeof get>;
-export type PostIndex = ReturnType<typeof all>;
-
-export interface frontMatter {
+interface FrontMatter {
 	slug: string;
 	title: string;
 	description?: string;
 	category: string;
 	tags: string[];
-	date: {
-		published: string | Date;
-		updated?: string | Date;
-	};
+	date: string;
+	thumbnail?: string;
 	image?: {
 		en?: string;
 	};
 }
 
+const ROOT = `${process.cwd()}/static`;
+
 export function all() {
-	return traverse(
-		{ entry: 'content/sites/dev.mauss/posts' },
-		({ breadcrumb: [filename], frontMatter }) => {
-			if (filename.includes('draft')) return;
-
-			const [published, slug] = filename.split('.');
-			const [category] = frontMatter.tags;
-
-			if (!frontMatter.image) {
-				const imagePath = `/assets/uploads/${category.toLowerCase()}/thumbnail/${slug}`;
-				const rootFolder = `${process.cwd()}/static`;
-				for (const ext of ['png', 'jpg']) {
-					const image = join(rootFolder, `${imagePath}.${ext}`);
-					if (existsSync(image)) frontMatter.image = { en: `${imagePath}.${ext}` };
-				}
+	const thumbnails: Record<string, string> = {};
+	const contents = traverse(
+		{ entry: 'content/sites/dev.mauss/posts', depth: 1 },
+		({ breadcrumb: [file, slug], buffer, parse }) => {
+			if (file !== '+article.md') {
+				if (!/\.(jpe?g|png|svg)$/.test(file)) return;
+				mkdirSync(`${ROOT}/uploads/posts/${slug}`, { recursive: true });
+				const name = file.replace(/\.[^/.]+$/, '.webp');
+				const path = `/uploads/posts/${slug}/${name}`;
+				if (file.startsWith('thumbnail.')) thumbnails[slug] = path;
+				return void optimize(buffer).toFile(ROOT + path);
 			}
 
-			const specified: frontMatter = {
+			const { metadata } = parse(buffer.toString('utf-8'));
+			const specified: FrontMatter = {
 				slug,
-				title: frontMatter.title,
-				category,
-				tags: frontMatter.tags,
-				date: {
-					published,
-					updated: frontMatter.date && frontMatter.date.updated,
-				},
+				title: metadata.title,
+				category: metadata.tags[0],
+				tags: metadata.tags,
+				date: metadata.date,
 			};
-
-			return { ...frontMatter, ...specified };
+			return { ...metadata, ...specified };
 		},
 		chain({ base: 'posts/' })
 	);
+
+	return contents.map((v) => ({ ...v, thumbnail: thumbnails[v.slug] || v.thumbnail }));
 }
 
 export function get(slug: string) {
-	return traverse(
-		{ entry: 'content/sites/dev.mauss/posts' },
-		({ breadcrumb: [filename], frontMatter, content }) => {
-			const [published, id] = filename.split('.');
-			if (filename.includes('draft') || id !== slug) return;
-
-			const specified: frontMatter = {
+	mkdirSync(`${ROOT}/uploads/posts/${slug}`, { recursive: true });
+	const memo: Array<[find: RegExp, url: string]> = [];
+	const article = traverse(
+		{ entry: `content/sites/dev.mauss/posts/${slug}` },
+		({ breadcrumb: [file], buffer, parse }) => {
+			if (file !== '+article.md') {
+				if (!/\.(jpe?g|png|svg)$/.test(file)) return;
+				const name = file.replace(/\.[^/.]+$/, '.webp');
+				const path = `/uploads/posts/${slug}/${name}`;
+				memo.push([regexp(`./${file}`, 'g'), path]);
+				return void optimize(buffer).toFile(ROOT + path);
+			}
+			const { content, metadata } = parse(buffer.toString('utf-8'));
+			const specified: FrontMatter = {
 				slug,
-				title: frontMatter.title,
-				category: frontMatter.tags[0],
-				tags: frontMatter.tags,
-				date: {
-					published,
-					updated: frontMatter.date && frontMatter.date.updated,
-				},
+				title: metadata.title,
+				category: metadata.tags[0],
+				tags: metadata.tags,
+				date: metadata.date,
 			};
-
-			return { ...frontMatter, ...specified, content };
+			return { ...metadata, ...specified, content };
 		}
 	)[0];
+
+	const content = memo.reduce(
+		(content, [find, url]) => content.replace(find, url),
+		article.content
+	);
+
+	return { ...article, content };
 }
+
+export type Post = ReturnType<typeof get>;
+export type PostIndex = ReturnType<typeof all>;

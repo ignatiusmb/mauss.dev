@@ -1,7 +1,14 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
+import * as md from './src/lib/content';
 
 export default defineConfig(({ command }) => {
+	if (command === 'build') {
+		for (const key in md) {
+			void md[key].all();
+		}
+	}
+
 	return {
 		plugins: [sveltekit()],
 
