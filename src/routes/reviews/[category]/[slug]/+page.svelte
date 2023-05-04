@@ -10,7 +10,7 @@
 <Article
 	post={data.article}
 	header
-	path="src/reviews/{data.article.slug}.md"
+	path="sites/dev.mauss/reviews/{data.article.slug}.md"
 	flank={data.article.flank}
 >
 	<div slot="header">
