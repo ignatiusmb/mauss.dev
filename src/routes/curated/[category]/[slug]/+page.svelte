@@ -9,9 +9,9 @@
 
 <Article post={data} header path="src/curated/{data.article.slug}.md">
 	<svelte:fragment slot="header">
-		{#if data.tags}
+		{#if data.article.tags}
 			<small class="tags">
-				{#each data.tags as tag}
+				{#each data.article.tags as tag}
 					<TagBadge {tag} />
 				{/each}
 			</small>

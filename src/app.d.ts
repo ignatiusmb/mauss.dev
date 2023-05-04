@@ -7,7 +7,7 @@ declare namespace App {
 	interface PageData {
 		meta: {
 			title: string;
-			description: string;
+			description?: string;
 			canonical?: string;
 			og?: {
 				title: string;

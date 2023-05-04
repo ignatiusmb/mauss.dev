@@ -5,11 +5,14 @@
 	import Spoilers from '$lib/components/SpoilerSection.svelte';
 
 	export let data: import('./$types').PageData;
-
-	$: ({ spoilers, flank } = data.article);
 </script>
 
-<Article post={data.article} header path="src/reviews/{data.article.slug}.md" {flank}>
+<Article
+	post={data.article}
+	header
+	path="src/reviews/{data.article.slug}.md"
+	flank={data.article.flank}
+>
 	<div slot="header">
 		<ReviewBanner post={data.article} />
 
@@ -37,8 +40,8 @@
 
 	{@html data.article.content}
 
-	{#if spoilers}
-		<Spoilers {spoilers} />
+	{#if data.article.spoilers}
+		<Spoilers spoilers={data.article.spoilers} />
 	{/if}
 
 	{#if data.article.closing}
