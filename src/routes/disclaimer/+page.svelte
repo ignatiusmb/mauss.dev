@@ -1,14 +1,7 @@
 <script>
-	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import Article from '$lib/pages/Article.svelte';
 	import Link from '$lib/components/Link.svelte';
 </script>
-
-<MetaHead
-	canonical="disclaimer"
-	title="Disclaimer"
-	description="Disclaimer page for all the content in this website."
-/>
 
 <Article>
 	<section class="info-box warning">
@@ -22,7 +15,7 @@
 
 		<p>
 			Please take everything expressed with a grain of salt. I am not a professional reviewer nor
-			writter and you are not obliged in any way to follow and/or blatanly take anything I say here
+			writer and you are not obliged in any way to follow and/or blatantly take anything I say here
 			as is.
 		</p>
 

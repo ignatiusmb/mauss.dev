@@ -1,21 +1,12 @@
 <script lang="ts">
 	import WeavedImage from 'syv/core/WeavedImage.svelte';
-	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import Article from '$lib/pages/Article.svelte';
 	import Link from '$lib/components/Link.svelte';
 
-	import { capitalize } from 'mauss/utils';
-	import { page } from '$app/stores';
-
-	export let data: import('./$types').PageData;
+	export let data: import('./$types').PageData & {
+		title: string; // need to extend `Compiled`
+	};
 </script>
-
-<MetaHead
-	post={data}
-	canonical="about/{$page.params.section}"
-	title="About - {capitalize($page.params.section)}"
-	description="Get to know Ignatius Bagussuputra from his About page."
-/>
 
 <Article post={data}>
 	<WeavedImage src="/assets/profile/mauss.jpeg" alt="Mauss Profile" />

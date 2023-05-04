@@ -1,7 +1,6 @@
 <script lang="ts">
 	import SearchBar from 'syv/core/SearchBar.svelte';
 	import Pagination from 'syv/core/Pagination.svelte';
-	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import LayoutPicker from '$lib/pages/LayoutPicker.svelte';
 	import ReviewCard from './ReviewCard.svelte';
 
@@ -24,14 +23,6 @@
 	$: items = sift(query, filtered);
 	// $: shareable = qpm({ q: query }).replace(/(%20)+/g, '+');
 </script>
-
-<MetaHead
-	canonical="reviews"
-	title="Reviews"
-	description="Personalized reviews for all kinds of anime, books, movies, shows, etc."
->
-	<link rel="alternate" href="/rss.xml" type="application/rss+xml" />
-</MetaHead>
 
 <LayoutPicker header>
 	<svelte:fragment slot="header">

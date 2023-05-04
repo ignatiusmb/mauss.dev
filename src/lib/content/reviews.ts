@@ -25,8 +25,8 @@ interface FrontMatter {
 		last?: string;
 	};
 	date: {
-		published: string | Date;
-		updated?: string | Date;
+		published: string;
+		updated?: string;
 	};
 	image: {
 		en: string;
@@ -135,6 +135,7 @@ export function get(category: string, slug: string) {
 			}
 
 			return {
+				...metadata,
 				...specified,
 				content: contentParser(specified, summary),
 			};

@@ -1,27 +1,21 @@
 <script lang="ts">
-	export let data: import('./$types').PageData;
-
-	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import Article from '$lib/pages/Article.svelte';
-
 	import Link from '$lib/components/Link.svelte';
-	import ReviewBanner from '$lib/components/ReviewBanner.svelte';
-	import Spoilers from '$lib/components/SpoilerSection.svelte';
+	import ReviewBanner from './ReviewBanner.svelte';
+	import Spoilers from './SpoilerSection.svelte';
 
-	$: ({ title, spoilers, flank } = data);
+	export let data: import('./$types').PageData;
 </script>
 
-<MetaHead
-	post={data}
-	canonical="reviews/{data.slug}"
-	title={title.short ? title.short : title.jp ? title.jp : title.en}
-/>
-
-<Article post={data} header path="src/reviews/{data.slug}.md" {flank}>
+<Article
+	post={data.article}
+	path="sites/dev.mauss/reviews/{data.article.slug}.md"
+	flank={data.article.flank}
+>
 	<div slot="header">
-		<ReviewBanner post={data} />
+		<ReviewBanner post={data.article} />
 
-		{#if data.link}
+		{#if data.article.link}
 			{@const links = new Map([
 				['mal', 'MyAnimeList'],
 				['tmdb', 'TheMovieDB'],
@@ -29,7 +23,7 @@
 
 			<small>
 				<span>[</span>
-				{#each Object.entries(data.link) as [key, href]}
+				{#each Object.entries(data.article.link) as [key, href]}
 					<Link {href}>{links.get(key) || key.toUpperCase()}</Link>
 				{/each}
 				<span>]</span>
@@ -43,14 +37,14 @@
 		</Link>
 	</section>
 
-	{@html data.content}
+	{@html data.article.content}
 
-	{#if spoilers}
-		<Spoilers {spoilers} />
+	{#if data.article.spoilers}
+		<Spoilers spoilers={data.article.spoilers} />
 	{/if}
 
-	{#if data.closing}
-		{@html data.closing}
+	{#if data.article.closing}
+		{@html data.article.closing}
 	{/if}
 </Article>
 

@@ -7,7 +7,14 @@ export const load: import('./$types').PageServerLoad = async ({ params }) => {
 
 	for (const { slug, flank } of posts.all()) {
 		if (content.slug !== slug) continue;
-		return { ...content, flank };
+		return {
+			article: { ...content, flank },
+			meta: {
+				canonical: `posts/${content.slug}`,
+				title: content.title,
+				description: content.description || '',
+			},
+		};
 	}
 
 	throw error(404, 'Post not found');

@@ -1,12 +1,9 @@
 <script lang="ts">
-	export let data: import('./$types').PageData;
-
-	import MetaHead from '$lib/pages/MetaHead.svelte';
-	import Article from '$lib/pages/Article.svelte';
 	import Link from '$lib/components/Link.svelte';
-</script>
+	import Article from '$lib/pages/Article.svelte';
 
-<MetaHead canonical="help" title="Help" description="Alchemauss help page." />
+	export let data: import('./$types').PageData;
+</script>
 
 <Article>
 	<section class="info-box warning">
@@ -15,7 +12,7 @@
 		</Link>
 	</section>
 
-	{@html data.content}
+	{@html data.article.content}
 </Article>
 
 <style>

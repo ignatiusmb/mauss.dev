@@ -20,7 +20,7 @@
 	{#if !show}
 		<p>
 			Clicking this card will reveal the another section below which will contain major spoilers as
-			we will be breaking down most parts of the story as well as the ending, and dicussing any
+			we will be breaking down most parts of the story as well as the ending, and discussing any
 			related theories to it, please proceed with caution.
 		</p>
 	{/if}

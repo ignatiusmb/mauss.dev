@@ -10,23 +10,22 @@
 	import { hydrate } from 'marqua/browser';
 	import { navigating } from '$app/stores';
 
-	export let header = false;
-	export let post: any = null;
 	export let path = '';
+	export let post: null | ComponentProps<Header>['post'] = null;
 	export let flank: null | ComponentProps<Siblings> = null;
 </script>
 
-{#if header}
+{#if $$slots.header}
 	<ProgressBar height="4px" />
 {/if}
 
 <main use:hydrate={$navigating}>
-	{#if header}
+	{#if $$slots.header && post}
 		<Header {post} {path}>
 			<slot name="header" />
 		</Header>
 
-		{#if post && post.table.length}
+		{#if post.table.length}
 			<section id="objective" class="info-box">
 				<h3>Table of Contents</h3>
 				<ul style="color: #f48fb1">
@@ -38,8 +37,6 @@
 				</ul>
 			</section>
 		{/if}
-	{:else}
-		<slot name="header" />
 	{/if}
 
 	<slot />

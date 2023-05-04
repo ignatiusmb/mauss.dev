@@ -1,24 +1,25 @@
 <script lang="ts">
 	import Link from '$lib/components/Link.svelte';
 	import TagBadge from '$lib/components/TagBadge.svelte';
-	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import Article from '$lib/pages/Article.svelte';
 
 	export let data: import('./$types').PageData;
 </script>
 
-<MetaHead post={data} canonical="posts/{data.slug}" title={data.title} />
-
-<Article post={data} header path="sites/dev.mauss/posts/{data.slug}/+article.md" flank={data.flank}>
+<Article
+	post={data.article}
+	path="sites/dev.mauss/posts/{data.article.slug}/+article.md"
+	flank={data.article.flank}
+>
 	<svelte:fragment slot="header">
 		<small class="tags">
-			{#each data.tags as tag}
+			{#each data.article.tags as tag}
 				<TagBadge {tag} />
 			{/each}
 		</small>
 	</svelte:fragment>
 
-	{#if data.title.startsWith('Accessibility!')}
+	{#if data.article.title.startsWith('Accessibility!')}
 		<blockquote>
 			<p>
 				Making the web accessible isn't doing anyone a favor, it's you doing your job properly as a
@@ -46,5 +47,5 @@
 		</section>
 	{/if}
 
-	{@html data.content}
+	{@html data.article.content}
 </Article>

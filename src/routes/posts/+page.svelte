@@ -2,7 +2,6 @@
 	import SearchBar from 'syv/core/SearchBar.svelte';
 	import Pagination from 'syv/core/Pagination.svelte';
 	import AnimatedKey from '$lib/components/AnimatedKey.svelte';
-	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import LayoutPicker from '$lib/pages/LayoutPicker.svelte';
 	import PostCard from './PostCard.svelte';
 
@@ -18,10 +17,6 @@
 	$: filtered = sieve(filters, data.posts);
 	$: items = sift(query, filtered);
 </script>
-
-<MetaHead canonical="posts" title="Posts" description="Get the latest most recent posts here.">
-	<link rel="alternate" href="/rss.xml" type="application/rss+xml" />
-</MetaHead>
 
 <LayoutPicker header itemSize="21em">
 	<svelte:fragment slot="header">

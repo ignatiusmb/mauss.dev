@@ -6,11 +6,16 @@
 	import { dt } from 'mauss/utils';
 
 	export let path = '';
-	export let post: any = {};
-	const scale = 1;
+	export let post: {
+		title: string | { en?: string; jp?: string };
+		date: string | { published?: string; updated?: string };
+		table: Array<{ id: string; title: string }>;
+		estimate: number;
 
-	$: ({ author = {}, date = {} } = post);
-	$: ({ published, updated } = date);
+		author?: { name?: string; link?: string; img?: string };
+	};
+
+	const scale = 1;
 </script>
 
 <header>
@@ -23,55 +28,25 @@
 	{/if}
 
 	<small>
-		<Link href={author.link || '/about/'}>
-			<img src={author.img || '/assets/profile/mauss.jpeg'} alt="author profile" />
+		<Link href={post.author?.link || '/about/'}>
+			<img src={post.author?.img || '/assets/profile/mauss.jpeg'} alt="author profile" />
 		</Link>
 		<div class="details">
-			<span style:font-weight="500">{author.name || 'Ignatius Bagussuputra'}</span>
+			<span style:font-weight="500">{post.author?.name || 'Ignatius Bagussuputra'}</span>
 
-			{#if published}
-				<div>
-					<TextIcon>
-						<Feather icon={import('syv/icons/feather/calendar')} {scale} />
-						<time datetime={published}>
-							{#if updated && updated !== published}Published on{/if}
-							{dt.format(published)('DDDD, DD MMMM YYYY')}
+			<div>
+				<TextIcon>
+					<Feather icon={import('syv/icons/feather/calendar')} {scale} />
+					{#if typeof post.date === 'object'}
+						{@const { published, updated } = post.date}
+						<time datetime={updated || published}>
+							{dt.format(updated || published)('DDDD, DD MMMM YYYY')}
 						</time>
-					</TextIcon>
-					{#if path && (!updated || (updated && updated === published))}
-						<TextIcon href="https://github.com/alchemauss/content/edit/master/{path}">
-							<span>Edit</span>
-							<Feather icon={import('syv/icons/feather/edit')} {scale} />
-						</TextIcon>
-					{/if}
-				</div>
-			{/if}
-
-			{#if updated && updated !== published}
-				{@const formatted = dt.format(updated)('DD MMMM YYYY')}
-
-				<div>
-					{#if path}
-						<TextIcon href="https://github.com/alchemauss/content/commits/master/{path}">
-							{#if published}
-								<Feather icon={import('syv/icons/feather/git-commit')} {scale} />
-							{:else}
-								<Feather icon={import('syv/icons/feather/calendar')} {scale} />
-							{/if}
-							<time datetime={updated}>Updated {formatted}</time>
-						</TextIcon>
-
-						<TextIcon href="https://github.com/alchemauss/content/edit/master/{path}">
-							<span>Edit</span>
-							<Feather icon={import('syv/icons/feather/edit')} {scale} />
-						</TextIcon>
 					{:else}
-						<span>
-							<time datetime={updated}>Updated {formatted}</time>
-						</span>
+						<time datetime={post.date}>{dt.format(post.date)('DDDD, DD MMMM YYYY')}</time>
 					{/if}
-				</div>
-			{/if}
+				</TextIcon>
+			</div>
 
 			<div>
 				<TextIcon>
@@ -90,6 +65,13 @@
 					<span>Share</span>
 					<Feather icon={import('syv/icons/feather/share-2')} {scale} />
 				</TextIcon>
+
+				{#if path}
+					<TextIcon href="https://github.com/alchemauss/content/blob/master/{path}">
+						<span>Edit</span>
+						<Feather icon={import('syv/icons/feather/edit')} {scale} />
+					</TextIcon>
+				{/if}
 			</div>
 		</div>
 	</small>

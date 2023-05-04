@@ -5,9 +5,9 @@
     "dev": "vite dev",
     "build": "svelte-kit sync && vite build",
     "format": "prettier -w src --plugin-search-dir=.",
-    "check": "svelte-kit sync && pnpm check:style && pnpm check:svelte",
+    "check": "pnpm check:style && pnpm check:svelte",
     "check:style": "prettier -c src --plugin-search-dir=.",
-    "check:svelte": "svelte-check src --tsconfig ./tsconfig.json",
+    "check:svelte": "svelte-kit sync && svelte-check src --tsconfig ./tsconfig.json",
     "check:content": "cd content && markdownlint sites/**/*.md"
   },
   "packageManager": "pnpm@8.3.1",

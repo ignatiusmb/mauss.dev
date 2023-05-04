@@ -1,34 +1,31 @@
 <script lang="ts">
 	import Image from 'syv/core/Image.svelte';
-	import MetaHead from '$lib/pages/MetaHead.svelte';
 	import Article from '$lib/pages/Article.svelte';
 	import Link from '$lib/components/Link.svelte';
-	import Navigation from '$lib/components/Navigation.svelte';
-	import Quote from '$lib/components/Quote.svelte';
 	import RotatingBorder from '$lib/components/RotatingBorder.svelte';
+	import Navigation from './Navigation.svelte';
+	import Quote from './Quote.svelte';
 
 	export let data: import('./$types').PageData;
 
-	const showcase = <[keyof typeof section, any][]>(
-		Object.entries(data).filter(([k]) => k !== 'quotes')
-	);
 	const section = {
 		curated: { heading: '⚖️ Recently Curated', desc: "Stuffs I've been curating" },
 		posts: { heading: '📚 Recent Posts', desc: "What's on my mind (or life)" },
 		reviews: { heading: '⭐ Recent Reviews', desc: "Contents I've been reviewing" },
 	};
+	const showcase = <[keyof typeof section, any][]>(
+		Object.entries(data).filter(([k]) => k in section)
+	);
 
 	let scrolled = 0;
 </script>
-
-<MetaHead title="Ignatius Bagussuputra" description="Alchemauss - Mauss Studio" />
 
 <div class="fixed-nav" class:scrolled>
 	<Navigation bind:scrolled />
 </div>
 
 <Article>
-	<header slot="header">
+	<header>
 		<a href="/about/">
 			<RotatingBorder />
 			<Image src="/assets/profile/mauss.jpeg" alt="Mauss Profile" ratio={1} />
