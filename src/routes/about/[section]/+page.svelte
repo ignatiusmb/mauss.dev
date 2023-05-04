@@ -3,7 +3,9 @@
 	import Article from '$lib/pages/Article.svelte';
 	import Link from '$lib/components/Link.svelte';
 
-	export let data: import('./$types').PageData;
+	export let data: import('./$types').PageData & {
+		title: string; // need to extend `Compiled`
+	};
 </script>
 
 <Article post={data}>

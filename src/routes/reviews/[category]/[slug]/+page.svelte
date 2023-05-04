@@ -1,15 +1,14 @@
 <script lang="ts">
 	import Article from '$lib/pages/Article.svelte';
 	import Link from '$lib/components/Link.svelte';
-	import ReviewBanner from '$lib/components/ReviewBanner.svelte';
-	import Spoilers from '$lib/components/SpoilerSection.svelte';
+	import ReviewBanner from './ReviewBanner.svelte';
+	import Spoilers from './SpoilerSection.svelte';
 
 	export let data: import('./$types').PageData;
 </script>
 
 <Article
 	post={data.article}
-	header
 	path="sites/dev.mauss/reviews/{data.article.slug}.md"
 	flank={data.article.flank}
 >

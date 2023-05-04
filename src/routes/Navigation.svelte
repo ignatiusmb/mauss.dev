@@ -1,13 +1,12 @@
 <script lang="ts">
-	export let scrolled = 0;
-
-	import { navigating, page } from '$app/stores';
-	const sections = ['about', 'curated', 'posts', 'reviews', 'uses'];
-
 	import Feather from 'syv/icons/Feather.svelte';
 	import Link from '$lib/components/Link.svelte';
 	import NavGrid from '$lib/components/NavGrid.svelte';
 	import NavLink from '$lib/components/NavLink.svelte';
+	import { navigating, page } from '$app/stores';
+
+	export let scrolled = 0;
+	const sections = ['about', 'curated', 'posts', 'reviews', 'uses'];
 
 	let innerWidth: number;
 	let opened = false;

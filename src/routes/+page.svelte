@@ -2,9 +2,9 @@
 	import Image from 'syv/core/Image.svelte';
 	import Article from '$lib/pages/Article.svelte';
 	import Link from '$lib/components/Link.svelte';
-	import Navigation from '$lib/components/Navigation.svelte';
-	import Quote from '$lib/components/Quote.svelte';
 	import RotatingBorder from '$lib/components/RotatingBorder.svelte';
+	import Navigation from './Navigation.svelte';
+	import Quote from './Quote.svelte';
 
 	export let data: import('./$types').PageData;
 
@@ -25,7 +25,7 @@
 </div>
 
 <Article>
-	<header slot="header">
+	<header>
 		<a href="/about/">
 			<RotatingBorder />
 			<Image src="/assets/profile/mauss.jpeg" alt="Mauss Profile" ratio={1} />

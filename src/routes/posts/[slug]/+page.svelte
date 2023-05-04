@@ -8,7 +8,6 @@
 
 <Article
 	post={data.article}
-	header
 	path="sites/dev.mauss/posts/{data.article.slug}/+article.md"
 	flank={data.article.flank}
 >

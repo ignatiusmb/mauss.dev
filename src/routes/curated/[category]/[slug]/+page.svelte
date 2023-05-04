@@ -7,7 +7,7 @@
 	export let data: import('./$types').PageData;
 </script>
 
-<Article post={data.article} header path="sites/dev.mauss/curated/{data.article.slug}.md">
+<Article post={data.article} path="sites/dev.mauss/curated/{data.article.slug}.md">
 	<svelte:fragment slot="header">
 		{#if data.article.tags}
 			<small class="tags">

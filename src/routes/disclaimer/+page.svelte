@@ -15,7 +15,7 @@
 
 		<p>
 			Please take everything expressed with a grain of salt. I am not a professional reviewer nor
-			writter and you are not obliged in any way to follow and/or blatanly take anything I say here
+			writer and you are not obliged in any way to follow and/or blatantly take anything I say here
 			as is.
 		</p>
 

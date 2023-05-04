@@ -7,8 +7,8 @@
 	import '$lib/styles/animation.css';
 
 	import ScrollTop from 'syv/core/ScrollTop.svelte';
-	import Navigation from '$lib/components/Navigation.svelte';
 	import Footer from '$lib/components/Footer.svelte';
+	import Navigation from './Navigation.svelte';
 
 	import { page } from '$app/stores';
 </script>
