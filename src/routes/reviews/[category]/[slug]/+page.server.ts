@@ -12,7 +12,7 @@ export const load: import('./$types').PageServerLoad = async ({ params }) => {
 			article: { ...content, flank },
 			meta: {
 				canonical: `reviews/${content.slug}`,
-				title: title.short ? title.short : title.jp ? title.jp : title.en,
+				title: title.short || title.jp || title.en,
 			},
 		};
 	}
