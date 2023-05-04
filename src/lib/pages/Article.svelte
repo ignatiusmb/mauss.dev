@@ -11,8 +11,9 @@
 	import { navigating } from '$app/stores';
 
 	export let header = false;
-	export let post: any = null;
 	export let path = '';
+	export let post: any = null;
+	// export let post: null | ComponentProps<Header>['post'] = null;
 	export let flank: null | ComponentProps<Siblings> = null;
 </script>
 
@@ -21,12 +22,12 @@
 {/if}
 
 <main use:hydrate={$navigating}>
-	{#if header}
+	{#if header && post}
 		<Header {post} {path}>
 			<slot name="header" />
 		</Header>
 
-		{#if post && post.table.length}
+		{#if post.table.length}
 			<section id="objective" class="info-box">
 				<h3>Table of Contents</h3>
 				<ul style="color: #f48fb1">

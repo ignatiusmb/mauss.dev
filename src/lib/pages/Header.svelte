@@ -9,6 +9,7 @@
 	export let post: {
 		title: string | { en?: string; jp?: string };
 		date: string | { published?: string; updated?: string };
+		table: Array<{ id: string; title: string }>;
 		estimate: number;
 
 		author?: { name?: string; link?: string; img?: string };
