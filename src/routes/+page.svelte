@@ -8,14 +8,14 @@
 
 	export let data: import('./$types').PageData;
 
-	const showcase = <[keyof typeof section, any][]>(
-		Object.entries(data).filter(([k]) => k !== 'quotes')
-	);
 	const section = {
 		curated: { heading: '⚖️ Recently Curated', desc: "Stuffs I've been curating" },
 		posts: { heading: '📚 Recent Posts', desc: "What's on my mind (or life)" },
 		reviews: { heading: '⭐ Recent Reviews', desc: "Contents I've been reviewing" },
 	};
+	const showcase = <[keyof typeof section, any][]>(
+		Object.entries(data).filter(([k]) => k in section)
+	);
 
 	let scrolled = 0;
 </script>
