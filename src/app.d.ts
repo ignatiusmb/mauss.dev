@@ -6,9 +6,9 @@ declare module 'katex';
 declare namespace App {
 	interface PageData {
 		meta: {
+			canonical?: string;
 			title: string;
 			description?: string;
-			canonical?: string;
 			og?: {
 				title: string;
 				url?: string;
