@@ -9,22 +9,23 @@
 
 <Article
 	post={data.article}
-	path="sites/dev.mauss/reviews/{data.article.slug}.md"
+	path="sites/dev.mauss/reviews/{data.article.slug}/+article.md"
 	flank={data.article.flank}
 >
 	<div slot="header">
 		<ReviewBanner post={data.article} />
 
 		{#if data.article.link}
-			{@const links = new Map([
-				['mal', 'MyAnimeList'],
-				['tmdb', 'TheMovieDB'],
-			])}
-
 			<small>
 				<span>[</span>
-				{#each Object.entries(data.article.link) as [key, href]}
-					<Link {href}>{links.get(key) || key.toUpperCase()}</Link>
+				{#each Object.entries(data.article.link) as [key, link]}
+					{#if typeof link === 'string'}
+						<Link href={link}>{key}</Link>
+					{:else}
+						{#each link as href, idx}
+							<Link {href}>{key} ({idx + 1})</Link>
+						{/each}
+					{/if}
 				{/each}
 				<span>]</span>
 			</small>

@@ -1,8 +1,10 @@
+import { mkdirSync } from 'fs';
 import { marker } from 'marqua/artisan';
 import { compile, traverse } from 'marqua/fs';
 import { chain } from 'marqua/transform';
 import { tryNumber } from 'mauss/utils';
-import { compare } from 'mauss';
+import { compare, regexp } from 'mauss';
+import { optimize } from './image';
 
 interface FrontMatter {
 	slug: string;
@@ -33,30 +35,38 @@ interface FrontMatter {
 		jp?: string;
 	};
 	backdrop?: string;
-	link?: {
-		mal?: string;
-	};
+	link?: Record<string, string | string[]>;
 
 	spoilers?: string;
 	closing?: string;
 }
 
+const ROOT = `${process.cwd()}/static`;
+
 export function all() {
 	return traverse(
 		{ entry: 'content/sites/dev.mauss/reviews', depth: -1 },
-		({ breadcrumb: [filename, folder], buffer, parse }) => {
+		({ breadcrumb: [file, slug, category], buffer, parse }) => {
+			if (file !== '+article.md') {
+				if (!/\.(jpe?g|png|svg)$/.test(file)) return;
+				mkdirSync(`${ROOT}/uploads/reviews/${category}/${slug}`, { recursive: true });
+				const name = file.replace(/\.[^/.]+$/, '.webp');
+				const path = `/uploads/reviews/${category}/${slug}/${name}`;
+				return void optimize(buffer).toFile(ROOT + path);
+			}
+
 			const { metadata } = parse(buffer.toString('utf-8'));
-			if (filename.includes('draft') || metadata.draft) return;
+			if (metadata.draft) return;
 
 			const specified: FrontMatter = {
-				slug: `${folder}/${filename.replace(/\.[^/.]+$/, '')}`,
-				category: folder,
+				slug: `${category}/${slug}`,
+				category: category,
 				composed: metadata.composed,
 				released: metadata.released,
 				title: metadata.title,
 				genres: metadata.genres,
 				rating: countAverageRating(metadata.rating),
-				verdict: metadata.verdict || 'pending',
+				verdict: metadata.verdict,
 				completed: metadata.completed,
 				seen: {
 					first: Array.isArray(metadata.seen.first)
@@ -85,9 +95,19 @@ export function all() {
 }
 
 export function get(category: string, slug: string) {
-	const body = compile(
-		`content/sites/dev.mauss/reviews/${category}/${slug}.md`,
-		({ buffer, parse }) => {
+	mkdirSync(`${ROOT}/uploads/reviews/${category}/${slug}`, { recursive: true });
+	const memo: Array<[find: RegExp, url: string]> = [];
+	const article = compile(
+		`content/sites/dev.mauss/reviews/${category}/${slug}/+article.md`,
+		({ breadcrumb: [file], buffer, parse }) => {
+			if (file !== '+article.md') {
+				if (!/\.(jpe?g|png|svg)$/.test(file)) return;
+				const name = file.replace(/\.[^/.]+$/, '.webp');
+				const path = `/uploads/reviews/${category}/${slug}/${name}`;
+				memo.push([regexp(`./${file}`, 'g'), path]);
+				return void optimize(buffer).toFile(ROOT + path);
+			}
+
 			const { content, metadata } = parse(buffer.toString('utf-8'));
 			if (Array.isArray(metadata.seen.first)) {
 				const last = metadata.seen.first.length - 1;
@@ -142,7 +162,7 @@ export function get(category: string, slug: string) {
 		}
 	)!;
 
-	return body;
+	return article;
 }
 
 function contentParser<T extends Record<string, any>>(data: T, content: string): string {
