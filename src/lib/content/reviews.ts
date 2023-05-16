@@ -1,10 +1,9 @@
-import { mkdirSync } from 'fs';
 import { marker } from 'marqua/artisan';
-import { compile, traverse } from 'marqua/fs';
+import { traverse } from 'marqua/fs';
 import { chain } from 'marqua/transform';
 import { tryNumber } from 'mauss/utils';
 import { compare, regexp } from 'mauss';
-import { optimize } from './image';
+import { optimize, write } from './media';
 
 interface FrontMatter {
 	slug: string;
@@ -48,11 +47,14 @@ export function all() {
 		{ entry: 'content/sites/dev.mauss/reviews', depth: -1 },
 		({ breadcrumb: [file, slug, category], buffer, parse }) => {
 			if (file !== '+article.md') {
+				const target = `${ROOT}/uploads/reviews/${category}/${slug}`;
+				if (/\.(mp4)$/.test(file)) {
+					return void write(buffer).to(`${target}/${file}`);
+				}
+
 				if (!/\.(jpe?g|png|svg)$/.test(file)) return;
-				mkdirSync(`${ROOT}/uploads/reviews/${category}/${slug}`, { recursive: true });
 				const name = file.replace(/\.[^/.]+$/, '.webp');
-				const path = `/uploads/reviews/${category}/${slug}/${name}`;
-				return void optimize(buffer).toFile(ROOT + path);
+				return void optimize(buffer).to(`${target}/${name}`);
 			}
 
 			const { metadata } = parse(buffer.toString('utf-8'));
@@ -95,17 +97,21 @@ export function all() {
 }
 
 export function get(category: string, slug: string) {
-	mkdirSync(`${ROOT}/uploads/reviews/${category}/${slug}`, { recursive: true });
 	const memo: Array<[find: RegExp, url: string]> = [];
-	const article = compile(
-		`content/sites/dev.mauss/reviews/${category}/${slug}/+article.md`,
+	const article = traverse(
+		{ entry: `content/sites/dev.mauss/reviews/${category}/${slug}` },
 		({ breadcrumb: [file], buffer, parse }) => {
 			if (file !== '+article.md') {
+				if (/\.(mp4)$/.test(file)) {
+					const path = `/uploads/reviews/${category}/${slug}/${file}`;
+					memo.push([regexp(`./${file}`, 'g'), path]);
+					return void write(buffer).to(ROOT + path);
+				}
 				if (!/\.(jpe?g|png|svg)$/.test(file)) return;
 				const name = file.replace(/\.[^/.]+$/, '.webp');
 				const path = `/uploads/reviews/${category}/${slug}/${name}`;
 				memo.push([regexp(`./${file}`, 'g'), path]);
-				return void optimize(buffer).toFile(ROOT + path);
+				return void optimize(buffer).to(ROOT + path);
 			}
 
 			const { content, metadata } = parse(buffer.toString('utf-8'));
@@ -160,9 +166,14 @@ export function get(category: string, slug: string) {
 				content: contentParser(specified, summary),
 			};
 		}
-	)!;
+	)[0];
 
-	return article;
+	const content = memo.reduce(
+		(content, [find, url]) => content.replace(find, url),
+		article.content
+	);
+
+	return { ...article, content };
 }
 
 function contentParser<T extends Record<string, any>>(data: T, content: string): string {
