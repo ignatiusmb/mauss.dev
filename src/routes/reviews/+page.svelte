@@ -33,7 +33,7 @@
 			{items}
 			bound={12}
 			increment={12}
-			styles={{ 'text-color': 'var(--fg-surface)' }}
+			styles={{ '--text-color': 'var(--fg-surface)' }}
 		/>
 	</svelte:fragment>
 
