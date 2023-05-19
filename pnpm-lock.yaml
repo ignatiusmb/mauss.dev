@@ -44,8 +44,8 @@ devDependencies:
     specifier: ^3.2.0
     version: 3.2.0(svelte@3.58.0)
   syv:
-    specifier: ^0.0.23
-    version: 0.0.23(svelte@3.58.0)
+    specifier: ^0.0.24
+    version: 0.0.24(svelte@3.58.0)
   typescript:
     specifier: ^5.0.4
     version: 5.0.4
@@ -1840,8 +1840,8 @@ packages:
     engines: {node: '>= 8'}
     dev: true
 
-  /syv@0.0.23(svelte@3.58.0):
-    resolution: {integrity: sha512-7m081KqwlZ/yw40RQkXGG6P8jgf2rZXZ/JFpFCyRI+LVlfxI98fQs2x89/UQf3gTgyPpWHUeekpW3Y4nMhWq8Q==}
+  /syv@0.0.24(svelte@3.58.0):
+    resolution: {integrity: sha512-ry5zpwfr4vKy4HU2rfEzaCOAMtgrlz1hlkulR0HOlQagbqUvbUwYSEFim7YoLO2O1jkmiGf0NU6JEOs6dm/8xQ==}
     peerDependencies:
       svelte: ^3.49.0
     dependencies:

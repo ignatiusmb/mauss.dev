@@ -28,7 +28,13 @@
 	<svelte:fragment slot="header">
 		<h1>Alchemauss Reviews</h1>
 		<SearchBar unique={data.unique} bind:query bind:filters />
-		<Pagination {store} {items} bound={12} increment={12} />
+		<Pagination
+			{store}
+			{items}
+			bound={12}
+			increment={12}
+			styles={{ '--text-color': 'var(--fg-surface)' }}
+		/>
 	</svelte:fragment>
 
 	{#each $store as post (post.slug)}

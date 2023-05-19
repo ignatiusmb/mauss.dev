@@ -22,7 +22,7 @@
 	<svelte:fragment slot="header">
 		<h1>Curated by Alchemauss</h1>
 		<SearchBar bind:query />
-		<Pagination {store} {items} bound={8} />
+		<Pagination {store} {items} bound={8} styles={{ '--text-color': 'var(--fg-surface)' }} />
 	</svelte:fragment>
 
 	<AnimatedKey items={$store} component={CuratedPost}>
