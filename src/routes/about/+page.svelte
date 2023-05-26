@@ -9,7 +9,7 @@
 </script>
 
 <Article post={data.article}>
-	<WeavedImage src="/assets/profile/mauss.jpeg" alt="Mauss Profile" />
+	<WeavedImage src="/assets/profile/mauss.jpg" alt="Mauss Profile" />
 
 	<section>
 		{#each data.sections as section}
