@@ -18,7 +18,7 @@ interface FrontMatter {
 	};
 	genres: string[];
 	rating?: number;
-	verdict: typeof import('$lib/constants')['VERDICTS'][number];
+	verdict: (typeof VERDICTS)[number];
 
 	completed: string | string[];
 	seen: {
@@ -39,6 +39,14 @@ interface FrontMatter {
 	spoilers?: string;
 	closing?: string;
 }
+
+export const VERDICTS = [
+	'pending',
+	'not-recommended',
+	'contextual',
+	'recommended',
+	'must-watch',
+] as const;
 
 const ROOT = `${process.cwd()}/static`;
 

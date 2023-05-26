@@ -1,5 +1,4 @@
 import { capitalize } from 'mauss/utils';
-import { VERDICTS } from '$lib/constants';
 import { reviews } from '$lib/content';
 
 export const load: import('./$types').PageServerLoad = async () => {
@@ -11,9 +10,9 @@ export const load: import('./$types').PageServerLoad = async () => {
 		unique: {
 			categories,
 			genres,
-			verdict: VERDICTS.reduce(
+			verdict: reviews.VERDICTS.reduce(
 				(a, c) => ({ ...a, [c]: capitalize(c.replace('-', ' ')) }),
-				{} as { [k in (typeof VERDICTS)[number]]: string }
+				{} as { [k in (typeof reviews.VERDICTS)[number]]: string }
 			),
 			sort_by: {
 				updated: 'Last updated',
