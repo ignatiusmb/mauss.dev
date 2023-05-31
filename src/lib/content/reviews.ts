@@ -146,8 +146,11 @@ export function get(category: string, slug: string) {
 
 function contentParser<T extends Record<string, any>>(data: T, content: string): string {
 	const traverse = (meta: T | string, properties: string): string => {
-		for (const key of properties.split(':'))
-			if (typeof meta !== 'string') meta = meta[Number.isNaN(Number(key)) ? key : Number(key)];
+		for (const key of properties.split(':')) {
+			if (typeof meta !== 'string') {
+				meta = meta[Number.isNaN(Number(key)) ? key : Number(key)];
+			}
+		}
 		return meta as string;
 	};
 
