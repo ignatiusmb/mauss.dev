@@ -1,4 +1,4 @@
-import { capitalize } from 'mauss/utils';
+import { capitalize } from 'mauss';
 import { VERDICTS } from '$lib/constants';
 import { reviews } from '$lib/content';
 

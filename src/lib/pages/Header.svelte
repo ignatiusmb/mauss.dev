@@ -3,7 +3,7 @@
 	import Link from '$lib/components/Link.svelte';
 	import TextIcon from '$lib/components/TextIcon.svelte';
 
-	import { dt } from 'mauss/utils';
+	import { dt } from 'mauss';
 
 	export let path = '';
 	export let post: {

@@ -5,7 +5,7 @@
 	import Link from '$lib/components/Link.svelte';
 	import Verdict from '$lib/components/Verdict.svelte';
 
-	import { capitalize } from 'mauss/utils';
+	import { capitalize } from 'mauss';
 
 	export let post: import('$lib/content/reviews').ReviewIndex[number];
 
