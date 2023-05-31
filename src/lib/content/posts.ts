@@ -1,8 +1,7 @@
-import { mkdirSync } from 'fs';
 import { traverse } from 'marqua/fs';
 import { chain } from 'marqua/transform';
 import { regexp } from 'mauss';
-import { optimize } from './image';
+import { optimize } from './media';
 
 interface FrontMatter {
 	slug: string;
@@ -26,11 +25,10 @@ export function all() {
 		({ breadcrumb: [file, slug], buffer, parse }) => {
 			if (file !== '+article.md') {
 				if (!/\.(jpe?g|png|svg)$/.test(file)) return;
-				mkdirSync(`${ROOT}/uploads/posts/${slug}`, { recursive: true });
 				const name = file.replace(/\.[^/.]+$/, '.webp');
 				const path = `/uploads/posts/${slug}/${name}`;
 				if (file.startsWith('thumbnail.')) thumbnails[slug] = path;
-				return void optimize(buffer).toFile(ROOT + path);
+				return void optimize(buffer).to(ROOT + path);
 			}
 
 			const { metadata } = parse(buffer.toString('utf-8'));
@@ -50,7 +48,6 @@ export function all() {
 }
 
 export function get(slug: string) {
-	mkdirSync(`${ROOT}/uploads/posts/${slug}`, { recursive: true });
 	const memo: Array<[find: RegExp, url: string]> = [];
 	const article = traverse(
 		{ entry: `content/sites/dev.mauss/posts/${slug}` },
@@ -60,7 +57,7 @@ export function get(slug: string) {
 				const name = file.replace(/\.[^/.]+$/, '.webp');
 				const path = `/uploads/posts/${slug}/${name}`;
 				memo.push([regexp(`./${file}`, 'g'), path]);
-				return void optimize(buffer).toFile(ROOT + path);
+				return void optimize(buffer).to(ROOT + path);
 			}
 			const { content, metadata } = parse(buffer.toString('utf-8'));
 			const specified: FrontMatter = {
