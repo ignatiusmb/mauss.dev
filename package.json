@@ -14,21 +14,21 @@
   "prettier": "mauss/prettier.json",
   "devDependencies": {
     "@ignatiusmb/styles": "^0.1.1",
-    "@sveltejs/adapter-vercel": "^2.4.2",
-    "@sveltejs/kit": "^1.15.7",
-    "@types/node": "^18.16.0",
-    "katex": "^0.16.6",
+    "@sveltejs/adapter-vercel": "^3.0.0",
+    "@sveltejs/kit": "^1.20.0",
+    "@types/node": "^20.2.5",
+    "katex": "^0.16.7",
     "markdown-it-texmath": "^1.0.0",
-    "markdownlint-cli": "^0.33.0",
-    "marqua": "^0.5.0",
-    "mauss": "^0.4.11",
+    "markdownlint-cli": "^0.34.0",
+    "marqua": "^0.5.1",
+    "mauss": "^0.5.0",
     "prettier": "^2.8.8",
-    "prettier-plugin-svelte": "^2.10.0",
+    "prettier-plugin-svelte": "^2.10.1",
     "sharp": "^0.32.1",
-    "svelte": "^3.58.0",
-    "svelte-check": "^3.2.0",
-    "syv": "^0.0.24",
+    "svelte": "^3.59.1",
+    "svelte-check": "^3.4.3",
+    "syv": "^0.0.25",
     "typescript": "^5.0.4",
-    "vite": "^4.3.1"
+    "vite": "^4.3.9"
   }
 }
