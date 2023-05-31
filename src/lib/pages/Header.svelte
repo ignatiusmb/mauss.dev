@@ -29,7 +29,7 @@
 
 	<small>
 		<Link href={post.author?.link || '/about/'}>
-			<img src={post.author?.img || '/assets/profile/mauss.jpeg'} alt="author profile" />
+			<img src={post.author?.img || '/assets/profile/mauss.jpg'} alt="author profile" />
 		</Link>
 		<div class="details">
 			<span style:font-weight="500">{post.author?.name || 'Ignatius Bagussuputra'}</span>

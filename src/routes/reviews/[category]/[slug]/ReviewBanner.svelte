@@ -11,8 +11,7 @@
 	<Image src={backdrop} alt="{title.short || title.en} backdrop" absolute ratio={1 / 5} />
 
 	<span class="composed">
-		Credibility: {composed} day{composed > 1 ? 's' : ''}
-		since last seen on {dt.format(seen.first)('DD MMMM YYYY')}
+		Days since last seen: {composed} ({dt.format(seen.first)('DD MMMM YYYY')})
 	</span>
 	<small>
 		<div class="stars">

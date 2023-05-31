@@ -1,4 +1,5 @@
 <script>
+	import '../app.css';
 	import '@ignatiusmb/styles/core.css';
 	import 'marqua/styles/code.css';
 	import '$lib/styles/fonts.css';
@@ -86,11 +87,3 @@
 <slot />
 
 <Footer />
-
-<style>
-	:global(body) {
-		min-height: 100vh;
-		display: flex;
-		flex-direction: column;
-	}
-</style>

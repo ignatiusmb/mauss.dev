@@ -1,7 +1,8 @@
 import { marker } from 'marqua/artisan';
-import { compile, traverse } from 'marqua/fs';
+import { traverse } from 'marqua/fs';
 import { chain } from 'marqua/transform';
-import { compare } from 'mauss';
+import { compare, regexp } from 'mauss';
+import { optimize, write } from './media';
 
 interface FrontMatter {
 	slug: string;
@@ -16,7 +17,7 @@ interface FrontMatter {
 	};
 	genres: string[];
 	rating?: number;
-	verdict: typeof import('$lib/constants')['VERDICTS'][number];
+	verdict: (typeof VERDICTS)[number];
 
 	completed: string | string[];
 	seen: {
@@ -32,30 +33,49 @@ interface FrontMatter {
 		jp?: string;
 	};
 	backdrop?: string;
-	link?: {
-		mal?: string;
-	};
+	link?: Record<string, string | string[]>;
 
 	spoilers?: string;
 	closing?: string;
 }
 
+export const VERDICTS = [
+	'pending',
+	'not-recommended',
+	'contextual',
+	'recommended',
+	'must-watch',
+] as const;
+
+const ROOT = `${process.cwd()}/static`;
+
 export function all() {
 	return traverse(
 		{ entry: 'content/sites/dev.mauss/reviews', depth: -1 },
-		({ breadcrumb: [filename, folder], buffer, parse }) => {
+		({ breadcrumb: [file, slug, category], buffer, parse }) => {
+			if (file !== '+article.md') {
+				const target = `${ROOT}/uploads/reviews/${category}/${slug}`;
+				if (/\.(mp4)$/.test(file)) {
+					return void write(buffer).to(`${target}/${file}`);
+				}
+
+				if (!/\.(jpe?g|png|svg)$/.test(file)) return;
+				const name = file.replace(/\.[^/.]+$/, '.webp');
+				return void optimize(buffer).to(`${target}/${name}`);
+			}
+
 			const { metadata } = parse(buffer.toString('utf-8'));
-			if (filename.includes('draft') || metadata.draft) return;
+			if (metadata.draft) return;
 
 			const specified: FrontMatter = {
-				slug: `${folder}/${filename.replace(/\.[^/.]+$/, '')}`,
-				category: folder,
+				slug: `${category}/${slug}`,
+				category: category,
 				composed: metadata.composed,
 				released: metadata.released,
 				title: metadata.title,
 				genres: metadata.genres,
 				rating: countAverageRating(metadata.rating),
-				verdict: metadata.verdict || 'pending',
+				verdict: metadata.verdict,
 				completed: metadata.completed,
 				seen: {
 					first: Array.isArray(metadata.seen.first)
@@ -84,9 +104,23 @@ export function all() {
 }
 
 export function get(category: string, slug: string) {
-	const body = compile(
-		`content/sites/dev.mauss/reviews/${category}/${slug}.md`,
-		({ buffer, parse }) => {
+	const memo: Array<[find: RegExp, url: string]> = [];
+	const article = traverse(
+		{ entry: `content/sites/dev.mauss/reviews/${category}/${slug}` },
+		({ breadcrumb: [file], buffer, parse }) => {
+			if (file !== '+article.md') {
+				if (/\.(mp4)$/.test(file)) {
+					const path = `/uploads/reviews/${category}/${slug}/${file}`;
+					memo.push([regexp(`./${file}`, 'g'), path]);
+					return void write(buffer).to(ROOT + path);
+				}
+				if (!/\.(jpe?g|png|svg)$/.test(file)) return;
+				const name = file.replace(/\.[^/.]+$/, '.webp');
+				const path = `/uploads/reviews/${category}/${slug}/${name}`;
+				memo.push([regexp(`./${file}`, 'g'), path]);
+				return void optimize(buffer).to(ROOT + path);
+			}
+
 			const { content, metadata } = parse(buffer.toString('utf-8'));
 			if (Array.isArray(metadata.seen.first)) {
 				const last = metadata.seen.first.length - 1;
@@ -139,9 +173,14 @@ export function get(category: string, slug: string) {
 				content: contentParser(specified, summary),
 			};
 		}
-	)!;
+	)[0];
 
-	return body;
+	const content = memo.reduce(
+		(content, [find, url]) => content.replace(find, url),
+		article.content
+	);
+
+	return { ...article, content };
 }
 
 function contentParser<T extends Record<string, any>>(data: T, content: string): string {

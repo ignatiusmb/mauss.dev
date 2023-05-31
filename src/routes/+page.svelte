@@ -28,7 +28,7 @@
 	<header>
 		<a href="/about/">
 			<RotatingBorder />
-			<Image src="/assets/profile/mauss.jpeg" alt="Mauss Profile" ratio={1} />
+			<Image src="/assets/profile/mauss.jpg" alt="Mauss Profile" ratio={1} />
 		</a>
 		<h2>Ignatius Bagussuputra</h2>
 		<span>Developer on Weekdays, Avid Writer on Weekends</span>

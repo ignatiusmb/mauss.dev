@@ -9,7 +9,7 @@
 </script>
 
 <Article post={data}>
-	<WeavedImage src="/assets/profile/mauss.jpeg" alt="Mauss Profile" />
+	<WeavedImage src="/assets/profile/mauss.jpg" alt="Mauss Profile" />
 
 	<section>
 		<Link href="/about/">
