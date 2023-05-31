@@ -91,18 +91,24 @@ const sortBy: Record<string, (x: any, y: any) => number> = {
 		const yr = Number.isNaN(+y.rating) ? +!!y.rating : y.rating;
 		return xr === yr ? sortCompare(x, y) : yr - xr;
 	},
-	seen: (x, y) =>
-		compare.date(
-			x.seen.last || x.completed || x.seen.first,
-			y.seen.last || y.completed || y.seen.first
-		) || sortCompare(x, y),
-	released: (x, y) => compare.date(x.released, y.released) || sortCompare(x, y),
-	updated: (x, y) =>
-		compare.date(x.date.updated || x.date.published, y.date.updated || y.date.published) ||
-		sortCompare(x, y),
-	published: (x, y) =>
-		compare.date(x.date.published || x.date.updated, y.date.published || y.date.updated) ||
-		sortCompare(x, y),
+	seen(x, y) {
+		const xd = x.seen.last || x.completed || x.seen.first;
+		const yd = y.seen.last || y.completed || y.seen.first;
+		return compare.date(xd, yd) || sortCompare(x, y);
+	},
+	released(x, y) {
+		return compare.date(x.released, y.released) || sortCompare(x, y);
+	},
+	updated(x, y) {
+		const xd = x.date.updated || x.date.published;
+		const yd = y.date.updated || y.date.published;
+		return compare.date(xd, yd) || sortCompare(x, y);
+	},
+	published(x, y) {
+		const xd = x.date.published || x.date.updated;
+		const yd = y.date.published || y.date.updated;
+		return compare.date(xd, yd) || sortCompare(x, y);
+	},
 };
 
 export const sort = <T extends Record<string, any>>(type: string, data: T[]): T[] =>
