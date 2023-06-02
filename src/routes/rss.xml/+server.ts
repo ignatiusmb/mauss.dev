@@ -21,7 +21,7 @@ const items = traverse(
 			const description = `${title} curated by Alchemauss`;
 			return { slug, title, description, date };
 		} else if (breadcrumb.includes('reviews')) {
-			if (!metadata.verdict) return;
+			if (metadata.verdict === 'pending') return;
 			const [file, category] = breadcrumb;
 			return {
 				slug: `reviews/${category}/${file.replace('.md', '')}`,
