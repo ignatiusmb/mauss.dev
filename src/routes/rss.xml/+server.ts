@@ -40,7 +40,7 @@ const items = traverse(
 	(items) => items.sort((x, y) => compare.date(x.date, y.date) || compare.string(x.title, y.title))
 );
 
-// export const prerender = true;
+export const prerender = true;
 export async function GET() {
 	const headers = { 'Content-Type': 'application/xml' };
 	return new Response(RSS(channel, items), { headers });
