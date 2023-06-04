@@ -6,10 +6,19 @@
 
 <style>
 	div {
-		position: absolute;
 		width: 100%;
 		height: 100%;
+		position: absolute;
 		border-radius: inherit;
-		animation: 28s infinite linear rotate;
+		animation: rotate 42s linear infinite;
+	}
+
+	@keyframes rotate {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
 	}
 </style>
