@@ -1,17 +1,4 @@
-import { marker } from 'marqua/artisan';
 import { compile, traverse } from 'marqua/fs';
-
-import TexMath from 'markdown-it-texmath';
-import KaTeX from 'katex';
-export function init() {
-	marker.use(TexMath, {
-		engine: KaTeX,
-		delimiters: 'dollars',
-		katexOptions: {
-			strict: (code: string) => (code === 'newLineInDisplayMode' ? 'ignore' : 'warn'),
-		},
-	});
-}
 
 interface FrontMatter {
 	slug: string;
