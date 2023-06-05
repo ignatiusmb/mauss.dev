@@ -2,11 +2,9 @@
 	export let to = '';
 	export let path = '';
 	export let hover = false;
-
-	$: isCurrent = (/** @type {string} */ p) => (path === p ? 'page' : undefined);
 </script>
 
-<a aria-current={isCurrent(to)} href="/{to}" class:hover>
+<a href="/{to}" aria-current={path === to ? 'page' : null} class:hover>
 	<slot />
 </a>
 

@@ -2,7 +2,7 @@ const chars: Record<string, string> = { '"': 'quot', "'": '#39', '&': 'amp', '<'
 const formatPubDate = (date: string) => new Date(date).toUTCString();
 const clean = (html: string) => (!html ? '' : html.replace(/["'&<>]/g, (c) => `&${chars[c]};`));
 
-export default function RSS(channel: RSSChannel, items: RSSItem[]): string {
+export function RSS(channel: RSSChannel, items: RSSItem[]): string {
 	const createItem = (item: RSSItem) => `
 		<item>
 			<title>${clean(item.title)}</title>

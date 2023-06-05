@@ -1,6 +1,6 @@
 import { traverse } from 'marqua/fs';
 import { compare } from 'mauss';
-import RSS from '$lib/utils/rss';
+import { RSS } from './core';
 
 const channel = {
 	domain: 'mauss.dev',
@@ -21,7 +21,7 @@ const items = traverse(
 			const description = `${title} curated by Alchemauss`;
 			return { slug, title, description, date };
 		} else if (breadcrumb.includes('reviews')) {
-			if (!metadata.verdict) return;
+			if (metadata.verdict === 'pending') return;
 			const [file, category] = breadcrumb;
 			return {
 				slug: `reviews/${category}/${file.replace('.md', '')}`,
@@ -40,7 +40,8 @@ const items = traverse(
 	(items) => items.sort((x, y) => compare.date(x.date, y.date) || compare.string(x.title, y.title))
 );
 
-export const GET: import('./$types').RequestHandler = async () => {
+export const prerender = true;
+export async function GET() {
 	const headers = { 'Content-Type': 'application/xml' };
 	return new Response(RSS(channel, items), { headers });
-};
+}
