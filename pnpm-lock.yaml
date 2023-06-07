@@ -18,8 +18,8 @@ devDependencies:
     specifier: ^20.2.5
     version: 20.2.5
   marqua:
-    specifier: ^0.5.1
-    version: 0.5.1
+    specifier: ^0.5.2
+    version: 0.5.2
   mauss:
     specifier: ^0.5.0
     version: 0.5.0
@@ -958,17 +958,13 @@ packages:
       uc.micro: 1.0.6
     dev: true
 
-  /marqua@0.5.1:
-    resolution: {integrity: sha512-wAnr4ZjAOCbK+tWguBUfDwXI+UHjLGgPZMcGlVfpahU3eb9SZnWpH8eIilzXtNW5/3IHpgZ6FVSB5pznP39nig==}
+  /marqua@0.5.2:
+    resolution: {integrity: sha512-Y7QQU6iWsY15ZYN9LXyxCSZNzBqBQu7Q2OcLp4LsBtQeXLtOxYrdEMgFn0fClKMUFlCDyeXsY67NFrgFlInyig==}
     engines: {node: '>=14.8'}
     dependencies:
       markdown-it: 13.0.1
-      mauss: 0.4.12
+      mauss: 0.5.0
       shiki: 0.14.2
-    dev: true
-
-  /mauss@0.4.12:
-    resolution: {integrity: sha512-POOk9avX/YkwZpT/xsmU6KWpAUQED6/qT98m58uKAV6LNJphERrYUnpQfvDBQpF/ZULFjI24dicBvN/+pLEeMQ==}
     dev: true
 
   /mauss@0.5.0:
