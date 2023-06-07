@@ -10,12 +10,12 @@
     "check:svelte": "svelte-kit sync && svelte-check src --tsconfig ./tsconfig.json",
     "check:content": "cd content && pnpm dlx markdownlint-cli sites/**/*.md"
   },
-  "packageManager": "pnpm@8.6.0",
+  "packageManager": "pnpm@8.6.1",
   "prettier": "mauss/prettier.json",
   "devDependencies": {
     "@ignatiusmb/styles": "^0.1.1",
     "@sveltejs/adapter-vercel": "^3.0.1",
-    "@sveltejs/kit": "^1.20.1",
+    "@sveltejs/kit": "^1.20.2",
     "@types/node": "^20.2.5",
     "marqua": "^0.5.2",
     "mauss": "^0.5.0",
