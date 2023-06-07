@@ -2,7 +2,7 @@
 	export let type = 'dashed';
 </script>
 
-<div style="border: 0.25em {type} var(--theme-primary);" />
+<div style:border="0.25em {type} var(--theme-primary);" />
 
 <style>
 	div {
