@@ -1,4 +1,4 @@
-import { capitalize } from 'mauss/utils';
+import { capitalize } from 'mauss';
 import { reviews } from '$lib/content';
 
 export const load: import('./$types').PageServerLoad = async () => {

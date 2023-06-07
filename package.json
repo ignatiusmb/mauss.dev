@@ -8,27 +8,24 @@
     "check": "pnpm check:style && pnpm check:svelte",
     "check:style": "prettier -c src --plugin-search-dir=.",
     "check:svelte": "svelte-kit sync && svelte-check src --tsconfig ./tsconfig.json",
-    "check:content": "cd content && markdownlint sites/**/*.md"
+    "check:content": "cd content && pnpm dlx markdownlint-cli sites/**/*.md"
   },
-  "packageManager": "pnpm@8.3.1",
+  "packageManager": "pnpm@8.6.1",
   "prettier": "mauss/prettier.json",
   "devDependencies": {
     "@ignatiusmb/styles": "^0.1.1",
-    "@sveltejs/adapter-vercel": "^2.4.2",
-    "@sveltejs/kit": "^1.15.7",
-    "@types/node": "^18.16.0",
-    "katex": "^0.16.6",
-    "markdown-it-texmath": "^1.0.0",
-    "markdownlint-cli": "^0.33.0",
-    "marqua": "^0.5.1",
-    "mauss": "^0.4.11",
+    "@sveltejs/adapter-vercel": "^3.0.1",
+    "@sveltejs/kit": "~1.16.3",
+    "@types/node": "^20.2.5",
+    "marqua": "^0.5.2",
+    "mauss": "^0.5.0",
     "prettier": "^2.8.8",
-    "prettier-plugin-svelte": "^2.10.0",
+    "prettier-plugin-svelte": "^2.10.1",
     "sharp": "^0.32.1",
-    "svelte": "^3.58.0",
-    "svelte-check": "^3.2.0",
-    "syv": "^0.0.24",
-    "typescript": "^5.0.4",
-    "vite": "^4.3.1"
+    "svelte": "^3.59.1",
+    "svelte-check": "^3.4.3",
+    "syv": "^0.0.26",
+    "typescript": "^5.1.3",
+    "vite": "^4.3.9"
   }
 }

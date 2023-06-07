@@ -5,7 +5,6 @@
 	import '$lib/styles/fonts.css';
 	import '$lib/styles/theme.css';
 	import '$lib/styles/blog.css';
-	import '$lib/styles/animation.css';
 
 	import ScrollTop from 'syv/core/ScrollTop.svelte';
 	import Footer from '$lib/components/Footer.svelte';

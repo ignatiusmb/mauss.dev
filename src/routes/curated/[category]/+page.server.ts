@@ -1,5 +1,4 @@
-import { compare } from 'mauss';
-import { capitalize } from 'mauss/utils';
+import { capitalize, compare } from 'mauss';
 import { curated } from '$lib/content';
 
 export const load: import('./$types').PageServerLoad = async ({ params }) => {

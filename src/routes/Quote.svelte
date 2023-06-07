@@ -1,7 +1,7 @@
 <script lang="ts">
 	import GradientBorder from 'syv/core/GradientBorder.svelte';
 
-	import { random } from 'mauss/utils';
+	import { random } from 'mauss';
 	import { fly } from 'svelte/transition';
 
 	export let quotes: ReturnType<typeof import('$lib/content/quotes').all>;

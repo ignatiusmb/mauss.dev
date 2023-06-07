@@ -2,7 +2,7 @@
 	import Image from 'syv/core/Image.svelte';
 	import Link from '$lib/components/Link.svelte';
 
-	import { dt } from 'mauss/utils';
+	import { dt } from 'mauss';
 
 	export let post: import('$lib/content/posts').Post;
 </script>

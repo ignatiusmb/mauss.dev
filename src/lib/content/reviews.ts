@@ -1,7 +1,6 @@
 import { marker } from 'marqua/artisan';
 import { traverse } from 'marqua/fs';
 import { chain } from 'marqua/transform';
-import { tryNumber } from 'mauss/utils';
 import { compare, regexp } from 'mauss';
 import { optimize, write } from './media';
 
@@ -186,8 +185,11 @@ export function get(category: string, slug: string) {
 
 function contentParser<T extends Record<string, any>>(data: T, content: string): string {
 	const traverse = (meta: T | string, properties: string): string => {
-		for (const key of properties.split(':'))
-			if (typeof meta !== 'string') meta = meta[tryNumber(key)];
+		for (const key of properties.split(':')) {
+			if (typeof meta !== 'string') {
+				meta = meta[Number.isNaN(Number(key)) ? key : Number(key)];
+			}
+		}
 		return meta as string;
 	};
 
