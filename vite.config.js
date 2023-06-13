@@ -8,7 +8,7 @@ export default defineConfig(({ command }) => {
 
 	if (command === 'build') {
 		for (const key in DATA) {
-			void md[key].all();
+			void DATA[key].all();
 		}
 	}
 
