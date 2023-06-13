@@ -14,12 +14,12 @@
 
 	export let data: import('./$types').PageData;
 
-	const store = writable(data.reviews);
+	const store = writable(data.list);
 	let search = (!building && $page.url.searchParams.get('q')) || '';
 	let query = (search && search.replace(/\+/g, ' ')) || '';
 	let filters = { categories: [], genres: [], verdict: [], sort_by: 'updated' };
 
-	$: filtered = sieve(filters, data.reviews);
+	$: filtered = sieve(filters, data.list);
 	$: items = sift(query, filtered);
 	// $: shareable = qpm({ q: query }).replace(/(%20)+/g, '+');
 </script>

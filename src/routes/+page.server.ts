@@ -7,7 +7,7 @@ export const load: import('./$types').PageServerLoad = async () => {
 		DATA['curated/'].all(),
 		DATA['posts/'].all(),
 		DATA['reviews/'].all(),
-	] as const;
+	];
 
 	return {
 		quotes: quotes.slice(0, quotes.length / 2),

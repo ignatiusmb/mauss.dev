@@ -16,7 +16,7 @@
     "@ignatiusmb/styles": "^0.1.1",
     "@sveltejs/adapter-vercel": "^3.0.1",
     "@sveltejs/kit": "~1.16.3",
-    "@types/node": "^20.2.5",
+    "@types/node": "^20.3.1",
     "marqua": "^0.5.2",
     "mauss": "^0.5.0",
     "prettier": "^2.8.8",

@@ -6,7 +6,7 @@ export const load: import('./$types').PageServerLoad = async () => {
 	const categories = [...new Set(content.map((p) => p.tags[0]))].sort();
 	const sort_by = { updated: 'Last Updated', published: 'Last Published' };
 	return {
-		posts: content,
+		list: content,
 		unique: { categories, tags, sort_by },
 		meta: {
 			canonical: 'posts',

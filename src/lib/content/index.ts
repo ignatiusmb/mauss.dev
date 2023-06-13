@@ -17,9 +17,6 @@ export const DATA = {
 			date: string;
 		}
 
-		// export type Curated = ReturnType<typeof get>;
-		// export type CuratedIndex = ReturnType<typeof all>;
-
 		return {
 			all() {
 				const curated = traverse(
@@ -74,9 +71,6 @@ export const DATA = {
 				en?: string;
 			};
 		}
-
-		// export type Post = ReturnType<typeof get>;
-		// export type PostIndex = ReturnType<typeof all>;
 
 		return {
 			all() {
