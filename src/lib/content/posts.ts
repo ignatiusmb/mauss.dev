@@ -1,6 +1,6 @@
 import { traverse } from 'marqua/fs';
 import { chain } from 'marqua/transform';
-import { regexp } from 'mauss';
+import { compare, regexp } from 'mauss';
 import { optimize } from './media';
 
 interface FrontMatter {
@@ -41,7 +41,12 @@ export function all() {
 			};
 			return { ...metadata, ...specified };
 		},
-		chain({ base: 'posts/' })
+		chain({
+			base: 'posts/',
+			sort({ date: xd }, { date: yd }) {
+				return compare.date(xd, yd);
+			},
+		})
 	);
 
 	return contents.map((v) => ({ ...v, thumbnail: thumbnails[v.slug] || v.thumbnail }));
