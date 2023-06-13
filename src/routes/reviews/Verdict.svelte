@@ -1,5 +1,5 @@
 <script lang="ts">
-	type Verdict = import('./$types').PageData['reviews'][number]['verdict'];
+	type Verdict = import('./$types').PageData['list'][number]['verdict'];
 	export let verdict: Verdict;
 
 	const mapper: Partial<Record<Verdict, Verdict>> = {

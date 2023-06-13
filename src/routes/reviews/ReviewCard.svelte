@@ -7,7 +7,7 @@
 
 	import { capitalize } from 'mauss';
 
-	export let post: import('./$types').PageData['reviews'][number];
+	export let post: import('./$types').PageData['list'][number];
 
 	const disabled = !post.rating || post.verdict === 'pending';
 </script>
