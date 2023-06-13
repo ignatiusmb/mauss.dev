@@ -4,7 +4,7 @@
 	import { random } from 'mauss';
 	import { fly } from 'svelte/transition';
 
-	export let quotes: ReturnType<typeof import('$lib/content/quotes').all>;
+	export let quotes: import('./$types').PageData['quotes'];
 
 	let quoteIndex = random.int(quotes.length);
 	$: newQuote = quotes[quoteIndex];

@@ -4,7 +4,7 @@
 
 	import { dt } from 'mauss';
 
-	export let post: import('$lib/content/posts').Post;
+	export let post: import('./$types').PageData['posts'][number];
 </script>
 
 <section>
