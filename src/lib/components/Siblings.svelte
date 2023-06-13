@@ -7,7 +7,7 @@
 {#if back || next}
 	<footer>
 		{#if back}
-			<a href="/{back.slug}/" style="text-align: left">
+			<a href="/{back.slug}/" style:text-align="left">
 				<strong>&larr; Prev</strong>
 				{#if typeof back.title === 'string'}
 					<span>{back.title}</span>
@@ -19,7 +19,7 @@
 			</a>
 		{/if}
 		{#if next}
-			<a href="/{next.slug}/" style="text-align: right">
+			<a href="/{next.slug}/" style:text-align="right">
 				<strong>Next &rarr;</strong>
 				{#if typeof next.title === 'string'}
 					<span>{next.title}</span>

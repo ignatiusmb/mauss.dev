@@ -2,14 +2,16 @@
 	export let type = 'dashed';
 </script>
 
-<div style="border: 0.25em {type} var(--theme-primary);" />
+<div style:border-style={type} />
 
 <style>
 	div {
 		width: 100%;
 		height: 100%;
 		position: absolute;
+		border-width: 0.25rem;
 		border-radius: inherit;
+		border-color: var(--theme-primary);
 		animation: rotate 42s linear infinite;
 	}
 

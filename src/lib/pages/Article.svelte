@@ -28,9 +28,9 @@
 		{#if post.table.length}
 			<section id="objective" class="info-box">
 				<h3>Table of Contents</h3>
-				<ul style="color: #f48fb1">
+				<ul style:color="#f48fb1">
 					{#each post.table as { id, title }}
-						<li style="color: inherit;">
+						<li style:color="inherit">
 							<Link href="#{id}">{title}</Link>
 						</li>
 					{/each}
