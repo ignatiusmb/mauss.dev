@@ -3,11 +3,11 @@
 <script lang="ts">
 	import Image from 'syv/core/Image.svelte';
 	import Link from '$lib/components/Link.svelte';
-	import Verdict from '$lib/components/Verdict.svelte';
+	import Verdict from './Verdict.svelte';
 
 	import { capitalize } from 'mauss';
 
-	export let post: import('$lib/content/reviews').ReviewIndex[number];
+	export let post: import('./$types').PageData['list'][number];
 
 	const disabled = !post.rating || post.verdict === 'pending';
 </script>

@@ -1,13 +1,11 @@
-import { capitalize, compare } from 'mauss';
-import { curated } from '$lib/content';
+import { capitalize } from 'mauss';
+import { DATA } from '$lib/content';
 
 export const load: import('./$types').PageServerLoad = async ({ params }) => {
-	const content = curated
-		.all()
-		.filter((p) => p.category === params.category)
-		.sort(compare.key('date', compare.date));
+	const content = DATA['curated/'].all();
+
 	return {
-		curated: content,
+		curated: content.filter((p) => p.category === params.category),
 		category: params.category,
 		meta: {
 			canonical: `curated/${params.category}`,

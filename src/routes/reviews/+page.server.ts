@@ -1,19 +1,21 @@
 import { capitalize } from 'mauss';
-import { reviews } from '$lib/content';
+import { DATA } from '$lib/content';
+
+const verdict = DATA['reviews/'].VERDICTS.reduce(
+	(a, c) => ({ ...a, [c]: capitalize(c.replace('-', ' ')) }),
+	{} as { [k in (typeof DATA)['reviews/']['VERDICTS'][number]]: string }
+);
 
 export const load: import('./$types').PageServerLoad = async () => {
-	const content = reviews.all();
+	const content = DATA['reviews/'].all();
 	const categories = [...new Set(content.map((p) => p.category))];
 	const genres = [...new Set(content.flatMap((p) => p.genres))].sort();
 	return {
-		reviews: content,
+		list: content,
 		unique: {
 			categories,
 			genres,
-			verdict: reviews.VERDICTS.reduce(
-				(a, c) => ({ ...a, [c]: capitalize(c.replace('-', ' ')) }),
-				{} as { [k in (typeof reviews.VERDICTS)[number]]: string }
-			),
+			verdict,
 			sort_by: {
 				updated: 'Last updated',
 				published: 'Date published',

@@ -1,7 +1,8 @@
 <script lang="ts">
-	export let verdict: import('$lib/content/reviews').Review['verdict'];
-	type VerdictRecord = Record<typeof verdict, typeof verdict>;
-	const mapper: Partial<VerdictRecord> = {
+	type Verdict = import('./$types').PageData['list'][number]['verdict'];
+	export let verdict: Verdict;
+
+	const mapper: Partial<Record<Verdict, Verdict>> = {
 		'must-watch': 'recommended',
 	};
 </script>

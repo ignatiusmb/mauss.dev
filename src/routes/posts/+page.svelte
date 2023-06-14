@@ -10,11 +10,11 @@
 
 	export let data: import('./$types').PageData;
 
-	const store = writable(data.posts);
+	const store = writable(data.list);
 	let filters = { categories: [], tags: [], sort_by: 'updated' };
 	let query = '';
 
-	$: filtered = sieve(filters, data.posts);
+	$: filtered = sieve(filters, data.list);
 	$: items = sift(query, filtered);
 </script>
 

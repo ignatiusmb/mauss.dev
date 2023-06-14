@@ -2,7 +2,7 @@
 	import Image from 'syv/core/Image.svelte';
 	import { dt } from 'mauss';
 
-	export let post: import('$lib/content/reviews').Review;
+	export let post: import('./$types').PageData['article'];
 
 	$: ({ backdrop, title, rating, composed, seen } = post);
 </script>

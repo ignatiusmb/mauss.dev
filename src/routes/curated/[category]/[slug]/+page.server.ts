@@ -1,8 +1,8 @@
 import { error } from '@sveltejs/kit';
-import { curated } from '$lib/content';
+import { DATA } from '$lib/content';
 
 export const load: import('./$types').PageServerLoad = async ({ params }) => {
-	const article = curated.get(params.category, params.slug);
+	const article = DATA['curated/'].get(params.category, params.slug);
 	if (!article) throw error(404, 'Curated post not found');
 	return {
 		article,

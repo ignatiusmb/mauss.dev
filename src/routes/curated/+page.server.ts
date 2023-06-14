@@ -1,8 +1,10 @@
-import { curated } from '$lib/content';
+import { DATA } from '$lib/content';
 
 export const load: import('./$types').PageServerLoad = () => {
+	const content = DATA['curated/'].all();
+
 	return {
-		list: curated.all(),
+		list: content,
 		meta: {
 			canonical: 'curated',
 			title: 'Curated',

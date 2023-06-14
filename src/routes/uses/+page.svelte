@@ -2,7 +2,7 @@
 	import Article from '$lib/pages/Article.svelte';
 
 	export let data: import('./$types').PageData & {
-		article: { title: string; date: { updated: string } }; // need to extend `Compiled`
+		article: { title: string; date: string }; // need to extend `Compiled`
 	};
 </script>
 
