@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Feather from 'syv/icons/Feather.svelte';
-	import Link from '$lib/components/Link.svelte';
 	import NavGrid from '$lib/components/NavGrid.svelte';
 	import NavLink from '$lib/components/NavLink.svelte';
 	import { navigating, page } from '$app/stores';
@@ -37,12 +36,12 @@
 		</NavGrid>
 	{/if}
 
-	<Link href="/rss.xml" label="Get RSS">
+	<a href="/rss.xml" aria-label="Get RSS">
 		<Feather icon={import('syv/icons/feather/rss')} />
-	</Link>
-	<Link href="/help/" label="See help page">
+	</a>
+	<a href="/help/" aria-label="See help page">
 		<Feather icon={import('syv/icons/feather/help-circle')} />
-	</Link>
+	</a>
 </nav>
 
 <style>
@@ -69,7 +68,7 @@
 	}
 
 	nav > button,
-	nav > :global(a.syv-core-link) {
+	nav > :global(a) {
 		display: inline-flex;
 	}
 

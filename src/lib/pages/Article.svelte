@@ -1,6 +1,5 @@
 <script lang="ts">
 	import ProgressBar from 'syv/core/ProgressBar.svelte';
-	import Link from '$lib/components/Link.svelte';
 	import Siblings from '$lib/components/Siblings.svelte';
 	import Header from './Header.svelte';
 
@@ -29,7 +28,7 @@
 				<ul style:color="#f48fb1">
 					{#each post.table as { id, title }}
 						<li style:color="inherit">
-							<Link href="#{id}">{title}</Link>
+							<a href="#{id}">{title}</a>
 						</li>
 					{/each}
 				</ul>
@@ -45,9 +44,9 @@
 				<span style:font-weight="500">Found a typo or something to improve?</span>
 				<br />
 				<span>In the spirit of open source, you can create a new</span>
-				<Link href="https://github.com/alchemauss/content/issues">issue</Link>
+				<a href="https://github.com/alchemauss/content/issues">issue</a>
 				<span>or contribute directly to this article by</span>
-				<Link href="https://github.com/alchemauss/content/blob/master/{path}">submitting a PR</Link>
+				<a href="https://github.com/alchemauss/content/blob/master/{path}">submitting a PR</a>
 				<span>on GitHub</span>
 			</p>
 		</section>

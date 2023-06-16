@@ -20,10 +20,10 @@
 				<span>[</span>
 				{#each Object.entries(data.article.link) as [key, link]}
 					{#if typeof link === 'string'}
-						<Link href={link}>{key}</Link>
+						<a href={link}>{key}</a>
 					{:else}
 						{#each link as href, idx}
-							<Link {href}>{key} ({idx + 1})</Link>
+							<a {href}>{key} ({idx + 1})</a>
 						{/each}
 					{/if}
 				{/each}
