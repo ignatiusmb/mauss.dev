@@ -1,9 +1,9 @@
-import { error } from '@sveltejs/kit';
+import { redirect } from '@sveltejs/kit';
 import { DATA } from '$lib/content';
 
 export const load: import('./$types').PageServerLoad = async ({ params }) => {
 	const content = DATA['posts/'].get(params.slug);
-	if (!content) throw error(404, 'Post not found');
+	if (!content) throw redirect(307, '/posts');
 
 	for (const { slug, flank } of DATA['posts/'].all()) {
 		if (content.slug !== slug) continue;
@@ -17,5 +17,5 @@ export const load: import('./$types').PageServerLoad = async ({ params }) => {
 		};
 	}
 
-	throw error(404, 'Post not found');
+	throw redirect(307, '/posts');
 };

@@ -1,9 +1,9 @@
-import { error } from '@sveltejs/kit';
+import { redirect } from '@sveltejs/kit';
 import { DATA } from '$lib/content';
 
 export const load: import('./$types').PageServerLoad = async ({ params }) => {
 	const content = DATA['reviews/'].get(params.category, params.slug);
-	if (!content) throw error(404, 'Review not found');
+	if (!content) throw redirect(307, '/reviews');
 
 	for (const { slug, flank } of DATA['reviews/'].all()) {
 		if (content.slug !== slug) continue;
@@ -17,5 +17,5 @@ export const load: import('./$types').PageServerLoad = async ({ params }) => {
 		};
 	}
 
-	throw error(404, 'Review not found');
+	throw redirect(307, '/reviews');
 };
