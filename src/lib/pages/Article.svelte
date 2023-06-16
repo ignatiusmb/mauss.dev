@@ -1,9 +1,7 @@
 <script lang="ts">
 	import ProgressBar from 'syv/core/ProgressBar.svelte';
-	import Feather from 'syv/icons/Feather.svelte';
 	import Link from '$lib/components/Link.svelte';
 	import Siblings from '$lib/components/Siblings.svelte';
-	import TextIcon from '$lib/components/TextIcon.svelte';
 	import Header from './Header.svelte';
 
 	import type { ComponentProps } from 'svelte';
@@ -44,19 +42,13 @@
 	{#if path}
 		<section id="end-card">
 			<p>
-				Find an issue with this post? Have something to add, update, or clarify? All my posts here
-				are editable.
-			</p>
-			<p>
-				Just create a new
-				<Link href="https://github.com/alchemauss/content/issues">Issue</Link>
-				or
-				<Link href="https://github.com/alchemauss/content/pulls">PR</Link>
-				on GitHub, any fix or addition is much appreciated!
-				<TextIcon href="https://github.com/alchemauss/content/edit/master/{path}">
-					<span>Edit</span>
-					<Feather icon={import('syv/icons/feather/edit')} scale={17 / 16} />
-				</TextIcon>
+				<span style:font-weight="500">Found a typo or something to improve?</span>
+				<br />
+				<span>In the spirit of open source, you can create a new</span>
+				<Link href="https://github.com/alchemauss/content/issues">issue</Link>
+				<span>or contribute directly to this article by</span>
+				<Link href="https://github.com/alchemauss/content/blob/master/{path}">submitting a PR</Link>
+				<span>on GitHub</span>
 			</p>
 		</section>
 	{/if}
