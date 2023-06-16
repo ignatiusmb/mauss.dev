@@ -7,7 +7,7 @@
 	import '$lib/styles/blog.css';
 
 	import ScrollTop from 'syv/core/ScrollTop.svelte';
-	import Footer from '$lib/components/Footer.svelte';
+	import Footer from './Footer.svelte';
 	import Navigation from './Navigation.svelte';
 
 	import { page } from '$app/stores';

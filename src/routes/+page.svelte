@@ -1,8 +1,8 @@
 <script lang="ts">
 	import Image from 'syv/core/Image.svelte';
 	import Article from '$lib/pages/Article.svelte';
-	import RotatingBorder from '$lib/components/RotatingBorder.svelte';
 	import Navigation from './Navigation.svelte';
+	import RotatingBorder from './RotatingBorder.svelte';
 	import Quote from './Quote.svelte';
 
 	export let data: import('./$types').PageData;

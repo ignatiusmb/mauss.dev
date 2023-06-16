@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Feather from 'syv/icons/Feather.svelte';
-	import NavGrid from '$lib/components/NavGrid.svelte';
-	import NavLink from '$lib/components/NavLink.svelte';
+	import NavGrid from './NavGrid.svelte';
+	import NavLink from './NavLink.svelte';
 	import { navigating, page } from '$app/stores';
 
 	export let scrolled = 0;
