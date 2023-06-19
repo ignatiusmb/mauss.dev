@@ -8,7 +8,7 @@
     "check": "pnpm check:style && pnpm check:svelte",
     "check:style": "prettier -c src --plugin-search-dir=.",
     "check:svelte": "svelte-kit sync && svelte-check src --tsconfig ./tsconfig.json",
-    "check:content": "cd content && pnpm dlx markdownlint-cli sites/**/*.md"
+    "check:content": "cd content && pnpm dlx markdownlint-cli **/*.md"
   },
   "packageManager": "pnpm@8.6.1",
   "prettier": "mauss/prettier.json",
