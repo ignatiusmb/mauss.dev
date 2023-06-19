@@ -272,7 +272,7 @@ export const DATA = {
 					},
 					chain({
 						base: 'reviews/',
-						breakpoint: (r) => !r.rating || r.verdict !== 'pending',
+						breakpoint: (r) => !r.rating || r.verdict === 'pending',
 						sort(x, y) {
 							const xd = x.date.updated || x.date.published;
 							const yd = y.date.updated || y.date.published;
