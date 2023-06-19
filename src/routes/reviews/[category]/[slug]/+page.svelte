@@ -19,13 +19,14 @@
 			<small>
 				<span>[</span>
 				{#each Object.entries(data.article.link) as [key, link]}
-					{#if typeof link === 'string'}
-						<a href={link}>{key}</a>
-					{:else}
-						{#each link as href, idx}
-							<a {href}>{key} ({idx + 1})</a>
-						{/each}
-					{/if}
+					{#each typeof link === 'string' ? [link] : link as href, idx}
+						<a {href}>
+							<span>{key}</span>
+							{#if typeof link !== 'string'}
+								<span>({idx + 1})</span>
+							{/if}
+						</a>
+					{/each}
 				{/each}
 				<span>]</span>
 			</small>
