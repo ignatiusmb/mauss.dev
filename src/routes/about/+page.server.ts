@@ -1,4 +1,4 @@
-export function load() {
+export async function load() {
 	return {
 		meta: {
 			title: 'About',

@@ -4,7 +4,7 @@ export async function load() {
 		meta: {
 			canonical: 'uses',
 			title: 'Uses',
-			description: 'The apps, products, services, and other tools I use every day.',
+			description: 'The apps, products, services, and other things I use every day.',
 		},
 	};
 }
