@@ -5,7 +5,6 @@
 	import { navigating, page } from '$app/stores';
 
 	export let scrolled = 0;
-	const sections = ['about', 'curated', 'posts', 'reviews', 'uses'];
 
 	let innerWidth: number;
 	let opened = false;
@@ -30,12 +29,15 @@
 
 	{#if innerWidth > 600 || opened}
 		<NavGrid>
-			{#each sections as to}
+			{#each ['about', 'curated', 'posts', 'reviews'] as to}
 				<NavLink {path} {to} hover>{to}</NavLink>
 			{/each}
 		</NavGrid>
 	{/if}
 
+	<a href="/uses" aria-label="Uses page">
+		<Feather icon={import('syv/icons/feather/bookmark')} />
+	</a>
 	<a href="/rss.xml" aria-label="Get RSS">
 		<Feather icon={import('syv/icons/feather/rss')} />
 	</a>
