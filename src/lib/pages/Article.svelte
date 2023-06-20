@@ -9,8 +9,8 @@
 	export let path = '';
 	export let post: null | ComponentProps<Header>['post'] = null;
 
-	type Sibling = null | { slug: string; title: string | Record<string, any> };
-	export let flank: null | Partial<Record<'back' | 'next', Sibling>> = null;
+	type Flank = null | { slug: string; title: string | Record<string, any> };
+	export let flank: null | Partial<Record<'back' | 'next', Flank>> = null;
 </script>
 
 {#if $$slots.header}
