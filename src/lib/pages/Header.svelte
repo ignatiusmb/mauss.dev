@@ -89,7 +89,7 @@
 
 	h1 {
 		margin: 1em 0 0.5em;
-		font-size: clamp(2rem, 4vw, 2.5rem);
+		font-size: clamp(2rem, 5vw, 2.5rem);
 	}
 	small,
 	header > :global(div > small) {
