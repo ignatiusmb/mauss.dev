@@ -1,9 +1,8 @@
 <script lang="ts">
 	import Image from 'syv/core/Image.svelte';
 	import Article from '$lib/pages/Article.svelte';
-	import Link from '$lib/components/Link.svelte';
-	import RotatingBorder from '$lib/components/RotatingBorder.svelte';
 	import Navigation from './Navigation.svelte';
+	import RotatingBorder from './RotatingBorder.svelte';
 	import Quote from './Quote.svelte';
 
 	export let data: import('./$types').PageData;
@@ -48,9 +47,9 @@
 			I'm passionate about my websites, code and design-wise. I like nice interfaces and treat them
 			as challenges. I also like to build/assemble things IRL, especially those do-it-yourself IKEA
 			style furnitures, it calms my mind and forces me to relax for a while.
+			<br />
+			<a href="/about/">More info...</a>
 		</p>
-		<br />
-		<Link href="/about/">More info...</Link>
 	</section>
 
 	{#each showcase as [seg, item]}
@@ -59,14 +58,13 @@
 			<p>{section[seg]['desc']} recently:</p>
 			<ul>
 				{#each item as { slug, title }}
+					{@const text = typeof title === 'string' ? title : title.short || title.en}
 					<li>
-						<Link href="/{seg}/{slug}/">
-							{typeof title === 'string' ? title : title.short || title.en}
-						</Link>
+						<a href="/{seg}/{slug}/">{text}</a>
 					</li>
 				{/each}
 				<li>
-					<Link href="/{seg}/">More {seg}{seg === 'curated' ? ' stuffs ' : ''}...</Link>
+					<a href="/{seg}/">More {seg}{seg === 'curated' ? ' stuffs ' : ''}...</a>
 				</li>
 			</ul>
 		</section>

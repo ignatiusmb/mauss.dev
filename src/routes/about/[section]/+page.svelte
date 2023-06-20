@@ -1,7 +1,6 @@
 <script lang="ts">
 	import WeavedImage from 'syv/core/WeavedImage.svelte';
 	import Article from '$lib/pages/Article.svelte';
-	import Link from '$lib/components/Link.svelte';
 
 	export let data: import('./$types').PageData & {
 		title: string; // need to extend `Compiled`
@@ -12,9 +11,9 @@
 	<WeavedImage src="/assets/profile/mauss.jpg" alt="Mauss Profile" />
 
 	<section>
-		<Link href="/about/">
+		<a href="/about/">
 			<h2>About</h2>
-		</Link>
+		</a>
 	</section>
 
 	{@html data.content}

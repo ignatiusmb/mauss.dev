@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Feather from 'syv/icons/Feather.svelte';
-	import Link from '$lib/components/Link.svelte';
 	import TextIcon from '$lib/components/TextIcon.svelte';
 
 	import { dt } from 'mauss';
@@ -28,9 +27,9 @@
 	{/if}
 
 	<small>
-		<Link href={post.author?.link || '/about/'}>
+		<a href={post.author?.link || '/about/'}>
 			<img src={post.author?.img || '/assets/profile/mauss.jpg'} alt="author profile" />
-		</Link>
+		</a>
 		<div class="details">
 			<span style:font-weight="500">{post.author?.name || 'Ignatius Bagussuputra'}</span>
 
@@ -90,7 +89,7 @@
 
 	h1 {
 		margin: 1em 0 0.5em;
-		font-size: clamp(2rem, 4vw, 2.5rem);
+		font-size: clamp(2rem, 5vw, 2.5rem);
 	}
 	small,
 	header > :global(div > small) {
@@ -135,9 +134,6 @@
 	small > :global(span.no-tilde::before) {
 		content: '' !important;
 		margin: 0 !important;
-	}
-	small time + :global(.syv-link) {
-		font: 90% var(--font-monospace);
 	}
 
 	header > :global(small.tags) {

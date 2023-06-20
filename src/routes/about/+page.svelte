@@ -1,6 +1,5 @@
 <script lang="ts">
 	import WeavedImage from 'syv/core/WeavedImage.svelte';
-	import Link from '$lib/components/Link.svelte';
 	import Article from '$lib/pages/Article.svelte';
 
 	export let data: import('./$types').PageData & {
@@ -13,9 +12,9 @@
 
 	<section>
 		{#each data.sections as section}
-			<Link href="/about/{section}/">
+			<a href="/about/{section}/">
 				<h2>{section}</h2>
-			</Link>
+			</a>
 		{/each}
 	</section>
 

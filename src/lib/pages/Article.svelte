@@ -1,9 +1,5 @@
 <script lang="ts">
 	import ProgressBar from 'syv/core/ProgressBar.svelte';
-	import Feather from 'syv/icons/Feather.svelte';
-	import Link from '$lib/components/Link.svelte';
-	import Siblings from '$lib/components/Siblings.svelte';
-	import TextIcon from '$lib/components/TextIcon.svelte';
 	import Header from './Header.svelte';
 
 	import type { ComponentProps } from 'svelte';
@@ -12,7 +8,9 @@
 
 	export let path = '';
 	export let post: null | ComponentProps<Header>['post'] = null;
-	export let flank: null | ComponentProps<Siblings> = null;
+
+	type Flank = null | { slug: string; title: string | Record<string, any> };
+	export let flank: null | Partial<Record<'back' | 'next', Flank>> = null;
 </script>
 
 {#if $$slots.header}
@@ -31,7 +29,7 @@
 				<ul style:color="#f48fb1">
 					{#each post.table as { id, title }}
 						<li style:color="inherit">
-							<Link href="#{id}">{title}</Link>
+							<a href="#{id}">{title}</a>
 						</li>
 					{/each}
 				</ul>
@@ -44,25 +42,46 @@
 	{#if path}
 		<section id="end-card">
 			<p>
-				Find an issue with this post? Have something to add, update, or clarify? All my posts here
-				are editable.
-			</p>
-			<p>
-				Just create a new
-				<Link href="https://github.com/alchemauss/content/issues">Issue</Link>
-				or
-				<Link href="https://github.com/alchemauss/content/pulls">PR</Link>
-				on GitHub, any fix or addition is much appreciated!
-				<TextIcon href="https://github.com/alchemauss/content/edit/master/{path}">
-					<span>Edit</span>
-					<Feather icon={import('syv/icons/feather/edit')} scale={17 / 16} />
-				</TextIcon>
+				<span style:font-weight="500">Found a typo or something to improve?</span>
+				<br />
+				<span>In the spirit of open source, you can create a new</span>
+				<a href="https://github.com/alchemauss/content/issues">issue</a>
+				<span>or contribute directly to this article by</span>
+				<a href="https://github.com/alchemauss/content/blob/master/{path}">submitting a PR</a>
+				<span>on GitHub</span>
 			</p>
 		</section>
 	{/if}
 
 	{#if flank}
-		<Siblings {...flank} />
+		<footer>
+			{#if flank.back}
+				{@const { slug, title } = flank.back}
+				<a href="/{slug}/" style:text-align="left">
+					<strong>&larr; Prev</strong>
+					{#if typeof title === 'string'}
+						<span>{title}</span>
+					{:else if title.jp}
+						<span>{title.jp}</span>
+					{:else}
+						<span>{title.en}</span>
+					{/if}
+				</a>
+			{/if}
+			{#if flank.next}
+				{@const { slug, title } = flank.next}
+				<a href="/{slug}/" style:text-align="right">
+					<strong>Next &rarr;</strong>
+					{#if typeof title === 'string'}
+						<span>{title}</span>
+					{:else if title.jp}
+						<span>{title.jp}</span>
+					{:else}
+						<span>{title.en}</span>
+					{/if}
+				</a>
+			{/if}
+		</footer>
 	{/if}
 </main>
 
@@ -286,5 +305,41 @@
 
 	main > :global(.layout-wrapper) {
 		padding: 0 !important;
+	}
+
+	footer {
+		margin-top: 2em;
+		display: grid;
+		border-radius: 0.5em;
+		border: 0.1em solid var(--fg-surface);
+	}
+	footer a {
+		display: grid;
+		grid-template-rows: auto 1fr;
+		color: inherit;
+	}
+	footer a:nth-child(2) {
+		border-top: 0.1em solid var(--fg-surface);
+	}
+	footer a:only-child {
+		grid-column: 1 / -1;
+	}
+	footer a strong,
+	footer a span {
+		padding: 0.2em 0.8em;
+		margin: 0;
+	}
+	footer strong {
+		border-bottom: 0.1em solid var(--fg-surface);
+	}
+
+	@media only screen and (min-width: 600px) {
+		footer {
+			grid-template-columns: 1fr 1fr;
+		}
+		footer a:nth-child(2) {
+			border-top: none;
+			border-left: 0.1em solid var(--fg-surface);
+		}
 	}
 </style>

@@ -1,12 +1,10 @@
 <script lang="ts">
 	import Feather from 'syv/icons/Feather.svelte';
-	import Link from '$lib/components/Link.svelte';
-	import NavGrid from '$lib/components/NavGrid.svelte';
-	import NavLink from '$lib/components/NavLink.svelte';
+	import NavGrid from './NavGrid.svelte';
+	import NavLink from './NavLink.svelte';
 	import { navigating, page } from '$app/stores';
 
 	export let scrolled = 0;
-	const sections = ['about', 'curated', 'posts', 'reviews', 'uses'];
 
 	let innerWidth: number;
 	let opened = false;
@@ -31,18 +29,21 @@
 
 	{#if innerWidth > 600 || opened}
 		<NavGrid>
-			{#each sections as to}
+			{#each ['about', 'curated', 'posts', 'reviews'] as to}
 				<NavLink {path} {to} hover>{to}</NavLink>
 			{/each}
 		</NavGrid>
 	{/if}
 
-	<Link href="/rss.xml" label="Get RSS">
+	<a href="/uses" aria-label="Uses page">
+		<Feather icon={import('syv/icons/feather/bookmark')} />
+	</a>
+	<a href="/rss.xml" aria-label="Get RSS">
 		<Feather icon={import('syv/icons/feather/rss')} />
-	</Link>
-	<Link href="/help/" label="See help page">
+	</a>
+	<a href="/help/" aria-label="See help page">
 		<Feather icon={import('syv/icons/feather/help-circle')} />
-	</Link>
+	</a>
 </nav>
 
 <style>
@@ -69,7 +70,7 @@
 	}
 
 	nav > button,
-	nav > :global(a.syv-core-link) {
+	nav > :global(a) {
 		display: inline-flex;
 	}
 

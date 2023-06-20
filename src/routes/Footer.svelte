@@ -1,54 +1,53 @@
 <script>
 	import Feather from 'syv/icons/Feather.svelte';
-	import Link from '$lib/components/Link.svelte';
 </script>
 
 <footer>
 	<section>
 		<em>
-			Read the
-			<Link href="/help/">help page</Link>
-			for more information
+			<span>Visit the</span>
+			<a href="/help/">help page</a>
+			<span>for more information</span>
 		</em>
 	</section>
 
 	<section class="social">
-		<Link href="https://www.facebook.com/ignatiusmb" label="facebook profile">
+		<a href="https://www.facebook.com/ignatiusmb" aria-label="facebook profile">
 			<Feather icon={import('syv/icons/feather/facebook')} />
-		</Link>
-		<Link href="https://www.instagram.com/ignatiusmb" label="instagram profile">
+		</a>
+		<a href="https://www.instagram.com/ignatiusmb" aria-label="instagram profile">
 			<Feather icon={import('syv/icons/feather/instagram')} />
-		</Link>
-		<Link href="https://www.linkedin.com/in/ignatiusmb" label="linkedin profile">
+		</a>
+		<a href="https://www.linkedin.com/in/ignatiusmb" aria-label="linkedin profile">
 			<Feather icon={import('syv/icons/feather/linkedin')} />
-		</Link>
-		<Link href="https://twitter.com/alchemauss" label="twitter profile">
+		</a>
+		<a href="https://twitter.com/alchemauss" aria-label="twitter profile">
 			<Feather icon={import('syv/icons/feather/twitter')} />
-		</Link>
-		<Link href="https://keybase.io/mauss" label="keybase profile">
+		</a>
+		<a href="https://keybase.io/mauss" aria-label="keybase profile">
 			<Feather icon={import('syv/icons/feather/key')} />
-		</Link>
-		<Link href="https://github.com/ignatiusmb" label="github profile">
+		</a>
+		<a href="https://github.com/ignatiusmb" aria-label="github profile">
 			<Feather icon={import('syv/icons/feather/github')} />
-		</Link>
-		<Link href="https://gitlab.com/ignatiusmb" label="gitlab profile">
+		</a>
+		<a href="https://gitlab.com/ignatiusmb" aria-label="gitlab profile">
 			<Feather icon={import('syv/icons/feather/gitlab')} />
-		</Link>
-		<Link href="https://twitch.tv/alchemauss" label="twitch profile">
+		</a>
+		<a href="https://twitch.tv/alchemauss" aria-label="twitch profile">
 			<Feather icon={import('syv/icons/feather/twitch')} />
-		</Link>
-		<Link href="https://www.youtube.com/user/Ignapure/playlists" label="youtube playlist profile">
+		</a>
+		<a href="https://www.youtube.com/@ignatiusmb" aria-label="youtube profile">
 			<Feather icon={import('syv/icons/feather/youtube')} />
-		</Link>
+		</a>
 	</section>
 
 	<section>
 		<p>Copyright &copy; 2017 &ndash; {new Date().getFullYear()} Ignatius Bagussuputra</p>
 		<p>
-			Handcrafted with ❤️ using
-			<Link href="https://kit.svelte.dev/">SvelteKit</Link>
-			&plus;
-			<Link href="https://marqua.mauss.dev/">Marqua</Link>
+			<span>Handcrafted with ❤️ using</span>
+			<a href="https://kit.svelte.dev/">SvelteKit</a>
+			<span>&plus;</span>
+			<a href="https://marqua.mauss.dev/">Marqua</a>
 		</p>
 	</section>
 </footer>
@@ -75,28 +74,28 @@
 		padding-bottom: 0.75rem;
 		margin: auto;
 	}
-	.social > :global(a) {
+	.social > a {
 		flex: 0 1 5rem;
 		padding-top: 1rem;
 	}
-	.social :global(a),
-	.social :global(a:visited) {
+	.social a,
+	.social a:visited {
 		transition: var(--t-duration);
 		transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 		color: var(--fg-surface);
 	}
-	.social :global(a:hover),
-	.social :global(a:focus) {
+	.social a:hover,
+	.social a:focus {
 		transition: var(--t-duration);
 		transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 		color: var(--theme-secondary);
 	}
-	.social :global(a:hover:nth-child(odd)),
-	.social :global(a:focus:nth-child(odd)) {
+	.social a:hover:nth-child(odd),
+	.social a:focus:nth-child(odd) {
 		transform: rotate(6deg) scale(1.2) translateY(-20%);
 	}
-	.social :global(a:hover:nth-child(even)),
-	.social :global(a:focus:nth-child(even)) {
+	.social a:hover:nth-child(even),
+	.social a:focus:nth-child(even) {
 		transform: rotate(-6deg) scale(1.2) translateY(-20%);
 	}
 	section:last-of-type {
