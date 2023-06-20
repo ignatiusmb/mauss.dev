@@ -5,7 +5,7 @@
 <footer>
 	<section>
 		<em>
-			<span>Read the</span>
+			<span>Visit the</span>
 			<a href="/help/">help page</a>
 			<span>for more information</span>
 		</em>
@@ -36,7 +36,7 @@
 		<a href="https://twitch.tv/alchemauss" aria-label="twitch profile">
 			<Feather icon={import('syv/icons/feather/twitch')} />
 		</a>
-		<a href="https://www.youtube.com/user/Ignapure/playlists" aria-label="youtube playlist profile">
+		<a href="https://www.youtube.com/@ignatiusmb" aria-label="youtube profile">
 			<Feather icon={import('syv/icons/feather/youtube')} />
 		</a>
 	</section>
