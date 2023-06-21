@@ -1,12 +1,10 @@
-import { compile } from 'marqua/fs';
-
-export const load: import('./$types').PageServerLoad = async () => {
+export async function load() {
 	return {
-		article: compile('content/sites/dev.mauss/uses.md'),
+		updated: '2023-06-20',
 		meta: {
 			canonical: 'uses',
 			title: 'Uses',
-			description: 'Collections detailing the setup, applications, workstations, and other stuffs.',
+			description: 'The apps, products, services, and other things I use every day.',
 		},
 	};
-};
+}

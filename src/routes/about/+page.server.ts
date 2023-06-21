@@ -1,8 +1,8 @@
-export const load: import('./$types').PageServerLoad = async ({ parent }) => {
-	const { content } = await parent();
-
+export async function load() {
 	return {
-		article: content['index'],
-		sections: Object.keys(content).filter((v) => v !== 'index'),
+		meta: {
+			title: 'About',
+			description: 'Who, what, and why?',
+		},
 	};
-};
+}
