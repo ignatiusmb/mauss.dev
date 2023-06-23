@@ -26,8 +26,8 @@
 		right: 0;
 		bottom: 0;
 		width: 0;
-		height: 0.25em;
-		border-radius: 0.5em;
+		height: 0.15em;
+		border-radius: 0.25em;
 		background-color: var(--theme-secondary);
 		transition: width var(--t-duration) ease;
 		transform: translateY(100%);
