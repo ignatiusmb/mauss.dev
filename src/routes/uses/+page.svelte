@@ -47,6 +47,23 @@
 					</li>
 				</ul>
 			</li>
+			<li>
+				<a href="#personal-skincare">Personal Skincare</a>
+				<ul>
+					<li>
+						<a href="#personal-skincare-daytime-routine">Daytime Routine</a>
+					</li>
+					<li>
+						<a href="#personal-skincare-nighttime-routine">Nighttime Routine</a>
+					</li>
+					<li>
+						<a href="#personal-skincare-situational">Situational</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#daily-supplements">Daily Supplements</a>
+			</li>
 		</ul>
 	</section>
 
@@ -338,7 +355,123 @@
 		</li>
 	</ul>
 
-	<!-- <h2>Personal Skincare</h2> -->
+	<h2 id="personal-skincare">Personal Skincare</h2>
+
+	<p>Tailored for oily and sensitive skin</p>
+
+	<ul>
+		<li>
+			<strong>Toner:</strong>
+			<a href="https://www.goodmolecules.com/products/niacinamide-brightening-toner">
+				Good Molecules - Niacinamide Brightening Toner
+			</a>
+		</li>
+		<li>
+			<strong>Moisturizer:</strong>
+			<a href="https://www.cosrx.com/products/advanced-snail-92-all-in-one-cream">
+				COSRX - Advanced Snail 92 All in one Cream
+			</a>
+		</li>
+	</ul>
+
+	<h3 id="personal-skincare-daytime-routine">Daytime Routine</h3>
+	<ol>
+		<li>
+			<strong>Toner / Booster:</strong>
+			<span>See above</span>
+		</li>
+		<li>
+			<strong>Moisturizer:</strong>
+			<span>See above</span>
+		</li>
+		<li>
+			<strong>Sunscreen:</strong>
+			<a href="https://eltamd.com/products/uv-clear-broad-spectrum-spf-46">
+				EltaMD - UV Clear Broad-Spectrum SPF 46
+			</a>
+		</li>
+	</ol>
+
+	<h3 id="personal-skincare-nighttime-routine">Nighttime Routine</h3>
+	<ol>
+		<li>
+			<strong>Toner / Booster:</strong>
+			<span>See above</span>
+		</li>
+		<li>
+			<strong>Adapalene:</strong>
+			<a href="https://differin.com/shop/differin-gel">Differin&reg; Gel</a>
+		</li>
+		<li>
+			<strong>Moisturizer:</strong>
+			<span>See above</span>
+		</li>
+	</ol>
+
+	<h3 id="personal-skincare-situational">Situational</h3>
+	<ul>
+		<li>
+			<strong>Soothing Cream:</strong>
+			<a href="https://tokopedia.link/2ZZBBYyrRAb">La Roche Posay - Cicaplast Baume B5+</a>
+		</li>
+		<li>
+			<strong>Niacinamide:</strong>
+			<a href="https://theordinary.com/en-us/niacinamide-10-zinc-1-serum-100436.html">
+				The Ordinary - Niacinamide 10% + Zinc 1%
+			</a>
+		</li>
+		<li>
+			<strong>Retinol:</strong>
+			<a href="https://www.cerave.com/skincare/serums/resurfacing-retinol-serum">
+				CeraVe - Resurfacing Retinol Serum
+			</a>
+		</li>
+		<li>
+			<strong>Salicylic Acid:</strong>
+			<ul>
+				<li>
+					<a href="https://tokopedia.link/RCRttMhqRAb">
+						La Roche Posay - Effaclar Salicylic Acid Serum 30ml
+					</a>
+				</li>
+				<li>
+					<a
+						href="https://theordinary.com/en-us/salicylic-acid-2-solution-acne-control-100098.html"
+					>
+						The Ordinary - Salicylic Acid 2% Solution
+					</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	<h2 id="daily-supplements">Daily Supplements</h2>
+	<ul>
+		<li>
+			<strong>Vitamin C</strong>
+			<span>| 1000 mg</span>
+		</li>
+		<li>
+			<strong>Vitamin D</strong>
+			<span>| 2000 IU</span>
+		</li>
+		<li>
+			<strong>Omega-3</strong>
+			<span>| 500 mg</span>
+		</li>
+		<li>
+			<strong>Magnesium</strong>
+			<span>| 500 mg</span>
+		</li>
+		<li>
+			<strong>L-Theanine</strong>
+			<span>| 200 mg</span>
+		</li>
+		<li>
+			<strong>Creatine</strong>
+			<span>| 5 g</span>
+		</li>
+	</ul>
 </Article>
 
 <style>
