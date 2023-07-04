@@ -1,6 +1,6 @@
 <script lang="ts">
+	import Badge from '$lib/components/Badge.svelte';
 	import Link from '$lib/components/Link.svelte';
-	import TagBadge from '$lib/components/TagBadge.svelte';
 	import Article from '$lib/pages/Article.svelte';
 
 	export let data: import('./$types').PageData;
@@ -14,7 +14,7 @@
 	<svelte:fragment slot="header">
 		<small class="tags">
 			{#each data.article.tags as tag}
-				<TagBadge {tag} />
+				<Badge {tag} />
 			{/each}
 		</small>
 	</svelte:fragment>

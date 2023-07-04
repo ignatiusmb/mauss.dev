@@ -1,13 +1,22 @@
 <script>
-	import '../app.css';
+	import '@fontsource/rubik/300.css';
+	import '@fontsource/rubik/400.css';
+	import '@fontsource/rubik/500.css';
+	import '@fontsource/karla/400.css';
+	import '@fontsource/karla/600.css';
+	import '@fontsource/fira-code/300.css';
+	import '@fontsource/fira-code/400.css';
+	import '@fontsource/fira-code/500.css';
+	import '@fontsource/fira-code/600.css';
+
 	import '@ignatiusmb/styles/core.css';
 	import 'marqua/styles/code.css';
-	import '$lib/styles/fonts.css';
 	import '$lib/styles/theme.css';
 	import '$lib/styles/blog.css';
+	import '../app.css';
 
 	import ScrollTop from 'syv/core/ScrollTop.svelte';
-	import Footer from '$lib/components/Footer.svelte';
+	import Footer from './Footer.svelte';
 	import Navigation from './Navigation.svelte';
 
 	import { page } from '$app/stores';

@@ -5,6 +5,15 @@ settings:
   excludeLinksFromLockfile: false
 
 devDependencies:
+  '@fontsource/fira-code':
+    specifier: ^5.0.3
+    version: 5.0.3
+  '@fontsource/karla':
+    specifier: ^5.0.3
+    version: 5.0.3
+  '@fontsource/rubik':
+    specifier: ^5.0.3
+    version: 5.0.3
   '@ignatiusmb/styles':
     specifier: ^0.1.1
     version: 0.1.1
@@ -247,6 +256,18 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@fontsource/fira-code@5.0.3:
+    resolution: {integrity: sha512-csSax2QNXYUzUc2UaIv08WfMwFOcWJWlqn5EkA5+hcnM9Kp0VhfFLEcJBEvhWHTZT7ySMvj7oePWSSWiVF3n1g==}
+    dev: true
+
+  /@fontsource/karla@5.0.3:
+    resolution: {integrity: sha512-p46o1NCNFKi8M9sGd7O0yud4EtMqrOVapM+ONrS9QjhSMWBhGzeTfFAEpojDoErTLIBwdbk3vXG1D/Gjf7VJZA==}
+    dev: true
+
+  /@fontsource/rubik@5.0.3:
+    resolution: {integrity: sha512-mOGQSeyFVYXCaVMnOSYWV+czvRVYKxwo+W1/aH63RQdzWlsyCt/zmIfElcl4LKRgIXok1EaUTSszynR253FcdA==}
+    dev: true
 
   /@ignatiusmb/styles@0.1.1:
     resolution: {integrity: sha512-2Py7LWaRCtsd2HKTAjNft598+wFkVplV9+QYzdgSkv7QkTE/D5soIqNQNLxzK1MB3Uu4Gr0krMNHIfCNY5CEeA==}
