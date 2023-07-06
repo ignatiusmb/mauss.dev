@@ -51,7 +51,7 @@ export const DATA = {
 						};
 						return { ...metadata, ...specified, content };
 					}
-				)!;
+				);
 
 				return content;
 			},
