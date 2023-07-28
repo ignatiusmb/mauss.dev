@@ -27,7 +27,7 @@ function sifter(query = '') {
 
 	return <Data, Transformer extends (i: Data) => Set<string>>(
 		data: Array<string | Data>,
-		transform?: Transformer
+		transform?: Transformer,
 	) => {
 		if (!tokens.length) return data;
 
@@ -61,7 +61,7 @@ export const sift = <T extends Metadata>(query = '', data: T[]) =>
 		const { title, description } = item;
 		const refs = new Set(
 			(typeof title === 'string' && normalize(title).split(' ')) ||
-				Object.values(title).flatMap((t) => normalize(t).split(' '))
+				Object.values(title).flatMap((t) => normalize(t).split(' ')),
 		);
 		if (description) record(refs, normalize(description).split(' '));
 		return refs;

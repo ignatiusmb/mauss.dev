@@ -37,7 +37,7 @@ const items = traverse(
 		}
 		return;
 	},
-	(items) => items.sort((x, y) => compare.date(x.date, y.date) || compare.string(x.title, y.title))
+	(items) => items.sort((x, y) => compare.date(x.date, y.date) || compare.string(x.title, y.title)),
 );
 
 export const prerender = true;
