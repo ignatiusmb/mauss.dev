@@ -3,7 +3,7 @@ import { DATA } from '$lib/content';
 
 const verdict = DATA['reviews/'].VERDICTS.reduce(
 	(a, c) => ({ ...a, [c]: capitalize(c.replace('-', ' ')) }),
-	{} as { [k in (typeof DATA)['reviews/']['VERDICTS'][number]]: string }
+	{} as { [k in (typeof DATA)['reviews/']['VERDICTS'][number]]: string },
 );
 
 export const load: import('./$types').PageServerLoad = async () => {

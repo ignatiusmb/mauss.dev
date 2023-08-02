@@ -32,7 +32,7 @@ export const DATA = {
 						};
 						return { ...metadata, ...specified };
 					},
-					(items) => items.sort(compare.key('date', compare.date))
+					(items) => items.sort(compare.key('date', compare.date)),
 				);
 
 				return curated;
@@ -50,7 +50,7 @@ export const DATA = {
 							date: metadata.date,
 						};
 						return { ...metadata, ...specified, content };
-					}
+					},
 				);
 
 				return content;
@@ -101,7 +101,7 @@ export const DATA = {
 						sort({ date: xd }, { date: yd }) {
 							return compare.date(xd, yd);
 						},
-					})
+					}),
 				);
 
 				return contents.map((v) => ({ ...v, thumbnail: thumbnails[v.slug] || v.thumbnail }));
@@ -127,12 +127,12 @@ export const DATA = {
 							date: metadata.date,
 						};
 						return { ...metadata, ...specified, content };
-					}
+					},
 				)[0];
 
 				const content = memo.reduce(
 					(content, [find, url]) => content.replace(find, url),
-					article.content
+					article.content,
 				);
 
 				return { ...article, content };
@@ -155,7 +155,7 @@ export const DATA = {
 						}
 						return body;
 					},
-					(items) => items.flat()
+					(items) => items.flat(),
 				);
 			},
 		};
@@ -278,7 +278,7 @@ export const DATA = {
 							const yd = y.date.updated || y.date.published;
 							return compare.date(xd, yd);
 						},
-					})
+					}),
 				);
 			},
 			get(category: string, slug: string) {
@@ -350,12 +350,12 @@ export const DATA = {
 							...specified,
 							content: contentParser(specified, summary),
 						};
-					}
+					},
 				)[0];
 
 				const content = memo.reduce(
 					(content, [find, url]) => content.replace(find, url),
-					article.content
+					article.content,
 				);
 
 				return { ...article, content };
