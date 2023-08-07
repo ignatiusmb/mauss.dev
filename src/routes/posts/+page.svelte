@@ -1,11 +1,13 @@
 <script lang="ts">
 	import SearchBar from 'syv/core/SearchBar.svelte';
 	import Pagination from 'syv/core/Pagination.svelte';
-	import AnimatedKey from '$lib/components/AnimatedKey.svelte';
 	import LayoutPicker from '$lib/pages/LayoutPicker.svelte';
 	import PostCard from './PostCard.svelte';
 
+	import { TIME } from 'syv/options';
+	import { flip } from 'svelte/animate';
 	import { writable } from 'svelte/store';
+	import { scale } from 'svelte/transition';
 	import { sift, sieve } from '$lib/utils/search';
 
 	export let data: import('./$types').PageData;
@@ -25,7 +27,11 @@
 		<Pagination {store} {items} bound={6} styles={{ '--text-color': 'var(--fg-surface)' }} />
 	</svelte:fragment>
 
-	<AnimatedKey items={$store} component={PostCard}>
-		<h2 slot="empty">There are no matching {query ? 'titles' : 'filters'}</h2>
-	</AnimatedKey>
+	{#each $store as post (post.slug)}
+		<div animate:flip={{ duration: TIME.SLIDE }} transition:scale|local={{ duration: TIME.SLIDE }}>
+			<PostCard {post} />
+		</div>
+	{:else}
+		<h2>There are no matching {query ? 'titles' : 'filters'}</h2>
+	{/each}
 </LayoutPicker>

@@ -1,11 +1,13 @@
 <script lang="ts">
 	import SearchBar from 'syv/core/SearchBar.svelte';
 	import Pagination from 'syv/core/Pagination.svelte';
-	import AnimatedKey from '$lib/components/AnimatedKey.svelte';
 	import LayoutPicker from '$lib/pages/LayoutPicker.svelte';
 	import CuratedPost from './CuratedPost.svelte';
 
+	import { TIME } from 'syv/options';
+	import { flip } from 'svelte/animate';
 	import { writable } from 'svelte/store';
+	import { scale } from 'svelte/transition';
 	import { sift, sieve } from '$lib/utils/search';
 
 	export let data: import('./$types').PageData;
@@ -25,7 +27,25 @@
 		<Pagination {store} {items} bound={8} styles={{ '--text-color': 'var(--fg-surface)' }} />
 	</svelte:fragment>
 
-	<AnimatedKey items={$store} component={CuratedPost}>
-		<h2 slot="empty">There are no matching {query ? 'titles' : 'filters'}</h2>
-	</AnimatedKey>
+	{#each $store as post (post.slug)}
+		<div animate:flip={{ duration: TIME.SLIDE }} transition:scale|local={{ duration: TIME.SLIDE }}>
+			<CuratedPost {post} />
+		</div>
+	{:else}
+		<h2>There are no matching {query ? 'titles' : 'filters'}</h2>
+	{/each}
 </LayoutPicker>
+
+<style>
+	div {
+		display: grid;
+	}
+	div:not(.empty) {
+		border-radius: var(--b-radius);
+		box-shadow:
+			0 2px 1px -1px rgba(0, 0, 0, 0.2),
+			0 1px 1px 0 rgba(0, 0, 0, 0.14),
+			0 1px 3px 0 rgba(0, 0, 0, 0.12);
+		background-color: var(--bg-overlay);
+	}
+</style>
