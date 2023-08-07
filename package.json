@@ -4,9 +4,9 @@
   "scripts": {
     "dev": "vite dev",
     "build": "svelte-kit sync && vite build",
-    "format": "prettier -w src --plugin prettier-plugin-svelte",
+    "format": "prettier -w src --plugin=prettier-plugin-svelte",
     "check": "pnpm check:style && pnpm check:svelte",
-    "check:style": "prettier -c src --plugin prettier-plugin-svelte",
+    "check:style": "prettier -c src --plugin=prettier-plugin-svelte",
     "check:svelte": "svelte-kit sync && svelte-check src --tsconfig ./tsconfig.json",
     "check:content": "cd content && pnpm dlx markdownlint-cli **/*.md"
   },
@@ -21,7 +21,7 @@
     "@sveltejs/kit": "^1.22.3",
     "@types/node": "^20.4.5",
     "marqua": "^0.5.2",
-    "mauss": "^0.6.0",
+    "mauss": "^0.7.0",
     "prettier": "^3.0.0",
     "prettier-plugin-svelte": "^3.0.3",
     "sharp": "^0.32.4",

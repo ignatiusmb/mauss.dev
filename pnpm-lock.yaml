@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -21,7 +21,7 @@ devDependencies:
     specifier: ^3.0.2
     version: 3.0.2(@sveltejs/kit@1.22.3)
   '@sveltejs/kit':
-    specifier: ~1.22.3
+    specifier: ^1.22.3
     version: 1.22.3(svelte@4.1.1)(vite@4.4.7)
   '@types/node':
     specifier: ^20.4.5
@@ -30,8 +30,8 @@ devDependencies:
     specifier: ^0.5.2
     version: 0.5.2
   mauss:
-    specifier: ^0.6.0
-    version: 0.6.0
+    specifier: ^0.7.0
+    version: 0.7.0
   prettier:
     specifier: ^3.0.0
     version: 3.0.0
@@ -1068,8 +1068,8 @@ packages:
     resolution: {integrity: sha512-DKyVgLvaMHHcawQUNnA0ugWbYCzMjoybI7HiQnTDoeBG/0dsBmT/bS32GZ39JDqhgQHN3k2lWTGdFBWEES3BAQ==}
     dev: true
 
-  /mauss@0.6.0:
-    resolution: {integrity: sha512-rBrlrXSRv9fvBOevUh+UyFWyLgi9cIlNafySv0IxbT5RgFC8h12EmXu5XtPauj3gj/5hxjmt6QvpXIGbtGVuNQ==}
+  /mauss@0.7.0:
+    resolution: {integrity: sha512-1alb7+ne13blJSZ9tsZ1Vc6D6QnmA5GJgztXG/GiYUhvAOz5ML1DBqaHn0GsiaSctG0iSWWvDO/j2nU+czJawA==}
     dev: true
 
   /mdn-data@2.0.30:
