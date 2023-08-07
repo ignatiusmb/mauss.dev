@@ -35,10 +35,10 @@ Content is managed as a submodule in [alchemauss/content](https://github.com/alc
 git submodule update --remote --merge
 ```
 
-***
+---
 
 <h3 align="center"><pre>Alchemauss | <a href="LICENSE">MIT License</a></pre></h3>
 
-***
+---
 
 <h5 align="center"><pre>Copyright &copy; 2019 &ndash; 2022 <a href="https://mauss.dev">Ignatius Bagussuputra</a></pre></h5>
