@@ -136,7 +136,9 @@
 	main.scrollsnap::-webkit-scrollbar-thumb {
 		background: #201c29;
 		border-radius: 0.5em;
-		box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+		box-shadow:
+			inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
+			inset -2px -2px 2px rgba(0, 0, 0, 0.25);
 	}
 
 	main.scrollsnap::-webkit-scrollbar-track {

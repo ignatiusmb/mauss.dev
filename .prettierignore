@@ -1,6 +1,7 @@
-/.svelte-kit
-/build
 node_modules
-pnpm-lock.json
+/.svelte-kit
+/content
+/build
+
+pnpm-lock.yaml
 LICENSE
-app.html
