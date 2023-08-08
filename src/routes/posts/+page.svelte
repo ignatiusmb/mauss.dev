@@ -10,7 +10,7 @@
 	import { scale } from 'svelte/transition';
 	import { sift, sieve } from '$lib/utils/search';
 
-	export let data: import('./$types').PageData;
+	export let data;
 
 	const store = writable(data.list);
 	let filters = { categories: [], tags: [], sort_by: 'updated' };

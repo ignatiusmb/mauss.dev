@@ -1,6 +1,6 @@
 import { DATA } from '$lib/content';
 
-export const load: import('./$types').PageServerLoad = async () => {
+export async function load() {
 	const content = DATA['posts/'].all();
 	const tags = [...new Set(content.flatMap((p) => p.tags))].sort();
 	const categories = [...new Set(content.map((p) => p.tags[0]))].sort();
@@ -14,4 +14,4 @@ export const load: import('./$types').PageServerLoad = async () => {
 			description: 'Get the latest most recent posts here.',
 		},
 	};
-};
+}

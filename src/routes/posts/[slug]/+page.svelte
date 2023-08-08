@@ -3,7 +3,7 @@
 	import Link from '$lib/components/Link.svelte';
 	import Article from '$lib/pages/Article.svelte';
 
-	export let data: import('./$types').PageData;
+	export let data;
 </script>
 
 <Article

@@ -1,6 +1,6 @@
 import { DATA } from '$lib/content';
 
-export const load: import('./$types').PageServerLoad = () => {
+export function load() {
 	const content = DATA['curated/'].all();
 
 	return {
@@ -11,4 +11,4 @@ export const load: import('./$types').PageServerLoad = () => {
 			description: 'Curated content for all kinds of programming, lifestyle, and many more.',
 		},
 	};
-};
+}

@@ -1,7 +1,7 @@
 import { redirect } from '@sveltejs/kit';
 import { DATA } from '$lib/content';
 
-export const load: import('./$types').PageServerLoad = async ({ params }) => {
+export async function load({ params }) {
 	const article = DATA['curated/'].get(params.category, params.slug);
 	if (!article) throw redirect(307, '/curated');
 	return {
@@ -11,4 +11,4 @@ export const load: import('./$types').PageServerLoad = async ({ params }) => {
 			title: article.title,
 		},
 	};
-};
+}

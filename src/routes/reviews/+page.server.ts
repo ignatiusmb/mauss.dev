@@ -6,7 +6,7 @@ const verdict = DATA['reviews/'].VERDICTS.reduce(
 	{} as { [k in (typeof DATA)['reviews/']['VERDICTS'][number]]: string },
 );
 
-export const load: import('./$types').PageServerLoad = async () => {
+export async function load() {
 	const content = DATA['reviews/'].all();
 	const categories = [...new Set(content.map((p) => p.category))];
 	const genres = [...new Set(content.flatMap((p) => p.genres))].sort();
@@ -30,4 +30,4 @@ export const load: import('./$types').PageServerLoad = async () => {
 			description: 'Personalized reviews for all kinds of anime, books, movies, shows, etc.',
 		},
 	};
-};
+}
