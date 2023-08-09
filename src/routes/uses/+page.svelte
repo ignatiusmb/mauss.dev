@@ -1,6 +1,8 @@
 <script lang="ts">
+	import { Calendar } from 'syv/icons/feather';
 	import Feather from 'syv/icons/Feather.svelte';
 	import Article from '$lib/pages/Article.svelte';
+
 	import { dt } from 'mauss';
 
 	export let data;
@@ -11,7 +13,7 @@
 		<h1>{data.meta.title}</h1>
 
 		<small style="display:flex;gap:0.25rem;align-items:center">
-			<Feather icon={import('syv/icons/feather/calendar')} scale="1" />
+			<Feather icon={Calendar} scale="1" />
 			<time datetime={data.updated}>{dt.format(data.updated)('DD MMMM YYYY')}</time>
 		</small>
 	</header>
