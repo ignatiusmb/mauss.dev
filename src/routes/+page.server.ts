@@ -1,7 +1,7 @@
 import { compare } from 'mauss';
 import { DATA } from '$lib/content';
 
-export const load: import('./$types').PageServerLoad = async () => {
+export async function load() {
 	const [quotes, curated, posts, reviews] = [
 		DATA['quotes/'].all(),
 		DATA['curated/'].all(),
@@ -19,4 +19,4 @@ export const load: import('./$types').PageServerLoad = async () => {
 			description: 'A simple blog about my life and my thoughts.',
 		},
 	};
-};
+}

@@ -1,7 +1,7 @@
 import { capitalize } from 'mauss';
 import { DATA } from '$lib/content';
 
-export const load: import('./$types').PageServerLoad = async ({ params }) => {
+export async function load({ params }) {
 	const content = DATA['curated/'].all();
 
 	return {
@@ -13,4 +13,4 @@ export const load: import('./$types').PageServerLoad = async ({ params }) => {
 			description: `Curated content for ${params.category} stuff.`,
 		},
 	};
-};
+}

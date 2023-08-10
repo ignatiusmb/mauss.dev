@@ -4,7 +4,7 @@
 	import ReviewBanner from './ReviewBanner.svelte';
 	import Spoilers from './SpoilerSection.svelte';
 
-	export let data: import('./$types').PageData;
+	export let data;
 </script>
 
 <Article

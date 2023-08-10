@@ -5,7 +5,7 @@
 	import RotatingBorder from './RotatingBorder.svelte';
 	import Quote from './Quote.svelte';
 
-	export let data: import('./$types').PageData;
+	export let data;
 
 	const section = {
 		curated: { heading: '⚖️ Recently Curated', desc: "Stuffs I've been curating" },

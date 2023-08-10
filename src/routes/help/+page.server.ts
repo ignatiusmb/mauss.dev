@@ -1,6 +1,6 @@
 import { compile } from 'marqua/fs';
 
-export const load: import('./$types').PageServerLoad = () => {
+export async function load() {
 	return {
 		article: compile('content/sites/dev.mauss/help.md'),
 		meta: {
@@ -9,4 +9,4 @@ export const load: import('./$types').PageServerLoad = () => {
 			description: 'Help page for all the content in this website.',
 		},
 	};
-};
+}

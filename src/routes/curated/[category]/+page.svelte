@@ -3,7 +3,7 @@
 	import { scale } from 'svelte/transition';
 	import { flip } from 'svelte/animate';
 
-	export let data: import('./$types').PageData;
+	export let data;
 </script>
 
 <header>

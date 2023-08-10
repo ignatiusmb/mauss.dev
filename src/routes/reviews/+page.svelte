@@ -12,7 +12,7 @@
 	import { page } from '$app/stores';
 	import { sift, sieve } from '$lib/utils/search';
 
-	export let data: import('./$types').PageData;
+	export let data;
 
 	const store = writable(data.list);
 	let search = (!building && $page.url.searchParams.get('q')) || '';
