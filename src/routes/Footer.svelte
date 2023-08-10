@@ -1,4 +1,5 @@
 <script>
+	import * as feather from 'syv/icons/feather';
 	import Feather from 'syv/icons/Feather.svelte';
 </script>
 
@@ -13,31 +14,31 @@
 
 	<section class="social">
 		<a href="https://www.facebook.com/ignatiusmb" aria-label="facebook profile">
-			<Feather icon={import('syv/icons/feather/facebook')} />
+			<Feather icon={feather.Facebook} />
 		</a>
 		<a href="https://www.instagram.com/ignatiusmb" aria-label="instagram profile">
-			<Feather icon={import('syv/icons/feather/instagram')} />
+			<Feather icon={feather.Instagram} />
 		</a>
 		<a href="https://www.linkedin.com/in/ignatiusmb" aria-label="linkedin profile">
-			<Feather icon={import('syv/icons/feather/linkedin')} />
+			<Feather icon={feather.Linkedin} />
 		</a>
 		<a href="https://twitter.com/alchemauss" aria-label="twitter profile">
-			<Feather icon={import('syv/icons/feather/twitter')} />
+			<Feather icon={feather.Twitter} />
 		</a>
 		<a href="https://keybase.io/mauss" aria-label="keybase profile">
-			<Feather icon={import('syv/icons/feather/key')} />
+			<Feather icon={feather.Key} />
 		</a>
 		<a href="https://github.com/ignatiusmb" aria-label="github profile">
-			<Feather icon={import('syv/icons/feather/github')} />
+			<Feather icon={feather.Github} />
 		</a>
 		<a href="https://gitlab.com/ignatiusmb" aria-label="gitlab profile">
-			<Feather icon={import('syv/icons/feather/gitlab')} />
+			<Feather icon={feather.Gitlab} />
 		</a>
 		<a href="https://twitch.tv/alchemauss" aria-label="twitch profile">
-			<Feather icon={import('syv/icons/feather/twitch')} />
+			<Feather icon={feather.Twitch} />
 		</a>
 		<a href="https://www.youtube.com/@ignatiusmb" aria-label="youtube profile">
-			<Feather icon={import('syv/icons/feather/youtube')} />
+			<Feather icon={feather.Youtube} />
 		</a>
 	</section>
 

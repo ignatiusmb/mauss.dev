@@ -1,4 +1,5 @@
 <script lang="ts">
+	import * as feather from 'syv/icons/feather';
 	import Feather from 'syv/icons/Feather.svelte';
 	import TextIcon from '$lib/components/TextIcon.svelte';
 
@@ -35,7 +36,7 @@
 
 			<div>
 				<TextIcon>
-					<Feather icon={import('syv/icons/feather/calendar')} {scale} />
+					<Feather icon={feather.Calendar} {scale} />
 					{#if typeof post.date === 'object'}
 						{@const { published, updated } = post.date}
 						<time datetime={updated || published}>
@@ -49,7 +50,7 @@
 
 			<div>
 				<TextIcon>
-					<Feather icon={import('syv/icons/feather/clock')} {scale} />
+					<Feather icon={feather.Clock} {scale} />
 					<span>{post.estimate} min read</span>
 				</TextIcon>
 
@@ -62,13 +63,13 @@
 					}}
 				>
 					<span>Share</span>
-					<Feather icon={import('syv/icons/feather/share-2')} {scale} />
+					<Feather icon={feather.Share2} {scale} />
 				</TextIcon>
 
 				{#if path}
 					<TextIcon href="https://github.com/alchemauss/content/blob/master/{path}">
 						<span>Edit</span>
-						<Feather icon={import('syv/icons/feather/edit')} {scale} />
+						<Feather icon={feather.Edit} {scale} />
 					</TextIcon>
 				{/if}
 			</div>

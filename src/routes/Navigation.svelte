@@ -1,4 +1,5 @@
 <script lang="ts">
+	import * as feather from 'syv/icons/feather';
 	import Feather from 'syv/icons/Feather.svelte';
 	import NavGrid from './NavGrid.svelte';
 	import NavLink from './NavLink.svelte';
@@ -17,9 +18,9 @@
 <nav class:scrolled>
 	<button on:click={() => (opened = !opened)}>
 		{#if opened}
-			<Feather icon={import('syv/icons/feather/x')} />
+			<Feather icon={feather.X} />
 		{:else}
-			<Feather icon={import('syv/icons/feather/menu')} />
+			<Feather icon={feather.Menu} />
 		{/if}
 	</button>
 
@@ -36,13 +37,13 @@
 	{/if}
 
 	<a href="/uses" aria-label="Uses page">
-		<Feather icon={import('syv/icons/feather/bookmark')} />
+		<Feather icon={feather.Bookmark} />
 	</a>
 	<a href="/rss.xml" aria-label="Get RSS">
-		<Feather icon={import('syv/icons/feather/rss')} />
+		<Feather icon={feather.Rss} />
 	</a>
 	<a href="/help/" aria-label="See help page">
-		<Feather icon={import('syv/icons/feather/help-circle')} />
+		<Feather icon={feather.HelpCircle} />
 	</a>
 </nav>
 
