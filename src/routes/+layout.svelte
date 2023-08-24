@@ -88,9 +88,7 @@
 
 <ScrollTop />
 
-{#if $page.url.pathname !== '/'}
-	<Navigation />
-{/if}
+<Navigation />
 
 <slot />
 

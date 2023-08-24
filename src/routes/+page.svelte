@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Image from 'syv/core/Image.svelte';
 	import Article from '$lib/pages/Article.svelte';
-	import Navigation from './Navigation.svelte';
 	import RotatingBorder from './RotatingBorder.svelte';
 	import Quote from './Quote.svelte';
 
@@ -15,13 +14,7 @@
 	const showcase = <[keyof typeof section, any][]>(
 		Object.entries(data).filter(([k]) => k in section)
 	);
-
-	let scrolled = 0;
 </script>
-
-<div class="fixed-nav" class:scrolled>
-	<Navigation bind:scrolled />
-</div>
 
 <Article>
 	<header>
@@ -130,21 +123,5 @@
 		content: '';
 		height: 0.1em;
 		background-color: var(--theme-secondary);
-	}
-
-	.fixed-nav {
-		z-index: 9;
-		position: fixed;
-		width: 100%;
-	}
-
-	@media only screen and (min-width: 600px) {
-		.fixed-nav > :global(nav) {
-			bottom: unset;
-			transform: translateY(-100%);
-		}
-		.fixed-nav.scrolled > :global(nav) {
-			transform: translateY(0);
-		}
 	}
 </style>
