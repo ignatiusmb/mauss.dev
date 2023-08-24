@@ -1,4 +1,5 @@
 /// <reference types="@sveltejs/kit" />
+/// <reference types="marqua" />
 
 declare namespace App {
 	interface PageData {

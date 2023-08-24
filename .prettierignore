@@ -1,7 +1,3 @@
-node_modules
 /.svelte-kit
 /content
 /build
-
-pnpm-lock.yaml
-LICENSE
