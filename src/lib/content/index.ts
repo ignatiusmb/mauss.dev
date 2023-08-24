@@ -22,8 +22,9 @@ export const DATA = {
 				const curated = traverse(
 					{ entry: 'content/sites/dev.mauss/curated', depth: -1 },
 					({ breadcrumb: [file, folder], buffer, parse }) => {
+						if (!file.endsWith('.md') || file.includes('draft')) return;
 						const { metadata } = parse(buffer.toString('utf-8'));
-						if (metadata.draft || file.includes('draft')) return;
+						if (metadata.draft) return;
 						const specified: FrontMatter = {
 							slug: `${folder}/${file.replace(/\.[^/.]+$/, '')}`,
 							title: metadata.title,
