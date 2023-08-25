@@ -72,23 +72,27 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		padding-bottom: 0.75rem;
 		margin: auto;
 	}
-	.social > a {
-		flex: 0 1 5rem;
-		padding-top: 1rem;
-	}
-	.social a,
-	.social a:visited {
-		transition: var(--t-duration);
+	.social a {
+		flex: 0 1 4rem;
+		height: 4rem;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		outline: 2px solid transparent;
+		outline-offset: -0.625rem;
+
+		transition-duration: var(--t-duration);
 		transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 		color: var(--fg-surface);
 	}
+	.social a:focus {
+		outline-color: var(--theme-secondary);
+	}
 	.social a:hover,
 	.social a:focus {
-		transition: var(--t-duration);
-		transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 		color: var(--theme-secondary);
 	}
 	.social a:hover:nth-child(odd),
