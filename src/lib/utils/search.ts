@@ -26,7 +26,7 @@ function sifter(query = '') {
 	const tokens = tokenizer(query);
 
 	return <Data, Transformer extends (i: Data) => Set<string>>(
-		data: Array<string | Data>,
+		data: Data[],
 		transform?: Transformer,
 	) => {
 		if (!tokens.length) return data;

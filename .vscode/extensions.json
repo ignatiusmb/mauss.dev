@@ -1,8 +1,0 @@
-{
-	"recommendations": [
-		"svelte.svelte-vscode",
-		"fivethree.vscode-svelte-snippets",
-		"yzhang.markdown-all-in-one",
-		"DavidAnson.vscode-markdownlint"
-	]
-}
