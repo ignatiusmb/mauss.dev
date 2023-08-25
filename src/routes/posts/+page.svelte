@@ -48,4 +48,9 @@
 			0 1px 3px 0 rgba(0, 0, 0, 0.12);
 		background-color: var(--bg-overlay);
 	}
+
+	h2 {
+		grid-column: 1 / -1;
+		text-align: center;
+	}
 </style>

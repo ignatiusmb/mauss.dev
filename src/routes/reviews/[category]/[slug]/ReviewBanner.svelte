@@ -57,7 +57,7 @@
 		width: 100%;
 		position: absolute;
 		top: 10%;
-		transition: var(--t-duration);
+		transition-duration: var(--t-duration);
 		color: rgba(255, 255, 255, 0.8);
 		text-align: center;
 		font-size: clamp(0.8rem, 3vw, 1.5rem);
