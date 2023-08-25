@@ -4,15 +4,13 @@
 </script>
 
 <footer>
-	<section>
-		<em>
-			<span>Visit the</span>
-			<a href="/help/">help page</a>
-			<span>for more information</span>
-		</em>
-	</section>
+	<div style:font-style="italic">
+		<span>Visit the</span>
+		<a href="/help/">help page</a>
+		<span>for more information</span>
+	</div>
 
-	<section class="social">
+	<section>
 		<a href="https://www.facebook.com/ignatiusmb" aria-label="facebook profile">
 			<Feather icon={feather.Facebook} />
 		</a>
@@ -42,15 +40,13 @@
 		</a>
 	</section>
 
-	<section>
-		<p>Copyright &copy; 2017 &ndash; {new Date().getFullYear()} Ignatius Bagussuputra</p>
-		<p>
-			<span>Handcrafted with ❤️ using</span>
-			<a href="https://kit.svelte.dev/">SvelteKit</a>
-			<span>&plus;</span>
-			<a href="https://marqua.mauss.dev/">Marqua</a>
-		</p>
-	</section>
+	<p>Copyright &copy; 2017 &ndash; {new Date().getFullYear()} Ignatius Bagussuputra</p>
+	<p>
+		<span>Handcrafted with ❤️ using</span>
+		<a href="https://kit.svelte.dev/">SvelteKit</a>
+		<span>&plus;</span>
+		<a href="https://marqua.mauss.dev/">Marqua</a>
+	</p>
 </footer>
 
 <style>
@@ -67,14 +63,14 @@
 		font-family: var(--font-monospace);
 		font-size: clamp(0.8rem, 3vw, 1rem);
 	}
-	.social {
+	section {
 		width: 100%;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 		margin: auto;
 	}
-	.social a {
+	section a {
 		flex: 0 1 4rem;
 		height: 4rem;
 		display: inline-flex;
@@ -88,25 +84,19 @@
 		transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 		color: var(--fg-surface);
 	}
-	.social a:focus {
+	section a:focus {
 		outline-color: var(--theme-secondary);
 	}
-	.social a:hover,
-	.social a:focus {
+	section a:hover,
+	section a:focus {
 		color: var(--theme-secondary);
 	}
-	.social a:hover:nth-child(odd),
-	.social a:focus:nth-child(odd) {
+	section a:hover:nth-child(odd),
+	section a:focus:nth-child(odd) {
 		transform: rotate(6deg) scale(1.2) translateY(-20%);
 	}
-	.social a:hover:nth-child(even),
-	.social a:focus:nth-child(even) {
+	section a:hover:nth-child(even),
+	section a:focus:nth-child(even) {
 		transform: rotate(-6deg) scale(1.2) translateY(-20%);
-	}
-	section:last-of-type {
-		display: grid;
-		grid-template-rows: repeat(2, 1fr);
-		place-items: center;
-		gap: 0.5rem;
 	}
 </style>
