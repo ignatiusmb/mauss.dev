@@ -19,7 +19,6 @@ section.info-box {
 	border-left: 0.25em solid #757575;
 	margin: 2rem 0;
 	font-family: 'Karla', sans-serif;
-	transition: var(--t-duration) var(--t-function);
 }
 section.info-box[id] {
 	filter: invert() hue-rotate(180deg);

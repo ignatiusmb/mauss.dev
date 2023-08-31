@@ -1,116 +1,198 @@
 <script lang="ts">
 	import * as feather from 'syv/icons/feather';
 	import Feather from 'syv/icons/Feather.svelte';
-	import NavGrid from './NavGrid.svelte';
-	import NavLink from './NavLink.svelte';
-	import { navigating, page } from '$app/stores';
+	import Divider from '$lib/components/Divider.svelte';
 
-	export let scrolled = 0;
+	import { page } from '$app/stores';
 
-	let innerWidth: number;
 	let opened = false;
-	$: path = $page.url.pathname.split('/')[1];
-	$: opened = $navigating ? false : opened;
 </script>
 
-<svelte:window bind:innerWidth bind:scrollY={scrolled} />
-
-<nav class:scrolled>
-	<button on:click={() => (opened = !opened)}>
-		{#if opened}
-			<Feather icon={feather.X} />
-		{:else}
-			<Feather icon={feather.Menu} />
-		{/if}
-	</button>
-
-	<NavLink>
+<nav>
+	<a href="/">
 		<img src="/favicon.ico" alt="Alchemauss" width="24" height="24" />
-	</NavLink>
+	</a>
 
-	{#if innerWidth > 600 || opened}
-		<NavGrid>
+	<input type="checkbox" id="menu" bind:checked={opened} />
+	<label for="menu">
+		<Feather icon={feather.Menu} />
+		<Feather icon={feather.X} />
+	</label>
+
+	<menu>
+		<div class="routes">
 			{#each ['about', 'curated', 'posts', 'reviews'] as to}
-				<NavLink {path} {to} hover>{to}</NavLink>
-			{/each}
-		</NavGrid>
-	{/if}
+				{@const current = $page.url.pathname.startsWith(`/${to}`)}
 
-	<a href="/uses" aria-label="Uses page">
-		<Feather icon={feather.Bookmark} />
-	</a>
-	<a href="/rss.xml" aria-label="Get RSS">
-		<Feather icon={feather.Rss} />
-	</a>
-	<a href="/help/" aria-label="See help page">
-		<Feather icon={feather.HelpCircle} />
-	</a>
+				<a href="/{to}" aria-current={current ? 'page' : null}>{to}</a>
+			{/each}
+
+			<Divider type="horizontal" />
+		</div>
+
+		<div class="shortcuts">
+			<a href="/uses" aria-label="Uses page">
+				<Feather icon={feather.Bookmark} />
+			</a>
+			<a href="/rss.xml" aria-label="Get RSS">
+				<Feather icon={feather.Rss} />
+			</a>
+			<a href="/help/" aria-label="See help page">
+				<Feather icon={feather.HelpCircle} />
+			</a>
+		</div>
+	</menu>
 </nav>
 
 <style>
-	nav :global(a),
-	nav :global(a:focus),
-	nav :global(a:hover) {
-		color: var(--fg-surface);
-	}
-
 	nav {
 		z-index: 3;
 		width: 100%;
-		position: fixed;
-		bottom: 0;
+		position: sticky;
+		top: 0;
 
 		display: flex;
-		flex-direction: row-reverse;
 		align-items: center;
-		padding: 0.8em 1em;
+		justify-content: space-between;
 
-		transition: var(--t-duration) var(--t-function);
 		background-color: var(--bg-surface);
 		font-family: var(--mrq-heading);
+		color: var(--fg-surface);
+	}
+	a {
+		outline: 2px solid transparent;
+		transition-duration: var(--t-duration);
+	}
+	nav a:focus {
+		outline-color: var(--bg-cover);
+	}
+	nav > a:first-child {
+		flex-shrink: 0;
+		border-radius: 0.875rem;
+		outline-offset: -0.5rem;
+	}
+	nav > :not(menu) {
+		padding: 1rem 0.875rem;
 	}
 
-	nav > button,
-	nav > :global(a) {
+	input {
+		visibility: hidden;
+		width: auto;
+	}
+	label[for='menu'] {
 		display: inline-flex;
 	}
+	input:not(:checked) + label[for='menu'] > :global(:last-child),
+	input:checked + label[for='menu'] > :global(:first-child) {
+		display: none;
+	}
 
-	nav > :global(a:first-of-type) {
+	menu {
+		visibility: hidden;
+		z-index: 2;
+		top: 0;
+		position: absolute;
+		width: 100%;
+		display: grid;
+
 		padding: 0;
-		margin-left: auto;
-		margin-right: 1em;
+		margin: 0;
+		border-bottom: 1px solid var(--bg-cover);
+		border-bottom-right-radius: 0.5rem;
+		border-bottom-left-radius: 0.5rem;
+		box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.188);
+
+		background-color: var(--bg-surface);
+		/* TODO: reenable transition */
+		/* transition-duration: calc(var(--t-duration) * 2); */
+		transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+		/* transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1); */
+		transform: translate3d(0, -100%, 0) scale3d(0.9, 0.9, 1);
 	}
-	nav > :global(:nth-last-child(2)) {
-		margin-left: 1em;
-		margin-right: 1em;
+	input:checked ~ menu {
+		visibility: visible;
+		top: 100%;
+		transform: none;
+	}
+	menu a {
+		padding: 0.375rem;
+		border-radius: 0.375rem;
+		color: var(--fg-surface);
+		text-transform: capitalize;
+	}
+	menu .routes {
+		display: grid;
+		gap: 0.375rem;
+		align-items: center;
+		padding: 0 0.5rem;
+	}
+	menu .shortcuts {
+		display: grid;
+		gap: 1em;
+		grid-auto-flow: column;
+		padding: 0.5rem;
+	}
+	menu .shortcuts a {
+		width: 100%;
+		display: inline-flex;
+		justify-content: center;
 	}
 
-	@media only screen and (max-width: 599px) {
-		nav {
-			border-top: 0.25em solid var(--theme-primary);
-			box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5);
-			transition: var(--t-duration) var(--t-function);
-			background-color: var(--bg-surface);
-		}
-	}
-	@media only screen and (min-width: 600px) {
-		nav {
-			position: sticky;
-			top: 0;
-			flex-direction: row;
-			border-top: none;
-			background-color: var(--bg-base);
-		}
-		nav.scrolled {
-			box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5);
-			transition: var(--t-duration) var(--t-function);
-			background-color: var(--bg-surface);
-		}
-		nav > button:first-child {
+	/* change to 600 when there's more routes */
+	@media only screen and (min-width: 500px) {
+		input,
+		label[for='menu'] {
 			display: none;
 		}
-		nav > button:first-child + :global(a) {
-			margin: 0;
+
+		input:checked ~ menu,
+		menu {
+			visibility: unset;
+			position: relative;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+
+			border-bottom: none;
+			box-shadow: none;
+			transform: none;
+		}
+
+		menu .routes {
+			display: grid;
+			gap: 0.5em;
+			grid-auto-flow: column;
+			align-items: center;
+		}
+		menu .routes a[aria-current]::after {
+			width: 100%;
+			background-color: var(--theme-primary);
+		}
+		menu .routes a {
+			position: relative;
+			color: var(--fg-surface);
+		}
+		menu .routes a::after {
+			content: '';
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 0;
+			height: 0.15em;
+			border-radius: 0.25em;
+			background-color: var(--theme-secondary);
+			transition: width var(--t-duration) ease;
+			transform: translateY(100%);
+		}
+		menu .routes a:hover::after,
+		menu .routes a:focus::after {
+			left: 0;
+			right: auto;
+			width: 100%;
+		}
+
+		menu .shortcuts {
+			gap: 0.375rem;
 		}
 	}
 </style>

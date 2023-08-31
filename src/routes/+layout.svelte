@@ -11,9 +11,8 @@
 
 	import '@ignatiusmb/styles/core.css';
 	import 'marqua/styles/code.css';
-	import '$lib/styles/theme.css';
-	import '$lib/styles/blog.css';
 	import '../app.css';
+	import '$lib/styles/blog.css';
 
 	import ScrollTop from 'syv/core/ScrollTop.svelte';
 	import Footer from './Footer.svelte';
@@ -88,9 +87,7 @@
 
 <ScrollTop />
 
-{#if $page.url.pathname !== '/'}
-	<Navigation />
-{/if}
+<Navigation />
 
 <slot />
 

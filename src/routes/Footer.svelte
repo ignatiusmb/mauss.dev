@@ -1,18 +1,19 @@
 <script>
 	import * as feather from 'syv/icons/feather';
 	import Feather from 'syv/icons/Feather.svelte';
+	import { page } from '$app/stores';
 </script>
 
 <footer>
-	<section>
-		<em>
+	{#if !$page.url.pathname.startsWith('/help')}
+		<div style:font-style="italic">
 			<span>Visit the</span>
 			<a href="/help/">help page</a>
 			<span>for more information</span>
-		</em>
-	</section>
+		</div>
+	{/if}
 
-	<section class="social">
+	<section>
 		<a href="https://www.facebook.com/ignatiusmb" aria-label="facebook profile">
 			<Feather icon={feather.Facebook} />
 		</a>
@@ -42,15 +43,13 @@
 		</a>
 	</section>
 
-	<section>
-		<p>Copyright &copy; 2017 &ndash; {new Date().getFullYear()} Ignatius Bagussuputra</p>
-		<p>
-			<span>Handcrafted with ❤️ using</span>
-			<a href="https://kit.svelte.dev/">SvelteKit</a>
-			<span>&plus;</span>
-			<a href="https://marqua.mauss.dev/">Marqua</a>
-		</p>
-	</section>
+	<p>Copyright &copy; 2017 &ndash; {new Date().getFullYear()} Ignatius Bagussuputra</p>
+	<p>
+		<span>Handcrafted with ❤️ using</span>
+		<a href="https://kit.svelte.dev/">SvelteKit</a>
+		<span>&plus;</span>
+		<a href="https://marqua.mauss.dev/">Marqua</a>
+	</p>
 </footer>
 
 <style>
@@ -67,42 +66,40 @@
 		font-family: var(--font-monospace);
 		font-size: clamp(0.8rem, 3vw, 1rem);
 	}
-	.social {
+	section {
 		width: 100%;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		padding-bottom: 0.75rem;
 		margin: auto;
 	}
-	.social > a {
-		flex: 0 1 5rem;
-		padding-top: 1rem;
-	}
-	.social a,
-	.social a:visited {
-		transition: var(--t-duration);
+	section a {
+		flex: 0 1 4rem;
+		height: 4rem;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		outline: 2px solid transparent;
+		outline-offset: -0.625rem;
+
+		transition-duration: var(--t-duration);
 		transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 		color: var(--fg-surface);
 	}
-	.social a:hover,
-	.social a:focus {
-		transition: var(--t-duration);
-		transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	section a:focus {
+		outline-color: var(--theme-secondary);
+	}
+	section a:hover,
+	section a:focus {
 		color: var(--theme-secondary);
 	}
-	.social a:hover:nth-child(odd),
-	.social a:focus:nth-child(odd) {
+	section a:hover:nth-child(odd),
+	section a:focus:nth-child(odd) {
 		transform: rotate(6deg) scale(1.2) translateY(-20%);
 	}
-	.social a:hover:nth-child(even),
-	.social a:focus:nth-child(even) {
+	section a:hover:nth-child(even),
+	section a:focus:nth-child(even) {
 		transform: rotate(-6deg) scale(1.2) translateY(-20%);
-	}
-	section:last-of-type {
-		display: grid;
-		grid-template-rows: repeat(2, 1fr);
-		place-items: center;
-		gap: 0.5rem;
 	}
 </style>
