@@ -103,7 +103,8 @@
 		box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.188);
 
 		background-color: var(--bg-surface);
-		transition-duration: calc(var(--t-duration) * 2);
+		/* TODO: reenable transition */
+		/* transition-duration: calc(var(--t-duration) * 2); */
 		transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 		/* transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1); */
 		transform: translate3d(0, -100%, 0) scale3d(0.9, 0.9, 1);
