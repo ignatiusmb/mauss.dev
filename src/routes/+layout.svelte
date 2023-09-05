@@ -85,10 +85,10 @@
 	{/if}
 </svelte:head>
 
-<ScrollTop />
-
 <Navigation />
 
 <slot />
 
 <Footer />
+
+<ScrollTop />

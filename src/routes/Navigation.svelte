@@ -3,12 +3,17 @@
 	import Feather from 'syv/icons/Feather.svelte';
 	import Divider from '$lib/components/Divider.svelte';
 
+	import { click } from 'syv/action';
 	import { page } from '$app/stores';
 
 	let opened = false;
 </script>
 
-<nav>
+<nav
+	use:click.outside={() => {
+		opened = false;
+	}}
+>
 	<a href="/">
 		<img src="/favicon.ico" alt="Alchemauss" width="24" height="24" />
 	</a>
