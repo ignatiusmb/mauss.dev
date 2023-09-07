@@ -59,11 +59,11 @@
 		border-bottom: 0;
 	}
 	.spoilers {
-		padding: 0.5em 1em;
+		padding: 0.5rem 1rem;
 		border: 5px dashed rgba(226, 177, 0, 1);
 		border-top: 0;
-		border-bottom-right-radius: 0.5em;
-		border-bottom-left-radius: 0.5em;
+		border-bottom-right-radius: 0.5rem;
+		border-bottom-left-radius: 0.5rem;
 		margin-top: 0;
 		margin-left: -5px;
 	}

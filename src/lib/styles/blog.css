@@ -15,8 +15,8 @@ var a {
 
 section.info-box {
 	padding: 1rem 1.5rem;
-	border-radius: 0.25em;
-	border-left: 0.25em solid #757575;
+	border-radius: 0.25rem;
+	border-left: 0.25rem solid #757575;
 	margin: 2rem 0;
 	font-family: 'Karla', sans-serif;
 }
@@ -24,7 +24,7 @@ section.info-box[id] {
 	filter: invert() hue-rotate(180deg);
 }
 section.info-box:not([id]) {
-	margin-left: -0.25em;
+	margin-left: -0.25rem;
 }
 section.info-box[id] ol,
 section.info-box[id] ul {
@@ -32,7 +32,7 @@ section.info-box[id] ul {
 }
 section.info-box ol li,
 section.info-box ul li {
-	margin-left: 0.5em;
+	margin-left: 0.5rem;
 	margin-bottom: 0 !important;
 }
 section.info-box h3 {
@@ -45,9 +45,9 @@ section.info-box p {
 section.info-box[data-info='objective'],
 section.info-box#objective {
 	position: relative;
-	border-top: clamp(2.5em, 9vw, 3.5em) solid;
-	border-right: 0.25em solid;
-	border-bottom: 0.25em solid;
+	border-top: clamp(2.5rem, 9vw, 3.5rem) solid;
+	border-right: 0.25rem solid;
+	border-bottom: 0.25rem solid;
 	border-color: rgba(40, 10, 100, 0.4);
 	background: rgba(40, 10, 100, 0.1);
 	color: rgba(40, 10, 100, 0.7);
@@ -64,7 +64,7 @@ section.info-box#objective h3 {
 }
 section.info-box[data-info='objective'] h4,
 section.info-box#objective h4 {
-	margin: 1em 0 0.5em;
+	margin: 1rem 0 0.5rem;
 	font-weight: 500;
 }
 section.info-box[data-info='objective'] var,

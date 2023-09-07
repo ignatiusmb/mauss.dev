@@ -83,13 +83,13 @@
 	header,
 	header > :global(div) {
 		display: grid;
-		gap: 0.8em;
+		gap: 0.8rem;
 		line-height: 1;
 		font-family: var(--mrq-heading);
 	}
 
 	h1 {
-		margin: 1em 0 0.5em;
+		margin: 1rem 0 0.5rem;
 		font-size: clamp(2rem, 5vw, 2.5rem);
 	}
 	small,
@@ -102,8 +102,8 @@
 
 	small:first-of-type {
 		display: grid;
-		gap: 0.75em;
-		grid-template-columns: 3em 1fr;
+		gap: 0.75rem;
+		grid-template-columns: 3rem 1fr;
 	}
 	small:first-of-type > :global(:first-child) {
 		align-self: flex-start;
@@ -113,7 +113,7 @@
 	}
 	small:first-of-type > .details {
 		display: grid;
-		gap: 0.5em;
+		gap: 0.5rem;
 	}
 	.details :global(.text-icon) {
 		align-items: flex-end;
@@ -128,7 +128,7 @@
 	header > :global(div > small:not([class]) > :not(:first-child)::before),
 	header > :global([slot] > small > :not(:first-child)::before) {
 		content: '~';
-		margin: 0 0.5em;
+		margin: 0 0.5rem;
 		color: var(--theme-secondary);
 		font-weight: 600;
 	}
@@ -142,6 +142,6 @@
 		flex-wrap: wrap;
 	}
 	header > :global(small.tags:last-of-type :not(:last-child)) {
-		margin-right: 0.5em;
+		margin-right: 0.5rem;
 	}
 </style>

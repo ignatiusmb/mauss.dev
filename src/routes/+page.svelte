@@ -81,24 +81,24 @@
 		color: inherit;
 	}
 	header h3 {
-		margin: 1.5em 0 2em;
+		margin: 1.5rem 0 2rem;
 	}
-	header > :global(a) {
+	header > a:first-child {
 		position: relative;
-		width: 14em;
-		height: 14em;
+		width: 14rem;
+		height: 14rem;
 		justify-self: center;
 		border-radius: 50%;
 	}
 	header :global(.syv-core-image img) {
-		padding: 0.5em;
+		padding: 0.5rem;
 		border: none;
 		border-radius: inherit;
 	}
 
 	h2 {
 		display: grid;
-		gap: 0.5em;
+		gap: 0.5rem;
 		align-items: center;
 	}
 	header h2 {
@@ -112,7 +112,7 @@
 	section h2::before {
 		counter-increment: title;
 		content: '0' counter(title) '.';
-		margin-right: -0.15em;
+		margin-right: -0.15rem;
 		color: var(--mrq-primary);
 		font-size: 90%;
 	}
@@ -121,7 +121,7 @@
 	header h2::before,
 	section h2::after {
 		content: '';
-		height: 0.1em;
+		height: 0.15rem;
 		background-color: var(--theme-secondary);
 	}
 </style>

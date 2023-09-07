@@ -32,27 +32,27 @@
 
 <style>
 	blockquote {
-		width: calc(100% - 2em);
+		width: calc(100% - 2rem);
 		position: relative;
-		padding: 0.5em 1em 0.75em;
-		border: 0.25em solid;
+		padding: 0.5rem 1rem 0.75rem;
+		border: 0.25rem solid;
 		border-left: none;
 		border-image-slice: 1;
 		border-image-source: linear-gradient(-45deg, var(--theme-secondary), transparent);
-		margin: 1em;
+		margin: 1rem;
 		text-align: justify;
 		font-size: 1.25rem;
 	}
 	blockquote button {
 		user-select: none;
 		position: absolute;
-		right: -1.5em;
-		bottom: -0.125em;
-		padding: 0.5em;
+		right: -1.5rem;
+		bottom: -0.125rem;
+		padding: 0.5rem;
 		transform: translateY(50%);
 		background-color: var(--bg-base);
 		text-transform: uppercase;
-		letter-spacing: 0.05em;
+		letter-spacing: 0.05rem;
 		line-height: 1.5rem;
 		font-size: inherit;
 		font-weight: 500;

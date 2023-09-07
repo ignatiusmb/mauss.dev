@@ -17,7 +17,7 @@
 		width: 100%;
 		display: inline-flex;
 		justify-content: center;
-		padding: 0.2em 0;
+		padding: 0.2rem 0;
 		border-radius: inherit;
 		background: rgba(0, 0, 0, 0.25);
 		font-size: 0.8rem;

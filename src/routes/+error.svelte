@@ -17,7 +17,7 @@
 <style>
 	article {
 		display: grid;
-		gap: 1em;
+		gap: 1rem;
 		justify-content: center;
 		margin-top: auto;
 		text-align: center;
@@ -25,7 +25,7 @@
 
 	h1 {
 		font-family: var(--font-monospace);
-		font-size: 5em;
+		font-size: 5rem;
 	}
 	pre {
 		text-align: left;

@@ -90,7 +90,7 @@
 		width: 100%;
 		display: grid;
 		grid-template-columns: 1fr min(80ch, 100%) 1fr;
-		padding: 0 1em;
+		padding: 0 1rem;
 		margin: 0 auto;
 		word-wrap: break-word;
 		line-height: 1.5;
@@ -102,21 +102,21 @@
 		margin: 0;
 	}
 	main > :global(p:empty + p:empty) {
-		margin-top: 0.5em;
+		margin-top: 0.5rem;
 	}
 
 	main > :global(.half-bleed) {
 		width: 100%;
 		max-width: 72rem;
 		grid-column: 1 / -1;
-		margin: 1em auto;
+		margin: 1rem auto;
 	}
 	main > :global(.full-bleed) {
-		width: calc(100% + 2em);
+		width: calc(100% + 2rem);
 		max-width: 120rem;
 		grid-column: 1 / -1;
-		margin: 1em auto;
-		transform: translateX(-1em);
+		margin: 1rem auto;
+		transform: translateX(-1rem);
 	}
 	main > :global(.half-bleed img),
 	main > :global(.full-bleed img) {
@@ -126,20 +126,20 @@
 	}
 
 	main > :global(header:first-child + :not(section)) {
-		margin-top: 4em;
+		margin-top: 4rem;
 	}
 
 	main :global(section) {
-		margin-top: 2em;
+		margin-top: 2rem;
 	}
 	main :global(section > :first-child) {
 		margin: 0;
 	}
 	main > :global(section:first-of-type) {
-		margin-top: 4em;
+		margin-top: 4rem;
 	}
 	main section#end-card {
-		padding: 0.4em 0.8em;
+		padding: 0.4rem 0.8rem;
 		border-left: 2px solid var(--theme-secondary);
 		background-color: rgba(0, 0, 0, 0.25);
 	}
@@ -157,16 +157,16 @@
 	}
 
 	main :global(p) {
-		margin-top: 0.75em;
+		margin-top: 0.75rem;
 	}
 	main :global(p code),
 	main :global(ol code),
 	main :global(ul code) {
-		font-size: clamp(0.8em, 2vw, 1em);
+		font-size: clamp(0.8rem, 2vw, 1rem);
 	}
 	main :global(img),
 	main :global(video) {
-		max-height: 42em;
+		max-height: 42rem;
 		margin: auto;
 		border-radius: var(--b-radius);
 		text-align: center;
@@ -184,36 +184,36 @@
 		font-family: var(--mrq-heading);
 	}
 	main :global(h2) {
-		margin-top: 1.5em;
+		margin-top: 1.5rem;
 		font-size: clamp(1.5rem, 4vw, 2rem);
 		color: rgb(255, 225, 0);
 	}
 	main :global(h2 + h3) {
-		margin-top: 0.5em;
+		margin-top: 0.5rem;
 	}
 	main :global(h3) {
-		margin: 1.5em 0 -0.25em;
+		margin: 1.5rem 0 -0.25rem;
 		font-size: clamp(1.2rem, 4vw, 1.5rem);
 		color: rgb(0, 160, 120);
 	}
 	main :global(ol + h3),
 	main :global(ul + h3) {
-		margin-top: 1.25em;
+		margin-top: 1.25rem;
 	}
 	main :global(ol),
 	main :global(ul) {
 		padding: 0;
-		padding-left: 0.5em;
+		padding-left: 0.5rem;
 		margin: 0;
-		margin-top: 0.75em;
-		margin-bottom: -0.5em;
+		margin-top: 0.75rem;
+		margin-bottom: -0.5rem;
 	}
 	main :global(ol li:not(:only-child):last-child),
 	main :global(ul li:not(:only-child):last-child) {
-		margin-bottom: 1em;
+		margin-bottom: 1rem;
 	}
 	main :global(li) {
-		margin-left: 1em;
+		margin-left: 1rem;
 	}
 	main :global(li > ol),
 	main :global(li > ul) {
@@ -221,7 +221,7 @@
 	}
 	main :global(p + ul > li:only-child),
 	main :global(p + ol > li:only-child) {
-		margin-top: 1em;
+		margin-top: 1rem;
 	}
 	main :global(p:last-of-type + ul > li:only-child) {
 		/* references list */
@@ -232,35 +232,35 @@
 		text-align: center;
 		font-style: italic;
 		font-size: clamp(1.4rem, 3vw, 1.8rem);
-		margin: clamp(0.5em, 3vw, 1.5em);
+		margin: clamp(0.5rem, 3vw, 1.5rem);
 	}
 	main :global(blockquote li) {
 		margin-left: unset;
 	}
 	main :global(hr) {
 		width: 100%;
-		height: 0.1em;
-		margin-top: 2em;
+		height: 0.1rem;
+		margin-top: 2rem;
 		border: 0;
 		background-color: var(--fg-surface);
 	}
 
 	main :global(figure) {
-		margin: 1em 0;
+		margin: 1rem 0;
 	}
 	main :global(details) {
-		margin: 1em 0 0;
+		margin: 1rem 0 0;
 	}
 	main :global(details[open] > summary) {
-		margin-bottom: 0.5em;
+		margin-bottom: 0.5rem;
 	}
 	main :global(figure figcaption) {
-		padding: 0.5em 0.25em 0;
+		padding: 0.5rem 0.25rem 0;
 		text-align: center;
 		font: 90% var(--font-monospace);
 	}
 	main :global(details summary) {
-		padding: 0 0.25em;
+		padding: 0 0.25rem;
 		font-family: var(--font-monospace);
 	}
 	main :global(details > div.captioned),
@@ -308,10 +308,10 @@
 	}
 
 	footer {
-		margin-top: 2em;
+		margin-top: 2rem;
 		display: grid;
-		border-radius: 0.5em;
-		border: 0.1em solid var(--fg-surface);
+		border-radius: 0.5rem;
+		border: 0.1rem solid var(--fg-surface);
 	}
 	footer a {
 		display: grid;
@@ -319,18 +319,18 @@
 		color: inherit;
 	}
 	footer a:nth-child(2) {
-		border-top: 0.1em solid var(--fg-surface);
+		border-top: 0.1rem solid var(--fg-surface);
 	}
 	footer a:only-child {
 		grid-column: 1 / -1;
 	}
 	footer a strong,
 	footer a span {
-		padding: 0.2em 0.8em;
+		padding: 0.2rem 0.8rem;
 		margin: 0;
 	}
 	footer strong {
-		border-bottom: 0.1em solid var(--fg-surface);
+		border-bottom: 0.1rem solid var(--fg-surface);
 	}
 
 	@media only screen and (min-width: 600px) {
@@ -339,7 +339,7 @@
 		}
 		footer a:nth-child(2) {
 			border-top: none;
-			border-left: 0.1em solid var(--fg-surface);
+			border-left: 0.1rem solid var(--fg-surface);
 		}
 	}
 </style>

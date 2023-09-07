@@ -28,7 +28,7 @@
 		padding-top: 20%;
 		border: none;
 		border-radius: var(--b-radius);
-		margin-top: 1em;
+		margin-top: 1rem;
 	}
 	.banner::after {
 		content: '';
@@ -75,7 +75,7 @@
 		display: grid;
 		grid-template-columns: repeat(10, 1fr);
 		place-items: center;
-		padding: 0 1em;
+		padding: 0 1rem;
 	}
 	small > .stars span {
 		filter: grayscale(1);

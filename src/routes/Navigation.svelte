@@ -128,7 +128,7 @@
 	}
 	menu .shortcuts {
 		display: grid;
-		gap: 1em;
+		gap: 1rem;
 		grid-auto-flow: column;
 		padding: 0.5rem;
 	}
@@ -160,7 +160,7 @@
 
 		menu .routes {
 			display: grid;
-			gap: 0.5em;
+			gap: 0.5rem;
 			grid-auto-flow: column;
 			align-items: center;
 		}
@@ -178,8 +178,8 @@
 			right: 0;
 			bottom: 0;
 			width: 0;
-			height: 0.15em;
-			border-radius: 0.25em;
+			height: 0.15rem;
+			border-radius: 0.25rem;
 			background-color: var(--theme-secondary);
 			transition: width var(--t-duration) ease;
 			transform: translateY(100%);
