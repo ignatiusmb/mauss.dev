@@ -42,7 +42,7 @@
 		font-weight: 500;
 	}
 	h2 {
-		margin-top: 0.5em;
+		margin-top: 0.5rem;
 		font-size: clamp(1.5rem, 4vw, 2rem);
 		font-weight: 500;
 	}

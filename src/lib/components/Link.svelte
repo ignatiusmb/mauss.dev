@@ -19,7 +19,7 @@
 {#if !disabled && href}
 	<a
 		{href}
-		rel={external ? `external noopener noreferrer` : undefined}
+		rel={external ? 'external noopener noreferrer' : undefined}
 		aria-label={label || undefined}
 		class="{style} {classes}"
 	>
@@ -60,7 +60,7 @@
 	}
 
 	.primary {
-		padding: 0.5em 1em;
+		padding: 0.5rem 1rem;
 		border-radius: inherit;
 
 		color: var(--fg-surface, rgba(255, 255, 255, 0.65));

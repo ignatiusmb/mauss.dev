@@ -1,9 +1,12 @@
 <script lang="ts">
+	import Image from 'syv/core/Image.svelte';
 	import SearchBar from 'syv/core/SearchBar.svelte';
 	import Pagination from 'syv/core/Pagination.svelte';
 	import LayoutPicker from '$lib/pages/LayoutPicker.svelte';
-	import ReviewCard from './ReviewCard.svelte';
+	import Link from '$lib/components/Link.svelte';
+	import Verdict from './Verdict.svelte';
 
+	import { capitalize } from 'mauss';
 	import { TIME } from 'syv/options';
 	import { flip } from 'svelte/animate';
 	import { writable } from 'svelte/store';
@@ -38,25 +41,61 @@
 	</svelte:fragment>
 
 	{#each $store as post (post.slug)}
-		<div animate:flip={{ duration: TIME.SLIDE }} transition:scale|local={{ duration: TIME.SLIDE }}>
-			<ReviewCard {post} />
-		</div>
+		{@const disabled = !post.rating || post.verdict === 'pending'}
+
+		<section
+			animate:flip={{ duration: TIME.SLIDE }}
+			transition:scale|local={{ duration: TIME.SLIDE }}
+		>
+			<Image src={post.image.en} alt={post.title.en} lazy overlay ratio={3 / 2}>
+				<h3>{post.released.split('-')[0]}</h3>
+				{#if post.title.short}
+					<h3>{post.title.short}</h3>
+				{:else if post.title.jp}
+					<h3>{post.title.jp}</h3>
+				{:else}
+					<h3>{post.title.en}</h3>
+				{/if}
+			</Image>
+
+			<aside>
+				<small>
+					<span>{capitalize(post.category)}</span>
+					<span>⭐ {post.rating || '~'}</span>
+				</small>
+				<Verdict verdict={post.verdict} />
+				<Link href="/reviews/{post.slug}/" style="primary" {disabled}>
+					{disabled ? 'Work-in-Progress' : 'READ'}
+				</Link>
+			</aside>
+		</section>
 	{:else}
 		<h2>There are no matching {query ? 'titles' : 'filters'}</h2>
 	{/each}
 </LayoutPicker>
 
 <style>
-	div {
+	section {
+		position: relative;
 		display: grid;
+		grid-template-rows: auto 1fr;
+		border-top-left-radius: var(--b-radius);
+		border-top-right-radius: var(--b-radius);
+		background: var(--bg-overlay);
 	}
-	div:not(.empty) {
+	section > :global(.syv-core-image) {
+		cursor: pointer;
+	}
+	aside {
+		display: grid;
+		gap: 0.5rem;
+		padding: 0.5rem;
 		border-radius: var(--b-radius);
-		box-shadow:
-			0 2px 1px -1px rgba(0, 0, 0, 0.2),
-			0 1px 1px 0 rgba(0, 0, 0, 0.14),
-			0 1px 3px 0 rgba(0, 0, 0, 0.12);
-		background-color: var(--bg-overlay);
+		text-align: center;
+	}
+	aside small:first-child {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
 	}
 
 	h2 {

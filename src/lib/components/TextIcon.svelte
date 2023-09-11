@@ -18,6 +18,6 @@
 		align-items: center;
 	}
 	span.empty > :global(:not(:first-child)) {
-		margin-left: 0.25em;
+		margin-left: 0.25rem;
 	}
 </style>

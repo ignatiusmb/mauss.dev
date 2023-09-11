@@ -478,7 +478,7 @@
 
 <style>
 	h1 {
-		margin: 1em 0 0.5em;
+		margin: 3rem 0 1.5rem;
 		line-height: 1;
 		font-size: clamp(2rem, 5vw, 2.75rem);
 	}

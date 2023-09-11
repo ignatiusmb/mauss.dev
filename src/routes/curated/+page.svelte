@@ -13,7 +13,7 @@
 	let query = '';
 </script>
 
-<LayoutPicker header itemSize="18em">
+<LayoutPicker header itemSize="18rem">
 	<svelte:fragment slot="header">
 		<h1>Curated by Alchemauss</h1>
 		<SearchBar bind:query />
@@ -48,7 +48,7 @@
 		background-color: var(--bg-overlay);
 	}
 	small {
-		padding-left: 0.5em;
+		padding-left: 0.375rem;
 	}
 
 	h2 {

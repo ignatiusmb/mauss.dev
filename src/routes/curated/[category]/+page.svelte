@@ -23,25 +23,25 @@
 	header,
 	main {
 		width: 100%;
-		max-width: 48em;
+		max-width: 48rem;
 		display: grid;
-		gap: 1em;
-		padding: 0 1em;
+		gap: 1rem;
+		padding: 0 1rem;
 		margin: 0 auto;
 	}
 	h1 {
 		width: 100%;
-		margin: 1.5em 0 1em;
+		margin: 1.5rem 0 1rem;
 		text-align: center;
 	}
 	section {
 		width: 100%;
-		min-height: 3em;
+		min-height: 3rem;
 		display: grid;
-		gap: 0.5em;
+		gap: 0.5rem;
 		align-items: center;
 		grid-template-columns: 1fr auto;
-		padding: 0.5em;
+		padding: 0.5rem;
 		border-radius: var(--b-radius);
 		box-shadow:
 			0 2px 1px -1px rgba(0, 0, 0, 0.2),
@@ -50,6 +50,6 @@
 		background-color: var(--bg-overlay);
 	}
 	small {
-		padding-left: 0.5em;
+		padding-left: 0.5rem;
 	}
 </style>
