@@ -31,18 +31,10 @@
 
 	<section>
 		<h2>👋 About Me</h2>
-		<p>
-			Hello! I've been enjoying creating stuff that makes life easier ever since I learn software
-			engineering, this is one of the reasons why I love Open Source, to give back and make stuff
-			that can hopefully be useful to others as well.
-		</p>
-		<p>
-			I'm passionate about my websites, code and design-wise. I like nice interfaces and treat them
-			as challenges. I also like to build/assemble things IRL, especially those do-it-yourself IKEA
-			style furnitures, it calms my mind and forces me to relax for a while.
-			<br />
-			<a href="/about/">More info...</a>
-		</p>
+		<!-- prettier-ignore -->
+		<p>Hello! I've been enjoying creating stuff that makes life easier ever since I learn software engineering, this is one of the reasons why I love Open Source, to give back and make stuff that can hopefully be useful to others as well.</p>
+		<!-- prettier-ignore -->
+		<p>I'm passionate about my websites, code and design-wise. I like nice interfaces and treat them as challenges. I also like to build/assemble things IRL, especially those do-it-yourself IKEA style furnitures, it calms my mind and forces me to relax for a while.<br /><a href="/about/">More info...</a></p>
 	</section>
 
 	{#each showcase as [seg, item]}
