@@ -21,6 +21,12 @@
 	<!-- prettier-ignore -->
 	<p>Inspired by <a href="https://wesbos.com/uses">Wes Bos</a> &mdash; All sorts of apps, products, services, and other things that I use. Following the "quality over quantity" as my rule of thumb, it saved me a lot of time, energy, and even health. Without further ado, here's the list of stuff that I use...</p>
 
+	<!-- TODO: maybe place this is Article.svelte -->
+	<p>
+		<!-- prettier-ignore -->
+		<em>Disclaimer: This page contains some affiliate links and I may earn a small commission if you make a purchase through one of these links, without any additional cost to you.</em>
+	</p>
+
 	<section id="objective" class="info-box">
 		<h3>Table of Contents</h3>
 		<ul style:color="#f48fb1">
