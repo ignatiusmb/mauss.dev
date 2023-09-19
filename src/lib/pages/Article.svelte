@@ -295,10 +295,6 @@
 		width: 100%;
 	}
 
-	main :global(.mrq[data-mrq='pre']) {
-		line-height: unset;
-		font-size: 0.8rem;
-	}
 	main :global(.mrq[data-mrq='header']) {
 		line-height: 1;
 	}
