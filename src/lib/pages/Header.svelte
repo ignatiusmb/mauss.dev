@@ -87,6 +87,9 @@
 		line-height: 1;
 		font-family: var(--mrq-heading);
 	}
+	header {
+		margin-top: 3rem;
+	}
 
 	h1 {
 		margin: 1rem 0 0.5rem;
