@@ -26,7 +26,7 @@
 		<link rel="canonical" href="https://mauss.dev/{$page.data.meta.canonical}" />
 	{/if}
 
-	<title>{$page.data.meta.title} • Alchemauss</title>
+	<title>{$page.data.meta.title} | Alchemauss</title>
 	<meta name="author" content="Ignatius Bagussuputra" />
 
 	{#if $page.data.meta.description}

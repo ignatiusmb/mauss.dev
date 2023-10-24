@@ -23,7 +23,7 @@
 			<Image src="/assets/profile/mauss.jpg" alt="Mauss Profile" ratio={1} />
 		</a>
 		<h2>Ignatius Bagussuputra</h2>
-		<span>Developer on Weekdays, Avid Writer on Weekends</span>
+		<span>Workdays Engineer, Weekends Wordsmith</span>
 		<h3>Software Alchemist</h3>
 
 		<Quote quotes={data.quotes} />
@@ -31,18 +31,10 @@
 
 	<section>
 		<h2>👋 About Me</h2>
-		<p>
-			Hello! I've been enjoying creating stuff that makes life easier ever since I learn software
-			engineering, this is one of the reasons why I love Open Source, to give back and make stuff
-			that can hopefully be useful to others as well.
-		</p>
-		<p>
-			I'm passionate about my websites, code and design-wise. I like nice interfaces and treat them
-			as challenges. I also like to build/assemble things IRL, especially those do-it-yourself IKEA
-			style furnitures, it calms my mind and forces me to relax for a while.
-			<br />
-			<a href="/about/">More info...</a>
-		</p>
+		<!-- prettier-ignore -->
+		<p>Hello! I am an independent software engineer living between GMT+7 to GMT+8. I mostly tend to open source technologies, which is publicly available on <a href="https://github.com/ignatiusmb">GitHub</a>. The rest are often private or confidential in nature, which involves tailored solutions for clients seeking a more personalized approach. If you're interested, please don't hesitate to get in touch.</p>
+		<!-- prettier-ignore -->
+		<p>Outside of engineering, I enjoy writing my thoughts and experiences, especially the life lessons and new things that I've learned. If you'd like to know more about me, head over to the <a href="/about/">About</a> page.</p>
 	</section>
 
 	{#each showcase as [seg, item]}

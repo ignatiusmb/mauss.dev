@@ -19,29 +19,91 @@
 	<p>Hello, Igna here 👋</p>
 
 	<!-- prettier-ignore -->
-	<p>I used to be spoiled by swipe/glide typing and other autocompletion tech, so I'm slowly working back towards touch typing and placing my fingers correctly on the keyboard, at least when I'm working with one. My WPM is currently around 90 and above, sometimes above 100 on a good day.</p>
+	<p>I'm someone who finds joy from connecting with people and exploring the world around me. I believe there's a lot of things to learn from others, particularly in domains beyond my expertise. When I do get to know people, I strive to not pass judgement based on rumors or preconceived notions, but rather through personal interactions with them. Accountability is also essential to me, like two sides of the same coin, I take pride in my capacity to achieve great successes, but I also recognize the equal importance of owning up to my mistakes and learning from it, for it is a crucial part of growing as a person.</p>
 
 	<!-- prettier-ignore -->
-	<p>I love learning when I can make it fun, and I'm currently deep into learning languages and cultures from all around the world. In my free time, I try to prioritize exploring as many things as I can and building up or improving upon my skills. Lately, I'm focused on bouldering, tennis, and running (or more accurately, endurance), take a look at the activities section below!</p>
+	<p>I'm genuinely passionate about learning, especially when I've successfully made it fun and engaging. Currently, I'm immersing myself in the fascinating world of languages and cultures from all around the world. In my spare time, I try to explore as many things as I can and honing my skills. My current focus revolves around bouldering, tennis, and endurance running. Feel free to check out my activities section below to learn more!</p>
+
+	<!-- prettier-ignore -->
+	<p>In its beautiful and unpredictable way, I have learned to appreciate all the small moments in life, embracing both the joy and pain, growing with them together. Check out my latest life reflection on the <a href="/posts/24k-journey">24K Journey post</a>.</p>
+
+	<h3>Expertise</h3>
+	<!-- prettier-ignore -->
+	<p>What anyone does for a living shouldn't define who they are, but it's still a part of their life nonetheless. I'm a software engineer by trade, but I like to think of myself as a software alchemist. Over the years, I've engaged in a diverse array of projects and discovered a knack for transmuting software and streamlining code. My expertise lies in the art of converting intricate or troublesome code into a form that is smaller, readable, and maintainable.</p>
+
+	<!-- prettier-ignore -->
+	<p>While I have the skills to be a full-stack engineer, my primary focus and passion lie in the frontend development, which is to craft user-friendly interfaces and delightful user experiences. As one of the maintainers of <a href="https://github.com/sveltejs">Svelte</a>, I'm deeply connected with the frontend community, actively contributing to its growth and development. I mostly work independently and between GMT+7 to GMT+8, and most of it is open source and publicly available on GitHub.</p>
+
+	<!-- prettier-ignore -->
+	<p>I'm always eager to explore new opportunities and collaborations, let's connect and explore the possibilities together!</p>
 
 	<h3>Socials</h3>
 	<!-- prettier-ignore -->
 	<p>Though I don't use most or all of them as often as I'd like, I still check them from time to time. Find me anywhere here:</p>
-	<!-- prettier-ignore -->
 	<ul>
-		<li><a href="https://www.facebook.com/ignatiusmb">Facebook</a> | Just a keepsake</li>
-		<li><a href="https://www.instagram.com/ignatiusmb">Instagram</a> | Come say hello!</li>
-		<li><a href="https://www.linkedin.com/in/ignatiusmb">LinkedIn</a> | Mandatory professional profile</li>
-		<li><a href="https://twitter.com/alchemauss">Twitter</a> | I don't know why I have this tbh</li>
-		<li><a href="https://keybase.io/mauss">Keybase</a> | I kinda forgot about this one</li>
-		<li><a href="https://github.com/ignatiusmb">GitHub</a> | Where I spent most of my time</li>
-		<li><a href="https://gitlab.com/ignatiusmb">GitLab</a> | Keepsake of university time</li>
-		<li><a href="https://www.youtube.com/@ignatiusmb">YouTube</a> | Exciting content upcoming!</li>
-		<li><a href="https://open.spotify.com/user/ignatiusmb">Spotify</a> | Monthly curated music, check it out!</li>
-		<li><a href="https://www.youtube.com/user/Ignapure/playlists">Online TV</a> | Monthly curated videos, check it out!</li>
-		<li>Discord | Mostly a lurker but come say hi @ignatiusmb</li>
-		<li><a href="https://t.me/ignatiusmb">Telegram</a> | Quick and convenient messaging app</li>
-		<li>Signal | Personal life communication app</li>
+		<li>
+			<span>🚫</span>
+			<a href="https://www.facebook.com/ignatiusmb">Facebook</a>
+			<span>| Just a keepsake</span>
+		</li>
+		<li>
+			<span>🟢</span>
+			<a href="https://www.instagram.com/ignatiusmb">Instagram</a>
+			<span>| Come say hello!</span>
+		</li>
+		<li>
+			<span>🟡</span>
+			<a href="https://www.linkedin.com/in/ignatiusmb">LinkedIn</a> | Mandatory professional profile
+		</li>
+		<li>
+			<span>🟡</span>
+			<a href="https://twitter.com/alchemauss">X (formerly Twitter)</a>
+			<span>| I don't know why I have this tbh</span>
+		</li>
+		<li>
+			<span>🟡</span>
+			<a href="https://keybase.io/mauss">Keybase</a>
+			<span>| I kinda forgot about this one</span>
+		</li>
+		<li>
+			<span>🟢</span>
+			<a href="https://github.com/ignatiusmb">GitHub</a>
+			<span>| Where I spent most of my time</span>
+		</li>
+		<li>
+			<span>🟡</span>
+			<a href="https://gitlab.com/ignatiusmb">GitLab</a>
+			<span>| Keepsake of university time</span>
+		</li>
+		<li>
+			<span>🟢</span>
+			<a href="https://www.youtube.com/@ignatiusmb">YouTube</a>
+			<span>| Exciting content upcoming!</span>
+		</li>
+		<li>
+			<span>🟢</span>
+			<a href="https://open.spotify.com/user/ignatiusmb">Spotify</a>
+			<span>| Monthly curated music, check it out!</span>
+		</li>
+		<li>
+			<span>🟢</span>
+			<a href="https://www.youtube.com/user/Ignapure/playlists">Online TV</a>
+			<span>| Monthly curated videos, check it out!</span>
+		</li>
+		<li>
+			<span>🟢</span>
+			<a href="https://discord.com/users/231822751504138240">Discord</a>
+			<span>| Mostly a lurker but come say hi @ignatiusmb</span>
+		</li>
+		<li>
+			<span>🟢</span>
+			<a href="https://t.me/ignatiusmb">Telegram</a>
+			<span>| Quick and convenient messaging app</span>
+		</li>
+		<li>
+			<span>🔒</span>
+			<span>Signal | Personal life communication app</span>
+		</li>
 	</ul>
 
 	<h3>Activities</h3>

@@ -2,16 +2,22 @@
 	import * as feather from 'syv/icons/feather';
 	import Feather from 'syv/icons/Feather.svelte';
 	import { page } from '$app/stores';
+
+	$: path = $page.url.pathname;
 </script>
 
 <footer>
-	{#if !$page.url.pathname.startsWith('/help')}
-		<div style:font-style="italic">
-			<span>Visit the</span>
+	<div style:font-style="italic">
+		<span>Visit the</span>
+		{#if !path.startsWith('/help')}
 			<a href="/help/">help page</a>
-			<span>for more information</span>
-		</div>
-	{/if}
+		{/if}
+		{#if !path.startsWith('/disclaimer')}
+			{#if !path.startsWith('/help')}<span>or</span>{/if}
+			<a href="/disclaimer/">disclaimer page</a>
+		{/if}
+		<span>for more information</span>
+	</div>
 
 	<section>
 		<a href="https://www.facebook.com/ignatiusmb" aria-label="facebook profile">

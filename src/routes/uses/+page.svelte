@@ -21,6 +21,12 @@
 	<!-- prettier-ignore -->
 	<p>Inspired by <a href="https://wesbos.com/uses">Wes Bos</a> &mdash; All sorts of apps, products, services, and other things that I use. Following the "quality over quantity" as my rule of thumb, it saved me a lot of time, energy, and even health. Without further ado, here's the list of stuff that I use...</p>
 
+	<!-- TODO: maybe place this is Article.svelte -->
+	<p>
+		<!-- prettier-ignore -->
+		<em>Disclaimer: This page contains some affiliate links and I may earn a small commission if you make a purchase through one of these links, without any additional cost to you.</em>
+	</p>
+
 	<section id="objective" class="info-box">
 		<h3>Table of Contents</h3>
 		<ul style:color="#f48fb1">
@@ -77,55 +83,55 @@
 			<code>2021-07</code>
 			<span>|</span>
 			<strong>Case:</strong>
-			<a href="https://tokopedia.link/ZVQpu95UKAb">Lian Li TU150 Mini ITX</a>
+			<a href="https://shope.ee/7KUnkN8Ijc">Lian Li TU150 Mini ITX</a>
 		</li>
 		<li>
 			<code>2021-07</code>
 			<span>|</span>
 			<strong>PSU:</strong>
-			<span>Silverstone SX700 SFX 80+ Platinum</span>
+			<a href="https://shope.ee/6pYX9WqW8H">Silverstone SX700 SFX 80+ Platinum</a>
 		</li>
 		<li>
 			<code>2021-07</code>
 			<span>|</span>
 			<strong>Motherboard:</strong>
-			<a href="https://tokopedia.link/0hLFrQlVKAb">Gigabyte B550I AORUS PRO AX</a>
+			<a href="https://shope.ee/6zrxLtOHUl">Gigabyte B550I AORUS PRO AX</a>
 		</li>
 		<li>
 			<code>2021-07</code>
 			<span>|</span>
 			<strong>CPU:</strong>
-			<a href="https://tokopedia.link/CZkWSWUTKAb">AMD Ryzen 9 5900X</a>
+			<a href="https://shope.ee/2VPXzrUXb6">AMD Ryzen 9 5900X</a>
 		</li>
 		<li>
 			<code>2021-07</code>
 			<span>|</span>
 			<strong>CPU Cooler:</strong>
-			<span>be quiet! Dark Rock Pro 4</span>
+			<a href="https://shope.ee/1fqR0MsyNH">be quiet! Dark Rock Pro 4</a>
 		</li>
 		<li>
 			<code>2021-07</code>
 			<span>|</span>
 			<strong>GPU:</strong>
-			<span>Gigabyte RTX 3060 GAMING OC 2.0 12GB</span>
+			<a href="https://shope.ee/1fqR0MsyNH">Gigabyte RTX 3060 GAMING OC 2.0 12GB</a>
 		</li>
 		<li>
 			<code>2021-07</code>
 			<span>|</span>
 			<strong>Memory:</strong>
-			<span>G.Skill Trident Z RGB (2x32GB)</span>
+			<a href="https://shope.ee/9KFs8n07Jz">G.Skill Trident Z RGB (2x32GB)</a>
 		</li>
 		<li>
 			<code>2021-07</code>
 			<span>|</span>
 			<strong>Storage-0:</strong>
-			<span>Samsung 980 Pro 1TB M.2-2280</span>
+			<a href="https://shope.ee/6fF6xw4FFS">Samsung 980 Pro 1TB M.2-2280</a>
 		</li>
 		<li>
 			<code>2021-08</code>
 			<span>|</span>
 			<strong>Storage-1:</strong>
-			<span>WD Black 1TB M.2-SN850</span>
+			<a href="https://shope.ee/4fU2aJ1qbQ">WD Black 1TB M.2-SN850</a>
 		</li>
 
 		<hr style:margin="0.5rem 0" />
@@ -140,7 +146,7 @@
 			<code>2022-09</code>
 			<span>|</span>
 			<strong>Mousemat:</strong>
-			<a href="https://tokopedia.link/JXB8U4TZKAb">Razer Strider XXL</a>
+			<a href="https://shope.ee/4fU2aJ1qbQ">Razer Strider XXL</a>
 		</li>
 		<li>
 			<code>2022-08</code>
@@ -164,25 +170,25 @@
 			<code>2020-01</code>
 			<span>|</span>
 			<strong>Webcam:</strong>
-			<span>Logitech C922 Pro Stream</span>
+			<a href="https://shope.ee/9esiXc1unJ">Logitech C922 Pro Stream</a>
 		</li>
 		<li>
 			<code>2021-12</code>
 			<span>|</span>
 			<strong>Camera:</strong>
-			<a href="https://tokopedia.link/ghwNgt8XKAb">Sony ZV-1 - Black</a>
+			<a href="https://shope.ee/2AmhbsXef6">Sony ZV-1 - Black</a>
 		</li>
 		<li>
 			<code>2022-07</code>
 			<span>|</span>
 			<strong>Microphone:</strong>
-			<a href="https://tokopedia.link/wQdHiHeYKAb">Sennheiser MKE 200</a>
+			<a href="https://shope.ee/fxtp9uE0R">Sennheiser MKE 200</a>
 		</li>
 		<li>
 			<code>2018-12</code>
 			<span>|</span>
 			<strong>Drawing Tablet:</strong>
-			<span>One by Wacom CTL-472/K0-CX</span>
+			<a href="https://shope.ee/3puvazqygB">One by Wacom CTL-472/K0-CX</a>
 		</li>
 
 		<hr style:margin="0.5rem 0" />
@@ -191,7 +197,7 @@
 			<code>2020-06</code>
 			<span>|</span>
 			<strong>Chair:</strong>
-			<a href="https://tokopedia.link/nTYSTTCZKAb">Secretlab TITAN 2020 - Stealth</a>
+			<a href="https://shope.ee/iD20LXsJ">Secretlab TITAN 2020 - Stealth</a>
 		</li>
 		<li>
 			<code>2019-03</code>
@@ -220,6 +226,7 @@
 			<span>|</span>
 			<strong>Earbud:</strong>
 			<a href="https://tokopedia.link/VfQje70gLAb">Sony WF-1000XM4</a>
+			(<a href="https://shope.ee/4VAcOLkj7w">Rugged Case</a>)
 		</li>
 		<li>
 			<code>2022-05</code>
@@ -244,19 +251,19 @@
 			<code>2023-05</code>
 			<span>|</span>
 			<strong>Power Adapter:</strong>
-			<a href="https://tokopedia.link/IsxbIgi0KAb">Anker 737 GaNPrime 120W</a>
+			<a href="https://shope.ee/5zzQBURKnh">Anker 737 GaNPrime 120W</a>
 		</li>
 		<li>
 			<code>2022-09</code>
 			<span>|</span>
 			<strong>Power Bank:</strong>
-			<a href="https://tokopedia.link/O91qebsgLAb">Baseus Blade 100W 20000mAh</a>
+			<a href="https://shope.ee/3AfEoJ66PQ">Baseus Blade 100W 20000mAh</a>
 		</li>
 		<li>
 			<code>2018-10</code>
 			<span>|</span>
 			<strong>Mouse:</strong>
-			<a href="https://tokopedia.link/MQNsvfw0KAb">Logitech Silent Plus M331</a>
+			<a href="https://shope.ee/AURpXpqeaI">Logitech Silent Plus M331</a>
 		</li>
 
 		<hr style:margin="0.5rem 0" />
@@ -347,13 +354,13 @@
 			<code>2020-01</code>
 			<span>|</span>
 			<strong>Enclosure:</strong>
-			<a href="https://tokopedia.link/idoXibw5KAb">ORICO NS400U3 4-Bay</a>
+			<a href="https://shope.ee/99wRxTFhyN">ORICO NS400U3 4-Bay</a>
 		</li>
 		<li>
 			<code>2020-01</code>
 			<span>|</span>
 			<strong>HDD-0:</strong>
-			<span>4TB WD RED WD40EFRX</span>
+			<a href="https://shope.ee/1AuARpAdQY">WD Red 4TB HDD 3.5"</a>
 		</li>
 	</ul>
 
@@ -361,7 +368,28 @@
 
 	<p>Tailored for oily and sensitive skin</p>
 
-	<ul>
+	<h3 id="personal-skincare-daytime-routine">Daytime Routine</h3>
+	<ol>
+		<li>
+			<strong>Toner:</strong>
+			<a href="https://shope.ee/8KNKzWs1Jo">SKINTIFIC Pure Centella Toner</a>
+		</li>
+		<li>
+			<strong>Serum:</strong>
+			<a href="https://shope.ee/6fF70Txxel">SKINTIFIC 10% Vitamin C</a>
+		</li>
+		<li>
+			<strong>Moisturizer:</strong>
+			<a href="https://shope.ee/20THRQaIiz">SKINTIFIC MSH Niacinamide</a>
+		</li>
+		<li>
+			<strong>Sunscreen:</strong>
+			<a href="https://shope.ee/20THRQaIiz">EltaMD - UV Clear Broad-Spectrum SPF 46</a>
+		</li>
+	</ol>
+
+	<h3 id="personal-skincare-nighttime-routine">Nighttime Routine</h3>
+	<ol>
 		<li>
 			<strong>Toner:</strong>
 			<a href="https://www.goodmolecules.com/products/niacinamide-brightening-toner">
@@ -369,36 +397,8 @@
 			</a>
 		</li>
 		<li>
-			<strong>Moisturizer:</strong>
-			<a href="https://www.cosrx.com/products/advanced-snail-92-all-in-one-cream">
-				COSRX - Advanced Snail 92 All in one Cream
-			</a>
-		</li>
-	</ul>
-
-	<h3 id="personal-skincare-daytime-routine">Daytime Routine</h3>
-	<ol>
-		<li>
-			<strong>Toner / Booster:</strong>
-			<span>See above</span>
-		</li>
-		<li>
-			<strong>Moisturizer:</strong>
-			<span>See above</span>
-		</li>
-		<li>
-			<strong>Sunscreen:</strong>
-			<a href="https://eltamd.com/products/uv-clear-broad-spectrum-spf-46">
-				EltaMD - UV Clear Broad-Spectrum SPF 46
-			</a>
-		</li>
-	</ol>
-
-	<h3 id="personal-skincare-nighttime-routine">Nighttime Routine</h3>
-	<ol>
-		<li>
-			<strong>Toner / Booster:</strong>
-			<span>See above</span>
+			<strong>Serum:</strong>
+			<a href="https://shope.ee/506sxM0ADu">SKINTIFIC SymWhite 377</a>
 		</li>
 		<li>
 			<strong>Adapalene:</strong>
@@ -406,7 +406,7 @@
 		</li>
 		<li>
 			<strong>Moisturizer:</strong>
-			<span>See above</span>
+			<a href="https://shope.ee/20THRQaIiz">SKINTIFIC MSH Niacinamide</a>
 		</li>
 	</ol>
 
@@ -414,36 +414,7 @@
 	<ul>
 		<li>
 			<strong>Soothing Cream:</strong>
-			<a href="https://tokopedia.link/2ZZBBYyrRAb">La Roche Posay - Cicaplast Baume B5+</a>
-		</li>
-		<li>
-			<strong>Niacinamide:</strong>
-			<a href="https://theordinary.com/en-us/niacinamide-10-zinc-1-serum-100436.html">
-				The Ordinary - Niacinamide 10% + Zinc 1%
-			</a>
-		</li>
-		<li>
-			<strong>Retinol:</strong>
-			<a href="https://www.cerave.com/skincare/serums/resurfacing-retinol-serum">
-				CeraVe - Resurfacing Retinol Serum
-			</a>
-		</li>
-		<li>
-			<strong>Salicylic Acid:</strong>
-			<ul>
-				<li>
-					<a href="https://tokopedia.link/RCRttMhqRAb">
-						La Roche Posay - Effaclar Salicylic Acid Serum 30ml
-					</a>
-				</li>
-				<li>
-					<a
-						href="https://theordinary.com/en-us/salicylic-acid-2-solution-acne-control-100098.html"
-					>
-						The Ordinary - Salicylic Acid 2% Solution
-					</a>
-				</li>
-			</ul>
+			<a href="https://shope.ee/1AuASJBiQi">La Roche Posay - Cicaplast Baume B5+</a>
 		</li>
 	</ul>
 
@@ -455,7 +426,7 @@
 		</li>
 		<li>
 			<strong>Vitamin D</strong>
-			<span>| 2000 IU</span>
+			<span>| 5000 IU</span>
 		</li>
 		<li>
 			<strong>Omega-3</strong>
