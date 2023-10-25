@@ -19,7 +19,7 @@
 
 <main use:hydrate={$navigating}>
 	{#if $$slots.header && post}
-		<Header {post} {path}>
+		<Header {post}>
 			<slot name="header" />
 		</Header>
 
