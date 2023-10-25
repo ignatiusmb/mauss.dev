@@ -21,14 +21,14 @@ export const DATA = {
 			all() {
 				const curated = traverse(
 					{ entry: 'content/sites/dev.mauss/curated', depth: -1 },
-					({ breadcrumb: [file, folder], buffer, parse }) => {
+					({ breadcrumb: [file, dir], buffer, parse }) => {
 						if (!file.endsWith('.md') || file.includes('draft')) return;
 						const { metadata } = parse(buffer.toString('utf-8'));
 						if (metadata.draft) return;
 						const specified: FrontMatter = {
-							slug: `${folder}/${file.replace(/\.[^/.]+$/, '')}`,
+							slug: `${dir}/${file.replace(/\.[^/.]+$/, '')}`,
 							title: metadata.title,
-							category: folder,
+							category: dir,
 							date: metadata.date,
 						};
 						return { ...metadata, ...specified };
