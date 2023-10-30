@@ -29,7 +29,7 @@
 
 	<h3>Expertise</h3>
 	<!-- prettier-ignore -->
-	<p>What anyone does for a living shouldn't define who they are, but it's still a part of their life nonetheless. I'm a software engineer by trade, but I like to see myself as a software alchemist. Throughout my career, I've delved into a wide spectrum of projects and honed a unique skill for transmuting software and streamlining code. My specialization lies in the art of converting intricate or troublesome code into a more concise, readable, and maintainable form. This approach simplifies the process of debugging, leading to simpler bug fixes and significantly faster development cycles.</p>
+	<p>What anyone does for a living shouldn't define who they are, but it's still a part of their life nonetheless. I'm a software engineer by trade, but I like to see myself as a software alchemist. Throughout my career, I've delved into a wide spectrum of projects and honed a unique skill for <em>transmuting</em> software and streamlining code. My specialization lies in the art of converting intricate or troublesome code into a more concise and maintainable format. This simplifies the debugging process, resulting in simpler bug fixes and significantly faster development cycles.</p>
 
 	<!-- prettier-ignore -->
 	<p>While I have the skills to be a full-stack engineer, my primary focus and passion lie in the frontend development, which is to craft user-friendly interfaces and delightful user experiences. As one of the core maintainers of <a href="https://github.com/sveltejs">Svelte</a>, I'm deeply connected with the frontend community, actively contributing to its growth and development. I work independently between GMT+7 to GMT+8, and most of it is open source and publicly available on GitHub.</p>
