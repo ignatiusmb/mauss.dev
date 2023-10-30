@@ -59,8 +59,8 @@
 		</header>
 
 		{#if post.table.length}
-			<details id="objective">
-				<summary>Overview</summary>
+			<details id="index">
+				<summary>Article Index</summary>
 				<p>
 					{#each post.table as { id, title }}
 						<a href="#{id}">{title}</a>
