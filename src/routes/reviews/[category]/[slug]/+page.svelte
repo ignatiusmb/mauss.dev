@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Article from '$lib/pages/Article.svelte';
 	import Link from '$lib/components/Link.svelte';
-	import ReviewBanner from './ReviewBanner.svelte';
+	import ReviewBackdrop from './ReviewBackdrop.svelte';
 	import Spoilers from './SpoilerSection.svelte';
 
 	export let data;
@@ -13,7 +13,7 @@
 	flank={data.article.flank}
 >
 	<svelte:fragment slot="header">
-		<ReviewBanner post={data.article} />
+		<ReviewBackdrop post={data.article} />
 
 		{#if data.article.link}
 			<small>
