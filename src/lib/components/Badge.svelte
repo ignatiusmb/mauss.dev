@@ -1,7 +1,8 @@
 <script lang="ts">
 	export let tag: string;
 
-	const represent: Record<string, [background: string, color: string]> = {
+	// tuple -> [background: string, color: string]
+	const represent = {
 		android: ['#56a036', '#ffffff'],
 		firebase: ['#ffca28', '#757575'],
 		flutter: ['#54c5f8', '#003b6c'],
@@ -19,10 +20,10 @@
 		svelte: ['#ff3e00', '#ffffff'],
 		tutorial: ['#feffa5', '#b30047'],
 		typescript: ['#2775c3', '#ffffff'],
-	};
+	}[tag] || ['#d6d9e0', '#606570'];
 </script>
 
-<span style:background={represent[tag][0]} style:color={represent[tag][1]}>#{tag}</span>
+<span style:background={represent[0]} style:color={represent[1]}>#{tag}</span>
 
 <style>
 	span {
@@ -30,7 +31,5 @@
 		border-radius: var(--b-radius);
 		margin-top: 0.5rem;
 		font-size: 0.875rem;
-		background: #d6d9e0;
-		color: #606570;
 	}
 </style>
