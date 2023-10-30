@@ -23,7 +23,7 @@
 		inset: 0;
 		position: absolute;
 
-		margin: -1% 0;
+		margin: -1rem 0;
 		border: none;
 		border-radius: calc(var(--b-radius) * 2);
 	}

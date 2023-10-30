@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Article from '$lib/pages/Article.svelte';
 	import Link from '$lib/components/Link.svelte';
-	import ReviewBackdrop from './ReviewBackdrop.svelte';
+	import Backdrop from './Backdrop.svelte';
 	import Spoilers from './SpoilerSection.svelte';
 
 	export let data;
@@ -13,7 +13,7 @@
 	flank={data.article.flank}
 >
 	<svelte:fragment slot="header">
-		<ReviewBackdrop post={data.article} />
+		<Backdrop post={data.article} />
 
 		{#if data.article.link}
 			<small>
@@ -35,7 +35,7 @@
 
 	<section class="info-box warning">
 		<Link href="/disclaimer/" style="danger">
-			<h2>READ DISCLAIMER</h2>
+			<h2>DISCLAIMER</h2>
 		</Link>
 	</section>
 
