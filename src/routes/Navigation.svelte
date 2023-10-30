@@ -4,9 +4,14 @@
 	import Divider from '$lib/components/Divider.svelte';
 
 	import { click } from 'syv/action';
+	import { afterNavigate } from '$app/navigation';
 	import { page } from '$app/stores';
 
 	let opened = false;
+
+	afterNavigate(() => {
+		opened = false;
+	});
 </script>
 
 <nav
@@ -142,6 +147,9 @@
 		display: inline-flex;
 		justify-content: center;
 	}
+	menu .shortcuts a:hover {
+		background: rgba(255, 255, 255, 0.1);
+	}
 
 	/* change to 600 when there's more routes */
 	@media only screen and (min-width: 500px) {
@@ -189,8 +197,7 @@
 			transition: width var(--t-duration) ease;
 			transform: translateY(100%);
 		}
-		menu .routes a:hover::after,
-		menu .routes a:focus::after {
+		menu .routes a:hover::after {
 			left: 0;
 			right: auto;
 			width: 100%;
