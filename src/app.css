@@ -29,6 +29,7 @@ body {
 	flex-direction: column;
 	background-color: var(--bg-base);
 	color: var(--fg-surface);
+	font-family: 'Karla', sans-serif;
 }
 
 a {

@@ -11,9 +11,6 @@ devDependencies:
   '@fontsource/karla':
     specifier: ^5.0.17
     version: 5.0.17
-  '@fontsource/rubik':
-    specifier: ^5.0.17
-    version: 5.0.17
   '@ignatiusmb/styles':
     specifier: ^0.1.1
     version: 0.1.1
@@ -276,10 +273,6 @@ packages:
 
   /@fontsource/karla@5.0.17:
     resolution: {integrity: sha512-RNG9g1L7ZlemzfH/A1bbDSF2flOmGmRCnxXhnStK61K2Qn8OZPffnwrpaE/mLbBTcL7EStGAOv6Zp4C4l0Ikqw==}
-    dev: true
-
-  /@fontsource/rubik@5.0.17:
-    resolution: {integrity: sha512-42yGtxnj9UFY+A6nWbSWtcPYX3PXPYYQi1xKMzLLjis4wRhZ9VZANfWMbRToGPW+lRZvuSesCJ4uB+J2EDFvzQ==}
     dev: true
 
   /@ignatiusmb/styles@0.1.1:
