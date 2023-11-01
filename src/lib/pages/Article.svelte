@@ -1,13 +1,20 @@
 <script lang="ts">
 	import ProgressBar from 'syv/core/ProgressBar.svelte';
-	import Header from './Header.svelte';
 
-	import type { ComponentProps } from 'svelte';
 	import { hydrate } from 'marqua/browser';
+	import { dt } from 'mauss';
 	import { navigating } from '$app/stores';
 
 	export let path = '';
-	export let post: null | ComponentProps<Header>['post'] = null;
+	export let post: null | {
+		title: string | { en?: string; jp?: string };
+		date: string | { published?: string; updated?: string };
+		table: Array<{ id: string; title: string }>;
+		estimate: number;
+
+		author?: { name?: string; link?: string; img?: string };
+		description?: string;
+	} = null;
 
 	type Flank = null | { slug: string; title: string | Record<string, any> };
 	export let flank: null | Partial<Record<'back' | 'next', Flank>> = null;
@@ -19,21 +26,47 @@
 
 <main use:hydrate={$navigating}>
 	{#if $$slots.header && post}
-		<Header {post} {path}>
+		<header>
+			<aside>
+				{#if typeof post.date === 'object'}
+					{@const { published, updated } = post.date}
+					<time datetime={updated || published}>
+						{dt.format(updated || published)('DD MMMM YYYY')}
+					</time>
+				{:else}
+					<time datetime={post.date}>{dt.format(post.date)('DD MMMM YYYY')}</time>
+				{/if}
+
+				<span class="dash">&mdash;</span>
+
+				<span>{post.estimate} min read</span>
+			</aside>
+
+			{#if typeof post.title === 'string'}
+				<h1>{post.title}</h1>
+			{:else if post.title.jp}
+				<h1>{post.title.jp}</h1>
+			{:else}
+				<h1>{post.title.en}</h1>
+			{/if}
+
+			<a href={post.author?.link || '/about/'}>
+				<img src={post.author?.img || '/assets/profile/mauss.jpg'} alt="author profile" />
+				<span>{post.author?.name || 'Ignatius Bagussuputra'}</span>
+			</a>
+
 			<slot name="header" />
-		</Header>
+		</header>
 
 		{#if post.table.length}
-			<section id="objective" class="info-box">
-				<h3>Table of Contents</h3>
-				<ul style:color="#f48fb1">
+			<details id="index">
+				<summary>Article Index</summary>
+				<p>
 					{#each post.table as { id, title }}
-						<li style:color="inherit">
-							<a href="#{id}">{title}</a>
-						</li>
+						<a href="#{id}">{title}</a>
 					{/each}
-				</ul>
-			</section>
+				</p>
+			</details>
 		{/if}
 	{/if}
 
@@ -41,15 +74,8 @@
 
 	{#if path}
 		<section id="end-card">
-			<p>
-				<span style:font-weight="500">Found a typo or something to improve?</span>
-				<br />
-				<span>In the spirit of open source, you can create a new</span>
-				<a href="https://github.com/alchemauss/content/issues">issue</a>
-				<span>or contribute directly to this article by</span>
-				<a href="https://github.com/alchemauss/content/blob/master/{path}">submitting a PR</a>
-				<span>on GitHub</span>
-			</p>
+			<!-- prettier-ignore -->
+			<p>See something wrong or a way to improve this article? In the spirit of open-source, you can create a new <a href="https://github.com/alchemauss/content/issues">issue</a> or contribute directly to this article by <a href="https://github.com/alchemauss/content/blob/master/{path}">sending a Pull Request on GitHub</a>!</p>
 		</section>
 	{/if}
 
@@ -95,6 +121,90 @@
 		word-wrap: break-word;
 		line-height: 1.5;
 	}
+
+	header {
+		z-index: 0;
+		position: relative;
+		display: grid;
+		gap: 0.8rem;
+		justify-items: center;
+		margin-top: 3rem;
+
+		line-height: 1;
+		font-family: var(--mrq-heading);
+	}
+
+	aside,
+	header a {
+		display: grid;
+		gap: 0.5rem;
+		grid-auto-flow: column;
+		align-items: center;
+		font-size: 0.875rem;
+	}
+	header a {
+		grid-template-columns: 1.5rem 1fr;
+		margin: 0.5rem 0;
+		font-size: 1rem;
+	}
+	header a img {
+		border-radius: 50%;
+	}
+
+	h1 {
+		font-size: clamp(2.5rem, 4vw, 3rem);
+		text-align: center;
+		text-wrap: balance;
+	}
+
+	header :global(.dash) {
+		color: var(--theme-secondary);
+		font-weight: 600;
+	}
+
+	header + details {
+		--radius: calc(var(--b-radius));
+		margin-bottom: 1rem;
+		border-radius: var(--radius);
+		background: rgba(255, 255, 255, 0.1);
+	}
+	header + details summary {
+		padding: 0.5rem 1rem;
+		margin: 0;
+		border: 1px solid rgba(124, 124, 124, 0.7);
+		border-radius: var(--radius);
+	}
+	header + details summary::marker {
+		text-align: right;
+	}
+	header + details p {
+		display: grid;
+		margin: 0;
+		font-size: 1rem;
+	}
+	header + details a {
+		padding: 0.25rem 1rem;
+		color: inherit;
+	}
+	header + details a:last-child {
+		border-bottom-right-radius: var(--radius);
+		border-bottom-left-radius: var(--radius);
+	}
+	header + details a:hover {
+		background: rgba(255, 255, 255, 0.1);
+	}
+	header + details[open] {
+		border: 1px solid rgba(124, 124, 124, 0.7);
+	}
+	header + details[open] summary {
+		border-width: 0;
+		border-bottom-width: 1px;
+		border-bottom-right-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+
+	/* ---- {@html} ---- */
+
 	main > :global(*) {
 		grid-column: 2;
 	}
