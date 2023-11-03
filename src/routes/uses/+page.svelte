@@ -296,12 +296,7 @@
 			<code>2017-10</code>
 			<span>|</span>
 			<a href="https://code.visualstudio.com/">Visual Studio Code</a>
-			<span>
-				<span>for the code editor with the built-in Dark Modern theme,</span>
-				<a href="https://github.com/tonsky/FiraCode">Fira Code</a>
-				<span>for the font, and the</span>
-				<a href="/curated/config/vscode">settings and extensions</a>
-			</span>
+			<span>for the code editor</span>
 		</li>
 		<li>
 			<code>2017-10</code>
