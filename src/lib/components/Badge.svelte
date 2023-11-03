@@ -1,8 +1,29 @@
 <script lang="ts">
 	export let tag: string;
+
+	// tuple -> [background: string, color: string]
+	const represent = {
+		android: ['#56a036', '#ffffff'],
+		firebase: ['#ffca28', '#757575'],
+		flutter: ['#54c5f8', '#003b6c'],
+		git: ['#f54d27', '#413932'],
+		github: ['#24292e', '#ffffff'],
+		javascript: ['#f7df1e', '#000000'],
+		life: ['#4caf50', '#ffffff'],
+		lighthouse: ['#304ffe', '#ffffff'],
+		nodejs: ['#90c53f', '#46483d'],
+		ppl2020: ['#feb229', '#000000'],
+		python: ['#3879ab', '#ffda5d'],
+		reflection: ['#708090', '#000000'],
+		sapper: ['#159794', '#ffffff'],
+		stoicism: ['#789488', '#ffffff'],
+		svelte: ['#ff3e00', '#ffffff'],
+		tutorial: ['#feffa5', '#b30047'],
+		typescript: ['#2775c3', '#ffffff'],
+	}[tag] || ['#d6d9e0', '#606570'];
 </script>
 
-<span class={tag}>#{tag}</span>
+<span style:background={represent[0]} style:color={represent[1]}>#{tag}</span>
 
 <style>
 	span {
@@ -10,64 +31,5 @@
 		border-radius: var(--b-radius);
 		margin-top: 0.5rem;
 		font-size: 0.875rem;
-		background: #d6d9e0;
-		color: #606570;
-	}
-
-	.android {
-		background: #56a036;
-		color: #fff;
-	}
-	.firebase {
-		background: #ffca28;
-		color: #757575;
-	}
-	.flutter {
-		background: #54c5f8;
-		color: #003b6c;
-	}
-	.git {
-		background: #f54d27;
-		color: #413932;
-	}
-	.github {
-		background: #24292e;
-		color: #fff;
-	}
-	.javascript {
-		background: #f7df1e;
-		color: #000;
-	}
-	.lighthouse {
-		background: #304ffe;
-		color: #fff;
-	}
-	.nodejs {
-		background: #90c53f;
-		color: #46483d;
-	}
-	.ppl2020 {
-		background: #feb229;
-		color: #000;
-	}
-	.python {
-		background: #3879ab;
-		color: #ffda5d;
-	}
-	.sapper {
-		background: #159794;
-		color: #fff;
-	}
-	.svelte {
-		background: #ff3e00;
-		color: #fff;
-	}
-	.tutorial {
-		background: #feffa5;
-		color: #b30047;
-	}
-	.typescript {
-		background: #2775c3;
-		color: #fff;
 	}
 </style>
