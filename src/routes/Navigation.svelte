@@ -47,6 +47,9 @@
 			<a href="/rss.xml" aria-label="Get RSS">
 				<Feather icon={feather.Rss} />
 			</a>
+			<a href="/contact" aria-label="Contact">
+				<Feather icon={feather.Mail} />
+			</a>
 			<a href="/help/" aria-label="See help page">
 				<Feather icon={feather.HelpCircle} />
 			</a>

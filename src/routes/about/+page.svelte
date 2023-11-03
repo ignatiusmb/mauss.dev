@@ -27,7 +27,7 @@
 	<!-- prettier-ignore -->
 	<p>In its beautiful and unpredictable way, I have learned to appreciate all the small moments in life, embracing both the joy and pain, growing with them together. Check out my latest life reflection, <a href="/posts/24k-journey">24K Journey - The Pursuit of a Meaningful Life</a>.</p>
 
-	<h3>Expertise</h3>
+	<h3 id="expertise">Expertise</h3>
 	<!-- prettier-ignore -->
 	<p>What anyone does for a living shouldn't define who they are, but it's still a part of their life nonetheless. I'm a software engineer by trade, but I like to see myself as a software alchemist. Throughout my career, I've delved into a wide spectrum of projects and honed a unique skill for <em>transmuting</em> software and streamlining code. My specialization lies in the art of converting intricate or troublesome code into a more concise and maintainable format. This simplifies the debugging process, resulting in simpler bug fixes and significantly faster development cycles.</p>
 
@@ -37,14 +37,19 @@
 	<!-- prettier-ignore -->
 	<p>I'm always eager to explore new opportunities and collaborations, let's connect and explore the possibilities together!</p>
 
-	<h3>Socials</h3>
+	<h3 id="socials">Socials</h3>
 	<!-- prettier-ignore -->
-	<p>Though I don't use most or all of them as often as I'd like, I still check them from time to time. Find me anywhere here:</p>
+	<p>Though I don't use most or all of them as often as I'd like, I still check them from time to time. Contact or find me anywhere here:</p>
 	<ul>
+		<li>
+			<span>📧</span>
+			<a href="mailto:ignatius.mbs@gmail.com">E-mail</a>
+			<span>| ignatius.mbs@gmail.com</span>
+		</li>
 		<li>
 			<span>🚫</span>
 			<a href="https://www.facebook.com/ignatiusmb">Facebook</a>
-			<span>| Just a keepsake from childhood</span>
+			<span>| Keepsake from childhood</span>
 		</li>
 		<li>
 			<span>🟢</span>
@@ -74,7 +79,7 @@
 		<li>
 			<span>🟡</span>
 			<a href="https://gitlab.com/ignatiusmb">GitLab</a>
-			<span>| Just a keepsake from university</span>
+			<span>| Keepsake from university</span>
 		</li>
 		<li>
 			<span>🟢</span>
@@ -107,7 +112,7 @@
 		</li>
 	</ul>
 
-	<h3>Activities</h3>
+	<h3 id="activities">Activities</h3>
 	<ul>
 		<li><code>2005</code> | Running (💪)</li>
 		<li><code>2005</code> | Cycling (💪)</li>
