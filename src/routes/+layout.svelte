@@ -1,8 +1,7 @@
 <script>
-	import '@fontsource/rubik/300.css';
-	import '@fontsource/rubik/400.css';
-	import '@fontsource/rubik/500.css';
+	import '@fontsource/karla/300.css';
 	import '@fontsource/karla/400.css';
+	import '@fontsource/karla/500.css';
 	import '@fontsource/karla/600.css';
 	import '@fontsource/fira-code/300.css';
 	import '@fontsource/fira-code/400.css';

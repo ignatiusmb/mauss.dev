@@ -25,14 +25,14 @@
 	<p>I'm genuinely passionate about learning, especially when I've successfully made it fun and engaging. Currently, I'm immersing myself in the fascinating world of languages and cultures from all around the world. In my spare time, I try to explore as many things as I can and honing my skills. My current focus revolves around bouldering, tennis, and endurance running. Feel free to check out my activities section below to learn more!</p>
 
 	<!-- prettier-ignore -->
-	<p>In its beautiful and unpredictable way, I have learned to appreciate all the small moments in life, embracing both the joy and pain, growing with them together. Check out my latest life reflection on the <a href="/posts/24k-journey">24K Journey post</a>.</p>
+	<p>In its beautiful and unpredictable way, I have learned to appreciate all the small moments in life, embracing both the joy and pain, growing with them together. Check out my latest life reflection, <a href="/posts/24k-journey">24K Journey - The Pursuit of a Meaningful Life</a>.</p>
 
 	<h3>Expertise</h3>
 	<!-- prettier-ignore -->
-	<p>What anyone does for a living shouldn't define who they are, but it's still a part of their life nonetheless. I'm a software engineer by trade, but I like to think of myself as a software alchemist. Over the years, I've engaged in a diverse array of projects and discovered a knack for transmuting software and streamlining code. My expertise lies in the art of converting intricate or troublesome code into a form that is smaller, readable, and maintainable.</p>
+	<p>What anyone does for a living shouldn't define who they are, but it's still a part of their life nonetheless. I'm a software engineer by trade, but I like to see myself as a software alchemist. Throughout my career, I've delved into a wide spectrum of projects and honed a unique skill for <em>transmuting</em> software and streamlining code. My specialization lies in the art of converting intricate or troublesome code into a more concise and maintainable format. This simplifies the debugging process, resulting in simpler bug fixes and significantly faster development cycles.</p>
 
 	<!-- prettier-ignore -->
-	<p>While I have the skills to be a full-stack engineer, my primary focus and passion lie in the frontend development, which is to craft user-friendly interfaces and delightful user experiences. As one of the maintainers of <a href="https://github.com/sveltejs">Svelte</a>, I'm deeply connected with the frontend community, actively contributing to its growth and development. I mostly work independently and between GMT+7 to GMT+8, and most of it is open source and publicly available on GitHub.</p>
+	<p>While I have the skills to be a full-stack engineer, my primary focus and passion lie in the frontend development, which is to craft user-friendly interfaces and delightful user experiences. As one of the core maintainers of <a href="https://github.com/sveltejs">Svelte</a>, I'm deeply connected with the frontend community, actively contributing to its growth and development. I work independently between GMT+7 to GMT+8, and most of it is open source and publicly available on GitHub.</p>
 
 	<!-- prettier-ignore -->
 	<p>I'm always eager to explore new opportunities and collaborations, let's connect and explore the possibilities together!</p>
@@ -44,7 +44,7 @@
 		<li>
 			<span>🚫</span>
 			<a href="https://www.facebook.com/ignatiusmb">Facebook</a>
-			<span>| Just a keepsake</span>
+			<span>| Just a keepsake from childhood</span>
 		</li>
 		<li>
 			<span>🟢</span>
@@ -53,52 +53,53 @@
 		</li>
 		<li>
 			<span>🟡</span>
-			<a href="https://www.linkedin.com/in/ignatiusmb">LinkedIn</a> | Mandatory professional profile
+			<a href="https://www.linkedin.com/in/ignatiusmb">LinkedIn</a>
+			<span>| Professionally mandatory</span>
 		</li>
 		<li>
 			<span>🟡</span>
 			<a href="https://twitter.com/alchemauss">X (formerly Twitter)</a>
-			<span>| I don't know why I have this tbh</span>
+			<span>| Is this still relevant?</span>
 		</li>
 		<li>
 			<span>🟡</span>
 			<a href="https://keybase.io/mauss">Keybase</a>
-			<span>| I kinda forgot about this one</span>
+			<span>| Does anyone actually use this?</span>
 		</li>
 		<li>
 			<span>🟢</span>
 			<a href="https://github.com/ignatiusmb">GitHub</a>
-			<span>| Where I spent most of my time</span>
+			<span>| Where I am most of the time</span>
 		</li>
 		<li>
 			<span>🟡</span>
 			<a href="https://gitlab.com/ignatiusmb">GitLab</a>
-			<span>| Keepsake of university time</span>
+			<span>| Just a keepsake from university</span>
 		</li>
 		<li>
 			<span>🟢</span>
 			<a href="https://www.youtube.com/@ignatiusmb">YouTube</a>
-			<span>| Exciting content upcoming!</span>
+			<span>| Subscribe!</span>
 		</li>
 		<li>
 			<span>🟢</span>
 			<a href="https://open.spotify.com/user/ignatiusmb">Spotify</a>
-			<span>| Monthly curated music, check it out!</span>
+			<span>| Monthly curated music!</span>
 		</li>
 		<li>
 			<span>🟢</span>
 			<a href="https://www.youtube.com/user/Ignapure/playlists">Online TV</a>
-			<span>| Monthly curated videos, check it out!</span>
+			<span>| Monthly curated videos!</span>
 		</li>
 		<li>
 			<span>🟢</span>
 			<a href="https://discord.com/users/231822751504138240">Discord</a>
-			<span>| Mostly a lurker but come say hi @ignatiusmb</span>
+			<span>| Everything in one place (@ignatiusmb)</span>
 		</li>
 		<li>
 			<span>🟢</span>
 			<a href="https://t.me/ignatiusmb">Telegram</a>
-			<span>| Quick and convenient messaging app</span>
+			<span>| Quick and convenient</span>
 		</li>
 		<li>
 			<span>🔒</span>

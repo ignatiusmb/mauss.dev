@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Article from '$lib/pages/Article.svelte';
 	import Link from '$lib/components/Link.svelte';
-	import ReviewBanner from './ReviewBanner.svelte';
+	import Backdrop from './Backdrop.svelte';
 	import Spoilers from './SpoilerSection.svelte';
 
 	export let data;
@@ -12,30 +12,30 @@
 	path="sites/dev.mauss/reviews/{data.article.slug}/+article.md"
 	flank={data.article.flank}
 >
-	<div slot="header">
-		<ReviewBanner post={data.article} />
+	<svelte:fragment slot="header">
+		<Backdrop post={data.article} />
 
 		{#if data.article.link}
 			<small>
 				<span>[</span>
-				{#each Object.entries(data.article.link) as [key, link]}
-					{#each typeof link === 'string' ? [link] : link as href, idx}
-						<a {href}>
-							<span>{key}</span>
-							{#if typeof link !== 'string'}
-								<span>({idx + 1})</span>
-							{/if}
-						</a>
+				{#each Object.entries(data.article.link) as [key, link], idx}
+					{#if idx !== 0}<span class="dash">&mdash;</span>{/if}
+
+					{#each typeof link === 'string' ? [link] : link as href, v}
+						{@const indexed = typeof link !== 'string' ? ` (${v + 1})` : ''}
+
+						{#if v !== 0}<span class="dash">&mdash;</span>{/if}
+						<a {href}>{key}{indexed}</a>
 					{/each}
 				{/each}
 				<span>]</span>
 			</small>
 		{/if}
-	</div>
+	</svelte:fragment>
 
 	<section class="info-box warning">
 		<Link href="/disclaimer/" style="danger">
-			<h2>READ DISCLAIMER</h2>
+			<h2>DISCLAIMER</h2>
 		</Link>
 	</section>
 
@@ -51,14 +51,18 @@
 </Article>
 
 <style>
+	small {
+		display: flex;
+	}
+	small :not(:first-child) {
+		margin-left: 0.25rem;
+	}
+
 	section {
 		text-align: center;
 	}
 	section h2 {
 		margin-top: 0;
 		color: inherit;
-	}
-	div small {
-		justify-content: center;
 	}
 </style>

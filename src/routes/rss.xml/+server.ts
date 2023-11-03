@@ -16,8 +16,8 @@ const items = traverse(
 		const { metadata } = parse(buffer.toString('utf-8'));
 		const { title, date, description: info } = metadata;
 		if (breadcrumb.includes('curated')) {
-			const [file, folder] = breadcrumb;
-			const slug = `curated/${folder}/${file.replace('.md', '')}`;
+			const [file, dir] = breadcrumb;
+			const slug = `curated/${dir}/${file.replace('.md', '')}`;
 			const description = `${title} curated by Alchemauss`;
 			return { slug, title, description, date };
 		} else if (breadcrumb.includes('reviews')) {
@@ -30,8 +30,8 @@ const items = traverse(
 				date: (date.updated || date.published) as string,
 			};
 		} else if (breadcrumb.includes('posts')) {
-			const [, folder] = breadcrumb;
-			const slug = `posts/${folder.replace('.md', '')}`;
+			const [, dir] = breadcrumb;
+			const slug = `posts/${dir.replace('.md', '')}`;
 			const description = info || 'A post by Alchemauss';
 			return { slug, title, description, date };
 		}
