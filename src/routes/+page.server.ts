@@ -1,5 +1,6 @@
 import { compare } from 'mauss';
 import { DATA } from '$lib/content';
+import { channel } from './rss.xml/builder';
 
 export async function load() {
 	const [quotes, curated, posts, reviews] = [
@@ -16,7 +17,7 @@ export async function load() {
 		reviews: reviews.filter((x) => x.rating && x.verdict !== 'pending').slice(0, 4),
 		meta: {
 			title: 'Ignatius Bagussuputra',
-			description: 'A simple blog about my life and my thoughts.',
+			description: channel.description,
 		},
 	};
 }
