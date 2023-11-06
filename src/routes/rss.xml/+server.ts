@@ -1,12 +1,6 @@
 import { traverse } from 'marqua/fs';
 import { compare } from 'mauss';
-import { RSS } from './core';
-
-const channel = {
-	domain: 'mauss.dev',
-	title: 'Ignatius Bagussuputra • Alchemauss',
-	description: 'Developed by Alchemauss',
-};
+import { RSS, channel } from './builder';
 
 const items = traverse(
 	{ entry: 'content/sites/dev.mauss', depth: -1 },

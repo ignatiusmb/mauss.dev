@@ -18,6 +18,13 @@ function escape(literals: TemplateStringsArray, ...inputs: Array<string | string
 	return out.trim();
 }
 
+export const channel = {
+	domain: 'mauss.dev',
+	title: 'Ignatius Bagussuputra | Alchemauss',
+	description:
+		'The world through my kaleidoscope, capturing the beauty of life in a myriad of colors. Discovering the beauty of ordinary moments through everyday life, travel, and personal reflections.',
+};
+
 export function RSS(
 	channel: {
 		domain: string;
