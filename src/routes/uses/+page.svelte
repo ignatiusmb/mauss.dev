@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Calendar } from 'syv/icons/feather';
 	import Feather from 'syv/icons/Feather.svelte';
+	import Index from '$lib/components/Index.svelte';
 	import Article from '$lib/pages/Article.svelte';
 
 	import { dt } from 'mauss';
@@ -27,53 +28,22 @@
 		<em>Disclaimer: This page contains some affiliate links and I may earn a small commission if you make a purchase through one of these links, without any additional cost to you.</em>
 	</p>
 
-	<section id="objective" class="info-box">
-		<h3>Table of Contents</h3>
-		<ul style:color="#f48fb1">
-			<li>
-				<a href="#personal-computer">Personal Computer</a>
-				<ul>
-					<li>
-						<a href="#personal-computer-desktop-workstation">Desktop Workstation</a>
-					</li>
-					<li>
-						<a href="#personal-computer-remote-workstation">Remote Workstation</a>
-					</li>
-					<li>
-						<a href="#personal-computer-everyday-applications">Everyday Applications</a>
-					</li>
-				</ul>
-			</li>
-			<li>
-				<a href="#private-home-lab">Private Home Lab</a>
-				<ul>
-					<li>
-						<a href="#private-home-lab-dhcp-server">DHCP Server</a>
-					</li>
-					<li>
-						<a href="#private-home-lab-media-server">Media Server</a>
-					</li>
-				</ul>
-			</li>
-			<li>
-				<a href="#personal-skincare">Personal Skincare</a>
-				<ul>
-					<li>
-						<a href="#personal-skincare-daytime-routine">Daytime Routine</a>
-					</li>
-					<li>
-						<a href="#personal-skincare-nighttime-routine">Nighttime Routine</a>
-					</li>
-					<li>
-						<a href="#personal-skincare-situational">Situational</a>
-					</li>
-				</ul>
-			</li>
-			<li>
-				<a href="#daily-supplements">Daily Supplements</a>
-			</li>
-		</ul>
-	</section>
+	<Index
+		items={[
+			{ id: 'personal-computer', title: 'Personal Computer' },
+			{ id: 'personal-computer-desktop-workstation', title: 'Desktop Workstation' },
+			{ id: 'personal-computer-remote-workstation', title: 'Remote Workstation' },
+			{ id: 'personal-computer-everyday-applications', title: 'Everyday Applications' },
+			{ id: 'private-home-lab', title: 'Private Home Lab' },
+			{ id: 'private-home-lab-dhcp-server', title: 'DHCP Server' },
+			{ id: 'private-home-lab-media-server', title: 'Media Server' },
+			{ id: 'personal-skincare', title: 'Personal Skincare' },
+			{ id: 'personal-skincare-daytime-routine', title: 'Daytime Routine' },
+			{ id: 'personal-skincare-nighttime-routine', title: 'Nighttime Routine' },
+			{ id: 'personal-skincare-situational', title: 'Situational' },
+			{ id: 'daily-supplements', title: 'Daily Supplements' },
+		]}
+	/>
 
 	<h2 id="personal-computer">Personal Computer</h2>
 

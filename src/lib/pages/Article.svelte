@@ -1,5 +1,6 @@
 <script lang="ts">
 	import ProgressBar from 'syv/core/ProgressBar.svelte';
+	import Index from '$lib/components/Index.svelte';
 
 	import { hydrate } from 'marqua/browser';
 	import { dt } from 'mauss';
@@ -59,14 +60,7 @@
 		</header>
 
 		{#if post.table.length}
-			<details id="index">
-				<summary>Article Index</summary>
-				<p>
-					{#each post.table as { id, title }}
-						<a href="#{id}">{title}</a>
-					{/each}
-				</p>
-			</details>
+			<Index items={post.table} />
 		{/if}
 	{/if}
 
@@ -160,47 +154,6 @@
 	header :global(.dash) {
 		color: var(--theme-secondary);
 		font-weight: 600;
-	}
-
-	header + details {
-		--radius: calc(var(--b-radius));
-		margin-bottom: 1rem;
-		border-radius: var(--radius);
-		background: rgba(255, 255, 255, 0.1);
-	}
-	header + details summary {
-		padding: 0.5rem 1rem;
-		margin: 0;
-		border: 1px solid rgba(124, 124, 124, 0.7);
-		border-radius: var(--radius);
-	}
-	header + details summary::marker {
-		text-align: right;
-	}
-	header + details p {
-		display: grid;
-		margin: 0;
-		font-size: 1rem;
-	}
-	header + details a {
-		padding: 0.25rem 1rem;
-		color: inherit;
-	}
-	header + details a:last-child {
-		border-bottom-right-radius: var(--radius);
-		border-bottom-left-radius: var(--radius);
-	}
-	header + details a:hover {
-		background: rgba(255, 255, 255, 0.1);
-	}
-	header + details[open] {
-		border: 1px solid rgba(124, 124, 124, 0.7);
-	}
-	header + details[open] summary {
-		border-width: 0;
-		border-bottom-width: 1px;
-		border-bottom-right-radius: 0;
-		border-bottom-left-radius: 0;
 	}
 
 	/* ---- {@html} ---- */

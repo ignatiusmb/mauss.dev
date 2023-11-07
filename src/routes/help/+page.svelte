@@ -6,7 +6,7 @@
 <Article>
 	<section class="info-box warning">
 		<Link href="/disclaimer/" style="danger">
-			<h2>READ DISCLAIMER</h2>
+			<h2>DISCLAIMER</h2>
 		</Link>
 	</section>
 
