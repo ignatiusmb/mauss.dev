@@ -5,12 +5,12 @@ settings:
   excludeLinksFromLockfile: false
 
 devDependencies:
-  '@fontsource/fira-code':
+  '@fontsource-variable/fira-code':
     specifier: ^5.0.15
     version: 5.0.15
-  '@fontsource/karla':
-    specifier: ^5.0.17
-    version: 5.0.17
+  '@fontsource-variable/karla':
+    specifier: ^5.0.18
+    version: 5.0.18
   '@ignatiusmb/styles':
     specifier: ^0.1.1
     version: 0.1.1
@@ -267,12 +267,12 @@ packages:
     engines: {node: '>=14'}
     dev: true
 
-  /@fontsource/fira-code@5.0.15:
-    resolution: {integrity: sha512-mcQQX2Pwlbt8NwBB+kCyldYy1eLY9hsLZ3EvWf2ciVTk1rmYZ734CU9v70qs7rTXrNLYKz8+Q9b7DLEgwsKW6A==}
+  /@fontsource-variable/fira-code@5.0.15:
+    resolution: {integrity: sha512-tp56A54PjfH1RBJQ3Jdqh5cvrEHd4n302z3v6sGAnTKW9+oQgU0dK4WAMIXgDhFY35BrhpoIElowfkAT7NYJfA==}
     dev: true
 
-  /@fontsource/karla@5.0.17:
-    resolution: {integrity: sha512-RNG9g1L7ZlemzfH/A1bbDSF2flOmGmRCnxXhnStK61K2Qn8OZPffnwrpaE/mLbBTcL7EStGAOv6Zp4C4l0Ikqw==}
+  /@fontsource-variable/karla@5.0.18:
+    resolution: {integrity: sha512-Ye56QDHzUw9lgp6/DN3WWCC8y3tySyp3At1Qr7Lrh/qjnYJlw214xT0M7HMSEoTNbxefcyq2zmo/Nm/KFah50A==}
     dev: true
 
   /@ignatiusmb/styles@0.1.1:

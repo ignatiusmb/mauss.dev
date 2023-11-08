@@ -13,8 +13,8 @@
 	"packageManager": "pnpm@8.7.5",
 	"prettier": "mauss/prettier.json",
 	"devDependencies": {
-		"@fontsource/fira-code": "^5.0.15",
-		"@fontsource/karla": "^5.0.17",
+		"@fontsource-variable/fira-code": "^5.0.15",
+		"@fontsource-variable/karla": "^5.0.18",
 		"@ignatiusmb/styles": "^0.1.1",
 		"@sveltejs/adapter-vercel": "^3.0.3",
 		"@sveltejs/kit": "^1.27.0",
