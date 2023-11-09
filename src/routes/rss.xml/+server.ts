@@ -7,29 +7,34 @@ const items = traverse(
 	({ breadcrumb, buffer, parse }) => {
 		if (breadcrumb[0].includes('draft')) return;
 		if (!breadcrumb[0].endsWith('.md')) return;
+
 		const { metadata } = parse(buffer.toString('utf-8'));
 		const { title, date, description: info } = metadata;
-		if (breadcrumb.includes('curated')) {
-			const [file, dir] = breadcrumb;
-			const slug = `curated/${dir}/${file.replace('.md', '')}`;
-			const description = `${title} curated by Alchemauss`;
-			return { slug, title, description, date };
-		} else if (breadcrumb.includes('reviews')) {
-			if (metadata.verdict === 'pending') return;
-			const [file, category] = breadcrumb;
-			return {
-				slug: `reviews/${category}/${file.replace('.md', '')}`,
-				title: typeof title === 'string' ? title : title.en,
-				description: `${typeof title === 'string' ? title : title.en} reviewed by Alchemauss`,
-				date: (date.updated || date.published) as string,
-			};
-		} else if (breadcrumb.includes('posts')) {
-			const [, dir] = breadcrumb;
-			const slug = `posts/${dir.replace('.md', '')}`;
-			const description = info || 'A post by Alchemauss';
-			return { slug, title, description, date };
+
+		switch (true) {
+			case breadcrumb.includes('curated'): {
+				const [file, dir] = breadcrumb;
+				const slug = `curated/${dir}/${file.replace('.md', '')}`;
+				const description = `${title} curated by Alchemauss`;
+				return { slug, title, description, date };
+			}
+			case breadcrumb.includes('reviews'): {
+				if (metadata.verdict === 'pending') return;
+				const [file, category] = breadcrumb;
+				const slug = `reviews/${category}/${file.replace('.md', '')}`;
+				const name = typeof title === 'string' ? title : title.en;
+				const description = `${name} reviewed by Alchemauss`;
+				return { slug, title: name, description, date };
+			}
+			case breadcrumb.includes('posts'): {
+				const [, dir] = breadcrumb;
+				const slug = `posts/${dir.replace('.md', '')}`;
+				const description = info || 'A post by Alchemauss';
+				return { slug, title, description, date };
+			}
+			default:
+				return;
 		}
-		return;
 	},
 	(items) => items.sort((x, y) => compare.date(x.date, y.date) || compare.string(x.title, y.title)),
 );
