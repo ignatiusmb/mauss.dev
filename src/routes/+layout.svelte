@@ -1,13 +1,6 @@
 <script>
-	import '@fontsource/karla/300.css';
-	import '@fontsource/karla/400.css';
-	import '@fontsource/karla/500.css';
-	import '@fontsource/karla/600.css';
-	import '@fontsource/fira-code/300.css';
-	import '@fontsource/fira-code/400.css';
-	import '@fontsource/fira-code/500.css';
-	import '@fontsource/fira-code/600.css';
-
+	import '@fontsource-variable/karla';
+	import '@fontsource-variable/fira-code';
 	import '@ignatiusmb/styles/core.css';
 	import 'marqua/styles/code.css';
 	import '../app.css';

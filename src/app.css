@@ -20,6 +20,9 @@ html {
 
 	--fg-overlay: rgba(255, 255, 255, 0.8);
 	--fg-surface: rgba(228, 230, 235, 1);
+
+	--font-monospace: 'Fira Code Variable', monospace;
+	font-family: 'Karla Variable', sans-serif;
 }
 
 html,
@@ -29,7 +32,6 @@ body {
 	flex-direction: column;
 	background-color: var(--bg-base);
 	color: var(--fg-surface);
-	font-family: 'Karla', sans-serif;
 }
 
 a {
