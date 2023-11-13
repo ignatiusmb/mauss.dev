@@ -91,9 +91,9 @@ const sortBy: Record<string, (x: any, y: any) => number> = {
 		return xr === yr ? sortCompare(x, y) : yr - xr;
 	},
 	seen(x, y) {
-		const xd = x.seen.last || x.completed || x.seen.first;
-		const yd = y.seen.last || y.completed || y.seen.first;
-		return compare.date(xd, yd) || sortCompare(x, y);
+		const xd = [x.completed, x.seen.last, x.seen.first].filter((d) => d).map((d) => +new Date(d));
+		const yd = [y.completed, y.seen.last, y.seen.first].filter((d) => d).map((d) => +new Date(d));
+		return compare.date(new Date(Math.max(...xd)), new Date(Math.max(...yd))) || sortCompare(x, y);
 	},
 };
 
