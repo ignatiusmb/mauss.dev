@@ -20,7 +20,7 @@
 	const store = writable(data.list);
 	let search = (!building && $page.url.searchParams.get('q')) || '';
 	let query = (search && search.replace(/\+/g, ' ')) || '';
-	let filters = { categories: [], genres: [], verdict: [], sort_by: 'updated' };
+	let filters = { categories: [], genres: [], verdict: [], sort_by: 'date' };
 
 	$: filtered = sieve(filters, data.list);
 	$: items = sift(query, filtered);

@@ -8,13 +8,13 @@
 
 	export let path = '';
 	export let post: null | {
+		date: string;
 		title: string | { en?: string; jp?: string };
-		date: string | { published?: string; updated?: string };
 		table: Array<{ id: string; title: string }>;
-		estimate: number;
 
 		author?: { name?: string; link?: string; img?: string };
 		description?: string;
+		estimate?: number;
 	} = null;
 
 	type Flank = null | { slug: string; title: string | Record<string, any> };
@@ -29,18 +29,11 @@
 	{#if $$slots.header && post}
 		<header>
 			<aside>
-				{#if typeof post.date === 'object'}
-					{@const { published, updated } = post.date}
-					<time datetime={updated || published}>
-						{dt.format(updated || published)('DD MMMM YYYY')}
-					</time>
-				{:else}
-					<time datetime={post.date}>{dt.format(post.date)('DD MMMM YYYY')}</time>
+				<time datetime={post.date}>{dt.format(post.date)('DD MMMM YYYY')}</time>
+				{#if post.estimate}
+					<span class="dash">&mdash;</span>
+					<span>{post.estimate} min read</span>
 				{/if}
-
-				<span class="dash">&mdash;</span>
-
-				<span>{post.estimate} min read</span>
 			</aside>
 
 			{#if typeof post.title === 'string'}

@@ -15,7 +15,7 @@
 	export let data;
 
 	const store = writable(data.list);
-	let filters = { categories: [], tags: [], sort_by: 'updated' };
+	let filters = { categories: [], tags: [], sort_by: 'date' };
 	let query = '';
 
 	$: filtered = sieve(filters, data.list);

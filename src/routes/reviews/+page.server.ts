@@ -17,9 +17,8 @@ export async function load() {
 			genres,
 			verdict,
 			sort_by: {
-				updated: 'Last updated',
-				published: 'Date published',
-				released: 'Year released',
+				date: 'Date',
+				premiere: 'Premiered',
 				seen: 'Last seen',
 				rating: 'Rating',
 			},

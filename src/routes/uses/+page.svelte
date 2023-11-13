@@ -1,35 +1,14 @@
 <script lang="ts">
-	import { Calendar } from 'syv/icons/feather';
-	import Feather from 'syv/icons/Feather.svelte';
-	import Index from '$lib/components/Index.svelte';
 	import Article from '$lib/pages/Article.svelte';
-
-	import { dt } from 'mauss';
 
 	export let data;
 </script>
 
-<Article>
-	<header>
-		<h1>{data.meta.title}</h1>
-
-		<small style="display:flex;gap:0.25rem;align-items:center">
-			<Feather icon={Calendar} scale="1" />
-			<time datetime={data.updated}>{dt.format(data.updated)('DD MMMM YYYY')}</time>
-		</small>
-	</header>
-
-	<!-- prettier-ignore -->
-	<p>Inspired by <a href="https://wesbos.com/uses">Wes Bos</a> &mdash; All sorts of apps, products, services, and other things that I use. Following the "quality over quantity" as my rule of thumb, it saved me a lot of time, energy, and even health. Without further ado, here's the list of stuff that I use...</p>
-
-	<!-- TODO: maybe place this is Article.svelte -->
-	<p>
-		<!-- prettier-ignore -->
-		<em>Disclaimer: This page contains some affiliate links and I may earn a small commission if you make a purchase through one of these links, without any additional cost to you.</em>
-	</p>
-
-	<Index
-		items={[
+<Article
+	post={{
+		date: data.updated,
+		title: data.meta.title,
+		table: [
 			{ id: 'personal-computer', title: 'Personal Computer' },
 			{ id: 'personal-computer-desktop-workstation', title: 'Desktop Workstation' },
 			{ id: 'personal-computer-remote-workstation', title: 'Remote Workstation' },
@@ -42,8 +21,16 @@
 			{ id: 'personal-skincare-nighttime-routine', title: 'Nighttime Routine' },
 			{ id: 'personal-skincare-situational', title: 'Situational' },
 			{ id: 'daily-supplements', title: 'Daily Supplements' },
-		]}
-	/>
+		],
+	}}
+>
+	<svelte:fragment slot="header">
+		<!-- prettier-ignore -->
+		<p><strong>Disclaimer</strong>: <em>This page contains some affiliate links and I may earn a small commission if you make a purchase through one of these links, without any additional cost to you.</em></p>
+	</svelte:fragment>
+
+	<!-- prettier-ignore -->
+	<p>Inspired by <a href="https://wesbos.com/uses">Wes Bos</a> &mdash; All sorts of apps, products, services, and other things that I use. Following the "quality over quantity" as my rule of thumb, it saved me a lot of time, energy, and even health. Without further ado, here's the list of stuff that I use...</p>
 
 	<h2 id="personal-computer">Personal Computer</h2>
 

@@ -68,14 +68,7 @@ export const sift = <T extends Metadata>(query = '', data: T[]) =>
 	});
 
 function sortCompare<T extends Record<string, any>>(x: T, y: T): number {
-	if (x.date && y.date) {
-		if (typeof x.date === 'string' && typeof y.date === 'string')
-			if (x.date !== y.date) return compare.date(x.date, y.date);
-		const { updated: xu = '', published: xp = '' } = x.date;
-		const { updated: yu = '', published: yp = '' } = y.date;
-		if (xu && yu && xu !== yu) return compare.date(xu, yu);
-		if (xp && yp && xp !== yp) return compare.date(xp, yp);
-	}
+	if (x.date && y.date && x.date !== y.date) return compare.date(x.date, y.date);
 
 	if (x.released && y.released && x.released !== y.released)
 		return compare.date(x.released, y.released);
@@ -86,6 +79,12 @@ function sortCompare<T extends Record<string, any>>(x: T, y: T): number {
 }
 
 const sortBy: Record<string, (x: any, y: any) => number> = {
+	date(x, y) {
+		return compare.date(x.date, y.date) || sortCompare(x, y);
+	},
+	premiere(x, y) {
+		return compare.date(x.released, y.released) || sortCompare(x, y);
+	},
 	rating(x, y) {
 		const xr = Number.isNaN(+x.rating) ? +!!x.rating : x.rating;
 		const yr = Number.isNaN(+y.rating) ? +!!y.rating : y.rating;
@@ -94,19 +93,6 @@ const sortBy: Record<string, (x: any, y: any) => number> = {
 	seen(x, y) {
 		const xd = x.seen.last || x.completed || x.seen.first;
 		const yd = y.seen.last || y.completed || y.seen.first;
-		return compare.date(xd, yd) || sortCompare(x, y);
-	},
-	released(x, y) {
-		return compare.date(x.released, y.released) || sortCompare(x, y);
-	},
-	updated(x, y) {
-		const xd = x.date.updated || x.date.published;
-		const yd = y.date.updated || y.date.published;
-		return compare.date(xd, yd) || sortCompare(x, y);
-	},
-	published(x, y) {
-		const xd = x.date.published || x.date.updated;
-		const yd = y.date.published || y.date.updated;
 		return compare.date(xd, yd) || sortCompare(x, y);
 	},
 };
@@ -126,7 +112,7 @@ export function sieve<T extends Record<string, any>>(meta: SieveDict, data: T[])
 	const identical = ['tags', 'genres'];
 	const intersect = ['categories', 'verdict'];
 
-	const { sort_by = 'updated', ...dict } = meta;
+	const { sort_by = 'date', ...dict } = meta;
 	const entries = Object.entries(dict) as Entries<Required<typeof dict>>;
 	const cleaned = entries.filter(([k, v]) => !intersect.includes(k) && v.length);
 	const category = entries.find(([k, v]) => k === 'categories' && v.length) || [];

@@ -168,6 +168,7 @@ export const DATA = {
 			category: string;
 			composed: number;
 
+			date: string;
 			released: string;
 			title: {
 				short?: string;
@@ -182,10 +183,6 @@ export const DATA = {
 			seen: {
 				first: string;
 				last?: string;
-			};
-			date: {
-				published: string;
-				updated?: string;
 			};
 			image: {
 				en: string;
@@ -274,11 +271,7 @@ export const DATA = {
 					chain({
 						base: 'reviews/',
 						breakpoint: (r) => !r.rating || r.verdict === 'pending',
-						sort(x, y) {
-							const xd = x.date.updated || x.date.published;
-							const yd = y.date.updated || y.date.published;
-							return compare.date(xd, yd);
-						},
+						sort: (x, y) => compare.date(x.date, y.date),
 					}),
 				);
 			},
@@ -310,14 +303,13 @@ export const DATA = {
 							metadata.seen.last = metadata.seen.last[last];
 						}
 
-						const dStart = +new Date(metadata.date.updated || metadata.date.published);
-						const composed = (dStart - +new Date(metadata.seen.first)) / 24 / 60 / 60 / 1000;
+						const delta = +new Date(metadata.date) - +new Date(metadata.seen.first);
 
 						const specified: FrontMatter = {
 							...metadata,
 							slug: `${category}/${slug}`,
 							category,
-							composed,
+							composed: delta / 24 / 60 / 60 / 1000,
 							released: metadata.released,
 							title: metadata.title,
 							genres: metadata.genres,
