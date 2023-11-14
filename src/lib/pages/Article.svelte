@@ -2,6 +2,7 @@
 	import ProgressBar from 'syv/core/ProgressBar.svelte';
 	import Index from '$lib/components/Index.svelte';
 
+	import type { ComponentProps } from 'svelte';
 	import { hydrate } from 'marqua/browser';
 	import { dt } from 'mauss';
 	import { navigating } from '$app/stores';
@@ -10,7 +11,7 @@
 	export let post: null | {
 		date: string;
 		title: string | { en?: string; jp?: string };
-		table: Array<{ id: string; title: string }>;
+		table: ComponentProps<Index>['items'];
 
 		author?: { name?: string; link?: string; img?: string };
 		description?: string;
