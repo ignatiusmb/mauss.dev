@@ -1,12 +1,12 @@
 <script lang="ts">
-	export let items: Array<{ id: string; title: string }>;
+	export let items: Array<{ id: string; title: string; level?: number }>;
 </script>
 
 <details id="index">
 	<summary>Article Index</summary>
 	<p>
-		{#each items as { id, title }}
-			<a href="#{id}">{title}</a>
+		{#each items as { id, title, level = 2 }}
+			<a href="#{id}" style:padding-left="{level * 0.5}rem">{title}</a>
 		{/each}
 	</p>
 </details>
