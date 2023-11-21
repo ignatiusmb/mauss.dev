@@ -1,6 +1,6 @@
 export async function load() {
 	return {
-		updated: '2023-06-23',
+		updated: '2023-11-21',
 		meta: {
 			canonical: 'uses',
 			title: 'Uses',
