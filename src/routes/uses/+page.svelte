@@ -101,7 +101,7 @@
 		<li>
 			<code>2022-09</code>
 			<span>|</span>
-			<strong>Mousemat:</strong>
+			<strong>Mouse Mat:</strong>
 			<a href="https://shope.ee/4fU2aJ1qbQ">Razer Strider XXL</a>
 		</li>
 		<li>
