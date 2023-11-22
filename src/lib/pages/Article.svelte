@@ -45,10 +45,10 @@
 				<h1>{post.title.en}</h1>
 			{/if}
 
-			<a href={post.author?.link || '/about/'}>
+			<span>
 				<img src={post.author?.img || '/assets/profile/mauss.jpg'} alt="author profile" />
-				<span>{post.author?.name || 'Ignatius Bagussuputra'}</span>
-			</a>
+				<a href={post.author?.link || '/about/'}>{post.author?.name || 'Ignatius Bagussuputra'}</a>
+			</span>
 
 			<slot name="header" />
 		</header>
@@ -123,19 +123,19 @@
 	}
 
 	aside,
-	header a {
+	header > span {
 		display: grid;
 		gap: 0.5rem;
 		grid-auto-flow: column;
 		align-items: center;
 		font-size: 0.875rem;
 	}
-	header a {
+	header > span {
 		grid-template-columns: 1.5rem 1fr;
 		margin: 0.5rem 0;
 		font-size: 1rem;
 	}
-	header a img {
+	header > span img {
 		border-radius: 50%;
 	}
 
