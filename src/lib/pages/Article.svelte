@@ -243,7 +243,7 @@
 	main :global(h2) {
 		margin-top: 1.5rem;
 		font-size: clamp(1.5rem, 4vw, 2rem);
-		color: rgb(255, 225, 0);
+		color: rgba(255, 255, 255, 0.9);
 	}
 	main :global(h2 + h3) {
 		margin-top: 0.5rem;
@@ -251,7 +251,7 @@
 	main :global(h3) {
 		margin: 1.5rem 0 -0.25rem;
 		font-size: clamp(1.2rem, 4vw, 1.5rem);
-		color: rgb(0, 160, 120);
+		color: rgba(255, 255, 255, 0.8);
 	}
 	main :global(ol + h3),
 	main :global(ul + h3) {

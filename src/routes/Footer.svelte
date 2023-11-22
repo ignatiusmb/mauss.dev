@@ -86,6 +86,7 @@
 		align-items: center;
 		justify-content: center;
 		border-radius: 50%;
+		border-bottom: none;
 		outline: 2px solid transparent;
 		outline-offset: -0.625rem;
 
