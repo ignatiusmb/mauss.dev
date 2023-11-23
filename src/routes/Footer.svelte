@@ -70,7 +70,7 @@
 		text-align: center;
 		line-height: 1.5;
 		font-family: var(--font-monospace);
-		font-size: clamp(0.8rem, 3vw, 1rem);
+		font-size: 0.875rem;
 	}
 	section {
 		width: 100%;

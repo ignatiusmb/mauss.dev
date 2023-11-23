@@ -64,13 +64,12 @@
 		width: 100%;
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		padding: 0.25rem 0.5rem;
 
 		background-color: var(--bg-base);
 		font-family: var(--mrq-heading);
 		color: var(--fg-surface);
 	}
-
 	a {
 		border-bottom: none;
 		outline: 2px solid transparent;
@@ -78,19 +77,20 @@
 	a:focus {
 		outline-color: var(--bg-cover);
 	}
+
 	nav > a:first-child {
 		flex-shrink: 0;
-		border-radius: 0.875rem;
-		outline-offset: -0.5rem;
-	}
-	nav > :not(menu) {
-		padding: 1rem 0.875rem;
+		/* height: 24px; */
+		display: flex;
+		padding: 0.25rem;
+		margin: 0 0.5rem;
+		border-radius: 1rem;
 	}
 
 	menu {
 		width: 100%;
 		display: flex;
-		justify-content: space-between;
+		justify-content: end;
 		padding: 0;
 		margin: 0;
 	}
@@ -100,13 +100,11 @@
 		color: var(--fg-surface);
 		text-transform: capitalize;
 	}
-
 	menu .routes {
 		display: grid;
 		gap: 0.5rem;
 		grid-auto-flow: column;
 		align-items: center;
-		padding: 0 0.5rem;
 	}
 	menu .routes a[aria-current]::after {
 		width: 100%;
@@ -133,7 +131,6 @@
 		right: auto;
 		width: 100%;
 	}
-
 	menu .shortcuts {
 		display: grid;
 		gap: 0.375rem;
@@ -154,11 +151,18 @@
 		label[for='menu'] {
 			display: none;
 		}
+		nav > a:first-child {
+			position: fixed;
+		}
+		menu .routes > :global(:last-child) {
+			display: none;
+		}
 	}
 	/* change to 599 when there's more routes */
 	@media only screen and (max-width: 499px) {
 		label[for='menu'] {
 			display: inline-flex;
+			padding: 1rem 0.875rem;
 		}
 		input:not(:checked) + label[for='menu'] > :global(:last-child),
 		input:checked + label[for='menu'] > :global(:first-child) {
@@ -169,6 +173,7 @@
 			z-index: 3;
 			position: sticky;
 			top: 0;
+			justify-content: space-between;
 		}
 		input {
 			visibility: hidden;
@@ -205,6 +210,7 @@
 		}
 		menu .routes {
 			grid-auto-flow: row;
+			padding: 0 0.5rem;
 		}
 	}
 </style>

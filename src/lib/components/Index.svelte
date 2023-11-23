@@ -34,7 +34,7 @@
 	}
 	a {
 		padding: 0.25rem 1rem;
-		color: inherit;
+		border-bottom: none;
 	}
 	a:last-child {
 		border-bottom-right-radius: var(--radius);
