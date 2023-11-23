@@ -38,7 +38,7 @@
 				<time datetime={date}>{dt.format(date)('DD MMM YYYY')}</time>
 			</article>
 		{/each}
-		<a href="/posts/">All curated things &rarr;</a>
+		<a href="/curated/">All curated things &rarr;</a>
 	</section>
 
 	<section>
@@ -49,7 +49,7 @@
 				<time datetime={date}>{dt.format(date)('DD MMM YYYY')}</time>
 			</article>
 		{/each}
-		<a href="/posts/">All reviews &rarr;</a>
+		<a href="/reviews/">All reviews &rarr;</a>
 	</section>
 </Article>
 
