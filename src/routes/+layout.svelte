@@ -83,4 +83,8 @@
 
 <Footer />
 
-<ScrollTop />
+<ScrollTop
+	styles={{
+		'--background': 'var(--bg-base)',
+	}}
+/>
