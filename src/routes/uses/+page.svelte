@@ -2,28 +2,27 @@
 	import Article from '$lib/pages/Article.svelte';
 
 	export let data;
+
+	const table = [
+		{ id: 'personal-computer', title: 'Personal Computer', level: 2 },
+		{ id: 'personal-computer-desktop-workstation', title: 'Desktop Workstation', level: 3 },
+		{ id: 'personal-computer-remote-workstation', title: 'Remote Workstation', level: 3 },
+		{ id: 'personal-computer-everyday-applications', title: 'Everyday Applications', level: 3 },
+		{ id: 'private-home-lab', title: 'Private Home Lab', level: 2 },
+		{ id: 'private-home-lab-dhcp-server', title: 'DHCP Server', level: 3 },
+		{ id: 'private-home-lab-media-server', title: 'Media Server', level: 3 },
+		{ id: 'personal-skincare', title: 'Personal Skincare', level: 2 },
+		{ id: 'personal-skincare-cleansing-routine', title: 'Cleansing Routine', level: 3 },
+		{ id: 'personal-skincare-daytime-routine', title: 'Daytime Routine', level: 3 },
+		{ id: 'personal-skincare-nighttime-routine', title: 'Nighttime Routine', level: 3 },
+		{ id: 'personal-skincare-situational', title: 'Situational', level: 3 },
+		{ id: 'daily-supplements', title: 'Daily Supplements', level: 2 },
+	];
+
+	let id = 0;
 </script>
 
-<Article
-	post={{
-		date: data.updated,
-		title: data.meta.title,
-		table: [
-			{ id: 'personal-computer', title: 'Personal Computer', level: 2 },
-			{ id: 'personal-computer-desktop-workstation', title: 'Desktop Workstation', level: 3 },
-			{ id: 'personal-computer-remote-workstation', title: 'Remote Workstation', level: 3 },
-			{ id: 'personal-computer-everyday-applications', title: 'Everyday Applications', level: 3 },
-			{ id: 'private-home-lab', title: 'Private Home Lab', level: 2 },
-			{ id: 'private-home-lab-dhcp-server', title: 'DHCP Server', level: 3 },
-			{ id: 'private-home-lab-media-server', title: 'Media Server', level: 3 },
-			{ id: 'personal-skincare', title: 'Personal Skincare', level: 2 },
-			{ id: 'personal-skincare-daytime-routine', title: 'Daytime Routine', level: 3 },
-			{ id: 'personal-skincare-nighttime-routine', title: 'Nighttime Routine', level: 3 },
-			{ id: 'personal-skincare-situational', title: 'Situational', level: 3 },
-			{ id: 'daily-supplements', title: 'Daily Supplements', level: 2 },
-		],
-	}}
->
+<Article post={{ date: data.updated, title: data.meta.title, table }}>
 	<svelte:fragment slot="header">
 		<!-- prettier-ignore -->
 		<p><strong>Disclaimer</strong>: <em>This page contains some affiliate links and I may earn a small commission if you make a purchase through one of these links, without any additional cost to you.</em></p>
@@ -32,9 +31,9 @@
 	<!-- prettier-ignore -->
 	<p>Inspired by <a href="https://wesbos.com/uses">Wes Bos</a> &mdash; All sorts of apps, products, services, and other things that I use. Following the "quality over quantity" as my rule of thumb, it saved me a lot of time, energy, and even health. Without further ado, here's the list of stuff that I use...</p>
 
-	<h2 id="personal-computer">Personal Computer</h2>
+	<h2 id={table[id++].id}>Personal Computer</h2>
 
-	<h3 id="personal-computer-desktop-workstation">Desktop Workstation</h3>
+	<h3 id={table[id++].id}>Desktop Workstation</h3>
 	<ul>
 		<li>
 			<code>2021-07</code>
@@ -102,7 +101,7 @@
 		<li>
 			<code>2022-09</code>
 			<span>|</span>
-			<strong>Mousemat:</strong>
+			<strong>Mouse Mat:</strong>
 			<a href="https://shope.ee/4fU2aJ1qbQ">Razer Strider XXL</a>
 		</li>
 		<li>
@@ -151,6 +150,12 @@
 		<hr style:margin="0.5rem 0" />
 
 		<li>
+			<code>2023-11</code>
+			<span>|</span>
+			<strong>Desk:</strong>
+			<a href="https://shope.ee/99yAr8OaBi">Fantech GD914 - Black</a>
+		</li>
+		<li>
 			<code>2020-06</code>
 			<span>|</span>
 			<strong>Chair:</strong>
@@ -159,12 +164,12 @@
 		<li>
 			<code>2019-03</code>
 			<span>|</span>
-			<strong>Desk Lamp:</strong>
+			<strong>Lamp:</strong>
 			<span>Xiaomi Yeelight YLTD02YL</span>
 		</li>
 	</ul>
 
-	<h3 id="personal-computer-remote-workstation">Remote Workstation</h3>
+	<h3 id={table[id++].id}>Remote Workstation</h3>
 	<ul>
 		<li>
 			<code>2020-02</code>
@@ -241,7 +246,7 @@
 		</li>
 	</ul>
 
-	<h3 id="personal-computer-everyday-applications">Everyday Applications</h3>
+	<h3 id={table[id++].id}>Everyday Applications</h3>
 	<ul>
 		<li>
 			<code>2020-01</code>
@@ -278,9 +283,9 @@
 		</li>
 	</ul>
 
-	<h2 id="private-home-lab">Private Home Lab</h2>
+	<h2 id={table[id++].id}>Private Home Lab</h2>
 
-	<h3 id="private-home-lab-dhcp-server">DHCP Server</h3>
+	<h3 id={table[id++].id}>DHCP Server</h3>
 	<ul>
 		<li>
 			<code>2018-11</code>
@@ -292,7 +297,7 @@
 		</li>
 	</ul>
 
-	<h3 id="private-home-lab-media-server">Media Server</h3>
+	<h3 id={table[id++].id}>Media Server</h3>
 	<ul>
 		<li>
 			<code>2020-01</code>
@@ -316,11 +321,27 @@
 		</li>
 	</ul>
 
-	<h2 id="personal-skincare">Personal Skincare</h2>
+	<h2 id={table[id++].id}>Personal Skincare</h2>
 
 	<p>Tailored for oily and sensitive skin</p>
 
-	<h3 id="personal-skincare-daytime-routine">Daytime Routine</h3>
+	<h3 id={table[id++].id}>Cleansing Routine</h3>
+	<ol>
+		<li>
+			<strong>Micellar-0:</strong>
+			<a href="https://shope.ee/fzcky6ukp">Bioderma Sensibio H2O</a>
+		</li>
+		<li>
+			<strong>Micellar-1:</strong>
+			<a href="https://shope.ee/A9qi4JVB0S">Garnier Micellar Cleansing Water Pink</a>
+		</li>
+		<li>
+			<strong>Cleanser:</strong>
+			<a href="https://shope.ee/9Ub1HTb9N9">Cerave Foaming Facial Cleanser</a>
+		</li>
+	</ol>
+
+	<h3 id={table[id++].id}>Daytime Routine</h3>
 	<ol>
 		<li>
 			<strong>Toner:</strong>
@@ -332,45 +353,51 @@
 		</li>
 		<li>
 			<strong>Moisturizer:</strong>
-			<a href="https://shope.ee/20THRQaIiz">SKINTIFIC MSH Niacinamide</a>
+			<a href="https://shope.ee/4Ksv79BHsI">SKINTIFIC 5% Panthenol</a>
 		</li>
 		<li>
 			<strong>Sunscreen:</strong>
-			<a href="https://shope.ee/20THRQaIiz">EltaMD - UV Clear Broad-Spectrum SPF 46</a>
+			<a href="https://shope.ee/3VJo8bcUV0">EltaMD - UV Clear Broad-Spectrum SPF 46</a>
 		</li>
 	</ol>
 
-	<h3 id="personal-skincare-nighttime-routine">Nighttime Routine</h3>
+	<h3 id={table[id++].id}>Nighttime Routine</h3>
 	<ol>
 		<li>
 			<strong>Toner:</strong>
-			<a href="https://www.goodmolecules.com/products/niacinamide-brightening-toner">
-				Good Molecules - Niacinamide Brightening Toner
-			</a>
+			<a href="https://shope.ee/8KNKzWs1Jo">SKINTIFIC Pure Centella Toner</a>
 		</li>
 		<li>
-			<strong>Serum:</strong>
+			<strong>Serum-0:</strong>
+			<a href="https://shope.ee/6fGpufkdZA">SKINTIFIC 2% Salicylic Acid</a>
+		</li>
+		<li>
+			<strong>Serum-1:</strong>
 			<a href="https://shope.ee/506sxM0ADu">SKINTIFIC SymWhite 377</a>
 		</li>
+		<li>
+			<strong>Moisturizer:</strong>
+			<a href="https://shope.ee/4Ksv79BHsI">SKINTIFIC 5% Panthenol</a>
+		</li>
+	</ol>
+
+	<h3 id={table[id++].id}>Situational</h3>
+	<ul>
 		<li>
 			<strong>Adapalene:</strong>
 			<a href="https://differin.com/shop/differin-gel">Differin&reg; Gel</a>
 		</li>
 		<li>
-			<strong>Moisturizer:</strong>
-			<a href="https://shope.ee/20THRQaIiz">SKINTIFIC MSH Niacinamide</a>
+			<strong>Retinol:</strong>
+			<a href="https://shope.ee/1qBa9eSjxC">Cerave Resurfacing Retinol Serum</a>
 		</li>
-	</ol>
-
-	<h3 id="personal-skincare-situational">Situational</h3>
-	<ul>
 		<li>
 			<strong>Soothing Cream:</strong>
 			<a href="https://shope.ee/1AuASJBiQi">La Roche Posay - Cicaplast Baume B5+</a>
 		</li>
 	</ul>
 
-	<h2 id="daily-supplements">Daily Supplements</h2>
+	<h2 id={table[id++].id}>Daily Supplements</h2>
 	<ul>
 		<li>
 			<strong>Vitamin C</strong>
@@ -378,7 +405,7 @@
 		</li>
 		<li>
 			<strong>Vitamin D</strong>
-			<span>| 5000 IU</span>
+			<span>| {200 + 600} IU</span>
 		</li>
 		<li>
 			<strong>Omega-3</strong>
@@ -400,12 +427,6 @@
 </Article>
 
 <style>
-	h1 {
-		margin: 3rem 0 1.5rem;
-		line-height: 1;
-		font-size: clamp(2rem, 5vw, 2.75rem);
-	}
-
 	li strong {
 		font-weight: 500;
 	}
