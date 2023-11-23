@@ -34,7 +34,7 @@
 		<h2>Curated</h2>
 		{#each data.curated as { slug, title, date }}
 			<article>
-				<a href="/posts/{slug}/">{title}</a>
+				<a href="/curated/{slug}/">{title}</a>
 				<time datetime={date}>{dt.format(date)('DD MMM YYYY')}</time>
 			</article>
 		{/each}
@@ -45,7 +45,7 @@
 		<h2>Reviews</h2>
 		{#each data.reviews as { slug, title, date }}
 			<article>
-				<a href="/posts/{slug}/">{title.short || title.en}</a>
+				<a href="/reviews/{slug}/">{title.short || title.en}</a>
 				<time datetime={date}>{dt.format(date)('DD MMM YYYY')}</time>
 			</article>
 		{/each}
