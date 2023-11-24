@@ -5,7 +5,7 @@
 <div class="banner">
 	<img src={post.backdrop} alt="{post.title.short || post.title.en} backdrop" />
 
-	<small class="rating">{post.rating} ⭐</small>
+	<small class="rating">⭐ {post.rating}</small>
 
 	<!-- TODO: figure out the UI
 	<small class="composed">
@@ -50,7 +50,7 @@
 		top: 0.5rem;
 		left: 0.5rem;
 		position: absolute;
-		padding: 0.25rem 0.25rem 0.25rem 0.5rem;
+		padding: 0.25rem 0.5rem 0.25rem 0.25rem;
 		border-radius: var(--b-radius);
 		background: rgba(0, 0, 0, 0.8);
 	}
