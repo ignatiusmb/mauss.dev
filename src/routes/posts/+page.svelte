@@ -24,7 +24,7 @@
 
 <LayoutPicker header itemSize="21rem">
 	<svelte:fragment slot="header">
-		<h1>Posts by Alchemauss</h1>
+		<h1>Alchemauss Posts</h1>
 		<SearchBar unique={data.unique} bind:query bind:filters />
 		<Pagination {store} {items} bound={6} styles={{ '--text-color': 'var(--fg-surface)' }} />
 	</svelte:fragment>

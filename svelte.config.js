@@ -25,10 +25,6 @@ const config = {
 			config: (settings) => ({ extends: 'mauss/tsconfig.json', ...settings }),
 		},
 	},
-
-	vitePlugin: {
-		inspector: true,
-	},
 };
 
 export default config;

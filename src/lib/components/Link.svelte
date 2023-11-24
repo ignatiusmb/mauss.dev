@@ -47,10 +47,12 @@
 		align-items: center;
 		justify-items: center;
 
-		border-radius: 1rem;
 		outline: none;
 		outline-offset: 0;
 		transition-duration: 240ms;
+	}
+	button {
+		border-radius: 1rem;
 	}
 
 	button:disabled {

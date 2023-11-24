@@ -1,119 +1,89 @@
 <script lang="ts">
-	import Image from 'syv/core/Image.svelte';
 	import Article from '$lib/pages/Article.svelte';
-	import RotatingBorder from './RotatingBorder.svelte';
-	import Quote from './Quote.svelte';
+
+	import { dt } from 'mauss';
 
 	export let data;
-
-	const section = {
-		curated: { heading: '⚖️ Recently Curated', desc: "Stuffs I've been curating" },
-		posts: { heading: '📚 Recent Posts', desc: "What's on my mind (or life)" },
-		reviews: { heading: '⭐ Recent Reviews', desc: "Contents I've been reviewing" },
-	};
-	const showcase = <[keyof typeof section, any][]>(
-		Object.entries(data).filter(([k]) => k in section)
-	);
 </script>
 
 <Article>
 	<header>
-		<a href="/about/">
-			<RotatingBorder />
-			<Image src="/assets/profile/mauss.jpg" alt="Mauss Profile" ratio={1} />
-		</a>
-		<h2>Ignatius Bagussuputra</h2>
-		<span>Workdays Engineer, Weekends Wordsmith</span>
-		<h3>Software Alchemist</h3>
-
-		<Quote quotes={data.quotes} />
+		<h1>Ignatius Bagussuputra</h1>
+		<span><em>Software Alchemist</em> — Workdays Engineer, Weekends Wordsmith</span>
 	</header>
 
+	<!-- prettier-ignore -->
+	<p>Hi, I am Igna, an independent software engineer living between GMT+7 to GMT+8. I'm a member of the <a href="https://svelte.dev/">Svelte</a> core team and mostly tend to open source technologies, which is publicly available on <a href="https://github.com/ignatiusmb">GitHub</a>.</p>
+	<!-- prettier-ignore -->
+	<p>I also take on freelancing projects that are typically confidential and involves tailored solutions for clients seeking a more personalized approach. If you're interested, feel free to <a href="/contact/">reach out</a>.</p>
+	<!-- prettier-ignore -->
+	<p>Besides my engineering pursuits, I enjoy writing and sharing my thoughts and experiences, where I often reflect on life lessons and new discoveries. If you're interested in getting to know me better, check out <a href="/about/">this page</a> for more details.</p>
+
 	<section>
-		<h2>👋 About Me</h2>
-		<!-- prettier-ignore -->
-		<p>Hello! I am an independent software engineer living between GMT+7 to GMT+8. I mostly tend to open source technologies, which is publicly available on <a href="https://github.com/ignatiusmb">GitHub</a>. The rest are often private or confidential in nature, which involves tailored solutions for clients seeking a more personalized approach. If you're interested, please don't hesitate to get in touch.</p>
-		<!-- prettier-ignore -->
-		<p>Outside of engineering, I enjoy writing my thoughts and experiences, especially the life lessons and new things that I've learned. If you'd like to know more about me, head over to the <a href="/about/">About</a> page.</p>
+		<h2>Blog</h2>
+		{#each data.posts as { slug, title, date }}
+			<article>
+				<a href="/posts/{slug}/">{title}</a>
+				<time datetime={date}>{dt.format(date)('DD MMM YYYY')}</time>
+			</article>
+		{/each}
+		<a href="/posts/">All posts &rarr;</a>
 	</section>
 
-	{#each showcase as [seg, item]}
-		<section>
-			<h2>{section[seg]['heading']}</h2>
-			<p>{section[seg]['desc']} recently:</p>
-			<ul>
-				{#each item as { slug, title }}
-					{@const text = typeof title === 'string' ? title : title.short || title.en}
-					<li>
-						<a href="/{seg}/{slug}/">{text}</a>
-					</li>
-				{/each}
-				<li>
-					<a href="/{seg}/">More {seg}{seg === 'curated' ? ' stuffs ' : ''}...</a>
-				</li>
-			</ul>
-		</section>
-	{/each}
+	<section>
+		<h2>Curated</h2>
+		{#each data.curated as { slug, title, date }}
+			<article>
+				<a href="/curated/{slug}/">{title}</a>
+				<time datetime={date}>{dt.format(date)('DD MMM YYYY')}</time>
+			</article>
+		{/each}
+		<a href="/curated/">All curated things &rarr;</a>
+	</section>
+
+	<section>
+		<h2>Reviews</h2>
+		{#each data.reviews as { slug, title, date }}
+			<article>
+				<a href="/reviews/{slug}/">{title.short || title.en}</a>
+				<time datetime={date}>{dt.format(date)('DD MMM YYYY')}</time>
+			</article>
+		{/each}
+		<a href="/reviews/">All reviews &rarr;</a>
+	</section>
 </Article>
 
 <style>
 	header {
-		counter-reset: title;
-		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
 		justify-content: center;
-		text-align: center;
+		margin-top: 3rem;
+		text-align: left;
 		font-family: var(--mrq-heading);
 	}
-	header h2,
-	header h3 {
-		width: 100%;
-		color: inherit;
+	h1 {
+		grid-template-columns: auto 1fr;
+		color: rgba(255, 255, 255, 1);
+		font-weight: 600;
 	}
-	header h3 {
-		margin: 1.5rem 0 2rem;
-	}
-	header > a:first-child {
-		position: relative;
-		width: 14rem;
-		height: 14rem;
-		justify-self: center;
-		border-radius: 50%;
-	}
-	header :global(.syv-core-image img) {
-		padding: 0.5rem;
-		border: none;
-		border-radius: inherit;
-	}
-
-	h2 {
+	section {
 		display: grid;
-		gap: 0.5rem;
-		align-items: center;
+		gap: 0.75rem;
+		justify-items: start;
 	}
-	header h2 {
-		grid-template-columns: 1fr auto 1fr;
+	article {
+		width: 100%;
+		display: flex;
+		gap: 1rem;
 	}
-
-	section h2 {
-		grid-template-columns: auto auto 1fr;
-		font-family: var(--font-monospace, 'Inconsolata');
+	time {
+		flex: 1;
+		text-align: right;
+		text-wrap: nowrap;
 	}
-	section h2::before {
-		counter-increment: title;
-		content: '0' counter(title) '.';
-		margin-right: -0.15rem;
-		color: var(--mrq-primary);
-		font-size: 90%;
-	}
-
-	header h2::after,
-	header h2::before,
-	section h2::after {
-		content: '';
-		height: 0.15rem;
-		background-color: var(--theme-secondary);
+	h2 {
+		text-transform: capitalize;
+		font-size: 1.5rem;
 	}
 </style>

@@ -7,7 +7,7 @@
 </script>
 
 <header>
-	<h1>Curated by Alchemauss</h1>
+	<h1>Alchemauss Curation</h1>
 </header>
 
 <main>

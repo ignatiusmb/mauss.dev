@@ -70,7 +70,7 @@
 		text-align: center;
 		line-height: 1.5;
 		font-family: var(--font-monospace);
-		font-size: clamp(0.8rem, 3vw, 1rem);
+		font-size: 0.875rem;
 	}
 	section {
 		width: 100%;
@@ -86,6 +86,7 @@
 		align-items: center;
 		justify-content: center;
 		border-radius: 50%;
+		border-bottom: none;
 		outline: 2px solid transparent;
 		outline-offset: -0.625rem;
 
