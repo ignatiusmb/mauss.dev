@@ -18,8 +18,6 @@
 		{ id: 'personal-skincare-situational', title: 'Situational', level: 3 },
 		{ id: 'daily-supplements', title: 'Daily Supplements', level: 2 },
 	];
-
-	let id = 0;
 </script>
 
 <Article post={{ date: data.updated, title: data.meta.title, table }}>
@@ -31,9 +29,9 @@
 	<!-- prettier-ignore -->
 	<p>Inspired by <a href="https://wesbos.com/uses">Wes Bos</a> &mdash; All sorts of apps, products, services, and other things that I use. Following the "quality over quantity" as my rule of thumb, it saved me a lot of time, energy, and even health. Without further ado, here's the list of stuff that I use...</p>
 
-	<h2 id={table[id++].id}>Personal Computer</h2>
+	<h2 id="personal-computer">Personal Computer</h2>
 
-	<h3 id={table[id++].id}>Desktop Workstation</h3>
+	<h3 id="personal-computer-desktop-workstation">Desktop Workstation</h3>
 	<ul>
 		<li>
 			<code>2021-07</code>
@@ -169,7 +167,7 @@
 		</li>
 	</ul>
 
-	<h3 id={table[id++].id}>Remote Workstation</h3>
+	<h3 id="personal-computer-remote-workstation">Remote Workstation</h3>
 	<ul>
 		<li>
 			<code>2020-02</code>
@@ -246,7 +244,7 @@
 		</li>
 	</ul>
 
-	<h3 id={table[id++].id}>Everyday Applications</h3>
+	<h3 id="personal-computer-everyday-applications">Everyday Applications</h3>
 	<ul>
 		<li>
 			<code>2020-01</code>
@@ -283,9 +281,9 @@
 		</li>
 	</ul>
 
-	<h2 id={table[id++].id}>Private Home Lab</h2>
+	<h2 id="private-home-lab">Private Home Lab</h2>
 
-	<h3 id={table[id++].id}>DHCP Server</h3>
+	<h3 id="private-home-lab-dhcp-server">DHCP Server</h3>
 	<ul>
 		<li>
 			<code>2018-11</code>
@@ -297,7 +295,7 @@
 		</li>
 	</ul>
 
-	<h3 id={table[id++].id}>Media Server</h3>
+	<h3 id="private-home-lab-media-server">Media Server</h3>
 	<ul>
 		<li>
 			<code>2020-01</code>
@@ -321,11 +319,11 @@
 		</li>
 	</ul>
 
-	<h2 id={table[id++].id}>Personal Skincare</h2>
+	<h2 id="personal-skincare">Personal Skincare</h2>
 
 	<p>Tailored for oily and sensitive skin</p>
 
-	<h3 id={table[id++].id}>Cleansing Routine</h3>
+	<h3 id="personal-skincare-cleansing-routine">Cleansing Routine</h3>
 	<ol>
 		<li>
 			<strong>Micellar-0:</strong>
@@ -341,7 +339,7 @@
 		</li>
 	</ol>
 
-	<h3 id={table[id++].id}>Daytime Routine</h3>
+	<h3 id="personal-skincare-daytime-routine">Daytime Routine</h3>
 	<ol>
 		<li>
 			<strong>Toner:</strong>
@@ -361,7 +359,7 @@
 		</li>
 	</ol>
 
-	<h3 id={table[id++].id}>Nighttime Routine</h3>
+	<h3 id="personal-skincare-nighttime-routine">Nighttime Routine</h3>
 	<ol>
 		<li>
 			<strong>Toner:</strong>
@@ -381,7 +379,7 @@
 		</li>
 	</ol>
 
-	<h3 id={table[id++].id}>Situational</h3>
+	<h3 id="personal-skincare-situational">Situational</h3>
 	<ul>
 		<li>
 			<strong>Adapalene:</strong>
@@ -397,7 +395,7 @@
 		</li>
 	</ul>
 
-	<h2 id={table[id++].id}>Daily Supplements</h2>
+	<h2 id="daily-supplements">Daily Supplements</h2>
 	<ul>
 		<li>
 			<strong>Vitamin C</strong>
