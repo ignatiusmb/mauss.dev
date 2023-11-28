@@ -17,7 +17,7 @@
 	<!-- prettier-ignore -->
 	<p>I also take on freelancing projects that are typically confidential and involves tailored solutions for clients seeking a more personalized approach. If you're interested, feel free to <a href="/contact/">reach out</a>.</p>
 	<!-- prettier-ignore -->
-	<p>Besides my engineering pursuits, I enjoy writing and sharing my thoughts and experiences, where I often reflect on life lessons and new discoveries. If you're interested in getting to know me better, check out <a href="/about/">this page</a> for more details.</p>
+	<p>Besides my engineering pursuits, I enjoy writing and sharing my thoughts and experiences, where I often reflect on life lessons and new discoveries. If you're interested in getting to know me better, <a href="/contact/">contact me</a> for more details.</p>
 
 	<section>
 		<h2>Blog</h2>

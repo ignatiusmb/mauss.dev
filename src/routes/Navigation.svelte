@@ -31,7 +31,7 @@
 
 	<menu>
 		<div class="routes">
-			{#each ['about', 'curated', 'posts', 'reviews'] as to}
+			{#each ['curated', 'posts', 'reviews'] as to}
 				{@const current = $page.url.pathname.startsWith(`/${to}`)}
 
 				<a href="/{to}" aria-current={current ? 'page' : null}>{to}</a>
@@ -41,14 +41,14 @@
 		</div>
 
 		<div class="shortcuts">
+			<a href="/contact" aria-label="Contact">
+				<Feather icon={feather.MessageCircle} />
+			</a>
 			<a href="/uses" aria-label="Uses page">
 				<Feather icon={feather.Bookmark} />
 			</a>
 			<a href="/rss.xml" aria-label="Get RSS">
 				<Feather icon={feather.Rss} />
-			</a>
-			<a href="/contact" aria-label="Contact">
-				<Feather icon={feather.Mail} />
 			</a>
 			<a href="/help/" aria-label="See help page">
 				<Feather icon={feather.HelpCircle} />
