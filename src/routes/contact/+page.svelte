@@ -17,11 +17,13 @@
 		<p>In its beautiful and unpredictable way, I have learned to appreciate all the small moments in life, embracing both the joy and pain, growing with them together. Check out my latest life reflection, <a href="/posts/24k-journey">24K Journey - The Pursuit of a Meaningful Life</a>.</p>
 	</header>
 
-	<h2 id="expertise">Expertise</h2>
+	<h2 id="expertise" style:margin-top="1.5rem">Expertise</h2>
 	<!-- prettier-ignore -->
-	<p>I'm a software engineer by trade, but I like to see myself as a software alchemist. Throughout my career, I've delved into a wide spectrum of projects and honed a unique skill for <em>transmuting</em> software and streamlining code. My specialization lies in the art of converting intricate or troublesome code into a more concise and maintainable format. This simplifies the debugging process, resulting in simpler bug fixes and significantly faster development cycles.</p>
+	<p>I'm a software engineer by trade, but I like to see myself as a <em>software alchemist</em>.</p>
 	<!-- prettier-ignore -->
-	<p>While I have the skills to be a full-stack engineer, my primary focus and passion lie in the frontend development, which is to craft user-friendly interfaces and delightful user experiences. As one of the core maintainers of <a href="https://github.com/sveltejs">Svelte</a>, I'm deeply connected with the frontend community, actively contributing to its growth and development. I work independently between GMT+7 to GMT+8, and most of it is open source and publicly available on GitHub.</p>
+	<p>I've worked on various projects and cultivated the ability for <em>transmuting</em> software and streamlining code. I consider it as a form of art, converting intricate or troublesome code into a more concise and maintainable format, which makes the debugging process easier, resulting in simpler bug fixes and significantly faster development cycles.</p>
+	<!-- prettier-ignore -->
+	<p>While I have the skills to be a full-stack engineer, my primary focus and passion lie in the frontend development, which is to craft user-friendly interfaces and delightful user experiences. As one of the core maintainers of <a href="https://github.com/sveltejs">Svelte</a>, I'm deeply connected with the frontend community, actively contributing to its growth and development.</p>
 
 	<h2 id="socials">Socials</h2>
 	<!-- prettier-ignore -->
@@ -106,6 +108,7 @@
 		<li><code>2006</code> | Soccer x Futsal (🙅)</li>
 		<li><code>2008</code> | Badminton (🙋)</li>
 		<li><code>2008</code> | Basketball (🙅)</li>
+		<li><code>2008</code> | Volleyball (🤷)</li>
 		<li><code>2008</code> | Field Hockey (🤷)</li>
 		<li><code>2014</code> | Table Tennis (🙋)</li>
 		<li><code>2016</code> | Tricking x Gymnastics (💪)</li>
