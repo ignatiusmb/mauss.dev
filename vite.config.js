@@ -8,9 +8,14 @@ export default defineConfig(({ command }) => {
 
 	if (command === 'build') {
 		for (const key in DATA) {
+			// @ts-expect-error
 			void DATA[key].all();
 		}
 	}
+
+	const ssr = command === 'serve' && {
+		external: ['markdown-it', 'shiki'],
+	};
 
 	return {
 		plugins: [sveltekit()],
@@ -20,8 +25,6 @@ export default defineConfig(({ command }) => {
 			port: 3000,
 		},
 
-		ssr: command === 'serve' && {
-			external: ['markdown-it', 'shiki'],
-		},
+		ssr: ssr || undefined,
 	};
 });
