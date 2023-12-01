@@ -1,5 +1,8 @@
-import { redirect } from '@sveltejs/kit';
-
 export async function load() {
-	throw redirect(307, '/about#socials');
+	return {
+		meta: {
+			title: 'Contact',
+			description: 'Get in touch with Ignatius',
+		},
+	};
 }

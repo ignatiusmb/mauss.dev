@@ -216,8 +216,7 @@ export const DATA = {
 			return content.replace(/#{(.+)}!/g, (s, c) => (c && traverse(data, c)) || s);
 		}
 
-		function countAverageRating(ratings?: string[] | number): number | undefined {
-			if (typeof ratings === 'number') return ratings;
+		function countAverageRating(ratings?: string[]): number | undefined {
 			if (!ratings || ratings.some((n) => Number.isNaN(+n))) return;
 			const total = ratings.reduce((acc, cur) => +cur + acc, 0);
 			return Math.round((total / ratings.length + Number.EPSILON) * 100) / 100;

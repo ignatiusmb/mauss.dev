@@ -47,7 +47,9 @@
 
 			<span>
 				<img src={post.author?.img || '/assets/profile/mauss.jpg'} alt="author profile" />
-				<a href={post.author?.link || '/about/'}>{post.author?.name || 'Ignatius Bagussuputra'}</a>
+				<a href={post.author?.link || '/contact/'}>
+					{post.author?.name || 'Ignatius Bagussuputra'}
+				</a>
 			</span>
 
 			<slot name="header" />
