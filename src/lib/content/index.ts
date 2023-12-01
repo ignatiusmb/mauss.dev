@@ -1,5 +1,5 @@
 import { marker } from 'marqua/artisan';
-import { compile, traverse } from 'marqua/fs';
+import { traverse } from 'marqua/fs';
 import { chain } from 'marqua/transform';
 import { exists } from 'mauss/guards';
 import { compare, regexp } from 'mauss';
@@ -11,25 +11,28 @@ export const DATA = {
 	get 'curated/'() {
 		interface FrontMatter {
 			slug: string;
-			title: string;
-			category: string;
-			tags?: string[];
 			date: string;
+			title: string;
+			tags?: string[];
 		}
 
 		return {
 			all() {
 				const curated = traverse(
 					{ entry: 'content/sites/dev.mauss/curated', depth: -1 },
-					({ breadcrumb: [file, dir], buffer, parse }) => {
-						if (!file.endsWith('.md') || file.includes('draft')) return;
+					({ breadcrumb: [file, slug], buffer, parse }) => {
+						if (file !== '+article.md' || file.includes('draft')) {
+							if (!/\.(jpe?g|png|svg)$/.test(file)) return;
+							const name = file.replace(/\.[^/.]+$/, '.webp');
+							const path = `/uploads/curated/${slug}/${name}`;
+							return void optimize(buffer).to(ROOT + path);
+						}
+
 						const { metadata } = parse(buffer.toString('utf-8'));
-						if (metadata.draft) return;
 						const specified: FrontMatter = {
-							slug: `${dir}/${file.replace(/\.[^/.]+$/, '')}`,
-							title: metadata.title,
-							category: dir,
+							slug,
 							date: metadata.date,
+							title: metadata.title,
 						};
 						return { ...metadata, ...specified };
 					},
@@ -38,23 +41,35 @@ export const DATA = {
 
 				return curated;
 			},
-			get(category: string, slug: string) {
-				const content = compile(
-					`content/sites/dev.mauss/curated/${category}/${slug}.md`,
-					({ buffer, parse }) => {
-						const { content, metadata } = parse(buffer.toString('utf-8'));
+			get(slug: string) {
+				const memo: Array<[find: RegExp, url: string]> = [];
+				const article = traverse(
+					{ entry: `content/sites/dev.mauss/curated/${slug}` },
+					({ breadcrumb: [file], buffer, parse }) => {
+						if (file !== '+article.md') {
+							if (!/\.(jpe?g|png|svg)$/.test(file)) return;
+							const name = file.replace(/\.[^/.]+$/, '.webp');
+							const path = `/uploads/curated/${slug}/${name}`;
+							memo.push([regexp(`./${file}`, 'g'), path]);
+							return void optimize(buffer).to(ROOT + path);
+						}
 
+						const { content, metadata } = parse(buffer.toString('utf-8'));
 						const specified: FrontMatter = {
-							slug: `${category}/${slug}`,
-							title: metadata.title,
-							category,
+							slug,
 							date: metadata.date,
+							title: metadata.title,
 						};
 						return { ...metadata, ...specified, content };
 					},
+				)[0];
+
+				const content = memo.reduce(
+					(content, [find, url]) => content.replace(find, url),
+					article.content,
 				);
 
-				return content;
+				return { ...article, content };
 			},
 		};
 	},
@@ -62,11 +77,11 @@ export const DATA = {
 	get 'posts/'() {
 		interface FrontMatter {
 			slug: string;
+			date: string;
 			title: string;
 			description?: string;
 			category: string;
 			tags: string[];
-			date: string;
 			thumbnail?: string;
 			image?: {
 				en?: string;
@@ -90,10 +105,10 @@ export const DATA = {
 						const { metadata } = parse(buffer.toString('utf-8'));
 						const specified: FrontMatter = {
 							slug,
+							date: metadata.date,
 							title: metadata.title,
 							category: metadata.tags[0],
 							tags: metadata.tags,
-							date: metadata.date,
 						};
 						return { ...metadata, ...specified };
 					},
@@ -122,10 +137,10 @@ export const DATA = {
 						const { content, metadata } = parse(buffer.toString('utf-8'));
 						const specified: FrontMatter = {
 							slug,
+							date: metadata.date,
 							title: metadata.title,
 							category: metadata.tags[0],
 							tags: metadata.tags,
-							date: metadata.date,
 						};
 						return { ...metadata, ...specified, content };
 					},
@@ -164,12 +179,12 @@ export const DATA = {
 
 	get 'reviews/'() {
 		interface FrontMatter {
-			slug: string;
 			category: string;
-			composed: number;
-
+			slug: string;
 			date: string;
 			released: string;
+			composed: number;
+
 			title: {
 				short?: string;
 				en: string;
@@ -245,10 +260,11 @@ export const DATA = {
 						if (metadata.draft) return;
 
 						const specified: FrontMatter = {
-							slug: `${category}/${slug}`,
 							category: category,
-							composed: metadata.composed,
+							slug: `${category}/${slug}`,
+							date: metadata.date,
 							released: metadata.released,
+							composed: metadata.composed,
 							title: metadata.title,
 							genres: metadata.genres,
 							rating: countAverageRating(metadata.rating),
@@ -262,7 +278,6 @@ export const DATA = {
 									? metadata.seen.last[metadata.seen.last.length - 1]
 									: metadata.seen.last,
 							},
-							date: metadata.date,
 							image: metadata.image,
 						};
 
@@ -307,10 +322,12 @@ export const DATA = {
 
 						const specified: FrontMatter = {
 							...metadata,
-							slug: `${category}/${slug}`,
 							category,
-							composed: delta / 24 / 60 / 60 / 1000,
+							slug: `${category}/${slug}`,
+							date: metadata.date,
 							released: metadata.released,
+							composed: delta / 24 / 60 / 60 / 1000,
+
 							title: metadata.title,
 							genres: metadata.genres,
 							rating: countAverageRating(metadata.rating),
@@ -324,7 +341,6 @@ export const DATA = {
 									? metadata.seen.last[metadata.seen.last.length - 1]
 									: metadata.seen.last,
 							},
-							date: metadata.date,
 							image: metadata.image,
 						};
 

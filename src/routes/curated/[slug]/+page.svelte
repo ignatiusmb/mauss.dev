@@ -5,7 +5,7 @@
 	export let data;
 </script>
 
-<Article post={data.article} path="sites/dev.mauss/curated/{data.article.slug}.md">
+<Article post={data.article} path="sites/dev.mauss/curated/{data.article.slug}/+article.md">
 	<svelte:fragment slot="header">
 		{#if data.article.tags}
 			<small class="tags">
