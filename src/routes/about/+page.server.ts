@@ -1,7 +1,7 @@
 export async function load() {
 	return {
 		meta: {
-			title: 'Contact',
+			title: 'About Igna',
 			description: 'Get in touch with Ignatius',
 		},
 	};
