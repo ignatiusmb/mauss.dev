@@ -47,7 +47,7 @@
 
 			<span>
 				<img src={post.author?.img || '/assets/profile/mauss.jpg'} alt="author profile" />
-				<a href={post.author?.link || '/contact/'}>
+				<a href={post.author?.link || '/about/'}>
 					{post.author?.name || 'Ignatius Bagussuputra'}
 				</a>
 			</span>
@@ -141,12 +141,6 @@
 		border-radius: 50%;
 	}
 
-	h1 {
-		font-size: clamp(2.5rem, 4vw, 3rem);
-		text-align: center;
-		text-wrap: balance;
-	}
-
 	header :global(.dash) {
 		color: var(--theme-secondary);
 		font-weight: 600;
@@ -235,6 +229,11 @@
 		border: none;
 		border-radius: var(--b-radius);
 		text-align: center;
+	}
+	main :global(h1) {
+		font-size: clamp(2.5rem, 4vw, 3rem);
+		text-align: center;
+		text-wrap: balance;
 	}
 	main :global(h2),
 	main :global(h3) {

@@ -4,12 +4,12 @@
 </script>
 
 <Article>
+	<h1>Welcome to Alchemauss digital corner!</h1>
+
 	<!-- prettier-ignore -->
-	<p>Welcome to Alchemauss digital corner! A diary-like journey, written through the kaleidoscope of my experiences, inspirations, and aspirations. A virtual abode to serve as a canvas, expressing thoughts and emotions authentically.</p>
+	<p>A diary-like journey, written through the kaleidoscope of my experiences, inspirations, and aspirations. A virtual abode to serve as a canvas, expressing thoughts and emotions authentically.</p>
 	<!-- prettier-ignore -->
-	<p>Writing is not only a form of communication, it is a healthy way to express ourself by being a transformative and enriching practice that can profoundly benefit our mental, emotional, and even physical well-being. With the right mindset, writing can be a powerful tool to help you better understand ourself, our experiences, as well as the world around you.</p>
-	<!-- prettier-ignore -->
-	<p>I need a place where I can enjoy expressing myself freely and also enjoy surfing through the site and reading comfortably, and there's really no other place like home because that's specifically built and tailored to your likings. In this case, I needed to build that home first before I can get comfortable, and that's how this website came to be.</p>
+	<p>I try to embrace the concept of a digital garden with this site, it will always be under construction. As I plant some seeds and take care of the garden, it will become something beautiful, and people who stop by can enjoy.</p>
 
 	<section class="info-box warning">
 		<Link href="/disclaimer/" style="danger">
@@ -18,7 +18,7 @@
 	</section>
 
 	<!-- prettier-ignore -->
-	<p>Having trouble navigating through the page? Don't know what or where to look first? Read the brief explanation for each pages below, perhaps there's something for you in those pages.</p>
+	<p>Writing is not only a form of communication, it is a healthy way to express ourself by being a transformative and enriching practice that can profoundly benefit our mental, emotional, and even physical well-being. With the right mindset, writing can be a powerful tool to help you better understand ourself, our experiences, as well as the world around you.</p>
 
 	<h2 id="curated"><a href="/curated">Curated</a></h2>
 	<!-- prettier-ignore -->

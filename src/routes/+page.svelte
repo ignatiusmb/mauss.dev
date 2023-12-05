@@ -15,7 +15,7 @@
 	<!-- prettier-ignore -->
 	<p>Hi, I am Igna, an independent software engineer living between GMT+7 to GMT+8. I'm a member of the <a href="https://svelte.dev/">Svelte</a> core team and mostly tend to open source technologies, which is publicly available on <a href="https://github.com/ignatiusmb">GitHub</a>.</p>
 	<!-- prettier-ignore -->
-	<p>I also do consultancy and take on freelancing projects that are typically confidential and involves tailored solutions for clients seeking a more personalized approach. If you're interested, feel free to <a href="/contact/">contact me</a> from one of my socials.</p>
+	<p>I also do consultancy and take on freelancing projects that are typically confidential and involves tailored solutions for clients seeking a more personalized approach. If you're interested, feel free to <a href="/about/">contact me</a> from one of my socials.</p>
 	<!-- prettier-ignore -->
 	<p>Besides my engineering pursuits, I enjoy writing and sharing my thoughts and experiences, where I often reflect on life lessons and new discoveries. Check out the <a href="/help/">help page</a> for more details.</p>
 

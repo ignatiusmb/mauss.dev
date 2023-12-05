@@ -41,8 +41,8 @@
 		</div>
 
 		<div class="shortcuts">
-			<a href="/contact" aria-label="Contact">
-				<Feather icon={feather.MessageCircle} />
+			<a href="/about" aria-label="Profile">
+				<Feather icon={feather.User} />
 			</a>
 			<a href="/uses" aria-label="Uses page">
 				<Feather icon={feather.Bookmark} />
@@ -73,6 +73,9 @@
 	a {
 		border-bottom: none;
 		outline: 2px solid transparent;
+	}
+	a > img {
+		animation: rotate 42s linear infinite;
 	}
 	a:focus {
 		outline-color: var(--bg-cover);
@@ -211,6 +214,15 @@
 		menu .routes {
 			grid-auto-flow: row;
 			padding: 0 0.5rem;
+		}
+	}
+
+	@keyframes rotate {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
 		}
 	}
 </style>
