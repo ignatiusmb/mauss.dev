@@ -140,6 +140,12 @@
 	header > span img {
 		border-radius: 50%;
 	}
+	header > h1,
+	main > :global(h1) {
+		font-size: clamp(2.5rem, 4vw, 3rem);
+		text-align: center;
+		text-wrap: balance;
+	}
 
 	header :global(.dash) {
 		color: var(--theme-secondary);
@@ -229,11 +235,6 @@
 		border: none;
 		border-radius: var(--b-radius);
 		text-align: center;
-	}
-	main :global(h1) {
-		font-size: clamp(2.5rem, 4vw, 3rem);
-		text-align: center;
-		text-wrap: balance;
 	}
 	main :global(h2),
 	main :global(h3) {
