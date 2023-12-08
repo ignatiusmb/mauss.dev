@@ -3,13 +3,13 @@ import { traverse } from 'marqua/fs';
 import { chain } from 'marqua/transform';
 import { exists } from 'mauss/guards';
 import { compare, regexp } from 'mauss';
-import { optimize, write } from './media';
-
-const ROOT = `${process.cwd()}/static`;
+import { assemble } from './media';
 
 export const DATA = {
 	get 'curated/'() {
 		interface FrontMatter {
+			branch: string;
+			branches: string[];
 			slug: string;
 			date: string;
 			title: string;
@@ -20,16 +20,19 @@ export const DATA = {
 			all() {
 				const curated = traverse(
 					{ entry: 'content/sites/dev.mauss/curated', depth: -1 },
-					({ breadcrumb: [file, slug], buffer, parse }) => {
+					({ breadcrumb: [file, slug], buffer, parse, siblings }) => {
 						if (file !== '+article.md' || file.includes('draft')) {
-							if (!/\.(jpe?g|png|svg)$/.test(file)) return;
-							const name = file.replace(/\.[^/.]+$/, '.webp');
-							const path = `/uploads/curated/${slug}/${name}`;
-							return void optimize(buffer).to(ROOT + path);
+							return void assemble(buffer, `/curated/${slug}/${file}`);
 						}
 
 						const { metadata } = parse(buffer.toString('utf-8'));
 						const specified: FrontMatter = {
+							branch: file.slice(1, -3),
+							branches: siblings.flatMap(({ type, name }) => {
+								if (type !== 'file' && name[0] !== '+') return [];
+								return name === file ? [] : name.slice(1, -3);
+							}),
+
 							slug,
 							date: metadata.date,
 							title: metadata.title,
@@ -41,35 +44,38 @@ export const DATA = {
 
 				return curated;
 			},
-			get(slug: string) {
+			retrieve(slug: string) {
 				const memo: Array<[find: RegExp, url: string]> = [];
-				const article = traverse(
+				const articles = traverse(
 					{ entry: `content/sites/dev.mauss/curated/${slug}` },
-					({ breadcrumb: [file], buffer, parse }) => {
-						if (file !== '+article.md') {
-							if (!/\.(jpe?g|png|svg)$/.test(file)) return;
-							const name = file.replace(/\.[^/.]+$/, '.webp');
-							const path = `/uploads/curated/${slug}/${name}`;
-							memo.push([regexp(`./${file}`, 'g'), path]);
-							return void optimize(buffer).to(ROOT + path);
+					({ breadcrumb: [file], buffer, parse, siblings }) => {
+						if (file[0] !== '+' && !file.endsWith('.md')) {
+							const path = assemble(buffer, `/curated/${slug}/${file}`);
+							return void (path && memo.push([regexp(`./${file}`, 'g'), path]));
 						}
 
 						const { content, metadata } = parse(buffer.toString('utf-8'));
 						const specified: FrontMatter = {
+							branch: file.slice(1, -3),
+							branches: siblings.flatMap(({ type, name }) => {
+								if (type !== 'file' && name[0] !== '+') return [];
+								return name === file ? [] : name.slice(1, -3);
+							}),
+
 							slug,
 							date: metadata.date,
 							title: metadata.title,
 						};
 						return { ...metadata, ...specified, content };
 					},
-				)[0];
-
-				const content = memo.reduce(
-					(content, [find, url]) => content.replace(find, url),
-					article.content,
 				);
 
-				return { ...article, content };
+				const map: Record<string, (typeof articles)[number]> = {};
+				for (const { content: raw, ...article } of articles) {
+					const content = memo.reduce((c, [find, url]) => c.replace(find, url), raw);
+					map[article.branch] = { ...article, content };
+				}
+				return map;
 			},
 		};
 	},
@@ -95,11 +101,9 @@ export const DATA = {
 					{ entry: 'content/sites/dev.mauss/posts', depth: 1 },
 					({ breadcrumb: [file, slug], buffer, parse }) => {
 						if (file !== '+article.md') {
-							if (!/\.(jpe?g|png|svg)$/.test(file)) return;
-							const name = file.replace(/\.[^/.]+$/, '.webp');
-							const path = `/uploads/posts/${slug}/${name}`;
-							if (file.startsWith('thumbnail.')) thumbnails[slug] = path;
-							return void optimize(buffer).to(ROOT + path);
+							const path = assemble(buffer, `/posts/${slug}/${file}`);
+							if (path && file.startsWith('thumbnail.')) thumbnails[slug] = path;
+							return;
 						}
 
 						const { metadata } = parse(buffer.toString('utf-8'));
@@ -128,12 +132,10 @@ export const DATA = {
 					{ entry: `content/sites/dev.mauss/posts/${slug}` },
 					({ breadcrumb: [file], buffer, parse }) => {
 						if (file !== '+article.md') {
-							if (!/\.(jpe?g|png|svg)$/.test(file)) return;
-							const name = file.replace(/\.[^/.]+$/, '.webp');
-							const path = `/uploads/posts/${slug}/${name}`;
-							memo.push([regexp(`./${file}`, 'g'), path]);
-							return void optimize(buffer).to(ROOT + path);
+							const path = assemble(buffer, `/posts/${slug}/${file}`);
+							return void (path && memo.push([regexp(`./${file}`, 'g'), path]));
 						}
+
 						const { content, metadata } = parse(buffer.toString('utf-8'));
 						const specified: FrontMatter = {
 							slug,
@@ -246,14 +248,7 @@ export const DATA = {
 					{ entry: 'content/sites/dev.mauss/reviews', depth: -1 },
 					({ breadcrumb: [file, slug, category], buffer, parse }) => {
 						if (file !== '+article.md') {
-							const target = `${ROOT}/uploads/reviews/${category}/${slug}`;
-							if (/\.(mp4)$/.test(file)) {
-								return void write(buffer).to(`${target}/${file}`);
-							}
-
-							if (!/\.(jpe?g|png|svg)$/.test(file)) return;
-							const name = file.replace(/\.[^/.]+$/, '.webp');
-							return void optimize(buffer).to(`${target}/${name}`);
+							return void assemble(buffer, `/reviews/${category}/${slug}/${file}`);
 						}
 
 						const { metadata } = parse(buffer.toString('utf-8'));
@@ -296,16 +291,8 @@ export const DATA = {
 					{ entry: `content/sites/dev.mauss/reviews/${category}/${slug}` },
 					({ breadcrumb: [file], buffer, parse }) => {
 						if (file !== '+article.md') {
-							if (/\.(mp4)$/.test(file)) {
-								const path = `/uploads/reviews/${category}/${slug}/${file}`;
-								memo.push([regexp(`./${file}`, 'g'), path]);
-								return void write(buffer).to(ROOT + path);
-							}
-							if (!/\.(jpe?g|png|svg)$/.test(file)) return;
-							const name = file.replace(/\.[^/.]+$/, '.webp');
-							const path = `/uploads/reviews/${category}/${slug}/${name}`;
-							memo.push([regexp(`./${file}`, 'g'), path]);
-							return void optimize(buffer).to(ROOT + path);
+							const path = assemble(buffer, `/reviews/${category}/${slug}/${file}`);
+							return void (path && memo.push([regexp(`./${file}`, 'g'), path]));
 						}
 
 						const { content, metadata } = parse(buffer.toString('utf-8'));

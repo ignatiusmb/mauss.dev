@@ -2,13 +2,16 @@ import { redirect } from '@sveltejs/kit';
 import { DATA } from '$lib/content';
 
 export async function load({ params }) {
-	const article = DATA['curated/'].get(params.slug);
-	if (!article) throw redirect(307, '/curated');
-	return {
-		article,
-		meta: {
-			canonical: `curated/${article.slug}`,
-			title: article.title,
-		},
-	};
+	try {
+		const article = DATA['curated/'].retrieve(params.slug)['article'];
+		return {
+			article,
+			meta: {
+				canonical: `curated/${article.slug}`,
+				title: article.title,
+			},
+		};
+	} catch {
+		throw redirect(307, '/curated');
+	}
 }
