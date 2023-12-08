@@ -186,6 +186,8 @@
 		menu {
 			visibility: hidden;
 			position: absolute;
+			top: 100%;
+			left: 0;
 			width: 100%;
 			display: grid;
 			justify-content: initial;
@@ -201,7 +203,6 @@
 		}
 		input:checked ~ menu {
 			visibility: visible;
-			top: 100%;
 			transform: none;
 		}
 
