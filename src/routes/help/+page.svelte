@@ -22,7 +22,7 @@
 
 	<h2 id="curated"><a href="/curated">Curated</a></h2>
 	<!-- prettier-ignore -->
-	<p>Curated page consists of things I find interesting or worthwhile to be compiled into its own dedicated timeless post, so it shouldn't matter when it's being read. It also hosts the special <a href="/curated/digest">Monthly Digests</a>, subscribe so you'll get the latest digests at the start of every month.</p>
+	<p>Curated page consists of things I find interesting or worthwhile to be compiled into its own dedicated timeless post, so it shouldn't matter when it's being read. It also hosts the special <strong>Monthly Digests</strong>, subscribe so you'll get the latest digests at the start of every month.</p>
 
 	<h3>Monthly Digests</h3>
 	<!-- prettier-ignore -->
