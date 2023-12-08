@@ -85,6 +85,6 @@
 
 <ScrollTop
 	styles={{
-		'--background': 'var(--bg-base)',
+		'--background': 'transparent',
 	}}
 />
