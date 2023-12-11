@@ -1,21 +1,16 @@
+import type { Schema } from '$content/reviews.json/+server.js';
 import { redirect } from '@sveltejs/kit';
-import { DATA } from '$lib/content';
 
-export async function load({ params }) {
-	const content = DATA['reviews/'].get(params.category, params.slug);
+export async function load({ fetch, params }) {
+	const { items }: Schema = await fetch('/content/reviews.json').then((r) => r.json());
+	const content = items.find(({ slug }) => slug === `${params.category}/${params.slug}`);
 	if (!content) throw redirect(307, '/reviews');
 
-	for (const { slug, flank } of DATA['reviews/'].all()) {
-		if (content.slug !== slug) continue;
-		const { title } = content;
-		return {
-			article: { ...content, flank },
-			meta: {
-				canonical: `reviews/${content.slug}`,
-				title: title.short || title.jp || title.en,
-			},
-		};
-	}
-
-	throw redirect(307, '/reviews');
+	return {
+		article: content,
+		meta: {
+			canonical: `reviews/${content.slug}`,
+			title: content.title.short || content.title.jp || content.title.en,
+		},
+	};
 }

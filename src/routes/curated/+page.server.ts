@@ -1,10 +1,10 @@
-import { DATA } from '$lib/content';
+import type { Schema } from '$content/curated.json/+server.js';
 
-export function load() {
-	const content = DATA['curated/'].all();
+export async function load({ fetch }) {
+	const { items }: Schema = await fetch('/content/curated.json').then((r) => r.json());
 
 	return {
-		list: content,
+		list: items.filter(({ branch }) => branch === 'article'),
 		meta: {
 			canonical: 'curated',
 			title: 'Curated',

@@ -1,21 +1,20 @@
-import { capitalize } from 'mauss';
-import { DATA } from '$lib/content';
+import type { Schema } from '$content/reviews.json/+server.js';
 
-const verdict = DATA['reviews/'].VERDICTS.reduce(
-	(a, c) => ({ ...a, [c]: capitalize(c.replace('-', ' ')) }),
-	{} as { [k in (typeof DATA)['reviews/']['VERDICTS'][number]]: string },
-);
+export async function load({ fetch }) {
+	const { items, metadata }: Schema = await fetch('/content/reviews.json').then((r) => r.json());
 
-export async function load() {
-	const content = DATA['reviews/'].all();
-	const categories = [...new Set(content.map((p) => p.category))];
-	const genres = [...new Set(content.flatMap((p) => p.genres))].sort();
 	return {
-		list: content,
+		list: items,
 		unique: {
-			categories,
-			genres,
-			verdict,
+			categories: metadata.categories,
+			genres: metadata.genres,
+			verdict: {
+				pending: 'Pending',
+				'not-recommended': 'Not Recommended',
+				contextual: 'Contextual',
+				recommended: 'Recommended',
+				'must-watch': 'Must Watch',
+			},
 			sort_by: {
 				date: 'Date',
 				premiere: 'Premiered',
