@@ -18,7 +18,6 @@ const config = {
 		},
 
 		prerender: {
-			// concurrency: 2,
 			handleMissingId: 'warn',
 		},
 
