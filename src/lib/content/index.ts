@@ -45,7 +45,7 @@ export const DATA = {
 		);
 
 		return contents.map((v) => {
-			const replacements = memo.filter(([s]) => s !== v.slug);
+			const replacements = memo.filter(([s]) => s === v.slug);
 
 			return {
 				...v,
@@ -102,7 +102,7 @@ export const DATA = {
 		);
 
 		return contents.map((v) => {
-			const replacements = memo.filter(([s]) => s !== v.slug);
+			const replacements = memo.filter(([s]) => s === v.slug);
 
 			return {
 				...v,
@@ -187,7 +187,7 @@ export const DATA = {
 			({ breadcrumb: [file, slug, category], buffer, parse }) => {
 				if (file !== '+article.md') {
 					const path = assemble(buffer, `/reviews/${category}/${slug}/${file}`);
-					path && memo.push([slug, regexp(`./${file}`, 'g'), path]);
+					path && memo.push([`${category}/${slug}`, regexp(`./${file}`, 'g'), path]);
 					return;
 				}
 
@@ -243,7 +243,7 @@ export const DATA = {
 		);
 
 		return contents.map((v) => {
-			const replacements = memo.filter(([s]) => s !== v.slug);
+			const replacements = memo.filter(([s]) => s === v.slug);
 
 			return {
 				...v,

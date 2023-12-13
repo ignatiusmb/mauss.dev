@@ -11,10 +11,9 @@ export interface Schema {
 
 export async function GET() {
 	const items = DATA['curated/'];
-	const specs: Schema = {
+
+	return json({
 		items: items.sort(compare.key('date', compare.date)).reverse(),
 		metadata: {},
-	};
-
-	return json(specs);
+	} satisfies Schema);
 }

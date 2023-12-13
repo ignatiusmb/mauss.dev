@@ -13,13 +13,12 @@ export interface Schema {
 
 export async function GET() {
 	const items = DATA['reviews/'];
-	const specs: Schema = {
+
+	return json({
 		items,
 		metadata: {
 			categories: [...new Set(items.map((p) => p.category))].sort(),
 			genres: [...new Set(items.flatMap((p) => p.genres))].sort(),
 		},
-	};
-
-	return json(specs);
+	} satisfies Schema);
 }
