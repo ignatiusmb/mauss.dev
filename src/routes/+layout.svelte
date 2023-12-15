@@ -11,6 +11,12 @@
 	import Navigation from './Navigation.svelte';
 
 	import { page } from '$app/stores';
+
+	const feeds = [
+		{ href: '/content/curated.json', title: 'Alchemauss Curation' },
+		{ href: '/content/posts.json', title: 'Alchemauss Posts' },
+		{ href: '/content/reviews.json', title: 'Alchemauss Reviews' },
+	];
 </script>
 
 <svelte:head>
@@ -25,7 +31,11 @@
 		<meta name="description" content={$page.data.meta.description} />
 	{/if}
 
-	<link rel="alternate" href="/rss.xml" type="application/rss+xml" />
+	<link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Alchemauss Feed" />
+	{#each feeds as { href, title }}
+		<link rel="alternate" type="application/json" {href} {title} />
+	{/each}
+
 	<meta property="og:site_name" content="Alchemauss" />
 	<meta property="og:locale" content="en_ID" />
 
