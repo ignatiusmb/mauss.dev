@@ -50,7 +50,7 @@
 			<a href="/rss.xml" aria-label="Get RSS">
 				<Feather icon={feather.Rss} />
 			</a>
-			<a href="/help/" aria-label="See help page">
+			<a href="/help" aria-label="Help page">
 				<Feather icon={feather.HelpCircle} />
 			</a>
 		</div>
