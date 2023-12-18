@@ -1,5 +1,5 @@
 import adapter from '@sveltejs/adapter-vercel';
-import { vitePreprocess } from '@sveltejs/kit/vite';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 function developing(condition) {
 	return (process.env.NODE_ENV === 'development' && condition) || undefined;
