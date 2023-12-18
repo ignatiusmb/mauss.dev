@@ -1,10 +1,6 @@
 import adapter from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
-function developing(condition) {
-	return (process.env.NODE_ENV === 'development' && condition) || undefined;
-}
-
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	preprocess: [vitePreprocess()],
@@ -14,7 +10,7 @@ const config = {
 
 		alias: {
 			$content: './src/routes/content',
-			// syv: developing('../ignatiusmb[syv]/src/lib'),
+			// syv: '../ignatiusmb[syv]/dist',
 		},
 
 		prerender: {

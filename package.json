@@ -9,7 +9,7 @@
 		"check:style": "prettier -c .",
 		"check:svelte": "svelte-kit sync && svelte-check src --tsconfig ./tsconfig.json"
 	},
-	"packageManager": "pnpm@8.12.0",
+	"packageManager": "pnpm@8.12.1",
 	"prettier": "mauss/prettier.json",
 	"devDependencies": {
 		"@fontsource-variable/fira-code": "^5.0.16",
