@@ -4,35 +4,18 @@ import sharp from 'sharp';
 const ROOT = `${process.cwd()}/static/uploads`;
 
 export function assemble(buffer: Buffer, output: `/${string}`) {
+	const dir = ROOT + output.slice(0, output.lastIndexOf('/'));
+
 	if (/\.(mp4)$/.test(output)) {
-		void write(buffer).to(ROOT + output);
+		mkdirSync(dir, { recursive: true });
+		writeFileSync(ROOT + output, buffer);
 		return '/uploads' + output;
 	}
 
 	if (!/\.(jpe?g|png|svg)$/.test(output)) return;
 
+	mkdirSync(dir, { recursive: true });
+	const webp = sharp(buffer).webp();
 	const path = output.replace(/\.[^/.]+$/, '.webp');
-	void optimize(buffer).to(ROOT + path);
-	return '/uploads' + path;
-}
-
-function optimize(image: Buffer) {
-	const original = sharp(image);
-	return {
-		to(path: string) {
-			const dir = path.slice(0, path.lastIndexOf('/'));
-			mkdirSync(dir, { recursive: true });
-			return original.webp().toFile(path);
-		},
-	};
-}
-
-function write(buffer: Buffer) {
-	return {
-		to(path: string) {
-			const dir = path.slice(0, path.lastIndexOf('/'));
-			mkdirSync(dir, { recursive: true });
-			writeFileSync(path, buffer);
-		},
-	};
+	return webp.toFile(ROOT + path), '/uploads' + path;
 }

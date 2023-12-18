@@ -12,12 +12,12 @@ const config = {
 	kit: {
 		adapter: adapter(),
 
-		alias: developing({
-			syv: '../ignatiusmb[syv]/src/lib',
-		}),
+		alias: {
+			$content: './src/routes/content',
+			// syv: developing('../ignatiusmb[syv]/src/lib'),
+		},
 
 		prerender: {
-			concurrency: 2,
 			handleMissingId: 'warn',
 		},
 

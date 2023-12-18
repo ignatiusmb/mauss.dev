@@ -1,13 +1,15 @@
-import { DATA } from '$lib/content';
+import type { Schema } from '$content/posts.json/+server.js';
 
-export async function load() {
-	const content = DATA['posts/'].all();
-	const tags = [...new Set(content.flatMap((p) => p.tags))].sort();
-	const categories = [...new Set(content.map((p) => p.tags[0]))].sort();
-	const sort_by = { date: 'Date' };
+export async function load({ fetch }) {
+	const { items, metadata }: Schema = await fetch('/content/posts.json').then((r) => r.json());
+
 	return {
-		list: content,
-		unique: { categories, tags, sort_by },
+		list: items,
+		unique: {
+			categories: metadata.categories,
+			tags: metadata.tags,
+			sort_by: { date: 'Date' },
+		},
 		meta: {
 			canonical: 'posts',
 			title: 'Posts',

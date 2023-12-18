@@ -16,68 +16,42 @@ export const DATA = {
 			tags?: string[];
 		}
 
-		return {
-			all() {
-				const curated = traverse(
-					{ entry: 'content/sites/dev.mauss/curated', depth: -1 },
-					({ breadcrumb: [file, slug], buffer, parse, siblings }) => {
-						if (file !== '+article.md' || file.includes('draft')) {
-							return void assemble(buffer, `/curated/${slug}/${file}`);
-						}
+		const memo: Array<[slug: string, find: RegExp, url: string]> = [];
 
-						const { metadata } = parse(buffer.toString('utf-8'));
-						const specified: FrontMatter = {
-							branch: file.slice(1, -3),
-							branches: siblings.flatMap(({ type, name }) => {
-								if (type !== 'file' && name[0] !== '+') return [];
-								return name === file ? [] : name.slice(1, -3);
-							}),
-
-							slug,
-							date: metadata.date,
-							title: metadata.title,
-						};
-						return { ...metadata, ...specified };
-					},
-					(items) => items.sort(compare.key('date', compare.date)),
-				);
-
-				return curated;
-			},
-			retrieve(slug: string) {
-				const memo: Array<[find: RegExp, url: string]> = [];
-				const articles = traverse(
-					{ entry: `content/sites/dev.mauss/curated/${slug}` },
-					({ breadcrumb: [file], buffer, parse, siblings }) => {
-						if (file[0] !== '+' && !file.endsWith('.md')) {
-							const path = assemble(buffer, `/curated/${slug}/${file}`);
-							return void (path && memo.push([regexp(`./${file}`, 'g'), path]));
-						}
-
-						const { content, metadata } = parse(buffer.toString('utf-8'));
-						const specified: FrontMatter = {
-							branch: file.slice(1, -3),
-							branches: siblings.flatMap(({ type, name }) => {
-								if (type !== 'file' && name[0] !== '+') return [];
-								return name === file ? [] : name.slice(1, -3);
-							}),
-
-							slug,
-							date: metadata.date,
-							title: metadata.title,
-						};
-						return { ...metadata, ...specified, content };
-					},
-				);
-
-				const map: Record<string, (typeof articles)[number]> = {};
-				for (const { content: raw, ...article } of articles) {
-					const content = memo.reduce((c, [find, url]) => c.replace(find, url), raw);
-					map[article.branch] = { ...article, content };
+		const contents = traverse(
+			{ entry: 'content/sites/dev.mauss/curated', depth: -1 },
+			({ breadcrumb: [file, slug], buffer, parse, siblings }) => {
+				if (file.includes('draft') || (file[0] !== '+' && !file.endsWith('.md'))) {
+					const path = assemble(buffer, `/curated/${slug}/${file}`);
+					path && memo.push([slug, regexp(`./${file}`, 'g'), path]);
+					return;
 				}
-				return map;
+
+				const { content, metadata } = parse(buffer.toString('utf-8'));
+				const specified: FrontMatter = {
+					branch: file.slice(1, -3),
+					branches: siblings.flatMap(({ type, name }) => {
+						if (type !== 'file' && name[0] !== '+') return [];
+						return name === file ? [] : name.slice(1, -3);
+					}),
+
+					slug,
+					date: metadata.date,
+					title: metadata.title,
+				};
+				return { ...metadata, ...specified, content };
 			},
-		};
+			(items) => items.sort(compare.key('date', compare.date)),
+		);
+
+		return contents.map((v) => {
+			const replacements = memo.filter(([s]) => s === v.slug);
+
+			return {
+				...v,
+				content: replacements.reduce((c, [, f, u]) => c.replace(f, u), v.content),
+			};
+		});
 	},
 
 	get 'posts/'() {
@@ -94,89 +68,65 @@ export const DATA = {
 			};
 		}
 
-		return {
-			all() {
-				const thumbnails: Record<string, string> = {};
-				const contents = traverse(
-					{ entry: 'content/sites/dev.mauss/posts', depth: 1 },
-					({ breadcrumb: [file, slug], buffer, parse }) => {
-						if (file !== '+article.md') {
-							const path = assemble(buffer, `/posts/${slug}/${file}`);
-							if (path && file.startsWith('thumbnail.')) thumbnails[slug] = path;
-							return;
-						}
+		const thumbnails: Record<string, string> = {};
+		const memo: Array<[slug: string, find: RegExp, url: string]> = [];
 
-						const { metadata } = parse(buffer.toString('utf-8'));
-						const specified: FrontMatter = {
-							slug,
-							date: metadata.date,
-							title: metadata.title,
-							category: metadata.tags[0],
-							tags: metadata.tags,
-						};
-						return { ...metadata, ...specified };
-					},
-					chain({
-						base: 'posts/',
-						sort({ date: xd }, { date: yd }) {
-							return compare.date(xd, yd);
-						},
-					}),
-				);
+		const contents = traverse(
+			{ entry: 'content/sites/dev.mauss/posts', depth: 1 },
+			({ breadcrumb: [file, slug], buffer, parse }) => {
+				if (file !== '+article.md') {
+					const path = assemble(buffer, `/posts/${slug}/${file}`);
+					if (path) {
+						if (file.startsWith('thumbnail.')) thumbnails[slug] = path;
+						memo.push([slug, regexp(`./${file}`, 'g'), path]);
+					}
+					return;
+				}
 
-				return contents.map((v) => ({ ...v, thumbnail: thumbnails[v.slug] || v.thumbnail }));
+				const { metadata, content } = parse(buffer.toString('utf-8'));
+				const specified: FrontMatter = {
+					slug,
+					date: metadata.date,
+					title: metadata.title,
+					category: metadata.tags[0],
+					tags: metadata.tags,
+				};
+				return { ...metadata, ...specified, content };
 			},
-			get(slug: string) {
-				const memo: Array<[find: RegExp, url: string]> = [];
-				const article = traverse(
-					{ entry: `content/sites/dev.mauss/posts/${slug}` },
-					({ breadcrumb: [file], buffer, parse }) => {
-						if (file !== '+article.md') {
-							const path = assemble(buffer, `/posts/${slug}/${file}`);
-							return void (path && memo.push([regexp(`./${file}`, 'g'), path]));
-						}
+			chain({
+				base: 'posts/',
+				sort({ date: xd }, { date: yd }) {
+					return compare.date(xd, yd);
+				},
+			}),
+		);
 
-						const { content, metadata } = parse(buffer.toString('utf-8'));
-						const specified: FrontMatter = {
-							slug,
-							date: metadata.date,
-							title: metadata.title,
-							category: metadata.tags[0],
-							tags: metadata.tags,
-						};
-						return { ...metadata, ...specified, content };
-					},
-				)[0];
+		return contents.map((v) => {
+			const replacements = memo.filter(([s]) => s === v.slug);
 
-				const content = memo.reduce(
-					(content, [find, url]) => content.replace(find, url),
-					article.content,
-				);
-
-				return { ...article, content };
-			},
-		};
+			return {
+				...v,
+				thumbnail: thumbnails[v.slug] || v.thumbnail,
+				content: replacements.reduce((c, [, f, u]) => c.replace(f, u), v.content),
+			};
+		});
 	},
 
 	get 'quotes/'() {
-		return {
-			all() {
-				return traverse(
-					{ entry: 'content/sites/dev.mauss/quotes' },
-					({ breadcrumb: [file], buffer, parse }) => {
-						const body: Array<{ author: string; quote: string; from: string }> = [];
-						const author = file.slice(0, -3).replace(/-/g, ' ');
-						const { content } = parse(buffer.toString('utf-8'));
-						for (const line of content.split(/\r?\n/).filter(exists)) {
-							const [quote, from] = line.split('#!/');
-							body.push({ author, quote, from });
-						}
-						return body;
-					},
-					(items) => items.flat(),
-				);
+		return traverse(
+			{ entry: 'content/sites/dev.mauss/quotes' },
+			({ breadcrumb: [file], buffer, parse }) => {
+				const body: Array<{ author: string; quote: string; from: string }> = [];
+				const author = file.slice(0, -3).replace(/-/g, ' ');
+				const { content } = parse(buffer.toString('utf-8'));
+				for (const line of content.split(/\r?\n/).filter(exists)) {
+					const [quote, from] = line.split('#!/');
+					body.push({ author, quote, from });
+				}
+				return body;
 			},
-		};
+			(items) => items.flat(),
+		);
 	},
 
 	get 'reviews/'() {
@@ -194,7 +144,7 @@ export const DATA = {
 			};
 			genres: string[];
 			rating?: number;
-			verdict: (typeof VERDICTS)[number];
+			verdict: 'pending' | 'not-recommended' | 'contextual' | 'recommended' | 'must-watch';
 
 			completed: string | string[];
 			seen: {
@@ -212,18 +162,10 @@ export const DATA = {
 			closing?: string;
 		}
 
-		const VERDICTS = [
-			'pending',
-			'not-recommended',
-			'contextual',
-			'recommended',
-			'must-watch',
-		] as const;
-
 		function contentParser<T extends Record<string, any>>(data: T, content: string): string {
 			const traverse = (meta: T | string, properties: string): string => {
 				for (const key of properties.split(':')) {
-					if (typeof meta !== 'string') {
+					if (meta && typeof meta !== 'string') {
 						meta = meta[Number.isNaN(Number(key)) ? key : Number(key)];
 					}
 				}
@@ -239,122 +181,74 @@ export const DATA = {
 			return Math.round((total / ratings.length + Number.EPSILON) * 100) / 100;
 		}
 
-		return {
-			VERDICTS,
+		const memo: Array<[slug: string, find: RegExp, url: string]> = [];
+		const contents = traverse(
+			{ entry: 'content/sites/dev.mauss/reviews', depth: -1 },
+			({ breadcrumb: [file, slug, category], buffer, parse }) => {
+				if (file !== '+article.md') {
+					const path = assemble(buffer, `/reviews/${category}/${slug}/${file}`);
+					path && memo.push([`${category}/${slug}`, regexp(`./${file}`, 'g'), path]);
+					return;
+				}
 
-			all() {
-				return traverse(
-					{ entry: 'content/sites/dev.mauss/reviews', depth: -1 },
-					({ breadcrumb: [file, slug, category], buffer, parse }) => {
-						if (file !== '+article.md') {
-							return void assemble(buffer, `/reviews/${category}/${slug}/${file}`);
-						}
+				const { content, metadata } = parse(buffer.toString('utf-8'));
+				if (metadata.draft) return;
 
-						const { metadata } = parse(buffer.toString('utf-8'));
-						if (metadata.draft) return;
+				const delta = +new Date(metadata.date) - +new Date(metadata.seen.first);
 
-						const specified: FrontMatter = {
-							category: category,
-							slug: `${category}/${slug}`,
-							date: metadata.date,
-							released: metadata.released,
-							composed: metadata.composed,
-							title: metadata.title,
-							genres: metadata.genres,
-							rating: countAverageRating(metadata.rating),
-							verdict: metadata.verdict,
-							completed: metadata.completed,
-							seen: {
-								first: Array.isArray(metadata.seen.first)
-									? metadata.seen.first[metadata.seen.first.length - 1]
-									: metadata.seen.first,
-								last: Array.isArray(metadata.seen.last)
-									? metadata.seen.last[metadata.seen.last.length - 1]
-									: metadata.seen.last,
-							},
-							image: metadata.image,
-						};
+				const specified: FrontMatter = {
+					category,
+					slug: `${category}/${slug}`,
+					date: metadata.date,
+					released: metadata.released,
+					composed: delta / 24 / 60 / 60 / 1000,
 
-						return { ...metadata, ...specified };
+					title: metadata.title,
+					genres: metadata.genres,
+					rating: countAverageRating(metadata.rating),
+					verdict: metadata.verdict,
+					completed: metadata.completed,
+					seen: {
+						first: Array.isArray(metadata.seen.first)
+							? metadata.seen.first[metadata.seen.first.length - 1]
+							: metadata.seen.first,
+						last: Array.isArray(metadata.seen.last)
+							? metadata.seen.last[metadata.seen.last.length - 1]
+							: metadata.seen.last,
 					},
-					chain({
-						base: 'reviews/',
-						breakpoint: (r) => !r.rating || r.verdict === 'pending',
-						sort: (x, y) => compare.date(x.date, y.date),
-					}),
-				);
+					image: metadata.image,
+				};
+
+				// TODO: separate into their own files
+				const [article, closing] = content.split(/^## \$CLOSING/m);
+				if (closing) {
+					specified.closing = marker.render(contentParser(specified, closing));
+				}
+				const [summary, spoilers] = article.split(/^## \$SPOILERS/m);
+				if (spoilers) {
+					specified.spoilers = marker.render(contentParser(specified, spoilers));
+				}
+
+				return {
+					...metadata,
+					...specified,
+					content: contentParser(specified, summary),
+				};
 			},
-			get(category: string, slug: string) {
-				const memo: Array<[find: RegExp, url: string]> = [];
-				const article = traverse(
-					{ entry: `content/sites/dev.mauss/reviews/${category}/${slug}` },
-					({ breadcrumb: [file], buffer, parse }) => {
-						if (file !== '+article.md') {
-							const path = assemble(buffer, `/reviews/${category}/${slug}/${file}`);
-							return void (path && memo.push([regexp(`./${file}`, 'g'), path]));
-						}
+			chain({
+				base: 'reviews/',
+				breakpoint: (r) => !r.rating || r.verdict === 'pending',
+				sort: (x, y) => compare.date(x.date, y.date),
+			}),
+		);
 
-						const { content, metadata } = parse(buffer.toString('utf-8'));
-						if (Array.isArray(metadata.seen.first)) {
-							const last = metadata.seen.first.length - 1;
-							metadata.seen.first = metadata.seen.first[last];
-						}
-						if (metadata.seen.last && Array.isArray(metadata.seen.last)) {
-							const last = metadata.seen.last.length - 1;
-							metadata.seen.last = metadata.seen.last[last];
-						}
+		return contents.map((v) => {
+			const replacements = memo.filter(([s]) => s === v.slug);
 
-						const delta = +new Date(metadata.date) - +new Date(metadata.seen.first);
-
-						const specified: FrontMatter = {
-							...metadata,
-							category,
-							slug: `${category}/${slug}`,
-							date: metadata.date,
-							released: metadata.released,
-							composed: delta / 24 / 60 / 60 / 1000,
-
-							title: metadata.title,
-							genres: metadata.genres,
-							rating: countAverageRating(metadata.rating),
-							verdict: metadata.verdict || 'pending',
-							completed: metadata.completed,
-							seen: {
-								first: Array.isArray(metadata.seen.first)
-									? metadata.seen.first[metadata.seen.first.length - 1]
-									: metadata.seen.first,
-								last: Array.isArray(metadata.seen.last)
-									? metadata.seen.last[metadata.seen.last.length - 1]
-									: metadata.seen.last,
-							},
-							image: metadata.image,
-						};
-
-						// TODO: separate into their own files
-						const [article, closing] = content.split(/^## \$CLOSING/m);
-						if (closing) {
-							specified.closing = marker.render(contentParser(specified, closing));
-						}
-						const [summary, spoilers] = article.split(/^## \$SPOILERS/m);
-						if (spoilers) {
-							specified.spoilers = marker.render(contentParser(specified, spoilers));
-						}
-
-						return {
-							...metadata,
-							...specified,
-							content: contentParser(specified, summary),
-						};
-					},
-				)[0];
-
-				const content = memo.reduce(
-					(content, [find, url]) => content.replace(find, url),
-					article.content,
-				);
-
-				return { ...article, content };
-			},
-		};
+			return {
+				...v,
+				content: replacements.reduce((c, [, f, u]) => c.replace(f, u), v.content),
+			};
+		});
 	},
 } as const;

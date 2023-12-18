@@ -7,10 +7,8 @@ export default defineConfig(({ command }) => {
 	cpSync('content/assets', 'static/assets', { recursive: true });
 
 	if (command === 'build') {
-		for (const key in DATA) {
-			// @ts-expect-error
-			void DATA[key].all();
-		}
+		// @ts-expect-error - generate static assets
+		for (const key in DATA) void DATA[key];
 	}
 
 	const ssr = command === 'serve' && {
