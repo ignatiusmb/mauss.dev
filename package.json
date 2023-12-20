@@ -3,11 +3,12 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "svelte-kit sync && vite build",
-		"format": "prettier -w .",
+		"build": "vite build",
+		"format": "prettier --write .",
 		"check": "pnpm run \"/^check:.*/\"",
-		"check:style": "prettier -c .",
-		"check:svelte": "svelte-kit sync && svelte-check src --tsconfig ./tsconfig.json"
+		"check:style": "prettier --check .",
+		"check:svelte": "svelte-check src --tsconfig ./tsconfig.json",
+		"prepare": "svelte-kit sync"
 	},
 	"packageManager": "pnpm@8.12.1",
 	"prettier": "mauss/prettier.json",
