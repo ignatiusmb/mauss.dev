@@ -10,7 +10,7 @@
 	import Footer from './Footer.svelte';
 	import Navigation from './Navigation.svelte';
 
-	import { browser, dev } from '$app/environment';
+	import { dev } from '$app/environment';
 	import { page } from '$app/stores';
 
 	const feeds = [
@@ -21,17 +21,15 @@
 </script>
 
 <svelte:head>
-	{#if !dev && !browser}
-		<script defer src="/_vercel/insights/script.js"></script>
-	{/if}
-	{#if $page.data.meta.canonical}
+	{#if !dev}<script defer src="/_vercel/insights/script.js"></script>{/if}
+	{#if $page.data.meta?.canonical}
 		<link rel="canonical" href="https://mauss.dev/{$page.data.meta.canonical}" />
 	{/if}
 
-	<title>{$page.data.meta.title} | Alchemauss</title>
+	<title>{$page.data.meta?.title || $page.status} | Alchemauss</title>
 	<meta name="author" content="Ignatius Bagussuputra" />
 
-	{#if $page.data.meta.description}
+	{#if $page.data.meta?.description}
 		<meta name="description" content={$page.data.meta.description} />
 	{/if}
 

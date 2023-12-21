@@ -4,7 +4,7 @@ import { redirect } from '@sveltejs/kit';
 export async function load({ fetch, params }) {
 	const { items }: Schema = await fetch('/content/reviews.json').then((r) => r.json());
 	const content = items.find(({ slug }) => slug === `${params.category}/${params.slug}`);
-	if (!content) throw redirect(307, '/reviews');
+	if (!content) redirect(307, '/reviews');
 
 	return {
 		article: content,
