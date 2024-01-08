@@ -16,18 +16,22 @@ export const DATA = {
 			tags?: string[];
 		}
 
-		const memo: Array<[slug: string, find: RegExp, url: string]> = [];
-
-		const contents = traverse(
+		return traverse(
 			{ entry: 'content/sites/dev.mauss/curated', depth: -1 },
 			({ breadcrumb: [file, slug], buffer, parse, siblings }) => {
-				if (file.includes('draft') || (file[0] !== '+' && !file.endsWith('.md'))) {
-					const path = assemble(buffer, `/curated/${slug}/${file}`);
-					path && memo.push([slug, regexp(`./${file}`, 'g'), path]);
-					return;
-				}
+				if (file[0] !== '+' || !file.endsWith('.md')) return;
 
 				const { content, metadata } = parse(buffer.toString('utf-8'));
+				const replacements = siblings.flatMap<[find: RegExp, url: string]>(
+					// TODO: replace `path` with `breadcrumb` in marqua
+					({ buffer, path, type }) => {
+						if (type === 'directory') return [];
+						const [file, slug] = path.split('/').reverse();
+						const output = assemble(buffer, `/curated/${slug}/${file}`);
+						return output ? [[regexp(`./${file}`), output]] : [];
+					},
+				);
+
 				const specified: FrontMatter = {
 					branch: file.slice(1, -3),
 					branches: siblings.flatMap(({ type, name }) => {
@@ -39,19 +43,15 @@ export const DATA = {
 					date: metadata.date,
 					title: metadata.title,
 				};
-				return { ...metadata, ...specified, content };
+
+				return {
+					...metadata,
+					...specified,
+					content: replacements.reduce((c, [f, u]) => c.replace(f, u), content),
+				};
 			},
 			(items) => items.sort(compare.key('date', compare.date)),
 		);
-
-		return contents.map((v) => {
-			const replacements = memo.filter(([s]) => s === v.slug);
-
-			return {
-				...v,
-				content: replacements.reduce((c, [, f, u]) => c.replace(f, u), v.content),
-			};
-		});
 	},
 
 	get 'posts/'() {
@@ -68,30 +68,40 @@ export const DATA = {
 			};
 		}
 
-		const thumbnails: Record<string, string> = {};
-		const memo: Array<[slug: string, find: RegExp, url: string]> = [];
-
-		const contents = traverse(
+		return traverse(
 			{ entry: 'content/sites/dev.mauss/posts', depth: 1 },
-			({ breadcrumb: [file, slug], buffer, parse }) => {
-				if (file !== '+article.md') {
-					const path = assemble(buffer, `/posts/${slug}/${file}`);
-					if (path) {
-						if (file.startsWith('thumbnail.')) thumbnails[slug] = path;
-						memo.push([slug, regexp(`./${file}`, 'g'), path]);
-					}
-					return;
-				}
+			({ breadcrumb: [file, slug], buffer, parse, siblings }) => {
+				if (file !== '+article.md') return;
 
-				const { metadata, content } = parse(buffer.toString('utf-8'));
+				const { content, metadata } = parse(buffer.toString('utf-8'));
+				const replacements = siblings.flatMap<[find: RegExp, url: string]>(
+					// TODO: replace `path` with `breadcrumb` in marqua
+					({ buffer, path, type }) => {
+						if (type === 'directory' || path.endsWith('.md')) return [];
+						const [file, slug] = path.split('/').reverse();
+						const output = assemble(buffer, `/posts/${slug}/${file}`);
+						return output ? [[regexp(`./${file}`), output]] : [];
+					},
+				);
+
+				const thumbnail = replacements.find(([f]) => {
+					const source = f.source.replace(/\\/g, '');
+					return source.startsWith('./thumbnail.');
+				});
 				const specified: FrontMatter = {
 					slug,
 					date: metadata.date,
 					title: metadata.title,
 					category: metadata.tags[0],
 					tags: metadata.tags,
+					thumbnail: thumbnail ? thumbnail[1] : metadata.thumbnail,
 				};
-				return { ...metadata, ...specified, content };
+
+				return {
+					...metadata,
+					...specified,
+					content: replacements.reduce((c, [f, u]) => c.replace(f, u), content),
+				};
 			},
 			chain({
 				base: 'posts/',
@@ -100,16 +110,6 @@ export const DATA = {
 				},
 			}),
 		);
-
-		return contents.map((v) => {
-			const replacements = memo.filter(([s]) => s === v.slug);
-
-			return {
-				...v,
-				thumbnail: thumbnails[v.slug] || v.thumbnail,
-				content: replacements.reduce((c, [, f, u]) => c.replace(f, u), v.content),
-			};
-		});
 	},
 
 	get 'quotes/'() {
@@ -181,21 +181,25 @@ export const DATA = {
 			return Math.round((total / ratings.length + Number.EPSILON) * 100) / 100;
 		}
 
-		const memo: Array<[slug: string, find: RegExp, url: string]> = [];
-		const contents = traverse(
+		return traverse(
 			{ entry: 'content/sites/dev.mauss/reviews', depth: -1 },
-			({ breadcrumb: [file, slug, category], buffer, parse }) => {
-				if (file !== '+article.md') {
-					const path = assemble(buffer, `/reviews/${category}/${slug}/${file}`);
-					path && memo.push([`${category}/${slug}`, regexp(`./${file}`, 'g'), path]);
-					return;
-				}
+			({ breadcrumb: [file, slug, category], buffer, parse, siblings }) => {
+				if (file !== '+article.md') return;
 
 				const { content, metadata } = parse(buffer.toString('utf-8'));
 				if (metadata.draft) return;
 
-				const delta = +new Date(metadata.date) - +new Date(metadata.seen.first);
+				const replacements = siblings.flatMap<[find: RegExp, url: string]>(
+					// TODO: replace `path` with `breadcrumb` in marqua
+					({ buffer, path, type }) => {
+						if (type === 'directory') return [];
+						const [file, slug, category] = path.split('/').reverse();
+						const output = assemble(buffer, `/reviews/${category}/${slug}/${file}`);
+						return output ? [[regexp(`./${file}`), output]] : [];
+					},
+				);
 
+				const delta = +new Date(metadata.date) - +new Date(metadata.seen.first);
 				const specified: FrontMatter = {
 					category,
 					slug: `${category}/${slug}`,
@@ -232,7 +236,10 @@ export const DATA = {
 				return {
 					...metadata,
 					...specified,
-					content: contentParser(specified, summary),
+					content: replacements.reduce(
+						(c, [f, u]) => c.replace(f, u),
+						contentParser(specified, summary),
+					),
 				};
 			},
 			chain({
@@ -241,14 +248,5 @@ export const DATA = {
 				sort: (x, y) => compare.date(x.date, y.date),
 			}),
 		);
-
-		return contents.map((v) => {
-			const replacements = memo.filter(([s]) => s === v.slug);
-
-			return {
-				...v,
-				content: replacements.reduce((c, [, f, u]) => c.replace(f, u), v.content),
-			};
-		});
 	},
 } as const;

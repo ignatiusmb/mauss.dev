@@ -41,7 +41,7 @@
 	<meta property="og:site_name" content="Alchemauss" />
 	<meta property="og:locale" content="en_ID" />
 
-	{#if $page.data.meta.og}
+	{#if $page.data.meta?.og}
 		{@const { title, url, description } = $page.data.meta.og}
 		<meta property="og:title" content={title} />
 		<meta property="og:type" content="article" />
