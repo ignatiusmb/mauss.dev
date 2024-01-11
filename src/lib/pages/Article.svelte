@@ -45,12 +45,9 @@
 				<h1>{post.title.en}</h1>
 			{/if}
 
-			<span>
-				<img src={post.author?.img || '/assets/profile/mauss.jpg'} alt="author profile" />
-				<a href={post.author?.link || '/about/'}>
-					{post.author?.name || 'Ignatius Bagussuputra'}
-				</a>
-			</span>
+			<a href={post.author?.link || '/about/'}>
+				{post.author?.name || 'Ignatius Bagussuputra'}
+			</a>
 
 			<slot name="header" />
 		</header>
@@ -124,21 +121,16 @@
 		font-family: var(--mrq-heading);
 	}
 
-	aside,
-	header > span {
+	aside {
 		display: grid;
 		gap: 0.5rem;
 		grid-auto-flow: column;
 		align-items: center;
 		font-size: 0.875rem;
 	}
-	header > span {
-		grid-template-columns: 1.5rem 1fr;
+	header > a {
 		margin: 0.5rem 0;
 		font-size: 1rem;
-	}
-	header > span img {
-		border-radius: 50%;
 	}
 	header > h1,
 	main > :global(h1) {
