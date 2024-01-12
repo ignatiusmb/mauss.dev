@@ -23,12 +23,10 @@ export const DATA = {
 
 				const { content, metadata } = parse(buffer.toString('utf-8'));
 				const replacements = siblings.flatMap<[find: RegExp, url: string]>(
-					// TODO: replace `path` with `breadcrumb` in marqua
-					({ buffer, path, type }) => {
+					({ type, name, buffer }) => {
 						if (type === 'directory') return [];
-						const [file, slug] = path.split('/').reverse();
-						const output = assemble(buffer, `/curated/${slug}/${file}`);
-						return output ? [[regexp(`./${file}`), output]] : [];
+						const output = assemble(buffer, `/curated/${slug}/${name}`);
+						return output ? [[regexp(`./${name}`), output]] : [];
 					},
 				);
 
@@ -75,12 +73,10 @@ export const DATA = {
 
 				const { content, metadata } = parse(buffer.toString('utf-8'));
 				const replacements = siblings.flatMap<[find: RegExp, url: string]>(
-					// TODO: replace `path` with `breadcrumb` in marqua
-					({ buffer, path, type }) => {
-						if (type === 'directory' || path.endsWith('.md')) return [];
-						const [file, slug] = path.split('/').reverse();
-						const output = assemble(buffer, `/posts/${slug}/${file}`);
-						return output ? [[regexp(`./${file}`), output]] : [];
+					({ type, name, buffer }) => {
+						if (type === 'directory' || name.endsWith('.md')) return [];
+						const output = assemble(buffer, `/posts/${slug}/${name}`);
+						return output ? [[regexp(`./${name}`), output]] : [];
 					},
 				);
 
@@ -162,19 +158,6 @@ export const DATA = {
 			closing?: string;
 		}
 
-		function contentParser<T extends Record<string, any>>(data: T, content: string): string {
-			const traverse = (meta: T | string, properties: string): string => {
-				for (const key of properties.split(':')) {
-					if (meta && typeof meta !== 'string') {
-						meta = meta[Number.isNaN(Number(key)) ? key : Number(key)];
-					}
-				}
-				return meta as string;
-			};
-
-			return content.replace(/#{(.+)}!/g, (s, c) => (c && traverse(data, c)) || s);
-		}
-
 		function countAverageRating(ratings?: string[]): number | undefined {
 			if (!ratings || ratings.some((n) => Number.isNaN(+n))) return;
 			const total = ratings.reduce((acc, cur) => +cur + acc, 0);
@@ -190,12 +173,10 @@ export const DATA = {
 				if (metadata.draft) return;
 
 				const replacements = siblings.flatMap<[find: RegExp, url: string]>(
-					// TODO: replace `path` with `breadcrumb` in marqua
-					({ buffer, path, type }) => {
+					({ type, name, buffer }) => {
 						if (type === 'directory') return [];
-						const [file, slug, category] = path.split('/').reverse();
-						const output = assemble(buffer, `/reviews/${category}/${slug}/${file}`);
-						return output ? [[regexp(`./${file}`), output]] : [];
+						const output = assemble(buffer, `/reviews/${category}/${slug}/${name}`);
+						return output ? [[regexp(`./${name}`), output]] : [];
 					},
 				);
 
@@ -226,20 +207,17 @@ export const DATA = {
 				// TODO: separate into their own files
 				const [article, closing] = content.split(/^## \$CLOSING/m);
 				if (closing) {
-					specified.closing = marker.render(contentParser(specified, closing));
+					specified.closing = marker.render(closing);
 				}
 				const [summary, spoilers] = article.split(/^## \$SPOILERS/m);
 				if (spoilers) {
-					specified.spoilers = marker.render(contentParser(specified, spoilers));
+					specified.spoilers = marker.render(spoilers);
 				}
 
 				return {
 					...metadata,
 					...specified,
-					content: replacements.reduce(
-						(c, [f, u]) => c.replace(f, u),
-						contentParser(specified, summary),
-					),
+					content: replacements.reduce((c, [f, u]) => c.replace(f, u), summary),
 				};
 			},
 			chain({
