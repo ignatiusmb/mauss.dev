@@ -30,6 +30,7 @@
 	div {
 		display: grid;
 		margin: 0;
+		line-height: 2;
 		font-size: 1rem;
 	}
 	a {
