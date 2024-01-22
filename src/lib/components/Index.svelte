@@ -4,11 +4,11 @@
 
 <details id="index">
 	<summary>Article Index</summary>
-	<p>
+	<div>
 		{#each items as { id, title, level = 2 }}
 			<a href="#{id}" style:padding-left="{level * 0.5}rem">{title}</a>
 		{/each}
-	</p>
+	</div>
 </details>
 
 <style>
@@ -27,9 +27,10 @@
 	summary::marker {
 		text-align: right;
 	}
-	p {
+	div {
 		display: grid;
 		margin: 0;
+		line-height: 2;
 		font-size: 1rem;
 	}
 	a {

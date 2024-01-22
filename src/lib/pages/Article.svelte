@@ -192,7 +192,7 @@
 	main section#end-card {
 		padding: 0.4rem 0.8rem;
 		border-left: 2px solid var(--theme-secondary);
-		background-color: rgba(0, 0, 0, 0.25);
+		background-color: rgba(0, 0, 0, 0.15);
 	}
 	main :global(p),
 	main :global(li) {
