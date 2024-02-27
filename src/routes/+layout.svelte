@@ -2,7 +2,7 @@
 	import '@fontsource-variable/karla';
 	import '@fontsource-variable/fira-code';
 	import '@ignatiusmb/styles/core.css';
-	import 'marqua/styles/code.css';
+	import 'aubade/styles/code.css';
 	import '../app.css';
 	import '$lib/styles/blog.css';
 

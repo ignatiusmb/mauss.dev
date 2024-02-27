@@ -4,7 +4,7 @@ Personal website, handcrafted with ❤️ using these tools
 
 |              Framework              |                 Library                  |               Parser               |
 | :---------------------------------: | :--------------------------------------: | :--------------------------------: |
-| [SvelteKit](https://kit.svelte.dev) | [Syv](https://github.com/ignatiusmb/syv) | [Marqua](https://marqua.mauss.dev) |
+| [SvelteKit](https://kit.svelte.dev) | [Syv](https://github.com/ignatiusmb/syv) | [Aubade](https://aubade.mauss.dev) |
 
 ## Contributing
 

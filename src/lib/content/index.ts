@@ -1,5 +1,5 @@
-import { traverse } from 'marqua/fs';
-import { chain } from 'marqua/transform';
+import { traverse } from 'aubade/compass';
+import { chain } from 'aubade/transform';
 import { exists } from 'mauss/guards';
 import { compare } from 'mauss';
 import { assemble } from './media';
@@ -15,15 +15,15 @@ export const DATA = {
 			tags?: string[];
 		}
 
-		return traverse(
-			{
-				entry: 'content/sites/dev.mauss/curated',
-				depth: -1,
-				files(path) {
-					const file = path.slice(path.lastIndexOf('/') + 1);
-					return file[0] === '+' && file.endsWith('.md');
-				},
+		const shelf = traverse('content/sites/dev.mauss/curated', {
+			depth: -1,
+			files(path) {
+				const file = path.slice(path.lastIndexOf('/') + 1);
+				return file[0] === '+' && file.endsWith('.md');
 			},
+		});
+
+		return shelf.hydrate(
 			({ breadcrumb: [file, slug], buffer, parse, marker, siblings }) => {
 				const { body, metadata } = parse(buffer.toString('utf-8'));
 
@@ -69,12 +69,12 @@ export const DATA = {
 			};
 		}
 
-		return traverse(
-			{
-				entry: 'content/sites/dev.mauss/posts',
-				depth: 1,
-				files: (path) => path.endsWith('+article.md'),
-			},
+		const shelf = traverse('content/sites/dev.mauss/posts', {
+			depth: 1,
+			files: (path) => path.endsWith('+article.md'),
+		});
+
+		return shelf.hydrate(
 			({ breadcrumb: [, slug], buffer, parse, marker, siblings }) => {
 				const { body, metadata } = parse(buffer.toString('utf-8'));
 
@@ -109,8 +109,7 @@ export const DATA = {
 	},
 
 	get 'quotes/'() {
-		return traverse(
-			{ entry: 'content/sites/dev.mauss/quotes' },
+		return traverse('content/sites/dev.mauss/quotes').hydrate(
 			({ breadcrumb: [file], buffer, parse }) => {
 				const content: Array<{ author: string; quote: string; from: string }> = [];
 				const author = file.slice(0, -3).replace(/-/g, ' ');
@@ -167,15 +166,15 @@ export const DATA = {
 			return Math.round((total / ratings.length + Number.EPSILON) * 100) / 100;
 		}
 
-		return traverse(
-			{
-				entry: 'content/sites/dev.mauss/reviews',
-				depth: -1,
-				files(path) {
-					const file = path.slice(path.lastIndexOf('/') + 1);
-					return file[0] === '+' && file.endsWith('.md');
-				},
+		const shelf = traverse('content/sites/dev.mauss/reviews', {
+			depth: -1,
+			files(path) {
+				const file = path.slice(path.lastIndexOf('/') + 1);
+				return file[0] === '+' && file.endsWith('.md');
 			},
+		});
+
+		return shelf.hydrate(
 			({ breadcrumb: [file, slug, category], buffer, parse, marker, siblings }) => {
 				const { body, metadata } = parse(buffer.toString('utf-8'));
 				if (metadata.draft) return;
