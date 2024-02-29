@@ -3,8 +3,9 @@
 
 	// tuple -> [background: string, color: string]
 	const represent = {
-		accessibility: ['#4285F4', '#ffffff'],
+		accessibility: ['#4285f4', '#ffffff'],
 		android: ['#56a036', '#ffffff'],
+		concert: ['#ff6f00', '#ffffff'],
 		firebase: ['#ffca28', '#757575'],
 		flutter: ['#54c5f8', '#003b6c'],
 		git: ['#f54d27', '#413932'],
@@ -13,6 +14,7 @@
 		javascript: ['#f7df1e', '#000000'],
 		life: ['#4caf50', '#ffffff'],
 		lighthouse: ['#304ffe', '#ffffff'],
+		music: ['#1e88e5', '#ffffff'],
 		nodejs: ['#90c53f', '#46483d'],
 		ppl2020: ['#feb229', '#000000'],
 		python: ['#3879ab', '#ffda5d'],

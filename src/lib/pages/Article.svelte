@@ -3,7 +3,7 @@
 	import Index from '$lib/components/Index.svelte';
 
 	import type { ComponentProps } from 'svelte';
-	import { hydrate } from 'marqua/browser';
+	import { hydrate } from 'aubade/browser';
 	import { dt } from 'mauss';
 	import { navigating } from '$app/stores';
 

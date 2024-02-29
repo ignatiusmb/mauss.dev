@@ -1,9 +1,8 @@
-import { traverse } from 'marqua/fs';
+import { traverse } from 'aubade/compass';
 import { compare } from 'mauss';
 import { RSS, channel } from './builder';
 
-const items = traverse(
-	{ entry: 'content/sites/dev.mauss', depth: -1 },
+const items = traverse('content/sites/dev.mauss', { depth: -1 }).hydrate(
 	({ breadcrumb, buffer, parse }) => {
 		if (breadcrumb[0].includes('draft')) return;
 		if (!breadcrumb[0].endsWith('.md')) return;
