@@ -11,23 +11,20 @@ const items = traverse('content/sites/dev.mauss', { depth: -1 }).hydrate(
 		const { title, date, description: info } = metadata;
 
 		switch (true) {
-			case breadcrumb.includes('curated'): {
-				const [file, dir] = breadcrumb;
-				const slug = `curated/${dir}/${file.replace('.md', '')}`;
+			case breadcrumb.includes('curated') && breadcrumb[0].startsWith('+article'): {
+				const slug = `curated/${breadcrumb[1]}`;
 				const description = `${title} curated by Alchemauss`;
 				return { slug, title, description, date };
 			}
-			case breadcrumb.includes('reviews'): {
+			case breadcrumb.includes('reviews') && breadcrumb[0].startsWith('+article'): {
 				if (metadata.verdict === 'pending') return;
-				const [file, category] = breadcrumb;
-				const slug = `reviews/${category}/${file.replace('.md', '')}`;
+				const slug = `reviews/${breadcrumb[2]}/${breadcrumb[1]}`;
 				const name = typeof title === 'string' ? title : title.en;
 				const description = `${name} reviewed by Alchemauss`;
 				return { slug, title: name, description, date };
 			}
 			case breadcrumb.includes('posts'): {
-				const [, dir] = breadcrumb;
-				const slug = `posts/${dir.replace('.md', '')}`;
+				const slug = `posts/${breadcrumb[1].replace('.md', '')}`;
 				const description = info || 'A post by Alchemauss';
 				return { slug, title, description, date };
 			}
