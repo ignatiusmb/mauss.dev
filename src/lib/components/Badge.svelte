@@ -2,7 +2,7 @@
 	export let tag: string;
 
 	// tuple -> [background: string, color: string]
-	const represent = {
+	$: represent = {
 		accessibility: ['#4285f4', '#ffffff'],
 		android: ['#56a036', '#ffffff'],
 		computing: ['#007acc', '#000000'],
