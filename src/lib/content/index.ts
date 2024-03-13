@@ -39,12 +39,13 @@ export const DATA = {
 					content: marker.render(content),
 					branches: siblings.flatMap(({ type, breadcrumb: [name], buffer }) => {
 						if (type !== 'file' || name[0] !== '+') return [];
-						const { body, metadata: extra } = parse(buffer.toString('utf-8'));
+						const { body, metadata: extras } = parse(buffer.toString('utf-8'));
 						return {
 							...metadata,
 							...specified,
+							...extras,
 							branch: name.slice(1, -3),
-							title: `${extra.title} of ${specified.title}`,
+							title: `${extras.title} of ${specified.title}`,
 							content: marker.render(body),
 						};
 					}),
@@ -210,12 +211,13 @@ export const DATA = {
 					content: marker.render(content),
 					branches: siblings.flatMap(({ type, breadcrumb: [name], buffer }) => {
 						if (type !== 'file' || name[0] !== '+') return [];
-						const { body, metadata: extra } = parse(buffer.toString('utf-8'));
+						const { body, metadata: extras } = parse(buffer.toString('utf-8'));
 						return {
 							...metadata,
 							...specified,
+							...extras,
 							branch: name.slice(1, -3),
-							title: `${extra.title} of ${specified.title.en}`,
+							title: `${extras.title} of ${specified.title.en}`,
 							content: marker.render(body),
 						};
 					}),
