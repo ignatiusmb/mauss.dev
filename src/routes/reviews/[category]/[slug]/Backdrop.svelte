@@ -1,9 +1,16 @@
 <script lang="ts">
-	export let post: import('./$types').PageData['article'];
+	export let post: {
+		backdrop?: string;
+		rating?: number;
+		title: string | { short?: string; en?: string; jp?: string };
+	};
 </script>
 
 <div class="banner">
-	<img src={post.backdrop} alt="{post.title.short || post.title.en} backdrop" />
+	<img
+		src={post.backdrop}
+		alt="{typeof post.title === 'string' ? post.title : post.title.short || post.title.en} backdrop"
+	/>
 
 	<small class="rating">⭐ {post.rating}</small>
 

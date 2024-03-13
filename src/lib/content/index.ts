@@ -7,8 +7,6 @@ import { assemble } from './media';
 export const DATA = {
 	get 'curated/'() {
 		interface FrontMatter {
-			branch: string;
-			branches: string[];
 			slug: string;
 			date: string;
 			title: string;
@@ -17,23 +15,13 @@ export const DATA = {
 
 		const shelf = traverse('content/sites/dev.mauss/curated', {
 			depth: -1,
-			files(path) {
-				const file = path.slice(path.lastIndexOf('/') + 1);
-				return file[0] === '+' && file.endsWith('.md');
-			},
 		});
 
-		return shelf.hydrate(
-			({ breadcrumb: [file, slug], buffer, parse, marker, siblings }) => {
+		const items = shelf.hydrate(
+			({ breadcrumb: [, slug], buffer, parse, marker, siblings }) => {
 				const { body, metadata } = parse(buffer.toString('utf-8'));
 
 				const specified: FrontMatter = {
-					branch: file.slice(1, -3),
-					branches: siblings.flatMap(({ type, breadcrumb: [name] }) => {
-						if (type !== 'file' && name[0] !== '+') return [];
-						return name === file ? [] : name.slice(1, -3);
-					}),
-
 					slug,
 					date: metadata.date,
 					title: metadata.title,
@@ -49,10 +37,23 @@ export const DATA = {
 					...metadata,
 					...specified,
 					content: marker.render(content),
+					branches: siblings.flatMap(({ type, breadcrumb: [name], buffer }) => {
+						if (type !== 'file' || name[0] !== '+') return [];
+						const { body, metadata: extra } = parse(buffer.toString('utf-8'));
+						return {
+							...metadata,
+							...specified,
+							branch: name.slice(1, -3),
+							title: `${extra.title} of ${specified.title}`,
+							content: marker.render(body),
+						};
+					}),
 				};
 			},
-			(items) => items.sort(compare.key('date', compare.date)),
+			(path) => path.endsWith('+article.md'),
 		);
+
+		return items.sort(compare.key('date', compare.date));
 	},
 
 	get 'posts/'() {
@@ -71,10 +72,9 @@ export const DATA = {
 
 		const shelf = traverse('content/sites/dev.mauss/posts', {
 			depth: 1,
-			files: (path) => path.endsWith('+article.md'),
 		});
 
-		return shelf.hydrate(
+		const items = shelf.hydrate(
 			({ breadcrumb: [, slug], buffer, parse, marker, siblings }) => {
 				const { body, metadata } = parse(buffer.toString('utf-8'));
 
@@ -99,17 +99,19 @@ export const DATA = {
 					content: marker.render(content),
 				};
 			},
-			chain({
-				base: 'posts/',
-				sort({ date: xd }, { date: yd }) {
-					return compare.date(xd, yd);
-				},
-			}),
+			(path) => path.endsWith('+article.md'),
 		);
+
+		return chain(items, {
+			base: 'posts/',
+			sort({ date: xd }, { date: yd }) {
+				return compare.date(xd, yd);
+			},
+		});
 	},
 
 	get 'quotes/'() {
-		return traverse('content/sites/dev.mauss/quotes').hydrate(
+		const items = traverse('content/sites/dev.mauss/quotes').hydrate(
 			({ breadcrumb: [file], buffer, parse }) => {
 				const content: Array<{ author: string; quote: string; from: string }> = [];
 				const author = file.slice(0, -3).replace(/-/g, ' ');
@@ -120,18 +122,15 @@ export const DATA = {
 				}
 				return content;
 			},
-			(items) => items.flat(),
 		);
+		return items.flat();
 	},
 
 	get 'reviews/'() {
 		interface FrontMatter {
-			category: string;
-			branch: string;
-			branches: string[];
-
 			slug: string;
 			date: string;
+			category: string;
 			released: string;
 			composed: number;
 
@@ -168,26 +167,16 @@ export const DATA = {
 
 		const shelf = traverse('content/sites/dev.mauss/reviews', {
 			depth: -1,
-			files(path) {
-				const file = path.slice(path.lastIndexOf('/') + 1);
-				return file[0] === '+' && file.endsWith('.md');
-			},
 		});
 
-		return shelf.hydrate(
-			({ breadcrumb: [file, slug, category], buffer, parse, marker, siblings }) => {
+		const items = shelf.hydrate(
+			({ breadcrumb: [, slug, category], buffer, parse, marker, siblings }) => {
 				const { body, metadata } = parse(buffer.toString('utf-8'));
 				if (metadata.draft) return;
 
 				const delta = +new Date(metadata.date) - +new Date(metadata.seen.first);
 				const specified: FrontMatter = {
 					category,
-					branch: file.slice(1, -3),
-					branches: siblings.flatMap(({ type, breadcrumb: [name] }) => {
-						if (type !== 'file' && name[0] !== '+') return [];
-						return name === file ? [] : name.slice(1, -3);
-					}),
-
 					slug: `${category}/${slug}`,
 					date: metadata.date,
 					released: metadata.released,
@@ -215,23 +204,30 @@ export const DATA = {
 					return content.replace(`./${file}`, output || `./${file}`);
 				}, body);
 
-				// TODO: separate into their own files
-				const [article, closing] = content.split(/^## \$CLOSING/m);
-				if (closing) specified.closing = marker.render(closing);
-				const [summary, spoilers] = article.split(/^## \$SPOILERS/m);
-				if (spoilers) specified.spoilers = marker.render(spoilers);
-
 				return {
 					...metadata,
 					...specified,
-					content: marker.render(summary),
+					content: marker.render(content),
+					branches: siblings.flatMap(({ type, breadcrumb: [name], buffer }) => {
+						if (type !== 'file' || name[0] !== '+') return [];
+						const { body, metadata: extra } = parse(buffer.toString('utf-8'));
+						return {
+							...metadata,
+							...specified,
+							branch: name.slice(1, -3),
+							title: `${extra.title} of ${specified.title.en}`,
+							content: marker.render(body),
+						};
+					}),
 				};
 			},
-			chain({
-				base: 'reviews/',
-				breakpoint: (r) => !r.rating || r.verdict === 'pending',
-				sort: (x, y) => compare.date(x.date, y.date),
-			}),
+			(path) => path.endsWith('+article.md'),
 		);
+
+		return chain(items, {
+			base: 'reviews/',
+			breakpoint: (r) => !r.rating || r.verdict === 'pending',
+			sort: (x, y) => compare.date(x.date, y.date),
+		});
 	},
 } as const;

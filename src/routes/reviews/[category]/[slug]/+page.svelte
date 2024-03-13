@@ -2,7 +2,6 @@
 	import Article from '$lib/pages/Article.svelte';
 	import Link from '$lib/components/Link.svelte';
 	import Backdrop from './Backdrop.svelte';
-	import Spoilers from './SpoilerSection.svelte';
 
 	export let data;
 </script>
@@ -40,14 +39,6 @@
 	</section>
 
 	{@html data.article.content}
-
-	{#if data.article.spoilers}
-		<Spoilers spoilers={data.article.spoilers} />
-	{/if}
-
-	{#if data.article.closing}
-		{@html data.article.closing}
-	{/if}
 </Article>
 
 <style>
