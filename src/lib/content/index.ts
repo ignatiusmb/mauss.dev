@@ -13,11 +13,7 @@ export const DATA = {
 			tags?: string[];
 		}
 
-		const shelf = traverse('content/sites/dev.mauss/curated', {
-			depth: -1,
-		});
-
-		const items = shelf.hydrate(
+		const items = traverse('content/sites/dev.mauss/curated', { depth: -1 }).hydrate(
 			({ breadcrumb: [, slug], buffer, parse, marker, siblings }) => {
 				const { body, metadata } = parse(buffer.toString('utf-8'));
 
@@ -71,11 +67,7 @@ export const DATA = {
 			};
 		}
 
-		const shelf = traverse('content/sites/dev.mauss/posts', {
-			depth: 1,
-		});
-
-		const items = shelf.hydrate(
+		const items = traverse('content/sites/dev.mauss/posts', { depth: 1 }).hydrate(
 			({ breadcrumb: [, slug], buffer, parse, marker, siblings }) => {
 				const { body, metadata } = parse(buffer.toString('utf-8'));
 
@@ -166,11 +158,7 @@ export const DATA = {
 			return Math.round((total / ratings.length + Number.EPSILON) * 100) / 100;
 		}
 
-		const shelf = traverse('content/sites/dev.mauss/reviews', {
-			depth: -1,
-		});
-
-		const items = shelf.hydrate(
+		const items = traverse('content/sites/dev.mauss/reviews', { depth: -1 }).hydrate(
 			({ breadcrumb: [, slug, category], buffer, parse, marker, siblings }) => {
 				const { body, metadata } = parse(buffer.toString('utf-8'));
 				if (metadata.draft) return;

@@ -61,7 +61,8 @@
 						{#if idx !== 0}<span class="dash">&mdash;</span>{/if}
 						<a href="/{root}/{post.slug}/{branch}">{branch}</a>
 					{:else}
-						<a href={$page.url.pathname.replace($page.params.branch, '')}>Back to Article</a>
+						{@const idx = $page.url.pathname.lastIndexOf('/')}
+						<a href={$page.url.pathname.slice(0, idx)}>Back to Article</a>
 					{/each}
 					<span>]</span>
 				</div>
