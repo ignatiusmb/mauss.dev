@@ -18,26 +18,7 @@
 				{/each}
 			</small>
 		{/if}
-
-		<div style:text-transform="capitalize">
-			<span>[</span>
-			{#each data.article.branches as branch, idx}
-				{@const b = branch === 'article' ? '' : branch}
-				{#if idx !== 0}<span class="dash">&mdash;</span>{/if}
-				<a href="/curated/{data.article.slug}/{b}">{branch}</a>
-			{/each}
-			<span>]</span>
-		</div>
 	</svelte:fragment>
 
 	{@html data.article.content}
 </Article>
-
-<style>
-	div {
-		display: flex;
-	}
-	div :not(:first-child) {
-		margin-left: 0.25rem;
-	}
-</style>

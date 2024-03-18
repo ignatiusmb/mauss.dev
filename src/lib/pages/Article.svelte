@@ -5,7 +5,7 @@
 	import type { ComponentProps } from 'svelte';
 	import { hydrate } from 'aubade/browser';
 	import { dt } from 'mauss';
-	import { navigating } from '$app/stores';
+	import { navigating, page } from '$app/stores';
 
 	export let path = '';
 	export let post: null | {
@@ -13,9 +13,13 @@
 		title: string | { en?: string; jp?: string };
 		table: ComponentProps<Index>['items'];
 
+		slug?: string;
 		author?: { name?: string; link?: string; img?: string };
 		description?: string;
 		estimate?: number;
+		branches?: Array<{
+			branch: string;
+		}>;
 	} = null;
 
 	type Flank = null | { slug: string; title: string | Record<string, any> };
@@ -48,6 +52,21 @@
 			<a href={post.author?.link || '/about/'}>
 				{post.author?.name || 'Ignatius Bagussuputra'}
 			</a>
+
+			{#if $page.params.branch || post.branches?.length}
+				<div style:display="flex" style:gap="0.25rem" style:text-transform="capitalize">
+					<span>[</span>
+					{#each post.branches || [] as { branch }, idx}
+						{@const root = $page.url.pathname.split('/')[1]}
+						{#if idx !== 0}<span class="dash">&mdash;</span>{/if}
+						<a href="/{root}/{post.slug}/{branch}">{branch}</a>
+					{:else}
+						{@const idx = $page.url.pathname.lastIndexOf('/')}
+						<a href={$page.url.pathname.slice(0, idx)}>Back to Article</a>
+					{/each}
+					<span>]</span>
+				</div>
+			{/if}
 
 			<slot name="header" />
 		</header>

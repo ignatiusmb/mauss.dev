@@ -4,7 +4,7 @@ export async function load({ fetch }) {
 	const { items }: Schema = await fetch('/content/curated.json').then((r) => r.json());
 
 	return {
-		list: items.filter(({ branch }) => branch === 'article'),
+		list: items,
 		meta: {
 			canonical: 'curated',
 			title: 'Curated',

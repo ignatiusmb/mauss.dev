@@ -1,15 +1,14 @@
 <script lang="ts">
 	import Article from '$lib/pages/Article.svelte';
-	import Link from '$lib/components/Link.svelte';
-	import Backdrop from './Backdrop.svelte';
+	import Backdrop from '../Backdrop.svelte';
+	import { page } from '$app/stores';
 
 	export let data;
 </script>
 
 <Article
 	post={data.article}
-	path="sites/dev.mauss/reviews/{data.article.slug}/+article.md"
-	flank={data.article.flank}
+	path="sites/dev.mauss/curated/{data.article.slug}/+{$page.params.branch}.md"
 >
 	<svelte:fragment slot="header">
 		<Backdrop post={data.article} />
@@ -32,28 +31,5 @@
 		{/if}
 	</svelte:fragment>
 
-	<section class="info-box warning">
-		<Link href="/disclaimer/" style="danger">
-			<h2>DISCLAIMER</h2>
-		</Link>
-	</section>
-
 	{@html data.article.content}
 </Article>
-
-<style>
-	small {
-		display: flex;
-	}
-	small :not(:first-child) {
-		margin-left: 0.25rem;
-	}
-
-	section {
-		text-align: center;
-	}
-	section h2 {
-		margin-top: 0;
-		color: inherit;
-	}
-</style>
