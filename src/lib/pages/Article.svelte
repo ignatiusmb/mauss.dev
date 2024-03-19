@@ -69,6 +69,10 @@
 			{/if}
 
 			<slot name="header" />
+
+			{#if post.description}
+				<p style:text-align="center">{post.description}</p>
+			{/if}
 		</header>
 
 		{#if post.table.length}
