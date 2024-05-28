@@ -1,8 +1,10 @@
 <script lang="ts">
-	type Verdict = import('./$types').PageData['list'][number]['verdict'];
-	export let verdict: Verdict;
+	interface Props {
+		verdict: import('./$types').PageData['list'][number]['verdict'];
+	}
+	const { verdict }: Props = $props();
 
-	const mapper: Partial<Record<Verdict, Verdict>> = {
+	const mapper: Partial<Record<Props['verdict'], Props['verdict']>> = {
 		'must-watch': 'recommended',
 	};
 </script>

@@ -2,7 +2,7 @@
 	import Badge from '$lib/components/Badge.svelte';
 	import Article from '$lib/pages/Article.svelte';
 
-	export let data;
+	const { data } = $props();
 </script>
 
 <Article
@@ -10,13 +10,13 @@
 	path="sites/dev.mauss/posts/{data.article.slug}/+article.md"
 	flank={data.article.flank}
 >
-	<svelte:fragment slot="header">
+	{#snippet header()}
 		<small class="tags">
 			{#each data.article.tags as tag}
 				<Badge {tag} />
 			{/each}
 		</small>
-	</svelte:fragment>
+	{/snippet}
 
 	{#if data.article.title.startsWith('Accessibility!')}
 		<section class="info-box important">
@@ -40,8 +40,9 @@
 	small {
 		display: flex;
 		flex-wrap: wrap;
-	}
-	small :global(:not(:last-child)) {
-		margin-right: 0.5rem;
+
+		& :global(:not(:last-child)) {
+			margin-right: 0.5rem;
+		}
 	}
 </style>

@@ -1,10 +1,11 @@
 import type { Schema } from '$content/reviews.json/+server.js';
 
-export async function load({ fetch }) {
+export async function load({ fetch, url }) {
 	const { items, metadata }: Schema = await fetch('/content/reviews.json').then((r) => r.json());
 
 	return {
 		list: items,
+		query: url.searchParams.get('q') || '',
 		unique: {
 			categories: metadata.categories,
 			genres: metadata.genres,

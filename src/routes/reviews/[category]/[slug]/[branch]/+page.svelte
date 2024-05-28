@@ -3,14 +3,14 @@
 	import Backdrop from '../Backdrop.svelte';
 	import { page } from '$app/stores';
 
-	export let data;
+	const { data } = $props();
 </script>
 
 <Article
 	post={data.article}
 	path="sites/dev.mauss/curated/{data.article.slug}/+{$page.params.branch}.md"
 >
-	<svelte:fragment slot="header">
+	{#snippet header()}
 		<Backdrop post={data.article} />
 
 		{#if data.article.link}
@@ -29,7 +29,7 @@
 				<span>]</span>
 			</small>
 		{/if}
-	</svelte:fragment>
+	{/snippet}
 
 	{@html data.article.content}
 </Article>

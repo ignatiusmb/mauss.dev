@@ -3,10 +3,16 @@
 	import { TIME } from 'syv/options';
 	import { navigating } from '$app/stores';
 
-	export let spoilers: string;
+	interface Props {
+		spoilers: string;
+	}
+	const { spoilers }: Props = $props();
 
-	let checked = false;
-	$: checked = $navigating ? false : checked;
+	let checked = $state(false);
+
+	$effect(() => {
+		if ($navigating) checked = false;
+	});
 </script>
 
 <section class="info-box note">
@@ -39,14 +45,15 @@
 		cursor: pointer;
 		width: 100%;
 		display: flex;
-	}
-	label input {
-		display: none;
-	}
-	label span {
-		font-size: 2rem;
-		letter-spacing: 0.25ch;
-		text-transform: uppercase;
+
+		input {
+			display: none;
+		}
+		span {
+			font-size: 2rem;
+			letter-spacing: 0.25ch;
+			text-transform: uppercase;
+		}
 	}
 
 	.info-box.important {

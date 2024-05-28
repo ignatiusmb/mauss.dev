@@ -125,29 +125,9 @@
 			<span>| ignatius.mbs@gmail.com</span>
 		</li>
 		<li>
-			<span>🚫</span>
-			<a href="https://www.facebook.com/ignatiusmb">Facebook</a>
-			<span>| Keepsake from childhood</span>
-		</li>
-		<li>
 			<span>🟢</span>
-			<a href="https://www.instagram.com/ignatiusmb">Instagram</a>
-			<span>| Come say hello!</span>
-		</li>
-		<li>
-			<span>🟡</span>
-			<a href="https://www.linkedin.com/in/ignatiusmb">LinkedIn</a>
-			<span>| Professionally mandatory</span>
-		</li>
-		<li>
-			<span>🟡</span>
-			<a href="https://twitter.com/alchemauss">X (formerly Twitter)</a>
-			<span>| Is this still relevant?</span>
-		</li>
-		<li>
-			<span>🟡</span>
-			<a href="https://keybase.io/mauss">Keybase</a>
-			<span>| Does anyone actually use this?</span>
+			<a href="https://discord.com/users/231822751504138240">Discord</a>
+			<span>| Everything in one place (@ignatiusmb)</span>
 		</li>
 		<li>
 			<span>🟢</span>
@@ -155,9 +135,9 @@
 			<span>| Where I am most of the time</span>
 		</li>
 		<li>
-			<span>🟡</span>
-			<a href="https://gitlab.com/ignatiusmb">GitLab</a>
-			<span>| Keepsake from university</span>
+			<span>🟢</span>
+			<a href="https://www.instagram.com/ignatiusmb">Instagram</a>
+			<span>| Come say hello!</span>
 		</li>
 		<li>
 			<span>🟢</span>
@@ -176,17 +156,37 @@
 		</li>
 		<li>
 			<span>🟢</span>
-			<a href="https://discord.com/users/231822751504138240">Discord</a>
-			<span>| Everything in one place (@ignatiusmb)</span>
-		</li>
-		<li>
-			<span>🟢</span>
 			<a href="https://t.me/ignatiusmb">Telegram</a>
 			<span>| Quick and convenient</span>
 		</li>
 		<li>
+			<span>🟡</span>
+			<a href="https://gitlab.com/ignatiusmb">GitLab</a>
+			<span>| Keepsake from university</span>
+		</li>
+		<li>
+			<span>🟡</span>
+			<a href="https://www.linkedin.com/in/ignatiusmb">LinkedIn</a>
+			<span>| Professionally mandatory</span>
+		</li>
+		<li>
+			<span>🟡</span>
+			<a href="https://twitter.com/alchemauss">X (formerly Twitter)</a>
+			<span>| Is this still relevant?</span>
+		</li>
+		<li>
+			<span>🟡</span>
+			<a href="https://keybase.io/mauss">Keybase</a>
+			<span>| Does anyone actually use this?</span>
+		</li>
+		<li>
 			<span>🔒</span>
 			<span>Signal | Personal communication app</span>
+		</li>
+		<li>
+			<span>🚫</span>
+			<a href="https://www.facebook.com/ignatiusmb">Facebook</a>
+			<span>| Keepsake from childhood</span>
 		</li>
 	</ul>
 

@@ -4,11 +4,10 @@
 	import { random } from 'mauss';
 	import { fly } from 'svelte/transition';
 
-	export let quotes: any;
+	const { quotes }: any = $props();
 
-	let quoteIndex = random.int(quotes.length);
-	$: newQuote = quotes[quoteIndex];
-	$: ({ author, quote, from } = newQuote);
+	let quoteIndex = $state(random.int(quotes.length));
+	const { author, quote, from } = $derived(quotes[quoteIndex]);
 </script>
 
 {#key quoteIndex}
@@ -18,7 +17,7 @@
 			<p class="from">{from}</p>
 		{/if}
 		<button
-			on:click={() => {
+			onclick={() => {
 				let newIndex = quoteIndex;
 				do newIndex = random.int(quotes.length);
 				while (newIndex === quoteIndex);

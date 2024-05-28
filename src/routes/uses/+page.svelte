@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Article from '$lib/pages/Article.svelte';
 
-	export let data;
+	const { data } = $props();
 
 	const table = [
 		{ id: 'personal-computer', title: 'Personal Computer', level: 2 },
@@ -21,10 +21,10 @@
 </script>
 
 <Article post={{ date: data.updated, title: data.meta.title, table }}>
-	<svelte:fragment slot="header">
+	{#snippet header()}
 		<!-- prettier-ignore -->
 		<p><strong>Disclaimer</strong>: <em>This page contains some affiliate links and I may earn a small commission if you make a purchase through one of these links, without any additional cost to you.</em></p>
-	</svelte:fragment>
+	{/snippet}
 
 	<!-- prettier-ignore -->
 	<p>Inspired by <a href="https://wesbos.com/uses">Wes Bos</a> &mdash; All sorts of apps, products, services, and other things that I use. Following the "quality over quantity" as my rule of thumb, it saved me a lot of time, energy, and even health. Without further ado, here's the list of stuff that I use...</p>

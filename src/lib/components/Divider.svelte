@@ -1,8 +1,11 @@
 <script lang="ts">
-	export let type: 'horizontal' | 'vertical';
+	interface Props {
+		type: 'horizontal' | 'vertical';
+	}
+	const { type }: Props = $props();
 </script>
 
-<div class="divider {type}" />
+<div class="divider {type}"></div>
 
 <style>
 	div {

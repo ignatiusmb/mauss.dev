@@ -3,7 +3,7 @@
 
 	import { dt } from 'mauss';
 
-	export let data;
+	const { data } = $props();
 </script>
 
 <Article>
