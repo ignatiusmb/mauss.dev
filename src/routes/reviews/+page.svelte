@@ -62,10 +62,6 @@
 	filter={() => {
 		syv.load(import('$lib/components/Dialog$SearchFilter.svelte'), {
 			filters: data.unique,
-			styles: {
-				'--background': 'var(--bg-base)',
-				'--padding': '1rem 1.5rem 1.5rem',
-			},
 		});
 	}}
 >

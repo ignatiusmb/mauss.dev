@@ -13,12 +13,18 @@
 			| { selected: string; options: Record<string, string>; required?: boolean }
 		>;
 		onclose?: Forwarded['onclose'];
-		styles?: Forwarded['styles'];
 	}
 	let { filters, ...props }: Props = $props();
 </script>
 
-<Dialog {...props}>
+<Dialog
+	{...props}
+	styles={{
+		'--backdrop-filter': 'none',
+		'--background': 'var(--bg-base)',
+		'--padding': '1rem 1.5rem 1.5rem',
+	}}
+>
 	{#snippet children({ forward })}
 		<header>
 			<h2>Search filters</h2>
@@ -67,10 +73,13 @@
 
 <style>
 	header {
+		position: sticky;
+		top: 0;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		border-radius: inherit;
+		background: inherit;
 
 		button {
 			display: flex;
@@ -89,7 +98,7 @@
 	.options {
 		display: grid;
 		gap: 1rem;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
 		margin-top: 1rem;
 		background: inherit;
 
