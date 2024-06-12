@@ -18,11 +18,13 @@
 <SearchBar
 	value=""
 	items={data.list}
-	transformer={(i) => ({
-		slug: i.slug,
-		title: i.title,
-		description: i.description || '',
-	})}
+	sieve={({ query, normalize, item: { slug, title, description } }) => {
+		const value = normalize(query);
+		if (slug.includes(value)) return true;
+		if (normalize(title).includes(value)) return true;
+		if (description && normalize(description).includes(value)) return true;
+		return false;
+	}}
 >
 	{#snippet children({ query, index })}
 		<div id="layout">
@@ -31,7 +33,7 @@
 					animate:flip={{ duration: TIME.SLIDE }}
 					transition:scale|local={{ duration: TIME.SLIDE }}
 				>
-					<Image src={post.thumbnail || ''} alt={post.title} overlay>
+					<Image src={post.thumbnail || ''} alt={post.title}>
 						<span>{post.title}</span>
 					</Image>
 

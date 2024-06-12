@@ -13,7 +13,16 @@
 	<h1>Alchemauss Curation</h1>
 </header>
 
-<SearchBar value="" items={data.list} transformer={(i) => ({ slug: i.slug, title: i.title })}>
+<SearchBar
+	value=""
+	items={data.list}
+	sieve={({ query, normalize, item }) => {
+		const value = normalize(query);
+		if (item.slug.includes(value)) return true;
+		if (normalize(item.title).includes(value)) return true;
+		return false;
+	}}
+>
 	{#snippet children({ index })}
 		<div id="layout">
 			{#each index as { title, slug } (slug)}
