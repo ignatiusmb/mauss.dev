@@ -1,4 +1,5 @@
 import type { Schema } from '$content/reviews.json/+server.js';
+import { building } from '$app/environment';
 
 export async function load({ fetch, url }) {
 	const { items, metadata }: Schema = await fetch('/content/reviews.json').then((r) => r.json());
@@ -12,7 +13,7 @@ export async function load({ fetch, url }) {
 
 	return {
 		list: items,
-		query: url.searchParams.get('q') || '',
+		query: (!building && url.searchParams.get('q')) || '',
 		unique: {
 			category: {
 				selected: '',
