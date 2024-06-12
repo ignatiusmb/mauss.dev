@@ -53,7 +53,7 @@
 
 			a {
 				padding: 0.25rem 1rem;
-				border-bottom: none;
+				text-decoration: none;
 
 				&:hover {
 					background: rgba(255, 255, 255, 0.1);

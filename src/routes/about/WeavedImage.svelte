@@ -4,7 +4,7 @@
 </script>
 
 <div class="weaved-image">
-	<Image {src} {alt} absolute />
+	<Image {src} {alt} />
 	<div class="absolute border"></div>
 
 	<div class="absolute grid">
@@ -15,7 +15,7 @@
 	</div>
 
 	<div class="absolute blend">
-		<Image {src} {alt} absolute />
+		<Image {src} {alt} />
 		<div class="absolute grid">
 			<div></div>
 			<div class="empty"></div>
@@ -36,6 +36,14 @@
 			border: none;
 			border-radius: 0;
 			box-shadow: 0 0 1rem rgba(255, 255, 255, 0.7);
+		}
+
+		& :global(.syv-core-image) {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
 		}
 	}
 

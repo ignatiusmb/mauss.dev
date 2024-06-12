@@ -21,33 +21,23 @@
 		justify-content: center;
 		padding: 0.2rem 0;
 		border-radius: inherit;
-		background: rgba(0, 0, 0, 0.25);
-		font-size: 0.8rem;
-		color: #fff;
-	}
-	span {
+
+		background: var(--bg-base);
 		text-transform: capitalize;
+		font-size: 0.8rem;
+		color: #ffffff;
 	}
 	.not-recommended {
-		background: #d9534f;
+		/* burgundy */
+		background: #800020;
 	}
 	.contextual {
-		background: #f0ad4e;
+		/* ochre */
+		background: #cc7722;
 	}
-	.recommended {
-		background: #5cb85c;
-	}
+	.recommended,
 	.must-watch {
-		background: linear-gradient(
-			90deg,
-			#ce2029,
-			#c8460e,
-			#be6100,
-			#b07700,
-			#9f8b00,
-			#8c9c12,
-			#76ab39,
-			#5cb85c
-		);
+		/* cadmium green */
+		background: #006b3c;
 	}
 </style>

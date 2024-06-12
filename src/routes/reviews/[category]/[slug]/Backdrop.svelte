@@ -26,7 +26,7 @@
 </div>
 
 <style>
-	.banner {
+	div.banner {
 		z-index: -1;
 		opacity: 80%;
 		width: 100%;

@@ -61,6 +61,7 @@
 
 		outline: none;
 		outline-offset: 0;
+		text-decoration: none;
 		transition-duration: 240ms;
 	}
 	button {
@@ -83,6 +84,7 @@
 		transition: all var(--t-duration, 300ms) ease-in-out;
 
 		&:hover,
+		&:focus,
 		&:active {
 			color: var(--theme-secondary, #dc143c);
 		}
