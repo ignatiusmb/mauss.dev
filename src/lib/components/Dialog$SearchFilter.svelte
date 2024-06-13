@@ -9,7 +9,7 @@
 	interface Props {
 		filters: Record<
 			string,
-			| (Array<{ name: string; selected: boolean }> & /* svelte-check bug */ { selected: never })
+			| (Array<{ name: string; selected: boolean }> & /* svelte-check bug */ { selected?: never })
 			| { selected: string; options: Record<string, string>; required?: boolean }
 		>;
 		onclose?: Forwarded['onclose'];
