@@ -3,7 +3,7 @@
 	import Feather from 'syv/icons/Feather.svelte';
 	import Divider from '$lib/components/Divider.svelte';
 
-	import { click } from 'syv/action';
+	import { outside } from 'syv/action';
 	import { afterNavigate } from '$app/navigation';
 	import { page } from '$app/stores';
 
@@ -15,7 +15,7 @@
 </script>
 
 <nav
-	use:click.outside={() => {
+	use:outside={() => {
 		opened = false;
 	}}
 >

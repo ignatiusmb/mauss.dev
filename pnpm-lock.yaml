@@ -48,8 +48,8 @@ devDependencies:
     specifier: ^3.8.0
     version: 3.8.0(svelte@5.0.0-next.152)
   syv:
-    specifier: ^0.0.32
-    version: 0.0.32(svelte@5.0.0-next.152)
+    specifier: ^0.0.33
+    version: 0.0.33(svelte@5.0.0-next.152)
   typescript:
     specifier: ^5.4.5
     version: 5.4.5
@@ -2022,8 +2022,8 @@ packages:
       zimmerframe: 1.1.2
     dev: true
 
-  /syv@0.0.32(svelte@5.0.0-next.152):
-    resolution: {integrity: sha512-XcvoGfu8HpjRI80TNiTNg7f2xznu7meGDJWpLsQKxMTAcn68wmOSYme8k+8KxLvXQB/QVNKJaErK4wkXsK2f6w==}
+  /syv@0.0.33(svelte@5.0.0-next.152):
+    resolution: {integrity: sha512-YTYLPGt4D8QUAX/r1oKhyDere/3KGj+Eo0lohw2V+zMN9sCN3C1BFdGN6SeFSmOLZ8oV1CD9Ea9i1gdw3fBK2A==}
     peerDependencies:
       svelte: ^5.0.0
     dependencies:
