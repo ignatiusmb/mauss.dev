@@ -3,11 +3,11 @@
 	import Feather from 'syv/icons/Feather.svelte';
 	import Divider from '$lib/components/Divider.svelte';
 
-	import { click } from 'syv/action';
+	import { outside } from 'syv/action';
 	import { afterNavigate } from '$app/navigation';
 	import { page } from '$app/stores';
 
-	let opened = false;
+	let opened = $state(false);
 
 	afterNavigate(() => {
 		opened = false;
@@ -15,7 +15,7 @@
 </script>
 
 <nav
-	use:click.outside={() => {
+	use:outside={() => {
 		opened = false;
 	}}
 >
@@ -69,25 +69,29 @@
 		background-color: var(--bg-base);
 		font-family: var(--mrq-heading);
 		color: var(--fg-surface);
-	}
-	a {
-		border-bottom: none;
-		outline: 2px solid transparent;
-	}
-	a > img {
-		animation: rotate 42s linear infinite;
-	}
-	a:focus {
-		outline-color: var(--bg-cover);
-	}
 
-	nav > a:first-child {
-		flex-shrink: 0;
-		/* height: 24px; */
-		display: flex;
-		padding: 0.25rem;
-		margin: 0 0.5rem;
-		border-radius: 1rem;
+		& > a:first-child {
+			flex-shrink: 0;
+			/* height: 24px; */
+			display: flex;
+			padding: 0.25rem;
+			margin: 0 0.5rem;
+			border-radius: 1rem;
+		}
+
+		a {
+			z-index: 1;
+			text-decoration: none;
+			outline: 2px solid transparent;
+
+			&:focus {
+				outline-color: var(--bg-cover);
+			}
+
+			& > img {
+				animation: rotate 42s linear infinite;
+			}
+		}
 	}
 
 	menu {
@@ -96,57 +100,66 @@
 		justify-content: end;
 		padding: 0;
 		margin: 0;
-	}
-	menu a {
-		padding: 0.375rem;
-		border-radius: 0.375rem;
-		color: var(--fg-surface);
-		text-transform: capitalize;
-	}
-	menu .routes {
-		display: grid;
-		gap: 0.5rem;
-		grid-auto-flow: column;
-		align-items: center;
-	}
-	menu .routes a[aria-current]::after {
-		width: 100%;
-		background-color: var(--theme-primary);
-	}
-	menu .routes a {
-		position: relative;
-		color: var(--fg-surface);
-	}
-	menu .routes a::after {
-		content: '';
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		width: 0;
-		height: 0.15rem;
-		border-radius: 0.25rem;
-		background-color: var(--theme-secondary);
-		transition: width var(--t-duration) ease;
-		transform: translateY(100%);
-	}
-	menu .routes a:hover::after {
-		left: 0;
-		right: auto;
-		width: 100%;
-	}
-	menu .shortcuts {
-		display: grid;
-		gap: 0.375rem;
-		grid-auto-flow: column;
-		padding: 0.5rem;
-	}
-	menu .shortcuts a {
-		width: 100%;
-		display: inline-flex;
-		justify-content: center;
-	}
-	menu .shortcuts a:hover {
-		background: rgba(255, 255, 255, 0.1);
+
+		a {
+			padding: 0.375rem;
+			border-radius: 0.375rem;
+			color: var(--fg-surface);
+			text-transform: capitalize;
+		}
+
+		.routes {
+			display: grid;
+			gap: 0.5rem;
+			grid-auto-flow: column;
+			align-items: center;
+
+			a {
+				position: relative;
+				color: var(--fg-surface);
+
+				&:hover::after {
+					left: 0;
+					right: auto;
+					width: 100%;
+				}
+
+				&::after {
+					content: '';
+					position: absolute;
+					right: 0;
+					bottom: 0;
+					width: 0;
+					height: 0.15rem;
+					border-radius: 0.25rem;
+					background-color: var(--theme-secondary);
+					transition: width var(--t-duration) ease;
+					transform: translateY(100%);
+				}
+
+				&[aria-current]::after {
+					width: 100%;
+					background-color: var(--theme-primary);
+				}
+			}
+		}
+
+		.shortcuts {
+			display: grid;
+			gap: 0.375rem;
+			grid-auto-flow: column;
+			padding: 0.5rem;
+
+			a {
+				width: 100%;
+				display: inline-flex;
+				justify-content: center;
+
+				&:hover {
+					background: rgba(255, 255, 255, 0.1);
+				}
+			}
+		}
 	}
 
 	@media only screen and (min-width: 500px) {

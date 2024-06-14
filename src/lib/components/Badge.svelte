@@ -1,8 +1,10 @@
 <script lang="ts">
-	export let tag: string;
+	interface Props {
+		tag: string;
+	}
+	const { tag }: Props = $props();
 
-	// tuple -> [background: string, color: string]
-	$: represent = {
+	const table = {
 		accessibility: ['#4285f4', '#ffffff'],
 		android: ['#56a036', '#ffffff'],
 		computing: ['#007acc', '#000000'],
@@ -26,7 +28,10 @@
 		svelte: ['#ff3e00', '#ffffff'],
 		tutorial: ['#feffa5', '#b30047'],
 		typescript: ['#2775c3', '#ffffff'],
-	}[tag] || ['#d6d9e0', '#606570'];
+	} as Record<string, [string, string]>;
+
+	// tuple -> [background: string, color: string]
+	const represent = $derived(table[tag] || ['#d6d9e0', '#606570']);
 </script>
 
 <span style:background={represent[0]} style:color={represent[1]}>#{tag}</span>

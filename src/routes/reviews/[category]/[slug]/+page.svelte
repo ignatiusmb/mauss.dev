@@ -3,7 +3,7 @@
 	import Link from '$lib/components/Link.svelte';
 	import Backdrop from './Backdrop.svelte';
 
-	export let data;
+	const { data } = $props();
 </script>
 
 <Article
@@ -11,7 +11,7 @@
 	path="sites/dev.mauss/reviews/{data.article.slug}/+article.md"
 	flank={data.article.flank}
 >
-	<svelte:fragment slot="header">
+	{#snippet header()}
 		<Backdrop post={data.article} />
 
 		{#if data.article.link}
@@ -30,7 +30,7 @@
 				<span>]</span>
 			</small>
 		{/if}
-	</svelte:fragment>
+	{/snippet}
 
 	<section class="info-box warning">
 		<Link href="/disclaimer/" style="danger">
@@ -44,16 +44,18 @@
 <style>
 	small {
 		display: flex;
-	}
-	small :not(:first-child) {
-		margin-left: 0.25rem;
+
+		:not(:first-child) {
+			margin-left: 0.25rem;
+		}
 	}
 
 	section {
 		text-align: center;
-	}
-	section h2 {
-		margin-top: 0;
-		color: inherit;
+
+		h2 {
+			margin-top: 0;
+			color: inherit;
+		}
 	}
 </style>

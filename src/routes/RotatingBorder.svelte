@@ -1,8 +1,8 @@
 <script>
-	export let type = 'dashed';
+	const { type = 'dashed' } = $props();
 </script>
 
-<div style:border-style={type} />
+<div style:border-style={type}></div>
 
 <style>
 	div {

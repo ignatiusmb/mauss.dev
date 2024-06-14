@@ -13,6 +13,8 @@
 	import { dev } from '$app/environment';
 	import { page } from '$app/stores';
 
+	const { children } = $props();
+
 	const feeds = [
 		{ href: '/content/curated.json', title: 'Alchemauss Curation' },
 		{ href: '/content/posts.json', title: 'Alchemauss Posts' },
@@ -52,51 +54,48 @@
 			<meta property="og:description" content={description} />
 		{/if}
 
-		<!-- 
-		{#if post.date && post.date.published}
-			<meta property="article:published_time" content={post.date.published} />
-			<meta property="article:modified_time" content={post.date.updated} />
-		{/if} 
-		-->
 		<meta property="article:author" content="Ignatius Bagussuputra" />
 		<meta property="article:author" content="Ignatius Bagus" />
-		<!--
-		{#if post.tags}
-			{#each post.tags as tag, i}
-				{#if !i}
-					<meta property="article:section" content={tag} />
-				{/if}
-				<meta property="article:tag" content={tag} />
-			{/each}
-		{/if}
-		-->
-
-		<!-- 
-		{#if social.twitter}
-			<meta name="generator" content="Ignatius on SvelteKit!" />
-			<meta name="twitter:card" content="summary" />
-			<meta name="twitter:site" content="@alchemauss" />
-			<meta name="twitter:creator" content="@alchemauss" />
-			{#if url}
-				<meta name="twitter:url" content={url} />
-			{/if}
-			<meta name="twitter:title" content={post.title} />
-			{#if post.description}
-				<meta name="twitter:description" content={post.description} />
-			{/if}
-		{/if}
- 		-->
 	{/if}
 </svelte:head>
 
 <Navigation />
 
-<slot />
+<main>
+	{@render children()}
+</main>
 
 <Footer />
 
 <ScrollTop
 	styles={{
-		'--background': 'transparent',
+		'--background': '#0e0e0e',
 	}}
 />
+
+<style>
+	main {
+		position: relative;
+		width: 100%;
+		display: grid;
+		gap: 2rem;
+		grid-template-columns: minmax(0, 1fr);
+		padding: 0 1rem;
+		margin-top: 2rem;
+		transition: var(--t-duration);
+
+		& > :global(:not(article)) {
+			max-width: 86rem;
+			width: 100%;
+			position: relative;
+			margin: 0 auto;
+		}
+
+		& :global(.syv-core-pagination) {
+			max-width: 32rem;
+		}
+		& :global(.syv-core-search-bar) {
+			border-radius: var(--b-radius);
+		}
+	}
+</style>

@@ -136,7 +136,7 @@ export const DATA = {
 			rating?: number;
 			verdict: 'pending' | 'not-recommended' | 'contextual' | 'recommended' | 'must-watch';
 
-			completed: string | string[];
+			completed: string;
 			seen: {
 				first: string;
 				last?: string;
