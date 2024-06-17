@@ -11,7 +11,9 @@
 	import Navigation from './Navigation.svelte';
 
 	import { dev } from '$app/environment';
-	import { page } from '$app/stores';
+	import { beforeNavigate } from '$app/navigation';
+	import { page, updated } from '$app/stores';
+	import { onMount } from 'svelte';
 
 	const { children } = $props();
 
@@ -20,6 +22,13 @@
 		{ href: '/content/posts.json', title: 'Alchemauss Posts' },
 		{ href: '/content/reviews.json', title: 'Alchemauss Reviews' },
 	];
+
+	onMount(() => updated.check());
+	beforeNavigate(({ willUnload, to }) => {
+		if ($updated && !willUnload && to?.url) {
+			location.href = to.url.href;
+		}
+	});
 </script>
 
 <svelte:head>
@@ -61,7 +70,7 @@
 
 <Navigation />
 
-<main>
+<main data-sveltekit-reload={$updated || 'off'}>
 	{@render children()}
 </main>
 
