@@ -17,8 +17,8 @@ export async function GET() {
 	return json({
 		items,
 		metadata: {
-			categories: [...new Set(items.map((p) => p.tags[0]))].sort(),
-			tags: [...new Set(items.flatMap((p) => p.tags))].sort(),
+			categories: [...new Set(items.flatMap((p) => p.tags[0] || []))].sort(),
+			tags: [...new Set(items.flatMap((p) => p.tags))].filter((t) => t).sort(),
 		},
 	} satisfies Schema);
 }
