@@ -24,6 +24,10 @@ const config = {
 		typescript: {
 			config: (settings) => ({ extends: 'mauss/tsconfig.json', ...settings }),
 		},
+
+		version: {
+			pollInterval: 1000 * 60 * 15, // 15 minutes
+		},
 	},
 };
 
