@@ -23,7 +23,7 @@
 		<img src="/favicon.ico" alt="Alchemauss" width="24" height="24" />
 	</a>
 
-	<input type="checkbox" id="menu" bind:checked={opened} />
+	<input type="checkbox" id="menu" aria-label="Menu" bind:checked={opened} />
 	<label for="menu">
 		<Feather icon={feather.Menu} />
 		<Feather icon={feather.X} />
