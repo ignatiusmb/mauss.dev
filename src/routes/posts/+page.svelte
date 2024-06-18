@@ -4,11 +4,15 @@
 	import Link from '$lib/components/Link.svelte';
 
 	import { dt } from 'mauss';
+	import { syv } from 'syv';
 	import { TIME } from 'syv/options';
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
+	import { by } from './search.svelte.js';
 
 	const { data } = $props();
+
+	const { category, tags, sort_by } = data.filters;
 </script>
 
 <header>
@@ -25,10 +29,24 @@
 		if (description && normalize(description).includes(value)) return true;
 		return false;
 	}}
+	filter={() => {
+		syv.load(import('$lib/components/Dialog$SearchFilter.svelte'), {
+			filters: data.filters,
+		});
+	}}
 >
 	{#snippet children({ query, index })}
+		{@const filtered = index.filter((item) => {
+			const grouped = tags.filter((g) => g.selected).map((g) => g.name);
+			const heuristics = [
+				category.selected && item.category !== category.selected,
+				grouped.length && !grouped.every((g) => item.tags.includes(g)),
+			];
+			return heuristics.every((h) => !h);
+		})}
+
 		<div id="layout">
-			{#each index as post (post.slug)}
+			{#each filtered.sort(by[sort_by.selected]) as post (post.slug)}
 				<section
 					animate:flip={{ duration: TIME.SLIDE }}
 					transition:scale|local={{ duration: TIME.SLIDE }}

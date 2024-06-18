@@ -4,44 +4,15 @@
 	import Link from '$lib/components/Link.svelte';
 	import Verdict from './Verdict.svelte';
 
-	import { compare } from 'mauss';
 	import { syv } from 'syv';
 	import { TIME } from 'syv/options';
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
+	import { by } from './search.svelte';
 
 	const { data } = $props();
 
-	const { category, genres, verdict, sort_by } = data.unique;
-
-	type Item = (typeof data.list)[number];
-	const by = {
-		date(x, y) {
-			return compare.date(x.date, y.date) || fallback(x, y);
-		},
-		premiere(x, y) {
-			return compare.date(x.released, y.released) || fallback(x, y);
-		},
-		rating(x, y) {
-			const xr = Number.isNaN(Number(x.rating)) ? +!!x.rating : Number(x.rating);
-			const yr = Number.isNaN(Number(y.rating)) ? +!!y.rating : Number(y.rating);
-			return xr === yr ? fallback(x, y) : yr - xr;
-		},
-		seen(x, y) {
-			// @ts-expect-error - type predicate not inferred
-			const xd = [x.completed, x.seen.last, x.seen.first].filter((d) => d).map((d) => +new Date(d));
-			// @ts-expect-error - type predicate not inferred
-			const yd = [y.completed, y.seen.last, y.seen.first].filter((d) => d).map((d) => +new Date(d));
-			return compare.date(new Date(Math.max(...xd)), new Date(Math.max(...yd))) || fallback(x, y);
-		},
-	} satisfies Record<string, (x: Item, y: Item) => number>;
-
-	function fallback(x: Item, y: Item): number {
-		if (x.date && y.date && x.date !== y.date) return compare.date(x.date, y.date);
-		if (x.released && y.released && x.released !== y.released)
-			return compare.date(x.released, y.released);
-		return compare.inspect(x, y);
-	}
+	const { category, genres, verdict, sort_by } = data.filters;
 </script>
 
 <header>
@@ -61,7 +32,7 @@
 	}}
 	filter={() => {
 		syv.load(import('$lib/components/Dialog$SearchFilter.svelte'), {
-			filters: data.unique,
+			filters: data.filters,
 		});
 	}}
 >
