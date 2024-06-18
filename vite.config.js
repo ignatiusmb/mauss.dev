@@ -17,7 +17,7 @@ export default defineConfig(({ command }) => {
 
 	return {
 		build: {
-			target: 'chrome79',
+			cssTarget: 'chrome111',
 		},
 
 		plugins: [sveltekit()],
