@@ -16,6 +16,10 @@ export default defineConfig(({ command }) => {
 	};
 
 	return {
+		build: {
+			target: 'node18',
+		},
+
 		plugins: [sveltekit()],
 
 		server: {
