@@ -3,13 +3,16 @@
 		items: Array<{ id: string; title: string; level?: number }>;
 	}
 	const { items }: Props = $props();
+
+	const balancer = $derived(items.reduce((c, i) => Math.min(c, i.level || 4), 4) - 2);
 </script>
 
 <details id="index">
 	<summary>Article Index</summary>
 	<div>
 		{#each items as { id, title, level = 2 }}
-			<a href="#{id}" style:padding-left="{level * 0.5}rem">{title}</a>
+			{@const pad = `${(level - balancer) * 0.5}rem`}
+			<a href="#{id}" style:padding-left={pad}>{title}</a>
 		{/each}
 	</div>
 </details>
