@@ -4,7 +4,7 @@
 	}
 	const { items }: Props = $props();
 
-	const balancer = $derived(items.reduce((c, { level }) => Math.min(c, level || 4), 4) - 2);
+	const balancer = $derived(items.reduce((c, i) => Math.min(c, i.level || 4), 4) - 2);
 </script>
 
 <details id="index">
