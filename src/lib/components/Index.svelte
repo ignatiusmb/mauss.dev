@@ -1,6 +1,10 @@
 <script lang="ts">
-	export let items: Array<{ id: string; title: string; level?: number }>;
-	$: balancer = items.reduce((c, { level }) => Math.min(c, level || 4), 4) - 2;
+	interface Props {
+		items: Array<{ id: string; title: string; level?: number }>;
+	}
+	const { items }: Props = $props();
+
+	const balancer = $derived(items.reduce((c, { level }) => Math.min(c, level || 4), 4) - 2);
 </script>
 
 <details id="index">
@@ -14,47 +18,54 @@
 </details>
 
 <style>
-	details {
+	/* add # to increase specificity */
+	details#index {
 		--radius: calc(var(--b-radius));
 		margin-bottom: 1rem;
 		border-radius: var(--radius);
 		background: rgba(255, 255, 255, 0.1);
-	}
-	summary {
-		padding: 0.5rem 1rem;
-		margin: 0;
-		border: 1px solid rgba(124, 124, 124, 0.7);
-		border-radius: var(--radius);
-	}
-	summary::marker {
-		text-align: right;
-	}
-	div {
-		display: grid;
-		margin: 0;
-		line-height: 2;
-		font-size: 1rem;
-	}
-	a {
-		padding: 0.25rem 1rem;
-		border-bottom: none;
-	}
-	a:last-child {
-		border-bottom-right-radius: var(--radius);
-		border-bottom-left-radius: var(--radius);
-	}
-	a:hover {
-		background: rgba(255, 255, 255, 0.1);
-	}
 
-	details[open] {
-		border: 1px solid rgba(124, 124, 124, 0.7);
-	}
-	details[open] summary {
-		margin-bottom: 0;
-		border-width: 0;
-		border-bottom-width: 1px;
-		border-bottom-right-radius: 0;
-		border-bottom-left-radius: 0;
+		&[open] {
+			border: 1px solid rgba(124, 124, 124, 0.7);
+
+			summary {
+				margin-bottom: 0;
+				border-width: 0;
+				border-bottom-width: 1px;
+				border-bottom-right-radius: 0;
+				border-bottom-left-radius: 0;
+			}
+		}
+
+		summary {
+			padding: 0.5rem 1rem;
+			margin: 0;
+			border: 1px solid rgba(124, 124, 124, 0.7);
+			border-radius: var(--radius);
+
+			&::marker {
+				text-align: right;
+			}
+		}
+
+		div {
+			display: grid;
+			margin: 0;
+			line-height: 2;
+			font-size: 1rem;
+
+			a {
+				padding: 0.25rem 1rem;
+				text-decoration: none;
+
+				&:hover {
+					background: rgba(255, 255, 255, 0.1);
+				}
+				&:last-child {
+					border-bottom-right-radius: var(--radius);
+					border-bottom-left-radius: var(--radius);
+				}
+			}
+		}
 	}
 </style>

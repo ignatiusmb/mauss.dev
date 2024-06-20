@@ -1,14 +1,19 @@
-<script>
-	export let href = '';
-	export let style = '';
+<script lang="ts">
+	interface Props {
+		href: string;
+		style: string;
+		children: import('svelte').Snippet;
+	}
+	const { href = '', style = '', children }: Props = $props();
+
 	import Link from '$lib/components/Link.svelte';
 </script>
 
 <span {style} class:empty={!href} class="text-icon">
 	{#if href}
-		<Link {href}><slot /></Link>
+		<Link {href}>{@render children()}</Link>
 	{:else}
-		<slot />
+		{@render children()}
 	{/if}
 </span>
 
@@ -16,8 +21,9 @@
 	span {
 		display: inline-flex;
 		align-items: center;
-	}
-	span.empty > :global(:not(:first-child)) {
-		margin-left: 0.25rem;
+
+		&.empty > :global(:not(:first-child)) {
+			margin-left: 0.25rem;
+		}
 	}
 </style>

@@ -16,6 +16,10 @@ export default defineConfig(({ command }) => {
 	};
 
 	return {
+		build: {
+			cssTarget: 'chrome111',
+		},
+
 		plugins: [sveltekit()],
 
 		server: {

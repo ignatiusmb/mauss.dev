@@ -1,9 +1,19 @@
 <script lang="ts">
-	export let post: import('./$types').PageData['article'];
+	interface Props {
+		post: {
+			backdrop?: string;
+			rating?: number;
+			title: string | { short?: string; en?: string; jp?: string };
+		};
+	}
+	const { post }: Props = $props();
 </script>
 
 <div class="banner">
-	<img src={post.backdrop} alt="{post.title.short || post.title.en} backdrop" />
+	<img
+		src={post.backdrop}
+		alt="{typeof post.title === 'string' ? post.title : post.title.short || post.title.en} backdrop"
+	/>
 
 	<small class="rating">⭐ {post.rating}</small>
 
@@ -16,7 +26,7 @@
 </div>
 
 <style>
-	.banner {
+	div.banner {
 		z-index: -1;
 		opacity: 80%;
 		width: 100%;
@@ -26,23 +36,25 @@
 		margin: -1rem 0;
 		border: none;
 		border-radius: calc(var(--b-radius) * 2);
-	}
-	.banner::after {
-		content: '';
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		border-radius: inherit;
-		background: rgba(0, 0, 0, 0.8);
-	}
-	.banner img {
-		inset: 0;
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		object-fit: cover;
-		border-radius: inherit;
+
+		&::after {
+			content: '';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			border-radius: inherit;
+			background: rgba(0, 0, 0, 0.8);
+		}
+
+		img {
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			object-fit: cover;
+			border-radius: inherit;
+		}
 	}
 
 	.rating {

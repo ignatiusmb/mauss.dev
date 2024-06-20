@@ -1,19 +1,31 @@
-<script>
-	export let href = '';
-	/** @type {undefined | 'submit' | 'reset'} */
-	export let type = undefined;
-	/** @type {'primary' | 'secondary' | 'danger'} */
-	export let style = type === 'submit' ? 'primary' : 'secondary';
+<script lang="ts">
+	interface Props {
+		href: string;
+		type?: 'submit' | 'reset';
+		style?: 'primary' | 'secondary' | 'danger';
+		/** passed through to aria-label */
+		label?: string;
+		/** sets rel to external and disable data-sveltekit-prefetch */
+		external?: boolean;
+		disabled?: boolean;
+		class?: string | any[];
 
-	/** passed through to aria-label */
-	export let label = '';
-	/** sets rel to external and disable data-sveltekit-prefetch */
-	export let external = /^https?:\/\//.test(href);
-
-	export let disabled = false;
-	export { classes as class };
-	/** @type {string | any[]} */
-	let classes = '';
+		onclick?(event: MouseEvent): void;
+		onkeydown?(event: KeyboardEvent): void;
+		children: import('svelte').Snippet;
+	}
+	const {
+		href = '',
+		type,
+		style = type === 'submit' ? 'primary' : 'secondary',
+		label = '',
+		external = /^https?:\/\//.test(href),
+		disabled = false,
+		class: classes = '',
+		onclick,
+		onkeydown,
+		children,
+	}: Props = $props();
 </script>
 
 {#if !disabled && href}
@@ -23,7 +35,7 @@
 		aria-label={label || undefined}
 		class="{style} {classes}"
 	>
-		<slot />
+		{@render children()}
 	</a>
 {:else}
 	<button
@@ -31,10 +43,10 @@
 		{disabled}
 		aria-label={label || undefined}
 		class="{style} {classes}"
-		on:click
-		on:keydown
+		{onclick}
+		{onkeydown}
 	>
-		<slot />
+		{@render children()}
 	</button>
 {/if}
 
@@ -49,16 +61,17 @@
 
 		outline: none;
 		outline-offset: 0;
+		text-decoration: none;
 		transition-duration: 240ms;
 	}
 	button {
 		border-radius: 1rem;
-	}
 
-	button:disabled {
-		cursor: default;
-		opacity: 0.5;
-		pointer-events: none;
+		&:disabled {
+			cursor: default;
+			opacity: 0.5;
+			pointer-events: none;
+		}
 	}
 
 	.primary {
@@ -69,10 +82,12 @@
 		background-color: var(--bg-base, #1f2023);
 
 		transition: all var(--t-duration, 300ms) ease-in-out;
-	}
-	.primary:hover,
-	.primary:active {
-		color: var(--theme-secondary, #dc143c);
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: var(--theme-secondary, #dc143c);
+		}
 	}
 
 	.danger {

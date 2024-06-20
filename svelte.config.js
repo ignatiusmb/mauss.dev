@@ -3,6 +3,10 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
+	compilerOptions: {
+		runes: true,
+	},
+
 	preprocess: [vitePreprocess()],
 
 	kit: {
@@ -10,7 +14,7 @@ const config = {
 
 		alias: {
 			$content: './src/routes/content',
-			// syv: '../ignatiusmb[syv]/dist',
+			// syv: '../ignatiusmb.syv/src/lib',
 		},
 
 		prerender: {
@@ -19,6 +23,10 @@ const config = {
 
 		typescript: {
 			config: (settings) => ({ extends: 'mauss/tsconfig.json', ...settings }),
+		},
+
+		version: {
+			pollInterval: 1000 * 60 * 15, // 15 minutes
 		},
 	},
 };

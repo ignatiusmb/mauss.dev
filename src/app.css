@@ -36,8 +36,10 @@ body {
 
 a {
 	color: rgba(242, 242, 242, 1);
-	border-bottom: 1px solid rgba(128, 128, 128, 0.4);
+	text-decoration-thickness: 2px;
+	text-decoration-line: underline;
+	text-decoration-color: rgba(128, 128, 128, 0.4);
 }
 a:hover {
-	border-color: rgba(128, 128, 128, 0.8);
+	text-decoration-color: rgba(128, 128, 128, 0.8);
 }
