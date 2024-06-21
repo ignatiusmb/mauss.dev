@@ -34,12 +34,14 @@ body {
 	color: var(--fg-surface);
 }
 
-a {
+a,
+.underlined {
 	color: rgba(242, 242, 242, 1);
 	text-decoration-thickness: 2px;
 	text-decoration-line: underline;
 	text-decoration-color: rgba(128, 128, 128, 0.4);
 }
-a:hover {
+a:hover,
+.underlined:hover {
 	text-decoration-color: rgba(128, 128, 128, 0.8);
 }

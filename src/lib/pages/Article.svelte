@@ -93,28 +93,20 @@
 		<footer>
 			{#if flank.back}
 				{@const { slug, title } = flank.back}
+				{@const text = typeof title === 'string' ? title : title.jp || title.en}
+
 				<a href="/{slug}/" style:text-align="left">
 					<strong>&larr; Prev</strong>
-					{#if typeof title === 'string'}
-						<span>{title}</span>
-					{:else if title.jp}
-						<span>{title.jp}</span>
-					{:else}
-						<span>{title.en}</span>
-					{/if}
+					<span class="underlined">{text}</span>
 				</a>
 			{/if}
 			{#if flank.next}
 				{@const { slug, title } = flank.next}
+				{@const text = typeof title === 'string' ? title : title.jp || title.en}
+
 				<a href="/{slug}/" style:text-align="right">
 					<strong>Next &rarr;</strong>
-					{#if typeof title === 'string'}
-						<span>{title}</span>
-					{:else if title.jp}
-						<span>{title.jp}</span>
-					{:else}
-						<span>{title.en}</span>
-					{/if}
+					<span class="underlined">{text}</span>
 				</a>
 			{/if}
 		</footer>
@@ -409,6 +401,7 @@
 		a {
 			display: grid;
 			grid-template-rows: auto 1fr;
+			text-decoration: none;
 			color: inherit;
 
 			&:nth-child(2) {
