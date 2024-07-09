@@ -1,5 +1,5 @@
 import type { Schema } from '$content/reviews.json/+server.js';
-import { compare } from 'mauss';
+import * as compare from 'mauss/compare';
 
 type Item = Schema['items'][number];
 
