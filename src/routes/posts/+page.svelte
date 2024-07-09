@@ -3,7 +3,7 @@
 	import SearchBar from 'syv/core/SearchBar.svelte';
 	import Link from '$lib/components/Link.svelte';
 
-	import { dt } from 'mauss';
+	import { format } from 'mauss/date';
 	import { syv } from 'syv';
 	import { TIME } from 'syv/options';
 	import { flip } from 'svelte/animate';
@@ -63,7 +63,7 @@
 					</div>
 
 					<aside>
-						<time datetime={post.date}>{dt.format(post.date)('DD MMMM YYYY')}</time>
+						<time datetime={post.date}>{format(post.date)('DD MMMM YYYY')}</time>
 						<small>{post.estimate} min read</small>
 						<Link href="/posts/{post.slug}/" style="primary">READ</Link>
 					</aside>

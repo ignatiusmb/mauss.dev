@@ -1,5 +1,5 @@
 import { traverse } from 'aubade/compass';
-import { compare } from 'mauss';
+import * as compare from 'mauss/compare';
 import { RSS, channel } from './builder';
 
 const items = traverse('content/sites/dev.mauss', { depth: -1 })
