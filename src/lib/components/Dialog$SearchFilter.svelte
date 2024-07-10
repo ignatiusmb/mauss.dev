@@ -73,6 +73,7 @@
 
 <style>
 	header {
+		z-index: 1;
 		position: sticky;
 		top: 0;
 		display: flex;
