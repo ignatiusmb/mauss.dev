@@ -61,29 +61,34 @@
 		margin-top: 3rem;
 		text-align: left;
 		font-family: var(--mrq-heading);
+
+		h1 {
+			grid-template-columns: auto 1fr;
+			color: rgba(255, 255, 255, 1);
+			font-size: 1.875rem;
+			font-weight: 600;
+		}
 	}
-	h1 {
-		grid-template-columns: auto 1fr;
-		color: rgba(255, 255, 255, 1);
-		font-weight: 600;
-	}
+
 	section {
 		display: grid;
 		gap: 0.75rem;
 		justify-items: start;
-	}
-	article {
-		width: 100%;
-		display: flex;
-		gap: 1rem;
-	}
-	time {
-		flex: 1;
-		text-align: right;
-		text-wrap: nowrap;
-	}
-	h2 {
-		text-transform: capitalize;
-		font-size: 1.5rem;
+
+		h2 {
+			text-transform: capitalize;
+			font-size: 1.5rem;
+		}
+		article {
+			width: 100%;
+			display: flex;
+			gap: 1rem;
+
+			time {
+				flex: 1;
+				text-align: right;
+				text-wrap: nowrap;
+			}
+		}
 	}
 </style>
