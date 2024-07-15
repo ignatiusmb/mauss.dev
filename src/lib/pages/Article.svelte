@@ -3,7 +3,7 @@
 
 	import type { ComponentProps } from 'svelte';
 	import { hydrate } from 'aubade/browser';
-	import { format } from 'mauss/date';
+	import { dt } from 'mauss';
 	import { navigating, page } from '$app/stores';
 
 	type Flank = null | { slug: string; title: string | Record<string, any> };
@@ -34,7 +34,7 @@
 	{#if header && post}
 		<header>
 			<aside>
-				<time datetime={post.date}>{format(post.date)('DD MMMM YYYY')}</time>
+				<time datetime={post.date}>{dt.format(post.date)('DD MMMM YYYY')}</time>
 				{#if post.estimate}
 					<span class="dash">&mdash;</span>
 					<span>{post.estimate} min read</span>
