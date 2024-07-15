@@ -1,6 +1,5 @@
 import type { Entries } from 'mauss/typings';
-import * as compare from 'mauss/compare';
-import { regexp } from 'mauss';
+import { compare, regexp } from 'mauss';
 
 const IGNORED = /[(){}[\]<>"']/g;
 function normalize(str: string) {

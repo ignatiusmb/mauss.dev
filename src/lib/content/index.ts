@@ -1,7 +1,7 @@
 import { traverse } from 'aubade/compass';
 import { chain } from 'aubade/transform';
-import * as compare from 'mauss/compare';
 import { exists } from 'mauss/guards';
+import { compare } from 'mauss';
 import { assemble } from './media';
 
 export const DATA = {
