@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Article from '$lib/pages/Article.svelte';
 
-	import { format } from 'mauss/date';
+	import { dt } from 'mauss';
 
 	const { data } = $props();
 </script>
@@ -24,7 +24,7 @@
 		{#each data.posts as { slug, title, date }}
 			<article>
 				<a href="/posts/{slug}/">{title}</a>
-				<time datetime={date}>{format(date)('DD MMM YYYY')}</time>
+				<time datetime={date}>{dt.format(date)('DD MMM YYYY')}</time>
 			</article>
 		{/each}
 		<a href="/posts/">All posts &rarr;</a>
@@ -35,7 +35,7 @@
 		{#each data.curated as { slug, title, date }}
 			<article>
 				<a href="/curated/{slug}/">{title}</a>
-				<time datetime={date}>{format(date)('DD MMM YYYY')}</time>
+				<time datetime={date}>{dt.format(date)('DD MMM YYYY')}</time>
 			</article>
 		{/each}
 		<a href="/curated/">All curated things &rarr;</a>
@@ -46,7 +46,7 @@
 		{#each data.reviews as { slug, title, date }}
 			<article>
 				<a href="/reviews/{slug}/">{title.short || title.en}</a>
-				<time datetime={date}>{format(date)('DD MMM YYYY')}</time>
+				<time datetime={date}>{dt.format(date)('DD MMM YYYY')}</time>
 			</article>
 		{/each}
 		<a href="/reviews/">All reviews &rarr;</a>
