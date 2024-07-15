@@ -36,11 +36,11 @@ importers:
         specifier: ^0.7.2
         version: 0.7.2
       prettier:
-        specifier: ^3.3.2
-        version: 3.3.2
+        specifier: ^3.3.3
+        version: 3.3.3
       prettier-plugin-svelte:
         specifier: ^3.2.5
-        version: 3.2.5(prettier@3.3.2)(svelte@5.0.0-next.158)
+        version: 3.2.5(prettier@3.3.3)(svelte@5.0.0-next.158)
       sharp:
         specifier: ^0.33.4
         version: 0.33.4
@@ -51,8 +51,8 @@ importers:
         specifier: ^3.8.4
         version: 3.8.4(postcss@8.4.39)(svelte@5.0.0-next.158)
       syv:
-        specifier: ^0.0.34
-        version: 0.0.34(svelte@5.0.0-next.158)
+        specifier: ^0.0.35
+        version: 0.0.35(svelte@5.0.0-next.158)
       typescript:
         specifier: ^5.5.3
         version: 5.5.3
@@ -821,6 +821,9 @@ packages:
   mauss@0.7.2:
     resolution: {integrity: sha512-2UJkOyBtytLsDQEejoNw6sFb/8UcCvCyWdx51C795ycMP8hrjIIgzOaLPgETeuUQ4YSgBeeqO285dW8lLnmLYw==}
 
+  mauss@0.8.1:
+    resolution: {integrity: sha512-dnMJo1CGQunNVR+gvJ4UeiZYC28vdiEPcnEn5Hyr60+JAuWzEb6J/r40jq8csjKDs9J29U3Ykp/WtWqxXvEUKA==}
+
   mdast-util-to-hast@13.2.0:
     resolution: {integrity: sha512-QGYKEuUsYT9ykKBCMOEDLsU5JRObWQusAolFMeko/tYPufNkRffBAQjIE+99jbA87xv6FgmjLtwjh9wBWajwAA==}
 
@@ -950,8 +953,8 @@ packages:
       prettier: ^3.0.0
       svelte: ^3.2.0 || ^4.0.0-next.0 || ^5.0.0-next.0
 
-  prettier@3.3.2:
-    resolution: {integrity: sha512-rAVeHYMcv8ATV5d508CFdn+8/pHPpXeIid1DdrPwXnaAdH7cqjVbpJaT5eq4yRAFU/lsbwYwSF/n5iNrdJHPQA==}
+  prettier@3.3.3:
+    resolution: {integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -1113,8 +1116,8 @@ packages:
     resolution: {integrity: sha512-QRmXxHByWntyWqLtzjNsBbNT89F2yA7aWPp9M9l9a6/PAE3gmQh6+qoVPgrxMR7iiFgpwh5ZU9Bm25j3IhGicQ==}
     engines: {node: '>=18'}
 
-  syv@0.0.34:
-    resolution: {integrity: sha512-njmUZRyH7nXxwkBtm6N0QSUsBg1Xk9NCTwIMG7R3e/rVwxMpPBqgXdtL8P1jcCIU72HD2Yi1PDcQJQnKgsiMiQ==}
+  syv@0.0.35:
+    resolution: {integrity: sha512-Ufv0z5vxPEPwd/3RtcCUVg74/SmSpi661Fx6otVOl9V725ndwCKSMQg/q91Yw2x6KRhJBRUxVW9BEpxu6wA2Vw==}
     peerDependencies:
       svelte: ^5.0.0
 
@@ -1948,6 +1951,8 @@ snapshots:
 
   mauss@0.7.2: {}
 
+  mauss@0.8.1: {}
+
   mdast-util-to-hast@13.2.0:
     dependencies:
       '@types/hast': 3.0.4
@@ -2058,12 +2063,12 @@ snapshots:
       picocolors: 1.0.1
       source-map-js: 1.2.0
 
-  prettier-plugin-svelte@3.2.5(prettier@3.3.2)(svelte@5.0.0-next.158):
+  prettier-plugin-svelte@3.2.5(prettier@3.3.3)(svelte@5.0.0-next.158):
     dependencies:
-      prettier: 3.3.2
+      prettier: 3.3.3
       svelte: 5.0.0-next.158
 
-  prettier@3.3.2: {}
+  prettier@3.3.3: {}
 
   property-information@6.5.0: {}
 
@@ -2260,9 +2265,9 @@ snapshots:
       magic-string: 0.30.10
       zimmerframe: 1.1.2
 
-  syv@0.0.34(svelte@5.0.0-next.158):
+  syv@0.0.35(svelte@5.0.0-next.158):
     dependencies:
-      mauss: 0.7.2
+      mauss: 0.8.1
       svelte: 5.0.0-next.158
 
   tar@6.2.1:

@@ -1,34 +1,34 @@
 {
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "dev": "vite dev",
-    "build": "vite build",
-    "format": "prettier --write .",
-    "check": "pnpm run \"/^check:.*/\"",
-    "check:style": "prettier --check .",
-    "check:svelte": "svelte-check src --tsconfig ./tsconfig.json",
-    "prepare": "svelte-kit sync"
-  },
-  "packageManager": "pnpm@9.5.0",
-  "prettier": "mauss/prettier.json",
-  "devDependencies": {
-    "@fontsource-variable/fira-code": "^5.0.18",
-    "@fontsource-variable/karla": "^5.0.21",
-    "@ignatiusmb/styles": "^0.1.1",
-    "@sveltejs/adapter-vercel": "^5.4.1",
-    "@sveltejs/kit": "^2.5.18",
-    "@sveltejs/vite-plugin-svelte": "^3.1.1",
-    "@types/node": "^20.14.10",
-    "aubade": "^0.8.0",
-    "mauss": "^0.7.2",
-    "prettier": "^3.3.2",
-    "prettier-plugin-svelte": "^3.2.5",
-    "sharp": "^0.33.4",
-    "svelte": "5.0.0-next.158",
-    "svelte-check": "^3.8.4",
-    "syv": "^0.0.34",
-    "typescript": "^5.5.3",
-    "vite": "^5.3.3"
-  }
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"format": "prettier --write .",
+		"check": "pnpm run \"/^check:.*/\"",
+		"check:style": "prettier --check .",
+		"check:svelte": "svelte-check src --tsconfig ./tsconfig.json",
+		"prepare": "svelte-kit sync"
+	},
+	"packageManager": "pnpm@9.5.0",
+	"prettier": "mauss/prettier.json",
+	"devDependencies": {
+		"@fontsource-variable/fira-code": "^5.0.18",
+		"@fontsource-variable/karla": "^5.0.21",
+		"@ignatiusmb/styles": "^0.1.1",
+		"@sveltejs/adapter-vercel": "^5.4.1",
+		"@sveltejs/kit": "^2.5.18",
+		"@sveltejs/vite-plugin-svelte": "^3.1.1",
+		"@types/node": "^20.14.10",
+		"aubade": "^0.8.0",
+		"mauss": "^0.7.2",
+		"prettier": "^3.3.3",
+		"prettier-plugin-svelte": "^3.2.5",
+		"sharp": "^0.33.4",
+		"svelte": "5.0.0-next.158",
+		"svelte-check": "^3.8.4",
+		"syv": "^0.0.35",
+		"typescript": "^5.5.3",
+		"vite": "^5.3.3"
+	}
 }
