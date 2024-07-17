@@ -12,7 +12,9 @@
 
 	const { data } = $props();
 
-	const { category, genres, verdict, sort_by } = data.filters;
+	// TODO: https://github.com/sveltejs/svelte/issues/12435
+	const filters = $state($state.snapshot(data.filters));
+	const { category, genres, verdict, sort_by } = filters;
 </script>
 
 <header>
@@ -32,7 +34,7 @@
 	}}
 	filter={() => {
 		syv.load(import('$lib/components/Dialog$SearchFilter.svelte'), {
-			filters: data.filters,
+			filters: filters,
 		});
 	}}
 >
