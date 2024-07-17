@@ -1,14 +1,13 @@
 <script lang="ts">
 	import Image from 'syv/core/Image.svelte';
 	import SearchBar from 'syv/core/SearchBar.svelte';
-	import SearchFilter from '$lib/components/Dialog$SearchFilter.svelte';
 	import Link from '$lib/components/Link.svelte';
 	import Verdict from './Verdict.svelte';
 
+	import { syv } from 'syv';
 	import { TIME } from 'syv/options';
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
-	import { mount, unmount } from 'svelte';
 	import { by } from './search.svelte';
 
 	const { data } = $props();
@@ -16,8 +15,6 @@
 	// TODO: https://github.com/sveltejs/svelte/issues/12435
 	const filters = $state($state.snapshot(data.filters));
 	const { category, genres, verdict, sort_by } = filters;
-
-	let instance: ReturnType<typeof mount>;
 </script>
 
 <header>
@@ -36,10 +33,8 @@
 		return false;
 	}}
 	filter={() => {
-		instance && unmount(instance);
-		instance = mount(SearchFilter, {
-			target: document.body,
-			props: { filters },
+		syv.load(import('$lib/components/Dialog$SearchFilter.svelte'), {
+			filters: filters,
 		});
 	}}
 >

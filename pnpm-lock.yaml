@@ -51,8 +51,8 @@ importers:
         specifier: ^3.8.4
         version: 3.8.4(postcss@8.4.39)(svelte@5.0.0-next.188)
       syv:
-        specifier: ^0.0.35
-        version: 0.0.35(svelte@5.0.0-next.188)
+        specifier: ^0.0.36
+        version: 0.0.36(svelte@5.0.0-next.188)
       typescript:
         specifier: ^5.5.3
         version: 5.5.3
@@ -1039,8 +1039,8 @@ packages:
     resolution: {integrity: sha512-fcEqwWJCYdM3QcoXgA31TgiE6MXsSsESxtjKlvNGomM1vm8e/zXv85nKE6Y75Emql3VpUJIlJgNzYNIiYHP2nA==}
     engines: {node: '>=18'}
 
-  syv@0.0.35:
-    resolution: {integrity: sha512-Ufv0z5vxPEPwd/3RtcCUVg74/SmSpi661Fx6otVOl9V725ndwCKSMQg/q91Yw2x6KRhJBRUxVW9BEpxu6wA2Vw==}
+  syv@0.0.36:
+    resolution: {integrity: sha512-hCwagKtC12QU6ssS1VANjewXd0LmZGaYvo0nbFovTt1jeZ3Ezaa+9ud3JdMDoLJEechh6ud2uoh/fs6dmnJgVg==}
     peerDependencies:
       svelte: ^5.0.0
 
@@ -2024,7 +2024,7 @@ snapshots:
       magic-string: 0.30.10
       zimmerframe: 1.1.2
 
-  syv@0.0.35(svelte@5.0.0-next.188):
+  syv@0.0.36(svelte@5.0.0-next.188):
     dependencies:
       mauss: 0.8.1
       svelte: 5.0.0-next.188
