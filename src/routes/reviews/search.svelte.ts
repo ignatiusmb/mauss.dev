@@ -1,15 +1,7 @@
 import type { Schema } from '$content/reviews.json/+server.js';
-import { compare } from 'mauss';
+import * as compare from 'mauss/compare';
 
 type Item = Schema['items'][number];
-
-function fallback(x: Item, y: Item): number {
-	if (x.date && y.date && x.date !== y.date) return compare.date(x.date, y.date);
-	if (x.released && y.released && x.released !== y.released)
-		return compare.date(x.released, y.released);
-	return compare.inspect(x, y);
-}
-
 export const by = {
 	date(x, y) {
 		return compare.date(x.date, y.date) || fallback(x, y);
@@ -33,3 +25,10 @@ export const by = {
 		);
 	},
 } satisfies Record<string, (x: Item, y: Item) => number>;
+
+function fallback(x: Item, y: Item): number {
+	if (x.date && y.date && x.date !== y.date) return compare.date(x.date, y.date);
+	if (x.released && y.released && x.released !== y.released)
+		return compare.date(x.released, y.released);
+	return compare.inspect(x, y);
+}

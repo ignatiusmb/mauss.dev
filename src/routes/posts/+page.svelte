@@ -3,7 +3,7 @@
 	import SearchBar from 'syv/core/SearchBar.svelte';
 	import Link from '$lib/components/Link.svelte';
 
-	import { dt } from 'mauss';
+	import { format } from 'mauss/date';
 	import { syv } from 'syv';
 	import { TIME } from 'syv/options';
 	import { flip } from 'svelte/animate';
@@ -12,7 +12,9 @@
 
 	const { data } = $props();
 
-	const { category, tags, sort_by } = data.filters;
+	// TODO: https://github.com/sveltejs/svelte/issues/12435
+	const filters = $state($state.snapshot(data.filters));
+	const { category, tags, sort_by } = filters;
 </script>
 
 <header>
@@ -31,7 +33,7 @@
 	}}
 	filter={() => {
 		syv.load(import('$lib/components/Dialog$SearchFilter.svelte'), {
-			filters: data.filters,
+			filters: filters,
 		});
 	}}
 >
@@ -63,7 +65,7 @@
 					</div>
 
 					<aside>
-						<time datetime={post.date}>{dt.format(post.date)('DD MMMM YYYY')}</time>
+						<time datetime={post.date}>{format(post.date)('DD MMMM YYYY')}</time>
 						<small>{post.estimate} min read</small>
 						<Link href="/posts/{post.slug}/" style="primary">READ</Link>
 					</aside>

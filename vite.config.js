@@ -11,10 +11,6 @@ export default defineConfig(({ command }) => {
 		for (const key in DATA) void DATA[key];
 	}
 
-	const ssr = command === 'serve' && {
-		external: ['markdown-it', 'shiki'],
-	};
-
 	return {
 		build: {
 			cssTarget: 'chrome111',
@@ -26,7 +22,5 @@ export default defineConfig(({ command }) => {
 			fs: { allow: ['..'] },
 			port: 3000,
 		},
-
-		ssr: ssr || undefined,
 	};
 });
