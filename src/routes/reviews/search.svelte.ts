@@ -15,8 +15,8 @@ export const by = {
 		return xr === yr ? fallback(x, y) : yr - xr;
 	},
 	seen(x, y) {
-		const xd = [x.completed, x.seen.last, x.seen.first].filter((d) => d != null);
-		const yd = [y.completed, y.seen.last, y.seen.first].filter((d) => d != null);
+		const xd = [x.seen.last, x.seen.first].filter((d) => d != null);
+		const yd = [y.seen.last, y.seen.first].filter((d) => d != null);
 		return (
 			compare.number(
 				Math.max(...xd.map((d) => +new Date(d))),
