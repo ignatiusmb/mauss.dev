@@ -122,12 +122,14 @@ export const DATA = {
 
 	get 'reviews/'() {
 		interface FrontMatter {
+			// generated fields
 			slug: string;
-			date: string;
 			category: string;
+
+			// metadata fields
+			date: string;
 			released: string;
 			composed: number;
-
 			title: {
 				short?: string;
 				en: string;
@@ -135,22 +137,17 @@ export const DATA = {
 			};
 			genres: string[];
 			rating?: number;
+			completed?: number;
 			verdict: 'pending' | 'not-recommended' | 'contextual' | 'recommended' | 'must-watch';
 
-			completed?: number;
-			seen: {
-				first: string;
-				last?: string;
-			};
+			backdrop?: string;
 			image: {
 				en: string;
 				jp?: string;
 			};
-			backdrop?: string;
-			link?: Record<string, string | string[]>;
 
-			spoilers?: string;
-			closing?: string;
+			seen: { first: string; last?: string };
+			link?: Record<string, string | string[]>;
 		}
 
 		const items = traverse('content/sites/dev.mauss/reviews', { depth: -1 }).hydrate(
@@ -162,6 +159,7 @@ export const DATA = {
 				const specified: FrontMatter = {
 					category,
 					slug: `${category}/${slug}`,
+
 					date: metadata.date,
 					released: metadata.released,
 					composed: delta / 24 / 60 / 60 / 1000,
@@ -179,6 +177,7 @@ export const DATA = {
 						return Math.round((+watched / +total) * 80);
 					}),
 					verdict: metadata.verdict,
+					image: metadata.image,
 					seen: {
 						first: Array.isArray(metadata.seen.first)
 							? metadata.seen.first[metadata.seen.first.length - 1]
@@ -187,7 +186,6 @@ export const DATA = {
 							? metadata.seen.last[metadata.seen.last.length - 1]
 							: metadata.seen.last,
 					},
-					image: metadata.image,
 				};
 
 				const content = siblings.reduce((content, { type, breadcrumb: [file], buffer }) => {
