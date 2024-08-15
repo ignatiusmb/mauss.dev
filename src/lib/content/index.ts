@@ -2,6 +2,7 @@ import { traverse } from 'aubade/compass';
 import { chain } from 'aubade/transform';
 import * as compare from 'mauss/compare';
 import { exists } from 'mauss/guards';
+import { scope } from 'mauss';
 import { assemble } from './media';
 
 export const DATA = {
@@ -121,12 +122,14 @@ export const DATA = {
 
 	get 'reviews/'() {
 		interface FrontMatter {
+			// generated fields
 			slug: string;
-			date: string;
 			category: string;
+
+			// metadata fields
+			date: string;
 			released: string;
 			composed: number;
-
 			title: {
 				short?: string;
 				en: string;
@@ -134,28 +137,17 @@ export const DATA = {
 			};
 			genres: string[];
 			rating?: number;
+			completed?: number;
 			verdict: 'pending' | 'not-recommended' | 'contextual' | 'recommended' | 'must-watch';
 
-			completed: string;
-			seen: {
-				first: string;
-				last?: string;
-			};
+			backdrop?: string;
 			image: {
 				en: string;
 				jp?: string;
 			};
-			backdrop?: string;
+
+			seen: { first: string; last?: string };
 			link?: Record<string, string | string[]>;
-
-			spoilers?: string;
-			closing?: string;
-		}
-
-		function countAverageRating(ratings?: string[]): number | undefined {
-			if (!ratings || ratings.some((n) => Number.isNaN(+n))) return;
-			const total = ratings.reduce((acc, cur) => +cur + acc, 0);
-			return Math.round((total / ratings.length + Number.EPSILON) * 100) / 100;
 		}
 
 		const items = traverse('content/sites/dev.mauss/reviews', { depth: -1 }).hydrate(
@@ -167,15 +159,25 @@ export const DATA = {
 				const specified: FrontMatter = {
 					category,
 					slug: `${category}/${slug}`,
+
 					date: metadata.date,
 					released: metadata.released,
 					composed: delta / 24 / 60 / 60 / 1000,
 
 					title: metadata.title,
 					genres: metadata.genres,
-					rating: countAverageRating(metadata.rating),
+					rating: scope((ratings = metadata.rating as string[]) => {
+						if (!ratings || ratings.some((n) => Number.isNaN(+n))) return;
+						const total = ratings.reduce((acc, cur) => +cur + acc, 0);
+						return Math.round((total / ratings.length + Number.EPSILON) * 100) / 100;
+					}),
+					completed: scope((ratio = metadata.completed as string) => {
+						if (!ratio) return 80;
+						const [watched, total] = ratio.split('/');
+						return Math.round((+watched / +total) * 80);
+					}),
 					verdict: metadata.verdict,
-					completed: metadata.completed,
+					image: metadata.image,
 					seen: {
 						first: Array.isArray(metadata.seen.first)
 							? metadata.seen.first[metadata.seen.first.length - 1]
@@ -184,7 +186,6 @@ export const DATA = {
 							? metadata.seen.last[metadata.seen.last.length - 1]
 							: metadata.seen.last,
 					},
-					image: metadata.image,
 				};
 
 				const content = siblings.reduce((content, { type, breadcrumb: [file], buffer }) => {
