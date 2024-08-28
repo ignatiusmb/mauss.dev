@@ -37,7 +37,7 @@ export async function load({ fetch, url }) {
 					seen: 'Last seen',
 					premiere: 'Premiered',
 				} satisfies Record<keyof typeof by, string>;
-				const sort = (!building && url.searchParams.get('sort')) || '';
+				const sort = (!building && url.searchParams.get('sort_by')) || '';
 				const selected = (sort in options && sort) || 'date';
 				return { required: true, options, selected: selected as keyof typeof by };
 			}),
