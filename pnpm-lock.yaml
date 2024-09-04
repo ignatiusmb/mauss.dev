@@ -49,10 +49,10 @@ importers:
         version: 5.0.0-next.188
       svelte-check:
         specifier: ^3.8.4
-        version: 3.8.4(postcss@8.4.39)(svelte@5.0.0-next.188)
+        version: 3.8.4(postcss@8.4.44)(svelte@5.0.0-next.188)
       syv:
-        specifier: ^0.0.36
-        version: 0.0.36(svelte@5.0.0-next.188)
+        specifier: ^0.0.37
+        version: 0.0.37(svelte@5.0.0-next.188)
       typescript:
         specifier: ^5.5.3
         version: 5.5.3
@@ -871,12 +871,19 @@ packages:
   picocolors@1.0.1:
     resolution: {integrity: sha512-anP1Z8qwhkbmu7MFP5iTt+wQKXgwzf7zTyGlcdzabySa9vd0Xt392U0rVmz9poOaBj0uHJKyyo9/upk0HrEQew==}
 
+  picocolors@1.1.0:
+    resolution: {integrity: sha512-TQ92mBOW0l3LeMeyLV6mzy/kWr8lkd/hp3mTg7wYK7zJhuBStmGMBG0BdeDZS/dZx1IukaX6Bk11zcln25o1Aw==}
+
   picomatch@2.3.1:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
 
   postcss@8.4.39:
     resolution: {integrity: sha512-0vzE+lAiG7hZl1/9I8yzKLx3aR9Xbof3fBHKunvMfOCYAtMhrsnccJY2iTURb9EZd5+pLuiNV9/c/GZJOHsgIw==}
+    engines: {node: ^10 || ^12 || >=14}
+
+  postcss@8.4.44:
+    resolution: {integrity: sha512-Aweb9unOEpQ3ezu4Q00DPvvM2ZTUitJdNKeP/+uQgr1IBIqu574IaZoURId7BKtWMREwzKa9OgzPzezWGPWFQw==}
     engines: {node: ^10 || ^12 || >=14}
 
   prettier-plugin-svelte@3.2.5:
@@ -1039,8 +1046,8 @@ packages:
     resolution: {integrity: sha512-fcEqwWJCYdM3QcoXgA31TgiE6MXsSsESxtjKlvNGomM1vm8e/zXv85nKE6Y75Emql3VpUJIlJgNzYNIiYHP2nA==}
     engines: {node: '>=18'}
 
-  syv@0.0.36:
-    resolution: {integrity: sha512-hCwagKtC12QU6ssS1VANjewXd0LmZGaYvo0nbFovTt1jeZ3Ezaa+9ud3JdMDoLJEechh6ud2uoh/fs6dmnJgVg==}
+  syv@0.0.37:
+    resolution: {integrity: sha512-umiTg+vXY+ccIqUea8YgW1f+OzbfANZNhRpkBXgjL7t5pNH+OMYDuNJmy17iUaoRECh4kuNDgffFajV/iMFFUA==}
     peerDependencies:
       svelte: ^5.0.0
 
@@ -1822,6 +1829,9 @@ snapshots:
 
   picocolors@1.0.1: {}
 
+  picocolors@1.1.0:
+    optional: true
+
   picomatch@2.3.1: {}
 
   postcss@8.4.39:
@@ -1829,6 +1839,13 @@ snapshots:
       nanoid: 3.3.7
       picocolors: 1.0.1
       source-map-js: 1.2.0
+
+  postcss@8.4.44:
+    dependencies:
+      nanoid: 3.3.7
+      picocolors: 1.1.0
+      source-map-js: 1.2.0
+    optional: true
 
   prettier-plugin-svelte@3.2.5(prettier@3.3.3)(svelte@5.0.0-next.188):
     dependencies:
@@ -1972,14 +1989,14 @@ snapshots:
     dependencies:
       min-indent: 1.0.1
 
-  svelte-check@3.8.4(postcss@8.4.39)(svelte@5.0.0-next.188):
+  svelte-check@3.8.4(postcss@8.4.44)(svelte@5.0.0-next.188):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
       chokidar: 3.6.0
       picocolors: 1.0.1
       sade: 1.8.1
       svelte: 5.0.0-next.188
-      svelte-preprocess: 5.1.4(postcss@8.4.39)(svelte@5.0.0-next.188)(typescript@5.5.3)
+      svelte-preprocess: 5.1.4(postcss@8.4.44)(svelte@5.0.0-next.188)(typescript@5.5.3)
       typescript: 5.5.3
     transitivePeerDependencies:
       - '@babel/core'
@@ -1996,7 +2013,7 @@ snapshots:
     dependencies:
       svelte: 5.0.0-next.188
 
-  svelte-preprocess@5.1.4(postcss@8.4.39)(svelte@5.0.0-next.188)(typescript@5.5.3):
+  svelte-preprocess@5.1.4(postcss@8.4.44)(svelte@5.0.0-next.188)(typescript@5.5.3):
     dependencies:
       '@types/pug': 2.0.10
       detect-indent: 6.1.0
@@ -2005,7 +2022,7 @@ snapshots:
       strip-indent: 3.0.0
       svelte: 5.0.0-next.188
     optionalDependencies:
-      postcss: 8.4.39
+      postcss: 8.4.44
       typescript: 5.5.3
 
   svelte@5.0.0-next.188:
@@ -2024,7 +2041,7 @@ snapshots:
       magic-string: 0.30.10
       zimmerframe: 1.1.2
 
-  syv@0.0.36(svelte@5.0.0-next.188):
+  syv@0.0.37(svelte@5.0.0-next.188):
     dependencies:
       mauss: 0.8.1
       svelte: 5.0.0-next.188

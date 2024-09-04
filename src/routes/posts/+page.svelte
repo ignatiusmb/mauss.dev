@@ -4,7 +4,7 @@
 	import Link from '$lib/components/Link.svelte';
 
 	import { format } from 'mauss/date';
-	import { syv } from 'syv';
+	import { dialog } from 'syv';
 	import { TIME } from 'syv/options';
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
@@ -26,13 +26,14 @@
 	items={data.list}
 	sieve={({ query, normalize, item: { slug, title, description } }) => {
 		const value = normalize(query);
-		if (slug.includes(value)) return true;
-		if (normalize(title).includes(value)) return true;
-		if (description && normalize(description).includes(value)) return true;
-		return false;
+		return (
+			slug.includes(value) ||
+			normalize(title).includes(value) ||
+			(description && normalize(description).includes(value))
+		);
 	}}
 	filter={() => {
-		syv.load(import('$lib/components/Dialog$SearchFilter.svelte'), {
+		dialog.load(import('$lib/components/Dialog$SearchFilter.svelte'), {
 			filters: filters,
 		});
 	}}
