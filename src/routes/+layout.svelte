@@ -6,6 +6,7 @@
 	import '../app.css';
 	import '$lib/styles/blog.css';
 
+	import MetaHead from 'syv/core/MetaHead.svelte';
 	import ScrollTop from 'syv/core/ScrollTop.svelte';
 	import Footer from './Footer.svelte';
 	import Navigation from './Navigation.svelte';
@@ -17,12 +18,6 @@
 
 	const { children } = $props();
 
-	const feeds = [
-		{ href: '/content/curated.json', title: 'Alchemauss Curation' },
-		{ href: '/content/posts.json', title: 'Alchemauss Posts' },
-		{ href: '/content/reviews.json', title: 'Alchemauss Reviews' },
-	];
-
 	onMount(() => updated.check());
 	beforeNavigate(({ willUnload, to }) => {
 		if ($updated && !willUnload && to?.url) {
@@ -31,42 +26,40 @@
 	});
 </script>
 
-<svelte:head>
-	{#if !dev}<script defer src="/_vercel/insights/script.js"></script>{/if}
-	{#if $page.data.meta?.canonical}
-		<link rel="canonical" href="https://mauss.dev/{$page.data.meta.canonical}" />
-	{/if}
-
-	<title>{$page.data.meta?.title || $page.status} | Alchemauss</title>
-	<meta name="author" content="Ignatius Bagussuputra" />
-
-	{#if $page.data.meta?.description}
-		<meta name="description" content={$page.data.meta.description} />
-	{/if}
-
-	<link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Alchemauss Feed" />
-	{#each feeds as { href, title }}
-		<link rel="alternate" type="application/json" {href} {title} />
-	{/each}
-
-	<meta property="og:site_name" content="Alchemauss" />
-	<meta property="og:locale" content="en_ID" />
-
-	{#if $page.data.meta?.og}
-		{@const { title, url, description } = $page.data.meta.og}
-		<meta property="og:title" content={title} />
-		<meta property="og:type" content="article" />
-		{#if url}
-			<meta property="og:url" content={url} />
-		{/if}
-		{#if description}
-			<meta property="og:description" content={description} />
-		{/if}
-
-		<meta property="article:author" content="Ignatius Bagussuputra" />
-		<meta property="article:author" content="Ignatius Bagus" />
-	{/if}
-</svelte:head>
+<MetaHead
+	domain="https://mauss.dev"
+	title="{$page.data.meta?.title || $page.status} | Alchemauss"
+	canonical={$page.data.meta?.canonical}
+	description={$page.data.meta?.description}
+	authors={['Ignatius Bagussuputra']}
+	alternate={[
+		{
+			type: 'application/rss+xml',
+			href: '/rss.xml',
+			hreflang: 'en',
+			title: 'Alchemauss Feed',
+		},
+		{
+			type: 'application/json',
+			href: '/content/curated.json',
+			hreflang: 'en',
+			title: 'Alchemauss Curation',
+		},
+		{
+			type: 'application/json',
+			href: '/content/posts.json',
+			hreflang: 'en',
+			title: 'Alchemauss Posts',
+		},
+		{
+			type: 'application/json',
+			href: '/content/reviews.json',
+			hreflang: 'en',
+			title: 'Alchemauss Reviews',
+		},
+	]}
+	scripts={[!dev && '/_vercel/insights/script.js']}
+/>
 
 <Navigation />
 

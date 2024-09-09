@@ -4,7 +4,7 @@
 	import Link from '$lib/components/Link.svelte';
 	import Verdict from './Verdict.svelte';
 
-	import { syv } from 'syv';
+	import { dialog } from 'syv';
 	import { TIME } from 'syv/options';
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
@@ -26,14 +26,15 @@
 	items={data.list}
 	sieve={({ query, normalize, item: { slug, title, released } }) => {
 		const value = normalize(query);
-		if (slug.includes(value)) return true;
-		if (released.includes(value)) return true;
-		if (normalize(title.en).includes(value)) return true;
-		if (title.jp && normalize(title.jp).includes(value)) return true;
-		return false;
+		return (
+			slug.includes(value) ||
+			released.includes(value) ||
+			normalize(title.en).includes(value) ||
+			(title.jp && normalize(title.jp).includes(value))
+		);
 	}}
 	filter={() => {
-		syv.load(import('$lib/components/Dialog$SearchFilter.svelte'), {
+		dialog.load(import('$lib/components/Dialog$SearchFilter.svelte'), {
 			filters: filters,
 		});
 	}}
