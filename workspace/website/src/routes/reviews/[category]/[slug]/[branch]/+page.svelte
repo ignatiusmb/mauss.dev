@@ -8,7 +8,7 @@
 
 <Article
 	post={data.article}
-	path="sites/dev.mauss/curated/{data.article.slug}/+{$page.params.branch}.md"
+	path="curated/{data.article.slug}/+{$page.params.branch}.md"
 >
 	{#snippet header()}
 		<Backdrop post={data.article} />

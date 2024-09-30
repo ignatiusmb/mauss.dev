@@ -85,7 +85,7 @@
 	{#if path}
 		<section id="end-card">
 			<!-- prettier-ignore -->
-			<p>See something to improve or fix? In the spirit of open-source, you can create a new <a href="https://github.com/alchemauss/content/issues">issue</a> or contribute directly to this article by <a href="https://github.com/alchemauss/content/blob/master/{path}">sending a Pull Request on GitHub</a>!</p>
+			<p>See something to improve or fix? In the spirit of open-source, you can create a new <a href="https://github.com/ignatiusmb/mauss.dev/issues">issue</a> or contribute directly to this article by <a href="https://github.com/ignatiusmb/mauss.dev/blob/master/workspace/content/routes/{path}">sending a Pull Request on GitHub</a>!</p>
 		</section>
 	{/if}
 

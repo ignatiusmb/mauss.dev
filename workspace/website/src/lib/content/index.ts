@@ -14,7 +14,7 @@ export const DATA = {
 			tags?: string[];
 		}
 
-		const items = traverse('content/sites/dev.mauss/curated', { depth: -1 }).hydrate(
+		const items = traverse('../content/routes/curated', { depth: -1 }).hydrate(
 			({ breadcrumb: [, slug], buffer, parse, marker, siblings }) => {
 				const { body, metadata } = parse(buffer.toString('utf-8'));
 
@@ -68,7 +68,7 @@ export const DATA = {
 			};
 		}
 
-		const items = traverse('content/sites/dev.mauss/posts', { depth: 1 }).hydrate(
+		const items = traverse('../content/routes/posts', { depth: 1 }).hydrate(
 			({ breadcrumb: [, slug], buffer, parse, marker, siblings }) => {
 				const { body, metadata } = parse(buffer.toString('utf-8'));
 
@@ -105,7 +105,7 @@ export const DATA = {
 	},
 
 	get 'quotes/'() {
-		const items = traverse('content/sites/dev.mauss/quotes').hydrate(
+		const items = traverse('../content/routes/quotes').hydrate(
 			({ breadcrumb: [file], buffer, parse }) => {
 				const content: Array<{ author: string; quote: string; from: string }> = [];
 				const author = file.slice(0, -3).replace(/-/g, ' ');
@@ -150,7 +150,7 @@ export const DATA = {
 			link?: Record<string, string | string[]>;
 		}
 
-		const items = traverse('content/sites/dev.mauss/reviews', { depth: -1 }).hydrate(
+		const items = traverse('../content/routes/reviews', { depth: -1 }).hydrate(
 			({ breadcrumb: [, slug, category], buffer, parse, marker, siblings }) => {
 				const { body, metadata } = parse(buffer.toString('utf-8'));
 				if (metadata.draft) return;

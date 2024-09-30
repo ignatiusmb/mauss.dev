@@ -28,12 +28,7 @@ pnpm dev
 
 ### Content
 
-Content is managed as a submodule in [alchemauss/content](https://github.com/alchemauss/content), any changes made to the content should be placed there ([open a new PR](https://github.com/alchemauss/content/compare)).
-
-```bash
-# Update to the latest version using
-git submodule update --remote --merge
-```
+Content is managed under [workspace/content](./workspace/content).
 
 ---
 

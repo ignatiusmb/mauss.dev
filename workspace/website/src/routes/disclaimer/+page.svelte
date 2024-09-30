@@ -21,7 +21,7 @@
 	</section>
 
 	<!-- prettier-ignore -->
-	<p>If you disagree with something, I would welcome a discussion. It would be interesting to learn what and how we come up with our conclusions. Direct contributions are also welcome, take a look at the <a href="https://github.com/ignatiusmb/mauss.dev">source code</a> for website stuff or <a href="https://github.com/alchemauss/content">content repository</a> for the articles themselves.</p>
+	<p>If you disagree with something, I would welcome a discussion. It would be interesting to learn what and how we come up with our conclusions. Direct contributions are also welcome, take a look at the <a href="https://github.com/ignatiusmb/mauss.dev">source code</a> for both the website and content.</p>
 </Article>
 
 <style>

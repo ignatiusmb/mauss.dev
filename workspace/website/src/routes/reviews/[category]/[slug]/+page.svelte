@@ -8,7 +8,7 @@
 
 <Article
 	post={data.article}
-	path="sites/dev.mauss/reviews/{data.article.slug}/+article.md"
+	path="reviews/{data.article.slug}/+article.md"
 	flank={data.article.flank}
 >
 	{#snippet header()}
