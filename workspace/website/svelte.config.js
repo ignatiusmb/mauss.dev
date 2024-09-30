@@ -14,7 +14,7 @@ const config = {
 
 		alias: {
 			$content: './src/routes/content',
-			syv: '../../../ignatiusmb.syv/src/lib',
+			// syv: '../../../ignatiusmb.syv/src/lib',
 		},
 
 		prerender: {
