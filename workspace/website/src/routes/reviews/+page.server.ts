@@ -16,7 +16,7 @@ export async function load({ fetch, url }) {
 				return { options, selected: selected in options ? selected : '' };
 			}),
 			genres: scope(() => {
-				const selected = (!building && url.searchParams.get('genres')?.split(',')) || [];
+				const selected = (!building && url.searchParams.get('genres')?.split('-')) || [];
 				return metadata.genres.map((v) => ({ name: v, selected: selected.includes(v) }));
 			}),
 			verdict: scope(() => {

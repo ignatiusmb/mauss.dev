@@ -15,7 +15,7 @@ export async function load({ fetch, url }) {
 				return { options, selected: selected in options ? selected : '' };
 			}),
 			tags: scope(() => {
-				const selected = (!building && url.searchParams.get('tags')?.split(',')) || [];
+				const selected = (!building && url.searchParams.get('tags')?.split('-')) || [];
 				return metadata.tags.map((v) => ({ name: v, selected: selected.includes(v) }));
 			}),
 			sort_by: scope(() => {
