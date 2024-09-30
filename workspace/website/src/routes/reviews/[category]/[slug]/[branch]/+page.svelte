@@ -6,10 +6,7 @@
 	const { data } = $props();
 </script>
 
-<Article
-	post={data.article}
-	path="curated/{data.article.slug}/+{$page.params.branch}.md"
->
+<Article post={data.article} path="curated/{data.article.slug}/+{$page.params.branch}.md">
 	{#snippet header()}
 		<Backdrop post={data.article} />
 
