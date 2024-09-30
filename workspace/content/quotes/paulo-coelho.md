@@ -1,0 +1,1 @@
+Blessed are those who do not fear solitude, who are not afraid of their own company, who are not always desperately looking for something to do, something to amuse themselves with, something to judge.
