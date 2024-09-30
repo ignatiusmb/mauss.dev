@@ -2,7 +2,7 @@ import { traverse } from 'aubade/compass';
 import * as compare from 'mauss/compare';
 import { RSS, channel } from './builder';
 
-const items = traverse('content/sites/dev.mauss', { depth: -1 })
+const items = traverse('../content/routes', { depth: -1 })
 	.hydrate(
 		({ breadcrumb, buffer, parse }) => {
 			const { metadata } = parse(buffer.toString('utf-8'));
