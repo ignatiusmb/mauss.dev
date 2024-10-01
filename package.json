@@ -11,8 +11,7 @@
 	"devDependencies": {
 		"@types/node": "^20.14.11",
 		"prettier": "^3.3.3",
-		"prettier-plugin-sort-package-json": "^0.2.0",
-		"prettier-plugin-svelte": "^3.2.6",
+		"prettier-plugin-svelte": "^3.2.5",
 		"typescript": "^5.5.3"
 	}
 }
