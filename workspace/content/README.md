@@ -1,6 +1,6 @@
-# Content Repository for Alchemauss
+# Workspace for Alchemauss content
 
-Home to all content in mauss.dev.
+Home to the articles that make up the content of [website](../website)
 
 ## Writing
 
@@ -23,7 +23,7 @@ author:
 ```
 
 - `name:` is the name of the author
-- `img:` is the path to the author's avatar image in the [`assets/profile`](assets/profile) directory
+- `img:` is the path to the author's avatar image in the [`assets/profile`](../website/static/assets/profile) directory
 - `link:` is the link to the author's profile or any other social link
 
 ***

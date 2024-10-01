@@ -11,18 +11,9 @@ Personal website, handcrafted with ❤️ using these tools
 Contributions are welcome! Here's a quick guide for getting started
 
 ```bash
-# 1. Fork and clone this repository to your machine
-#  ; Because this uses git submodules, we need to add this flag
-git clone --recurse-submodules <url>
-
-# 2. Initialize git submodules using the following
-#  ; You can skip this step if you cloned with the flag above
-git submodule update --init
-
-# 3. Install the dependencies and run the development server
+git clone https://github.com/ignatiusmb/mauss.dev
 pnpm install
-
-# 4. Run the development server
+cd workspace/website
 pnpm dev
 ```
 
