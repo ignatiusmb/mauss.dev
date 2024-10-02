@@ -1,0 +1,6 @@
+.svelte-kit/
+.vercel/
+build/
+
+# generated / copied files
+static/uploads/

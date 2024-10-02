@@ -1,10 +1,2 @@
 node_modules
-/.svelte-kit
-/.vercel
-/build
-
 .DS_Store
-
-# generated / copied files
-/static/assets/profile/
-/static/uploads/
