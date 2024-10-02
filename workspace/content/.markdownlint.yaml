@@ -1,0 +1,20 @@
+# MD013/line-length
+MD013: false
+
+# MD024/no-duplicate-heading
+MD024:
+  siblings_only: true
+
+# MD026/no-trailing-punctuation
+MD026:
+  # Allowed: !
+  punctuation: .,;:。，；：！
+
+# MD033/no-inline-html
+MD033: false
+
+# MD040/fenced-code-language
+MD040: false
+
+# MD041/first-line-heading
+MD041: false
