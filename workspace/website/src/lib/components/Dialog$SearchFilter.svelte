@@ -5,7 +5,7 @@
 	import type { ComponentProps } from 'svelte';
 	import { X } from 'syv/icons/feather';
 
-	type Forwarded = ComponentProps<Dialog>;
+	type Forwarded = ComponentProps<typeof Dialog>;
 	interface Props {
 		filters: Record<
 			string,

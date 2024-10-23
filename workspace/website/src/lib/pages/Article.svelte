@@ -12,7 +12,7 @@
 		post?: null | {
 			date: string;
 			title: string | { en?: string; jp?: string };
-			table: ComponentProps<Index>['items'];
+			table: ComponentProps<typeof Index>['items'];
 
 			slug?: string;
 			author?: { name?: string; link?: string; img?: string };

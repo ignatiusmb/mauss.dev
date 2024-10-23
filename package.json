@@ -9,9 +9,9 @@
 	"packageManager": "pnpm@9.5.0",
 	"prettier": "mauss/prettier.json",
 	"devDependencies": {
-		"@types/node": "^20.14.11",
+		"@types/node": "^22.7.8",
 		"prettier": "^3.3.3",
-		"prettier-plugin-svelte": "^3.2.5",
-		"typescript": "^5.5.3"
+		"prettier-plugin-svelte": "^3.2.7",
+		"typescript": "^5.6.3"
 	}
 }
