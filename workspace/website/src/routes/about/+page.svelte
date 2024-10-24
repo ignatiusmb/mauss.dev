@@ -14,7 +14,7 @@
 		<!-- prettier-ignore -->
 		<p>I'm always excited about learning new things, and I'm currently immersing myself in the fascinating world of languages and cultures from the different countries around me. In my spare time, I check out and explore as many things as I can, and polishing my skills, which are currently calisthenics, bouldering, tennis, badminton, and endurance running.</p>
 		<!-- prettier-ignore -->
-		<p>In its beautiful and unpredictable way, I have learned to appreciate the moments that I got in life, embracing both the joy and pain, growing with them together. Check out my latest life reflection, <a href="/posts/24k-journey">24K Journey - The Pursuit of a Meaningful Life</a>.</p>
+		<p>In its beautiful and unpredictable way, I have learned to appreciate the moments that I got in life, embracing both the joy and pain, growing with them together. Check out my latest life reflection, <a href="/posts/quarter-life-renaissance">Quarter-Life Renaissance</a>.</p>
 	</header>
 
 	<h2 id="expertise" style:margin-top="1.5rem">Expertise</h2>
