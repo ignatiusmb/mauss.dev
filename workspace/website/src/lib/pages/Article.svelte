@@ -130,7 +130,7 @@
 		display: grid;
 		gap: 0.8rem;
 		justify-items: center;
-		margin-top: 3rem;
+		margin-top: 2rem;
 
 		line-height: 1;
 		font-family: var(--mrq-heading);
@@ -304,10 +304,6 @@
 			& + h3 {
 				margin-top: 1.25rem;
 			}
-
-			li:not(:only-child):last-child {
-				margin-bottom: 1rem;
-			}
 		}
 		li {
 			margin-left: 1rem;
@@ -318,7 +314,7 @@
 			}
 		}
 		hr {
-			width: 100%;
+			/* width: 100%; */
 			height: 0.1rem;
 			margin-top: 2rem;
 			border: 0;
