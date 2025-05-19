@@ -1,9 +1,7 @@
 <script lang="ts">
 	import Dialog from 'syv/core/Dialog.svelte';
-	import Feather from 'syv/icons/Feather.svelte';
 
 	import type { ComponentProps } from 'svelte';
-	import { X } from 'syv/icons/feather';
 
 	type Forwarded = ComponentProps<typeof Dialog>;
 	interface Props {
@@ -29,8 +27,8 @@
 		<header>
 			<h2>Search filters</h2>
 
-			<button onclick={forward}>
-				<Feather icon={X} />
+			<button onclick={forward} aria-label="Close">
+				<i data-icon="x"></i>
 			</button>
 		</header>
 

@@ -61,43 +61,112 @@
 	scripts={[!dev && '/_vercel/insights/script.js']}
 />
 
-<Navigation />
+<div class="holy-grail" data-sveltekit-reload={$updated || 'off'}>
+	<Navigation />
 
-<main data-sveltekit-reload={$updated || 'off'}>
-	{@render children()}
-</main>
+	<main>
+		{@render children()}
+	</main>
 
-<Footer />
+	<Footer />
 
-<ScrollTop
-	styles={{
-		'--background': '#0e0e0e',
-	}}
-/>
+	<ScrollTop
+		styles={{
+			'--background': '#0e0e0e',
+		}}
+	/>
+</div>
 
 <style>
-	main {
-		position: relative;
+	.holy-grail {
 		width: 100%;
+		position: relative;
+
+		--max-content: 80rem;
+		--breakout: calc((calc(var(--max-content) + 12rem) - var(--max-content)) / 2);
+		--pad: 2rem;
+
 		display: grid;
-		gap: 2rem;
-		grid-template-columns: minmax(0, 1fr);
-		padding: 0 1rem;
-		margin-top: 2rem;
+		gap: 2rem 0;
+		align-content: center;
+		grid-template-rows: [top-start] auto [content-start] 1fr [content-end] auto [top-end];
+		grid-template-columns:
+			[full-bleed-start] var(--pad)
+			[full-bleed-padding-start] minmax(0, 1fr)
+			[breakout-start] minmax(0, var(--breakout))
+			[content-start] min(100% - var(--pad) * 2, var(--max-content))
+			[content-end] minmax(0, var(--breakout))
+			[breakout-end] minmax(0, 1fr)
+			[full-bleed-padding-end] var(--pad)
+			[full-bleed-end];
+
+		padding: 1rem 0;
 		transition: var(--t-duration);
 
-		& > :global(:not(article)) {
-			max-width: 86rem;
-			width: 100%;
+		> main {
+			grid-column: content;
 			position: relative;
-			margin: 0 auto;
+
+			display: grid;
+			gap: 2rem;
+			align-content: start;
+
+			> :global(:not(article)) {
+				max-width: 86rem;
+				width: 100%;
+				position: relative;
+				margin: 0 auto;
+			}
+
+			:global(.syv-core-pagination) {
+				max-width: 32rem;
+			}
+			:global(.syv-core-search-bar) {
+				border-radius: var(--b-radius);
+			}
 		}
 
-		& :global(.syv-core-pagination) {
-			max-width: 32rem;
-		}
-		& :global(.syv-core-search-bar) {
-			border-radius: var(--b-radius);
+		:global(i[data-icon]) {
+			width: 1.5rem;
+			height: 1.5rem;
+			display: inline-block;
+			background: currentColor;
+			mask: no-repeat center / 100%;
+			mask-image: var(--svg);
+
+			&[data-icon='bookmark'] {
+				--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M192,224l-64-40L64,224V48a8,8,0,0,1,8-8H184a8,8,0,0,1,8,8Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>');
+			}
+			&[data-icon='devices'] {
+				--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"><rect x="136" y="104" width="128" height="80" rx="16" transform="translate(344 -56) rotate(90)"/><line x1="128" y1="208" x2="88" y2="208"/><path d="M160,176H40a16,16,0,0,1-16-16V64A16,16,0,0,1,40,48H184a16,16,0,0,1,16,16V80"/><line x1="192" y1="112" x2="208" y2="112"/></svg>');
+			}
+			&[data-icon='drop-half'] {
+				--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"><path d="M208,144c0-72-80-128-80-128S48,72,48,144a80,80,0,0,0,160,0Z"/><line x1="128" y1="224" x2="128" y2="16"/><line x1="128" y1="128" x2="206.7" y2="128"/><line x1="128" y1="96" x2="196.63" y2="96"/><line x1="128" y1="160" x2="206.4" y2="160"/><line x1="128" y1="192" x2="192" y2="192"/><line x1="128" y1="64" x2="176.98" y2="64"/></svg>');
+			}
+			&[data-icon='hand-heart'] {
+				--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"><path d="M48,208H16a8,8,0,0,1-8-8V160a8,8,0,0,1,8-8H48"/><path d="M112,160h32l67-15.41a16.61,16.61,0,0,1,21,16h0a16.59,16.59,0,0,1-9.18,14.85L184,192l-64,16H48V152l25-25a24,24,0,0,1,17-7H140a20,20,0,0,1,20,20h0a20,20,0,0,1-20,20Z"/><path d="M96.73,120C87,107.72,80,94.56,80,80c0-21.69,17.67-40,39.46-40A39.12,39.12,0,0,1,156,64a39.12,39.12,0,0,1,36.54-24C214.33,40,232,58.31,232,80c0,29.23-28.18,55.07-50.22,71.32"/></svg>');
+			}
+			&[data-icon='heartbeat'] {
+				--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"><polyline points="32 136 72 136 88 112 120 160 136 136 160 136"/><path d="M24,104c0-.67,0-1.33,0-2A54,54,0,0,1,78,48c22.59,0,41.94,12.31,50,32,8.06-19.69,27.41-32,50-32a54,54,0,0,1,54,54c0,66-104,122-104,122s-42-22.6-72.58-56"/></svg>');
+			}
+			&[data-icon='id-badge'] {
+				--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"><circle cx="128" cy="136" r="32"/><path d="M80,192a60,60,0,0,1,96,0"/><rect x="32" y="48" width="192" height="160" rx="8" transform="translate(256) rotate(90)"/><line x1="96" y1="64" x2="160" y2="64"/></svg>');
+			}
+			&[data-icon='lifebuoy'] {
+				--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"><circle cx="128" cy="128" r="96"/><circle cx="128" cy="128" r="40"/><line x1="99.72" y1="99.72" x2="60.12" y2="60.12"/><line x1="156.28" y1="99.72" x2="195.88" y2="60.12"/><line x1="156.28" y1="156.28" x2="195.88" y2="195.88"/><line x1="99.72" y1="156.28" x2="60.12" y2="195.88"/></svg>');
+			}
+			&[data-icon='menu'] {
+				--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"><line x1="40" y1="128" x2="216" y2="128"/><line x1="40" y1="64" x2="216" y2="64"/><line x1="40" y1="192" x2="216" y2="192"/></svg>');
+			}
+			&[data-icon='rss'] {
+				--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"><path d="M64,40A152,152,0,0,1,216,192"/><path d="M64,112a80,80,0,0,1,80,80"/><circle cx="68" cy="188" r="12"/></svg>');
+			}
+			&[data-icon='terminal-window'] {
+				--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"><polyline points="80 96 120 128 80 160"/><line x1="136" y1="160" x2="176" y2="160"/><rect x="32" y="48" width="192" height="160" rx="8"/></svg>');
+			}
+			&[data-icon='x'] {
+				--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"><line x1="200" y1="56" x2="56" y2="200"/><line x1="200" y1="200" x2="56" y2="56"/></svg>');
+			}
 		}
 	}
 </style>

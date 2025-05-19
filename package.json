@@ -6,12 +6,13 @@
 		"check": "pnpm --filter \"./workspace/*\" check",
 		"format": "pnpm --filter \"./workspace/*\" format"
 	},
-	"packageManager": "pnpm@9.5.0",
+	"packageManager": "pnpm@10.11.0",
 	"prettier": "mauss/prettier.json",
 	"devDependencies": {
-		"@types/node": "^22.7.8",
-		"prettier": "^3.3.3",
-		"prettier-plugin-svelte": "^3.2.7",
-		"typescript": "^5.6.3"
+		"@types/node": "^22.15.19",
+		"mauss": "^0.8.2",
+		"prettier": "^3.5.3",
+		"prettier-plugin-svelte": "^3.4.0",
+		"typescript": "^5.8.3"
 	}
 }

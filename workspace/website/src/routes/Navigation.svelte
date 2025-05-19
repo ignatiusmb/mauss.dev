@@ -1,6 +1,4 @@
 <script lang="ts">
-	import * as feather from 'syv/icons/feather';
-	import Feather from 'syv/icons/Feather.svelte';
 	import Divider from '$lib/components/Divider.svelte';
 
 	import { outside } from 'syv/action';
@@ -25,8 +23,8 @@
 
 	<input type="checkbox" id="menu" aria-label="Menu" bind:checked={opened} />
 	<label for="menu">
-		<Feather icon={feather.Menu} />
-		<Feather icon={feather.X} />
+		<i data-icon="menu"></i>
+		<i data-icon="x"></i>
 	</label>
 
 	<menu>
@@ -42,16 +40,16 @@
 
 		<div class="shortcuts">
 			<a href="/about" aria-label="Profile">
-				<Feather icon={feather.User} />
+				<i data-icon="id-badge"></i>
 			</a>
 			<a href="/uses" aria-label="Uses page">
-				<Feather icon={feather.Bookmark} />
+				<i data-icon="bookmark"></i>
 			</a>
 			<a href="/rss.xml" aria-label="Get RSS">
-				<Feather icon={feather.Rss} />
+				<i data-icon="rss"></i>
 			</a>
 			<a href="/help" aria-label="Help page">
-				<Feather icon={feather.HelpCircle} />
+				<i data-icon="lifebuoy"></i>
 			</a>
 		</div>
 	</menu>
@@ -61,26 +59,19 @@
 	nav {
 		--fg-surface: rgba(200, 200, 200, 1);
 
+		grid-column: content;
 		width: 100%;
 		display: flex;
 		align-items: center;
-		padding: 0.25rem 0.5rem;
 
 		background-color: var(--bg-base);
 		font-family: var(--mrq-heading);
 		color: var(--fg-surface);
 
-		& > a:first-child {
-			flex-shrink: 0;
-			/* height: 24px; */
-			display: flex;
-			padding: 0.25rem;
-			margin: 0 0.5rem;
-			border-radius: 1rem;
-		}
-
 		a {
 			z-index: 1;
+			padding: 0.375rem;
+			border-radius: 0.375rem;
 			text-decoration: none;
 			outline: 2px solid transparent;
 
@@ -96,14 +87,14 @@
 
 	menu {
 		width: 100%;
-		display: flex;
+		display: grid;
+		gap: 0.5rem;
+		grid-auto-flow: column;
 		justify-content: end;
 		padding: 0;
 		margin: 0;
 
 		a {
-			padding: 0.375rem;
-			border-radius: 0.375rem;
 			color: var(--fg-surface);
 			text-transform: capitalize;
 		}
@@ -148,7 +139,6 @@
 			display: grid;
 			gap: 0.375rem;
 			grid-auto-flow: column;
-			padding: 0.5rem;
 
 			a {
 				width: 100%;
@@ -211,8 +201,6 @@
 			box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.188);
 
 			background-color: inherit;
-			/* transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1); */
-			/* transform: translate3d(0, -100%, 0) scale3d(0.9, 0.9, 1); */
 		}
 		input:checked ~ menu {
 			visibility: visible;
