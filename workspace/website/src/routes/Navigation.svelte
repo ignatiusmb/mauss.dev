@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { outside } from 'syv/action';
+	import { outside } from 'syv/attachment';
 	import { afterNavigate } from '$app/navigation';
 	import { page } from '$app/state';
 
@@ -11,9 +11,9 @@
 </script>
 
 <nav
-	use:outside={() => {
+	{@attach outside(() => {
 		opened = false;
-	}}
+	})}
 >
 	<a href="/" class="logo" aria-label="Alchemauss">
 		<img src="/favicon.ico" alt="Alchemauss" width="24" height="24" />
