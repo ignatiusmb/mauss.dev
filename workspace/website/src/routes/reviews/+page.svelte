@@ -12,8 +12,8 @@
 
 	const { data } = $props();
 
-	// TODO: https://github.com/sveltejs/svelte/issues/12435
-	const filters = $state($state.snapshot(data.filters));
+	// https://github.com/sveltejs/svelte/issues/12435
+	const filters = $state(data.filters);
 	const { category, genres, verdict, sort_by } = filters;
 </script>
 

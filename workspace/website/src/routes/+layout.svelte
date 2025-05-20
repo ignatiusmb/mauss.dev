@@ -20,7 +20,7 @@
 
 	onMount(() => updated.check());
 	beforeNavigate(({ willUnload, to }) => {
-		if (updated && !willUnload && to?.url) {
+		if (updated.current && !willUnload && to?.url) {
 			location.href = to.url.href;
 		}
 	});
@@ -100,8 +100,11 @@
 			[full-bleed-padding-end] var(--pad)
 			[full-bleed-end];
 
-		padding: 1rem 0;
 		transition: var(--t-duration);
+
+		@media screen and (min-width: 549px) {
+			padding: 1rem 0;
+		}
 
 		> main {
 			grid-column: content;
@@ -110,13 +113,6 @@
 			display: grid;
 			gap: 2rem;
 			align-content: start;
-
-			> :global(:not(article)) {
-				max-width: 86rem;
-				width: 100%;
-				position: relative;
-				margin: 0 auto;
-			}
 
 			:global(.syv-core-pagination) {
 				max-width: 32rem;
