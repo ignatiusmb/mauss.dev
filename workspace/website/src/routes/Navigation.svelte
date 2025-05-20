@@ -3,7 +3,7 @@
 
 	import { outside } from 'syv/action';
 	import { afterNavigate } from '$app/navigation';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 
 	let opened = $state(false);
 
@@ -30,7 +30,7 @@
 	<menu>
 		<div class="routes">
 			{#each ['curated', 'posts', 'reviews'] as to}
-				{@const current = $page.url.pathname.startsWith(`/${to}`)}
+				{@const current = page.url.pathname.startsWith(`/${to}`)}
 
 				<a href="/{to}" aria-current={current ? 'page' : null}>{to}</a>
 			{/each}

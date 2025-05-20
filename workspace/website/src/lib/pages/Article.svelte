@@ -4,7 +4,7 @@
 	import type { ComponentProps } from 'svelte';
 	import { hydrate } from 'aubade/browser';
 	import { format } from 'mauss/date';
-	import { navigating, page } from '$app/stores';
+	import { navigating, page } from '$app/state';
 
 	type Flank = null | { slug: string; title: string | Record<string, any> };
 	interface Props {
@@ -30,7 +30,7 @@
 	const { path = '', post = null, flank = null, header, children }: Props = $props();
 </script>
 
-<article use:hydrate={$navigating}>
+<article use:hydrate={navigating.from}>
 	{#if header && post}
 		<header>
 			<aside>
@@ -49,20 +49,20 @@
 				<h1>{post.title.en}</h1>
 			{/if}
 
-			<a href={post.author?.link || '/about/'}>
+			<a href={post.author?.link || '/about'}>
 				{post.author?.name || 'Ignatius Bagussuputra'}
 			</a>
 
-			{#if $page.params.branch || post.branches?.length}
+			{#if page.params.branch || post.branches?.length}
 				<div style:display="flex" style:gap="0.25rem" style:text-transform="capitalize">
 					<span>[</span>
 					{#each post.branches || [] as { branch }, idx}
-						{@const root = $page.url.pathname.split('/')[1]}
+						{@const root = page.url.pathname.split('/')[1]}
 						{#if idx !== 0}<span class="dash">&mdash;</span>{/if}
 						<a href="/{root}/{post.slug}/{branch}">{branch}</a>
 					{:else}
-						{@const idx = $page.url.pathname.lastIndexOf('/')}
-						<a href={$page.url.pathname.slice(0, idx)}>Back to Article</a>
+						{@const idx = page.url.pathname.lastIndexOf('/')}
+						<a href={page.url.pathname.slice(0, idx)}>Back to Article</a>
 					{/each}
 					<span>]</span>
 				</div>

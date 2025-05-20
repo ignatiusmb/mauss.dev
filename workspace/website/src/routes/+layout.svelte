@@ -13,14 +13,14 @@
 
 	import { dev } from '$app/environment';
 	import { beforeNavigate } from '$app/navigation';
-	import { page, updated } from '$app/stores';
+	import { page, updated } from '$app/state';
 	import { onMount } from 'svelte';
 
 	const { children } = $props();
 
 	onMount(() => updated.check());
 	beforeNavigate(({ willUnload, to }) => {
-		if ($updated && !willUnload && to?.url) {
+		if (updated && !willUnload && to?.url) {
 			location.href = to.url.href;
 		}
 	});
@@ -28,9 +28,9 @@
 
 <MetaHead
 	domain="https://mauss.dev"
-	title="{$page.data.meta?.title || $page.status} | Alchemauss"
-	canonical={$page.data.meta?.canonical}
-	description={$page.data.meta?.description}
+	title="{page.data.meta?.title || page.status} | Alchemauss"
+	canonical={page.data.meta?.canonical}
+	description={page.data.meta?.description}
 	authors={['Ignatius Bagussuputra']}
 	alternate={[
 		{
@@ -61,7 +61,7 @@
 	scripts={[!dev && '/_vercel/insights/script.js']}
 />
 
-<div class="holy-grail" data-sveltekit-reload={$updated || 'off'}>
+<div class="holy-grail" data-sveltekit-reload={updated.current || 'off'}>
 	<Navigation />
 
 	<main>
