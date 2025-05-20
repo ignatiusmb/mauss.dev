@@ -6,11 +6,7 @@
 	const { data } = $props();
 </script>
 
-<Article
-	post={data.article}
-	path="reviews/{data.article.slug}/+article.md"
-	flank={data.article.flank}
->
+<Article post={data.article} path={data.source} flank={data.article.flank}>
 	{#snippet header()}
 		<Backdrop post={data.article} />
 
@@ -33,7 +29,7 @@
 	{/snippet}
 
 	<section class="info-box warning">
-		<Link href="/disclaimer/" style="danger">
+		<Link href="/disclaimer" style="danger">
 			<h2>DISCLAIMER</h2>
 		</Link>
 	</section>

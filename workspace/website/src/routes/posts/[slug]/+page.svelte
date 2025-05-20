@@ -5,11 +5,7 @@
 	const { data } = $props();
 </script>
 
-<Article
-	post={data.article}
-	path="posts/{data.article.slug}/+article.md"
-	flank={data.article.flank}
->
+<Article post={data.article} path={data.source} flank={data.article.flank}>
 	{#snippet header()}
 		<small class="tags">
 			{#each data.article.tags as tag}
