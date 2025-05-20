@@ -61,7 +61,7 @@
 	scripts={[!dev && '/_vercel/insights/script.js']}
 />
 
-<div class="holy-grail" data-sveltekit-reload={updated.current || 'off'}>
+<div data-sveltekit-reload={updated.current || 'off'}>
 	<Navigation />
 
 	<main>
@@ -78,7 +78,8 @@
 </div>
 
 <style>
-	.holy-grail {
+	/* holy grail */
+	div {
 		width: 100%;
 		position: relative;
 
@@ -130,6 +131,12 @@
 			mask: no-repeat center / 100%;
 			mask-image: var(--svg);
 
+			&[data-icon='arrow-circle-right'] {
+				--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"><circle cx="128" cy="128" r="96"/><line x1="88" y1="128" x2="168" y2="128"/><polyline points="136 96 168 128 136 160"/></svg>');
+			}
+			&[data-icon='arrow-right'] {
+				--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"><line x1="40" y1="128" x2="216" y2="128"/><polyline points="144 56 216 128 144 200"/></svg>');
+			}
 			&[data-icon='bookmark'] {
 				--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M192,224l-64-40L64,224V48a8,8,0,0,1,8-8H184a8,8,0,0,1,8,8Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>');
 			}
