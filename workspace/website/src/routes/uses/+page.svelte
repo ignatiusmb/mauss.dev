@@ -113,8 +113,8 @@
 			<span>10000 IU</span>
 		</li>
 		<li>
-			<strong>Vitamin K2 (MK7)</strong>
-			<span>200 mcg</span>
+			<strong>Vitamin K2</strong>
+			<span>MK7 200 mcg</span>
 		</li>
 		<li>
 			<strong>Magnesium</strong>

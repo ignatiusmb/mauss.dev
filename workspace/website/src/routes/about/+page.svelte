@@ -7,195 +7,216 @@
 	<header>
 		<WeavedImage src="/assets/profile/mauss.jpg" alt="Mauss Profile" />
 
-		<h2>Hello, Igna here 👋</h2>
+		<h1>
+			<i data-icon="hand-waving" style:width="2rem" style:height="2rem"></i>
+			<span style:margin-left="0.5rem">hello.</span>
+		</h1>
 
 		<!-- prettier-ignore -->
-		<p>I love connecting with people, there's always something new or cool to pick up from others! Meeting new friends and getting to know them personally is great, but the best part comes when we can kick back, talk about anything, and have a good time together.</p>
-		<!-- prettier-ignore -->
-		<p>I'm always excited about learning new things, and I'm currently immersing myself in the fascinating world of languages and cultures from the different countries around me. In my spare time, I check out and explore as many things as I can, and polishing my skills, which are currently calisthenics, bouldering, tennis, badminton, and endurance running.</p>
-		<!-- prettier-ignore -->
-		<p>In its beautiful and unpredictable way, I have learned to appreciate the moments that I got in life, embracing both the joy and pain, growing with them together. Check out my latest life reflection, <a href="/posts/quarter-life-renaissance">Quarter-Life Renaissance</a>.</p>
+		<p>I'm Igna. I think best in quiet spaces and I tend to keep to them. Most of my time goes into building—clean code, tight interfaces, and systems that make sense. When I'm not at the desk, I train for discipline: calisthenics, bouldering, tennis, and long runs. Movement clears the noise.</p>
 	</header>
 
-	<h2 id="expertise" style:margin-top="1.5rem">Expertise</h2>
+	<h3 id="expertise">
+		<i data-icon="flask"> </i>
+		<span>expertise.</span>
+	</h3>
 	<!-- prettier-ignore -->
-	<p>I'm a software engineer by trade, but I like to see myself as a <em>software alchemist</em>. I would assume you're interested to learn and connect with me professionally, so allow me to explain a bit further.</p>
+	<p>I'm a software engineer by trade, but I like to think of myself more as a <em>software alchemist</em>. It's a kind of art—taking something complex, messy, or inefficient, and refining it into something simple, elegant, and fast.</p>
 	<!-- prettier-ignore -->
-	<p>I've worked on various projects and cultivated the ability for <em>transmuting</em> software and streamlining code. I consider it as a form of art, converting intricate or troublesome code into a more concise and maintainable format, which makes the debugging process easier, resulting in simpler bug fixes and significantly faster development cycles.</p>
+	<p>My strength lies in restructuring systems and streamlining logic—shaving off the unnecessary until what's left just works. The payoff? Easier debugging, quicker iteration, and codebases you don't dread revisiting.</p>
 	<!-- prettier-ignore -->
-	<p>I mainly work on the web nowadays with <a href="https://svelte.dev">Svelte</a> and <a href="https://www.typescriptlang.org/">TypeScript</a> (which is a superset of JavaScript), but I have tried other languages before, such as <a href="https://en.wikipedia.org/wiki/Assembly_language">Assembly</a>, <a href="https://www.gnu.org/software/bash/">Bash</a>, <a href="https://en.wikipedia.org/wiki/C_(programming_language)">C</a>, <a href="https://en.wikipedia.org/wiki/C++">C++</a>, <a href="https://dart.dev/">Dart</a> (<a href="https://flutter.dev/">Flutter</a>), <a href="https://godotengine.org/">GDScript</a>, <a href="https://www.haskell.org/">Haskell</a>, <a href="https://en.wikipedia.org/wiki/Java_%28programming_language%29">Java</a>, <a href="https://www.python.org/">Python</a> and probably a few more I didn't recall. Built all sorts of software and applications with various different architectures like CLI tools, automation scripts, mobile apps, desktop apps, web sites and applications built as a single-page application (SPA), multi-page application (MPA), server-side rendered (SSR) or statically generated (SSG) site.</p>
+	<p>These days, I build mostly for the web, working with <a href="https://svelte.dev">Svelte</a> and <a href="https://www.typescriptlang.org/">TypeScript</a>. I've explored a wide spectrum of languages: <a href="https://en.wikipedia.org/wiki/Assembly_language">Assembly</a>, <a href="https://www.gnu.org/software/bash/">Bash</a>, <a href="https://en.wikipedia.org/wiki/C_(programming_language)">C</a>, <a href="https://en.wikipedia.org/wiki/C++">C++</a>, <a href="https://dart.dev/">Dart</a> (<a href="https://flutter.dev/">Flutter</a>), <a href="https://godotengine.org/">GDScript</a>, <a href="https://www.haskell.org/">Haskell</a>, <a href="https://en.wikipedia.org/wiki/Java_%28programming_language%29">Java</a>, <a href="https://www.python.org/">Python</a>, and a few others I've probably forgotten. I don't mind the language. Once you understand the fundamentals, the rest follows.</p>
 	<!-- prettier-ignore -->
-	<p>While I can be a full-stack engineer, my primary focus and passion lie in the frontend development, which is to craft user-friendly interfaces and delightful user experiences. As one of the core maintainers of <a href="https://github.com/sveltejs">Svelte</a>, I'm deeply connected with the frontend community, actively contributing to its growth and development.</p>
+	<p>Though I can go full-stack when needed, my focus is frontend. I care about interfaces—how they feel, how they guide, how they stay out of the way.</p>
 
-	<h2 id="activities">Activities</h2>
+	<h3 id="now">
+		<i data-icon="calendar-dots"></i>
+		<span>now.</span>
+	</h3>
 	<ul>
+		<li>bulking up</li>
+		<li>learning japanese</li>
+		<li>learning finance</li>
+		<li>building with sveltekit + pocketbase</li>
+		<li>rethinking my design system</li>
+		<li>refreshing my <a href="/uses">/uses</a> page</li>
+	</ul>
+
+	<h3 id="movement">
+		<i data-icon="pulse"></i>
+		<span>movement.</span>
+	</h3>
+	<p><em>currently active</em></p>
+	<ul style:margin-top="0">
 		<li>
-			<code>2005</code>
-			<span>💪 |</span>
-			<strong>Running</strong>
-			<span>&mdash; Sticking to the basics never goes wrong</span>
+			<strong>running</strong>
+			<span>the foundation</span>
 		</li>
 		<li>
-			<code>2005</code>
-			<span>💪 |</span>
-			<strong>Cycling</strong>
-			<span>&mdash; Would bike everywhere if it wasn't for the pollution</span>
+			<strong>cycling</strong>
+			<span>would do more if the air was cleaner</span>
 		</li>
 		<li>
-			<code>2005</code>
-			<span>💪 |</span>
-			<strong>Swimming</strong>
-			<span>&mdash; Closest I can get to zero-gravity</span>
+			<strong>swimming</strong>
+			<span>closest thing to zero-gravity</span>
 		</li>
 		<li>
-			<code>2006</code>
-			<span>🙅 |</span>
-			<strong>Futsal</strong>
-			<span>&mdash; Field too small and crowded</span>
+			<strong>badminton</strong>
+			<span>sharp, fast-paced action</span>
 		</li>
 		<li>
-			<code>2006</code>
-			<span>🙅 |</span>
-			<strong>Soccer</strong>
-			<span>&mdash; Field too big and empty</span>
+			<strong>table tennis</strong>
+			<span>perfect for indoor days</span>
 		</li>
 		<li>
-			<code>2008</code>
-			<span>💪 |</span>
-			<strong>Badminton</strong>
-			<span>&mdash; A good fast-paced action</span>
+			<strong>tricking / gymnastics</strong>
+			<span>control meets flow</span>
 		</li>
 		<li>
-			<code>2008</code>
-			<span>🙅 |</span>
-			<strong>Basketball</strong>
-			<span>&mdash; I prefer to keep my fingers as-is</span>
+			<strong>tennis</strong>
+			<span>clean, satisfying hits</span>
 		</li>
 		<li>
-			<code>2008</code>
-			<span>🤷 |</span>
-			<strong>Volleyball</strong>
-			<span>&mdash; Good to watch people play</span>
+			<strong>bouldering</strong>
+			<span>problem-solving in motion</span>
 		</li>
 		<li>
-			<code>2008</code>
-			<span>🤷 |</span>
-			<strong>Field Hockey</strong>
-			<span>&mdash; Never really found anyone to play with</span>
+			<strong>hiking x trekking</strong>
+			<span>self-reflection through altitude</span>
+		</li>
+	</ul>
+	<p style:margin-top="1.5rem"><em>retired / explored</em></p>
+	<ul style:margin-top="0">
+		<li>
+			<strong>futsal</strong>
+			<span>too cramped</span>
 		</li>
 		<li>
-			<code>2014</code>
-			<span>💪 |</span>
-			<strong>Table Tennis</strong>
-			<span>&mdash; The perfect activity for indoor people</span>
+			<strong>soccer</strong>
+			<span>too much space</span>
 		</li>
 		<li>
-			<code>2016</code>
-			<span>💪 |</span>
-			<strong>Tricking x Gymnastics</strong>
-			<span>&mdash; Full body control</span>
+			<strong>basketball</strong>
+			<span>i need my fingers</span>
 		</li>
 		<li>
-			<code>2022</code>
-			<span>💪 |</span>
-			<strong>Tennis</strong>
-			<span>&mdash; A good satisfying action</span>
+			<strong>volleyball</strong>
+			<span>fun to watch</span>
 		</li>
 		<li>
-			<code>2022</code>
-			<span>💪 |</span>
-			<strong>Bouldering</strong>
-			<span>&mdash; Problem solving IRL</span>
-		</li>
-		<li>
-			<code>2023</code>
-			<span>💪 |</span>
-			<strong>Hiking x Trekking</strong>
-			<span>&mdash; Self-love with nature</span>
+			<strong>field hockey</strong>
+			<span>too niche</span>
 		</li>
 	</ul>
 
-	<h2 id="socials">Socials</h2>
+	<h3 id="elsewhere">
+		<i data-icon="share-network"></i>
+		<span>elsewhere.</span>
+	</h3>
 	<!-- prettier-ignore -->
-	<p>Reach out and say hello to me from any of the ones listed here! I may not be able to immediately see them, so it may take some time for me to get back to you.</p>
-	<ul>
+	<p>if you feel like saying hi, here are a few places where you might find me. i may not check them all the time, but i'll respond when i can.</p>
+	<ul style:margin-top="0">
 		<li>
-			<span>📧</span>
-			<a href="mailto:ignatius.mbs@gmail.com">E-mail</a>
-			<span>| ignatius.mbs@gmail.com</span>
+			<a href="mailto:ignatius.mbs@gmail.com">email</a>
+			<span>ignatius.mbs@gmail.com</span>
 		</li>
 		<li>
-			<span>🟢</span>
-			<a href="https://discord.com/users/231822751504138240">Discord</a>
-			<span>| Everything in one place (@ignatiusmb)</span>
+			<a href="https://github.com/ignatiusmb">github</a>
+			<span>where i spend most of my time</span>
 		</li>
 		<li>
-			<span>🟢</span>
-			<a href="https://github.com/ignatiusmb">GitHub</a>
-			<span>| Where I am most of the time</span>
+			<a href="https://www.instagram.com/ignatiusmb">instagram</a>
+			<span>come say hi</span>
 		</li>
 		<li>
-			<span>🟢</span>
-			<a href="https://www.instagram.com/ignatiusmb">Instagram</a>
-			<span>| Come say hello!</span>
+			<a href="https://discord.com/users/231822751504138240">discord</a>
+			<span>patchy notifications</span>
 		</li>
 		<li>
-			<span>🟢</span>
-			<a href="https://www.youtube.com/@ignatiusmb">YouTube</a>
-			<span>| Subscribe!</span>
+			<a href="https://www.youtube.com/@ignatiusmb">youtube</a>
+			<span>occasional uploads</span>
 		</li>
 		<li>
-			<span>🟢</span>
-			<a href="https://open.spotify.com/user/ignatiusmb">Spotify</a>
-			<span>| Monthly curated music!</span>
+			<a href="https://open.spotify.com/user/ignatiusmb">spotify</a>
+			<span>monthly music picks</span>
 		</li>
 		<li>
-			<span>🟢</span>
-			<a href="https://www.youtube.com/user/Ignapure/playlists">Online TV</a>
-			<span>| Monthly curated videos!</span>
+			<strong>whatsapp</strong>
+			<span>only for direct contact</span>
 		</li>
 		<li>
-			<span>🟢</span>
-			<a href="https://t.me/ignatiusmb">Telegram</a>
-			<span>| Quick and convenient</span>
+			<a href="https://t.me/ignatiusmb">telegram</a>
+			<span>quick and convenient</span>
 		</li>
 		<li>
-			<span>🟡</span>
-			<a href="https://gitlab.com/ignatiusmb">GitLab</a>
-			<span>| Keepsake from university</span>
-		</li>
-		<li>
-			<span>🟡</span>
-			<a href="https://www.linkedin.com/in/ignatiusmb">LinkedIn</a>
-			<span>| Professionally mandatory</span>
-		</li>
-		<li>
-			<span>🟡</span>
-			<a href="https://twitter.com/alchemauss">X (formerly Twitter)</a>
-			<span>| Is this still relevant?</span>
-		</li>
-		<li>
-			<span>🟡</span>
-			<a href="https://keybase.io/mauss">Keybase</a>
-			<span>| Does anyone actually use this?</span>
-		</li>
-		<li>
-			<span>🔒</span>
-			<span>Signal | Personal communication app</span>
-		</li>
-		<li>
-			<span>🚫</span>
-			<a href="https://www.facebook.com/ignatiusmb">Facebook</a>
-			<span>| Keepsake from childhood</span>
+			<strong>signal</strong>
+			<span>private communication</span>
 		</li>
 	</ul>
+	<p style:margin-top="1.5rem">semi-active / archival</p>
+	<ul style:margin-top="0">
+		<li>
+			<a href="https://www.facebook.com/ignatiusmb">facebook</a>
+			<span>relic from childhood</span>
+		</li>
+		<li>
+			<a href="https://gitlab.com/ignatiusmb">gitlab</a>
+			<span>university-era keepsake</span>
+		</li>
+		<li>
+			<a href="https://www.linkedin.com/in/ignatiusmb">linkedin</a>
+			<span>for professional things</span>
+		</li>
+		<li>
+			<a href="https://twitter.com/alchemauss">twitter (x)</a>
+			<span>not sure why i still have this</span>
+		</li>
+		<li>
+			<a href="https://keybase.io/mauss">keybase</a>
+			<span>probably gathering dust</span>
+		</li>
+	</ul>
+	<!-- prettier-ignore -->
+	<p>not everything needs to be loud. these platforms are tools, not identities. some stuck, some didn't—but they've all held fragments of me at some point.</p>
 
-	<h2 id="trivia">Trivia</h2>
+	<h3 id="trivia">
+		<i data-icon="sparkle"></i>
+		<span>trivia.</span>
+	</h3>
 	<ul>
 		<li>
-			My personality type is <a href="https://www.16personalities.com/intj-personality">INTJ</a>
+			<a href="https://www.16personalities.com/intj-personality">INTJ</a>
+			<span>or so the test claims, take it as you will</span>
 		</li>
-		<li>My zodiac sign is Scorpio</li>
-		<li>I can hold my breath for ~2 minutes</li>
+		<li>
+			<strong>scorpio</strong>
+			<span>if that means anything to you</span>
+		</li>
+		<li>can hold my breath for around 2 minutes</li>
 	</ul>
 </Article>
+
+<style>
+	h1 {
+		display: flex;
+		align-items: center;
+		font-size: clamp(1.5rem, 4vw, 2rem);
+		color: rgba(255, 255, 255, 0.9);
+	}
+
+	/* add specificity */
+	header ~ h3[id] {
+		display: flex;
+		align-items: center;
+		margin-top: 2rem;
+
+		span {
+			margin-left: 0.5rem;
+		}
+	}
+
+	strong + span:last-child:nth-child(2)::before,
+	a + span:last-child:nth-child(2)::before {
+		content: '— ';
+	}
+</style>

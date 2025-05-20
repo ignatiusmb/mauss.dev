@@ -55,7 +55,7 @@
 		}
 		&.border {
 			border: 0.75rem solid crimson;
-			border-radius: 0.5rem;
+			border-radius: 2rem;
 			box-shadow:
 				0 0 0.5rem crimson,
 				inset 0 0 1rem crimson;

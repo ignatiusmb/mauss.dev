@@ -182,7 +182,7 @@
 				margin-top: 0.5rem;
 			}
 		}
-		& > header:first-child + :not(section) {
+		& > header + :not(section) {
 			margin-top: 4rem;
 		}
 		& > .half-bleed {
