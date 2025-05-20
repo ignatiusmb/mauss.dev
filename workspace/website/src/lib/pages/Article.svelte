@@ -419,7 +419,7 @@
 		}
 	}
 
-	@media only screen and (min-width: 600px) {
+	@media (min-width: 600px) {
 		footer {
 			grid-template-columns: 1fr 1fr;
 		}

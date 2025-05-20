@@ -1,6 +1,4 @@
 <script lang="ts">
-	import Divider from '$lib/components/Divider.svelte';
-
 	import { outside } from 'syv/action';
 	import { afterNavigate } from '$app/navigation';
 	import { page } from '$app/state';
@@ -17,7 +15,7 @@
 		opened = false;
 	}}
 >
-	<a href="/">
+	<a href="/" class="logo" aria-label="Alchemauss">
 		<img src="/favicon.ico" alt="Alchemauss" width="24" height="24" />
 	</a>
 
@@ -34,8 +32,6 @@
 
 				<a href="/{to}" aria-current={current ? 'page' : null}>{to}</a>
 			{/each}
-
-			<Divider type="horizontal" />
 		</div>
 
 		<div class="shortcuts">
@@ -57,21 +53,37 @@
 
 <style>
 	nav {
+		--pad: 0.375rem;
 		--fg-surface: rgba(200, 200, 200, 1);
 
-		grid-column: content;
+		grid-column: full-bleed;
+		z-index: 3;
 		width: 100%;
+		position: sticky;
+		top: 0;
+
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 
-		background-color: var(--bg-base);
+		background: var(--bg-base);
 		font-family: var(--mrq-heading);
 		color: var(--fg-surface);
 
+		@media (min-width: 549px) {
+			position: relative;
+			grid-column: content;
+
+			input,
+			label[for='menu'] {
+				display: none;
+			}
+		}
+
 		a {
 			z-index: 1;
-			padding: 0.375rem;
-			border-radius: 0.375rem;
+			padding: var(--pad);
+			border-radius: var(--pad);
 			text-decoration: none;
 			outline: 2px solid transparent;
 
@@ -85,14 +97,61 @@
 		}
 	}
 
+	.logo {
+		padding: 1rem;
+
+		@media (min-width: 549px) {
+			padding: var(--pad);
+		}
+	}
+
+	input {
+		display: none;
+
+		&:not(:checked) + label[for='menu'] > :global(:last-child),
+		&:checked + label[for='menu'] > :global(:first-child) {
+			display: none;
+		}
+
+		&:checked ~ menu {
+			visibility: visible;
+		}
+	}
+	label[for='menu'] {
+		display: inline-flex;
+		padding: 1rem 0.875rem;
+	}
+
 	menu {
+		--pad: 0.5rem;
+
+		visibility: hidden;
 		width: 100%;
+		position: absolute;
+		top: 100%;
+		left: 0;
+
 		display: grid;
-		gap: 0.5rem;
-		grid-auto-flow: column;
-		justify-content: end;
-		padding: 0;
+		gap: var(--pad);
+		padding: var(--pad);
 		margin: 0;
+
+		border-bottom: 1px solid var(--bg-cover);
+		border-bottom-right-radius: 0.5rem;
+		border-bottom-left-radius: 0.5rem;
+		box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.188);
+		background-color: inherit;
+
+		@media (min-width: 549px) {
+			grid-auto-flow: column;
+			visibility: visible;
+			width: auto;
+			position: static;
+
+			padding: 0;
+			border: none;
+			box-shadow: none;
+		}
 
 		a {
 			color: var(--fg-surface);
@@ -101,12 +160,13 @@
 
 		.routes {
 			display: grid;
-			gap: 0.5rem;
+			gap: var(--pad);
 			grid-auto-flow: column;
 			align-items: center;
 
 			a {
 				position: relative;
+				text-align: center;
 				color: var(--fg-surface);
 
 				&:hover::after {
@@ -123,21 +183,31 @@
 					width: 0;
 					height: 0.15rem;
 					border-radius: 0.25rem;
-					background-color: var(--theme-secondary);
+					background: var(--theme-secondary);
 					transition: width var(--t-duration) ease;
 					transform: translateY(100%);
 				}
 
-				&[aria-current]::after {
-					width: 100%;
-					background-color: var(--theme-primary);
+				&[aria-current] {
+					background: rgba(255, 255, 255, 0.1);
+				}
+			}
+
+			@media (min-width: 549px) {
+				a[aria-current] {
+					background: inherit;
+
+					&::after {
+						width: 100%;
+						background-color: var(--theme-primary);
+					}
 				}
 			}
 		}
 
 		.shortcuts {
 			display: grid;
-			gap: 0.375rem;
+			gap: var(--pad);
 			grid-auto-flow: column;
 
 			a {
@@ -149,73 +219,6 @@
 					background: rgba(255, 255, 255, 0.1);
 				}
 			}
-		}
-	}
-
-	@media only screen and (min-width: 500px) {
-		input,
-		label[for='menu'] {
-			display: none;
-		}
-		nav > a:first-child {
-			position: fixed;
-		}
-		menu .routes > :global(:last-child) {
-			display: none;
-		}
-	}
-	/* change to 599 when there's more routes */
-	@media only screen and (max-width: 499px) {
-		label[for='menu'] {
-			display: inline-flex;
-			padding: 1rem 0.875rem;
-		}
-		input:not(:checked) + label[for='menu'] > :global(:last-child),
-		input:checked + label[for='menu'] > :global(:first-child) {
-			display: none;
-		}
-
-		nav {
-			z-index: 3;
-			position: sticky;
-			top: 0;
-			justify-content: space-between;
-		}
-		input {
-			visibility: hidden;
-			width: auto;
-		}
-
-		menu {
-			visibility: hidden;
-			position: absolute;
-			top: 100%;
-			left: 0;
-			width: 100%;
-			display: grid;
-			justify-content: initial;
-
-			border-bottom: 1px solid var(--bg-cover);
-			border-bottom-right-radius: 0.5rem;
-			border-bottom-left-radius: 0.5rem;
-			box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.188);
-
-			background-color: inherit;
-		}
-		input:checked ~ menu {
-			visibility: visible;
-			transform: none;
-		}
-
-		menu .routes,
-		menu .shortcuts {
-			width: 100%;
-			display: grid;
-			gap: 0.375rem;
-		}
-		menu .routes {
-			grid-auto-flow: row;
-			padding: 0 0.5rem;
 		}
 	}
 

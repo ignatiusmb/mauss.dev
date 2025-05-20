@@ -42,7 +42,7 @@
 			width: 2rem;
 			font-size: 1.5rem;
 
-			@media only screen and (min-width: 480px) {
+			@media (min-width: 480px) {
 				width: 4rem;
 			}
 		}

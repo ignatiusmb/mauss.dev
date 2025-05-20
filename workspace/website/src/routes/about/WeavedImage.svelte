@@ -74,7 +74,7 @@
 		}
 	}
 
-	@media only screen and (min-width: 500px) {
+	@media (min-width: 500px) {
 		.weaved-image {
 			float: left;
 			margin: 3rem;
