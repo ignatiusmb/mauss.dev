@@ -20,9 +20,9 @@
 	</a>
 
 	<input type="checkbox" id="menu" aria-label="Menu" bind:checked={opened} />
-	<label for="menu">
-		<i data-icon="menu"></i>
-		<i data-icon="x"></i>
+	<label for="menu" aria-label="Toggle menu">
+		<i data-icon="menu" role="presentation"></i>
+		<i data-icon="x" role="presentation"></i>
 	</label>
 
 	<menu>
