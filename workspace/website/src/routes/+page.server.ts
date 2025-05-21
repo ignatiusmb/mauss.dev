@@ -16,7 +16,7 @@ export async function load({ fetch }) {
 		posts: posts.slice(0, 4),
 		reviews: reviews.filter((x) => x.rating && x.verdict !== 'pending').slice(0, 4),
 		meta: {
-			title: 'Ignatius Bagussuputra',
+			title: channel.title,
 			description: channel.description,
 		},
 	};

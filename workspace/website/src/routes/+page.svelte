@@ -8,48 +8,66 @@
 
 <Article>
 	<header>
-		<h1>Ignatius Bagussuputra</h1>
+		<h1>Ignatius Bagus.</h1>
 		<span><em>Software Alchemist</em> — Workdays Engineer, Weekends Wordsmith</span>
 	</header>
 
 	<!-- prettier-ignore -->
-	<p>Hi, I am Igna, an independent software engineer living between GMT+7 to GMT+8. I'm a member of the <a href="https://svelte.dev/">Svelte</a> core team and mostly tend to open source technologies, which is publicly available on <a href="https://github.com/ignatiusmb">GitHub</a>.</p>
+	<p><a href="/about#expertise">Independent software engineer</a> based in Southeast Asia (GMT+7&ndash;8). I build in public — mostly open source, all on <a href="https://github.com/ignatiusmb" target="_blank">GitHub</a>. Some private work is there too, mostly under the radar.</p>
 	<!-- prettier-ignore -->
-	<p>I also do consultancy and take on freelancing projects that are typically confidential and involves tailored solutions for clients seeking a more personalized approach. If you're interested, feel free to <a href="/about/">contact me</a> from one of my socials.</p>
+	<p>I also take on consulting and freelance projects — tailored for those seeking customized and private work. If that sounds like you, feel free to reach out through one of <a href="/about#elsewhere">my socials</a>.</p>
 	<!-- prettier-ignore -->
-	<p>Besides my engineering pursuits, I enjoy writing and sharing my thoughts and experiences, where I often reflect on life lessons and new discoveries. Check out the <a href="/help/">help page</a> for more details.</p>
+	<p>Outside engineering, I compose — it's how I process lessons, share discoveries, and explore new ideas. If you're curious, the <a href="/help">help page</a> is a good place to start.</p>
 
 	<section>
-		<h2>Blog</h2>
+		<h2>
+			<i data-icon="article"></i>
+			<span>/posts</span>
+		</h2>
 		{#each data.posts as { slug, title, date }}
 			<article>
 				<a href="/posts/{slug}/">{title}</a>
 				<time datetime={date}>{format(date)('DD MMM YYYY')}</time>
 			</article>
 		{/each}
-		<a href="/posts/">All posts &rarr;</a>
+		<a href="/posts/">
+			<span>All posts</span>
+			<i data-icon="arrow-circle-right"></i>
+		</a>
 	</section>
 
 	<section>
-		<h2>Curated</h2>
+		<h2>
+			<i data-icon="books"></i>
+			<span>/curated</span>
+		</h2>
 		{#each data.curated as { slug, title, date }}
 			<article>
 				<a href="/curated/{slug}/">{title}</a>
 				<time datetime={date}>{format(date)('DD MMM YYYY')}</time>
 			</article>
 		{/each}
-		<a href="/curated/">All curated things &rarr;</a>
+		<a href="/curated/">
+			<span>All curated things</span>
+			<i data-icon="arrow-circle-right"></i>
+		</a>
 	</section>
 
 	<section>
-		<h2>Reviews</h2>
+		<h2>
+			<i data-icon="list-star"></i>
+			<span>/reviews</span>
+		</h2>
 		{#each data.reviews as { slug, title, date }}
 			<article>
 				<a href="/reviews/{slug}/">{title.short || title.en}</a>
 				<time datetime={date}>{format(date)('DD MMM YYYY')}</time>
 			</article>
 		{/each}
-		<a href="/reviews/">All reviews &rarr;</a>
+		<a href="/reviews/">
+			<span>All reviews</span>
+			<i data-icon="arrow-circle-right"></i>
+		</a>
 	</section>
 </Article>
 
@@ -76,18 +94,40 @@
 		justify-items: start;
 
 		h2 {
-			text-transform: capitalize;
+			display: flex;
+			align-items: center;
 			font-size: 1.5rem;
+
+			i[data-icon] {
+				margin-right: 0.5rem;
+			}
 		}
 		article {
 			width: 100%;
 			display: flex;
 			gap: 1rem;
+			justify-content: space-between;
 
 			time {
-				flex: 1;
-				text-align: right;
 				text-wrap: nowrap;
+			}
+		}
+		> a {
+			display: flex;
+			align-items: center;
+
+			i[data-icon] {
+				height: 1.25rem;
+				width: 1.25rem;
+				margin-left: 0.5rem;
+				transition: transform 150ms ease-in-out;
+			}
+
+			&:hover i[data-icon] {
+				transform: translateX(0.25rem);
+			}
+			&:focus-visible i[data-icon] {
+				transform: scale(1.1);
 			}
 		}
 	}

@@ -1,35 +1,30 @@
-<script>
-	import * as feather from 'syv/icons/feather';
-	import Feather from 'syv/icons/Feather.svelte';
-</script>
-
 <footer>
 	<section>
 		<span>&Larr;</span>
 		<a href="/about" aria-label="Profile">
-			<Feather icon={feather.User} />
+			<i data-icon="id-badge"></i>
 		</a>
 		<a href="/sponsor" aria-label="Sponsor page">
-			<Feather icon={feather.Heart} />
+			<i data-icon="hand-heart"></i>
 		</a>
 		<a href="/help" aria-label="Help page">
-			<Feather icon={feather.HelpCircle} />
+			<i data-icon="lifebuoy"></i>
 		</a>
 		<span>&Rarr;</span>
 	</section>
 
-	<p>Copyright &copy; 2017&ndash;{new Date().getFullYear()} Ignatius Bagussuputra</p>
+	<p>Copyright &copy; 2017&ndash;{new Date().getFullYear()} Ignatius Bagus.</p>
 </footer>
 
 <style>
 	footer {
+		grid-column: content;
 		width: 100%;
-		max-width: 53rem;
+
 		position: relative;
 		display: grid;
 		gap: 0.5rem;
-		padding: 3rem 1rem;
-		margin: auto auto 3rem;
+		padding: 2rem 0;
 		text-align: center;
 		line-height: 1.5;
 		font-family: var(--font-monospace);
@@ -42,38 +37,38 @@
 		align-items: center;
 		justify-content: center;
 		margin: auto;
-	}
-	section span {
-		width: 2rem;
-	}
-	section a {
-		flex: 0 1 4rem;
-		height: 4rem;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		border-radius: 50%;
-		border-bottom: none;
-		outline: 2px solid transparent;
-		outline-offset: -0.625rem;
-		color: var(--fg-surface);
-	}
-	section a > :global(svg) {
-		transition-duration: var(--t-duration);
-		transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	}
-	section a:focus {
-		outline-color: var(--theme-secondary);
-	}
-	section a:hover > :global(svg),
-	section a:focus > :global(svg) {
-		color: var(--theme-secondary);
-		transform: scale(1.5) translateY(-25%);
-	}
 
-	@media only screen and (min-width: 480px) {
-		section span {
-			width: 4rem;
+		span {
+			width: 2rem;
+			font-size: 1.5rem;
+
+			@media (min-width: 480px) {
+				width: 4rem;
+			}
+		}
+
+		a {
+			flex: 0 1 4rem;
+			height: 4rem;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			border-bottom: none;
+			outline: 2px solid transparent;
+			outline-offset: -0.625rem;
+			color: var(--fg-surface);
+
+			> i {
+				transition-duration: var(--t-duration);
+				transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+			}
+
+			&:hover > i,
+			&:focus > i {
+				color: var(--theme-secondary);
+				transform: scale(1.5) translateY(-25%);
+			}
 		}
 	}
 </style>

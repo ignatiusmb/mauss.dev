@@ -11,18 +11,17 @@
 		"prepare": "svelte-kit sync"
 	},
 	"devDependencies": {
-		"@fontsource-variable/fira-code": "^5.1.0",
-		"@fontsource-variable/karla": "^5.1.0",
+		"@fontsource-variable/fira-code": "^5.2.6",
+		"@fontsource-variable/karla": "^5.2.5",
 		"@ignatiusmb/styles": "^0.1.1",
-		"@sveltejs/adapter-vercel": "^5.4.5",
-		"@sveltejs/kit": "^2.7.2",
-		"@sveltejs/vite-plugin-svelte": "^4.0.0",
+		"@sveltejs/adapter-vercel": "^5.7.2",
+		"@sveltejs/kit": "^2.21.1",
+		"@sveltejs/vite-plugin-svelte": "^5.0.3",
 		"aubade": "^0.9.0",
-		"mauss": "^0.8.1",
-		"sharp": "^0.33.5",
-		"svelte": "^5.0.5",
-		"svelte-check": "^4.0.5",
-		"syv": "^0.0.38",
-		"vite": "^5.4.9"
+		"sharp": "^0.34.2",
+		"svelte": "^5.31.1",
+		"svelte-check": "^4.2.1",
+		"syv": "^0.0.40",
+		"vite": "^6.3.5"
 	}
 }

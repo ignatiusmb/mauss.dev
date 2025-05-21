@@ -8,6 +8,7 @@ export async function load({ fetch, params }) {
 
 	return {
 		article: content,
+		source: `reviews/${content.slug}/+article.md`,
 		meta: {
 			canonical: `reviews/${content.slug}`,
 			title: content.title.short || content.title.jp || content.title.en,

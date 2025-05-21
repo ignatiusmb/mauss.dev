@@ -12,13 +12,16 @@
 
 	const { data } = $props();
 
-	// TODO: https://github.com/sveltejs/svelte/issues/12435
-	const filters = $state($state.snapshot(data.filters));
+	// https://github.com/sveltejs/svelte/issues/12435
+	const filters = $state(data.filters);
 	const { category, tags, sort_by } = filters;
 </script>
 
 <header>
-	<h1>Alchemauss Posts</h1>
+	<h1>ongoing thoughts and documentation</h1>
+	<small>
+		blog-style entries written as i go. sometimes personal, sometimes technical — always honest.
+	</small>
 </header>
 
 <SearchBar
@@ -80,9 +83,9 @@
 
 <style>
 	header {
-		h1 {
-			text-align: center;
-		}
+		display: grid;
+		gap: 1rem;
+		text-align: center;
 	}
 
 	#layout {

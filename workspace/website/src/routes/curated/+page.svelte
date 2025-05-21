@@ -10,7 +10,10 @@
 </script>
 
 <header>
-	<h1>Alchemauss Curation</h1>
+	<h1>things worth keeping</h1>
+	<small
+		>selected pieces of the internet and beyond — timeless, meaningful, and worth revisiting.</small
+	>
 </header>
 
 <SearchBar
@@ -42,9 +45,9 @@
 
 <style>
 	header {
-		h1 {
-			text-align: center;
-		}
+		display: grid;
+		gap: 1rem;
+		text-align: center;
 	}
 
 	#layout {

@@ -5,7 +5,7 @@
 	const { data } = $props();
 </script>
 
-<Article post={data.article} path="curated/{data.article.slug}/+article.md">
+<Article post={data.article} path={data.source}>
 	{#snippet header()}
 		{#if data.article.tags}
 			<small class="tags">

@@ -1,12 +1,11 @@
 <script lang="ts">
 	import Article from '$lib/pages/Article.svelte';
 	import Backdrop from '../Backdrop.svelte';
-	import { page } from '$app/stores';
 
 	const { data } = $props();
 </script>
 
-<Article post={data.article} path="curated/{data.article.slug}/+{$page.params.branch}.md">
+<Article post={data.article} path={data.source}>
 	{#snippet header()}
 		<Backdrop post={data.article} />
 
@@ -20,7 +19,7 @@
 						{@const indexed = typeof link !== 'string' ? ` (${v + 1})` : ''}
 
 						{#if v !== 0}<span class="dash">&mdash;</span>{/if}
-						<a {href}>{key}{indexed}</a>
+						<a {href} target="_blank">{key}{indexed}</a>
 					{/each}
 				{/each}
 				<span>]</span>

@@ -11,6 +11,7 @@ export async function load({ fetch, params }) {
 
 	return {
 		article: branch,
+		source: `curated/${branch.slug}/+${params.branch}.md`,
 		meta: {
 			canonical: `curated/${branch.slug}/${params.branch}`,
 			title: branch.title,

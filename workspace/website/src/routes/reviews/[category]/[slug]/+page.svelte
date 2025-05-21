@@ -1,16 +1,11 @@
 <script lang="ts">
 	import Article from '$lib/pages/Article.svelte';
-	import Link from '$lib/components/Link.svelte';
 	import Backdrop from './Backdrop.svelte';
 
 	const { data } = $props();
 </script>
 
-<Article
-	post={data.article}
-	path="reviews/{data.article.slug}/+article.md"
-	flank={data.article.flank}
->
+<Article post={data.article} path={data.source} flank={data.article.flank}>
 	{#snippet header()}
 		<Backdrop post={data.article} />
 
@@ -24,7 +19,7 @@
 						{@const indexed = typeof link !== 'string' ? ` (${v + 1})` : ''}
 
 						{#if v !== 0}<span class="dash">&mdash;</span>{/if}
-						<a {href}>{key}{indexed}</a>
+						<a {href} target="_blank">{key}{indexed}</a>
 					{/each}
 				{/each}
 				<span>]</span>
@@ -32,10 +27,10 @@
 		{/if}
 	{/snippet}
 
-	<section class="info-box warning">
-		<Link href="/disclaimer/" style="danger">
-			<h2>DISCLAIMER</h2>
-		</Link>
+	<section class="info-box warning" style:margin="1rem 0">
+		<em>
+			this review reflects my personal opinions. see the <a href="/fine-print">fine print</a> for more.
+		</em>
 	</section>
 
 	{@html data.article.content}
@@ -47,15 +42,6 @@
 
 		:not(:first-child) {
 			margin-left: 0.25rem;
-		}
-	}
-
-	section {
-		text-align: center;
-
-		h2 {
-			margin-top: 0;
-			color: inherit;
 		}
 	}
 </style>

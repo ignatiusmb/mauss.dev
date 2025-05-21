@@ -45,7 +45,8 @@ export async function load({ fetch, url }) {
 		meta: {
 			canonical: 'reviews',
 			title: 'Reviews',
-			description: 'Personalized reviews for all kinds of anime, books, movies, shows, etc.',
+			description:
+				"Honest takes and detailed reflections on things I've watched, read, played, or used — blunt when needed, curious always.",
 		},
 	};
 }

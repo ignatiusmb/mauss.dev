@@ -4,7 +4,7 @@
 	import type { ComponentProps } from 'svelte';
 	import { hydrate } from 'aubade/browser';
 	import { format } from 'mauss/date';
-	import { navigating, page } from '$app/stores';
+	import { navigating, page } from '$app/state';
 
 	type Flank = null | { slug: string; title: string | Record<string, any> };
 	interface Props {
@@ -30,7 +30,7 @@
 	const { path = '', post = null, flank = null, header, children }: Props = $props();
 </script>
 
-<article use:hydrate={$navigating}>
+<article use:hydrate={navigating.from}>
 	{#if header && post}
 		<header>
 			<aside>
@@ -49,20 +49,20 @@
 				<h1>{post.title.en}</h1>
 			{/if}
 
-			<a href={post.author?.link || '/about/'}>
-				{post.author?.name || 'Ignatius Bagussuputra'}
+			<a href={post.author?.link || '/about'}>
+				{post.author?.name || 'Ignatius Bagus.'}
 			</a>
 
-			{#if $page.params.branch || post.branches?.length}
+			{#if page.params.branch || post.branches?.length}
 				<div style:display="flex" style:gap="0.25rem" style:text-transform="capitalize">
 					<span>[</span>
 					{#each post.branches || [] as { branch }, idx}
-						{@const root = $page.url.pathname.split('/')[1]}
+						{@const root = page.url.pathname.split('/')[1]}
 						{#if idx !== 0}<span class="dash">&mdash;</span>{/if}
 						<a href="/{root}/{post.slug}/{branch}">{branch}</a>
 					{:else}
-						{@const idx = $page.url.pathname.lastIndexOf('/')}
-						<a href={$page.url.pathname.slice(0, idx)}>Back to Article</a>
+						{@const idx = page.url.pathname.lastIndexOf('/')}
+						<a href={page.url.pathname.slice(0, idx)}>Back to Article</a>
 					{/each}
 					<span>]</span>
 				</div>
@@ -118,8 +118,6 @@
 		width: 100%;
 		display: grid;
 		grid-template-columns: 1fr min(80ch, 100%) 1fr;
-		padding: 0 1rem;
-		margin: 0 auto;
 		word-wrap: break-word;
 		line-height: 1.5;
 	}
@@ -130,7 +128,7 @@
 		display: grid;
 		gap: 0.8rem;
 		justify-items: center;
-		margin-top: 3rem;
+		margin-top: 2rem;
 
 		line-height: 1;
 		font-family: var(--mrq-heading);
@@ -159,6 +157,7 @@
 		font-size: clamp(2.5rem, 4vw, 3rem);
 		text-align: center;
 		text-wrap: balance;
+		color: rgba(255, 255, 255, 0.9);
 	}
 
 	article {
@@ -182,7 +181,7 @@
 				margin-top: 0.5rem;
 			}
 		}
-		& > header:first-child + :not(section) {
+		& > header + :not(section) {
 			margin-top: 4rem;
 		}
 		& > .half-bleed {
@@ -282,7 +281,7 @@
 		h2 {
 			margin-top: 1.5rem;
 			font-size: clamp(1.5rem, 4vw, 2rem);
-			color: rgba(255, 255, 255, 0.9);
+			color: rgba(255, 255, 255, 0.85);
 
 			& + h3 {
 				margin-top: 0.5rem;
@@ -304,10 +303,6 @@
 			& + h3 {
 				margin-top: 1.25rem;
 			}
-
-			li:not(:only-child):last-child {
-				margin-bottom: 1rem;
-			}
 		}
 		li {
 			margin-left: 1rem;
@@ -318,7 +313,7 @@
 			}
 		}
 		hr {
-			width: 100%;
+			/* width: 100%; */
 			height: 0.1rem;
 			margin-top: 2rem;
 			border: 0;
@@ -423,7 +418,7 @@
 		}
 	}
 
-	@media only screen and (min-width: 600px) {
+	@media (min-width: 600px) {
 		footer {
 			grid-template-columns: 1fr 1fr;
 		}
