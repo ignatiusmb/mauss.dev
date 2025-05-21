@@ -118,8 +118,6 @@
 		width: 100%;
 		display: grid;
 		grid-template-columns: 1fr min(80ch, 100%) 1fr;
-		padding: 0 1rem;
-		margin: 0 auto;
 		word-wrap: break-word;
 		line-height: 1.5;
 	}
@@ -159,6 +157,7 @@
 		font-size: clamp(2.5rem, 4vw, 3rem);
 		text-align: center;
 		text-wrap: balance;
+		color: rgba(255, 255, 255, 0.9);
 	}
 
 	article {
@@ -282,7 +281,7 @@
 		h2 {
 			margin-top: 1.5rem;
 			font-size: clamp(1.5rem, 4vw, 2rem);
-			color: rgba(255, 255, 255, 0.9);
+			color: rgba(255, 255, 255, 0.85);
 
 			& + h3 {
 				margin-top: 0.5rem;

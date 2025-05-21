@@ -78,8 +78,7 @@
 </div>
 
 <style>
-	/* holy grail */
-	div {
+	div /* holy grail */ {
 		width: 100%;
 		position: relative;
 

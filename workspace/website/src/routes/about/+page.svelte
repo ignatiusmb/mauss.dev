@@ -153,7 +153,7 @@
 			<span>private communication</span>
 		</li>
 	</ul>
-	<p style:margin-top="1.5rem">semi-active / archival</p>
+	<p style:margin-top="1.5rem">archived</p>
 	<ul style:margin-top="0">
 		<li>
 			<a href="https://www.facebook.com/ignatiusmb">facebook</a>

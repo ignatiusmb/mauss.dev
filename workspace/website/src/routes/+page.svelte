@@ -8,19 +8,22 @@
 
 <Article>
 	<header>
-		<h1>Ignatius Bagussuputra</h1>
+		<h1>Ignatius Bagus.</h1>
 		<span><em>Software Alchemist</em> — Workdays Engineer, Weekends Wordsmith</span>
 	</header>
 
 	<!-- prettier-ignore -->
-	<p>Independent software engineer based in Southeast Asia (GMT+7&ndash;8). I build in public — mostly open source, all on <a href="https://github.com/ignatiusmb">GitHub</a>. Some private work is there too, mostly under the radar.</p>
+	<p><a href="/about#expertise">Independent software engineer</a> based in Southeast Asia (GMT+7&ndash;8). I build in public — mostly open source, all on <a href="https://github.com/ignatiusmb">GitHub</a>. Some private work is there too, mostly under the radar.</p>
 	<!-- prettier-ignore -->
 	<p>I also take on consulting and freelance projects — tailored for those seeking customized and private work. If that sounds like you, feel free to reach out through one of <a href="/about#elsewhere">my socials</a>.</p>
 	<!-- prettier-ignore -->
 	<p>Outside engineering, I compose — it's how I process lessons, share discoveries, and explore new ideas. If you're curious, the <a href="/help">help page</a> is a good place to start.</p>
 
 	<section>
-		<h2>Blog</h2>
+		<h2>
+			<i data-icon="article"></i>
+			<span>/posts</span>
+		</h2>
 		{#each data.posts as { slug, title, date }}
 			<article>
 				<a href="/posts/{slug}/">{title}</a>
@@ -34,7 +37,10 @@
 	</section>
 
 	<section>
-		<h2>Curated</h2>
+		<h2>
+			<i data-icon="books"></i>
+			<span>/curated</span>
+		</h2>
 		{#each data.curated as { slug, title, date }}
 			<article>
 				<a href="/curated/{slug}/">{title}</a>
@@ -48,7 +54,10 @@
 	</section>
 
 	<section>
-		<h2>Reviews</h2>
+		<h2>
+			<i data-icon="list-star"></i>
+			<span>/reviews</span>
+		</h2>
 		{#each data.reviews as { slug, title, date }}
 			<article>
 				<a href="/reviews/{slug}/">{title.short || title.en}</a>
@@ -85,17 +94,21 @@
 		justify-items: start;
 
 		h2 {
-			text-transform: capitalize;
+			display: flex;
+			align-items: center;
 			font-size: 1.5rem;
+
+			i[data-icon] {
+				margin-right: 0.5rem;
+			}
 		}
 		article {
 			width: 100%;
 			display: flex;
 			gap: 1rem;
+			justify-content: space-between;
 
 			time {
-				flex: 1;
-				text-align: right;
 				text-wrap: nowrap;
 			}
 		}

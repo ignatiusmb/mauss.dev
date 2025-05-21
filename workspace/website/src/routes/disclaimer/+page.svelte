@@ -11,8 +11,6 @@
 
 		<h2>Affiliate Discretion</h2>
 		<!-- prettier-ignore -->
-		<p>Alchemauss is a participant in a couple of affiliate advertising program designed to proved a means for sites and creators to earn fees by using their personal links. This means that I may earn a small commission if you make a purchase through one of the affiliate links, without any additional cost to you.</p>
-		<!-- prettier-ignore -->
 		<p>I have not been compensated to recommend any products or services mentioned anywhere in any articles, and Alchemauss only recommends products and services that have either been personally used or thoroughly researched and believe can add value to you. The editorial content is not influenced by advertisers or affiliate partnerships.</p>
 
 		<h2>Content Reviews</h2>
