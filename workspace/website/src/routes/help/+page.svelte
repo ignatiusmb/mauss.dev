@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Link from '$lib/components/Link.svelte';
 	import Article from '$lib/pages/Article.svelte';
 </script>
 
@@ -22,10 +21,9 @@
 	<!-- prettier-ignore -->
 	<p>that said, some sections — like the landing page or anything meant to introduce myself professionally — still follow proper casing. these are for clarity and to meet expectations when communicating with potential collaborators. the rest, though, is written as freely and naturally as i think it. no filters, no polish — just me, trying to make sense of things in words.</p>
 
-	<section class="info-box warning">
-		<Link href="/disclaimer/" style="danger">
-			<h2>DISCLAIMER</h2>
-		</Link>
+	<section class="info-box warning" style:margin="2rem 0">
+		<!-- prettier-ignore -->
+		<em>policies, stances, and small-but-important stuff — it's all in the <a href="/fine-print">fine print</a>.</em>
 	</section>
 
 	<h2 id="curated">
@@ -111,15 +109,6 @@
 </Article>
 
 <style>
-	section {
-		text-align: center;
-
-		h2 {
-			margin-top: 0;
-			color: inherit;
-		}
-	}
-
 	h2,
 	h3 {
 		display: flex;
