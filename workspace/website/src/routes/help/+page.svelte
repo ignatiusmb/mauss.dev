@@ -79,6 +79,35 @@
 	<!-- prettier-ignore -->
 	<p>for those who prefer to keep up the old-school way, this site has a dedicated rss feed. you can find the link by clicking the rss icon in the navigation bar — subscribe to get the latest posts, reviews, or curated entries as soon as they go live.</p>
 	<p>no algorithms. no noise. just updates.</p>
+
+	<h2 id="colophon">
+		<i data-icon="stack"></i>
+		<span>colophon</span>
+	</h2>
+	<!-- prettier-ignore -->
+	<p>credit where it's due. this site is built using open-source tools and thoughtfully chosen components that make it what it is.</p>
+	<ul>
+		<li>
+			<strong><a href="https://svelte.dev/" target="_blank">svelte</a>kit</strong>
+			<span>the web framework that makes all of this feel effortless.</span>
+		</li>
+		<li>
+			<strong><a href="https://phosphoricons.com/" target="_blank">phosphor</a></strong>
+			<span>clean, beautiful, and versatile open-source icons.</span>
+		</li>
+		<li>
+			<strong><a href="https://fontsource.org/" target="_blank">fontsource</a></strong>
+			<span>self-hosted fonts for better performance and privacy.</span>
+		</li>
+		<li>
+			<strong><a href="https://github.com">github</a></strong>
+			<span>the home for everything i build and share — this site included.</span>
+		</li>
+		<li>
+			<strong><a href="https://vercel.com">vercel</a></strong>
+			<span>where this site lives and breathes. fast, reliable, and free.</span>
+		</li>
+	</ul>
 </Article>
 
 <style>
@@ -99,5 +128,9 @@
 		i[data-icon] {
 			margin-right: 0.5rem;
 		}
+	}
+
+	li > strong + span::before {
+		content: '— ';
 	}
 </style>
