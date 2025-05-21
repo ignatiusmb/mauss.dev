@@ -25,7 +25,7 @@
 	<!-- prettier-ignore -->
 	<p>My strength lies in restructuring systems and streamlining logic—shaving off the unnecessary until what's left just works. The payoff? Easier debugging, quicker iteration, and codebases you don't dread revisiting.</p>
 	<!-- prettier-ignore -->
-	<p>These days, I build mostly for the web, working with <a href="https://svelte.dev">Svelte</a> and <a href="https://www.typescriptlang.org/">TypeScript</a>. I've explored a wide spectrum of languages: <a href="https://en.wikipedia.org/wiki/Assembly_language">Assembly</a>, <a href="https://www.gnu.org/software/bash/">Bash</a>, <a href="https://en.wikipedia.org/wiki/C_(programming_language)">C</a>, <a href="https://en.wikipedia.org/wiki/C++">C++</a>, <a href="https://dart.dev/">Dart</a> (<a href="https://flutter.dev/">Flutter</a>), <a href="https://godotengine.org/">GDScript</a>, <a href="https://www.haskell.org/">Haskell</a>, <a href="https://en.wikipedia.org/wiki/Java_%28programming_language%29">Java</a>, <a href="https://www.python.org/">Python</a>, and a few others I've probably forgotten. I don't mind the language. Once you understand the fundamentals, the rest follows.</p>
+	<p>These days, I build mostly for the web, working with <a href="https://svelte.dev" target="_blank">Svelte</a> and <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>. I've explored a wide spectrum of languages: <a href="https://en.wikipedia.org/wiki/Assembly_language" target="_blank">Assembly</a>, <a href="https://www.gnu.org/software/bash/" target="_blank">Bash</a>, <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank">C</a>, <a href="https://en.wikipedia.org/wiki/C++" target="_blank">C++</a>, <a href="https://dart.dev/" target="_blank">Dart</a> (<a href="https://flutter.dev/" target="_blank">Flutter</a>), <a href="https://godotengine.org/" target="_blank">GDScript</a>, <a href="https://www.haskell.org/" target="_blank">Haskell</a>, <a href="https://en.wikipedia.org/wiki/Java_%28programming_language%29" target="_blank">Java</a>, <a href="https://www.python.org/" target="_blank">Python</a>, and a few others I've probably forgotten. I don't mind the language. Once you understand the fundamentals, the rest follows.</p>
 	<!-- prettier-ignore -->
 	<p>Though I can go full-stack when needed, my focus is frontend. I care about interfaces—how they feel, how they guide, how they stay out of the way.</p>
 
@@ -121,23 +121,23 @@
 			<span>ignatius.mbs@gmail.com</span>
 		</li>
 		<li>
-			<a href="https://github.com/ignatiusmb">github</a>
+			<a href="https://github.com/ignatiusmb" target="_blank">github</a>
 			<span>where i spend most of my time</span>
 		</li>
 		<li>
-			<a href="https://www.instagram.com/ignatiusmb">instagram</a>
+			<a href="https://www.instagram.com/ignatiusmb" target="_blank">instagram</a>
 			<span>come say hi</span>
 		</li>
 		<li>
-			<a href="https://discord.com/users/231822751504138240">discord</a>
+			<a href="https://discord.com/users/231822751504138240" target="_blank">discord</a>
 			<span>patchy notifications</span>
 		</li>
 		<li>
-			<a href="https://www.youtube.com/@ignatiusmb">youtube</a>
+			<a href="https://www.youtube.com/@ignatiusmb" target="_blank">youtube</a>
 			<span>occasional uploads</span>
 		</li>
 		<li>
-			<a href="https://open.spotify.com/user/ignatiusmb">spotify</a>
+			<a href="https://open.spotify.com/user/ignatiusmb" target="_blank">spotify</a>
 			<span>monthly music picks</span>
 		</li>
 		<li>
@@ -145,7 +145,7 @@
 			<span>only for direct contact</span>
 		</li>
 		<li>
-			<a href="https://t.me/ignatiusmb">telegram</a>
+			<a href="https://t.me/ignatiusmb" target="_blank">telegram</a>
 			<span>quick and convenient</span>
 		</li>
 		<li>
@@ -156,23 +156,23 @@
 	<p style:margin-top="1.5rem">archived</p>
 	<ul style:margin-top="0">
 		<li>
-			<a href="https://www.facebook.com/ignatiusmb">facebook</a>
+			<a href="https://www.facebook.com/ignatiusmb" target="_blank">facebook</a>
 			<span>relic from childhood</span>
 		</li>
 		<li>
-			<a href="https://gitlab.com/ignatiusmb">gitlab</a>
+			<a href="https://gitlab.com/ignatiusmb" target="_blank">gitlab</a>
 			<span>university-era keepsake</span>
 		</li>
 		<li>
-			<a href="https://www.linkedin.com/in/ignatiusmb">linkedin</a>
+			<a href="https://www.linkedin.com/in/ignatiusmb" target="_blank">linkedin</a>
 			<span>for professional things</span>
 		</li>
 		<li>
-			<a href="https://twitter.com/alchemauss">twitter (x)</a>
+			<a href="https://twitter.com/alchemauss" target="_blank">twitter (x)</a>
 			<span>not sure why i still have this</span>
 		</li>
 		<li>
-			<a href="https://keybase.io/mauss">keybase</a>
+			<a href="https://keybase.io/mauss" target="_blank">keybase</a>
 			<span>probably gathering dust</span>
 		</li>
 	</ul>
@@ -185,7 +185,7 @@
 	</h3>
 	<ul>
 		<li>
-			<a href="https://www.16personalities.com/intj-personality">INTJ</a>
+			<a href="https://www.16personalities.com/intj-personality" target="_blank">INTJ</a>
 			<span>or so the test claims, take it as you will</span>
 		</li>
 		<li>

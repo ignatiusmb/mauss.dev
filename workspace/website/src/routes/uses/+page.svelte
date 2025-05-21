@@ -13,7 +13,7 @@
 <Article post={{ date: data.updated, title: data.meta.title, table }}>
 	{#snippet header()}
 		<!-- prettier-ignore -->
-		<p>Inspired by <a href="https://wesbos.com/uses">Wes Bos</a> &mdash; All sorts of apps, products, services, and other things that I use. Following the "quality over quantity" as my rule of thumb, it saved me a lot of time, energy, and even health. Without further ado, here's the list of stuff that I use...</p>
+		<p>Inspired by <a href="https://wesbos.com/uses" target="_blank">Wes Bos</a> &mdash; All sorts of apps, products, services, and other things that I use. Following the "quality over quantity" as my rule of thumb, it saved me a lot of time, energy, and even health. Without further ado, here's the list of stuff that I use...</p>
 	{/snippet}
 
 	<h3 id={table[0].id}>
@@ -24,7 +24,10 @@
 		<li>
 			<strong>PC</strong>
 			<span>
-				<a href="https://www.asus.com/us/displays-desktops/nucs/nuc-mini-pcs/asus-nuc-14-pro/">
+				<a
+					href="https://www.asus.com/us/displays-desktops/nucs/nuc-mini-pcs/asus-nuc-14-pro/"
+					target="_blank"
+				>
 					ASUS NUC 14 Pro
 				</a>
 			</span>
@@ -32,7 +35,7 @@
 		<li>
 			<strong>Display</strong>
 			<span>
-				<a href="https://www.lg.com/us/monitors/lg-27gl83a-b-gaming-monitor">
+				<a href="https://www.lg.com/us/monitors/lg-27gl83a-b-gaming-monitor" target="_blank">
 					LG UltraGear 27GL83A-B 27"
 				</a>
 			</span>
@@ -40,7 +43,10 @@
 		<li>
 			<strong>Keyboard</strong>
 			<span>
-				<a href="https://www.keychron.com/products/keychron-k2-wireless-mechanical-keyboard">
+				<a
+					href="https://www.keychron.com/products/keychron-k2-wireless-mechanical-keyboard"
+					target="_blank"
+				>
 					Keychron K2 - Brown Switch
 				</a>
 			</span>
@@ -49,12 +55,16 @@
 		<li>
 			<strong>Home Lab</strong>
 			<span>
-				<a href="https://www.geekompc.com/geekom-mini-air12-mini-pc/">GEEKOM Mini Air12</a>
+				<a href="https://www.geekompc.com/geekom-mini-air12-mini-pc/" target="_blank">
+					GEEKOM Mini Air12
+				</a>
 			</span>
 		</li>
 		<li>
 			<strong>Storage</strong>
-			<span><a href="https://www.orico.cc/us/product/detail/3617.html">ORICO 4-bay</a></span>
+			<span>
+				<a href="https://www.orico.cc/us/product/detail/3617.html" target="_blank">ORICO 4-bay</a>
+			</span>
 		</li>
 
 		<li>
@@ -78,19 +88,19 @@
 	<ul>
 		<li>
 			<strong>Browser</strong>
-			<span><a href="https://www.microsoft.com/en-us/edge">Edge</a></span>
+			<span><a href="https://www.microsoft.com/en-us/edge" target="_blank">Edge</a></span>
 		</li>
 		<li>
 			<strong>Editor</strong>
-			<span><a href="https://code.visualstudio.com/">Visual Studio Code</a></span>
+			<span><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></span>
 		</li>
 		<li>
 			<strong>Music</strong>
-			<span><a href="https://open.spotify.com/">Spotify</a></span>
+			<span><a href="https://open.spotify.com/" target="_blank">Spotify</a></span>
 		</li>
 		<li>
 			<strong>Vault</strong>
-			<span><a href="https://bitwarden.com/">Bitwarden</a></span>
+			<span><a href="https://bitwarden.com/" target="_blank">Bitwarden</a></span>
 		</li>
 	</ul>
 

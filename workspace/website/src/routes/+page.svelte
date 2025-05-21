@@ -13,7 +13,7 @@
 	</header>
 
 	<!-- prettier-ignore -->
-	<p><a href="/about#expertise">Independent software engineer</a> based in Southeast Asia (GMT+7&ndash;8). I build in public — mostly open source, all on <a href="https://github.com/ignatiusmb">GitHub</a>. Some private work is there too, mostly under the radar.</p>
+	<p><a href="/about#expertise">Independent software engineer</a> based in Southeast Asia (GMT+7&ndash;8). I build in public — mostly open source, all on <a href="https://github.com/ignatiusmb" target="_blank">GitHub</a>. Some private work is there too, mostly under the radar.</p>
 	<!-- prettier-ignore -->
 	<p>I also take on consulting and freelance projects — tailored for those seeking customized and private work. If that sounds like you, feel free to reach out through one of <a href="/about#elsewhere">my socials</a>.</p>
 	<!-- prettier-ignore -->

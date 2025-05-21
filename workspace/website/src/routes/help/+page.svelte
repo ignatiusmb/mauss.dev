@@ -53,7 +53,7 @@
 
 	<h3>attributions to TMDB</h3>
 	<p>
-		<a href="https://www.themoviedb.org/" target="_blank" rel="noopener">
+		<a href="https://www.themoviedb.org/" target="_blank">
 			<img
 				src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg"
 				alt="TMDB logo"
@@ -61,7 +61,7 @@
 		</a>
 	</p>
 	<!-- prettier-ignore -->
-	<p>images and metadata are sourced from <a href="https://www.themoviedb.org/">TMDB</a>, used in accordance with their <a href="https://www.themoviedb.org/about/logos-attribution">terms of use for logos and attribution</a>. i'm not affiliated with tmdb in any way — their tools are simply convenient and publicly available. all reviews and opinions are my own. any questions or concerns can be directed to me.</p>
+	<p>images and metadata are sourced from <a href="https://www.themoviedb.org/" target="_blank">TMDB</a>, used in accordance with their <a href="https://www.themoviedb.org/about/logos-attribution" target="_blank">terms of use for logos and attribution</a>. i'm not affiliated with tmdb in any way — their tools are simply convenient and publicly available. all reviews and opinions are my own. any questions or concerns can be directed to me.</p>
 
 	<h2 id="uses">
 		<i data-icon="bookmark"></i>
