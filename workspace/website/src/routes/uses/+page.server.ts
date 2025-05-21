@@ -4,7 +4,8 @@ export async function load() {
 		meta: {
 			canonical: 'uses',
 			title: 'Uses',
-			description: 'The apps, products, services, and other things I use every day.',
+			description:
+				'A living inventory of the gear, apps, and wellness tools I rely on daily — selected with intent and documented for reference.',
 		},
 	};
 }

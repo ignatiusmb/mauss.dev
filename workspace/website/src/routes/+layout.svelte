@@ -28,7 +28,7 @@
 
 <MetaHead
 	domain="https://mauss.dev"
-	title="{page.data.meta?.title || page.status} | Alchemauss"
+	title="{page.data.meta?.title || page.status}{page.url.pathname === '/' ? '' : ' | Alchemauss'}"
 	canonical={page.data.meta?.canonical}
 	description={page.data.meta?.description}
 	authors={['Ignatius Bagus.']}

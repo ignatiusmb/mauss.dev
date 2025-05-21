@@ -20,9 +20,9 @@ function escape(literals: TemplateStringsArray, ...inputs: Array<string | string
 
 export const channel = {
 	domain: 'mauss.dev',
-	title: 'Ignatius Bagus. | Alchemauss',
+	title: 'Alchemauss — A Digital Garden',
 	description:
-		'The world through my kaleidoscope, capturing the beauty of life in a myriad of colors. Discovering the beauty of ordinary moments through everyday life, travel, and personal reflections.',
+		'Seeing life through a shifting lens — where everyday moments, distant journeys, and personal echoes turn into stories worth holding.',
 };
 
 export function RSS(

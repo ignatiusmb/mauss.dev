@@ -8,7 +8,8 @@ export async function load({ fetch }) {
 		meta: {
 			canonical: 'curated',
 			title: 'Curated',
-			description: 'Curated content for all kinds of programming, lifestyle, and many more.',
+			description:
+				'Handpicked recommendations, lists, and timeless finds — compiled with care and meant to be explored at your own pace.',
 		},
 	};
 }

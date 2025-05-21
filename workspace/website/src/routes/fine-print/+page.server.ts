@@ -1,9 +1,10 @@
 export async function load() {
 	return {
 		meta: {
-			canonical: 'disclosure',
-			title: 'Disclosure',
-			description: 'Disclosure page for all the content in this website.',
+			canonical: 'fine-print',
+			title: 'Fine Print',
+			description:
+				'This page outlines personal opinions, affiliate disclosures, content disclaimers, and how this site is run — all wrapped up in a simple, honest fine print.',
 		},
 	};
 }

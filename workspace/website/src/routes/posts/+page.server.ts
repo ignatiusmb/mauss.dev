@@ -28,7 +28,8 @@ export async function load({ fetch, url }) {
 		meta: {
 			canonical: 'posts',
 			title: 'Posts',
-			description: 'Get the latest most recent posts here.',
+			description:
+				'Essays and thoughts on life, tech, and everything in between — sometimes structured, sometimes spontaneous.',
 		},
 	};
 }

@@ -2,23 +2,16 @@
 	import Article from '$lib/pages/Article.svelte';
 
 	const { data } = $props();
-
-	const table = [
-		{ id: 'hardware', title: 'Hardware', level: 3 },
-		{ id: 'apps', title: 'Apps', level: 3 },
-		{ id: 'wellness', title: 'Wellness', level: 3 },
-	];
 </script>
 
-<Article post={{ date: data.updated, title: data.meta.title, table }}>
-	{#snippet header()}
-		<!-- prettier-ignore -->
-		<p>Inspired by <a href="https://wesbos.com/uses" target="_blank">Wes Bos</a> &mdash; All sorts of apps, products, services, and other things that I use. Following the "quality over quantity" as my rule of thumb, it saved me a lot of time, energy, and even health. Without further ado, here's the list of stuff that I use...</p>
-	{/snippet}
+<Article post={{ date: data.updated, title: data.meta.title, table: [] }}>
+	<h1>in use</h1>
+	<!-- prettier-ignore -->
+	<p>inspired by <a href="https://wesbos.com/uses" target="_blank">Wes Bos</a> — a living list of the things i rely on daily. i believe in quality over quantity: making intentional choices that save time, energy, and preserve focus.</p>
 
-	<h3 id={table[0].id}>
+	<h3 id="hardware">
 		<i data-icon="devices"></i>
-		<span>{table[0].title}</span>
+		<span>hardware.</span>
 	</h3>
 	<ul>
 		<li>
@@ -81,9 +74,9 @@
 		</li>
 	</ul>
 
-	<h3 id={table[1].id}>
+	<h3 id="apps">
 		<i data-icon="terminal-window"></i>
-		<span>{table[1].title}</span>
+		<span>apps.</span>
 	</h3>
 	<ul>
 		<li>
@@ -104,9 +97,9 @@
 		</li>
 	</ul>
 
-	<h3 id={table[2].id}>
+	<h3 id="wellness">
 		<i data-icon="drop-half"></i>
-		<span>{table[2].title}</span>
+		<span>wellness.</span>
 	</h3>
 	<ul>
 		<li>
