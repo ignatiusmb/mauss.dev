@@ -20,7 +20,7 @@ function escape(literals: TemplateStringsArray, ...inputs: Array<string | string
 
 export const channel = {
 	domain: 'mauss.dev',
-	title: 'Ignatius Bagussuputra | Alchemauss',
+	title: 'Ignatius Bagus. | Alchemauss',
 	description:
 		'The world through my kaleidoscope, capturing the beauty of life in a myriad of colors. Discovering the beauty of ordinary moments through everyday life, travel, and personal reflections.',
 };

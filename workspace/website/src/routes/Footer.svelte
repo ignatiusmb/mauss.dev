@@ -13,7 +13,7 @@
 		<span>&Rarr;</span>
 	</section>
 
-	<p>Copyright &copy; 2017&ndash;{new Date().getFullYear()} Ignatius Bagussuputra</p>
+	<p>Copyright &copy; 2017&ndash;{new Date().getFullYear()} Ignatius Bagus.</p>
 </footer>
 
 <style>

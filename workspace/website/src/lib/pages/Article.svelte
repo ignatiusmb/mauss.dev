@@ -50,7 +50,7 @@
 			{/if}
 
 			<a href={post.author?.link || '/about'}>
-				{post.author?.name || 'Ignatius Bagussuputra'}
+				{post.author?.name || 'Ignatius Bagus.'}
 			</a>
 
 			{#if page.params.branch || post.branches?.length}

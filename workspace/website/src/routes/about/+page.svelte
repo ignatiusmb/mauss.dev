@@ -5,7 +5,7 @@
 
 <Article>
 	<header>
-		<WeavedImage src="/assets/profile/mauss.jpg" alt="Mauss Profile" />
+		<WeavedImage src="/assets/profile/mauss.jpg" alt="Igna's profile picture" />
 
 		<h1>
 			<i data-icon="hand-waving" style:width="2rem" style:height="2rem"></i>
@@ -17,7 +17,7 @@
 	</header>
 
 	<h3 id="expertise">
-		<i data-icon="flask"> </i>
+		<i data-icon="flask"></i>
 		<span>expertise.</span>
 	</h3>
 	<!-- prettier-ignore -->
