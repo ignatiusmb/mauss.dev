@@ -28,7 +28,7 @@
 
 <MetaHead
 	domain="https://mauss.dev"
-	title="{page.data.meta?.title || page.status}{page.url.pathname === '/' ? '' : ' | Alchemauss'}"
+	title="{page.data.meta?.title || page.status}{page.url.pathname === '/' ? '' : ' | Alkamauss'}"
 	canonical={page.data.meta?.canonical}
 	description={page.data.meta?.description}
 	authors={['Ignatius Bagus.']}
@@ -37,25 +37,25 @@
 			type: 'application/rss+xml',
 			href: '/rss.xml',
 			hreflang: 'en',
-			title: 'Alchemauss Feed',
+			title: 'Alkamauss Feed',
 		},
 		{
 			type: 'application/json',
 			href: '/content/curated.json',
 			hreflang: 'en',
-			title: 'Alchemauss Curation',
+			title: 'Alkamauss Curation',
 		},
 		{
 			type: 'application/json',
 			href: '/content/posts.json',
 			hreflang: 'en',
-			title: 'Alchemauss Posts',
+			title: 'Alkamauss Posts',
 		},
 		{
 			type: 'application/json',
 			href: '/content/reviews.json',
 			hreflang: 'en',
-			title: 'Alchemauss Reviews',
+			title: 'Alkamauss Reviews',
 		},
 	]}
 	scripts={[!dev && '/_vercel/insights/script.js']}

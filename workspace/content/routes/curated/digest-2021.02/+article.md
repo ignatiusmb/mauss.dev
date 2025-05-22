@@ -51,13 +51,13 @@ I'll save the detailed explanation for the complete review, but if you're patien
 
 ### Honorable content mentions
 
-- [[Alchemauss](/reviews?q=Saiki+Kusuo)] The Disastrous Life of Saiki K.
+- [[Alkamauss](/reviews?q=Saiki+Kusuo)] The Disastrous Life of Saiki K.
 
 This is on par with the top tier comedy stuff I found. To make things even better, it's a whole 25 episodes season with 2 seasons and some OVAs to top it off. I can't remember how many episodes I watched each time, but I do know that I'll laugh and smile every time I watch this.
 
 I've mentioned on the previous digests that we absolutely need something that makes us laugh every time we need it, this was it for me this month. I have my [trump cards](/reviews?q=Nichijou), but it does lessen the effect when you watch it repeatedly. This was a good breather and addition to that list.
 
-- [[Alchemauss](/reviews?q=Tsurezure+Children)] Tsurezure Children
+- [[Alkamauss](/reviews?q=Tsurezure+Children)] Tsurezure Children
 
 This is no different than above, but without any supernatural powers, a little touch of wholesome, and some romance. The fact that this doesn't have a second season is a crime. It's an even bigger crime that it only has 12 episodes with only 12 minutes per episode. Jokes aside, this show checks all of my list on a slice-of-life romance comedy with a school setting.
 

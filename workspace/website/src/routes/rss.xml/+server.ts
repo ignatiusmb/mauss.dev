@@ -11,19 +11,19 @@ const items = traverse('../content/routes', { depth: -1 })
 			switch (true) {
 				case breadcrumb.includes('curated'): {
 					const slug = `curated/${breadcrumb[1]}`;
-					const description = `${title} curated by Alchemauss`;
+					const description = `${title} curated by Alkamauss`;
 					return { slug, title, description, date };
 				}
 				case breadcrumb.includes('reviews'): {
 					if (metadata.verdict === 'pending') return;
 					const slug = `reviews/${breadcrumb[2]}/${breadcrumb[1]}`;
 					const name = typeof title === 'string' ? title : title.en;
-					const description = `${name} reviewed by Alchemauss`;
+					const description = `${name} reviewed by Alkamauss`;
 					return { slug, title: name, description, date };
 				}
 				case breadcrumb.includes('posts'): {
 					const slug = `posts/${breadcrumb[1].replace('.md', '')}`;
-					const description = info || 'A post by Alchemauss';
+					const description = info || 'A post by Alkamauss';
 					return { slug, title, description, date };
 				}
 				default:

@@ -1,14 +1,12 @@
-# [Alchemauss](https://mauss.dev)
+# [Alkamauss](https://mauss.dev) [[MIT](LICENSE)]
 
-Personal website, handcrafted with ❤️ using these tools
+personal site — handcrafted with love
 
-|              Framework              |                 Library                  |               Parser               |
-| :---------------------------------: | :--------------------------------------: | :--------------------------------: |
-| [SvelteKit](https://kit.svelte.dev) | [Syv](https://github.com/ignatiusmb/syv) | [Aubade](https://aubade.mauss.dev) |
+- [SvelteKit](https://kit.svelte.dev) — the web framework
+- [Aubade](https://aubade.mauss.dev) — the content parser
+- [Syv](https://github.com/ignatiusmb/syv) — the complementary library
 
-## Contributing
-
-Contributions are welcome! Here's a quick guide for getting started
+some commands to get started
 
 ```bash
 git clone https://github.com/ignatiusmb/mauss.dev
@@ -17,10 +15,4 @@ cd workspace/website
 pnpm dev
 ```
 
-### Content
-
-Content is managed under [workspace/content](./workspace/content).
-
----
-
-<h3 align="center"><pre><a href="https://mauss.dev">Alchemauss</a> | <a href="LICENSE">MIT License</a></pre></h3>
+content lives under under [workspace/content](./workspace/content)

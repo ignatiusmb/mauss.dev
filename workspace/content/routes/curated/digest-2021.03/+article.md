@@ -35,9 +35,9 @@ It was tough between Jujutsu Kaisen and Re:Zero Season 2, but JJK really won me 
 
 ### Honorable content mentions
 
-- [[Alchemauss](/reviews?q=Re:Zero)] Re:Zero Season 2
-- [[Alchemauss](/reviews?q=Mushoku+Tensei)] Mushoku Tensei
-- [[Alchemauss](/reviews?q=Hataraku+Saibou+Black)] Cells at Work! CODE BLACK!
+- [[Alkamauss](/reviews?q=Re:Zero)] Re:Zero Season 2
+- [[Alkamauss](/reviews?q=Mushoku+Tensei)] Mushoku Tensei
+- [[Alkamauss](/reviews?q=Hataraku+Saibou+Black)] Cells at Work! CODE BLACK!
 
 Doesn't mean that these shows are to be ignored, especially the second season of Re:Zero! It would've definitely be my content highlight if only it didn't end in the same month as Jujutsu Kaisen. Premieres will be prioritized too, that's why Re:Zero is here.
 

@@ -1,6 +1,9 @@
 {
-	"name": "Alchemauss",
+	"name": "Alkamauss",
 	"short_name": "mauss",
+	"display": "standalone",
+	"theme_color": "#181818",
+	"background_color": "#181818",
 	"icons": [
 		{
 			"src": "assets/favicon/android-chrome-192x192.png",
@@ -14,8 +17,5 @@
 			"type": "image/png",
 			"purpose": "any maskable"
 		}
-	],
-	"theme_color": "#181818",
-	"background_color": "#181818",
-	"display": "standalone"
+	]
 }

@@ -15,8 +15,8 @@
 		opened = false;
 	})}
 >
-	<a href="/" class="logo" aria-label="Alchemauss">
-		<img src="/favicon.ico" alt="Alchemauss" width="24" height="24" />
+	<a href="/" class="logo" aria-label="Alkamauss">
+		<img src="/favicon.ico" alt="Alkamauss" width="24" height="24" />
 	</a>
 
 	<input type="checkbox" id="menu" aria-label="Menu" bind:checked={opened} />

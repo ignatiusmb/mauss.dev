@@ -45,9 +45,9 @@ I'm such a sucker for SOLs, and this might just be the best one, so far. A story
 
 ### Honorable content mentions
 
-- [[Alchemauss](/reviews?q=Enen+no+Shouboutai)] Fire Force Season 2
-- [[Alchemauss](/reviews?q=Maoujou+de+Oyasumi)] Sleepy Princess in the Demon Castle
-- [[Alchemauss](/reviews?q=Akudama+Drive)] Akudama Drive
+- [[Alkamauss](/reviews?q=Enen+no+Shouboutai)] Fire Force Season 2
+- [[Alkamauss](/reviews?q=Maoujou+de+Oyasumi)] Sleepy Princess in the Demon Castle
+- [[Alkamauss](/reviews?q=Akudama+Drive)] Akudama Drive
 
 I think Fire Force is just unlucky with its timing. The first season comes out around the same time as Demon Slayer and its second season is also overlooked by other anime, especially the second season of Re:Zero. But, it is definitely a good series with amazing actions, some of the best (memorable). I really hope this doesn't obstruct the third or upcoming seasons.
 

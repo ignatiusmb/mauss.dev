@@ -49,9 +49,9 @@ Meanwhile, The God of High School seems to fill in all the missing pieces Tower 
 
 Other shows that aired their final episode this month too, just in time for the new shows and seasons starting this fall in October. It's not inclusive of all shows, I haven't watched some of the popular ones as well, and I won't mention shows that's still ongoing. So, here's some of my favorites from this summer
 
-- [[Alchemauss](/reviews?q=The+Misfit+of+Demon+King+Academy)] The Misfit of Demon King Academy
-- [[Alchemauss](/reviews?q=Sword+Art+Online+Alicization)] Sword Art Online: Alicization
-- [[Alchemauss](/reviews?q=Deca+Dence)] Deca Dence
+- [[Alkamauss](/reviews?q=The+Misfit+of+Demon+King+Academy)] The Misfit of Demon King Academy
+- [[Alkamauss](/reviews?q=Sword+Art+Online+Alicization)] Sword Art Online: Alicization
+- [[Alkamauss](/reviews?q=Deca+Dence)] Deca Dence
 
 ## Music of the month | [Spotify Playlist](spotify:playlist:0ANZKUWgykWgF1aNH9aHq0)
 
