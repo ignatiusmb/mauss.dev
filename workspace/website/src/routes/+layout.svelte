@@ -58,7 +58,9 @@
 			title: 'Alchemauss Reviews',
 		},
 	]}
-	scripts={[!dev && '/_vercel/insights/script.js']}
+	scripts={{
+		'/_vercel/speed-insights/script.js': !dev && { 'data-route': page.route.id },
+	}}
 />
 
 <div data-sveltekit-reload={updated.current || 'off'}>
