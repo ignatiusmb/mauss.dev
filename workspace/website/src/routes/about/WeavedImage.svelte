@@ -32,6 +32,11 @@
 		position: relative;
 		margin: 3rem auto 5rem;
 
+		@media (min-width: 500px) {
+			float: left;
+			margin: 3rem;
+		}
+
 		& :global(img) {
 			border: none;
 			border-radius: 0;
@@ -44,6 +49,14 @@
 			position: absolute;
 			top: 0;
 			left: 0;
+		}
+
+		> :global(svg) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
 		}
 	}
 
@@ -71,13 +84,6 @@
 		}
 		&.empty {
 			background-color: #ffffff;
-		}
-	}
-
-	@media (min-width: 500px) {
-		.weaved-image {
-			float: left;
-			margin: 3rem;
 		}
 	}
 </style>

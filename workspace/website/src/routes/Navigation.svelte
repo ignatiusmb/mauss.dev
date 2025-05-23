@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Logo from '$lib/components/Logo.svelte';
+
 	import { outside } from 'syv/attachment';
 	import { afterNavigate } from '$app/navigation';
 	import { page } from '$app/state';
@@ -16,7 +18,7 @@
 	})}
 >
 	<a href="/" class="logo" aria-label="Alkamauss">
-		<img src="/favicon.ico" alt="Alkamauss" width="24" height="24" />
+		<Logo />
 	</a>
 
 	<input type="checkbox" id="menu" aria-label="Menu" bind:checked={opened} />
@@ -65,6 +67,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		padding: calc(var(--pad) * 2) calc(var(--pad) * 3);
 
 		background: var(--bg-base);
 		font-family: var(--mrq-heading);
@@ -73,6 +76,7 @@
 		@media (min-width: 549px) {
 			position: relative;
 			grid-column: content;
+			padding: 0;
 
 			input,
 			label[for='menu'] {
@@ -90,18 +94,17 @@
 			&:focus {
 				outline-color: var(--bg-cover);
 			}
-
-			& > img {
-				animation: rotate 42s linear infinite;
-			}
 		}
 	}
 
 	.logo {
-		padding: 1rem;
+		width: 2.5rem;
+		height: 2.5rem;
+		padding: 0;
+		border-radius: 50%;
 
-		@media (min-width: 549px) {
-			padding: var(--pad);
+		:global(svg) {
+			animation: rotate 42s linear infinite;
 		}
 	}
 
@@ -119,7 +122,7 @@
 	}
 	label[for='menu'] {
 		display: inline-flex;
-		padding: 1rem 0.875rem;
+		padding: var(--pad);
 	}
 
 	menu {
