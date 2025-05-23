@@ -1,31 +1,21 @@
-# Workspace for Alchemauss content
+# content workspace
 
-Home to the articles that make up the content of [website](../website)
+each directory represents a route; the `+article.md` file inside holds the page content.
 
-## Writing
+writing guidelines:
 
-Consider each directory as its own route, and the `+article.md` file as the contents of the page. There's a couple of rules to follow when writing a post:
+- follow [Aubade's semantics](https://aubade.mauss.dev/docs/semantics)
+- comply with the [default](https://github.com/markdownlint/markdownlint/blob/main/docs/RULES.md) and [project](.markdownlint.yaml) `markdownlint` rules
+- front matter must include at least a `title` property
+- when adding a `date`, use the [simplified ISO 8601](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format) format in double quotes
 
-- Follow [the semantics of Aubade](https://aubade.mauss.dev/docs/semantics)
-- Follow the [default](https://github.com/markdownlint/markdownlint/blob/main/docs/RULES.md) and [specified](.markdownlint.yaml) `markdownlint` rules
-- Have a front matter with at least a `title` property
-- When specifying a `date` property, use the [simplified ISO 8601](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format) format wrapped in double quotes
-
-Use your own metadata by adding this template to the front matter when you're writing your own post.
+use this front matter block if you're writing your own post:
 
 ```yaml
 ---
 author:
-  name: Kimi no Na wa
-  img: /assets/profile/USERNAME.(jpg|png)
-  link: https://social.media/USERNAME
+  name: <your_name>
+  img: /assets/profile/<filename>
+  link: <your_social_link>
 ---
 ```
-
-- `name:` is the name of the author
-- `img:` is the path to the author's avatar image in the [`assets/profile`](../website/static/assets/profile) directory
-- `link:` is the link to the author's profile or any other social link
-
-***
-
-<h3 align="center"><pre>Alchemauss Content</pre></h3>

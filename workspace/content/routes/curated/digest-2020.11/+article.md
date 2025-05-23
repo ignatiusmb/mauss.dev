@@ -43,15 +43,15 @@ Probably the best Isekai Drama that will ever exist (*ahem* prove me wrong). It'
 
 This month is also quite slow but there's still some interesting shows I finished just in time before December starts. Here's some of my recommendations.
 
-- [[Alchemauss](/reviews?q=Danshi+Koukousei+no+Nichijou)] Daily Lives of High School Boys
+- [[Alkamauss](/reviews?q=Danshi+Koukousei+no+Nichijou)] Daily Lives of High School Boys
 
 A contestant to last month's content, Nichijou. Their absurd humour rivals each other and really just a fun show to watch that will certainly make you laugh. It's comedy is just direct and plain funny without having to think too hard like Nichijou.
 
-- [[Alchemauss](/reviews?q=KONOSUBA+Legend+of+Crimson)] KONOSUBA Movie: Legend of Crimson
+- [[Alkamauss](/reviews?q=KONOSUBA+Legend+of+Crimson)] KONOSUBA Movie: Legend of Crimson
 
 One of the best animated movie (not like there's a lot of movies to begin with), especially if you follow KonoSuba from the first season and enjoyed it as much as the second season. Totally recommended for you who have watched the show, but totally not recommended if you haven't. Watch the show first before you watch this! Trust me on this.
 
-- [[Alchemauss](/reviews?q=Maquia)] Maquia: When the Promised Flower Blooms
+- [[Alkamauss](/reviews?q=Maquia)] Maquia: When the Promised Flower Blooms
 
 Not as sad or touching as I imagined, perhaps my expectations were a bit high because of the barrage of recommendations for this movie. But, either way this is still a good movie with a unique story.
 

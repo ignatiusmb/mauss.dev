@@ -37,9 +37,9 @@ This month has been quite stressful and I've just realized how comforting and en
 
 I haven't really had much time to finish most shows this month, and I don't usually mention shows that's not finished yet. But, here's a couple worthwhile for you to follow and enjoy as it's still going on.
 
-- [[Alchemauss](/reviews?q=Adachi+and+Shimamura)] Adachi and Shimamura
-- [[Alchemauss](/reviews?q=Jujutsu+Kaisen)] Jujutsu Kaisen
-- [[Alchemauss](/reviews?q=TONIKAWA)] TONIKAWA: Over the Moon For You
+- [[Alkamauss](/reviews?q=Adachi+and+Shimamura)] Adachi and Shimamura
+- [[Alkamauss](/reviews?q=Jujutsu+Kaisen)] Jujutsu Kaisen
+- [[Alkamauss](/reviews?q=TONIKAWA)] TONIKAWA: Over the Moon For You
 
 ## Music of the month | [Spotify Playlist](spotify:playlist:5MEc6r4ZMyu4W9gNk4CXtY)
 

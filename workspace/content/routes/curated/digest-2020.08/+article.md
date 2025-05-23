@@ -43,11 +43,11 @@ August's content of the month is an anime that goes by the name of *Kill la Kill
 
 A really amazing work of art from a YouTuber who has made SpongeBob into an anime, separated according to its own arcs. It's not just a hobby project, it's fully voice acted and beautifully animated, not to mention its amazing soundtracks. If you watched SpongeBob in your childhood, you'll definitely need to watch this because it's just amazing.
 
-- [[Alchemauss](/reviews?q=an+angel+flew+down+to+me)] WATATEN!: an Angel Flew Down to Me
+- [[Alkamauss](/reviews?q=an+angel+flew+down+to+me)] WATATEN!: an Angel Flew Down to Me
 
 WATATEN or Watashi ni Tenshi ga Maiorita was by far one of the best show I've enjoyed watching every second of it. [The review](/reviews/anime/watashi-ni-tenshi-ga-maiorita) is ready so go take a look for more details on this.
 
-- [[Alchemauss](/reviews?q=byousoku+5+centimeter)] Byousoku 5 Centimeter | [[Alchemauss](/reviews?q=kimi+no+na+wa)] Kimi no Na wa | [[Alchemauss](/reviews?q=tenki+no+ko)] Tenki no Ko
+- [[Alkamauss](/reviews?q=byousoku+5+centimeter)] Byousoku 5 Centimeter | [[Alkamauss](/reviews?q=kimi+no+na+wa)] Kimi no Na wa | [[Alkamauss](/reviews?q=tenki+no+ko)] Tenki no Ko
 
 Basically the top 3 of Makoto Shinkai works. I really can't say much about this other than how great it is. The animations are beautiful, worldbuilding are superb, and the soundtracks are outstanding. I love and enjoyed all of those 3 and I can't wait to discover more like this.
 
