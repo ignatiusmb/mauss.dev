@@ -6,7 +6,6 @@
 	import { page } from '$app/state';
 
 	let opened = $state(false);
-
 	afterNavigate(() => {
 		opened = false;
 	});
@@ -28,30 +27,25 @@
 	</label>
 
 	<menu>
-		<div class="routes">
-			{#each ['curated', 'posts', 'reviews'] as to}
-				{@const current = page.url.pathname.startsWith(`/${to}`)}
-
-				<a href="/{to}" aria-current={current ? 'page' : null}>{to}</a>
-			{/each}
-		</div>
-
-		<div class="shortcuts">
-			<a href="/about" aria-label="Profile">
-				<i data-icon="id-badge"></i>
-			</a>
-			<a href="/uses" aria-label="Uses page">
-				<i data-icon="bookmark"></i>
-			</a>
-			<a href="/rss.xml" aria-label="Get RSS">
-				<i data-icon="rss"></i>
-			</a>
-			<a href="/help" aria-label="Help page">
-				<i data-icon="lifebuoy"></i>
-			</a>
-		</div>
+		{@render link('curated', 'books')}
+		{@render link('posts', 'article')}
+		{@render link('reviews', 'list-star')}
+		{@render link('about', 'id-badge')}
+		{@render link('uses', 'bookmark')}
+		{@render link('rss.xml', 'rss')}
+		{@render link('help', 'lifebuoy')}
 	</menu>
 </nav>
+
+{#snippet link(path: string, icon: string)}
+	<a
+		href="/{path}"
+		aria-label="/{path}"
+		aria-current={page.url.pathname.startsWith(`/${path}`) ? 'page' : null}
+	>
+		<i data-icon={icon}></i>
+	</a>
+{/snippet}
 
 <style>
 	nav {
@@ -85,7 +79,6 @@
 		}
 
 		a {
-			z-index: 1;
 			padding: var(--pad);
 			border-radius: var(--pad);
 			text-decoration: none;
@@ -118,6 +111,8 @@
 
 		&:checked ~ menu {
 			visibility: visible;
+			max-height: 80vh;
+			transform: translateY(0);
 		}
 	}
 	label[for='menu'] {
@@ -129,98 +124,59 @@
 		--pad: 0.5rem;
 
 		visibility: hidden;
+		overflow: hidden;
 		width: 100%;
+		max-height: 0;
 		position: absolute;
 		top: 100%;
 		left: 0;
 
 		display: grid;
 		gap: var(--pad);
+		grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+
 		padding: var(--pad);
 		margin: 0;
-
 		border-bottom: 1px solid var(--bg-cover);
 		border-bottom-right-radius: 0.5rem;
 		border-bottom-left-radius: 0.5rem;
 		box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.188);
 		background-color: inherit;
+		transform: translateY(-100%);
+		transition: var(--t-duration) ease;
+
+		a {
+			display: flex;
+			align-items: center;
+			color: var(--fg-surface);
+
+			&::after {
+				content: attr(aria-label);
+				margin-left: var(--pad);
+			}
+
+			&:hover,
+			&[aria-current] {
+				background: rgba(255, 255, 255, 0.1);
+			}
+		}
 
 		@media (min-width: 549px) {
 			grid-auto-flow: column;
 			visibility: visible;
+			overflow: unset;
 			width: auto;
+			max-height: initial;
 			position: static;
 
+			grid-template-columns: auto;
 			padding: 0;
 			border: none;
 			box-shadow: none;
-		}
+			transform: none;
 
-		a {
-			color: var(--fg-surface);
-			text-transform: capitalize;
-		}
-
-		.routes {
-			display: grid;
-			gap: var(--pad);
-			grid-auto-flow: column;
-			align-items: center;
-
-			a {
-				position: relative;
-				text-align: center;
-				color: var(--fg-surface);
-
-				&:hover::after {
-					left: 0;
-					right: auto;
-					width: 100%;
-				}
-
-				&::after {
-					content: '';
-					position: absolute;
-					right: 0;
-					bottom: 0;
-					width: 0;
-					height: 0.15rem;
-					border-radius: 0.25rem;
-					background: var(--theme-secondary);
-					transition: width var(--t-duration) ease;
-					transform: translateY(100%);
-				}
-
-				&[aria-current] {
-					background: rgba(255, 255, 255, 0.1);
-				}
-			}
-
-			@media (min-width: 549px) {
-				a[aria-current] {
-					background: inherit;
-
-					&::after {
-						width: 100%;
-						background-color: var(--theme-primary);
-					}
-				}
-			}
-		}
-
-		.shortcuts {
-			display: grid;
-			gap: var(--pad);
-			grid-auto-flow: column;
-
-			a {
-				width: 100%;
-				display: inline-flex;
-				justify-content: center;
-
-				&:hover {
-					background: rgba(255, 255, 255, 0.1);
-				}
+			a::after {
+				content: none;
 			}
 		}
 	}
