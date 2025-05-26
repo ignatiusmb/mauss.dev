@@ -47,7 +47,7 @@ Honestly, I don't care too much about the performance increase, the current chip
 
 Now, with the design "perfected" with the ZenBook Duo and the chip (hopefully) "perfected" with the Snapdragon X Elite, I'm just waiting for the day when these two would come together and make the perfect laptop for me. I don't think I'm even asking for much, I just want a dual 16-inch Windows laptop that can last for the whole day on a single charge. I don't even need it to have the most powerful chip in the market, as long as it's portable enough to be carried around and can survive for years to come.
 
-I'm pretty sure this dream laptop of mine will come someday. Until then, I'm happy to see that a laptop I can actually use reliably is not too far away from being a reality. What do you think? Let me know in any of the [socials](/about#socials) we're on.
+I'm pretty sure this dream laptop of mine will come someday. Until then, I'm happy to see that a laptop I can actually use reliably is not too far away from being a reality. What do you think? Let me know in any of the [socials](/about#elsewhere) we're on.
 
 ---
 
