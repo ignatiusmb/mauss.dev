@@ -1,18 +1,24 @@
-/// <reference types="@sveltejs/kit" />
-/// <reference types="aubade" />
+import PocketBase from 'pocketbase';
 
-declare namespace App {
-	interface PageData {
-		meta: {
-			canonical?: string;
-			title: string;
-			description?: string;
-			og?: {
+declare global {
+	namespace App {
+		interface Locals {
+			pb: PocketBase;
+		}
+		interface PageData {
+			meta: {
 				title: string;
-				url?: string;
+				canonical?: string;
 				description?: string;
-				// TODO
+				og?: {
+					title: string;
+					url?: string;
+					description?: string;
+					// TODO
+				};
 			};
-		};
+		}
 	}
 }
+
+export {};

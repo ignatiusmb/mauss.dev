@@ -1,2 +1,8 @@
 node_modules
+
+.svelte-kit/
+.vercel/
+build/
+
 .DS_Store
+.env

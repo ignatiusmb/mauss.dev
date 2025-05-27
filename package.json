@@ -3,8 +3,10 @@
 	"type": "module",
 	"scripts": {
 		"clean": "git add * && git clean -dfx -e node_modules",
-		"check": "pnpm --filter \"./workspace/*\" check",
-		"format": "pnpm --filter \"./workspace/*\" format"
+		"format": "prettier --write .",
+		"check": "pnpm run \"/^check:.*/\"",
+		"check:style": "prettier --check .",
+		"check:workspace": "pnpm --filter \"./workspace/*\" check"
 	},
 	"packageManager": "pnpm@10.11.0",
 	"prettier": "mauss/prettier.config.js",
@@ -12,6 +14,7 @@
 		"@types/node": "^22.15.21",
 		"mauss": "^0.8.3",
 		"prettier": "^3.5.3",
+		"prettier-plugin-sort-package-json": "^1.0.1",
 		"prettier-plugin-svelte": "^3.4.0",
 		"typescript": "^5.8.3"
 	}

@@ -5,10 +5,11 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"format": "prettier --write .",
-		"check": "pnpm run \"/^check:.*/\"",
-		"check:style": "prettier --check .",
-		"check:svelte": "svelte-check src --tsconfig ./tsconfig.json",
+		"check": "svelte-check src --tsconfig ./tsconfig.json",
 		"prepare": "svelte-kit sync"
+	},
+	"dependencies": {
+		"pocketbase": "^0.26.0"
 	},
 	"devDependencies": {
 		"@fontsource-variable/fira-code": "^5.2.6",

@@ -17,6 +17,9 @@ importers:
       prettier:
         specifier: ^3.5.3
         version: 3.5.3
+      prettier-plugin-sort-package-json:
+        specifier: ^1.0.1
+        version: 1.0.1(prettier@3.5.3)
       prettier-plugin-svelte:
         specifier: ^3.4.0
         version: 3.4.0(prettier@3.5.3)(svelte@5.33.3)
@@ -25,6 +28,10 @@ importers:
         version: 5.8.3
 
   workspace/website:
+    dependencies:
+      pocketbase:
+        specifier: ^0.26.0
+        version: 0.26.0
     devDependencies:
       '@fontsource-variable/fira-code':
         specifier: ^5.2.6
@@ -47,6 +54,9 @@ importers:
       aubade:
         specifier: ^0.9.0
         version: 0.9.0
+      prettier-plugin-sort-package-json:
+        specifier: ^1.0.1
+        version: 1.0.1(prettier@3.5.3)
       sharp:
         specifier: ^0.34.2
         version: 0.34.2
@@ -924,9 +934,17 @@ packages:
     resolution: {integrity: sha512-M7BAV6Rlcy5u+m6oPhAPFgJTzAioX/6B0DxyvDlo9l8+T3nLKbrczg2WLUyzd45L8RqfUMyGPzekbMvX2Ldkwg==}
     engines: {node: '>=12'}
 
+  pocketbase@0.26.0:
+    resolution: {integrity: sha512-WBBeOgz4Jnrd7a1KEzSBUJqpTortKKCcp16j5KoF+4tNIyQHsmynj+qRSvS56/RVacVMbAqO8Qkfj3N84fpzEw==}
+
   postcss@8.5.3:
     resolution: {integrity: sha512-dle9A3yYxlBSrt8Fu+IpjGT8SY8hN0mlaA6GY8t0P5PjIOZemULz/E2Bnm/2dcUOena75OTNkHI76uZBNUUq3A==}
     engines: {node: ^10 || ^12 || >=14}
+
+  prettier-plugin-sort-package-json@1.0.1:
+    resolution: {integrity: sha512-2aEyB7/tFmDhZP4fkQACABYzduabSrq3VGQt7AR6JnVZ9RtboArDCgOZj+UA6vUPT1Rb6FqGB1oDOYqJ2zAqww==}
+    peerDependencies:
+      prettier: ^3.0.0
 
   prettier-plugin-svelte@3.4.0:
     resolution: {integrity: sha512-pn1ra/0mPObzqoIQn/vUTR3ZZI6UuZ0sHqMK5x2jMLGrs53h0sXhkVuDcrlssHwIMk7FYrMjHBPoUSyyEEDlBQ==}
@@ -1928,11 +1946,17 @@ snapshots:
 
   picomatch@4.0.2: {}
 
+  pocketbase@0.26.0: {}
+
   postcss@8.5.3:
     dependencies:
       nanoid: 3.3.11
       picocolors: 1.1.1
       source-map-js: 1.2.1
+
+  prettier-plugin-sort-package-json@1.0.1(prettier@3.5.3):
+    dependencies:
+      prettier: 3.5.3
 
   prettier-plugin-svelte@3.4.0(prettier@3.5.3)(svelte@5.33.3):
     dependencies:
