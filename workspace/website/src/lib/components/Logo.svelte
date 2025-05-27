@@ -1,9 +1,17 @@
+<script lang="ts">
+	interface Props {
+		animate?: boolean;
+	}
+	const { animate }: Props = $props();
+</script>
+
 <svg
 	aria-label="Alkamauss"
 	xmlns="http://www.w3.org/2000/svg"
 	viewBox="-128 -128 256 256"
 	fill="none"
 	stroke="#b8b8b8"
+	class:animate
 >
 	<defs>
 		<filter id="wobble" x="-140" y="-140" width="110%" height="110%" filterUnits="userSpaceOnUse">
@@ -103,3 +111,18 @@
 
 	<circle r="100" stroke-width="2" filter="url(#wobble)" />
 </svg>
+
+<style>
+	svg.animate {
+		animation: rotate 42s linear infinite;
+	}
+
+	@keyframes rotate {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
+</style>

@@ -19,10 +19,7 @@
 
 <header>
 	<h1>the world through kaleidoscope</h1>
-	<small>
-		reflections and critiques of things i've spent time with — rooted in experience, unfiltered when
-		it counts.
-	</small>
+	<small>reflections and critiques of the things i've spent time with</small>
 </header>
 
 <SearchBar

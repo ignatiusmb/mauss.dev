@@ -60,6 +60,9 @@
 	]}
 	scripts={{
 		'/_vercel/speed-insights/script.js': !dev && { 'data-route': page.route.id },
+		'https://static.cloudflareinsights.com/beacon.min.js': !dev && {
+			'data-cf-beacon': '{"token": "402cd91137d14890a1117569bda0ee41"}',
+		},
 	}}
 />
 

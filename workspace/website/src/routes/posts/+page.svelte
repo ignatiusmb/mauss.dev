@@ -19,9 +19,7 @@
 
 <header>
 	<h1>ongoing thoughts and documentation</h1>
-	<small>
-		blog-style entries written as i go. sometimes personal, sometimes technical — always honest.
-	</small>
+	<small>entries written as i go — part journal, part technical, fully honest.</small>
 </header>
 
 <SearchBar
@@ -110,7 +108,6 @@
 			}
 
 			& > :global(.syv-core-image) {
-				cursor: pointer;
 				border-bottom-right-radius: 0;
 				border-bottom-left-radius: 0;
 				background-color: rgba(0, 0, 0, 0.15);
@@ -147,7 +144,6 @@
 		}
 
 		& > :global(.syv-core-image) {
-			cursor: pointer;
 			border-bottom-right-radius: 0;
 			border-bottom-left-radius: 0;
 			background-color: rgba(0, 0, 0, 0.15);

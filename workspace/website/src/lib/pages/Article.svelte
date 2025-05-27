@@ -131,7 +131,6 @@
 		margin-top: 2rem;
 
 		line-height: 1;
-		font-family: var(--mrq-heading);
 
 		& > a {
 			margin: 0.5rem 0;
@@ -276,7 +275,6 @@
 		h3 {
 			scroll-margin-top: 4rem;
 			font-weight: 500;
-			font-family: var(--mrq-heading);
 		}
 		h2 {
 			margin-top: 1.5rem;

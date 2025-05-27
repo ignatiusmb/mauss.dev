@@ -78,7 +78,6 @@
 		justify-content: center;
 		margin-top: 3rem;
 		text-align: left;
-		font-family: var(--mrq-heading);
 
 		h1 {
 			grid-template-columns: auto 1fr;
