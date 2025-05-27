@@ -145,8 +145,8 @@
 			<span>only for direct contact</span>
 		</li>
 		<li>
-			<a href="https://t.me/ignatiusmb" target="_blank">telegram</a>
-			<span>quick and convenient</span>
+			<strong>telegram</strong>
+			<span>only news channels</span>
 		</li>
 		<li>
 			<strong>signal</strong>

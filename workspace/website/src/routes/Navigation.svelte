@@ -17,7 +17,7 @@
 	})}
 >
 	<a href="/" class="logo" aria-label="Alkamauss">
-		<Logo />
+		<Logo animate />
 	</a>
 
 	<input type="checkbox" id="menu" aria-label="Menu" bind:checked={opened} />
@@ -27,10 +27,10 @@
 	</label>
 
 	<menu>
+		{@render link('about', 'id-badge')}
 		{@render link('curated', 'books')}
 		{@render link('posts', 'article')}
 		{@render link('reviews', 'list-star')}
-		{@render link('about', 'id-badge')}
 		{@render link('uses', 'bookmark')}
 		{@render link('rss.xml', 'rss')}
 		{@render link('help', 'lifebuoy')}
@@ -38,11 +38,8 @@
 </nav>
 
 {#snippet link(path: string, icon: string)}
-	<a
-		href="/{path}"
-		aria-label="/{path}"
-		aria-current={page.url.pathname.startsWith(`/${path}`) ? 'page' : null}
-	>
+	{@const current = page.url.pathname.startsWith(`/${path}`) ? 'page' : null}
+	<a href="/{path}" aria-label="/{path}" aria-current={current}>
 		<i data-icon={icon}></i>
 	</a>
 {/snippet}
@@ -64,7 +61,6 @@
 		padding: calc(var(--pad) * 2) calc(var(--pad) * 3);
 
 		background: var(--bg-base);
-		font-family: var(--mrq-heading);
 		color: var(--fg-surface);
 
 		@media (min-width: 549px) {
@@ -95,10 +91,6 @@
 		height: 2.5rem;
 		padding: 0;
 		border-radius: 50%;
-
-		:global(svg) {
-			animation: rotate 42s linear infinite;
-		}
 	}
 
 	input {
@@ -178,15 +170,6 @@
 			a::after {
 				content: none;
 			}
-		}
-	}
-
-	@keyframes rotate {
-		from {
-			transform: rotate(0deg);
-		}
-		to {
-			transform: rotate(360deg);
 		}
 	}
 </style>

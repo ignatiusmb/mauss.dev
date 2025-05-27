@@ -97,7 +97,7 @@
 	.options {
 		display: grid;
 		gap: 1rem;
-		grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
 		margin-top: 1rem;
 		background: inherit;
 

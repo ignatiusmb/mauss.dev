@@ -11,9 +11,7 @@
 
 <header>
 	<h1>things worth keeping</h1>
-	<small
-		>selected pieces of the internet and beyond — timeless, meaningful, and worth revisiting.</small
-	>
+	<small>selected pieces of the internet — timeless, meaningful, and worth revisiting.</small>
 </header>
 
 <SearchBar
