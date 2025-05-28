@@ -1,18 +1,8 @@
-# [Alkamauss](https://mauss.dev) [[MIT](LICENSE)]
+# Alkamauss Garden
 
-personal site — handcrafted with love
+a monorepo for the digital garden of [Alkamauss](https://mauss.dev)
 
-- [SvelteKit](https://kit.svelte.dev) — the web framework
-- [Aubade](https://aubade.mauss.dev) — the content parser
-- [Syv](https://github.com/ignatiusmb/syv) — the complementary library
+## Structure
 
-some commands to get started
-
-```bash
-git clone https://github.com/ignatiusmb/mauss.dev
-pnpm install
-cd workspace/website
-pnpm dev
-```
-
-content lives under under [workspace/content](./workspace/content)
+- [`workspace/atelier`](./workspace/atelier) — the digital atelier, main site
+- [`workspace/content`](./workspace/content) — the atelier's content repository
