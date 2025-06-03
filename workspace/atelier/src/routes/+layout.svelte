@@ -113,10 +113,6 @@
 
 		transition: var(--t-duration);
 
-		@media screen and (min-width: 549px) {
-			padding: 1rem 0;
-		}
-
 		> main {
 			grid-column: content;
 			position: relative;
