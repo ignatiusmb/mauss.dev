@@ -80,7 +80,9 @@
 					</aside>
 				</section>
 			{:else}
-				<h2>There are no matching {query ? 'titles' : 'filters'}</h2>
+				<p style:grid-column="1 / -1" style:text-align="center">
+					There are no matching {query ? 'titles' : 'filters'}
+				</p>
 			{/each}
 		</div>
 	{/snippet}
@@ -144,41 +146,9 @@
 			}
 		}
 
-		h2 {
-			grid-column: 1 / -1;
-			text-align: center;
-		}
-
 		& :global(img[src='']),
 		& :global(img:not([src])) {
 			display: none;
 		}
-	}
-
-	section {
-		position: relative;
-		display: grid;
-		grid-template-rows: auto 1fr;
-		border-top-left-radius: var(--b-radius);
-		border-top-right-radius: var(--b-radius);
-		background: var(--bg-overlay);
-	}
-
-	aside {
-		display: grid;
-		gap: 0.5rem;
-		padding: 0.5rem;
-		border-radius: var(--b-radius);
-		text-align: center;
-
-		small:first-child {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-		}
-	}
-
-	h2 {
-		grid-column: 1 / -1;
-		text-align: center;
 	}
 </style>

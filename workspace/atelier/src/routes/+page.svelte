@@ -9,7 +9,7 @@
 <Article>
 	<header>
 		<h1>Ignatius Bagus.</h1>
-		<span><em>Software Alchemist</em> — Workdays Engineer, Weekends Wordsmith</span>
+		<span><em>Software Alchemist</em> — code and prose, perfectly distilled</span>
 	</header>
 
 	<!-- prettier-ignore -->
@@ -17,7 +17,7 @@
 	<!-- prettier-ignore -->
 	<p>I also take on consulting and freelance projects — tailored for those seeking customized and private work. If that sounds like you, feel free to reach out through one of <a href="/about#elsewhere">my socials</a>.</p>
 	<!-- prettier-ignore -->
-	<p>Outside engineering, I compose — it's how I process lessons, share discoveries, and explore new ideas. If you're curious, the <a href="/help">help page</a> is a good place to start.</p>
+	<p>I tend to build quietly and write to make sense of it all. It's a way for me to process lessons, share discoveries, and explore new ideas. If you're curious, the <a href="/help">help page</a> is a good place to start — or jump straight to any of the links below.</p>
 
 	<section>
 		<h2>
@@ -128,6 +128,12 @@
 			&:focus-visible i[data-icon] {
 				transform: scale(1.1);
 			}
+		}
+	}
+
+	i[data-icon] {
+		&[data-icon='arrow-circle-right'] {
+			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"><circle cx="128" cy="128" r="96"/><line x1="88" y1="128" x2="168" y2="128"/><polyline points="136 96 168 128 136 160"/></svg>');
 		}
 	}
 </style>

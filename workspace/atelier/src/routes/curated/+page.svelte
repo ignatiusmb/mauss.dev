@@ -35,7 +35,7 @@
 					<Link href="/curated/{slug}/" style="primary">READ</Link>
 				</section>
 			{:else}
-				<h2>There are no matching titles</h2>
+				<p style:grid-column="1 / -1" style:text-align="center">There are no matching titles</p>
 			{/each}
 		</div>
 	{/snippet}
@@ -80,11 +80,6 @@
 			& > :global(a) {
 				text-decoration: none;
 			}
-		}
-
-		h2 {
-			grid-column: 1 / -1;
-			text-align: center;
 		}
 	}
 </style>
