@@ -73,7 +73,9 @@
 					</aside>
 				</section>
 			{:else}
-				<h2>There are no matching {query ? 'titles' : 'filters'}</h2>
+				<p style:grid-column="1 / -1" style:text-align="center">
+					There are no matching {query ? 'titles' : 'filters'}
+				</p>
 			{/each}
 		</div>
 	{/snippet}
@@ -120,70 +122,35 @@
 				padding: 1rem;
 				line-height: 1.5;
 			}
+
+			aside {
+				display: grid;
+				gap: 0.5rem;
+				grid-template-columns: auto auto 1fr;
+				align-items: center;
+				padding: 0.5rem;
+				padding-left: 1rem;
+				border-radius: var(--b-radius);
+
+				time {
+					font-size: 0.8rem;
+				}
+
+				small::before {
+					content: '•';
+					color: var(--theme-secondary);
+					margin-right: 0.5rem;
+				}
+
+				& :global(:last-child) {
+					justify-self: end;
+				}
+			}
 		}
 
 		& :global(img[src='']),
 		& :global(img:not([src])) {
 			display: none;
 		}
-	}
-
-	section {
-		display: grid;
-		grid-template-rows: auto 1fr 3rem;
-		border-radius: var(--b-radius);
-		box-shadow:
-			0 2px 1px -1px rgba(0, 0, 0, 0.2),
-			0 1px 1px 0 rgba(0, 0, 0, 0.14),
-			0 1px 3px 0 rgba(0, 0, 0, 0.12);
-		background-color: var(--bg-overlay);
-		transition: var(--t-duration);
-
-		&:hover {
-			transform: translateY(-0.15rem);
-		}
-
-		& > :global(.syv-core-image) {
-			border-bottom-right-radius: 0;
-			border-bottom-left-radius: 0;
-			background-color: rgba(0, 0, 0, 0.15);
-		}
-
-		.content {
-			display: grid;
-			gap: 1rem;
-			align-content: flex-start;
-			padding: 1rem;
-			line-height: 1.5;
-		}
-	}
-
-	aside {
-		display: grid;
-		gap: 0.5rem;
-		grid-template-columns: auto auto 1fr;
-		align-items: center;
-		padding: 0.5rem;
-		padding-left: 1rem;
-		border-radius: var(--b-radius);
-
-		time {
-			font-size: 0.8rem;
-		}
-
-		small::before {
-			content: '•';
-			color: var(--theme-secondary);
-			margin-right: 0.5rem;
-		}
-
-		& :global(:last-child) {
-			justify-self: end;
-		}
-	}
-
-	h2 {
-		grid-column: 1 / -1;
-		text-align: center;
 	}
 </style>
