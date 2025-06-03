@@ -86,6 +86,7 @@
 			&[aria-current] {
 				background: rgba(255, 255, 255, 0.1);
 			}
+
 			&:focus {
 				outline-color: var(--bg-cover);
 			}
@@ -143,13 +144,9 @@
 		transform: translateY(-100%);
 		transition: var(--t-duration) ease;
 
-		> a::after {
+		a::after {
 			content: attr(aria-label);
 			margin-left: var(--pad);
-
-			@media (min-width: 549px) {
-				content: none;
-			}
 		}
 
 		@media (min-width: 549px) {
@@ -166,6 +163,10 @@
 			border: none;
 			box-shadow: none;
 			transform: none;
+
+			a::after {
+				content: none;
+			}
 		}
 	}
 
