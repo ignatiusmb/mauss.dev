@@ -16,8 +16,7 @@ routerUse((e) => {
 		const diff = Math.abs(now - Math.round(+ts / 1000));
 		if (diff > 5 * 60) throw e.unauthorizedError('Signature expired');
 
-		const secret = $os.getenv('AM_SECRET');
-		const expected = $security.hs256(`${id}:${ts}`, secret);
+		const expected = $security.hs256(`${id}:${ts}`, $os.getenv('AM_SECRET'));
 		if (sig !== expected) throw e.unauthorizedError('Signature mismatch');
 	}
 

@@ -9,12 +9,15 @@
 	<Logo animate />
 </header>
 
-<form method="POST" action="?/login" use:enhance>
+<div class="actions">
 	{#each data.providers as { name, display }}
-		<button formaction="?/{name}">
-			<i data-image={name}></i>
-			<span>Continue with {display}</span>
-		</button>
+		<form method="POST" action="?/oauth2" use:enhance>
+			<input type="hidden" name="provider" value={name} />
+			<button type="submit">
+				<i data-image={name}></i>
+				<span>Continue with {display}</span>
+			</button>
+		</form>
 	{:else}
 		<p>Please try again later</p>
 	{/each}
@@ -22,7 +25,7 @@
 	{#if form?.error}
 		<p class="error">{form.error}</p>
 	{/if}
-</form>
+</div>
 
 <style>
 	header {
@@ -34,25 +37,27 @@
 		}
 	}
 
-	form {
-		justify-self: center;
+	.actions {
 		display: grid;
 		gap: 1rem;
-		padding: 1rem;
-		border-radius: var(--b-radius);
-		color: var(--fg-surface);
 
-		button {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			padding: 0.625rem 2.5rem;
+		form {
+			justify-self: center;
+			border-radius: var(--rounding-box);
 			color: var(--fg-surface);
-			border-radius: inherit;
-			background: var(--bg-surface);
 
-			&:hover {
-				background: var(--bg-cover);
+			button {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 0.625rem 2.5rem;
+				color: var(--fg-surface);
+				border-radius: inherit;
+				background: var(--bg-surface);
+
+				&:hover {
+					background: var(--bg-cover);
+				}
 			}
 		}
 
