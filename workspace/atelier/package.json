@@ -6,7 +6,7 @@
 		"dev-host": "vite dev --host",
 		"build": "vite build",
 		"check": "svelte-check src --tsconfig ./tsconfig.json",
-		"prepare": "svelte-kit sync"
+		"prepare": "cp -n .example.env .env && svelte-kit sync"
 	},
 	"dependencies": {
 		"mauss": "^0.9.1",
