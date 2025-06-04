@@ -20,6 +20,10 @@
 		<Logo animate />
 	</a>
 
+	{@render link('curated', 'books')}
+	{@render link('posts', 'article')}
+	{@render link('reviews', 'list-star')}
+
 	<input type="checkbox" id="menu" aria-label="Menu" bind:checked={opened} />
 	<label for="menu" aria-label="Toggle menu">
 		<i data-icon="menu" role="presentation"></i>
@@ -28,9 +32,6 @@
 
 	<menu>
 		{@render link('about', 'id-badge')}
-		{@render link('curated', 'books')}
-		{@render link('posts', 'article')}
-		{@render link('reviews', 'list-star')}
 		{@render link('uses', 'bookmark')}
 		{@render link('rss.xml', 'rss')}
 		{@render link('help', 'lifebuoy')}
@@ -46,18 +47,17 @@
 
 <style>
 	nav {
-		--pad: 0.375rem;
+		--pad: 0.5rem;
 		--fg-surface: rgba(200, 200, 200, 1);
 
 		grid-column: full-bleed;
 		z-index: 3;
-		width: 100%;
 		position: sticky;
 		top: 0;
 
 		display: flex;
+		gap: var(--pad);
 		align-items: center;
-		justify-content: space-between;
 		padding: calc(var(--pad) * 2) calc(var(--pad) * 3);
 
 		background: var(--bg-base);
@@ -67,6 +67,7 @@
 			position: relative;
 			grid-column: content;
 			padding: 0;
+			padding-top: 1rem;
 
 			input,
 			label[for='menu'] {
@@ -75,22 +76,30 @@
 		}
 
 		a {
+			display: flex;
+			align-items: center;
 			padding: var(--pad);
 			border-radius: var(--pad);
-			text-decoration: none;
 			outline: 2px solid transparent;
+			text-decoration: none;
+			color: var(--fg-surface);
+
+			&:hover,
+			&[aria-current] {
+				background: rgba(255, 255, 255, 0.1);
+			}
 
 			&:focus {
 				outline-color: var(--bg-cover);
 			}
-		}
-	}
 
-	.logo {
-		width: 2.5rem;
-		height: 2.5rem;
-		padding: 0;
-		border-radius: 50%;
+			&.logo {
+				width: 2.5rem;
+				height: 2.5rem;
+				padding: 0;
+				border-radius: 50%;
+			}
+		}
 	}
 
 	input {
@@ -110,11 +119,11 @@
 	label[for='menu'] {
 		display: inline-flex;
 		padding: var(--pad);
+		margin-left: auto;
 	}
 
 	menu {
-		--pad: 0.5rem;
-
+		list-style: none;
 		visibility: hidden;
 		overflow: hidden;
 		width: 100%;
@@ -124,33 +133,24 @@
 		left: 0;
 
 		display: grid;
-		gap: var(--pad);
+		gap: calc((var(--pad)) * 1.5);
 		grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
 
-		padding: var(--pad);
+		padding: calc(var(--pad) * 2) calc(var(--pad) * 3);
 		margin: 0;
+		margin-left: auto;
 		border-bottom: 1px solid var(--bg-cover);
-		border-bottom-right-radius: 0.5rem;
-		border-bottom-left-radius: 0.5rem;
+		border-radius: calc(var(--b-radius) * 2);
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
 		box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.188);
 		background-color: inherit;
 		transform: translateY(-100%);
 		transition: var(--t-duration) ease;
 
-		a {
-			display: flex;
-			align-items: center;
-			color: var(--fg-surface);
-
-			&::after {
-				content: attr(aria-label);
-				margin-left: var(--pad);
-			}
-
-			&:hover,
-			&[aria-current] {
-				background: rgba(255, 255, 255, 0.1);
-			}
+		a::after {
+			content: attr(aria-label);
+			margin-left: var(--pad);
 		}
 
 		@media (min-width: 549px) {
@@ -161,6 +161,7 @@
 			max-height: initial;
 			position: static;
 
+			gap: var(--pad);
 			grid-template-columns: auto;
 			padding: 0;
 			border: none;
@@ -170,6 +171,12 @@
 			a::after {
 				content: none;
 			}
+		}
+	}
+
+	i[data-icon] {
+		&[data-icon='menu'] {
+			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"><line x1="40" y1="128" x2="216" y2="128"/><line x1="40" y1="64" x2="216" y2="64"/><line x1="40" y1="192" x2="216" y2="192"/></svg>');
 		}
 	}
 </style>

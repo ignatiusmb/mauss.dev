@@ -115,6 +115,7 @@
 
 <style>
 	article {
+		min-width: 0;
 		width: 100%;
 		display: grid;
 		grid-template-columns: 1fr min(80ch, 100%) 1fr;
@@ -128,6 +129,7 @@
 		display: grid;
 		gap: 0.8rem;
 		justify-items: center;
+		padding: 0 0.5rem;
 		margin-top: 2rem;
 
 		line-height: 1;
@@ -190,11 +192,11 @@
 			margin: 1rem auto;
 		}
 		& > .full-bleed {
-			width: calc(100% + 2rem);
+			width: calc(100% + var(--pad) * 2);
 			max-width: 120rem;
 			grid-column: 1 / -1;
 			margin: 1rem auto;
-			transform: translateX(-1rem);
+			transform: translateX(calc(-1 * var(--pad)));
 		}
 		& > .half-bleed img,
 		& > .full-bleed img {
