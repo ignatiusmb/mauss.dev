@@ -64,8 +64,10 @@
 		color: var(--fg-surface);
 
 		@media (min-width: 549px) {
+			position: relative;
 			grid-column: content;
-			padding: calc(var(--pad) * 1.5) 0;
+			padding: 0;
+			padding-top: 1rem;
 
 			input,
 			label[for='menu'] {
@@ -139,6 +141,8 @@
 		margin-left: auto;
 		border-bottom: 1px solid var(--bg-cover);
 		border-radius: calc(var(--b-radius) * 2);
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
 		box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.188);
 		background-color: inherit;
 		transform: translateY(-100%);
