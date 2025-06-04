@@ -3,6 +3,7 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
+		"dev-host": "vite dev --host",
 		"build": "vite build",
 		"check": "svelte-check src --tsconfig ./tsconfig.json",
 		"prepare": "svelte-kit sync"
