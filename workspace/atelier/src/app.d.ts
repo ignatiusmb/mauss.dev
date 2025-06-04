@@ -4,6 +4,7 @@ declare global {
 	namespace App {
 		interface Locals {
 			pb: TypedPocketBase;
+			user?: TypedPocketBase['authStore']['record'];
 		}
 		interface PageData {
 			meta: {
