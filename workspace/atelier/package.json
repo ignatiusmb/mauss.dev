@@ -6,9 +6,10 @@
 		"dev-host": "vite dev --host",
 		"build": "vite build",
 		"check": "svelte-check src --tsconfig ./tsconfig.json",
-		"prepare": "svelte-kit sync"
+		"prepare": "cp -n .env.example .env && svelte-kit sync"
 	},
 	"dependencies": {
+		"mauss": "^0.9.1",
 		"pocketbase": "^0.26.0"
 	},
 	"devDependencies": {
@@ -16,13 +17,13 @@
 		"@fontsource-variable/karla": "^5.2.5",
 		"@ignatiusmb/styles": "^0.1.1",
 		"@sveltejs/adapter-vercel": "^5.7.2",
-		"@sveltejs/kit": "^2.21.1",
-		"@sveltejs/vite-plugin-svelte": "^5.0.3",
-		"aubade": "^0.9.0",
+		"@sveltejs/kit": "^2.21.2",
+		"@sveltejs/vite-plugin-svelte": "^5.1.0",
+		"aubade": "^0.9.1",
 		"sharp": "^0.34.2",
-		"svelte": "^5.33.3",
+		"svelte": "^5.33.14",
 		"svelte-check": "^4.2.1",
-		"syv": "^0.0.42",
+		"syv": "^0.0.43",
 		"vite": "^6.3.5"
 	}
 }
