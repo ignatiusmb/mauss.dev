@@ -54,7 +54,7 @@
 			color: var(--fg-surface);
 
 			> i {
-				transition-duration: var(--t-duration);
+				transition-duration: var(--transition-base);
 				transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 			}
 

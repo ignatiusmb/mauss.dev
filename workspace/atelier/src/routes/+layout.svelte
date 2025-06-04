@@ -111,7 +111,7 @@
 			[full-bleed-padding-end] var(--pad)
 			[full-bleed-end];
 
-		transition: var(--t-duration);
+		transition: var(--transition-base);
 
 		> main {
 			grid-row: content;

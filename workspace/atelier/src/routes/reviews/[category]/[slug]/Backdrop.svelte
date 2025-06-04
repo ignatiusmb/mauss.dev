@@ -74,6 +74,6 @@
 		padding: 0.25rem;
 		border-radius: var(--rounding-base);
 		background: rgba(0, 0, 0, 0.8);
-		transition-duration: var(--t-duration);
+		transition-duration: var(--transition-base);
 	} */
 </style>

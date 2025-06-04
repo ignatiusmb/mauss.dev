@@ -151,7 +151,7 @@
 		box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.188);
 		background-color: inherit;
 		transform: translateY(-100%);
-		transition: var(--t-duration) ease;
+		transition: var(--transition-base) ease;
 
 		a::after {
 			content: attr(aria-label);

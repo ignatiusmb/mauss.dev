@@ -99,7 +99,7 @@
 		display: grid;
 		gap: 1rem;
 		grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
-		transition: var(--t-duration);
+		transition: var(--transition-base);
 
 		section {
 			position: relative;
@@ -107,7 +107,7 @@
 			grid-template-rows: auto 1fr;
 			border-radius: var(--rounding-box);
 			background: var(--bg-overlay);
-			transition: var(--t-duration);
+			transition: var(--transition-base);
 
 			&:hover {
 				transform: translateY(-0.15rem);

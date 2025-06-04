@@ -62,7 +62,7 @@
 		outline: none;
 		outline-offset: 0;
 		text-decoration: none;
-		transition-duration: 240ms;
+		transition-duration: var(--transition-base);
 	}
 	button {
 		border-radius: var(--rounding-base);
@@ -81,7 +81,7 @@
 		color: var(--fg-surface, rgba(255, 255, 255, 0.65));
 		background-color: var(--bg-base, #1f2023);
 
-		transition: all var(--t-duration, 300ms) ease-in-out;
+		transition: all var(--transition-base) ease-in-out;
 
 		&:hover,
 		&:focus,

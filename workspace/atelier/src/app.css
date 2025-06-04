@@ -3,11 +3,12 @@
 	--rounding-base: 0.325rem;
 	--rounding-box: calc(var(--rounding-base) * 2);
 
+	--transition-base: 150ms;
+	--transition-fast: calc(var(--transition-base) / 2);
+	--transition-slow: calc(var(--transition-base) * 2);
+
 	--theme-primary: rgb(202, 1, 35);
 	--theme-secondary: rgb(220, 20, 60);
-
-	--t-duration: 240ms;
-	--t-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 	--bg-inverse: rgba(255, 255, 255, 0.8);
 
