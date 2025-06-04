@@ -105,8 +105,7 @@
 			position: relative;
 			display: grid;
 			grid-template-rows: auto 1fr;
-			border-top-left-radius: var(--b-radius);
-			border-top-right-radius: var(--b-radius);
+			border-radius: var(--rounding-box);
 			background: var(--bg-overlay);
 			transition: var(--t-duration);
 
@@ -118,13 +117,13 @@
 				display: grid;
 				gap: 0.5rem;
 				padding: 0.5rem;
-				border-radius: var(--b-radius);
+				border-radius: inherit;
 				text-align: center;
 
 				& > span:first-child {
 					overflow: hidden;
 					padding: 0.25rem 0.5rem;
-					border-radius: inherit;
+					border-radius: var(--rounding-base);
 					background: var(--bg-base);
 					white-space: nowrap;
 					text-overflow: ellipsis;
@@ -134,11 +133,11 @@
 					display: grid;
 					gap: 0.25rem;
 					grid-template-columns: repeat(3, 1fr);
-					border-radius: inherit;
+					border-radius: var(--rounding-base);
 
 					span {
 						padding: 0.25rem;
-						border-radius: inherit;
+						border-radius: var(--rounding-base);
 						background: var(--bg-base);
 						text-transform: capitalize;
 					}

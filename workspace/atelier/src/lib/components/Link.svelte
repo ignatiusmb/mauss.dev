@@ -65,7 +65,7 @@
 		transition-duration: 240ms;
 	}
 	button {
-		border-radius: 1rem;
+		border-radius: var(--rounding-base);
 
 		&:disabled {
 			cursor: default;
@@ -76,7 +76,7 @@
 
 	.primary {
 		padding: 0.5rem 1rem;
-		border-radius: inherit;
+		border-radius: var(--rounding-base);
 
 		color: var(--fg-surface, rgba(255, 255, 255, 0.65));
 		background-color: var(--bg-base, #1f2023);

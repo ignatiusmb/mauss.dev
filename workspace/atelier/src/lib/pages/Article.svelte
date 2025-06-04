@@ -263,13 +263,13 @@
 		video {
 			max-height: 42rem;
 			margin: auto;
-			border-radius: var(--b-radius);
+			border-radius: var(--rounding-box);
 			text-align: center;
 
 			&[src*="://"]
 			{
 				border: none;
-				border-radius: var(--b-radius);
+				border-radius: var(--rounding-box);
 				text-align: center;
 			}
 		}
@@ -324,7 +324,7 @@
 			& > div.captioned {
 				display: flex;
 				justify-content: center;
-				border-radius: var(--b-radius);
+				border-radius: var(--rounding-box);
 
 				&:not(.flexible) {
 					position: relative;
@@ -390,7 +390,7 @@
 	footer {
 		margin-top: 2rem;
 		display: grid;
-		border-radius: 0.5rem;
+		border-radius: var(--rounding-box);
 		border: 0.1rem solid var(--fg-surface);
 
 		a {

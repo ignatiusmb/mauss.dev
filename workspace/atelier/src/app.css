@@ -1,14 +1,14 @@
 :root {
+	--font-scale: 1.067;
+	--rounding-base: 0.325rem;
+	--rounding-box: calc(var(--rounding-base) * 2);
+
 	--theme-primary: rgb(202, 1, 35);
 	--theme-secondary: rgb(220, 20, 60);
 
-	--b-radius: 0.25rem;
-
 	--t-duration: 240ms;
 	--t-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-html {
 	--bg-inverse: rgba(255, 255, 255, 0.8);
 
 	/* --bg-cover: rgba(56, 59, 64, 1); */
@@ -22,7 +22,6 @@ html {
 	--fg-surface: rgba(184, 184, 184, 1);
 
 	--font-monospace: 'Fira Code Variable', monospace;
-	font-family: 'Karla Variable', sans-serif;
 }
 
 html,
@@ -30,7 +29,10 @@ body {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
-	background-color: var(--bg-base);
+
+	font-family: 'Karla Variable', sans-serif;
+	font-size: calc(1rem * var(--font-scale));
+	background: var(--bg-base);
 	color: var(--fg-surface);
 }
 

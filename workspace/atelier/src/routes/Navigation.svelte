@@ -79,7 +79,7 @@
 			display: flex;
 			align-items: center;
 			padding: var(--pad);
-			border-radius: var(--pad);
+			border-radius: var(--rounding-base);
 			outline: 2px solid transparent;
 			text-decoration: none;
 			color: var(--fg-surface);
@@ -120,6 +120,11 @@
 		display: inline-flex;
 		padding: var(--pad);
 		margin-left: auto;
+		border-radius: var(--rounding-base);
+
+		&:active {
+			background: rgba(255, 255, 255, 0.1);
+		}
 	}
 
 	menu {
@@ -140,7 +145,7 @@
 		margin: 0;
 		margin-left: auto;
 		border-bottom: 1px solid var(--bg-cover);
-		border-radius: calc(var(--b-radius) * 2);
+		border-radius: var(--rounding-box);
 		border-top-left-radius: 0;
 		border-top-right-radius: 0;
 		box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.188);

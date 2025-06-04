@@ -97,7 +97,7 @@
 		section {
 			display: grid;
 			grid-template-rows: auto 1fr 3rem;
-			border-radius: var(--b-radius);
+			border-radius: var(--rounding-box);
 			box-shadow:
 				0 2px 1px -1px rgba(0, 0, 0, 0.2),
 				0 1px 1px 0 rgba(0, 0, 0, 0.14),
@@ -130,7 +130,7 @@
 				align-items: center;
 				padding: 0.5rem;
 				padding-left: 1rem;
-				border-radius: var(--b-radius);
+				border-radius: var(--rounding-box);
 
 				time {
 					font-size: 0.8rem;

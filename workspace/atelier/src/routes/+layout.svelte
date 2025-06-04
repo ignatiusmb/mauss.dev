@@ -126,7 +126,7 @@
 				max-width: 32rem;
 			}
 			:global(.syv-core-search-bar) {
-				border-radius: var(--b-radius);
+				border-radius: var(--rounding-box);
 			}
 		}
 

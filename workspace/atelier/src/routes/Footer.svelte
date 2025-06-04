@@ -33,7 +33,6 @@
 	section {
 		width: 100%;
 		display: flex;
-		flex-wrap: wrap;
 		align-items: center;
 		justify-content: center;
 		margin: auto;
@@ -49,14 +48,9 @@
 
 		a {
 			flex: 0 1 4rem;
-			height: 4rem;
 			display: inline-flex;
 			align-items: center;
 			justify-content: center;
-			border-radius: 50%;
-			border-bottom: none;
-			outline: 2px solid transparent;
-			outline-offset: -0.625rem;
 			color: var(--fg-surface);
 
 			> i {
