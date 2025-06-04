@@ -114,6 +114,7 @@
 		transition: var(--t-duration);
 
 		> main {
+			grid-row: content;
 			grid-column: content;
 			position: relative;
 
