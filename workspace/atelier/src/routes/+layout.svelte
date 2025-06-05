@@ -83,7 +83,7 @@
 		<ScrollTop
 			styles={{
 				'--background': 'var(--color-base)',
-				'--text-color': 'var(--color-accent-primary)', // change to '--color' later
+				'--color': 'var(--color-accent-primary)',
 				'--transition-duration': 'var(--transition-base)',
 			}}
 		/>
