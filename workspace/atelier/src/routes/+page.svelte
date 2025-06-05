@@ -119,7 +119,7 @@
 				height: 1.25rem;
 				width: 1.25rem;
 				margin-left: 0.5rem;
-				transition: transform 150ms ease-in-out;
+				transition: transform var(--transition-base) ease-in-out;
 			}
 
 			&:hover i[data-icon] {

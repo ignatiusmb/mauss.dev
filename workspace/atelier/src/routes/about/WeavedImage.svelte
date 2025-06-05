@@ -40,7 +40,7 @@
 		& :global(img) {
 			border: none;
 			border-radius: 0;
-			box-shadow: 0 0 1rem rgba(255, 255, 255, 0.7);
+			box-shadow: 0 0 1rem var(--color-accent-secondary);
 		}
 
 		& :global(.syv-core-image) {
@@ -67,11 +67,11 @@
 			position: absolute;
 		}
 		&.border {
-			border: 0.75rem solid crimson;
+			border: 0.75rem solid var(--color-accent-primary);
 			border-radius: 2rem;
 			box-shadow:
-				0 0 0.5rem crimson,
-				inset 0 0 1rem crimson;
+				0 0 0.5rem var(--color-accent-primary),
+				inset 0 0 1rem var(--color-accent-primary);
 			transform: rotate(45deg);
 		}
 		&.grid {

@@ -67,8 +67,8 @@ importers:
         specifier: ^4.2.1
         version: 4.2.1(picomatch@4.0.2)(svelte@5.33.14)(typescript@5.8.3)
       syv:
-        specifier: ^0.0.43
-        version: 0.0.43(svelte@5.33.14)
+        specifier: ^0.0.44
+        version: 0.0.44(svelte@5.33.14)
       vite:
         specifier: ^6.3.5
         version: 6.3.5(@types/node@22.15.29)
@@ -1062,8 +1062,8 @@ packages:
     resolution: {integrity: sha512-kRlbhIlMTijbFmVDQFDeKXPLlX1/ovXwV0I162wRqQhRcygaqDIcu1d/Ese3H2uI+yt3uT8E7ndgDthQv5v5BA==}
     engines: {node: '>=18'}
 
-  syv@0.0.43:
-    resolution: {integrity: sha512-Zf9ku1+2s+Ne5enTlCnCLv9HTADKG9ubcy8RWBiDCsbJL9EUwsadqagOa9oPbWVuA/RCuA8SkAMyQTsh5vYM0A==}
+  syv@0.0.44:
+    resolution: {integrity: sha512-Yv8/8ddU5yhd8d6OyME+Rmy6bP+W85BZLwPznZ1GVcs183fCQus6SC9E5Uug1xsR7s5ATYOVvAKtouwGuNmvig==}
     peerDependencies:
       svelte: ^5.0.0
 
@@ -2130,7 +2130,7 @@ snapshots:
       magic-string: 0.30.17
       zimmerframe: 1.1.2
 
-  syv@0.0.43(svelte@5.33.14):
+  syv@0.0.44(svelte@5.33.14):
     dependencies:
       mauss: 0.9.1
       svelte: 5.33.14

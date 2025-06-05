@@ -35,7 +35,7 @@
 
 		margin: -1rem 0;
 		border: none;
-		border-radius: calc(var(--b-radius) * 2);
+		border-radius: var(--rounding-box);
 
 		&::after {
 			content: '';
@@ -63,7 +63,7 @@
 		left: 0.5rem;
 		position: absolute;
 		padding: 0.25rem 0.5rem 0.25rem 0.25rem;
-		border-radius: var(--b-radius);
+		border-radius: var(--rounding-base);
 		background: rgba(0, 0, 0, 0.8);
 	}
 	/* .composed {
@@ -72,8 +72,8 @@
 		top: calc(100% + 0.25rem);
 		position: absolute;
 		padding: 0.25rem;
-		border-radius: var(--b-radius);
+		border-radius: var(--rounding-base);
 		background: rgba(0, 0, 0, 0.8);
-		transition-duration: var(--t-duration);
+		transition-duration: var(--transition-base);
 	} */
 </style>

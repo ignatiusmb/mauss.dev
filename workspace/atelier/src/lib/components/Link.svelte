@@ -62,10 +62,10 @@
 		outline: none;
 		outline-offset: 0;
 		text-decoration: none;
-		transition-duration: 240ms;
+		transition-duration: var(--transition-base);
 	}
 	button {
-		border-radius: 1rem;
+		border-radius: var(--rounding-base);
 
 		&:disabled {
 			cursor: default;
@@ -76,17 +76,17 @@
 
 	.primary {
 		padding: 0.5rem 1rem;
-		border-radius: inherit;
+		border-radius: var(--rounding-base);
 
-		color: var(--fg-surface, rgba(255, 255, 255, 0.65));
-		background-color: var(--bg-base, #1f2023);
+		color: var(--color-text, rgba(255, 255, 255, 0.65));
+		background-color: var(--color-base);
 
-		transition: all var(--t-duration, 300ms) ease-in-out;
+		transition: all var(--transition-base) ease-in-out;
 
 		&:hover,
 		&:focus,
 		&:active {
-			color: var(--theme-secondary, #dc143c);
+			color: var(--color-accent-primary);
 		}
 	}
 

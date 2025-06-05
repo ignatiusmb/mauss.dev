@@ -52,7 +52,7 @@
 		display: grid;
 		gap: 1rem;
 		grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
-		transition: var(--t-duration);
+		transition: var(--transition-base);
 
 		section {
 			width: 100%;
@@ -61,13 +61,13 @@
 			align-items: center;
 			grid-template-columns: 1fr auto;
 			padding: 0.5rem;
-			border-radius: var(--b-radius);
+			border-radius: var(--rounding-box);
 			box-shadow:
 				0 2px 1px -1px rgba(0, 0, 0, 0.2),
 				0 1px 1px 0 rgba(0, 0, 0, 0.14),
 				0 1px 3px 0 rgba(0, 0, 0, 0.12);
-			background-color: var(--bg-overlay);
-			transition: var(--t-duration);
+			background-color: var(--color-overlay);
+			transition: var(--transition-base);
 
 			&:hover {
 				transform: translateY(-0.15rem);
