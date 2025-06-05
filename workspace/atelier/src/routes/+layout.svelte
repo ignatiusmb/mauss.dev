@@ -82,7 +82,9 @@
 	{#if page.url.pathname !== '/' && !page.url.pathname.startsWith('/auth')}
 		<ScrollTop
 			styles={{
-				'--background': '#0e0e0e',
+				'--background': 'var(--color-base)',
+				'--text-color': 'var(--color-accent-primary)', // change to '--color' later
+				'--transition-duration': 'var(--transition-base)',
 			}}
 		/>
 	{/if}
@@ -111,7 +113,12 @@
 			[full-bleed-padding-end] var(--pad)
 			[full-bleed-end];
 
+		padding-bottom: 2rem;
 		transition: var(--transition-base);
+
+		@media (min-width: 549px) {
+			padding: 1rem 0 3rem;
+		}
 
 		> main {
 			grid-row: content;

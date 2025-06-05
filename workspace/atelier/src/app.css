@@ -7,20 +7,20 @@
 	--transition-fast: calc(var(--transition-base) / 2);
 	--transition-slow: calc(var(--transition-base) * 2);
 
-	--theme-primary: rgb(202, 1, 35);
-	--theme-secondary: rgb(220, 20, 60);
+	--color-base: oklch(0.1554 0.0042 286);
+	--color-surface: oklch(0.1978 0.0042 286);
+	--color-overlay: oklch(0.2402 0.0042 286);
+	--color-border: oklch(0.2826 0.0084 286);
+	--color-code-block: #1c1c21;
 
-	--bg-inverse: rgba(255, 255, 255, 0.8);
+	--color-text: oklch(0.7886 0.0055 298);
+	--color-text-muted: oklch(0.7089 0.0144 286);
 
-	/* --bg-cover: rgba(56, 59, 64, 1); */
-	--bg-cover: rgba(45, 47, 52, 1);
-	--bg-overlay: rgba(39, 41, 45, 1);
-	--bg-surface: rgba(31, 32, 35, 1);
-	--bg-base: rgba(14, 14, 14, 1);
-	--bg-overflow: rgba(1, 1, 1, 1);
-
-	--fg-overlay: rgba(255, 255, 255, 0.8);
-	--fg-surface: rgba(184, 184, 184, 1);
+	--color-accent-primary: #c49e45; /* forged-brass-gold */
+	--color-accent-secondary: #6b5ca5; /* arcane-violet */
+	--color-accent-tertiary: #ce5a57; /* red-rust */
+	--color-form-error: #b24d4d; /* red-oxide */
+	--color-form-highlight: #5fbceb;
 
 	--font-monospace: 'Fira Code Variable', monospace;
 }
@@ -33,13 +33,13 @@ body {
 
 	font-family: 'Karla Variable', sans-serif;
 	font-size: calc(1rem * var(--font-scale));
-	background: var(--bg-base);
-	color: var(--fg-surface);
+	background: var(--color-base);
+	color: var(--color-text);
 }
 
 a,
 .underlined {
-	color: rgba(242, 242, 242, 1);
+	color: oklch(0.9086 0.0055 298);
 	text-decoration-thickness: 2px;
 	text-decoration-line: underline;
 	text-decoration-color: rgba(128, 128, 128, 0.4);

@@ -106,7 +106,7 @@
 			display: grid;
 			grid-template-rows: auto 1fr;
 			border-radius: var(--rounding-box);
-			background: var(--bg-overlay);
+			background: var(--color-overlay);
 			transition: var(--transition-base);
 
 			&:hover {
@@ -124,7 +124,7 @@
 					overflow: hidden;
 					padding: 0.25rem 0.5rem;
 					border-radius: var(--rounding-base);
-					background: var(--bg-base);
+					background: var(--color-base);
 					white-space: nowrap;
 					text-overflow: ellipsis;
 				}
@@ -138,7 +138,7 @@
 					span {
 						padding: 0.25rem;
 						border-radius: var(--rounding-base);
-						background: var(--bg-base);
+						background: var(--color-base);
 						text-transform: capitalize;
 					}
 				}

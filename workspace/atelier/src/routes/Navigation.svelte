@@ -31,10 +31,8 @@
 	</label>
 
 	<menu>
-		{@render link('about', 'id-badge')}
-		{@render link('uses', 'bookmark')}
-		{@render link('rss.xml', 'rss')}
-		{@render link('help', 'lifebuoy')}
+		<li>{@render link('uses', 'bookmark')}</li>
+		<li>{@render link('rss.xml', 'rss')}</li>
 	</menu>
 </nav>
 
@@ -48,7 +46,6 @@
 <style>
 	nav {
 		--pad: 0.5rem;
-		--fg-surface: rgba(200, 200, 200, 1);
 
 		grid-column: full-bleed;
 		z-index: 3;
@@ -60,14 +57,13 @@
 		align-items: center;
 		padding: calc(var(--pad) * 2) calc(var(--pad) * 3);
 
-		background: var(--bg-base);
-		color: var(--fg-surface);
+		background: var(--color-base);
+		color: var(--color-text);
 
 		@media (min-width: 549px) {
 			position: relative;
 			grid-column: content;
 			padding: 0;
-			padding-top: 1rem;
 
 			input,
 			label[for='menu'] {
@@ -82,7 +78,7 @@
 			border-radius: var(--rounding-base);
 			outline: 2px solid transparent;
 			text-decoration: none;
-			color: var(--fg-surface);
+			color: var(--color-text);
 
 			&:hover,
 			&[aria-current] {
@@ -90,7 +86,7 @@
 			}
 
 			&:focus {
-				outline-color: var(--bg-cover);
+				outline-color: var(--color-border);
 			}
 
 			&.logo {
@@ -144,7 +140,7 @@
 		padding: calc(var(--pad) * 2) calc(var(--pad) * 3);
 		margin: 0;
 		margin-left: auto;
-		border-bottom: 1px solid var(--bg-cover);
+		border-bottom: 1px solid var(--color-border);
 		border-radius: var(--rounding-box);
 		border-top-left-radius: 0;
 		border-top-right-radius: 0;

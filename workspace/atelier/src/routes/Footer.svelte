@@ -23,8 +23,7 @@
 
 		position: relative;
 		display: grid;
-		gap: 0.5rem;
-		padding: 2rem 0;
+		gap: 1rem;
 		text-align: center;
 		line-height: 1.5;
 		font-family: var(--font-monospace);
@@ -51,7 +50,7 @@
 			display: inline-flex;
 			align-items: center;
 			justify-content: center;
-			color: var(--fg-surface);
+			color: var(--color-text);
 
 			> i {
 				transition-duration: var(--transition-base);
@@ -60,7 +59,7 @@
 
 			&:hover > i,
 			&:focus > i {
-				color: var(--theme-secondary);
+				color: var(--color-accent-primary);
 				transform: scale(1.5) translateY(-25%);
 			}
 		}
