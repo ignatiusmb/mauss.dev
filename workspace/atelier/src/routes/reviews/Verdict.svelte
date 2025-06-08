@@ -20,9 +20,9 @@
 		display: inline-flex;
 		justify-content: center;
 		padding: 0.2rem 0;
-		border-radius: inherit;
+		border-radius: var(--rounding-base);
 
-		background: var(--bg-base);
+		background: var(--color-base);
 		text-transform: capitalize;
 		font-size: 0.8rem;
 		color: #ffffff;

@@ -23,8 +23,7 @@
 
 		position: relative;
 		display: grid;
-		gap: 0.5rem;
-		padding: 2rem 0;
+		gap: 1rem;
 		text-align: center;
 		line-height: 1.5;
 		font-family: var(--font-monospace);
@@ -33,7 +32,6 @@
 	section {
 		width: 100%;
 		display: flex;
-		flex-wrap: wrap;
 		align-items: center;
 		justify-content: center;
 		margin: auto;
@@ -49,24 +47,19 @@
 
 		a {
 			flex: 0 1 4rem;
-			height: 4rem;
 			display: inline-flex;
 			align-items: center;
 			justify-content: center;
-			border-radius: 50%;
-			border-bottom: none;
-			outline: 2px solid transparent;
-			outline-offset: -0.625rem;
-			color: var(--fg-surface);
+			color: var(--color-text);
 
 			> i {
-				transition-duration: var(--t-duration);
+				transition-duration: var(--transition-base);
 				transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 			}
 
 			&:hover > i,
 			&:focus > i {
-				color: var(--theme-secondary);
+				color: var(--color-accent-primary);
 				transform: scale(1.5) translateY(-25%);
 			}
 		}

@@ -20,9 +20,8 @@
 <style>
 	/* add # to increase specificity */
 	details#index {
-		--radius: calc(var(--b-radius));
 		margin-bottom: 1rem;
-		border-radius: var(--radius);
+		border-radius: var(--rounding-box);
 		background: rgba(255, 255, 255, 0.1);
 
 		&[open] {
@@ -41,7 +40,7 @@
 			padding: 0.5rem 1rem;
 			margin: 0;
 			border: 1px solid rgba(124, 124, 124, 0.7);
-			border-radius: var(--radius);
+			border-radius: var(--rounding-box);
 
 			&::marker {
 				text-align: right;
@@ -62,8 +61,8 @@
 					background: rgba(255, 255, 255, 0.1);
 				}
 				&:last-child {
-					border-bottom-right-radius: var(--radius);
-					border-bottom-left-radius: var(--radius);
+					border-bottom-right-radius: var(--rounding-box);
+					border-bottom-left-radius: var(--rounding-box);
 				}
 			}
 		}

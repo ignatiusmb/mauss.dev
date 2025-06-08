@@ -83,7 +83,9 @@
 	{#if page.url.pathname !== '/' && !page.url.pathname.startsWith('/auth')}
 		<ScrollTop
 			styles={{
-				'--background': '#0e0e0e',
+				'--background': 'var(--color-base)',
+				'--color': 'var(--color-accent-primary)',
+				'--transition-duration': 'var(--transition-base)',
 			}}
 		/>
 	{/if}
@@ -112,7 +114,12 @@
 			[full-bleed-padding-end] var(--pad)
 			[full-bleed-end];
 
-		transition: var(--t-duration);
+		padding-bottom: 2rem;
+		transition: var(--transition-base);
+
+		@media (min-width: 549px) {
+			padding: 1rem 0 3rem;
+		}
 
 		> main {
 			grid-row: content;
@@ -127,7 +134,7 @@
 				max-width: 32rem;
 			}
 			:global(.syv-core-search-bar) {
-				border-radius: var(--b-radius);
+				border-radius: var(--rounding-box);
 			}
 		}
 

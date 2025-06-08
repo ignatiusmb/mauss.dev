@@ -44,19 +44,19 @@
 		form {
 			justify-self: center;
 			border-radius: var(--rounding-box);
-			color: var(--fg-surface);
+			color: var(--color-text);
 
 			button {
 				display: flex;
 				align-items: center;
 				justify-content: center;
 				padding: 0.625rem 2.5rem;
-				color: var(--fg-surface);
+				color: var(--color-text);
 				border-radius: inherit;
-				background: var(--bg-surface);
+				background: var(--color-surface);
 
 				&:hover {
-					background: var(--bg-cover);
+					background: var(--color-overlay);
 				}
 			}
 		}
