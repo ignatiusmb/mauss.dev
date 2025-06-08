@@ -4,7 +4,6 @@
 	import '@ignatiusmb/styles/core.css';
 	import 'aubade/styles/code.css';
 	import '../app.css';
-	import '$lib/styles/blog.css';
 
 	import MetaHead from 'syv/core/MetaHead.svelte';
 	import ScrollTop from 'syv/core/ScrollTop.svelte';
@@ -12,7 +11,7 @@
 	import Navigation from './Navigation.svelte';
 
 	import { dev } from '$app/environment';
-	import { beforeNavigate } from '$app/navigation';
+	import { afterNavigate, beforeNavigate } from '$app/navigation';
 	import { page, updated } from '$app/state';
 	import { onMount } from 'svelte';
 
@@ -23,6 +22,10 @@
 		if (updated.current && !willUnload && to?.url) {
 			location.href = to.url.href;
 		}
+	});
+	afterNavigate(() => {
+		// @ts-expect-error - update vercel insights more accurately
+		window.va?.('pageview', { route: page.route.id, url: page.url.pathname });
 	});
 </script>
 
@@ -59,7 +62,7 @@
 		},
 	]}
 	scripts={{
-		'/_vercel/insights/script.js': !dev && { 'data-route': page.route.id },
+		'/_vercel/insights/script.js': !dev && { 'data-disable-auto-track': '1' },
 		'/_vercel/speed-insights/script.js': !dev && { 'data-route': page.route.id },
 		'https://static.cloudflareinsights.com/beacon.min.js': !dev && {
 			'data-cf-beacon': '{"token": "402cd91137d14890a1117569bda0ee41"}',
@@ -83,6 +86,7 @@
 	{#if page.url.pathname !== '/' && !page.url.pathname.startsWith('/auth')}
 		<ScrollTop
 			styles={{
+				'--size': '2rem',
 				'--background': 'var(--color-base)',
 				'--color': 'var(--color-accent-primary)',
 				'--transition-duration': 'var(--transition-base)',

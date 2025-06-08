@@ -44,7 +44,7 @@
 			position: absolute;
 			top: 0;
 			border-radius: inherit;
-			background: rgba(0, 0, 0, 0.8);
+			background: oklch(0 0 0 / 80%);
 		}
 
 		img {
@@ -64,7 +64,7 @@
 		position: absolute;
 		padding: 0.25rem 0.5rem 0.25rem 0.25rem;
 		border-radius: var(--rounding-base);
-		background: rgba(0, 0, 0, 0.8);
+		background: oklch(0 0 0 / 80%);
 	}
 	/* .composed {
 		z-index: 1;
@@ -73,7 +73,7 @@
 		position: absolute;
 		padding: 0.25rem;
 		border-radius: var(--rounding-base);
-		background: rgba(0, 0, 0, 0.8);
+		background: oklch(0 0 0 / 80%);
 		transition-duration: var(--transition-base);
 	} */
 </style>

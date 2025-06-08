@@ -201,7 +201,7 @@
 		display: flex;
 		align-items: center;
 		font-size: clamp(1.5rem, 4vw, 2rem);
-		color: rgba(255, 255, 255, 0.9);
+		color: oklch(1 0 0 / 90%);
 	}
 
 	/* add specificity */

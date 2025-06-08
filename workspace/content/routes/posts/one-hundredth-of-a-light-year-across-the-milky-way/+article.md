@@ -7,8 +7,8 @@ tags: [life]
 
 It's sad to know that after all these years, I've only traveled a little more than one-hundredth of a light-year across the Milky Way, what a minuscule amount it is. Even after over 20 revolutions around the sun, seeing how small that number is, it just shows how tiny we are in the galaxy, just a speck of dust in the vast space of the universe.
 
-<section class="info-box note">
-You can probably skip to Conclusion if you know me IRL
+<section data-info="note">
+  <p>You can probably skip to Conclusion if you know me IRL</p>
 </section>
 
 Time is something relative made by humans to grasp our existence in this modern world. Being older doesn't always mean knowing more, you could definitely be younger but understand certain things about life better than someone who just happens to be born a couple years earlier. I could say this because I've experienced it firsthand, hence I always try to keep an open mind and disregard any gossip when I'm about to meet someone or an acquaintance.

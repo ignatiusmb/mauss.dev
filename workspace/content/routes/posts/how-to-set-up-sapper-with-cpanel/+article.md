@@ -10,8 +10,8 @@ I don't think I've seen a single post on how to properly set up a Node.js applic
 
 It's today I'm finally successful on setting up my Sapper application in my hosting provider. It took me around 5 days and it was such a weird bug to begin with. Anyways, this shouldn't be bound to a Sapper app and should work with any Node application that is acting as a server.
 
-<section class="info-box note">
-    <p>This tutorial assumes you already have a working application to begin with. If you don't, you can just use the template provided by Sapper at their website -> sapper.svelte.dev</p>
+<section data-info="note">
+  <p>This tutorial assumes you already have a working application to begin with. If you don't, you can just use the template provided by Sapper at their website -> sapper.svelte.dev</p>
 </section>
 
 ## Getting started with cPanel

@@ -78,7 +78,7 @@
 		padding: 0.5rem 1rem;
 		border-radius: var(--rounding-base);
 
-		color: var(--color-text, rgba(255, 255, 255, 0.65));
+		color: var(--color-text);
 		background-color: var(--color-base);
 
 		transition: all var(--transition-base) ease-in-out;
@@ -91,6 +91,6 @@
 	}
 
 	.danger {
-		color: #f06464;
+		color: oklch(0.6793 0.1734 23);
 	}
 </style>

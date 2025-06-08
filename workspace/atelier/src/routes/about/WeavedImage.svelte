@@ -83,7 +83,7 @@
 			mix-blend-mode: multiply;
 		}
 		&.empty {
-			background-color: #ffffff;
+			background-color: oklch(1 0 0);
 		}
 	}
 </style>

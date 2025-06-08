@@ -25,19 +25,19 @@
 		background: var(--color-base);
 		text-transform: capitalize;
 		font-size: 0.8rem;
-		color: #ffffff;
+		color: oklch(1 0 0);
 	}
 	.not-recommended {
 		/* burgundy */
-		background: #800020;
+		background: oklch(0.38 0.1523 18.62);
 	}
 	.contextual {
 		/* ochre */
-		background: #cc7722;
+		background: oklch(0.6496 0.1404 59.61);
 	}
 	.recommended,
 	.must-watch {
 		/* cadmium green */
-		background: #006b3c;
+		background: oklch(0.4638 0.1137 155.41);
 	}
 </style>

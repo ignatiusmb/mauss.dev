@@ -15,9 +15,9 @@
 	<!-- prettier-ignore -->
 	<p><a href="/about#expertise">Independent software engineer</a> based in Southeast Asia (GMT+7&ndash;8). I build in public — mostly open source, all on <a href="https://github.com/ignatiusmb" target="_blank">GitHub</a>. Some private work is there too, mostly under the radar.</p>
 	<!-- prettier-ignore -->
-	<p>I also take on consulting and freelance projects — tailored for those seeking customized and private work. If that sounds like you, feel free to reach out through one of <a href="/about#elsewhere">my socials</a>.</p>
+	<p>I also take on consulting and freelance projects — tailored for you if you're looking for something custom, focused, and private. If that resonates, feel free to reach out through one of <a href="/about#elsewhere">my socials</a>.</p>
 	<!-- prettier-ignore -->
-	<p>I tend to build quietly and write to make sense of it all. It's a way for me to process lessons, share discoveries, and explore new ideas. If you're curious, the <a href="/help">help page</a> is a good place to start — or jump straight to any of the links below.</p>
+	<p>I tend to build quietly and write to make sense of it all. It's a way for me to process lessons, share discoveries, and explore new ideas. If you're curious, the <a href="/help">help page</a> is the dedicated page to get you started — or jump straight to any of the links below.</p>
 
 	<section>
 		<h2>
@@ -81,7 +81,7 @@
 
 		h1 {
 			grid-template-columns: auto 1fr;
-			color: rgba(255, 255, 255, 1);
+			color: oklch(1 0 0);
 			font-size: 1.875rem;
 			font-weight: 600;
 		}

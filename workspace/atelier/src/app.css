@@ -42,9 +42,9 @@ a,
 	color: oklch(0.9086 0.0055 298);
 	text-decoration-thickness: 2px;
 	text-decoration-line: underline;
-	text-decoration-color: rgba(128, 128, 128, 0.4);
+	text-decoration-color: oklch(0.5999 0 0 / 40%);
 }
 a:hover,
 .underlined:hover {
-	text-decoration-color: rgba(128, 128, 128, 0.8);
+	text-decoration-color: oklch(0.5999 0 0 / 80%);
 }

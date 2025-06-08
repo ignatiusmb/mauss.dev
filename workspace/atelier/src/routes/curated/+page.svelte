@@ -63,9 +63,9 @@
 			padding: 0.5rem;
 			border-radius: var(--rounding-box);
 			box-shadow:
-				0 2px 1px -1px rgba(0, 0, 0, 0.2),
-				0 1px 1px 0 rgba(0, 0, 0, 0.14),
-				0 1px 3px 0 rgba(0, 0, 0, 0.12);
+				0 2px 1px -1px oklch(0 0 0 / 20%),
+				0 1px 1px 0 oklch(0 0 0 / 14%),
+				0 1px 3px 0 oklch(0 0 0 / 12%);
 			background-color: var(--color-overlay);
 			transition: var(--transition-base);
 

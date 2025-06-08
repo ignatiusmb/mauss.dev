@@ -1,17 +1,18 @@
 <script lang="ts">
 	interface Props {
 		items: Array<{ id: string; title: string; level?: number }>;
+		summary?: string;
 	}
-	const { items }: Props = $props();
+	const { summary = 'Article Index', items }: Props = $props();
 
-	const balancer = $derived(items.reduce((c, i) => Math.min(c, i.level || 4), 4) - 2);
+	const balancer = $derived(items.reduce((c, i) => Math.min(c, i.level || 2), 4));
 </script>
 
 <details id="index">
-	<summary>Article Index</summary>
+	<summary>{summary}</summary>
 	<div>
 		{#each items as { id, title, level = 2 }}
-			{@const pad = `${(level - balancer) * 0.5}rem`}
+			{@const pad = `${1 + (level - balancer) * 0.75}rem`}
 			<a href="#{id}" style:padding-left={pad}>{title}</a>
 		{/each}
 	</div>
@@ -22,10 +23,10 @@
 	details#index {
 		margin-bottom: 1rem;
 		border-radius: var(--rounding-box);
-		background: rgba(255, 255, 255, 0.1);
+		background: oklch(1 0 0 / 0.1);
 
 		&[open] {
-			border: 1px solid rgba(124, 124, 124, 0.7);
+			border: 1px solid oklch(0.5863 0 0 / 70%);
 
 			summary {
 				margin-bottom: 0;
@@ -39,7 +40,7 @@
 		summary {
 			padding: 0.5rem 1rem;
 			margin: 0;
-			border: 1px solid rgba(124, 124, 124, 0.7);
+			border: 1px solid oklch(0.5863 0 0 / 70%);
 			border-radius: var(--rounding-box);
 
 			&::marker {
@@ -58,7 +59,7 @@
 				text-decoration: none;
 
 				&:hover {
-					background: rgba(255, 255, 255, 0.1);
+					background: oklch(1 0 0 / 10%);
 				}
 				&:last-child {
 					border-bottom-right-radius: var(--rounding-box);
