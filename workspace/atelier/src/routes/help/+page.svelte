@@ -21,7 +21,7 @@
 	<!-- prettier-ignore -->
 	<p>that said, some sections — like the landing page or anything meant to introduce myself professionally — still follow proper casing. these are for clarity and to meet expectations when communicating with potential collaborators. the rest, though, is written as freely and naturally as i think it. no filters, no polish — just me, trying to make sense of things in words.</p>
 
-	<section class="info-box warning" style:margin="2rem 0">
+	<section data-info="warning" style:margin="2rem 0">
 		<!-- prettier-ignore -->
 		<em>policies, stances, and small-but-important stuff — it's all in the <a href="/fine-print">fine print</a>.</em>
 	</section>

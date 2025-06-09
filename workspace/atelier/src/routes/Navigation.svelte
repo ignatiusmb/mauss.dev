@@ -82,7 +82,7 @@
 
 			&:hover,
 			&[aria-current] {
-				background: rgba(255, 255, 255, 0.1);
+				background: oklch(1 0 0 / 10%);
 			}
 
 			&:focus {
@@ -119,7 +119,7 @@
 		border-radius: var(--rounding-base);
 
 		&:active {
-			background: rgba(255, 255, 255, 0.1);
+			background: oklch(1 0 0 / 10%);
 		}
 	}
 
@@ -144,7 +144,7 @@
 		border-radius: var(--rounding-box);
 		border-top-left-radius: 0;
 		border-top-right-radius: 0;
-		box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.188);
+		box-shadow: 0.25rem 0.25rem 0.25rem oklch(0 0 0 / 18.8%);
 		background-color: inherit;
 		transform: translateY(-100%);
 		transition: var(--transition-base) ease;

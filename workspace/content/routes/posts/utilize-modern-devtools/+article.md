@@ -5,8 +5,8 @@ description: Utilize modern developer tools like formatter and linters to make y
 tags: [coding, formatter, linter, devtools]
 ---
 
-<section class="info-box note">
-This is just a short post for those who haven't heard of formatter, linter, or other developer tools. For those who have heard and chose not to use one, feel free to continue and do what you want.
+<section data-info="note">
+  <p>This is just a short post for those who haven't heard of formatter, linter, or other developer tools. For those who have heard and chose not to use one, feel free to continue and do what you want.</p>
 </section>
 
 So, today I just found out that some of my friends have been working with JS without [Prettier](https://prettier.io/), or any other preferred formatter you'd like. If you're one of those developers, please take a look and try to utilize this, I highly recommend you to do so.
