@@ -1,10 +1,9 @@
-import type { Schema } from '$content/reviews.json/+server.js';
 import type { by } from './search.svelte.js';
 import { building } from '$app/environment';
 import { scope } from 'mauss';
 
-export async function load({ fetch, url }) {
-	const { items, metadata }: Schema = await fetch('/content/reviews.json').then((r) => r.json());
+export async function load({ parent, url }) {
+	const { items, metadata } = await parent();
 
 	return {
 		list: items,

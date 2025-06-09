@@ -1,12 +1,13 @@
-import type { Schema } from '$content/reviews.json/+server.js';
-import { redirect } from '@sveltejs/kit';
+import { error, redirect } from '@sveltejs/kit';
 
-export async function load({ fetch, params }) {
-	const { items }: Schema = await fetch('/content/reviews.json').then((r) => r.json());
+export async function load({ parent, params }) {
+	const { items } = await parent();
 	const slug = `${params.category}/${params.slug}`;
 	const article = items.find((i) => i.slug === slug);
-	if (!article) redirect(307, '/reviews');
-
+	if (!article) error(404, 'Review not found');
+	if (!article.rating || article.verdict === 'pending') {
+		error(404, 'Not yet reviewed');
+	}
 	const branch = article.branches.find((i) => i.branch === params.branch);
 	if (!branch) redirect(307, `/reviews/${slug}`);
 
