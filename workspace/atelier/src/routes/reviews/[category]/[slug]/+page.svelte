@@ -27,10 +27,9 @@
 		{/if}
 	{/snippet}
 
-	<section class="info-box warning" style:margin="1rem 0">
-		<em>
-			this review reflects my personal opinions. see the <a href="/fine-print">fine print</a> for more.
-		</em>
+	<section data-info="warning" style:margin="1rem 0">
+		<!-- prettier-ignore -->
+		<em>no summaries, no key details — by design. see <a href="/help#reviews-how-i-review">how i review</a>. and yes, these are just my thoughts — read the <a href="/fine-print">fine print</a> for more.</em>
 	</section>
 
 	{@html data.article.content}

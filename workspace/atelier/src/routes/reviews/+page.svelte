@@ -19,7 +19,8 @@
 
 <header>
 	<h1>the world through kaleidoscope</h1>
-	<small>reflections and critiques of the things i've spent time with</small>
+	<!-- prettier-ignore -->
+	<small>reflections and critiques of the things i've spent time with. learn more about <a href="/help#reviews-how-i-review">my review style</a></small>
 </header>
 
 <SearchBar
