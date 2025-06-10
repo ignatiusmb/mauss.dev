@@ -1,7 +1,5 @@
-import type { Schema } from '$content/curated.json/+server.js';
-
-export async function load({ fetch }) {
-	const { items }: Schema = await fetch('/content/curated.json').then((r) => r.json());
+export async function load({ parent }) {
+	const { items } = await parent();
 
 	return {
 		list: items,
