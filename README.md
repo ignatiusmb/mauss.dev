@@ -1,8 +1,8 @@
 # Alkamauss Garden
 
-a monorepo for the digital garden of [Alkamauss](https://mauss.dev)
+a monorepo for the digital garden of [Alkamauss](https://mauss.dev/atelier)
 
-## Structure
+## Workspaces
 
-- [`workspace/atelier`](./workspace/atelier) — the digital atelier, main site
-- [`workspace/content`](./workspace/content) — the atelier's content repository
+- [`workspace/apex`](./workspace/apex) — the digital atelier, at <https://mauss.dev>
+- [`workspace/content`](./workspace/content) — the atelier's articles and content

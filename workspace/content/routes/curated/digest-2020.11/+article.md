@@ -11,7 +11,7 @@ Hey folks, welcome back to our monthly digest! As always, feel free to skip ahea
 
 I really couldn't have said it better. This isn't exclusive to new developers, but really anyone working with a team or encountering any codebase.
 
-> Code isn’t everything, but it is an important work output. Whenever you touch it, you should strive to leave it in a better place that it was before you did so.
+> Code isn't everything, but it is an important work output. Whenever you touch it, you should strive to leave it in a better place that it was before you did so.
 
 Of course, whenever I encounter anything related to programming like this, I always feel like this isn't exclusive to software engineers as well, but when we really get the idea behind it, we could virtually apply it to anything in our life and improve ourselves. This is also one of it.
 
@@ -21,7 +21,7 @@ Of course, whenever I encounter anything related to programming like this, I alw
 
 An amazing and well-written article showcasing the different uses from a simple `Math.random()` API. From animations to computer-generated music, and even generative art. Go check it out!
 
-- [[HFET](https://hfet.org/google-recaptcha-privacy-nightmare/)] Google’s ReCAPTCHA Privacy Nightmare
+- [[HFET](https://hfet.org/google-recaptcha-privacy-nightmare/)] Google's ReCAPTCHA Privacy Nightmare
 
 You're forced to agree to Google's Privacy Policy on sites that uses ReCAPTCHA. Yes, by clicking on those "I'm not a robot" checkboxes, it also means you agree to their terms. Read more on the article for a thorough explanation and alternatives.
 

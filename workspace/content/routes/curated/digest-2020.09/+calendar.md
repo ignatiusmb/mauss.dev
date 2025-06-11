@@ -32,7 +32,7 @@ title: Calendar
 
 [[libtorrent](https://blog.libtorrent.org/2020/09/bittorrent-v2/) | [Reddit](https://www.reddit.com/r/trackers/comments/ioqif2/bittorrent_v2_now_supported_by_libtorrent20/)] libtorrent-2.0 released
 
-[[Reddit](https://www.reddit.com/r/LifeProTips/comments/inrjkc/lpt_when_you_compare_yourself_to_others_youre/)] When you compare yourself to others, you’re almost always comparing one of your weaknesses against a strength of theirs. Don’t do that to yourself. We’re all superior at something. Capitalize on that.
+[[Reddit](https://www.reddit.com/r/LifeProTips/comments/inrjkc/lpt_when_you_compare_yourself_to_others_youre/)] When you compare yourself to others, you're almost always comparing one of your weaknesses against a strength of theirs. Don't do that to yourself. We're all superior at something. Capitalize on that.
 Social
 
 ## 08

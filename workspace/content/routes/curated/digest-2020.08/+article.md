@@ -91,7 +91,7 @@ I've been listening to a lot of J-Pop lately and almost forgot why I used to lov
 
 Have you ever wondered where that random ringing sound comes from? Did you sometimes freak out when it isn't going away, thinking you might go deaf from it? Well, don't worry. Turns out, it occurs to practically everyone in the world and it's not harmful or anything. August's digest got you covered with an informative video from TED-Ed explaining this phenomenon.
 
-![!YouTube#hb](TnsCsR2wDdk "[What’s that ringing in your ears? - Marc Fagelson](https://youtu.be/TnsCsR2wDdk)")
+![!YouTube#hb](TnsCsR2wDdk "[What's that ringing in your ears? - Marc Fagelson](https://youtu.be/TnsCsR2wDdk)")
 
 ### Honorable video mentions
 

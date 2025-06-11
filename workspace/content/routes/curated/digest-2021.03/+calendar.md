@@ -40,9 +40,9 @@ title: Calendar
 
 ## 14
 
-[[Reddit](https://www.reddit.com/r/getdisciplined/comments/m4uupb/advice_dont_wait_for_the_beginning_of_the_next/)] Don’t wait for the beginning of the next month to get disciplined
+[[Reddit](https://www.reddit.com/r/getdisciplined/comments/m4uupb/advice_dont_wait_for_the_beginning_of_the_next/)] Don't wait for the beginning of the next month to get disciplined
 
-[[Reddit](https://www.reddit.com/r/privacy/comments/m4al5g/the_hitchhikers_guide_to_online_anonymity_new/)] The Hitchhiker’s Guide to Online Anonymity
+[[Reddit](https://www.reddit.com/r/privacy/comments/m4al5g/the_hitchhikers_guide_to_online_anonymity_new/)] The Hitchhiker's Guide to Online Anonymity
 
 ## 16
 
@@ -58,7 +58,7 @@ title: Calendar
 
 ## 22
 
-[[Reddit](https://www.reddit.com/r/technology/comments/mamdvd/instagram_is_most_invasive_app_new_study_shows/)] Congratulations (?) Instagram, for being the ‘most invasive app’, new study shows
+[[Reddit](https://www.reddit.com/r/technology/comments/mamdvd/instagram_is_most_invasive_app_new_study_shows/)] Congratulations (?) Instagram, for being the 'most invasive app', new study shows
 
 ![hiring process#d#f](https://preview.redd.it/f8nnhrhaoko61.jpg?width=960&crop=smart&auto=webp&s=13bd528be24d5762d7f4bf02870fc41698756181 "[[Reddit](https://www.reddit.com/r/wholesomememes/comments/mam8us/i_hope_this_happens_to_you_all_the_best/)] Huge props to companies that do this")
 

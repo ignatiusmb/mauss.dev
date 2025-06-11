@@ -19,7 +19,7 @@ These words are frequently used interchangeably, but what's their difference? Th
 
 ### Honorable article mentions
 
-- [[VICE](https://www.vice.com/en/article/n7v5y7/browser-favicons-can-be-used-as-undeletable-supercookies-to-track-you-online)] Browser ‘Favicons’ Can Be Used as Undeletable ‘Supercookies’ to Track You Online
+- [[VICE](https://www.vice.com/en/article/n7v5y7/browser-favicons-can-be-used-as-undeletable-supercookies-to-track-you-online)] Browser 'Favicons' Can Be Used as Undeletable 'Supercookies' to Track You Online
 
 It's both fascinating and scary at the same time, how do you even think about this. Even then, [Firefox 85 already does something about this](https://blog.mozilla.org/security/2021/01/26/supercookie-protections/). It's quite amazing from them, I highly recommend reading their blog post on cracking down supercookies, along with their [Firefox 86 blog post](https://blog.mozilla.org/security/2021/02/23/total-cookie-protection/) which introduces Total Cookie Protection.
 

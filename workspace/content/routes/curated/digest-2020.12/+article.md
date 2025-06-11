@@ -131,7 +131,7 @@ I don't think I can explain it better than the quote I'm about to show you (see 
 
 > Instagram updated their terms and conditions with new clauses which pretty much allow them to do whatever the fuck they want. They can check your call logs, your SMS history, they can do live analysis on your camera, they can copy your address book and much more since the terms are pretty loosely defined.
 
-In addition to those changes, Facebook ‘secretly’ tracks your iPhone location just by having it installed on your phone. I'm quite certain this also applies to Android users, but we're pretty secured since newer phones will sometimes only allow services usage ONLY WHILE opening the app.
+In addition to those changes, Facebook 'secretly' tracks your iPhone location just by having it installed on your phone. I'm quite certain this also applies to Android users, but we're pretty secured since newer phones will sometimes only allow services usage ONLY WHILE opening the app.
 
 Also! another one that involves both Facebook and Instagram is a bug that exposes users' personal email addresses and birthdays. To quote from a comment made by a redditor
 

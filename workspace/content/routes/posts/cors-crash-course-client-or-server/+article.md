@@ -9,10 +9,10 @@ thumbnail: https://media.prod.mdn.mozit.cloud/attachments/2020/05/29/17268/e968e
 > Answer is **Server**. Read the rest for the explanation.
 
 ```
-Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://yourapidomain. (Reason: CORS header ‘Access-Control-Allow-Origin’ missing).
+Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://yourapidomain. (Reason: CORS header 'Access-Control-Allow-Origin' missing).
 ```
 
-If you're stumbling to this post, chances are you've encountered the notorious `CORS header ‘Access-Control-Allow-Origin’ missing` when fetching resources across the network.
+If you're stumbling to this post, chances are you've encountered the notorious `CORS header 'Access-Control-Allow-Origin' missing` when fetching resources across the network.
 
 ## What is CORS
 

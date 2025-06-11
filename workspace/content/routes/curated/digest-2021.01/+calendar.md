@@ -8,7 +8,7 @@ title: Calendar
 
 ## 10
 
-[[Reddit](https://www.reddit.com/r/getdisciplined/comments/ku0nlf/advice_a_look_at_japanese_author_haruki_murakamis/)] A look at Japanese author Haruki Murakami's daily writing routine: "The repetition itself becomes the important thing; it’s a form of mesmerism. I mesmerize myself to reach a deeper state of mind."
+[[Reddit](https://www.reddit.com/r/getdisciplined/comments/ku0nlf/advice_a_look_at_japanese_author_haruki_murakamis/)] A look at Japanese author Haruki Murakami's daily writing routine: "The repetition itself becomes the important thing; it's a form of mesmerism. I mesmerize myself to reach a deeper state of mind."
 
 [[Reddit](https://www.reddit.com/r/ThatsInsane/comments/ktvlxh/the_li900_silica_tiles_used_on_the_space_shuttle/)] The LI-900 silica tiles used on the Space Shuttle were such poor heat conductors you could grab them with bare hands seconds after pulling them from a 2200 degree oven
 

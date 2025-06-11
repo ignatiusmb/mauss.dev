@@ -9,7 +9,7 @@ As always, feel free to skip ahead to your preferred content by using the quick 
 
 ## Article of the month
 
-![WhatsApp#f#fb](https://pocketnow.com/files/2020/04/whatsapp-800x468.jpg "[[Reddit](https://www.reddit.com/r/Android/comments/kwnuh9/whatsapp_says_it_cant_see_your_shared_location/)] [WhatsApp says it can’t see your shared location; its privacy policy says otherwise](https://pocketnow.com/whatsapp-says-it-cant-see-your-shared-location-its-privacy-policy-says-otherwise) from Pocketnow")
+![WhatsApp#f#fb](https://pocketnow.com/files/2020/04/whatsapp-800x468.jpg "[[Reddit](https://www.reddit.com/r/Android/comments/kwnuh9/whatsapp_says_it_cant_see_your_shared_location/)] [WhatsApp says it can't see your shared location; its privacy policy says otherwise](https://pocketnow.com/whatsapp-says-it-cant-see-your-shared-location-its-privacy-policy-says-otherwise) from Pocketnow")
 
 They've created an infographic saying they can't see shared location and other stuff that its privacy policy says otherwise, it feels so disingenuous and seems like they're deliberately trying to confuse us as much as possible. If they keep going on like this, people will eventually notice and avoid them like a plague.
 
@@ -32,7 +32,7 @@ For th... no, everyone should read this. Read the post and its comments, reflect
 - [[xdavidhu.me](https://bugs.xdavidhu.me/google/2021/01/11/stealing-your-private-videos-one-frame-at-a-time/)] Stealing Your Private YouTube Videos, One Frame at a Time
 - [[xdavidhu.me](https://bugs.xdavidhu.me/google/2021/01/18/the-embedded-youtube-player-told-me-what-you-were-watching-and-more/)] The Embedded YouTube Player Told Me What You Were Watching
 (and more)
-- [[Medium](https://blog.usejournal.com/how-i-stole-the-data-in-millions-of-peoples-google-accounts-aa1b72dcc075)] How I stole the data in millions of people’s Google accounts
+- [[Medium](https://blog.usejournal.com/how-i-stole-the-data-in-millions-of-peoples-google-accounts-aa1b72dcc075)] How I stole the data in millions of people's Google accounts
 
 A Google product related articles. Worth the read for those learning Computer Science or any developers out there. It's quite technical, but worth it once you get the idea behind it. The first 2 articles are bug hunting reports related to YouTube made by the same person, a fun read on behind the scenes when "attacking" these things.
 
