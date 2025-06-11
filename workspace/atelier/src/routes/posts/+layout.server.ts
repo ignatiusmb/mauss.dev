@@ -1,8 +1,8 @@
-import type { Schema } from '$content/reviews.json/+server.js';
+import type { Schema } from '$content/posts.json/+server.js';
 import type { Config } from '@sveltejs/adapter-vercel';
 
 export async function load({ fetch }) {
-	const data: Schema = await fetch('/content/reviews.json').then((r) => r.json());
+	const data: Schema = await fetch('/content/posts.json').then((r) => r.json());
 
 	return data;
 }
@@ -10,7 +10,6 @@ export async function load({ fetch }) {
 export const prerender = false;
 export const config: Config = {
 	isr: {
-		expiration: 60 * 60,
-		allowQuery: ['q'],
+		expiration: 60 * 15,
 	},
 };

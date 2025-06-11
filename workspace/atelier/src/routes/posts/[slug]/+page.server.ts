@@ -1,8 +1,9 @@
-import type { Schema } from '$content/posts.json/+server.js';
 import { redirect } from '@sveltejs/kit';
 
-export async function load({ fetch, params }) {
-	const { items }: Schema = await fetch('/content/posts.json').then((r) => r.json());
+export const prerender = true;
+
+export async function load({ parent, params }) {
+	const { items } = await parent();
 	const content = items.find(({ slug }) => slug === params.slug);
 	if (!content) redirect(307, '/posts');
 
