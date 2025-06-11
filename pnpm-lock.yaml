@@ -27,7 +27,7 @@ importers:
         specifier: ^5.8.3
         version: 5.8.3
 
-  workspace/atelier:
+  workspace/apex:
     dependencies:
       mauss:
         specifier: ^0.9.1
