@@ -1,11 +1,11 @@
 ---
 title: not meant for this world
 footnotes:
-  1: <http://bridgebunnies.com/?p=2271>
-  2: <https://www.imdb.com/title/tt1743681/reviews>
-  3: <https://www.anime-planet.com/users/Illusion123chan/reviews/34630>
-  4: <https://lostinanime.com/2010/12/yosuga-no-sora-12-end-and-series-review/>
-  5: <https://animatedandy.com/2019/05/01/yosuga-no-sora-in-solitude-where-we-are-least-alone-review-put-your-sister-to-the-test/>
+  1: http://bridgebunnies.com/?p=2271
+  2: https://www.imdb.com/title/tt1743681/reviews
+  3: https://www.anime-planet.com/users/Illusion123chan/reviews/34630
+  4: https://lostinanime.com/2010/12/yosuga-no-sora-12-end-and-series-review/
+  5: https://animatedandy.com/2019/05/01/yosuga-no-sora-in-solitude-where-we-are-least-alone-review-put-your-sister-to-the-test/
 ---
 
 well, hello there. i assume you've seen all 12 episodes and you know what's coming.
