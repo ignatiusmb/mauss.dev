@@ -1,5 +1,6 @@
 import { traverse } from 'aubade/compass';
 import { chain } from 'aubade/transform';
+// import { execSync } from 'child_process';
 import * as compare from 'mauss/compare';
 import { exists } from 'mauss/guards';
 import { scope } from 'mauss';
@@ -58,6 +59,7 @@ export const DATA = {
 		interface FrontMatter {
 			slug: string;
 			date: string;
+			// updated: string;
 			title: string;
 			description?: string;
 			category: string;
@@ -68,13 +70,15 @@ export const DATA = {
 			};
 		}
 
-		const items = traverse('../content/routes/posts', { depth: 1 }).hydrate(
+		const root = '../content/routes/posts';
+		const items = traverse(root, { depth: 1 }).hydrate(
 			({ breadcrumb: [, slug], buffer, parse, marker, siblings }) => {
 				const { body, metadata } = parse(buffer.toString('utf-8'));
 
 				const specified: FrontMatter = {
 					slug,
 					date: metadata.date,
+					// updated: git.lastModified(`${root}/${slug}/+article.md`),
 					title: metadata.title,
 					category: metadata.tags[0],
 					tags: metadata.tags,
@@ -206,7 +210,7 @@ export const DATA = {
 							...specified,
 							...extras,
 							branch: name.slice(1, -3),
-							title: `${extras.title} of ${specified.title.en}`,
+							title: extras.title,
 							content: marker.render(body),
 						};
 					}),
@@ -222,3 +226,10 @@ export const DATA = {
 		});
 	},
 } as const;
+
+// const git = {
+// 	lastModified(path: string) {
+// 		const output = execSync(`git log -1 --format=%ad --date=iso-strict "${path}"`);
+// 		return output.toString().trim();
+// 	},
+// };

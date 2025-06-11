@@ -53,21 +53,6 @@
 				{post.author?.name || 'Ignatius Bagus.'}
 			</a>
 
-			{#if page.params.branch || post.branches?.length}
-				<div style:display="flex" style:gap="0.25rem" style:text-transform="capitalize">
-					<span>[</span>
-					{#each post.branches || [] as { branch }, idx}
-						{@const root = page.url.pathname.split('/')[1]}
-						{#if idx !== 0}<span class="dash">&mdash;</span>{/if}
-						<a href="/{root}/{post.slug}/{branch}">{branch}</a>
-					{:else}
-						{@const idx = page.url.pathname.lastIndexOf('/')}
-						<a href={page.url.pathname.slice(0, idx)}>Back to Article</a>
-					{/each}
-					<span>]</span>
-				</div>
-			{/if}
-
 			{@render header()}
 
 			{#if post.description}
@@ -82,34 +67,64 @@
 
 	{@render children()}
 
+	{#if flank || post}
+		<footer>
+			{#if post && (page.params.branch || post.branches?.length)}
+				{#each post.branches || [] as { branch }}
+					{@const root = page.url.pathname.split('/')[1]}
+					<a href="/{root}/{post.slug}/{branch}" data-branch={branch}>
+						<strong style:grid-template-columns="1fr auto">
+							<span style:text-align="right">{branch.replace(/-/g, ' ')}</span>
+							{#if root === 'reviews' && branch === 'deep-dive'}
+								<i data-icon="plugs-connected"></i>
+							{:else}
+								<i data-icon="binoculars"></i>
+							{/if}
+						</strong>
+					</a>
+				{:else}
+					{@const idx = page.url.pathname.lastIndexOf('/')}
+					<a href={page.url.pathname.slice(0, idx)} data-branch="index">
+						<strong style:grid-template-columns="auto 1fr">
+							<i data-icon="arrow-circle-left"></i>
+							<span>back to index</span>
+						</strong>
+					</a>
+				{/each}
+			{/if}
+
+			{#if flank}
+				{@const end = (flank.next && !flank.back) || (!flank.next && flank.back)}
+				{@const wide = end ? '1 / -1' : ''}
+
+				{#if flank.back}{@render sibling('back', flank.back)}{/if}
+				{#if flank.next}{@render sibling('next', flank.next)}{/if}
+
+				{#snippet sibling(type: 'back' | 'next', { slug, title }: NonNullable<Flank>)}
+					{@const text = typeof title === 'string' ? title : title.jp || title.en}
+
+					<a href="/{slug}/" data-flank={type} style:grid-column={wide}>
+						<strong>
+							{#if type === 'back'}
+								<i data-icon="arrow-circle-left"></i>
+								<span>newer</span>
+							{:else}
+								<span>older</span>
+								<i data-icon="arrow-circle-right"></i>
+							{/if}
+						</strong>
+						<span class="underlined">{text}</span>
+					</a>
+				{/snippet}
+			{/if}
+		</footer>
+	{/if}
+
 	{#if path}
 		<section id="end-card">
 			<!-- prettier-ignore -->
-			<p>See something to improve or fix? In the spirit of open-source, you can create a new <a href="https://github.com/ignatiusmb/mauss.dev/issues">issue</a> or contribute directly to this article by <a href="https://github.com/ignatiusmb/mauss.dev/blob/master/workspace/content/routes/{path}">sending a Pull Request on GitHub</a>!</p>
+			<p>open-source and open to improvement — <a href="https://github.com/ignatiusmb/mauss.dev/issues" target="_blank">file an issue</a> or <a href="https://github.com/ignatiusmb/mauss.dev/blob/master/workspace/content/routes/{path}" target="_blank">suggest changes</a> via github</p>
 		</section>
-	{/if}
-
-	{#if flank}
-		<footer>
-			{#if flank.back}
-				{@const { slug, title } = flank.back}
-				{@const text = typeof title === 'string' ? title : title.jp || title.en}
-
-				<a href="/{slug}/" style:text-align="left">
-					<strong>&larr; Prev</strong>
-					<span class="underlined">{text}</span>
-				</a>
-			{/if}
-			{#if flank.next}
-				{@const { slug, title } = flank.next}
-				{@const text = typeof title === 'string' ? title : title.jp || title.en}
-
-				<a href="/{slug}/" style:text-align="right">
-					<strong>Next &rarr;</strong>
-					<span class="underlined">{text}</span>
-				</a>
-			{/if}
-		</footer>
 	{/if}
 </article>
 
@@ -121,6 +136,14 @@
 		grid-template-columns: 1fr min(80ch, 100%) 1fr;
 		word-wrap: break-word;
 		line-height: 1.5;
+
+		#end-card {
+			padding: 0.4rem 0.8rem;
+			border: 0 solid var(--color-accent-primary);
+			border-left-width: var(--rounding-base);
+			border-radius: var(--rounding-base);
+			background: var(--color-surface);
+		}
 	}
 
 	header {
@@ -134,23 +157,23 @@
 
 		line-height: 1;
 
-		& > a {
+		aside {
+			display: grid;
+			gap: 0.5rem;
+			grid-auto-flow: column;
+			align-items: center;
+			font-size: 0.875rem;
+		}
+
+		> a {
 			margin: 0.5rem 0;
 			font-size: 1rem;
 		}
 
-		& :global(.dash) {
+		:global(.dash) {
 			color: var(--color-accent-primary);
 			font-weight: 600;
 		}
-	}
-
-	aside {
-		display: grid;
-		gap: 0.5rem;
-		grid-auto-flow: column;
-		align-items: center;
-		font-size: 0.875rem;
 	}
 
 	header > h1,
@@ -161,45 +184,112 @@
 		color: oklch(1 0 0 / 90%);
 	}
 
-	article {
-		section#end-card {
-			padding: 0.4rem 0.8rem;
-			border-left: 2px solid var(--color-accent-primary);
-			background-color: oklch(0 0 0 / 15%);
+	footer {
+		margin-top: 2rem;
+		display: grid;
+		gap: 0.325rem;
+		border-radius: var(--rounding-box);
+		background: var(--color-text-muted);
+
+		a {
+			display: grid;
+			gap: 0.2rem;
+			grid-template-rows: auto 1fr;
+			padding: 0.8rem;
+			border-radius: var(--rounding-base);
+			text-decoration: none;
+			color: inherit;
+			background: var(--color-base);
+
+			&[data-branch] {
+				grid-column: 1 / -1;
+				grid-template-rows: auto;
+				border: var(--rounding-base) solid transparent;
+				border-top-width: 0;
+				border-bottom-width: 0;
+
+				&:hover,
+				&:focus-visible {
+					border-right-color: var(--color-accent-tertiary);
+					border-left-color: var(--color-accent-tertiary);
+				}
+			}
+
+			&[data-flank='back'] {
+				border-left: var(--rounding-base) solid transparent;
+				border-top-left-radius: var(--rounding-base);
+				border-bottom-left-radius: var(--rounding-base);
+
+				strong {
+					grid-template-columns: auto 1fr;
+				}
+			}
+			&[data-flank='next'] {
+				border-right: var(--rounding-base) solid transparent;
+				border-top-right-radius: var(--rounding-base);
+				border-bottom-right-radius: var(--rounding-base);
+				text-align: right;
+
+				strong {
+					grid-template-columns: 1fr auto;
+				}
+			}
+
+			&:hover,
+			&:focus-visible {
+				border-color: var(--color-accent-primary);
+				background: var(--color-surface);
+			}
+
+			strong {
+				display: grid;
+				gap: 0.5rem;
+				align-items: center;
+			}
+			i[data-icon] {
+				width: 1.25rem;
+				height: 1.25rem;
+			}
+		}
+
+		@media (min-width: 600px) {
+			grid-template-columns: 1fr 1fr;
 		}
 	}
 
 	/* ---- {@html} ---- */
 
 	article :global {
-		& > * {
+		> * {
 			grid-column: 2;
 		}
-		& > p:empty {
+		> p:empty {
 			margin: 0;
 
-			& + p:empty {
+			+ p:empty {
 				margin-top: 0.5rem;
 			}
 		}
-		& > header + :not(section) {
+		> header + :not(section) {
 			margin-top: 4rem;
 		}
-		& > .half-bleed {
+		> .half-bleed,
+		> .breakout {
 			width: 100%;
 			max-width: 72rem;
 			grid-column: 1 / -1;
 			margin: 1rem auto;
 		}
-		& > .full-bleed {
+		> .full-bleed {
 			width: calc(100% + var(--pad) * 2);
 			max-width: 120rem;
 			grid-column: 1 / -1;
 			margin: 1rem auto;
 			transform: translateX(calc(-1 * var(--pad)));
 		}
-		& > .half-bleed img,
-		& > .full-bleed img {
+		> .half-bleed img,
+		> .full-bleed img,
+		> .breakout img {
 			object-fit: cover;
 			width: 100%;
 			max-height: 60vh;
@@ -208,7 +298,7 @@
 		section {
 			margin-top: 2rem;
 
-			& > :first-child {
+			> :first-child {
 				margin: 0;
 			}
 		}
@@ -227,9 +317,9 @@
 				margin-top: 0;
 			}
 
-			& + ul,
-			& + ol {
-				& > li:only-child {
+			+ ul,
+			+ ol {
+				> li:only-child {
 					margin-top: 1rem;
 				}
 			}
@@ -241,7 +331,7 @@
 			font-size: clamp(1.4rem, 3vw, 1.8rem);
 			margin: clamp(0.5rem, 3vw, 1.5rem);
 
-			& > :first-child {
+			> :first-child {
 				margin: 0;
 			}
 			p {
@@ -283,7 +373,7 @@
 			font-size: clamp(1.5rem, 4vw, 2rem);
 			color: oklch(1 0 0 / 85%);
 
-			& + h3 {
+			+ h3 {
 				margin-top: 0.5rem;
 			}
 		}
@@ -300,20 +390,19 @@
 			margin-top: 0.75rem;
 			margin-bottom: -0.5rem;
 
-			& + h3 {
+			+ h3 {
 				margin-top: 1.25rem;
 			}
 		}
 		li {
 			margin-left: 1rem;
 
-			& > ol,
-			& > ul {
+			> ol,
+			> ul {
 				margin: 0;
 			}
 		}
 		hr {
-			/* width: 100%; */
 			height: 0.1rem;
 			margin-top: 2rem;
 			border: 0;
@@ -347,14 +436,26 @@
 		}
 		details {
 			margin: 1rem 0 0;
+			border-radius: var(--rounding-box);
+			background: var(--color-surface);
 
 			summary {
-				padding: 0 0.25rem;
+				padding: 0.2rem 0.8rem;
+				border-radius: var(--rounding-box);
 				font-family: var(--font-monospace);
+
+				&:hover,
+				&:focus-visible {
+					background: var(--color-overlay);
+				}
 			}
 
 			&[open] > summary {
 				margin-bottom: 0.5rem;
+			}
+
+			> :not(summary) {
+				padding: 0.2rem;
 			}
 		}
 		div.captioned {
@@ -496,44 +597,12 @@
 		}
 	}
 
-	footer {
-		margin-top: 2rem;
-		display: grid;
-		border-radius: var(--rounding-box);
-		border: 0.1rem solid var(--color-text);
-
-		a {
-			display: grid;
-			grid-template-rows: auto 1fr;
-			text-decoration: none;
-			color: inherit;
-
-			&:nth-child(2) {
-				border-top: 0.1rem solid var(--color-text);
-			}
-			&:only-child {
-				grid-column: 1 / -1;
-			}
-
-			strong,
-			span {
-				padding: 0.2rem 0.8rem;
-				margin: 0;
-			}
+	i[data-icon] {
+		&[data-icon='binoculars'] {
+			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"><line x1="104" y1="88" x2="152" y2="88"/><path d="M229.59,154.32,185.94,55A24,24,0,0,0,152,55V168"/><path d="M104,168V55a24,24,0,0,0-33.94,0L26.41,154.32"/><circle cx="64" cy="168" r="40"/><circle cx="192" cy="168" r="40"/></svg>');
 		}
-
-		strong {
-			border-bottom: 0.1rem solid var(--color-text);
-		}
-	}
-
-	@media (min-width: 600px) {
-		footer {
-			grid-template-columns: 1fr 1fr;
-		}
-		footer a:nth-child(2) {
-			border-top: none;
-			border-left: 0.1rem solid var(--color-text);
+		&[data-icon='plugs-connected'] {
+			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"><rect x="63.03" y="88.4" width="129.94" height="79.2" rx="24" transform="translate(-53.02 128) rotate(-45)"/><line x1="88" y1="88" x2="168" y2="168"/><line x1="232" y1="24" x2="173.94" y2="82.06"/><line x1="82.06" y1="173.94" x2="24" y2="232"/><line x1="96" y1="32" x2="104" y2="52"/><line x1="32" y1="96" x2="52" y2="104"/><line x1="204" y1="152" x2="224" y2="160"/><line x1="152" y1="204" x2="160" y2="224"/></svg>');
 		}
 	}
 </style>

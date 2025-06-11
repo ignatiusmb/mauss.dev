@@ -1,6 +1,8 @@
 <script lang="ts">
 	import Article from '$lib/pages/Article.svelte';
+	import LinkSpread from './[branch]/LinkSpread.svelte';
 	import Backdrop from './Backdrop.svelte';
+	import Verdict from './Verdict.svelte';
 
 	const { data } = $props();
 </script>
@@ -10,38 +12,16 @@
 		<Backdrop post={data.article} />
 
 		{#if data.article.link}
-			<small>
-				<span>[</span>
-				{#each Object.entries(data.article.link) as [key, link], idx}
-					{#if idx !== 0}<span class="dash">&mdash;</span>{/if}
-
-					{#each typeof link === 'string' ? [link] : link as href, v}
-						{@const indexed = typeof link !== 'string' ? ` (${v + 1})` : ''}
-
-						{#if v !== 0}<span class="dash">&mdash;</span>{/if}
-						<a {href} target="_blank">{key}{indexed}</a>
-					{/each}
-				{/each}
-				<span>]</span>
-			</small>
+			<LinkSpread links={data.article.link} />
 		{/if}
 	{/snippet}
 
-	<section class="info-box warning" style:margin="1rem 0">
-		<em>
-			this review reflects my personal opinions. see the <a href="/fine-print">fine print</a> for more.
-		</em>
+	<Verdict verdict={data.article.verdict} size="1.25rem" />
+
+	<section data-info="warning" style:margin="1rem 0">
+		<!-- prettier-ignore -->
+		<em>no summaries, no key details — by design. see <a href="/help#reviews-how-i-review">how i review</a>. and yes, these are just my thoughts — read the <a href="/fine-print">fine print</a> for more.</em>
 	</section>
 
 	{@html data.article.content}
 </Article>
-
-<style>
-	small {
-		display: flex;
-
-		:not(:first-child) {
-			margin-left: 0.25rem;
-		}
-	}
-</style>
