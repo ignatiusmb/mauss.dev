@@ -46,11 +46,11 @@ title: Calendar
 
 ## 14
 
-[[Reddit](https://www.reddit.com/r/Coronavirus/comments/jazf4e/man_who_called_covid_a_hoax_feels_guilty_after_he/) | [People](https://people.com/health/man-called-covid-hoax-feels-guilty-14-family-members-test-positive-2-die/)] Man Who Called COVID a ‘Hoax’ Feels Guilty After He and 13 Family Members Test Positive — and 2 Die: "The feeling that I have is kind of like what, I would say, a drunk driver would have if they killed their family," says Tony Green, who hosted the family gathering that led to their infections.
+[[Reddit](https://www.reddit.com/r/Coronavirus/comments/jazf4e/man_who_called_covid_a_hoax_feels_guilty_after_he/) | [People](https://people.com/health/man-called-covid-hoax-feels-guilty-14-family-members-test-positive-2-die/)] Man Who Called COVID a 'Hoax' Feels Guilty After He and 13 Family Members Test Positive — and 2 Die: "The feeling that I have is kind of like what, I would say, a drunk driver would have if they killed their family," says Tony Green, who hosted the family gathering that led to their infections.
 
 [[Reddit](https://www.reddit.com/r/Unexpected/comments/jadb4a/when_you_get_struck_by_lightning/)] Unexpected: struck by lightning
 
-[[Reddit](https://www.reddit.com/r/nextfuckinglevel/comments/jazoaa/a_retired_royal_marine_suffering_from/)] A retired Royal Marine suffering from degenerative Parkinson’s Disease gets much better after DBS surgery!
+[[Reddit](https://www.reddit.com/r/nextfuckinglevel/comments/jazoaa/a_retired_royal_marine_suffering_from/)] A retired Royal Marine suffering from degenerative Parkinson's Disease gets much better after DBS surgery!
 
 ## 15
 

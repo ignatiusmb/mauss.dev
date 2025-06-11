@@ -24,7 +24,7 @@ title: Calendar
 
 ## 09
 
-[[Reddit Thread](https://www.reddit.com/r/AskReddit/comments/jqo3p4/serious_what_is_the_harshest_truth_youve_ever/)] What is the harshest truth you’ve ever learned?
+[[Reddit Thread](https://www.reddit.com/r/AskReddit/comments/jqo3p4/serious_what_is_the_harshest_truth_youve_ever/)] What is the harshest truth you've ever learned?
 
 ## 10
 
@@ -56,7 +56,7 @@ title: Calendar
 
 [[Reddit](https://www.reddit.com/r/programming/comments/jv7kls/youtubedls_repository_has_been_restored/) | [GitHub](https://github.com/ytdl-org/youtube-dl) | [Reversal EFF Letter](https://github.com/github/dmca/blob/master/2020/11/2020-11-16-RIAA-reversal-effletter.pdf)] YouTube-dl's repository has been restored.
 
-![hard part is proving it#d#f](https://preview.redd.it/gu7z6zinxiz51.jpg?width=960&crop=smart&auto=webp&s=2603df8be7fc978f26e2d51b1a342c518b1504fe "[[Reddit](https://www.reddit.com/r/clevercomebacks/comments/juzxh4/what_can_be_asserted_without_evidence_can_also_be/)] “What can be asserted without evidence can also be dismissed without evidence” - Chris Hitchens")
+![hard part is proving it#d#f](https://preview.redd.it/gu7z6zinxiz51.jpg?width=960&crop=smart&auto=webp&s=2603df8be7fc978f26e2d51b1a342c518b1504fe "[[Reddit](https://www.reddit.com/r/clevercomebacks/comments/juzxh4/what_can_be_asserted_without_evidence_can_also_be/)] "What can be asserted without evidence can also be dismissed without evidence" - Chris Hitchens")
 
 ## 17
 

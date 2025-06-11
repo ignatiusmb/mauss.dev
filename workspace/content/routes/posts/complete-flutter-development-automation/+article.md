@@ -13,7 +13,7 @@ I'm sure most of you developers have at least seen this logo before, or are even
 
 For those who've never heard of this, Flutter is Google's UI framework to develop mainly mobile applications for Android and iOS with their built-in SDK.
 
-> Flutter is Google’s UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase
+> Flutter is Google's UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase
 > -flutter.dev
 
 It is based on Dart language, created by Google too. You can see there's a pattern building up here. Google has made Dart easy by having a lot of similarities with existing languages like JavaScript, and Flutter is just like frameworks made with JS and Python.

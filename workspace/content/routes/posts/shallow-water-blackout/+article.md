@@ -26,7 +26,7 @@ It is more so an occurrence rather than a technique as stated in the previous se
 
 ![how shallow water blackout happens](http://campusrecmag.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-09-at-1.42.40-PM.png "Source: [Campus Rec](https://campusrecmag.com/shallow-water-blackout-can-prevent/)")
 
-It’s referred to as a "silent killer", and occurs in only two minutes, opposed to regular drowning, which takes six to eight minutes. That's because your body has no control at all when you're hyperventilating, you won't even notice that you're lacking oxygen and you'll faint and drown even though you feel fine at that time.
+It's referred to as a "silent killer", and occurs in only two minutes, opposed to regular drowning, which takes six to eight minutes. That's because your body has no control at all when you're hyperventilating, you won't even notice that you're lacking oxygen and you'll faint and drown even though you feel fine at that time.
 
 ![how to avoid shallow water blackout#f](http://campusrecmag.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-09-at-1.42.46-PM.png "Source: [Campus Rec](https://campusrecmag.com/shallow-water-blackout-can-prevent/) from shallowblackoutprevention.org")
 

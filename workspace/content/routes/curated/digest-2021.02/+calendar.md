@@ -16,7 +16,7 @@ title: Calendar
 
 ## 08
 
-[[Reddit](https://www.reddit.com/r/LifeProTips/comments/lezefi/lpt_you_will_want_different_things_at_different/)] You will want different things at different stages of life. It’s okay, and don’t feel like you’re disappointing your “past self” for wanting something different.
+[[Reddit](https://www.reddit.com/r/LifeProTips/comments/lezefi/lpt_you_will_want_different_things_at_different/)] You will want different things at different stages of life. It's okay, and don't feel like you're disappointing your "past self" for wanting something different.
 
 ## 09
 
@@ -54,7 +54,7 @@ title: Calendar
 
 ## 25
 
-[[Reddit](https://www.reddit.com/r/getdisciplined/comments/lrrgup/discussion_i_believe_depression_is_legitimate_but/)] (discussion thread) “I believe depression is legitimate. But I also believe that if you don’t exercise, eat nutritious food, get sunlight, consume positive material, surround yourself with support, then you aren’t giving yourself a fighting chance.” - Jim Carrey
+[[Reddit](https://www.reddit.com/r/getdisciplined/comments/lrrgup/discussion_i_believe_depression_is_legitimate_but/)] (discussion thread) "I believe depression is legitimate. But I also believe that if you don't exercise, eat nutritious food, get sunlight, consume positive material, surround yourself with support, then you aren't giving yourself a fighting chance." - Jim Carrey
 
 ## 26
 

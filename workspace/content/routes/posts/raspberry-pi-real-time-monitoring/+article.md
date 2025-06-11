@@ -22,7 +22,7 @@ For more details, refer to their key features in its [documentation](https://xav
 
 ### Installation from Repository
 
-1. Install RPi-Monitor‘s public key to trust RPi-Monitor repository
+1. Install RPi-Monitor's public key to trust RPi-Monitor repository
 
     ```bash
     sudo apt-get install dirmngr

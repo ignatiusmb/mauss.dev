@@ -12,7 +12,7 @@ What is the first thing that comes to your mind when you see a red mark and some
 
 [NAT](https://en.wikipedia.org/wiki/Network_address_translation) (Network Address Translation) allows sharing a single internet connection with many computers. This will virtually always be used for home internet connections. Routers/modems that allow multiple computers to be connected, either over ethernet or WiFi, will use NAT to do this sharing.
 
-“Double-NAT” is when you have 2 devices on the network, both handling NAT services in two levels. For example, you might have a router plugged in to your ISP directly and then route a cable to another modem to use in your room, now both the router and the modem are providing NAT services. Double-NAT will interfere with the server attempting to create automatic connections. It can also arise when the Public IP Address assigned to you by your ISP is itself behind a NAT service.
+"Double-NAT" is when you have 2 devices on the network, both handling NAT services in two levels. For example, you might have a router plugged in to your ISP directly and then route a cable to another modem to use in your room, now both the router and the modem are providing NAT services. Double-NAT will interfere with the server attempting to create automatic connections. It can also arise when the Public IP Address assigned to you by your ISP is itself behind a NAT service.
 
 ## Objective
 

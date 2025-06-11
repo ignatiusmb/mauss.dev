@@ -33,7 +33,7 @@ export async function post(req, res) {
 
 In the end, cookies are suggestions the website tells to your browser, the browser will still be the one to decide whether to accept a cookie or not, and they will also decide if they'd want to provide the cookie to JavaScript or not.
 
-To put it simply, when you make an HttpOnly cookie, you are only telling the browser “Please, don’t show that to JavaScript”. Thus, trust HttpOnly cookies blindly. Most importantly, don’t use to store sensitive data like credentials or passwords, only store tokens for this.
+To put it simply, when you make an HttpOnly cookie, you are only telling the browser "Please, don't show that to JavaScript". Thus, trust HttpOnly cookies blindly. Most importantly, don't use to store sensitive data like credentials or passwords, only store tokens for this.
 
 So keep in mind that this doesn't make it immune to XSS attacks, but it does alleviate it significantly. The best part of it is that it's practically free, a "set and forget" setting bound to become increasingly secure over time following the evolution of browsers.
 

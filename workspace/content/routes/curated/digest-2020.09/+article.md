@@ -9,13 +9,13 @@ Hey folks, welcome back to our monthly digest! This time, September was pretty s
 
 There's a whole lot of great articles this month, it's crazy! You should definitely check out the other mentions below because this month has some insanely good articles.
 
-![Front-end are full-stack developers now#f#fb](https://res.cloudinary.com/css-tricks/image/fetch/w_1200,q_auto,f_auto/https://css-tricks.com/wp-content/uploads/2020/09/full-stack.jpg "[ooooops I guess we’re* full-stack developers now](https://css-tricks.com/ooooops-i-guess-were-full-stack-developers-now/) by Chris Coyier")
+![Front-end are full-stack developers now#f#fb](https://res.cloudinary.com/css-tricks/image/fetch/w_1200,q_auto,f_auto/https://css-tricks.com/wp-content/uploads/2020/09/full-stack.jpg "[ooooops I guess we're* full-stack developers now](https://css-tricks.com/ooooops-i-guess-were-full-stack-developers-now/) by Chris Coyier")
 
 This is actually a written version of Chris' talk from Jamstack Conf London in 2019. Although it's been a year since then, the material is still (or dare I say even more) relevant right now considering the rapid evolution of front-end JS frameworks and web development in general.
 
 It's discussing on how JS is slowly taking back-end stuff for the front-end to handle. Stuff like site-level architecture / routing, state management + getting and mutating data, and a bunch of other tasks. That, in addition with needing to know Git, writing tests, caring about performance, making sites accessible, setting up basic deploy pipeline, etc.
 
-> [You’re Gosh Danged Right I’m a Full-Stack Developer!](https://css-tricks.com/ooooops-i-guess-were-full-stack-developers-now/)
+> [You're Gosh Danged Right I'm a Full-Stack Developer!](https://css-tricks.com/ooooops-i-guess-were-full-stack-developers-now/)
 
 ### Honorable article mentions
 
