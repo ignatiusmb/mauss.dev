@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Article from '$lib/pages/Article.svelte';
+	import LinkSpread from './[branch]/LinkSpread.svelte';
 	import Backdrop from './Backdrop.svelte';
 	import Verdict from './Verdict.svelte';
 
@@ -11,20 +12,7 @@
 		<Backdrop post={data.article} />
 
 		{#if data.article.link}
-			<small>
-				<span>[</span>
-				{#each Object.entries(data.article.link) as [key, link], idx}
-					{#if idx !== 0}<span class="dash">&mdash;</span>{/if}
-
-					{#each typeof link === 'string' ? [link] : link as href, v}
-						{@const indexed = typeof link !== 'string' ? ` (${v + 1})` : ''}
-
-						{#if v !== 0}<span class="dash">&mdash;</span>{/if}
-						<a {href} target="_blank">{key}{indexed}</a>
-					{/each}
-				{/each}
-				<span>]</span>
-			</small>
+			<LinkSpread links={data.article.link} />
 		{/if}
 	{/snippet}
 
@@ -37,13 +25,3 @@
 
 	{@html data.article.content}
 </Article>
-
-<style>
-	small {
-		display: flex;
-
-		:not(:first-child) {
-			margin-left: 0.25rem;
-		}
-	}
-</style>
