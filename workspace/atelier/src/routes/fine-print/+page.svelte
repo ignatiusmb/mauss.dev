@@ -32,8 +32,6 @@
 	</h2>
 	<!-- prettier-ignore -->
 	<p>if you disagree with anything i've shared, i welcome discussion. it's always insightful to understand different perspectives and how we arrive at our conclusions.</p>
-	<!-- prettier-ignore -->
-	<p>contributions are also appreciated — feel free to explore the <a href="https://github.com/ignatiusmb/mauss.dev" target="_blank">source code</a> for both the site and its content.</p>
 </Article>
 
 <style>

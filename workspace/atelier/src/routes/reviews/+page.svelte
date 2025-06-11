@@ -2,7 +2,7 @@
 	import Image from 'syv/core/Image.svelte';
 	import SearchBar from 'syv/core/SearchBar.svelte';
 	import Link from '$lib/components/Link.svelte';
-	import Verdict from './Verdict.svelte';
+	import Verdict from './[category]/[slug]/Verdict.svelte';
 
 	import { dialog } from 'syv';
 	import { TIME } from 'syv/options';

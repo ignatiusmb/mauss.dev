@@ -11,11 +11,7 @@
 	});
 </script>
 
-<nav
-	{@attach outside(() => {
-		opened = false;
-	})}
->
+<nav {@attach outside(() => (opened = false))}>
 	<a href="/" class="logo" aria-label="Alkamauss">
 		<Logo animate />
 	</a>
@@ -32,7 +28,7 @@
 
 	<menu>
 		<li>{@render link('uses', 'bookmark')}</li>
-		<li>{@render link('rss.xml', 'rss')}</li>
+		<li>{@render link('help', 'lifebuoy')}</li>
 	</menu>
 </nav>
 
@@ -56,6 +52,7 @@
 		gap: var(--pad);
 		align-items: center;
 		padding: calc(var(--pad) * 2) calc(var(--pad) * 3);
+		padding-left: calc(var(--pad) * 4);
 
 		background: var(--color-base);
 		color: var(--color-text);

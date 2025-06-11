@@ -91,7 +91,7 @@
 	#layout {
 		display: grid;
 		gap: 1rem;
-		grid-template-columns: repeat(auto-fill, minmax(21rem, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
 		transition: var(--transition-base);
 
 		section {

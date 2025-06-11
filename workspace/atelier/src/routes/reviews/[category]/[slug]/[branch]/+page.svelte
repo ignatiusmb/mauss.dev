@@ -28,8 +28,7 @@
 		{/if}
 	{/snippet}
 
-	<!-- @TODO: change to '/deep-dive' -->
-	{#if page.params.branch === 'spoilers'}
+	{#if page.params.branch === 'deep-dive'}
 		{@const margin = `${data.article.table.length ? 1 : 3}rem 0 1rem`}
 		<section data-info="warning" style:margin>
 			<!-- prettier-ignore -->

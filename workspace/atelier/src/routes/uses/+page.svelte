@@ -88,7 +88,7 @@
 			</span>
 		</li>
 		<li>
-			<strong>Editor</strong>
+			<strong>Code</strong>
 			<span><a href="https://code.visualstudio.com/" target="_blank">VS Code</a></span>
 		</li>
 		<li>
@@ -100,8 +100,12 @@
 			<span><a href="https://bitwarden.com/" target="_blank">Bitwarden</a></span>
 		</li>
 		<li>
-			<strong>Server OS</strong>
+			<strong>Server</strong>
 			<span><a href="https://dietpi.com/" target="_blank">DietPi</a></span>
+		</li>
+		<li>
+			<strong>3D + Video</strong>
+			<span><a href="https://www.blender.org/" target="_blank">Blender</a></span>
 		</li>
 	</ul>
 

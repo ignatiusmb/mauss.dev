@@ -85,7 +85,7 @@
 	{#if path}
 		<section id="end-card">
 			<!-- prettier-ignore -->
-			<p>See something to improve or fix? In the spirit of open-source, you can create a new <a href="https://github.com/ignatiusmb/mauss.dev/issues">issue</a> or contribute directly to this article by <a href="https://github.com/ignatiusmb/mauss.dev/blob/master/workspace/content/routes/{path}">sending a Pull Request on GitHub</a>!</p>
+			<p>open-source and open to improvement — <a href="https://github.com/ignatiusmb/mauss.dev/issues" target="_blank">file an issue</a> or <a href="https://github.com/ignatiusmb/mauss.dev/blob/master/workspace/content/routes/{path}" target="_blank">suggest changes</a> via github</p>
 		</section>
 	{/if}
 
@@ -95,8 +95,11 @@
 				{@const { slug, title } = flank.back}
 				{@const text = typeof title === 'string' ? title : title.jp || title.en}
 
-				<a href="/{slug}/" style:text-align="left">
-					<strong>&larr; Prev</strong>
+				<a href="/{slug}/" data-flank="prev">
+					<strong>
+						<i data-icon="arrow-circle-left"></i>
+						<span>newer</span>
+					</strong>
 					<span class="underlined">{text}</span>
 				</a>
 			{/if}
@@ -104,8 +107,11 @@
 				{@const { slug, title } = flank.next}
 				{@const text = typeof title === 'string' ? title : title.jp || title.en}
 
-				<a href="/{slug}/" style:text-align="right">
-					<strong>Next &rarr;</strong>
+				<a href="/{slug}/" data-flank="next">
+					<strong>
+						<span>older</span>
+						<i data-icon="arrow-circle-right"></i>
+					</strong>
 					<span class="underlined">{text}</span>
 				</a>
 			{/if}
@@ -164,8 +170,10 @@
 	article {
 		section#end-card {
 			padding: 0.4rem 0.8rem;
-			border-left: 2px solid var(--color-accent-primary);
-			background-color: oklch(0 0 0 / 15%);
+			border: 0 solid var(--color-accent-primary);
+			border-left-width: var(--rounding-base);
+			border-radius: var(--rounding-base);
+			background: var(--color-surface);
 		}
 	}
 
@@ -499,41 +507,62 @@
 	footer {
 		margin-top: 2rem;
 		display: grid;
+		gap: 0.325rem;
 		border-radius: var(--rounding-box);
-		border: 0.1rem solid var(--color-text);
+		background: var(--color-text-muted);
 
 		a {
 			display: grid;
+			gap: 0.2rem;
 			grid-template-rows: auto 1fr;
+			padding: 0.8rem;
+			border-radius: var(--rounding-base);
 			text-decoration: none;
 			color: inherit;
+			background: var(--color-base);
 
-			&:nth-child(2) {
-				border-top: 0.1rem solid var(--color-text);
-			}
 			&:only-child {
 				grid-column: 1 / -1;
 			}
+			&[data-flank='prev'] {
+				border-left: var(--rounding-base) solid transparent;
+				border-top-left-radius: var(--rounding-base);
+				border-bottom-left-radius: var(--rounding-base);
 
-			strong,
-			span {
-				padding: 0.2rem 0.8rem;
-				margin: 0;
+				strong {
+					grid-template-columns: auto 1fr;
+				}
+			}
+			&[data-flank='next'] {
+				border-right: var(--rounding-base) solid transparent;
+				border-top-right-radius: var(--rounding-base);
+				border-bottom-right-radius: var(--rounding-base);
+				text-align: right;
+
+				strong {
+					grid-template-columns: 1fr auto;
+				}
+			}
+
+			&:hover,
+			&:focus {
+				border-color: var(--color-accent-primary);
+				background: var(--color-surface);
+			}
+
+			strong {
+				display: grid;
+				gap: 0.5rem;
+				align-items: center;
+			}
+			i[data-icon] {
+				width: 1.25rem;
+				height: 1.25rem;
 			}
 		}
 
-		strong {
-			border-bottom: 0.1rem solid var(--color-text);
-		}
-	}
-
-	@media (min-width: 600px) {
-		footer {
+		@media (min-width: 600px) {
 			grid-template-columns: 1fr 1fr;
-		}
-		footer a:nth-child(2) {
-			border-top: none;
-			border-left: 0.1rem solid var(--color-text);
 		}
 	}
 </style>

@@ -1,15 +1,17 @@
 <script lang="ts">
+	import type { Schema } from '$content/reviews.json/+server';
 	interface Props {
-		verdict: import('./$types').PageData['list'][number]['verdict'];
+		verdict: Schema['items'][number]['verdict'];
+		size?: string;
 	}
-	const { verdict }: Props = $props();
+	const { verdict, size }: Props = $props();
 
 	const mapper: Partial<Record<Props['verdict'], Props['verdict']>> = {
 		'must-watch': 'recommended',
 	};
 </script>
 
-<div class={verdict}>
+<div class={verdict} style:font-size={size || '0.8rem'}>
 	<span>{(mapper[verdict] || verdict).replace(/-/g, ' ')}</span>
 	{#if verdict === 'must-watch'}<span>🔥</span>{/if}
 </div>
@@ -24,7 +26,6 @@
 
 		background: var(--color-base);
 		text-transform: capitalize;
-		font-size: 0.8rem;
 		color: oklch(1 0 0);
 	}
 	.not-recommended {
