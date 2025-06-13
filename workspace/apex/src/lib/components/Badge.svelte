@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { page } from '$app/state';
+
 	interface Props {
 		tag: string;
 	}
@@ -28,16 +30,18 @@
 		svelte: ['#ff3e00', 'var(--color-text)'],
 		tutorial: ['#feffa5', '#b30047'],
 		typescript: ['#2775c3', 'var(--color-text)'],
-	} as Record<string, [string, string]>;
+	} as Record<string, [background: string, color: string]>;
 
-	// tuple -> [background: string, color: string]
 	const represent = $derived(table[tag] || ['#d6d9e0', '#606570']);
+	const [, root] = $derived(page.url.pathname.split('/'));
 </script>
 
-<span style:background={represent[0]} style:color={represent[1]}>#{tag}</span>
+<a href="/{root}?tags={tag}" style:background={represent[0]} style:color={represent[1]}>
+	#{tag}
+</a>
 
 <style>
-	span {
+	a {
 		padding: 0.2rem 0.4rem;
 		border-radius: var(--rounding-base);
 		margin-top: 0.5rem;

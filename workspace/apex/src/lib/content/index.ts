@@ -210,7 +210,6 @@ export const DATA = {
 							...specified,
 							...extras,
 							branch: name.slice(1, -3),
-							title: extras.title,
 							content: marker.render(body),
 						};
 					}),

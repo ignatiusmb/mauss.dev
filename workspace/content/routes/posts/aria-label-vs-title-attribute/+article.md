@@ -1,15 +1,17 @@
 ---
 date: "2023-11-03T18:00:00+07:00"
-title: Accessibility! aria-label vs. title attribute
-description: What's the difference and which one should you choose between these two.
+title: "ARIA: aria-label vs. title attribute"
+description: What's the difference, and which one should you use?
 tags: [accessibility, html]
 ---
 
-The title attribute is read by screen readers, but so does aria-label. They seem to serve the same purpose, so what's the difference?
+The title attribute and aria-label can both provide accessible labels — screen readers will typically read either. At first glance, they seem interchangeable. But they serve different purposes, and the choice depends on your intent.
 
-Title allows you to add a native tooltip on hover, so if you're not planning to make you own tooltip but needs or wants your element to have one, then add a title attribute. On the other hand, aria labels are supported by default and are used by screen readers. It's not to say that title isn't read by screen readers, but aria is the preferred choice for accessibility support.
+The title attribute adds a native browser tooltip on hover. If you want a tooltip and don't plan to build your own, using title is convenient. However, it comes with limitations: it can't be styled, it doesn't always zoom properly, and support across assistive tech can be inconsistent.
 
-My recommendation is to use `aria-label` and roll your own tooltip based on the contents of the label using CSS attribute selectors and pseudo-elements. It will be better than relying on the `title` tooltip from browsers that cannot be styled or doesn't zoom with the rest of the elements in some cases. For more complex stuff, you may need to implement a custom one based on your needs and specifications.
+aria-label, on the other hand, is purpose-built for accessibility. It's consistently supported by screen readers and preferred when you want to label an element without showing visible text.
+
+**My recommendation**: use `aria-label` for accessibility, and build your own tooltip using CSS based on its value. This gives you full control over styling, positioning, and behavior — something the native title tooltip doesn't offer. Here's a simple example to get you started:
 
 ```css
 /* arrow pointing to the element */
@@ -54,8 +56,4 @@ My recommendation is to use `aria-label` and roll your own tooltip based on the 
 }
 ```
 
-***
-Reference(s):
-
-- <https://stackoverflow.com/questions/27953425/what-is-the-difference-between-aria-label-and-title-attributes>
-- <https://dev.opera.com/articles/ux-accessibility-aria-label/#accessible-name-calculation>
+This approach ensures both accessibility and a better user experience. For more advanced use cases, you can extend the styling or add JavaScript for richer interactions.
