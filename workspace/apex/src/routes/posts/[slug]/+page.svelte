@@ -19,7 +19,7 @@
 			<!-- prettier-ignore -->
 			<p>Accessibility isn't a bonus or a favor — it's a core responsibility of front-end developers. Need a tip? The dropdown below has one worth checking.</p>
 			<details>
-				<summary>What is <abbr title="Accessible Rich Internet Applications">ARIA</abbr>?</summary>
+				<summary>What is ARIA?</summary>
 				<div style:padding="0 1rem 0.5rem">
 					<!-- prettier-ignore -->
 					<p><strong>Accessible Rich Internet Applications (ARIA)</strong> is a set of attributes that define ways to make web content and web applications (especially those developed with JavaScript) more accessible to people with disabilities.</p>
