@@ -176,14 +176,6 @@
 		}
 	}
 
-	header > h1,
-	article > :global(h1) {
-		font-size: clamp(2.5rem, 4vw, 3rem);
-		text-align: center;
-		text-wrap: balance;
-		color: oklch(1 0 0 / 90%);
-	}
-
 	footer {
 		margin-top: 2rem;
 		display: grid;
@@ -363,10 +355,20 @@
 				text-align: center;
 			}
 		}
+		h1 {
+			font-size: clamp(2.5rem, 4vw, 3rem);
+			text-align: center;
+			text-wrap: balance;
+			color: oklch(1 0 0 / 90%);
+		}
 		h2,
 		h3 {
-			scroll-margin-top: 4rem;
+			scroll-margin-top: 4.8rem;
 			font-weight: 500;
+
+			@media (min-width: 549px) {
+				scroll-margin-top: 1.5rem;
+			}
 		}
 		h2 {
 			margin-top: 1.5rem;
@@ -440,6 +442,7 @@
 			background: var(--color-surface);
 
 			summary {
+				user-select: none;
 				padding: 0.2rem 0.8rem;
 				border-radius: var(--rounding-box);
 				font-family: var(--font-monospace);

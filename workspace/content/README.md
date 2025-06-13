@@ -1,4 +1,4 @@
-# content workspace
+# The Atelier's Content
 
 each directory represents a route; the `+article.md` file inside holds the page content.
 

@@ -16,6 +16,7 @@
 		<Logo animate />
 	</a>
 
+	{@render link('atelier', 'flask')}
 	{@render link('curated', 'books')}
 	{@render link('posts', 'article')}
 	{@render link('reviews', 'list-star')}
@@ -52,7 +53,7 @@
 		gap: var(--pad);
 		align-items: center;
 		padding: calc(var(--pad) * 2) calc(var(--pad) * 3);
-		padding-left: calc(var(--pad) * 4);
+		padding-left: calc(var(--pad) * 3.4);
 
 		background: var(--color-base);
 		color: var(--color-text);
@@ -79,7 +80,7 @@
 
 			&:hover,
 			&[aria-current] {
-				background: oklch(1 0 0 / 10%);
+				background: var(--color-overlay);
 			}
 
 			&:focus {
@@ -116,7 +117,7 @@
 		border-radius: var(--rounding-base);
 
 		&:active {
-			background: oklch(1 0 0 / 10%);
+			background: var(--color-overlay);
 		}
 	}
 
@@ -141,7 +142,7 @@
 		border-radius: var(--rounding-box);
 		border-top-left-radius: 0;
 		border-top-right-radius: 0;
-		box-shadow: 0.25rem 0.25rem 0.25rem oklch(0 0 0 / 18.8%);
+		box-shadow: 0.25rem 0.25rem 0.25rem oklch(0 0 0 / 24%);
 		background-color: inherit;
 		transform: translateY(-100%);
 		transition: var(--transition-base) ease;
