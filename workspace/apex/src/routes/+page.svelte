@@ -80,8 +80,7 @@
 		text-align: left;
 
 		h1 {
-			grid-template-columns: auto 1fr;
-			color: oklch(1 0 0);
+			text-align: left;
 			font-size: 1.875rem;
 			font-weight: 600;
 		}
