@@ -5,6 +5,7 @@
 
 <Article>
 	<h1>you've made port.</h1>
+	<small style:text-align="center">still afloat. always drifting, never adrift.</small>
 
 	<!-- prettier-ignore -->
 	<p>Alkamauss is a diary of sorts — a reflection of my experiences, inspirations, and evolving thoughts. a virtual abode shaped with intent, a space where i try to express myself with clarity and honesty.</p>
@@ -36,7 +37,7 @@
 	<!-- prettier-ignore -->
 	<p>most of my writing on this site is in lowercase. it might seem unusual if you're not used to this style, but for me, it's simply how my thoughts come out — honest and personal. it's like casual chatting: it strips away the performance and lets me focus on what i'm trying to say, not how it's dressed up.</p>
 	<!-- prettier-ignore -->
-	<p>that said, <em>i can write formally when it counts</em>. in spaces meant for professional introductions, you'll see proper casing. the rest is almost always an organized mess — written as freely and naturally as i think it, as i try to make sense and articulate myself.</p>
+	<p>that said, <em>i can write formally when it counts</em>. for formal spaces, i switch to proper casing. the rest is almost always an organized mess — written as freely and naturally as i think it, as i try to make sense and articulate myself.</p>
 
 	<section data-info="warning" style:margin="2rem 0">
 		<!-- prettier-ignore -->
@@ -62,7 +63,7 @@
 		<a href="/reviews">/reviews</a>
 	</h2>
 	<!-- prettier-ignore -->
-	<p>reviews are where i express myself most freely. i try to approach each piece — whether anime, film, games, or more — with honesty and care, treating reviews as a way to reflect and show appreciation for the work, even if i don't recommend it. there's always something to learn.</p>
+	<p>reviews are where i express myself most freely. i approach each piece — anime, film, games, or otherwise — with care, treating reviews as a way to reflect and show appreciation for the work, even if i don't recommend it. there's always something to learn.</p>
 	<!-- prettier-ignore -->
 	<p>many entries come with a spoilers sub-page — a space for overanalysis, loose theorizing, or simply discussing the big moments that deserve more than a vague summary. some of them are written to spark conversation, others just to get thoughts out of my head.</p>
 

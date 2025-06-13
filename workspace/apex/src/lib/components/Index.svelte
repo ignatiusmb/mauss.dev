@@ -9,7 +9,10 @@
 </script>
 
 <details id="index">
-	<summary>{summary}</summary>
+	<summary>
+		<i data-icon="compass-rose"></i>
+		<span>{summary}</span>
+	</summary>
 	<div>
 		{#each items as { id, title, level = 2 }}
 			{@const pad = `${1 + (level - balancer) * 0.75}rem`}
@@ -35,7 +38,7 @@
 				border-bottom-right-radius: 0;
 				border-bottom-left-radius: 0;
 
-				&::before {
+				i[data-icon] {
 					transform: rotate(315deg);
 				}
 			}
@@ -59,17 +62,6 @@
 			&:focus-within {
 				background: var(--color-overlay);
 			}
-
-			&::before {
-				content: '';
-				width: 1.5rem;
-				height: 1.5rem;
-				display: inline-block;
-				background: currentColor;
-				transition: var(--transition-slow) ease-out;
-				mask: no-repeat center / 100%;
-				mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"><polygon points="128 8 104 104 128 128 152 104 128 8"/><polygon points="128 248 104 152 128 128 152 152 128 248"/><polyline points="152 104 248 128 152 152"/><polyline points="104 104 8 128 104 152"/><path d="M40.37,119.91a88,88,0,0,1,79.54-79.54"/><path d="M119.91,215.63a88,88,0,0,1-79.54-79.54"/><path d="M215.63,136.09a88,88,0,0,1-79.54,79.54"/><path d="M136.09,40.37a88,88,0,0,1,79.54,79.54"/></svg>');
-			}
 		}
 
 		div {
@@ -80,16 +72,22 @@
 
 			a {
 				padding: 0.25rem 1rem;
+				border-radius: var(--rounding-base);
 				text-decoration: none;
 
 				&:hover {
-					background: oklch(1 0 0 / 10%);
+					background: var(--color-overlay);
 				}
 				&:last-child {
 					border-bottom-right-radius: var(--rounding-box);
 					border-bottom-left-radius: var(--rounding-box);
 				}
 			}
+		}
+
+		i[data-icon='compass-rose'] {
+			transition: var(--transition-slow) ease-out;
+			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"><polygon points="128 8 104 104 128 128 152 104 128 8"/><polygon points="128 248 104 152 128 128 152 152 128 248"/><polyline points="152 104 248 128 152 152"/><polyline points="104 104 8 128 104 152"/><path d="M40.37,119.91a88,88,0,0,1,79.54-79.54"/><path d="M119.91,215.63a88,88,0,0,1-79.54-79.54"/><path d="M215.63,136.09a88,88,0,0,1-79.54,79.54"/><path d="M136.09,40.37a88,88,0,0,1,79.54,79.54"/></svg>');
 		}
 	}
 </style>

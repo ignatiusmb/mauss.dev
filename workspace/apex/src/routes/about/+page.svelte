@@ -21,9 +21,9 @@
 		<span>expertise.</span>
 	</h3>
 	<!-- prettier-ignore -->
-	<p>I'm a software engineer by trade, but I like to think of myself more as a <em>software alchemist</em>. It's a kind of art—taking something complex, messy, or inefficient, and refining it into something simple, elegant, and fast.</p>
+	<p>I'm a software engineer by trade, but I like to think of myself more as a <em>software alchemist</em>. I see it as a kind of art—taking something complex, messy, or inefficient, and refining it into something simple, elegant, and fast.</p>
 	<!-- prettier-ignore -->
-	<p>My strength lies in restructuring systems and streamlining logic—shaving off the unnecessary until what's left just works. The payoff? Easier debugging, quicker iteration, and codebases you don't dread revisiting.</p>
+	<p>My strength lies in restructuring systems and streamlining logic—shaving away the noise until what remains just works. The payoff? Easier debugging, quicker iteration, and codebases you don't dread revisiting.</p>
 	<!-- prettier-ignore -->
 	<p>These days, I build mostly for the web, working with <a href="https://svelte.dev" target="_blank">Svelte</a> and <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>. I've explored a wide spectrum of languages: <a href="https://en.wikipedia.org/wiki/Assembly_language" target="_blank">Assembly</a>, <a href="https://www.gnu.org/software/bash/" target="_blank">Bash</a>, <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank">C</a>, <a href="https://en.wikipedia.org/wiki/C++" target="_blank">C++</a>, <a href="https://dart.dev/" target="_blank">Dart</a> (<a href="https://flutter.dev/" target="_blank">Flutter</a>), <a href="https://godotengine.org/" target="_blank">GDScript</a>, <a href="https://www.haskell.org/" target="_blank">Haskell</a>, <a href="https://en.wikipedia.org/wiki/Java_%28programming_language%29" target="_blank">Java</a>, <a href="https://www.python.org/" target="_blank">Python</a>, and a few others I've probably forgotten. I don't mind the language. Once you understand the fundamentals, the rest follows.</p>
 	<!-- prettier-ignore -->
@@ -36,9 +36,9 @@
 	<ul>
 		<li>bulking up</li>
 		<li>learning japanese</li>
-		<li>learning finance</li>
 		<li>building with sveltekit + pocketbase</li>
 		<li>rethinking my design system</li>
+		<li>reviving my <a href="/reviews">reviews</a></li>
 		<li>refreshing my <a href="/uses">/uses</a> page</li>
 	</ul>
 
@@ -69,7 +69,7 @@
 			<span>perfect for indoor days</span>
 		</li>
 		<li>
-			<strong>tricking / gymnastics</strong>
+			<strong>tricking x gymnastics</strong>
 			<span>control meets flow</span>
 		</li>
 		<li>
@@ -169,11 +169,11 @@
 		</li>
 		<li>
 			<a href="https://twitter.com/alchemauss" target="_blank">twitter (x)</a>
-			<span>not sure why i still have this</span>
+			<span>i can't even login anymore</span>
 		</li>
 		<li>
 			<a href="https://keybase.io/mauss" target="_blank">keybase</a>
-			<span>probably gathering dust</span>
+			<span>gathering dust, idk why i have this</span>
 		</li>
 	</ul>
 	<!-- prettier-ignore -->
@@ -200,8 +200,6 @@
 	h1 {
 		display: flex;
 		align-items: center;
-		font-size: clamp(1.5rem, 4vw, 2rem);
-		color: oklch(1 0 0 / 90%);
 	}
 
 	/* add specificity */
