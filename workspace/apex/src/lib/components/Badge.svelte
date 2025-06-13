@@ -36,7 +36,7 @@
 	const [, root] = $derived(page.url.pathname.split('/'));
 </script>
 
-<a href="/{root}?tags={tag}" style:background={represent[0]} style:color={represent[1]}>
+<a href="/{root}?tag={tag}" style:background={represent[0]} style:color={represent[1]}>
 	#{tag}
 </a>
 
