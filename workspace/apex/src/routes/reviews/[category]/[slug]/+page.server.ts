@@ -12,7 +12,7 @@ export async function load({ parent, params }) {
 		article: content,
 		source: `reviews/${content.slug}/+article.md`,
 		meta: {
-			canonical: `reviews/${content.slug}`,
+			canonical: `/reviews/${content.slug}`,
 			title: content.title.short || content.title.jp || content.title.en,
 		},
 	};

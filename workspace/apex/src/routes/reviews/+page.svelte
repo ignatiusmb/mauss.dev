@@ -75,7 +75,7 @@
 							<span>{post.released.split('-')[0]}</span>
 							<span>{post.category}</span>
 						</small>
-						<Link href="/reviews/{post.slug}/" style="primary" {disabled}>
+						<Link href="/reviews/{post.slug}" style="primary" {disabled}>
 							{disabled ? 'Work-in-Progress' : 'READ'}
 						</Link>
 					</aside>

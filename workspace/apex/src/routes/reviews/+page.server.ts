@@ -52,7 +52,7 @@ export async function load({ parent, url }) {
 			}),
 		},
 		meta: {
-			canonical: 'reviews',
+			canonical: '/reviews',
 			title: 'Reviews',
 			description:
 				"Honest takes and detailed reflections on things I've watched, read, played, or used — blunt when needed, curious always.",

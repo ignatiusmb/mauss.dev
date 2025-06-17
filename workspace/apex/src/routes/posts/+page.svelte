@@ -8,7 +8,7 @@
 	import { TIME } from 'syv/options';
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
-	import { by } from './search.svelte.js';
+	import { by } from './search.svelte';
 
 	const { data } = $props();
 
@@ -23,7 +23,7 @@
 </header>
 
 <SearchBar
-	value=""
+	value={data.query.replace(/\+/g, ' ')}
 	items={data.list}
 	sieve={({ query, normalize, item: { slug, title, description } }) => {
 		const value = normalize(query);
@@ -69,7 +69,7 @@
 					<aside>
 						<time datetime={post.date}>{format(post.date)('DD MMMM YYYY')}</time>
 						<small>{post.estimate} min read</small>
-						<Link href="/posts/{post.slug}/" style="primary">READ</Link>
+						<Link href="/posts/{post.slug}" style="primary">READ</Link>
 					</aside>
 				</section>
 			{:else}

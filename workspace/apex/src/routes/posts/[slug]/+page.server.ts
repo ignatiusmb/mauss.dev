@@ -11,7 +11,7 @@ export async function load({ parent, params }) {
 		article: content,
 		source: `posts/${content.slug}/+article.md`,
 		meta: {
-			canonical: `posts/${content.slug}`,
+			canonical: `/posts/${content.slug}`,
 			title: content.title,
 			description: content.description || '',
 		},

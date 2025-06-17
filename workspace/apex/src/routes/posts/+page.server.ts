@@ -7,7 +7,7 @@ import { EXPIRATION } from '$lib/globals';
 export const config: Config = {
 	isr: {
 		expiration: EXPIRATION,
-		allowQuery: ['q', 'category', 'tags', 'sort_by'],
+		allowQuery: ['q', 'category', 'tag', 'sort_by'],
 	},
 };
 
@@ -36,7 +36,7 @@ export async function load({ parent, url }) {
 			}),
 		},
 		meta: {
-			canonical: 'posts',
+			canonical: '/posts',
 			title: 'Posts',
 			description:
 				'Essays and thoughts on life, tech, and everything in between — sometimes structured, sometimes spontaneous.',

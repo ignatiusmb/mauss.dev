@@ -1,7 +1,7 @@
 export async function load({}) {
 	return {
 		meta: {
-			canonical: 'atelier',
+			canonical: '/atelier',
 			title: 'Atelier',
 			// description: ''
 		},

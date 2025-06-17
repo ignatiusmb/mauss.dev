@@ -15,7 +15,7 @@
 </header>
 
 <SearchBar
-	value=""
+	value={data.query.replace(/\+/g, ' ')}
 	items={data.list}
 	sieve={({ query, normalize, item }) => {
 		const value = normalize(query);
@@ -32,7 +32,7 @@
 					transition:scale|local={{ duration: TIME.SLIDE }}
 				>
 					<small>{title}</small>
-					<Link href="/curated/{slug}/" style="primary">READ</Link>
+					<Link href="/curated/{slug}" style="primary">READ</Link>
 				</section>
 			{:else}
 				<p style:grid-column="1 / -1" style:text-align="center">There are no matching titles</p>

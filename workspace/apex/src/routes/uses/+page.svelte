@@ -7,7 +7,7 @@
 <Article post={{ date: data.updated, title: data.meta.title, table: [] }}>
 	<h1>in use</h1>
 	<!-- prettier-ignore -->
-	<p>inspired by <a href="https://wesbos.com/uses" target="_blank">Wes Bos</a> — a living list of the things i rely on daily. i believe in quality over quantity: making intentional choices that save time, energy, and preserve focus.</p>
+	<p>inspired by <a href="https://wesbos.com/uses" target="_blank">Wes Bos</a> — a living list of the things i trust and rely on daily.</p>
 
 	<h3 id="hardware">
 		<i data-icon="devices"></i>
@@ -18,7 +18,7 @@
 			<strong>PC</strong>
 			<span>
 				<a
-					href="https://www.asus.com/us/displays-desktops/nucs/nuc-mini-pcs/asus-nuc-14-pro/"
+					href="https://www.asus.com/us/displays-desktops/nucs/nuc-mini-pcs/asus-nuc-14-pro"
 					target="_blank"
 				>
 					ASUS NUC 14 Pro
@@ -48,7 +48,7 @@
 		<li>
 			<strong>Home Lab</strong>
 			<span>
-				<a href="https://www.geekompc.com/geekom-mini-air12-mini-pc/" target="_blank">
+				<a href="https://www.geekompc.com/geekom-mini-air12-mini-pc" target="_blank">
 					GEEKOM Mini Air12
 				</a>
 			</span>
@@ -89,23 +89,23 @@
 		</li>
 		<li>
 			<strong>Code</strong>
-			<span><a href="https://code.visualstudio.com/" target="_blank">VS Code</a></span>
+			<span><a href="https://code.visualstudio.com" target="_blank">VS Code</a></span>
 		</li>
 		<li>
 			<strong>Music</strong>
-			<span><a href="https://open.spotify.com/" target="_blank">Spotify</a></span>
+			<span><a href="https://open.spotify.com" target="_blank">Spotify</a></span>
 		</li>
 		<li>
 			<strong>Vault</strong>
-			<span><a href="https://bitwarden.com/" target="_blank">Bitwarden</a></span>
+			<span><a href="https://bitwarden.com" target="_blank">Bitwarden</a></span>
 		</li>
 		<li>
 			<strong>Server</strong>
-			<span><a href="https://dietpi.com/" target="_blank">DietPi</a></span>
+			<span><a href="https://dietpi.com" target="_blank">DietPi</a></span>
 		</li>
 		<li>
 			<strong>3D + Video</strong>
-			<span><a href="https://www.blender.org/" target="_blank">Blender</a></span>
+			<span><a href="https://www.blender.org" target="_blank">Blender</a></span>
 		</li>
 	</ul>
 

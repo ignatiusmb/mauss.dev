@@ -10,10 +10,10 @@
 		mauss: true,
 		syv: true,
 		'prettier-plugin-sort-package-json': true,
-		'@ignatiusmb/styles': false,
+		'@ignatiusmb/styles': true,
 	});
 	const blueprints = $state({
-		starter: false,
+		starter: true,
 	});
 
 	const balance = $derived({
@@ -54,17 +54,16 @@
 		{/snippet}
 
 		<!-- prettier-ignore -->
-		<p><strong>the digital atelier — where it all starts</strong>. a personal workspace and reference: home to notes, posts, ideas, and tools that evolve alongside the work. it's where ideas grow into software, sharpened by need and shaped by hand.</p>
+		<p><strong>the digital atelier — where it all starts</strong>. a personal workspace and reference, the ideas that grew with my needs, the dumps from my mind, the curated content i wished i had, the list of things that i care about, everything i cherished in one place. a living archive.</p>
 		<ul>
 			<!-- prettier-ignore -->
-			<li>kept the <a href="https://github.com/ignatiusmb/mauss.dev">codebase</a> lean and current — i've been taking care of this for around <em>{ongoing} years</em> now</li>
+			<li>kept the <a href="https://github.com/ignatiusmb/mauss.dev">codebase</a> lean and current for around <em>{ongoing} years</em> now</li>
 			<li>developed a personal design system, with responsive and native css workflows</li>
-			<li>hand-crafted svg logos and favicons — every path and shape written from scratch</li>
+			<li>hand-crafted svg logos and favicons, every path and shape written from scratch</li>
 			<!-- prettier-ignore -->
 			<li>integrated <a href="https://svelte.dev">sveltekit</a> with <a href="https://pocketbase.io">pocketbase</a> for full-stack, server-side workflows</li>
 			<li>experimented with git submodules — not the way to go</li>
 			<li>maintained a monorepo with clean internal tooling and streamlined workflows</li>
-			<li>rolled my own rss builder for full control over syndication</li>
 			<!-- prettier-ignore -->
 			<li>evolved best practices for javascript and ts — later distilled into <a href="#mauss">mauss</a></li>
 			<!-- prettier-ignore -->
@@ -92,7 +91,7 @@
 		{/snippet}
 
 		<!-- prettier-ignore -->
-		<p><strong>own your data — a local-first framework for personal publishing</strong>. shaped by a long-standing need to own my content, it treats markdown files as the single source of truth — portable, readable, and fully yours to keep.</p>
+		<p><strong>own your data — a local-first framework for personal publishing</strong>. shaped by a long-standing need and worry to own and preserve my content, it treats markdown files as the single source of truth. it's portable and guaranteed to last, with a standard format that can be read and written by anyone, anywhere.</p>
 		<ul>
 			<li>built a recursive file reader that transforms directories into structured JSON</li>
 			<li>wrote a minimal, dependency-free YAML-like parser from scratch</li>
@@ -127,7 +126,7 @@
 		{/snippet}
 
 		<!-- prettier-ignore -->
-		<p><strong>the essential utility belt — modular, type-safe, and dependency-free</strong>. lightweight utilities for modern JavaScript and TypeScript with zero dependencies. designed for clarity, composability, and minimal runtime footprint — every function does one thing well, with full type safety and no baggage.</p>
+		<p><strong>the essential utility belt — modular, type-safe, and dependency-free</strong>. lightweight utilities for modern JavaScript and TypeScript with zero dependencies, designed for clarity and composability with minimal runtime footprint.</p>
 		<ul>
 			<li>finally cracked shared config: one install, one link, and it's good to go</li>
 			<li>learned how to design functional utilities that stay pure and composable</li>
@@ -148,7 +147,7 @@
 		{/snippet}
 
 		<!-- prettier-ignore -->
-		<p><strong>the ideal svelte toolbox — components, attachments, and beyond</strong>. lightweight, idiomatic building blocks with thoughtful APIs: not just reusable, but adaptable. each piece shaped by real needs, then refined until it disappears into the flow of the app.</p>
+		<p><strong>the ideal svelte toolbox — components, attachments, and beyond</strong>. lightweight, idiomatic building blocks with thoughtful APIs: not just reusable, but adaptable. each piece shaped by real needs and refined until it disappears into the flow of the app.</p>
 		<ul>
 			<li>designed intuitive submodules to keep the scope focused and scalable</li>
 			<li>prioritized SSR-first and progressive enhancement from the start</li>
@@ -168,7 +167,7 @@
 		{/snippet}
 
 		<!-- prettier-ignore -->
-		<p><strong>opinionated formatting powered by Prettier</strong>. my first real prettier plugin — made to keep <code>package.json</code> files clean and consistent. it sorts top-level keys in the order that i think makes sense, and exposes a parser for package-like files with different names.</p>
+		<p><strong>opinionated formatting powered by Prettier</strong>. made to keep <code>package.json</code> files clean and consistent, it sorts top-level keys in the order that i think makes sense, and exposes a parser for package-like files with different names.</p>
 		<ul>
 			<li>learned how Prettier's plugin system works under the hood</li>
 			<li>figured out how to support custom files without muddying user config</li>
@@ -188,7 +187,7 @@
 		{/snippet}
 
 		<!-- prettier-ignore -->
-		<p><strong>my base stylesheet — a minimal, opinionated layer of typographic and layout defaults</strong>. a tiny css file that captures the base styles i reach for in every project — clean, consistent, and unintrusive. it's my reset, my starting point, and my design sense in single file.</p>
+		<p><strong>my base stylesheet — a minimal, opinionated layer of typographic and layout defaults</strong>. a tiny css file that i reach for in every project for a clean and consistent styling. it's my reset and my design sense in single file.</p>
 		<ul>
 			<li>refined my baseline styles into something i could reuse everywhere</li>
 			<li>learned how little css you actually need to feel at home in a new project</li>
@@ -216,7 +215,7 @@
 		{/snippet}
 
 		<!-- prettier-ignore -->
-		<p><strong>a personal starter template. unzip, rename, and start building — everything else is already dialed in</strong>. it's the setup i reach for every time: minimal, predictable, and out of my way. everything i need, nothing i don't.</p>
+		<p><strong>a personal starter template. download, unzip, and start building — everything else is already dialed in</strong>. it's the setup i reach for every time. it's got everything i need, and nothing i don't.</p>
 		<ul>
 			<li>trimmed setup scripts, config files, and folder structure down to the essentials</li>
 		</ul>

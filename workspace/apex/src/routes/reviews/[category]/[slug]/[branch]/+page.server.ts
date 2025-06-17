@@ -15,7 +15,7 @@ export async function load({ parent, params }) {
 		article: branch,
 		source: `reviews/${branch.slug}/+${params.branch}.md`,
 		meta: {
-			canonical: `reviews/${branch.slug}/${params.branch}`,
+			canonical: `/reviews/${branch.slug}/${params.branch}`,
 			title: branch.title,
 		},
 	};

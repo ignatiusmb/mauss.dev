@@ -9,7 +9,7 @@ export async function load({ parent, params }) {
 		article,
 		source: `curated/${article.slug}/+article.md`,
 		meta: {
-			canonical: `curated/${article.slug}`,
+			canonical: `/curated/${article.slug}`,
 			title: article.title,
 		},
 	};
