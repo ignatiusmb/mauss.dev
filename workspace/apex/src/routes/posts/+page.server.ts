@@ -2,8 +2,14 @@ import type { Config } from '@sveltejs/adapter-vercel';
 import type { by } from './search.svelte';
 import { scope } from 'mauss';
 import { qsd } from 'mauss/web';
+import { EXPIRATION } from '$lib/globals';
 
-const allowed = ['q', 'tags', 'sort_by'];
+export const config: Config = {
+	isr: {
+		expiration: EXPIRATION,
+		allowQuery: ['q', 'category', 'tags', 'sort_by'],
+	},
+};
 
 export async function load({ parent, url }) {
 	const { items, metadata } = await parent();
@@ -37,10 +43,3 @@ export async function load({ parent, url }) {
 		},
 	};
 }
-
-export const config: Config = {
-	isr: {
-		expiration: 60 * 15,
-		allowQuery: allowed,
-	},
-};

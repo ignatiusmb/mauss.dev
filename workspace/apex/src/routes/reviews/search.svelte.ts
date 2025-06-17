@@ -1,4 +1,4 @@
-import type { Schema } from '$content/reviews.json/+server.js';
+import type { Schema } from '$content/reviews.json/+server';
 import * as compare from 'mauss/compare';
 
 type Item = Schema['items'][number];
