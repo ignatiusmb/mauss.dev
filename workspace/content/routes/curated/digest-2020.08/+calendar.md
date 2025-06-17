@@ -48,7 +48,7 @@ title: Calendar
 
 ## 12
 
-[[Reddit](https://www.reddit.com/r/anime/comments/i8bhjx/shizuka_furuya_nano_from_nichijou_returns_to/) | [Article](https://www.animatetimes.com/news/details.php?id=1596207304)] Shizuka Furuya (Nano from [Nichijou](/reviews?q=nichijou)) returns to voice acting after 5-year hiatus that resulted from being run over by a 4-ton truck
+[[Reddit](https://www.reddit.com/r/anime/comments/i8bhjx/shizuka_furuya_nano_from_nichijou_returns_to/) | [Article](https://www.animatetimes.com/news/details.php?id=1596207304)] Shizuka Furuya (Nano from [Nichijou](/reviews/anime/nichijou)) returns to voice acting after 5-year hiatus that resulted from being run over by a 4-ton truck
 
 [[Reddit](https://www.reddit.com/r/programming/comments/i8e0ai/boeing_747s_still_use_floppy_disks_to_get/) | [Article](https://www.theregister.com/2020/08/10/boeing_747_floppy_drive_updates_walkthrough/)] Boeing 747s Still Use Floppy Disks to Get Software Updates
 

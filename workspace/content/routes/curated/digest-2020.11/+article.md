@@ -35,7 +35,7 @@ Not really an article, but a really informative reply explaining what and why Go
 
 ## Content of the month
 
-![alt#f#fb](https://image.tmdb.org/t/p/original/gdGALiQygd7x4MpazAEvpjB6quS.jpg "[[TMDB](https://image.tmdb.org/t/p/original/gdGALiQygd7x4MpazAEvpjB6quS.jpg)] Grimgar: Ashes and Illusions | [See Review](/reviews?q=Grimgar+Ashes+and+Illusions)")
+![alt#f#fb](https://image.tmdb.org/t/p/original/gdGALiQygd7x4MpazAEvpjB6quS.jpg "[[TMDB](https://image.tmdb.org/t/p/original/gdGALiQygd7x4MpazAEvpjB6quS.jpg)] Grimgar: Ashes and Illusions | [See Review](/reviews/anime/hai-to-gensou-no-grimgar)")
 
 Probably the best Isekai Drama that will ever exist (*ahem* prove me wrong). It's truly sad that this might not ever get a second season. Yes, sorry to spoil the fun early but you deserve to know this before you get too attached to Grimgar like myself. Feel free to explore why that's the case here, but either way, this is a truly good show to watch and follow.
 
@@ -43,15 +43,15 @@ Probably the best Isekai Drama that will ever exist (*ahem* prove me wrong). It'
 
 This month is also quite slow but there's still some interesting shows I finished just in time before December starts. Here's some of my recommendations.
 
-- [[Alkamauss](/reviews?q=Danshi+Koukousei+no+Nichijou)] Daily Lives of High School Boys
+- [[Alkamauss](/reviews/anime/danshi-koukousei-no-nichijou)] Daily Lives of High School Boys
 
 A contestant to last month's content, Nichijou. Their absurd humour rivals each other and really just a fun show to watch that will certainly make you laugh. It's comedy is just direct and plain funny without having to think too hard like Nichijou.
 
-- [[Alkamauss](/reviews?q=KONOSUBA+Legend+of+Crimson)] KONOSUBA Movie: Legend of Crimson
+- [[Alkamauss](/reviews/movie/konosuba-legend-of-crimson)] KONOSUBA Movie: Legend of Crimson
 
 One of the best animated movie (not like there's a lot of movies to begin with), especially if you follow KonoSuba from the first season and enjoyed it as much as the second season. Totally recommended for you who have watched the show, but totally not recommended if you haven't. Watch the show first before you watch this! Trust me on this.
 
-- [[Alkamauss](/reviews?q=Maquia)] Maquia: When the Promised Flower Blooms
+- [[Alkamauss](/reviews/movie/maquia-when-the-promised-flower-blooms)] Maquia: When the Promised Flower Blooms
 
 Not as sad or touching as I imagined, perhaps my expectations were a bit high because of the barrage of recommendations for this movie. But, either way this is still a good movie with a unique story.
 

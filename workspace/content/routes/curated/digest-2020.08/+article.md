@@ -33,7 +33,7 @@ Even though this article wasn't published in August, it really helped me underst
 
 ## Content of the month
 
-![Kill la Kill backdrop#f#hb](https://image.tmdb.org/t/p/original/kFJTEDYjm1EuowbYo7qcaJUBFXA.jpg "[[TMDB](https://image.tmdb.org/t/p/original/yECUoiSTtm3MV6BRc5WV1bh6xS7.jpg)] Kill la Kill | [See Review](/reviews?q=Kill+la+Kill)")
+![Kill la Kill backdrop#f#hb](https://image.tmdb.org/t/p/original/kFJTEDYjm1EuowbYo7qcaJUBFXA.jpg "[[TMDB](https://image.tmdb.org/t/p/original/yECUoiSTtm3MV6BRc5WV1bh6xS7.jpg)] Kill la Kill | [See Review](/reviews/anime/kill-la-kill)")
 
 August's content of the month is an anime that goes by the name of *Kill la Kill* or **Dressed to Kill**. An over the top action anime with a unique art style, absolutely stellar soundtracks, and a story so good it's on par with FMA. Check out the full review in [Reviews](/reviews) section, or click the link in the caption above.
 
@@ -43,11 +43,11 @@ August's content of the month is an anime that goes by the name of *Kill la Kill
 
 A really amazing work of art from a YouTuber who has made SpongeBob into an anime, separated according to its own arcs. It's not just a hobby project, it's fully voice acted and beautifully animated, not to mention its amazing soundtracks. If you watched SpongeBob in your childhood, you'll definitely need to watch this because it's just amazing.
 
-- [[Alkamauss](/reviews?q=an+angel+flew+down+to+me)] WATATEN!: an Angel Flew Down to Me
+- [[Alkamauss](/reviews/anime/watashi-ni-tenshi-ga-maiorita)] WATATEN!: an Angel Flew Down to Me
 
 WATATEN or Watashi ni Tenshi ga Maiorita was by far one of the best show I've enjoyed watching every second of it. [The review](/reviews/anime/watashi-ni-tenshi-ga-maiorita) is ready so go take a look for more details on this.
 
-- [[Alkamauss](/reviews?q=byousoku+5+centimeter)] Byousoku 5 Centimeter | [[Alkamauss](/reviews?q=kimi+no+na+wa)] Kimi no Na wa | [[Alkamauss](/reviews?q=tenki+no+ko)] Tenki no Ko
+- [[Alkamauss](/reviews/movie/byousoku-5-centimeter)] Byousoku 5 Centimeter | [[Alkamauss](/reviews/movie/kimi-no-na-wa)] Kimi no Na wa | [[Alkamauss](/reviews/movie/tenki-no-ko)] Tenki no Ko
 
 Basically the top 3 of Makoto Shinkai works. I really can't say much about this other than how great it is. The animations are beautiful, worldbuilding are superb, and the soundtracks are outstanding. I love and enjoyed all of those 3 and I can't wait to discover more like this.
 

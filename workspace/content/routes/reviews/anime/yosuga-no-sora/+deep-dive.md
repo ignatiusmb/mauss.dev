@@ -12,7 +12,7 @@ well, hello there. i assume you've seen all 12 episodes and you know what's comi
 
 ## game-like storytelling
 
-*yosuga no sora* adapts the branching format of its original adult visual novel. it splits into four distinct arcs, each focusing on a different girl, with the protagonist *haruka* as the constant. each route is self-contained; there's no continuity between them aside from episode 1. supporting characters reappear across arcs, but only as background — no development carries over. this structure mimics the "load save file" function of the original game, and it shows.
+*yosuga no sora* adapts the branching format of its original adult visual novel. originally released as a game in 2008, then adapted into a manga in 2009, and finally into an anime in 2010. it splits into four distinct arcs, each focusing on a different girl, with the protagonist *haruka* as the constant. each route is self-contained; there's no continuity between them aside from episode 1. supporting characters reappear across arcs, but only as background — no development carries over. this structure mimics the "load save file" function of the original game, and it shows.
 
 it's jarring at first, especially without warning. if you didn't know better, episode 5 feels like a glitch. but once you understand the format, the narrative experiment becomes more interesting — even if not all arcs are equally strong. i didn't know it was based on a visual novel, or that it followed a branching narrative: different girls, different choices, different endings. i like that it plays out like a game with a save point, letting us experience every path. but it also feels like wasted potential. a linear plot might've landed better.
 
