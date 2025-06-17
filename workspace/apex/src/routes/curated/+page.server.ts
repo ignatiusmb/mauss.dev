@@ -5,7 +5,7 @@ import { EXPIRATION } from '$lib/globals';
 export const config: Config = {
 	isr: {
 		expiration: EXPIRATION,
-		allowQuery: ['q', 'category', 'tags', 'sort_by'],
+		allowQuery: ['q'],
 	},
 };
 
