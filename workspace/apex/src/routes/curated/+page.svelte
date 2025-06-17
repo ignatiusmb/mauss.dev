@@ -15,7 +15,7 @@
 </header>
 
 <SearchBar
-	value=""
+	value={data.query.replace(/\+/g, ' ')}
 	items={data.list}
 	sieve={({ query, normalize, item }) => {
 		const value = normalize(query);
