@@ -1,4 +1,4 @@
-import type { Schema } from '$content/posts.json/+server.js';
+import type { Schema } from '$content/posts.json/+server';
 import * as compare from 'mauss/compare';
 
 type Item = Schema['items'][number];

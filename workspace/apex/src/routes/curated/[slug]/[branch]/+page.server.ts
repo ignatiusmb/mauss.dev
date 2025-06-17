@@ -12,7 +12,7 @@ export async function load({ parent, params }) {
 		article: branch,
 		source: `curated/${branch.slug}/+${params.branch}.md`,
 		meta: {
-			canonical: `curated/${branch.slug}/${params.branch}`,
+			canonical: `/curated/${branch.slug}/${params.branch}`,
 			title: branch.title,
 		},
 	};

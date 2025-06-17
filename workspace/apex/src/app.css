@@ -54,3 +54,9 @@ a:hover,
 	border-radius: calc(var(--rounding-base) / 5);
 	outline: 1px solid var(--color-text);
 }
+
+@media (min-width: 549px) {
+	[data-visible='mobile'] {
+		display: none;
+	}
+}

@@ -8,9 +8,7 @@
 	<small style:text-align="center">still afloat. always drifting, never adrift.</small>
 
 	<!-- prettier-ignore -->
-	<p>Alkamauss is a diary of sorts — a reflection of my experiences, inspirations, and evolving thoughts. a virtual abode shaped with intent, a space where i try to express myself with clarity and honesty.</p>
-	<!-- prettier-ignore -->
-	<p>i'm embracing the idea of a digital garden. this site is always under construction — slowly growing as i plant new seeds and tend to older ones. over time, i hope it becomes a space worth visiting: imperfect, but alive.</p>
+	<p>Alkamauss is a virtual abode — filled with reflections of my experiences and evolving thoughts, it's a space where i try to express myself with clarity and honesty. embracing the idea of <strong>a digital garden</strong>, i treat this site as a living archive that will always be under construction, slowly growing as i plant new seeds and tend to older ones. over time, i hope it becomes a space worth visiting: <em>imperfect, but alive</em>.</p>
 
 	<hr style:width="100%" />
 	<!-- prettier-ignore -->
@@ -35,7 +33,7 @@
 		<span>how i write</span>
 	</h2>
 	<!-- prettier-ignore -->
-	<p>most of my writing on this site is in lowercase. it might seem unusual if you're not used to this style, but for me, it's simply how my thoughts come out — honest and personal. it's like casual chatting: it strips away the performance and lets me focus on what i'm trying to say, not how it's dressed up.</p>
+	<p>most of my writing on this site is in lowercase. it might seem unusual if you're not used to this style, but i feel more grounded and honest as it helps me convey my thoughts and feelings better. like chatting in an instant messenger your good friend, it strips away the pressure to perform and lets me focus on what i'm trying to say, not how it's dressed up.</p>
 	<!-- prettier-ignore -->
 	<p>that said, <em>i can write formally when it counts</em>. for formal spaces, i switch to proper casing. the rest is almost always an organized mess — written as freely and naturally as i think it, as i try to make sense and articulate myself.</p>
 
@@ -49,41 +47,41 @@
 		<a href="/curated">/curated</a>
 	</h2>
 	<!-- prettier-ignore -->
-	<p>the curated route is a home for things i find meaningful enough to deserve their own timeless post — content that holds up no matter when it's read.</p>
+	<p>the content that holds up no matter when it's read. things i find meaningful enough that i wished i had or was able to see back then.</p>
 
 	<h2 id="posts">
 		<i data-icon="article"></i>
 		<a href="/posts">/posts</a>
 	</h2>
 	<!-- prettier-ignore -->
-	<p>these are blog entries for moments, thoughts, or things worth sharing. you'll find reflections on life, occasional tutorials, and observations on technology — sometimes specific, sometimes just wandering.</p>
+	<p>these are blog entries for unadulterated moments. sometimes technical, sometimes personal, and often times just wandering.</p>
 
 	<h2 id="reviews">
 		<i data-icon="list-star"></i>
 		<a href="/reviews">/reviews</a>
 	</h2>
 	<!-- prettier-ignore -->
-	<p>reviews are where i express myself most freely. i approach each piece — anime, film, games, or otherwise — with care, treating reviews as a way to reflect and show appreciation for the work, even if i don't recommend it. there's always something to learn.</p>
+	<p>my favorite index so far, reviews are where i express myself most freely. i approach each piece with care, treating a review as a way to reflect and show appreciation for the work. even if i don't recommend it, i doubt i won't find something to learn.</p>
 	<!-- prettier-ignore -->
-	<p>many entries come with a spoilers sub-page — a space for overanalysis, loose theorizing, or simply discussing the big moments that deserve more than a vague summary. some of them are written to spark conversation, others just to get thoughts out of my head.</p>
+	<p>almost all entries will be accompanied with a <strong>/deep-dive</strong> sub-page — a space for overanalysis, loose theorizing, or simply discussing the moments that deserve more attention. some of them are written to spark conversation, others just to get the thoughts out of my head.</p>
 
 	<h3 id="reviews-how-i-review">
 		<i data-icon="strategy"></i>
 		<span>how i review</span>
 	</h3>
 	<!-- prettier-ignore -->
-	<p>i believe stories are best experienced blind — especially anime. that's why i avoid summaries, spoilers, or even naming key details. the goal is to preserve the surprise, tension, and emotional impact so you can meet the story with the same curiosity i had.</p>
+	<p>i believe stories are best experienced blind — especially anime. that's why i avoid summaries, spoilers, or even naming any specific details. the goal is to preserve the surprise, tension, and emotional impact so you can meet the story with the same curiosity i had. i often find myself enjoying the stories i know nothing of more than those i read about beforehand.</p>
 	<!-- prettier-ignore -->
-	<p>for anime, i usually give it three to four episodes before deciding to continue or drop it — just enough to get a feel for the pacing, tone, and direction without overcommitting. still need a synopsis or cast info before diving in? i've linked official sources like <abbr title="The Movie Database">TMDB</abbr>, <abbr title="Internet Movie Database">IMDB</abbr>, or <abbr title="MyAnimeList">MAL</abbr> for each review.</p>
+	<p>for anime, i usually give it three to four episodes before deciding to continue or drop it — just enough to get a feel for the pacing, tone, and direction without overcommitting. i'm not one to judge, if you're someone that needs a synopsis or plot summary before diving in, i've linked official sources like <abbr title="The Movie Database">TMDB</abbr>, <abbr title="Internet Movie Database">IMDB</abbr>, or <abbr title="MyAnimeList">MAL</abbr> for each review.</p>
 	<!-- prettier-ignore -->
-	<p>for a more in-depth discussion, head over to the <strong>/deep-dive</strong> sub-page. that's where i unpack themes, dissect key moments, and share post-watch reflections — more like a conversation than a critique.</p>
+	<p>for a more in-depth discussion, head over to each of the <strong>/deep-dive</strong> sub-page. that's where i'll be doing my <em>actual</em> review where i unpack the story, dissect key moments, and share post-watch reflections — think of it as more like a discussion.</p>
 
 	<h3 id="reviews-attributions">
 		<i data-icon="certificate"></i>
 		<span>attributions</span>
 	</h3>
 	<!-- prettier-ignore -->
-	<p>images are sourced and linked from <a href="https://www.themoviedb.org/" target="_blank">TMDB</a>, used in accordance with their <a href="https://www.themoviedb.org/about/logos-attribution" target="_blank">terms of use for logos and attribution</a>. i'm not affiliated with them in any way — their tools are simply convenient and publicly available. all reviews and opinions are my own, any questions or concerns can be directed to me.</p>
+	<p>images are sourced and linked from <a href="https://www.themoviedb.org" target="_blank">TMDB</a>, used in accordance with their <a href="https://www.themoviedb.org/about/logos-attribution" target="_blank">terms of use for logos and attribution</a>. i'm not affiliated with them in any way — their tools are simply convenient and publicly available. all reviews and opinions are my own, any questions or concerns can be directed to me.</p>
 	<p>
 		<img
 			src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg"
@@ -96,7 +94,7 @@
 		<a href="/uses">/uses</a>
 	</h2>
 	<!-- prettier-ignore -->
-	<p>this page is a focused snapshot of my current setup — hardware, apps, and wellness essentials that support my daily workflow and well-being. it also serves as a personal reference point, a benchmark for longevity and future upgrades. if it's listed, it's what i trust and rely on every day.</p>
+	<p>this page is a focused snapshot of my current setup — hardware, apps, and wellness essentials that support my daily workflow and well-being. it also serves as my personal reference point, a benchmark for longevity and consideration for future upgrades. if it's listed, it's what i trust and rely on every day.</p>
 	<!-- prettier-ignore -->
 	<p>i spend hours or even days researching and testing before settling on something, i want the best for the job so i won't have to worry about its longevity. once i find the right fit, i stick with it to avoid constant switching and to build familiarity and comfort over time.</p>
 
@@ -105,7 +103,7 @@
 		<a href="/rss.xml">/rss.xml</a>
 	</h2>
 	<!-- prettier-ignore -->
-	<p>if you're one of the cool kids with a curated feed and prefer keeping up through rss, you'll find the link via the icon in the footer of the page — subscribe to get the latest posts, reviews, and curated entries as soon as they go live. no invasive algorithms, just direct updates.</p>
+	<p>if you're one of the cool kids with a curated feed and prefer keeping up through rss, you'll find the link via the icon in the footer of the page — subscribe to get the latest entries as soon as they go live, straight to your feed.</p>
 
 	<h2 id="colophon">
 		<i data-icon="stack"></i>
@@ -115,7 +113,7 @@
 	<p>credit where it's due. this site is built using open-source tools and thoughtfully chosen components that make it what it is.</p>
 	<ul>
 		<li>
-			<strong><a href="https://svelte.dev/" target="_blank">sveltekit</a></strong>
+			<strong><a href="https://svelte.dev" target="_blank">sveltekit</a></strong>
 			<span>the web framework that makes all of this feel effortless.</span>
 		</li>
 		<li>
@@ -123,11 +121,11 @@
 			<span>the minimal and lightweight, all-in-one backend + database.</span>
 		</li>
 		<li>
-			<strong><a href="https://phosphoricons.com/" target="_blank">phosphor</a></strong>
+			<strong><a href="https://phosphoricons.com" target="_blank">phosphor</a></strong>
 			<span>clean, beautiful, and versatile open-source icons.</span>
 		</li>
 		<li>
-			<strong><a href="https://fontsource.org/" target="_blank">fontsource</a></strong>
+			<strong><a href="https://fontsource.org" target="_blank">fontsource</a></strong>
 			<span>self-hosted fonts for better performance and privacy.</span>
 		</li>
 		<li>

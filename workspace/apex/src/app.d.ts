@@ -9,7 +9,7 @@ declare global {
 		interface PageData {
 			meta: {
 				title: string;
-				canonical?: string;
+				canonical: `/${string}`;
 				description?: string;
 				og?: {
 					title: string;

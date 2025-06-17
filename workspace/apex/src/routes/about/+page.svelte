@@ -13,7 +13,7 @@
 		</h1>
 
 		<!-- prettier-ignore -->
-		<p>I'm Igna. I think best in quiet spaces and I tend to keep to them. Most of my time goes into building—clean code, tight interfaces, and systems that make sense. When I'm not at the desk, I train for discipline: calisthenics, bouldering, tennis, and long runs. Movement clears the noise.</p>
+		<p>I'm Igna. I'm more comfortable focusing on my thoughts and ideas, which also means most of my time goes into building something to clear out my mind. When I'm not at the desk, I try to move myself as it also helps clears the noise.</p>
 	</header>
 
 	<h3 id="expertise">
@@ -21,13 +21,13 @@
 		<span>expertise.</span>
 	</h3>
 	<!-- prettier-ignore -->
-	<p>I'm a software engineer by trade, but I like to think of myself more as a <em>software alchemist</em>. I see it as a kind of art—taking something complex, messy, or inefficient, and refining it into something simple, elegant, and fast.</p>
+	<p>I'm a software engineer by trade, but I like to think of myself more as a <em>software alchemist</em>. I see what I'm doing as a kind of art — taking something complex and trying to refine it into something simple and elegant.</p>
 	<!-- prettier-ignore -->
-	<p>My strength lies in restructuring systems and streamlining logic—shaving away the noise until what remains just works. The payoff? Easier debugging, quicker iteration, and codebases you don't dread revisiting.</p>
+	<p>My strength lies in restructuring systems and streamlining logic, shaving away the noise until what remains just works. I found that the time I spent there is well worth the payoff: easier debugging, quicker iteration, and codebases I don't dread revisiting.</p>
 	<!-- prettier-ignore -->
-	<p>These days, I build mostly for the web, working with <a href="https://svelte.dev" target="_blank">Svelte</a> and <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>. I've explored a wide spectrum of languages: <a href="https://en.wikipedia.org/wiki/Assembly_language" target="_blank">Assembly</a>, <a href="https://www.gnu.org/software/bash/" target="_blank">Bash</a>, <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank">C</a>, <a href="https://en.wikipedia.org/wiki/C++" target="_blank">C++</a>, <a href="https://dart.dev/" target="_blank">Dart</a> (<a href="https://flutter.dev/" target="_blank">Flutter</a>), <a href="https://godotengine.org/" target="_blank">GDScript</a>, <a href="https://www.haskell.org/" target="_blank">Haskell</a>, <a href="https://en.wikipedia.org/wiki/Java_%28programming_language%29" target="_blank">Java</a>, <a href="https://www.python.org/" target="_blank">Python</a>, and a few others I've probably forgotten. I don't mind the language. Once you understand the fundamentals, the rest follows.</p>
+	<p>As a solo dev, I build mostly for the web, working with <a href="https://svelte.dev" target="_blank">Svelte</a> and <a href="https://www.typescriptlang.org" target="_blank">TypeScript</a>. I've also explored a wide spectrum of languages: <a href="https://en.wikipedia.org/wiki/Assembly_language" target="_blank">Assembly</a>, <a href="https://www.gnu.org/software/bash" target="_blank">Bash</a>, <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank">C</a>, <a href="https://en.wikipedia.org/wiki/C++" target="_blank">C++</a>, <a href="https://dart.dev" target="_blank">Dart</a> (<a href="https://flutter.dev" target="_blank">Flutter</a>), <a href="https://godotengine.org" target="_blank">GDScript</a>, <a href="https://www.haskell.org" target="_blank">Haskell</a>, <a href="https://en.wikipedia.org/wiki/Java_%28programming_language%29" target="_blank">Java</a>, <a href="https://www.python.org" target="_blank">Python</a>, and a few others I've probably forgotten. I don't mind the language that much, once you understand the fundamentals, the rest will follow naturally.</p>
 	<!-- prettier-ignore -->
-	<p>Though I can go full-stack when needed, my focus is frontend. I care about interfaces—how they feel, how they guide, how they stay out of the way.</p>
+	<p>Though I can go full-stack when needed, my focus is frontend as I care about the interfaces I spent my time on.</p>
 
 	<h3 id="now">
 		<i data-icon="calendar-dots"></i>
@@ -165,7 +165,7 @@
 		</li>
 		<li>
 			<a href="https://www.linkedin.com/in/ignatiusmb" target="_blank">linkedin</a>
-			<span>for professional things</span>
+			<span>i don't like using this</span>
 		</li>
 		<li>
 			<a href="https://twitter.com/alchemauss" target="_blank">twitter (x)</a>

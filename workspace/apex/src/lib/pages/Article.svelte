@@ -103,7 +103,7 @@
 				{#snippet sibling(type: 'back' | 'next', { slug, title }: NonNullable<Flank>)}
 					{@const text = typeof title === 'string' ? title : title.jp || title.en}
 
-					<a href="/{slug}/" data-flank={type} style:grid-column={wide}>
+					<a href="/{slug}" data-flank={type} style:grid-column={wide}>
 						<strong>
 							{#if type === 'back'}
 								<i data-icon="arrow-circle-left"></i>

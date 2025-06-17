@@ -28,8 +28,11 @@
 	</label>
 
 	<menu>
+		<li data-visible="mobile">{@render link('about', 'id-badge')}</li>
 		<li>{@render link('uses', 'bookmark')}</li>
 		<li>{@render link('help', 'lifebuoy')}</li>
+		<li data-visible="mobile">{@render link('rss.xml', 'rss')}</li>
+		<li data-visible="mobile">{@render link('sponsor', 'hand-heart')}</li>
 	</menu>
 </nav>
 

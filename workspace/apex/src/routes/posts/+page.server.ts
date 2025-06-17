@@ -36,7 +36,7 @@ export async function load({ parent, url }) {
 			}),
 		},
 		meta: {
-			canonical: 'posts',
+			canonical: '/posts',
 			title: 'Posts',
 			description:
 				'Essays and thoughts on life, tech, and everything in between — sometimes structured, sometimes spontaneous.',
