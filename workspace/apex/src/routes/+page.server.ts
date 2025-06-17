@@ -2,9 +2,9 @@ import { channel } from './rss.xml/builder';
 
 export async function load({ fetch }) {
 	const [{ items: curated }, { items: posts }, { items: reviews }]: [
-		import('$content/curated.json/+server.js').Schema,
-		import('$content/posts.json/+server.js').Schema,
-		import('$content/reviews.json/+server.js').Schema,
+		import('$content/curated.json/+server').Schema,
+		import('$content/posts.json/+server').Schema,
+		import('$content/reviews.json/+server').Schema,
 	] = await Promise.all([
 		fetch('/content/curated.json').then((r) => r.json()),
 		fetch('/content/posts.json').then((r) => r.json()),

@@ -1,4 +1,4 @@
-import type { Schema } from '$content/curated.json/+server.js';
+import type { Schema } from '$content/curated.json/+server';
 import type { Config } from '@sveltejs/adapter-vercel';
 
 export async function load({ fetch }) {

@@ -1,24 +1,36 @@
+import type { Config } from '@sveltejs/adapter-vercel';
 import type { by } from './search.svelte';
 import { scope } from 'mauss';
+import { qsd } from 'mauss/web';
+import { EXPIRATION } from '$lib/globals';
+
+export const config: Config = {
+	isr: {
+		expiration: EXPIRATION,
+		allowQuery: ['q', 'category', 'tags', 'sort_by'],
+	},
+};
 
 export async function load({ parent, url }) {
 	const { items, metadata } = await parent();
+	const { q = '', category = '', tag = [], sort_by = 'date' } = qsd(url.search);
 
 	return {
 		list: items,
+		query: typeof q === 'string' ? q : q[0],
 		filters: {
 			category: scope(() => {
 				const options = metadata.categories.reduce((a, v) => ({ ...a, [v]: v }), {});
-				const selected = url.searchParams.get('category') || '';
+				const selected = typeof category === 'string' ? category : category[0];
 				return { options, selected: selected in options ? selected : '' };
 			}),
 			tags: scope(() => {
-				const selected = url.searchParams.get('tags')?.split('-') || [];
+				const selected = typeof tag === 'string' ? [tag] : tag;
 				return metadata.tags.map((v) => ({ name: v, selected: selected.includes(v) }));
 			}),
 			sort_by: scope(() => {
 				const options = { date: 'Date' } satisfies Record<keyof typeof by, string>;
-				const sort = url.searchParams.get('sort_by') || '';
+				const sort = typeof sort_by === 'string' ? sort_by : sort_by[0];
 				const selected = (sort in options && sort) || 'date';
 				return { required: true, options, selected: selected as keyof typeof by };
 			}),
