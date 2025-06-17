@@ -29,15 +29,15 @@ This isn't the typical article I used to feature here, but I've had my share wit
 
 ## Content of the month
 
-![Jujutsu Kaisen Backdrop#f#fb](https://www.themoviedb.org/t/p/original/eqM26U3HHfvwEcFoMObQc5NYGoc.jpg "[[TMDB](https://www.themoviedb.org/t/p/original/eqM26U3HHfvwEcFoMObQc5NYGoc.jpg)] Jujutsu Kaisen | [See Review](/reviews?q=Jujutsu+Kaisen)")
+![Jujutsu Kaisen Backdrop#f#fb](https://www.themoviedb.org/t/p/original/eqM26U3HHfvwEcFoMObQc5NYGoc.jpg "[[TMDB](https://www.themoviedb.org/t/p/original/eqM26U3HHfvwEcFoMObQc5NYGoc.jpg)] Jujutsu Kaisen | [See Review](/reviews/anime/jujutsu-kaisen)")
 
 It was tough between Jujutsu Kaisen and Re:Zero Season 2, but JJK really won me with their continuous action scenes every 3 to 4 episodes. It's indeed action-heavy and it was a real pleasure to watch every episode of it.
 
 ### Honorable content mentions
 
-- [[Alkamauss](/reviews?q=Re:Zero)] Re:Zero Season 2
-- [[Alkamauss](/reviews?q=Mushoku+Tensei)] Mushoku Tensei
-- [[Alkamauss](/reviews?q=Hataraku+Saibou+Black)] Cells at Work! CODE BLACK!
+- [[Alkamauss](/reviews/anime/re-zero-starting-life-in-another-world)] Re:Zero Season 2
+- [[Alkamauss](/reviews/anime/mushoku-tensei)] Mushoku Tensei
+- [[Alkamauss](/reviews/anime/hataraku-saibou-black)] Cells at Work! CODE BLACK!
 
 Doesn't mean that these shows are to be ignored, especially the second season of Re:Zero! It would've definitely be my content highlight if only it didn't end in the same month as Jujutsu Kaisen. Premieres will be prioritized too, that's why Re:Zero is here.
 

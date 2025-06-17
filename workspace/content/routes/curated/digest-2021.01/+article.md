@@ -38,7 +38,7 @@ A Google product related articles. Worth the read for those learning Computer Sc
 
 ## Content of the month
 
-![Demon Slayer Mugen Train#f#fb](https://www.themoviedb.org/t/p/original/xoqr4dMbRJnzuhsWDF3XNHQwJ9x.jpg "[[TMDB](https://www.themoviedb.org/t/p/original/xoqr4dMbRJnzuhsWDF3XNHQwJ9x.jpg)] Demon Slayer: Infinity Train | [See Review](/reviews?q=Demon+Slayer+Mugen+Train)")
+![Demon Slayer Mugen Train#f#fb](https://www.themoviedb.org/t/p/original/xoqr4dMbRJnzuhsWDF3XNHQwJ9x.jpg "[[TMDB](https://www.themoviedb.org/t/p/original/xoqr4dMbRJnzuhsWDF3XNHQwJ9x.jpg)] Demon Slayer: Infinity Train | [See Review](/reviews/movie/kimetsu-no-yaiba-movie-mugen-ressha-hen)")
 
 This is a given. You know it's coming. The highlight of January 2021. A great way to start the year is to definitely watch this! It's popularity is on-par with Spirited Away and Your Name. If you haven't watched the first season, I highly recommend you do so. If you have, the what are you waiting for.
 

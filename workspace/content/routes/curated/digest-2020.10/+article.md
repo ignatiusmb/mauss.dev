@@ -29,7 +29,7 @@ I was recommended to take a look at this article earlier this month, it was quit
 
 ## Content of the month
 
-![Nichijou banner#f#hb](https://image.tmdb.org/t/p/original/3PQEbMOgQyOESo3XwtlJvZw6uoA.jpg "[[TMDB](https://image.tmdb.org/t/p/original/3PQEbMOgQyOESo3XwtlJvZw6uoA.jpg)] Nichijou | [See Review](/reviews?q=Nichijou%3A+My+Ordinary+Life)")
+![Nichijou banner#f#hb](https://image.tmdb.org/t/p/original/3PQEbMOgQyOESo3XwtlJvZw6uoA.jpg "[[TMDB](https://image.tmdb.org/t/p/original/3PQEbMOgQyOESo3XwtlJvZw6uoA.jpg)] Nichijou | [See Review](/reviews/anime/nichijou)")
 
 This month has been quite stressful and I've just realized how comforting and encouraging a good laugh really is, and Nichijou has accompanied me and never fails to make me laugh or smile every time I watched it again. In fact, for some of their clips, it gets even funnier. You may need to think hard for some of the jokes, but it's really funny once you get it.
 
@@ -37,9 +37,9 @@ This month has been quite stressful and I've just realized how comforting and en
 
 I haven't really had much time to finish most shows this month, and I don't usually mention shows that's not finished yet. But, here's a couple worthwhile for you to follow and enjoy as it's still going on.
 
-- [[Alkamauss](/reviews?q=Adachi+and+Shimamura)] Adachi and Shimamura
-- [[Alkamauss](/reviews?q=Jujutsu+Kaisen)] Jujutsu Kaisen
-- [[Alkamauss](/reviews?q=TONIKAWA)] TONIKAWA: Over the Moon For You
+- [[Alkamauss](/reviews/anime/adachi-to-shimamura)] Adachi and Shimamura
+- [[Alkamauss](/reviews/anime/jujutsu-kaisen)] Jujutsu Kaisen
+- [[Alkamauss](/reviews/anime/tonikaku-kawaii)] TONIKAWA: Over the Moon For You
 
 ## Music of the month | [Spotify Playlist](spotify:playlist:5MEc6r4ZMyu4W9gNk4CXtY)
 

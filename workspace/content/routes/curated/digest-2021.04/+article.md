@@ -27,7 +27,7 @@ An interesting article from one of my favorite community, Jellyfin software. Rea
 
 ## Content of the month
 
-![DDLC Backdrop#f#fb](https://wallpapercave.com/wp/wp2367709.png "[[WallpaperCave](https://wallpapercave.com/wp/wp2367709.png)] Doki Doki Literature Club | [See Review](/reviews?q=Doki+Doki+Literature+Club)")
+![DDLC Backdrop#f#fb](https://wallpapercave.com/wp/wp2367709.png "[[WallpaperCave](https://wallpapercave.com/wp/wp2367709.png)] Doki Doki Literature Club | [See Review](/reviews/anime/doki-doki-literature-club)")
 
 A bit different this month, and perhaps way too late, but I know a lot who doesn't know about this yet. This content's spotlight is a game from 2017, was nominated for multiple categories, and [won the IGN people's choice for every category](http://teamsalvato.com/blog/ddlc-wins-ign-peoples-choice-for-every-category/) it was nominated for.
 
@@ -35,15 +35,15 @@ An amazing game *no one* should ever play. Yeah, I know I'm contradicting myself
 
 ### Honorable content mentions
 
-- [[Alkamauss](/reviews?q=Mahou+Shoujou+Madoka+Magica)] Mahou Shoujou Madoka★Magica
+- [[Alkamauss](/reviews/anime/mahou-shoujo-madoka-magica)] Mahou Shoujo Madoka★Magica
 
 This was on r/anime rewatch and it reminded me to continue watching it again. Yep, first-timer for a lot of these old and classic masterpieces, and indeed it was such a masterpiece for an original work. From an amazing studio with amazing art-style, sound design, and especially the story, everything about this is just so good. The [rewatch thread](https://www.reddit.com/r/anime/comments/n1gn4h/mahou_shoujo_madokamagica_rewatch_episode_10/) for the best episode.
 
-- [[Alkamauss](/reviews?q=Blend+S)] Blend S
+- [[Alkamauss](/reviews/anime/blend-s)] Blend S
 
 Taking a break from all the psychological horror/thriller, this was really a nice getaway to run to. Initially in for the memes, I was pretty invested in the characters and story. Sadly, it's a short season with only 12 episodes, but it means it's a good one to binge-watch when you've got the time.
 
-- [[Alkamauss](/reviews?q=Horimiya)] Horimiya
+- [[Alkamauss](/reviews/anime/horimiya)] Horimiya
 
 An odd leftover from last winter's, this was just a really good and wholesome show. If you at least read some anime news, you've definitely heard about this one. The rest of this review is perhaps better saved for the full review later, so until then, just watch this, you'll know it when you watch it.
 
