@@ -22,7 +22,7 @@ export const channel = {
 	domain: 'mauss.dev',
 	title: 'Alkamauss — A Digital Atelier',
 	description:
-		'Seeing life through a shifting lens — where everyday moments, distant journeys, and personal echoes turn into stories worth holding.',
+		'seeing life through a shifting lens in a quiet corner of the web. where everyday moments, distant journeys, and personal echoes turn into stories worth holding.',
 };
 
 export function RSS(

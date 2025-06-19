@@ -4,7 +4,7 @@ export async function load() {
 			canonical: '/fine-print',
 			title: 'Fine Print',
 			description:
-				'This page outlines personal opinions, affiliate disclosures, content disclaimers, and how this site is run — all wrapped up in a simple, honest fine print.',
+				'a simple and honest fine print. this page outlines my personal opinions, affiliate disclosures, content disclaimers, and how this site is run.',
 		},
 	};
 }

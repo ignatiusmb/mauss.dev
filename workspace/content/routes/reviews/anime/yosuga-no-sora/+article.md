@@ -35,6 +35,6 @@ this wasn't my first anime, but it was the first that made me want to write abou
 
 it's *almost* hentai — but if that's what you're after, you'll find better elsewhere. this isn't your typical harem or romance anime, and it's not trying to be.
 
-go in with the right mindset. it's not for everyone. but if you're willing to sit with complex relationships and uncomfortable emotions, *yosuga no sora* might surprise you.
+go in with the right mindset. it's not for everyone. but if you're willing to sit with complex relationships and uncomfortable emotions, *yosuga no sora* might surprise you in ways i never expected myself.
 
 if you give this a shot, i'll see you on ***the other page***.
