@@ -17,13 +17,16 @@
 		summary="Help Index"
 		items={[
 			{ id: 'writing', title: 'how i write' },
+			{ id: 'atelier', title: '/atelier' },
 			{ id: 'curated', title: '/curated' },
 			{ id: 'posts', title: '/posts' },
 			{ id: 'reviews', title: '/reviews' },
 			{ id: 'reviews-how-i-review', title: 'how i review', level: 3 },
 			{ id: 'reviews-attributions', title: 'attributions', level: 3 },
+			{ id: 'about', title: '/about' },
 			{ id: 'uses', title: '/uses' },
 			{ id: 'rss', title: '/rss.xml' },
+			{ id: 'sponsor', title: '/sponsor' },
 			{ id: 'colophon', title: 'colophon' },
 		]}
 	/>
@@ -39,8 +42,15 @@
 
 	<section data-info="warning" style:margin="2rem 0">
 		<!-- prettier-ignore -->
-		<em>policies, stances, and small-but-important stuff — it's all in the <a href="/fine-print">fine print</a>.</em>
+		<em>policies, stances, and small-but-important stuff are all in the <a href="/fine-print">fine print</a>.</em>
 	</section>
+
+	<h2 id="atelier">
+		<i data-icon="flask"></i>
+		<a href="/atelier">/atelier</a>
+	</h2>
+	<!-- prettier-ignore -->
+	<p>the structured map of my digital garden in the literal sense, where ideas take form. each entry reflects not just the outcome, but also the thinking and lessons i've learned building it.</p>
 
 	<h2 id="curated">
 		<i data-icon="books"></i>
@@ -89,6 +99,13 @@
 		/>
 	</p>
 
+	<h2 id="about">
+		<i data-icon="id-badge"></i>
+		<a href="/about">/about</a>
+	</h2>
+	<!-- prettier-ignore -->
+	<p>a minimal introduction to who i am, what i do, and where to find me — including a few things you probably didn't ask for. also includes my <a href="/about#now">/now</a> as a small section here, which is usually a page of its own.</p>
+
 	<h2 id="uses">
 		<i data-icon="bookmark"></i>
 		<a href="/uses">/uses</a>
@@ -104,6 +121,13 @@
 	</h2>
 	<!-- prettier-ignore -->
 	<p>if you're one of the cool kids with a curated feed and prefer keeping up through rss, you'll find the link via the icon in the footer of the page — subscribe to get the latest entries as soon as they go live, straight to your feed.</p>
+
+	<h2 id="sponsor">
+		<i data-icon="hand-heart"></i>
+		<a href="/sponsor">/sponsor</a>
+	</h2>
+	<!-- prettier-ignore -->
+	<p>a redirect to my <a href="https://github.com/sponsors/ignatiusmb">GitHub Sponsors</a> page, where you can support me financially. i also accept support in other forms, such as sharing my work, giving feedback, or simply engaging with the content i create.</p>
 
 	<h2 id="colophon">
 		<i data-icon="stack"></i>

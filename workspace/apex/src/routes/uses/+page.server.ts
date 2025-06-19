@@ -5,7 +5,7 @@ export async function load() {
 			canonical: '/uses',
 			title: 'Uses',
 			description:
-				'A living inventory of the gear, apps, and wellness tools I rely on daily — selected with intent and documented for reference.',
+				'a focused snapshot of my current setup — hardware, apps, and wellness essentials that support my daily workflow and well-being.',
 		},
 	};
 }

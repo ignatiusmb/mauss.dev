@@ -19,8 +19,7 @@ export async function load({ parent, url }) {
 		meta: {
 			canonical: '/curated',
 			title: 'Curated',
-			description:
-				'Handpicked recommendations, lists, and timeless finds — compiled with care and meant to be explored at your own pace.',
+			description: 'handcrafted curation, meant to be explored at your own pace.',
 		},
 	};
 }

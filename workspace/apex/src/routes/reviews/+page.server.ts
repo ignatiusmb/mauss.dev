@@ -55,7 +55,7 @@ export async function load({ parent, url }) {
 			canonical: '/reviews',
 			title: 'Reviews',
 			description:
-				"Honest takes and detailed reflections on things I've watched, read, played, or used — blunt when needed, curious always.",
+				'where i express myself most freely. honest takes and detailed reflections for each piece.',
 		},
 	};
 }

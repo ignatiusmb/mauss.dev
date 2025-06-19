@@ -156,5 +156,15 @@ the show's tagline. and the key to understanding everything. they weren't runnin
 
 where no one else could reach them.
 
+## afterthoughts
+
+damn, that was depressing.
+
+i didn't expect to write this much about *yosuga no sora*. in fact, i didn't expect to write anything at all. but here we are. i like to believe that the last arc is the true ending to the story, i think the anime portrays it nicely.
+
+i've seen and read many interpretations, even some that suggest *haruka* and *sora* are still alive and just ran away together, but that doesn't sit right with me and i don't think it fits the tone of the show. the ending is tragic, but it feels like the only way to resolve their story. it's a bittersweet conclusion that leaves you with more questions than answers, but that's what makes it so intriguing to me.
+
+since we're only discussing the anime, i won't go into the visual novel's or even the game's routes. i'm treating anime and adaptations as a standalone experience, which sucks (sometimes) because i know anime adaptations often miss the depth of their source material or could change the story and endings entirely. but that's a discussion for another time.
+
 and now if you'll excuse me…
 i'm going to go watch something less existentially heavy.

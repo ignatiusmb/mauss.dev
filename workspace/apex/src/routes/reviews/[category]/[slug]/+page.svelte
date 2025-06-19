@@ -20,7 +20,7 @@
 
 	<section data-info="warning" style:margin="1rem 0">
 		<!-- prettier-ignore -->
-		<em>no summaries, no key details — by design. see <a href="/help#reviews-how-i-review">how i review</a>. and yes, these are just my thoughts — read the <a href="/fine-print">fine print</a> for more.</em>
+		<em>see <a href="/help#reviews-how-i-review">how i review</a>. intentionally written without synopsis, plot, or summary. and yes, these are just my thoughts — for more context, see the <a href="/fine-print">fine print</a>.</em>
 	</section>
 
 	{@html data.article.content}

@@ -33,8 +33,8 @@ soundtracks:
     spotify: 6a0PMD9AsNoK3XD5Nnheig
 ---
 
-the pacing is gentle and deliberate. it gives you space to feel — not just for the characters, but through them. the style walks a delicate line between whimsical and heavy, and the balance rarely falters. there's some humor, but it doesn't distract from the core emotional weight.
+a repeat watch every time april rolls around. *shigatsu wa kimi no uso* is a beautifully crafted story with a perfect blend of music, emotion, and character development. the pacing is slow, but perfect for the story it tells and wraps up (also) perfectly in one season.
 
-visually, it's stunning in all the right places. performances feel alive, with music sequences carrying more emotion than words ever could. the sound direction is especially worth noting — classical pieces are framed not as decoration, but as story.
+it's visually stunning in all the right places, the animation is fluid, the sound design is fantastic. it's just a good and well-rounded show that checks all the boxes for me to recommend it.
 
-this one lingers.
+i mean, there's a reason why this show is highly rated and loved by many. go prepare some snacks or tea, and enjoy the story while you can. it's one of those shows that stays with you long after it ends, and the first watch is always the best experience.

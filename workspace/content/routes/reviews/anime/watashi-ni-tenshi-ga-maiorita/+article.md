@@ -28,14 +28,14 @@ soundtracks:
     spotify: 2dPU25vkiOuE6VpKpVnGWC
 ---
 
-a slice-of-life about two sisters and their friends doing everyday things. no twists, no big stakes. and it's exactly what makes it so enjoyable, i'm a sucker for these kinds of shows. it's like a warm hug on a cold day, or that perfect cup of tea when you need to unwind.
+a slice-of-life about two sisters and their friends doing everyday things. i'm a sucker for these kinds of shows, so the verdict might be a bit biased. but for real though, it's like a warm hug or a cozy blanket on a cold rainy day. the humor is just right, gave me the same kind of joy [nichijou](/reviews/anime/nichijou) did — that rare feeling of genuinely laughing out loud without expecting to.
 
-the humor hits consistently, the timing is tight, and it flows in a way that makes each episode breeze by. it gave me the same kind of joy [nichijou](/reviews/anime/nichijou) did — that rare feeling of genuinely laughing out loud without expecting to.
+the animation has that warmth and attention to detail you don't notice until you pay a closer attention to the details. i mean, just look at the food! this short preview of episode one almost made me drool and had me craving buttered toast.
 
-the animation has that warmth and attention to detail you don't notice until a facial reaction lands harder because of it. and the food — damn, the food. episode one made me crave buttered toast like it was a gourmet meal.
+![!video#f#hb](./french-toast-breakfast.mp4 "when your little sister makes your breakfast")
 
-soundtrack is solid, catchy and custom-fit to the mood. great voice acting across the board. the whole sound design brings the world to life — playful, sweet, a bit odd, like the characters themselves.
+soundtracks are catchy and seems like it was voiced by the actors themselves, and the voice acting are also great across the board. add all of that with the amazing sound design, it brings the world to life in a way that makes you feel like you're right there with the characters.
 
-the big sister might weird you out at first. that's fair, but stick with it for a little bit. her awkwardness unfolds into something deeply relatable, and by the end, you'll probably love her as much as i did. the little sister is just as endearing, and the side cast rounds it out without dragging the mood down.
+the big sister might weird you out at first, coz i did. but stick with it for a little bit, you'll eventually understand where her awkwardness comes from, and you'll probably love her as much as i did by the end of it. the little sister is just as endearing, and the side cast rounds it out without dragging the mood down.
 
-it's not for everyone — and that's fine. but if you've ever needed a break from the loud, over-the-top stuff and wanted something cozy, this might be the best surprise you didn't know you needed.
+these kinds of show are never for everyone — and that's fine. but if you've ever needed a break from the loud, over-the-top stuff and wanted something cozy, this might be the best surprise you didn't know you needed.

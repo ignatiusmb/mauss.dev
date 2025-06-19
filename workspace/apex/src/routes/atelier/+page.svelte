@@ -91,7 +91,7 @@
 		{/snippet}
 
 		<!-- prettier-ignore -->
-		<p><strong>own your data — a local-first framework for personal publishing</strong>. shaped by a long-standing need and worry to own and preserve my content, it treats markdown files as the single source of truth. it's portable and guaranteed to last, with a standard format that can be read and written by anyone, anywhere.</p>
+		<p><strong>filesystem-based content processor</strong>. shaped by a long-standing need to fully own and preserve my content, <em>aubade</em> treats your filesystem as a database. it recursively processes directories containing at least one markdown file, turning it and its sibling files into structured data.</p>
 		<ul>
 			<li>built a recursive file reader that transforms directories into structured JSON</li>
 			<li>wrote a minimal, dependency-free YAML-like parser from scratch</li>
@@ -126,7 +126,7 @@
 		{/snippet}
 
 		<!-- prettier-ignore -->
-		<p><strong>the essential utility belt — modular, type-safe, and dependency-free</strong>. lightweight utilities for modern JavaScript and TypeScript with zero dependencies, designed for clarity and composability with minimal runtime footprint.</p>
+		<p><strong>practical functions and reusable configurations</strong>. lightweight utilities for modern JavaScript and TypeScript with zero dependencies, designed for clarity and composability with minimal runtime footprint.</p>
 		<ul>
 			<li>finally cracked shared config: one install, one link, and it's good to go</li>
 			<li>learned how to design functional utilities that stay pure and composable</li>
@@ -147,7 +147,7 @@
 		{/snippet}
 
 		<!-- prettier-ignore -->
-		<p><strong>the ideal svelte toolbox — components, attachments, and beyond</strong>. lightweight, idiomatic building blocks with thoughtful APIs: not just reusable, but adaptable. each piece shaped by real needs and refined until it disappears into the flow of the app.</p>
+		<p><strong>practical svelte components and utilities</strong>. lightweight, idiomatic building blocks with thoughtful APIs: not just reusable, but adaptable. each piece shaped by real needs and refined until it disappears into the flow of the app.</p>
 		<ul>
 			<li>designed intuitive submodules to keep the scope focused and scalable</li>
 			<li>prioritized SSR-first and progressive enhancement from the start</li>
@@ -215,7 +215,7 @@
 		{/snippet}
 
 		<!-- prettier-ignore -->
-		<p><strong>a personal starter template. download, unzip, and start building — everything else is already dialed in</strong>. it's the setup i reach for every time. it's got everything i need, and nothing i don't.</p>
+		<p><strong>a personal starter template — download, unzip, and start building</strong>. it's the setup i reach for every time. it's got everything i need, and nothing i don't.</p>
 		<ul>
 			<li>trimmed setup scripts, config files, and folder structure down to the essentials</li>
 		</ul>

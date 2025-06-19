@@ -480,6 +480,7 @@
 					position: absolute;
 					left: 0;
 					top: 0;
+					border-radius: var(--rounding-box);
 				}
 				img {
 					object-fit: cover;

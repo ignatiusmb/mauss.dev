@@ -16,6 +16,15 @@
 	import { onMount } from 'svelte';
 
 	const { children } = $props();
+	const noscroll = $derived.by(() => {
+		const { pathname } = page.url;
+		return (
+			pathname === '/' ||
+			pathname === '/uses' ||
+			pathname === '/fine-print' ||
+			pathname.startsWith('/auth')
+		);
+	});
 
 	onMount(() => updated.check());
 	beforeNavigate(({ willUnload, to }) => {
@@ -63,7 +72,7 @@
 		<Footer />
 	{/if}
 
-	{#if page.url.pathname !== '/' && !page.url.pathname.startsWith('/auth')}
+	{#if !noscroll}
 		<ScrollTop
 			styles={{
 				'--size': '2rem',

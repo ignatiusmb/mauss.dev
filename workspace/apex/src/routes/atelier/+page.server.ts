@@ -3,7 +3,7 @@ export async function load({}) {
 		meta: {
 			canonical: '/atelier',
 			title: 'Atelier',
-			// description: ''
+			description: 'a digital map of the garden.',
 		},
 	};
 }
