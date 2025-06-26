@@ -1,7 +1,6 @@
 import { redirect } from '@sveltejs/kit';
 
-export const prerender = true;
-
+export const prerender = 'auto';
 export async function load({ parent, params }) {
 	const { items } = await parent();
 	const content = items.find(({ slug }) => slug === params.slug);

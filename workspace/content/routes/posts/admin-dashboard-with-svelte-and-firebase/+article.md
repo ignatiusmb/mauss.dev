@@ -57,7 +57,7 @@ Then, we can just import that component and use it wherever we need to. That `on
 </Button>
 ```
 
-Since all of the components are made to be independent, we can literally copy any similar components from our other projects and paste it here, and that is exactly what I did. Of course, this might not apply to all of you, especially those who uses third-party CSS libraries. But, because I tend to write my own CSS from scratch, all of my components are fully self-contained and reusable everywhere.
+Since all of the components are made to be independent, we can literally copy any similar components from our other projects and paste it here, and that is exactly what I did. Of course, this might not apply to all of you, especially if you use third-party CSS libraries. But, because I tend to write my own CSS from scratch, all of my components are fully self-contained and reusable everywhere.
 
 There's of course other components that have more logic than just a plain button. They're going to have their own action handling like Modal popping up when doing something or a Snackbar when something goes wrong.
 

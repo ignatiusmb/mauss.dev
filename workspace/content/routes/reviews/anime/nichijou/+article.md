@@ -30,7 +30,7 @@ rating:
 
 seen:first: "2020-08-09"
 image:en: https://image.tmdb.org/t/p/original/qmi1VpOvPFRHg02fbLuc3pVrMbt.jpg
-image:jp:
+backdrop: https://image.tmdb.org/t/p/original/us9UFxr1ScqDxtVvuLFziCbddnK.jpg
 
 link:
   MyAnimeList: https://myanimelist.net/anime/10165/Nichijou

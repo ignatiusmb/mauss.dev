@@ -93,7 +93,7 @@ Yes. Yes. Yes. For you who hasn't opened your mind (and eye) that animation is n
 
 ![!YouTube#d](-92HQA0GcI8 "Inside the Lab That Invented the COVID-19 Vaccine")
 
-Considering we're still in the middle of a global pandemic, there's no harm in understanding how a Coronavirus spreads and attack its host. I feel this video has explained it nicely, even for those who didn't study science in high school to understand it well. It also explains how the vaccine is made, and how it works.
+Considering we're still in the middle of a global pandemic, there's no harm in understanding how a Coronavirus spreads and attack its host. I feel this video has explained it nicely, even if you didn't study science in high school to understand it well. It also explains how the vaccine is made, and how it works.
 
 ***
 

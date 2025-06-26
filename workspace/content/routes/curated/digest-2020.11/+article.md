@@ -95,7 +95,7 @@ A must-watch for you science geek out there! Horseshoe crab is one of those anci
 
 ![!YouTube#d](cnplG_VLiKw "The 3 BIGGEST Lies About Good Posture (3 Myths Busted!)")
 
-The biggest lies about good posture, debunked by calisthenics experts! Everyone, especially those who spend most of your time sitting, whether that's in front of a computer, or in front of your TV, or really anything else that allows you to stay statically for a long time.
+The biggest lies about good posture, debunked by calisthenics experts! Everyone, especially if you spend most of your time sitting, whether that's in front of a computer, or in front of your TV, or really anything else that allows you to stay statically for a long time.
 
 ***
 
@@ -145,4 +145,4 @@ Source(s): [[ComicBook](https://comicbook.com/anime/news/sword-art-online-progre
 
 ***
 
-That's it for our recap of November 2020, folks! Stay safe, have a great December and Merry Christmas to those who celebrate it 👋
+That's it for our recap of November 2020, folks! Stay safe, have a great December and Merry Christmas 👋
