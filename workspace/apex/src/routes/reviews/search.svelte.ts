@@ -34,7 +34,7 @@ function normalize(str: string): string {
 
 export const by = {
 	date(x, y) {
-		if (x.date !== y.date) return fallback(x, y);
+		if (x.date === y.date) return fallback(x, y);
 		return date.sort.newest(x.date, y.date);
 	},
 	premiere(x, y) {
@@ -63,7 +63,7 @@ function fallback(x: Schema, y: Schema): number {
 		return date.sort.newest(x.date, y.date);
 	}
 	if (x.released && y.released && x.released !== y.released) {
-		return -date(x.released).delta(y.released);
+		return date.sort.newest(x.released, y.released);
 	}
 	return inspect(x, y);
 }

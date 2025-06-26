@@ -1,14 +1,5 @@
-import type { Config } from '@sveltejs/adapter-vercel';
 import { qsd } from 'mauss/web';
-import { EXPIRATION } from '$lib/globals';
 import { by, sift } from './search.svelte';
-
-export const config: Config = {
-	isr: {
-		expiration: EXPIRATION,
-		allowQuery: ['q', 'category', 'genres', 'verdict', 'sort_by'],
-	},
-};
 
 export async function load({ parent, url }) {
 	const { items, metadata } = await parent();

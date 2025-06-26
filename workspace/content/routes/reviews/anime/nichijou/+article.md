@@ -1,11 +1,9 @@
 ---
-date: "2020"
+date: "2025-06-26"
 released: "2011-04-03"
 title:short: Nichijou
 title:en: "Nichijou: My Ordinary Life"
-title:jp:
 genres: [comedy, slapstick, slice of life, school, shounen]
-# rating: [10,10,10,8]
 verdict: must-watch
 rating:
   narrative:
