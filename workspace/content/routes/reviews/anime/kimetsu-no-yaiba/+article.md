@@ -5,7 +5,6 @@ title:
   en: Demon Slayer
   jp: Kimetsu no Yaiba
 genres: [action, demons, historical, shounen, supernatural]
-rating: [story,artwork,sound,characters]
 completed: 63/63
 verdict: pending
 
@@ -15,7 +14,7 @@ image:
   jp:
 
 seen:
-  first: [2020-04-20, 2021-10-11T23:12:10, 2021-12-22T21:44:33]
+  first: "2020-04-20"
   last: "2022-02-14T02:11:18"
 
 link:

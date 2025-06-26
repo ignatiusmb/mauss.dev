@@ -4,7 +4,6 @@ released: "2019-01-10"
 title:en: The Promised Neverland
 title:jp: Yakusoku no Neverland
 genres: [sci-fi, mystery, horror, psychological, thriller, shounen]
-rating: [story,artwork,sound,characters]
 verdict: pending
 
 seen:first: "2021-01-21"

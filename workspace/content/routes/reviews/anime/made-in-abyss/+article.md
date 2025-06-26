@@ -3,9 +3,30 @@ date: "2020"
 released: "2017-07-07"
 title:en: Made in Abyss
 genres: [adventure, fantasy, mystery]
-rating: [10, 10, 10, 9]
 completed: 25/25
 verdict: pending
+rating:
+  narrative:
+    - premise: 10
+    - pacing: 8
+    # - resolution: 10
+    - direction: 10
+  characterization:
+    - development: 10
+    - dynamics: 10
+    - seiyuu: 10
+  presentation:
+    - style: 10
+    - animation: 10
+    - visuals: 10
+  audio:
+    - ambience: 10
+    - songs: 10
+    - soundtrack: 10
+  personal:
+    - engagement: 10
+    - relatable: 7
+    - impact: 9
 
 backdrop: https://www.themoviedb.org/t/p/original/faEKyqjgnPw6oZ0niowLYsjT5qD.jpg
 image:en: https://www.themoviedb.org/t/p/original/n30CBH4BoN5Z34tCpOWIPGJYOaS.jpg

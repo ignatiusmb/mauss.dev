@@ -5,7 +5,6 @@ title:
   en: Oddtaxi
   jp: Odd Taxi
 genres: [mystery]
-rating: [story,artwork,sound,characters]
 completed: 13/13
 verdict: pending
 

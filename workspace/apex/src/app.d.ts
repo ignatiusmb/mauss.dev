@@ -6,6 +6,7 @@ declare global {
 			pb: TypedPocketBase;
 			user?: TypedPocketBase['authStore']['record'];
 		}
+
 		interface PageData {
 			meta: {
 				title: string;
@@ -18,6 +19,10 @@ declare global {
 					// TODO
 				};
 			};
+		}
+
+		interface PageState {
+			dialog?: boolean;
 		}
 	}
 }

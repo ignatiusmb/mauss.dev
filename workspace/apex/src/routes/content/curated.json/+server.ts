@@ -1,15 +1,14 @@
 import { json } from '@sveltejs/kit';
-import { DATA } from '$lib/content';
-
-export const prerender = true;
+import { DATA, type Items } from '$lib/content';
 
 export interface Schema {
-	items: (typeof DATA)['curated/'];
+	items: Items['curated/'];
 	metadata: {};
 }
 
+export const prerender = true;
 export async function GET() {
-	const items = DATA['curated/'];
+	const items = await DATA['curated/']();
 
 	return json({ items, metadata: {} } satisfies Schema);
 }

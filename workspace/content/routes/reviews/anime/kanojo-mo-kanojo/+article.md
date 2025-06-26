@@ -5,7 +5,6 @@ title:
   en: Girlfriend, Girlfriend
   jp: Kanojo mo Kanojo
 genres: [harem, comedy, romance, school, shounen]
-rating: [story,artwork,sound,characters]
 completed: 12/24
 verdict: pending
 

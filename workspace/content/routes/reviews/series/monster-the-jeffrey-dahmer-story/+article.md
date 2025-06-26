@@ -3,7 +3,6 @@ date: "2020"
 released: "2022-09-21"
 title:en: "Dahmer – Monster: The Jeffrey Dahmer Story"
 genres: [crime, drama, horror]
-rating: [story,artwork,sound,characters]
 completed: 10/10
 verdict: pending
 

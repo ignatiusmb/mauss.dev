@@ -3,7 +3,6 @@ date: "2020"
 released: "2017-10-08"
 title:en: BLEND-S
 genres: [slice of life, comedy, romance]
-rating: [story,artwork,sound,characters]
 verdict: pending
 
 seen:first: "2021-04-26"

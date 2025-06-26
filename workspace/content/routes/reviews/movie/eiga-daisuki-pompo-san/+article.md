@@ -5,7 +5,28 @@ title:en: "Pompo: The Cinéphile"
 title:jp: Eiga Daisuki Pompo-san
 genres: [animation, comedy, drama]
 verdict: recommended
-rating: [7,8,10,8]
+rating:
+  narrative:
+    - premise: 6
+    - pacing: 10
+    - resolution: 10
+    - direction: 8
+  characterization:
+    - development: 8
+    - dynamics: 9
+    - seiyuu: 9
+  presentation:
+    - style: 8
+    - animation: 8
+    - visuals: 8
+  audio:
+    - ambience: 10
+    - songs: 10
+    - soundtrack: 10
+  personal:
+    - engagement: 10
+    - relatable: 9
+    - impact: 7
 
 seen:first: "2025-06-15T14:00:00+07:00"
 image:en: https://image.tmdb.org/t/p/original/gNrlP20MC11QfeH1xLtAovsVW4g.jpg

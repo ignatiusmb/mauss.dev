@@ -3,7 +3,7 @@
 
 	import type { ComponentProps } from 'svelte';
 	import { hydrate } from 'aubade/browser';
-	import { format } from 'mauss/date';
+	import { date } from 'mauss';
 	import { navigating, page } from '$app/state';
 
 	type Flank = null | { slug: string; title: string | Record<string, any> };
@@ -30,13 +30,13 @@
 	const { path = '', post = null, flank = null, header, children }: Props = $props();
 </script>
 
-<article use:hydrate={navigating.from}>
+<article {@attach hydrate(navigating.from)}>
 	{#if header && post}
 		<header>
 			<aside>
-				<time datetime={post.date}>{format(post.date)('DD MMMM YYYY')}</time>
+				<time datetime={post.date}>{date(post.date).format('DD MMMM YYYY')}</time>
 				{#if post.estimate}
-					<span class="dash">&mdash;</span>
+					<span class="separator">&bull;</span>
 					<span>{post.estimate} min read</span>
 				{/if}
 			</aside>
@@ -48,10 +48,6 @@
 			{:else}
 				<h1>{post.title.en}</h1>
 			{/if}
-
-			<a href={post.author?.link || '/about'}>
-				{post.author?.name || 'Ignatius Bagus.'}
-			</a>
 
 			{@render header()}
 
@@ -165,14 +161,8 @@
 			font-size: 0.875rem;
 		}
 
-		> a {
-			margin: 0.5rem 0;
-			font-size: 1rem;
-		}
-
-		:global(.dash) {
+		:global(.separator) {
 			color: var(--color-accent-primary);
-			font-weight: 600;
 		}
 	}
 

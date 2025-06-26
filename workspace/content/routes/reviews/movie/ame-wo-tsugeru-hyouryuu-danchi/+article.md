@@ -5,7 +5,6 @@ title:
   en: Drifting Home
   jp: Ame wo Tsugeru Hyouryuu Danchi
 genres: [animation, adventure, family, fantasy]
-rating: [story,artwork,sound,characters]
 verdict: pending
 
 backdrop: https://www.themoviedb.org/t/p/original/1AMgaLqo6tIRVAqJM4D7rMub9K.jpg

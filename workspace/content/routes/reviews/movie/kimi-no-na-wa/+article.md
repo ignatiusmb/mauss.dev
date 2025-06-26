@@ -4,8 +4,29 @@ released: "2016-08-26"
 title:en: Your Name.
 title:jp: Kimi no Na wa.
 genres: [animation, romance, supernatural, drama, school]
-rating: [8,10,10,10]
 verdict: pending
+rating:
+  narrative:
+    - premise: 10
+    - pacing: 8
+    - resolution: 7
+    - direction: 10
+  characterization:
+    - development: 10
+    - dynamics: 9
+    - seiyuu: 10
+  presentation:
+    - style: 10
+    - animation: 10
+    - visuals: 10
+  audio:
+    - ambience: 10
+    - songs: 10
+    - soundtrack: 10
+  personal:
+    - engagement: 10
+    - relatable: 6
+    - impact: 8
 
 seen:first: "2020-08-29"
 image:en: https://image.tmdb.org/t/p/original/f7UABkINaQCWMHUOkq1XdB7SFOS.jpg

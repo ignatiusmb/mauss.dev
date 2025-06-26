@@ -100,8 +100,7 @@
 			<li>designed a table of contents generator with nested, stable heading anchors</li>
 			<li>wrote a transformer that links sibling entries in a sorted list</li>
 			<li>explored static code highlighting with zero runtime cost</li>
-			<li>proved JSDoc can deliver full type safety without writing TypeScript</li>
-			<li>learned that thoughtful design beats boilerplate and dependencies</li>
+			<li>no-build native JS with JSDoc is nice, but writing TS with strict inference is better</li>
 		</ul>
 	</Project>
 

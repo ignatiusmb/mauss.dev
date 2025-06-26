@@ -3,7 +3,6 @@ date: "2020"
 released: "2022-09-13"
 title:en: "Cyberpunk: Edgerunners"
 genres: [action, sci-fi, gore, psychological]
-rating: [story,artwork,sound,characters]
 completed: 10/10
 verdict: pending
 

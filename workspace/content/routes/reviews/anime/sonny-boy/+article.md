@@ -3,7 +3,6 @@ date: "2020"
 released: "2021-07-16"
 title:en: Sonny Boy
 genres: [sci-fi, super power]
-rating: [story,artwork,sound,characters]
 completed: 12/12
 verdict: pending
 

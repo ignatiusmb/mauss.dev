@@ -4,7 +4,6 @@ released: "2012-01-10"
 title:en: Daily Lives of High School Boys
 title:jp: Danshi Koukousei no Nichijou
 genres: [slice of life, comedy, school]
-rating: [story,artwork,sound,characters]
 verdict: pending
 
 seen:first: "2020-11-11"

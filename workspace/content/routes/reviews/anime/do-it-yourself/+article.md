@@ -3,7 +3,6 @@ date: "2020"
 released: "2022-10-06"
 title:en: Do It Yourself!!
 genres: [slice of life, school]
-rating: [story,artwork,sound,characters]
 completed: 12/12
 verdict: pending
 

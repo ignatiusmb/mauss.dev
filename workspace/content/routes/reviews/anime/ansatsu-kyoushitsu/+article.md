@@ -4,7 +4,6 @@ released: "2015-01-10"
 title:en: Assassination Classroom
 title:jp: Ansatsu Kyoushitsu
 genres: [action, comedy, school, shounen]
-rating: [story,artwork,sound,characters]
 completed: 47/47
 verdict: pending
 

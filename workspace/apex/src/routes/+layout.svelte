@@ -40,7 +40,7 @@
 
 <MetaHead
 	domain="https://mauss.dev"
-	title="{page.data.meta?.title || page.status}{page.url.pathname === '/' ? '' : ' | Alkamauss'}"
+	title="{page.data.meta?.title || page.status}{page.url.pathname === '/' ? '' : ' • Alkamauss'}"
 	canonical={page.data.meta?.canonical || '/'}
 	description={page.data.meta?.description}
 	authors={['Ignatius Bagus.']}
@@ -64,7 +64,7 @@
 		<Navigation />
 	{/if}
 
-	<main>
+	<main class:centered={page.error}>
 		{@render children()}
 	</main>
 
@@ -86,7 +86,7 @@
 
 <style>
 	div /* holy grail */ {
-		width: 100%;
+		min-height: 100dvh;
 		position: relative;
 
 		--max-content: 80rem;
@@ -123,6 +123,10 @@
 			gap: 2rem;
 			align-content: start;
 
+			&.centered {
+				align-content: center;
+			}
+
 			:global(.syv-core-pagination) {
 				max-width: 32rem;
 			}
@@ -153,6 +157,9 @@
 			}
 			&[data-icon='books'] {
 				--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"><rect x="48" y="40" width="64" height="176" rx="8"/><path d="M217.67,205.77l-46.81,10a8,8,0,0,1-9.5-6.21L128.18,51.8a8.07,8.07,0,0,1,6.15-9.57l46.81-10a8,8,0,0,1,9.5,6.21L223.82,196.2A8.07,8.07,0,0,1,217.67,205.77Z"/><line x1="48" y1="72" x2="112" y2="72"/><line x1="48" y1="184" x2="112" y2="184"/><line x1="133.16" y1="75.48" x2="195.61" y2="62.06"/><line x1="139.79" y1="107.04" x2="202.25" y2="93.62"/><line x1="156.39" y1="185.94" x2="218.84" y2="172.52"/></svg>');
+			}
+			&[data-icon='broom'] {
+				--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"><path d="M112,224a95.2,95.2,0,0,1-29-48"/><path d="M192,152c0,31.67,13.31,59,40,72H61A103.65,103.65,0,0,1,32,152c0-28.21,11.23-50.89,29.47-69.64a8,8,0,0,1,8.67-1.81L95.52,90.83a16,16,0,0,0,20.82-9l21-53.11c4.15-10,15.47-15.32,25.63-11.53a20,20,0,0,1,11.51,26.4L153.13,96.69a16,16,0,0,0,8.93,20.76L187,127.29a8,8,0,0,1,5,7.43Z"/><line x1="43.93" y1="105.57" x2="192.8" y2="165.12"/></svg>');
 			}
 			&[data-icon='flask'] {
 				--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"><line x1="88" y1="32" x2="168" y2="32"/><path d="M152,32V99.14l62.85,104.74A8,8,0,0,1,208,216H48a8,8,0,0,1-6.86-12.12L104,99.14V32"/><path d="M71.63,153.08c13.23-2.48,32-1.41,56.37,10.92,32.25,16.33,54.75,12.91,67.5,7.65"/></svg>');

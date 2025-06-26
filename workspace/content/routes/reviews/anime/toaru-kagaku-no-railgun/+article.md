@@ -4,7 +4,6 @@ released: "2009-10-03"
 title:en: A Certain Scientific Railgun
 title:jp: Toaru Kagaku no Railgun
 genres: [action, sci-fi, super power]
-rating: [story,artwork,sound,characters]
 verdict: pending
 
 completed: 1/73

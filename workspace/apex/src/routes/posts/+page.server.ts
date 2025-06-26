@@ -1,45 +1,31 @@
-import type { Config } from '@sveltejs/adapter-vercel';
-import type { by } from './search.svelte';
-import { scope } from 'mauss';
 import { qsd } from 'mauss/web';
-import { EXPIRATION } from '$lib/globals';
-
-export const config: Config = {
-	isr: {
-		expiration: EXPIRATION,
-		allowQuery: ['q', 'category', 'tag', 'sort_by'],
-	},
-};
+import { by, sift } from './search.svelte';
 
 export async function load({ parent, url }) {
 	const { items, metadata } = await parent();
-	const { q = '', category = '', tag = [], sort_by = 'date' } = qsd(url.search);
+	const { q = [''], tags = [], sort_by = ['date'] } = qsd(url.search);
 
 	return {
-		list: items,
-		query: typeof q === 'string' ? q : q[0],
-		filters: {
-			category: scope(() => {
-				const options = metadata.categories.reduce((a, v) => ({ ...a, [v]: v }), {});
-				const selected = typeof category === 'string' ? category : category[0];
-				return { options, selected: selected in options ? selected : '' };
-			}),
-			tags: scope(() => {
-				const selected = typeof tag === 'string' ? [tag] : tag;
-				return metadata.tags.map((v) => ({ name: v, selected: selected.includes(v) }));
-			}),
-			sort_by: scope(() => {
-				const options = { date: 'Date' } satisfies Record<keyof typeof by, string>;
-				const sort = typeof sort_by === 'string' ? sort_by : sort_by[0];
-				const selected = (sort in options && sort) || 'date';
-				return { required: true, options, selected: selected as keyof typeof by };
-			}),
+		index: items,
+		query: String(q[0]),
+		results: sift(items, {
+			search: String(q[0]),
+			tags: tags.map(String),
+			sort_by: sort_by[0] as keyof typeof by,
+		}),
+		metadata: {
+			tags: metadata.tags.map((v) => ({ name: v, selected: tags.includes(v) })),
+			sort_by: {
+				required: true,
+				options: { date: 'Date' } satisfies Record<keyof typeof by, string>,
+				selected: (sort_by[0] as string) in by ? sort_by[0] : 'date',
+			},
 		},
 		meta: {
 			canonical: '/posts',
 			title: 'Posts',
 			description:
-				'Essays and thoughts on life, tech, and everything in between — sometimes structured, sometimes spontaneous.',
+				'blog entries for unadulterated moments. sometimes technical, sometimes personal, and often times just wandering.',
 		},
 	};
 }

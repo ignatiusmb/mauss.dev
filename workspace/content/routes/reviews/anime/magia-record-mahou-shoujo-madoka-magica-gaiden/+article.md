@@ -5,7 +5,6 @@ title:
   en: "Magia Record: Puella Magi Madoka Magica Side Story"
   jp: "Magia Record: Mahou Shoujo Madoka☆Magica Gaiden"
 genres: [psychological, magic, thriller, drama]
-rating: [story,artwork,sound,characters]
 completed: 13/25
 verdict: pending
 

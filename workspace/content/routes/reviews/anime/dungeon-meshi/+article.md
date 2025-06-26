@@ -5,7 +5,6 @@ title:
   en: Delicious in Dungeon
   jp: Dungeon Meshi
 genres: [adventure, comedy, fantasy]
-rating: [story,artwork,sound,characters]
 completed: 24/24
 verdict: pending
 

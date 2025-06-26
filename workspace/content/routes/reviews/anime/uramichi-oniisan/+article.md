@@ -5,7 +5,6 @@ title:
   en: Life Lessons with Uramichi-Oniisan
   jp: Uramichi Oniisan
 genres: [slice of life, comedy]
-rating: [story,artwork,sound,characters]
 completed: 13/13
 verdict: pending
 

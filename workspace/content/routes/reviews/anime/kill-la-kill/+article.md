@@ -5,7 +5,6 @@ title:short:
 title:en: Kill la Kill
 title:jp:
 genres: [action, super power, comedy, ecchi, school]
-rating: [story,artwork,sound,characters]
 verdict: pending
 
 seen:first: "2020-08-04"

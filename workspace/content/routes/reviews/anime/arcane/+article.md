@@ -3,7 +3,6 @@ date: "2020"
 released: "2021-11-06"
 title:en: Arcane
 genres: [animation, action, adventure, drama, sci-fi, steampunk]
-rating: [story,artwork,sound,characters]
 completed: 9/9
 verdict: pending
 

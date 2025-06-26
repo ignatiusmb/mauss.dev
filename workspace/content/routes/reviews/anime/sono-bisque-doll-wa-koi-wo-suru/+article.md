@@ -5,7 +5,6 @@ title:
   en: My Dress-Up Darling
   jp: Sono Bisque Doll wa Koi wo Suru
 genres: [romance, slice of life]
-rating: [story,artwork,sound,characters]
 completed: 12/12
 verdict: pending
 

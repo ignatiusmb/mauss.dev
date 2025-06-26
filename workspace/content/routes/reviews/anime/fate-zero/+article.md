@@ -3,7 +3,6 @@ date: "2020"
 released: "2011-10-02"
 title:en: Fate/Zero
 genres: [action, fantasy, supernatural]
-rating: [story,artwork,sound,characters]
 completed: 25/25
 verdict: pending
 

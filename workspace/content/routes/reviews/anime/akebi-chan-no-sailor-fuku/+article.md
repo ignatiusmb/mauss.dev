@@ -5,7 +5,6 @@ title:
   en: Akebi's Sailor Uniform
   jp: Akebi-chan no Sailor-fuku
 genres: [romance, slice of life]
-rating: [story,artwork,sound,characters]
 completed: 12/12
 verdict: pending
 

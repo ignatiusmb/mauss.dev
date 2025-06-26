@@ -3,7 +3,6 @@ date: "2020"
 released: "2022-09-21"
 title:en: "One Piece Film: Red"
 genres: [animation, action, adventure, fantasy]
-rating: [story,artwork,sound,characters]
 verdict: pending
 
 backdrop: https://www.themoviedb.org/t/p/original/6clQoxgYxinQJeDVw504Zn4Ff2q.jpg

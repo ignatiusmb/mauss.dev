@@ -5,7 +5,6 @@ title:
   en: A Silent Voice
   jp: Koe no Katachi
 genres: [animation, drama]
-rating: [story,artwork,sound,characters]
 verdict: pending
 
 backdrop: https://www.themoviedb.org/t/p/original/q5HZvtyqG8Vz39Ee9uTQbLeEml.jpg

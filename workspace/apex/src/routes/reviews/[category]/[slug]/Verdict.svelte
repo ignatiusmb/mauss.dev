@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { Schema } from '$content/reviews.json/+server';
+	import type { Items } from '$lib/content';
 	interface Props {
-		verdict: Schema['items'][number]['verdict'];
+		verdict: Items['reviews/'][number]['verdict'];
 		size?: string;
 	}
 	const { verdict, size }: Props = $props();

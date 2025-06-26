@@ -1,13 +1,45 @@
-import type { Schema } from '$content/reviews.json/+server';
-import * as compare from 'mauss/compare';
+import type { Items } from '$lib/content';
+import { compare, date, inspect } from 'mauss';
 
-type Item = Schema['items'][number];
+export type Query = {
+	search: string;
+	category: string;
+	genres: string[];
+	verdict: string;
+	sort_by: keyof typeof by;
+};
+
+export function sift(items: Items['reviews/'], payload: Query) {
+	const value = normalize(payload.search);
+	const results = items.filter((item) => {
+		const filters = [
+			payload.category && payload.category !== item.category,
+			payload.verdict && payload.verdict !== item.verdict,
+			payload.genres.length && !payload.genres.every((g) => item.genres.includes(g)),
+		];
+		const flags = [
+			item.slug.includes(value),
+			item.released.includes(value),
+			normalize(item.title.en).includes(value),
+			item.title.jp && normalize(item.title.jp).includes(value),
+		];
+		return filters.every((h) => !h) && flags.some((f) => f);
+	});
+	return results.sort(by[payload.sort_by]);
+}
+
+function normalize(str: string): string {
+	return str.replace(/[(){}[\]<>"']/g, '').toLowerCase();
+}
+
 export const by = {
 	date(x, y) {
-		return compare.date(x.date, y.date) || fallback(x, y);
+		if (x.date !== y.date) return fallback(x, y);
+		return date.sort.newest(x.date, y.date);
 	},
 	premiere(x, y) {
-		return compare.date(x.released, y.released) || fallback(x, y);
+		if (x.released === y.released) return fallback(x, y);
+		return date.sort.newest(x.released, y.released);
 	},
 	rating(x, y) {
 		const xr = Number.isNaN(Number(x.rating)) ? +!!x.rating : Number(x.rating);
@@ -24,11 +56,14 @@ export const by = {
 			) || fallback(x, y)
 		);
 	},
-} satisfies Record<string, (x: Item, y: Item) => number>;
-
-function fallback(x: Item, y: Item): number {
-	if (x.date && y.date && x.date !== y.date) return compare.date(x.date, y.date);
-	if (x.released && y.released && x.released !== y.released)
-		return compare.date(x.released, y.released);
-	return compare.inspect(x, y);
+} satisfies Record<string, (x: Schema, y: Schema) => number>;
+type Schema = Items['reviews/'][number];
+function fallback(x: Schema, y: Schema): number {
+	if (x.date && y.date && x.date !== y.date) {
+		return date.sort.newest(x.date, y.date);
+	}
+	if (x.released && y.released && x.released !== y.released) {
+		return -date(x.released).delta(y.released);
+	}
+	return inspect(x, y);
 }

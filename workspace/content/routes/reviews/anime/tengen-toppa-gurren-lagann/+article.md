@@ -4,7 +4,6 @@ released: "2007-04-01"
 title:en: Gurren Lagann
 title:jp: Tengen Toppa Gurren Lagann
 genres: [action, adventure, comedy, mecha, sci-fi]
-rating: [story,artwork,sound,characters]
 verdict: pending
 
 seen:first: "2021-01-24"

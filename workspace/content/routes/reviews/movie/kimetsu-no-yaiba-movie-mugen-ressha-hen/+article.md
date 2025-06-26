@@ -4,8 +4,27 @@ released: "2021-01-06"
 title:en: "Demon Slayer the Movie: Mugen Train"
 title:jp: "Kimetsu no Yaiba Movie: Mugen Ressha-hen"
 genres: [animation, action, demons, supernatural, shounen]
-rating: [9,10,10,10]
 verdict: pending
+rating:
+  narrative:
+    - premise: 7
+    - pacing: 8
+    - resolution: 9
+    - direction: 9
+  characterization:
+    - seiyuu: 10
+  presentation:
+    - style: 10
+    - animation: 10
+    - visuals: 10
+  audio:
+    - ambience: 10
+    - songs: 10
+    - soundtrack: 10
+  personal:
+    - engagement: 10
+    - relatable: 7
+    - impact: 10
 
 seen:first: "2021-01-15"
 image:en: https://www.themoviedb.org/t/p/original/h8Rb9gBr48ODIwYUttZNYeMWeUU.jpg
