@@ -53,10 +53,10 @@ export const DATA = {
 					return `/uploads/${umbrella}/${asset.filename.replace(/\.[^/.]+$/, '.webp')})`;
 				});
 
-				const branches = siblings.flatMap(async (branch) => {
-					if (branch.filename[0] !== '+') return [];
+				const branches = siblings.map(async (branch) => {
+					if (branch.filename[0] !== '+') return;
 					const { body, frontmatter: extras } = parse((await branch.buffer).toString('utf-8'));
-					if (!extras || extras.draft) return [];
+					if (!extras || extras.draft) return;
 					return {
 						slug,
 						...frontmatter,
@@ -72,7 +72,7 @@ export const DATA = {
 					...frontmatter,
 					...metadata,
 					content: marker.render(content),
-					branches: await Promise.all(branches),
+					branches: (await Promise.all(branches)).filter((b) => b != null),
 				};
 			};
 		});
@@ -250,6 +250,8 @@ export const DATA = {
 						const { body, frontmatter: extras } = parse(payload);
 						if (!extras || extras.draft) return;
 						return {
+							slug: `${category}/${slug}`,
+							category,
 							...frontmatter,
 							...metadata,
 							...extras,
