@@ -58,7 +58,7 @@
 		</h2>
 		{#each data.reviews as { slug, title, date: created }}
 			<article>
-				<a href="/reviews/{slug}">{title.short || title.en}</a>
+				<a href="/reviews/{slug}">{title}</a>
 				<time datetime={created}>{date(created).format('DD MMM YYYY')}</time>
 			</article>
 		{/each}

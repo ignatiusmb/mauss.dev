@@ -1,9 +1,10 @@
 ---
 date: "2020-08-24"
 released: "2019-01-08"
-alias: [Wataten!]
 title: "WATATEN!: an Angel Flew Down to Me"
 romaji: Watashi ni Tenshi ga Maiorita!
+alias: [Wataten!]
+
 genres: [comedy, slice of life, shoujo ai]
 verdict: recommended
 rating:

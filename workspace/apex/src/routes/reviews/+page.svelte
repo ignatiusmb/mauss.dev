@@ -108,10 +108,10 @@
 		{@const disabled = !post.rating || post.verdict === 'pending'}
 
 		<section animate:flip={{ duration: TIME.SLIDE }} in:scale={{ duration: TIME.SLIDE }}>
-			<Image src={post.image.en} alt={post.title.en} ratio={3 / 2} />
+			<Image src={post.image.en} alt={post.title} ratio={3 / 2} />
 
 			<aside>
-				<span>{post.title.short || post.title.en}</span>
+				<span>{post.title}</span>
 				<Verdict verdict={post.verdict} />
 				<small>
 					<span>{post.rating || 'TBD'}</span>
