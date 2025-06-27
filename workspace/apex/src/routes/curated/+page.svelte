@@ -15,7 +15,7 @@
 
 	let index = $state(data.list);
 	const invoke = spawn<Commands>(
-		new URL('./search.worker', import.meta.url), //
+		new URL('./search.worker', import.meta.url).toString(), //
 		(invoke) => invoke('init', data.list),
 	);
 </script>
