@@ -10,14 +10,12 @@
 	import { scale } from 'svelte/transition';
 	import { replaceState } from '$app/navigation';
 	import { page } from '$app/state';
+	import worker from './search.worker?url';
 
 	const { data } = $props();
 
 	let index = $state(data.list);
-	const invoke = spawn<Commands>(
-		new URL('./search.worker', import.meta.url).toString(), //
-		(invoke) => invoke('init', data.list),
-	);
+	const invoke = spawn<Commands>(worker, (invoke) => invoke('init', data.list));
 </script>
 
 <header>

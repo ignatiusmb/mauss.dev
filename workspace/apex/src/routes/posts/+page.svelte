@@ -14,6 +14,7 @@
 	import { scale } from 'svelte/transition';
 	import { pushState, replaceState } from '$app/navigation';
 	import { page } from '$app/state';
+	import worker from './search.worker?url';
 
 	const { data } = $props();
 	const memory = $state({
@@ -31,10 +32,7 @@
 	});
 
 	let index = $state(data.results);
-	const invoke = spawn<Commands>(
-		new URL('./search.worker', import.meta.url).toString(), //
-		(invoke) => invoke('init', data.index),
-	);
+	const invoke = spawn<Commands>(worker, (invoke) => invoke('init', data.index));
 </script>
 
 {#if page.state.dialog}
