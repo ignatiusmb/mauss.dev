@@ -1,4 +1,4 @@
-import type { Items } from '$lib/content';
+import type { Items } from '$content/builder';
 import { commander, type Dispatch } from 'syv/worker';
 import { sift, type Query } from './search.svelte';
 

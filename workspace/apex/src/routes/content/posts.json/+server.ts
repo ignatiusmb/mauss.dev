@@ -1,5 +1,5 @@
 import { json } from '@sveltejs/kit';
-import { DATA, type Items } from '$lib/content';
+import { DATA, type Items } from '$content/builder';
 
 export interface Schema {
 	items: Items['posts/'];

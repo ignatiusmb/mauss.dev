@@ -1,4 +1,4 @@
-import type { Items } from '$lib/content';
+import type { Items } from '$content/builder';
 
 export type Query = {
 	search: string;
