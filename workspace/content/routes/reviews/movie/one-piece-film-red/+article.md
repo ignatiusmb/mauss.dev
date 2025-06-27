@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2022-09-21"
-title:en: "One Piece Film: Red"
+title: "One Piece Film: Red"
 genres: [animation, action, adventure, fantasy]
 verdict: pending
 

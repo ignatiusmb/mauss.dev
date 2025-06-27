@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2018-01-02"
-title:en: A Place Further Than The Universe
+title: A Place Further Than The Universe
 romaji: Sora yori mo Tooi Basho
 genres: [slice of life, adventure, comedy, drama]
 verdict: pending

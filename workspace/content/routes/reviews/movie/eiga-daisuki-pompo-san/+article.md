@@ -1,7 +1,7 @@
 ---
 date: "2025-06-15T17:30:00+07:00"
 released: "2021-06-04"
-title:en: "Pompo: The Cinéphile"
+title: "Pompo: The Cinéphile"
 romaji: Eiga Daisuki Pompo-san
 genres: [animation, comedy, drama]
 verdict: recommended

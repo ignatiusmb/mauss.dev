@@ -2,7 +2,7 @@
 date: "2020"
 released: "2011-04-03"
 alias: [Nichijou]
-title:en: "Nichijou: My Ordinary Life"
+title: "Nichijou: My Ordinary Life"
 genres: [comedy, slapstick, slice of life, school, shounen]
 verdict: pending
 rating:

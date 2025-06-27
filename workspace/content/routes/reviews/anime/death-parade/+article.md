@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2015-01-10"
-title:en: Death Parade
+title: Death Parade
 genres: [drama, mystery, suspense]
 completed: 12/12
 verdict: pending

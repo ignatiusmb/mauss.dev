@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2021-04-12"
-title:en: To Your Eternity
+title: To Your Eternity
 romaji: Fumetsu no Anata e
 genres: [adventure, drama, supernatural]
 completed: 21/40

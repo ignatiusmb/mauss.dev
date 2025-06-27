@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2014-07-07"
-title:en: Akame ga Kill!
+title: Akame ga Kill!
 genres: [action, adventure, drama, fantasy, shounen]
 completed: 24/24
 verdict: pending

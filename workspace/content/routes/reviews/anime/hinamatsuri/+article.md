@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2018-04-06"
-title:en: Hinamatsuri
+title: Hinamatsuri
 genres: [comedy, sci-fi, slice of life, supernatural]
 completed: 12/12
 verdict: pending

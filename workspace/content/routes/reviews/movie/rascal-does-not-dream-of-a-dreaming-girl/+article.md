@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2019-06-15"
-title:en: Rascal Does Not Dream of a Dreaming Girl
+title: Rascal Does Not Dream of a Dreaming Girl
 genres: [animation, romance, drama, fantasy, supernatural]
 verdict: pending
 

@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2019-07-03"
-title:en: How Heavy Are the Dumbbells You Lift?
+title: How Heavy Are the Dumbbells You Lift?
 romaji: Dumbbell Nan Kilo Moteru?
 genres: [comedy, ecchi]
 completed: 12/12

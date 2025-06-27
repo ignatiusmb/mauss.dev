@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2020-10-03"
-title:en: Jujutsu Kaisen
+title: Jujutsu Kaisen
 genres: [action, demons, supernatural, school, shounen]
 verdict: pending
 

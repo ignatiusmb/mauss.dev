@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2015-10-05"
-title:en: One Punch Man
+title: One Punch Man
 genres: [action, sci-fi, comedy, super power, supernatural]
 verdict: pending
 

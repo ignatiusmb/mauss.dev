@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2009-04-05"
-title:en: "Fullmetal Alchemist: Brotherhood"
+title: "Fullmetal Alchemist: Brotherhood"
 genres: [action, adventure, fantasy, magic, drama]
 verdict: pending
 rating:

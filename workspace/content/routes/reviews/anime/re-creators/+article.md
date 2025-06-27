@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2017-04-08"
-title:en: "Re:Creators"
+title: "Re:Creators"
 genres: [action, sci-fi, fantasy, mecha]
 verdict: pending
 

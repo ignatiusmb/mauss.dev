@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2012-10-09"
-title:en: The Pet Girl of Sakurasou
+title: The Pet Girl of Sakurasou
 romaji: Sakura-sou no Pet na Kanojo
 genres: [slice of life, comedy, drama, romance, school]
 verdict: pending

@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2021-04-11"
-title:en: Don't Toy with Me, Miss Nagatoro
+title: Don't Toy with Me, Miss Nagatoro
 romaji: Ijiranaide, Nagatoro-san
 genres: [slice of life, comedy, romance]
 completed: 24/24

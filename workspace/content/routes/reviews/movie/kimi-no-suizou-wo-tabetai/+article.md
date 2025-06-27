@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2018-09-01"
-title:en: I want to eat your pancreas
+title: I want to eat your pancreas
 romaji: Kimi no Suizou wo Tabetai
 genres: [animation, drama, romance]
 verdict: pending

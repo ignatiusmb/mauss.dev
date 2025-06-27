@@ -2,7 +2,7 @@
 date: "2020"
 released: "2021-01-11"
 alias: [Mushoku Tensei]
-title:en: "Mushoku Tensei: Jobless Reincarnation"
+title: "Mushoku Tensei: Jobless Reincarnation"
 romaji: "Mushoku Tensei: Isekai Ittara Honki Dasu"
 genres: [fantasy, magic, drama, isekai]
 verdict: pending

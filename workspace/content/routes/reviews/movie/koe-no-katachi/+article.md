@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2016-09-17"
-title:en: A Silent Voice
+title: A Silent Voice
 romaji: Koe no Katachi
 genres: [animation, drama]
 verdict: pending

@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2021-05-14"
-title:en: "Subnautica: Below Zero"
+title: "Subnautica: Below Zero"
 genres: [open world, survival]
 verdict: pending
 

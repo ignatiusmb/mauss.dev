@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2021-01-10"
-title:en: Cells at Work! CODE BLACK!
+title: Cells at Work! CODE BLACK!
 romaji: Hataraku Saibou Black
 genres: [action, seinen]
 verdict: pending

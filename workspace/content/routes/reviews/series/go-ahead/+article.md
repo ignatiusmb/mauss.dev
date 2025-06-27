@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2020-08-10"
-title:en: Go Ahead
+title: Go Ahead
 title:cn: 以家人之名
 genres: [drama, comedy, romance, family]
 verdict: pending

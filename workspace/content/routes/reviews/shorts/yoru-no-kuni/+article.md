@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2021-04-16"
-title:en: Night World
+title: Night World
 romaji: Yoru no Kuni
 genres: [animation, slice of life, romance]
 verdict: pending

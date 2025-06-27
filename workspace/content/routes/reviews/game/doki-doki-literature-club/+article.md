@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2017-09-22"
-title:en: Doki Doki Literature Club!
+title: Doki Doki Literature Club!
 genres: [visual novel]
 verdict: pending
 

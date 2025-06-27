@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2019-01-10"
-title:en: The Promised Neverland
+title: The Promised Neverland
 romaji: Yakusoku no Neverland
 genres: [sci-fi, mystery, horror, psychological, thriller, shounen]
 verdict: pending

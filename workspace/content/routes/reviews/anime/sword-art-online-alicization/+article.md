@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2018-10-07"
-title:en: "Sword Art Online: Alicization"
+title: "Sword Art Online: Alicization"
 genres: [action, adventure, fantasy, game]
 verdict: pending
 

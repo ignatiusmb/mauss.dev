@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2009-07-10"
-title:en: Tokyo Magnitude 8.0
+title: Tokyo Magnitude 8.0
 genres: [drama]
 completed: 11/11
 verdict: pending

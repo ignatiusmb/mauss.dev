@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2011-10-04"
-title:en: "The Heroes of Olympus: The Son of Neptune"
+title: "The Heroes of Olympus: The Son of Neptune"
 genres: [adventure, fantasy, mystery]
 verdict: pending
 

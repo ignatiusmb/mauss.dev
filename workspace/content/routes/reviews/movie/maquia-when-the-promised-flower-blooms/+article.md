@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2018-02-24"
-title:en: "Maquia: When the Promised Flower Blooms"
+title: "Maquia: When the Promised Flower Blooms"
 romaji: Sayonara no Asa ni Yakusoku no Hana wo Kazarou
 genres: [animation, drama, fantasy]
 verdict: pending

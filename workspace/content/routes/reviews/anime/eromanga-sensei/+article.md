@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2017-04-09"
-title:en: Eromanga-sensei
+title: Eromanga-sensei
 genres: [comedy, drama, romance, ecchi]
 verdict: pending
 rating:

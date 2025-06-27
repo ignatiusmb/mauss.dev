@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2017-01-09"
-title:en: Gabriel DropOut
+title: Gabriel DropOut
 genres: [comedy, supernatural]
 completed: 12/12
 verdict: pending

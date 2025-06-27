@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2021-07-06"
-title:en: Life Lessons with Uramichi-Oniisan
+title: Life Lessons with Uramichi-Oniisan
 romaji: Uramichi Oniisan
 genres: [slice of life, comedy]
 completed: 13/13

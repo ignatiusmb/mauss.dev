@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2022-10-14"
-title:en: Urusei Yatsura (2022)
+title: Urusei Yatsura (2022)
 genres: [comedy, romance, sci-fi]
 completed: 23/46
 verdict: pending

@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2016-04-04"
-title:en: "Re:Zero -Starting Life in Another World-"
+title: "Re:Zero -Starting Life in Another World-"
 genres: [isekai, drama, comedy, fantasy, adventure, thriller, action]
 verdict: pending
 

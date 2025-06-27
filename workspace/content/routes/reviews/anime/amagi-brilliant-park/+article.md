@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2014-10-07"
-title:en: Amagi Brilliant Park
+title: Amagi Brilliant Park
 genres: [comedy, drama, fantasy]
 completed: 13/13
 verdict: pending

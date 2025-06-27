@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2015-04-05"
-title:en: Plastic Memories
+title: Plastic Memories
 genres: [romance, sci-fi, drama]
 verdict: pending
 

@@ -2,7 +2,7 @@
 date: "2020"
 released: "2010-10-03"
 alias: [OreImo]
-title:en: My Little Sister Can't Be This Cute
+title: My Little Sister Can't Be This Cute
 romaji: Ore no Imouto ga Konnani Kawaii Wake ga Nai
 genres: [comedy, drama, romance, slice of life, harem, ecchi]
 verdict: pending

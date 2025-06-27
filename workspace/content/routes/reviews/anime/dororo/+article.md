@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2019-01-07"
-title:en: Dororo
+title: Dororo
 genres: [action, adventure, demons, historical, samurai, supernatural, shounen]
 completed: 24/24
 verdict: pending

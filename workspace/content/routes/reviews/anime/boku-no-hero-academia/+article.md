@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2016-04-03"
-title:en: My Hero Academia
+title: My Hero Academia
 romaji: Boku no Hero Academia
 genres: [action, comedy, school, shounen]
 completed: 138/138

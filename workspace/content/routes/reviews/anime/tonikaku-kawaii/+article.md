@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2020-10-03"
-title:en: "TONIKAWA: Over the Moon For You"
+title: "TONIKAWA: Over the Moon For You"
 romaji: Tonikaku Kawaii
 genres: [comedy, romance, shounen]
 verdict: pending

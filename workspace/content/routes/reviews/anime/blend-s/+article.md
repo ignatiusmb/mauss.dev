@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2017-10-08"
-title:en: BLEND-S
+title: BLEND-S
 genres: [slice of life, comedy, romance]
 verdict: pending
 

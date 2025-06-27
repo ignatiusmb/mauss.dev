@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2016-06-07"
-title:en: Honobono Log
+title: Honobono Log
 genres: [animation, slice of life, romance]
 verdict: pending
 

@@ -1,7 +1,7 @@
 ---
 date: 2020
 released: "2021-04-11"
-title:en: "86: Eighty Six"
+title: "86: Eighty Six"
 genres: [action, drama, sci-fi]
 completed: 23/23
 verdict: pending

@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "1997-07-19"
-title:en: "Neon Genesis Evangelion: The End of Evangelion"
+title: "Neon Genesis Evangelion: The End of Evangelion"
 genres: [animation, drama, mecha, psychological, sci-fi]
 verdict: pending
 

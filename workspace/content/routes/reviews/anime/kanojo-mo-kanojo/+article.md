@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2021-07-03"
-title:en: Girlfriend, Girlfriend
+title: Girlfriend, Girlfriend
 romaji: Kanojo mo Kanojo
 genres: [harem, comedy, romance, school, shounen]
 completed: 12/24

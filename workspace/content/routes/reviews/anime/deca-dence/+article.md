@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2020-07-08"
-title:en: Deca-Dence
+title: Deca-Dence
 genres: [action, adventure, sci-fi]
 completed: 12/12
 verdict: pending

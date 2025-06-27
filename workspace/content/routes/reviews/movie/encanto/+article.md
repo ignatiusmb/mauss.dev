@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2021-11-24"
-title:en: Encanto
+title: Encanto
 genres: [animation, comedy, family, fantasy, musical]
 verdict: pending
 

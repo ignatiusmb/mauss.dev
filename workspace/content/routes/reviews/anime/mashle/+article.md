@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2023-04-08"
-title:en: "Mashle: Magic and Muscles"
+title: "Mashle: Magic and Muscles"
 genres: [action, comedy, fantasy]
 completed: 24/24
 verdict: pending

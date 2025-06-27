@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2018-07-08"
-title:en: Asobi Asobase
+title: Asobi Asobase
 genres: [comedy, school]
 completed: 12/12
 verdict: pending

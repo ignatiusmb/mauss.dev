@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2017-07-07"
-title:en: Made in Abyss
+title: Made in Abyss
 genres: [adventure, fantasy, mystery]
 completed: 25/25
 verdict: pending

@@ -2,7 +2,7 @@
 date: "2020"
 released: "2019-08-30"
 alias: [KONOSUBA - Legend of Crimson]
-title:en: KONOSUBA -God's blessing on this wonderful world!- Legend of Crimson
+title: KONOSUBA -God's blessing on this wonderful world!- Legend of Crimson
 genres: [animation, adventure, comedy, fantasy, magic]
 verdict: pending
 

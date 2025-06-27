@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2021-01-08"
-title:en: "2.43: Seiin High School Boys Volleyball Team"
+title: "2.43: Seiin High School Boys Volleyball Team"
 romaji: "2.43: Seiin Koukou Danshi Volley-bu"
 genres: [sports, slice of life, drama, school]
 verdict: pending

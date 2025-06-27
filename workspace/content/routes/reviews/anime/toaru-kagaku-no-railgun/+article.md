@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2009-10-03"
-title:en: A Certain Scientific Railgun
+title: A Certain Scientific Railgun
 romaji: Toaru Kagaku no Railgun
 genres: [action, sci-fi, super power]
 verdict: pending

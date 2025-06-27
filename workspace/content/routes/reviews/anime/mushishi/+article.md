@@ -2,7 +2,7 @@
 date: "2020"
 released: "2005-10-23"
 alias: [Mushishi]
-title:en: Mushi-Shi
+title: Mushi-Shi
 genres: [adventure, mystery, slice of life, supernatural, historical, fantasy, seinen]
 completed: 27/46
 verdict: pending

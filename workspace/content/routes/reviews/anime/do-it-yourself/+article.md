@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2022-10-06"
-title:en: Do It Yourself!!
+title: Do It Yourself!!
 genres: [slice of life, school]
 completed: 12/12
 verdict: pending

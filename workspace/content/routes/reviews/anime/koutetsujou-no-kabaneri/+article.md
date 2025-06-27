@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2016-04-08"
-title:en: Kabaneri of the Iron Fortress
+title: Kabaneri of the Iron Fortress
 romaji: Koutetsujou no Kabaneri
 genres: [action, horror, supernatural, drama, fantasy]
 completed: 12/12

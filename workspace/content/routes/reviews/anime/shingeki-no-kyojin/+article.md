@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2013-04-07"
-title:en: Attack on Titan
+title: Attack on Titan
 romaji: Shingeki no Kyojin
 genres: [action, military, mystery, fantasy, drama, shounen]
 completed: 87/87

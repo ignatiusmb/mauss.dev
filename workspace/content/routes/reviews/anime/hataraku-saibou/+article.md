@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2018-07-08"
-title:en: Cells at Work!
+title: Cells at Work!
 romaji: Hataraku Saibou
 genres: [comedy, shounen]
 completed: 14/21

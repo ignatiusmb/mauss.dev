@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2006-10-04"
-title:en: Death Note
+title: Death Note
 genres: [mystery, psychological, supernatural, thriller, shounen]
 verdict: pending
 
