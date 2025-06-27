@@ -5,7 +5,6 @@ title:
   en: Attack on Titan
   jp: Shingeki no Kyojin
 genres: [action, military, mystery, fantasy, drama, shounen]
-rating: [story,artwork,sound,characters]
 completed: 87/87
 verdict: pending
 

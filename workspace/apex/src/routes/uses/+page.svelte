@@ -1,10 +1,8 @@
 <script lang="ts">
 	import Article from '$lib/pages/Article.svelte';
-
-	const { data } = $props();
 </script>
 
-<Article post={{ date: data.updated, title: data.meta.title, table: [] }}>
+<Article>
 	<h1>in use</h1>
 	<!-- prettier-ignore -->
 	<p>inspired by <a href="https://wesbos.com/uses" target="_blank">Wes Bos</a> — a living list of the things i trust and rely on daily.</p>

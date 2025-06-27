@@ -1,116 +1,156 @@
 import { traverse } from 'aubade/compass';
 import { chain } from 'aubade/transform';
-// import { execSync } from 'child_process';
-import * as compare from 'mauss/compare';
+// import { exec } from 'node:child_process';
+import { date, define, drill, sum } from 'mauss';
 import { exists } from 'mauss/guards';
-import { scope } from 'mauss';
-import { assemble } from './media';
+import sharp from 'sharp';
 
+// async function updated(path: string): Promise<string> {
+// 	return await new Promise((resolve) => {
+// 		exec(`git log -1 --format=%ad --date=iso-strict "${path}"`, (_, out) => resolve(out.trim()));
+// 	});
+// }
+
+const ROOT = `${process.cwd()}/static/uploads`;
 export const DATA = {
-	get 'curated/'() {
-		interface FrontMatter {
-			slug: string;
-			date: string;
-			title: string;
-			tags?: string[];
-		}
+	async 'curated/'() {
+		const schema = define(({ optional, string }) => ({
+			date: string(),
+			title: string(),
+			tags: optional(string()),
+		}));
 
-		const items = traverse('../content/routes/curated', { depth: -1 }).hydrate(
-			({ breadcrumb: [, slug], buffer, parse, marker, siblings }) => {
-				const { body, metadata } = parse(buffer.toString('utf-8'));
+		const items = await traverse('../content/routes/curated', ({ breadcrumb: [file, slug] }) => {
+			if (file !== '+article.md') return;
 
-				const specified: FrontMatter = {
-					slug,
-					date: metadata.date,
-					title: metadata.title,
-				};
+			return async ({ buffer, marker, parse, siblings, task }) => {
+				const { body, frontmatter } = parse(buffer.toString('utf-8'));
+				if (!frontmatter || frontmatter.draft) return;
+				const metadata = schema(frontmatter);
 
-				const content = siblings.reduce((content, { type, breadcrumb: [file], buffer }) => {
-					if (type !== 'file') return content;
-					const output = assemble(buffer, `/curated/${slug}/${file}`);
-					return content.replace(`./${file}`, output || `./${file}`);
-				}, body);
+				const umbrella = `curated/${slug}`;
+				const content = body.replace(/\.\/([^\s)]+)/g, (m, relative) => {
+					const asset = siblings.find(({ filename }) => relative === filename);
+					if (!asset || !/\.(jpe?g|png|svg|mp4)$/.test(asset.filename)) return m;
+
+					const output = /\.(mp4)$/.test(asset.filename)
+						? asset.filename
+						: asset.filename.replace(/\.[^/.]+$/, '.webp');
+
+					task(async ({ fs }) => {
+						await fs.mkdir(`${ROOT}/${umbrella}`, { recursive: true });
+						const payload = await asset.buffer;
+						if (/\.(mp4)$/.test(asset.filename)) {
+							return fs.writeFile(`${ROOT}/${umbrella}/${asset.filename}`, payload);
+						}
+						const webp = sharp(payload).webp();
+						return void webp.toFile(`${ROOT}/${umbrella}/${output}`);
+					});
+
+					if (/\.(mp4)$/.test(asset.filename)) {
+						return `/uploads/${umbrella}/${asset.filename}`;
+					}
+					return `/uploads/${umbrella}/${asset.filename.replace(/\.[^/.]+$/, '.webp')}`;
+				});
+
+				const branches = siblings.map(async (branch) => {
+					if (branch.filename[0] !== '+') return;
+					const { body, frontmatter: extras } = parse((await branch.buffer).toString('utf-8'));
+					if (!extras || extras.draft) return;
+					return {
+						slug,
+						...frontmatter,
+						...metadata,
+						...extras,
+						branch: branch.filename.slice(1, -3),
+						content: marker.render(body),
+					};
+				});
 
 				return {
+					slug,
+					...frontmatter,
 					...metadata,
-					...specified,
 					content: marker.render(content),
-					branches: siblings.flatMap(({ type, breadcrumb: [name], buffer }) => {
-						if (type !== 'file' || name[0] !== '+') return [];
-						const { body, metadata: extras } = parse(buffer.toString('utf-8'));
-						return {
-							...metadata,
-							...specified,
-							...extras,
-							branch: name.slice(1, -3),
-							title: `${extras.title} of ${specified.title}`,
-							content: marker.render(body),
-						};
-					}),
+					branches: (await Promise.all(branches)).filter((b) => b != null),
 				};
-			},
-			(path) => path.endsWith('+article.md'),
-		);
+			};
+		});
 
-		return items.sort(compare.key('date', compare.date));
+		return items.sort(drill('date', date.sort.newest));
 	},
 
-	get 'posts/'() {
-		interface FrontMatter {
-			slug: string;
-			date: string;
-			// updated: string;
-			title: string;
-			description?: string;
-			category: string;
-			tags: string[];
-			thumbnail?: string;
-			image?: {
-				en?: string;
-			};
-		}
+	async 'posts/'() {
+		const schema = define(({ optional, string, array }) => ({
+			date: string(),
+			title: string(),
+			description: optional(string()),
+			tags: array(string()),
+			thumbnail: optional(string()),
+			image: optional(string()),
+		}));
 
-		const root = '../content/routes/posts';
-		const items = traverse(root, { depth: 1 }).hydrate(
-			({ breadcrumb: [, slug], buffer, parse, marker, siblings }) => {
-				const { body, metadata } = parse(buffer.toString('utf-8'));
+		const items = await traverse('../content/routes/posts', ({ breadcrumb: [file, slug] }) => {
+			if (file !== '+article.md') return;
 
-				const specified: FrontMatter = {
-					slug,
-					date: metadata.date,
-					// updated: git.lastModified(`${root}/${slug}/+article.md`),
-					title: metadata.title,
-					category: metadata.tags[0],
-					tags: metadata.tags,
-				};
+			return async ({ buffer, marker, parse, siblings, task }) => {
+				const { body, frontmatter } = parse(buffer.toString('utf-8'));
+				if (!frontmatter || frontmatter.draft) return;
+				const metadata = schema(frontmatter);
 
-				const content = siblings.reduce((content, { type, breadcrumb: [file], buffer }) => {
-					if (type !== 'file' || file.endsWith('.md')) return content;
-					const output = assemble(buffer, `/posts/${slug}/${file}`);
-					if (file.startsWith('thumbnail.')) specified.thumbnail = output;
-					return content.replace(`./${file}`, output || `./${file}`);
-				}, body);
+				const umbrella = `posts/${slug}`;
+				const content = body.replace(/\.\/([^\s)]+)/g, (m, relative) => {
+					const asset = siblings.find(({ filename }) => relative === filename);
+					if (!asset || !/\.(jpe?g|png|svg|mp4)$/.test(asset.filename)) return m;
+
+					const output = /\.(mp4)$/.test(asset.filename)
+						? asset.filename
+						: asset.filename.replace(/\.[^/.]+$/, '.webp');
+					task(async ({ fs }) => {
+						await fs.mkdir(`${ROOT}/${umbrella}`, { recursive: true });
+						const payload = await asset.buffer;
+						if (/\.(mp4)$/.test(asset.filename)) {
+							return fs.writeFile(`${ROOT}/${umbrella}/${asset.filename}`, payload);
+						}
+						const webp = sharp(payload).webp();
+						return void webp.toFile(`${ROOT}/${umbrella}/${output}`);
+					});
+
+					if (/\.(mp4)$/.test(asset.filename)) {
+						return `/uploads/${umbrella}/${asset.filename}`;
+					}
+					return `/uploads/${umbrella}/${asset.filename.replace(/\.[^/.]+$/, '.webp')}`;
+				});
+
+				const thumbnail = siblings.find(({ filename }) => filename.startsWith('thumbnail.'));
+				if (thumbnail) {
+					const output = thumbnail.filename.replace(/\.[^/.]+$/, '.webp');
+					task(async ({ fs }) => {
+						await fs.mkdir(`${ROOT}/${umbrella}`, { recursive: true });
+						const webp = sharp(await thumbnail.buffer).webp();
+						return void webp.toFile(`${ROOT}/${umbrella}/${output}`);
+					});
+					metadata.thumbnail = `/uploads/${umbrella}/${output}`;
+				}
 
 				return {
+					slug,
+					...frontmatter,
 					...metadata,
-					...specified,
 					content: marker.render(content),
 				};
-			},
-			(path) => path.endsWith('+article.md'),
-		);
+			};
+		});
 
 		return chain(items, {
-			base: 'posts/',
-			sort({ date: xd }, { date: yd }) {
-				return compare.date(xd, yd);
-			},
+			sort: drill('date', date.sort.newest),
+			transform: ({ slug, title }) => ({ slug: `/posts/${slug}`, title }),
 		});
 	},
 
-	get 'quotes/'() {
-		const items = traverse('../content/routes/quotes').hydrate(
-			({ breadcrumb: [file], buffer, parse }) => {
+	async 'quotes/'() {
+		const items = await traverse('../content/routes/quotes', ({ breadcrumb: [file] }) => {
+			return async ({ buffer, parse }) => {
 				const content: Array<{ author: string; quote: string; from: string }> = [];
 				const author = file.slice(0, -3).replace(/-/g, ' ');
 				const { body } = parse(buffer.toString('utf-8'));
@@ -119,116 +159,128 @@ export const DATA = {
 					content.push({ author, quote, from });
 				}
 				return content;
-			},
-		);
+			};
+		});
 		return items.flat();
 	},
 
-	get 'reviews/'() {
-		interface FrontMatter {
-			// generated fields
-			slug: string;
-			category: string;
-
-			// metadata fields
-			date: string;
-			released: string;
-			composed: number;
+	async 'reviews/'() {
+		const schema = define(({ optional, array, record, string, literal }) => ({
+			date: string(),
+			released: string(),
 			title: {
-				short?: string;
-				en: string;
-				jp?: string;
-			};
-			genres: string[];
-			rating?: number;
-			completed?: number;
-			verdict: 'pending' | 'not-recommended' | 'contextual' | 'recommended' | 'must-watch';
-
-			backdrop?: string;
-			image: {
-				en: string;
-				jp?: string;
-			};
-
-			seen: { first: string; last?: string };
-			link?: Record<string, string | string[]>;
-		}
-
-		const items = traverse('../content/routes/reviews', { depth: -1 }).hydrate(
-			({ breadcrumb: [, slug, category], buffer, parse, marker, siblings }) => {
-				const { body, metadata } = parse(buffer.toString('utf-8'));
-				if (metadata.draft) return;
-
-				const delta = +new Date(metadata.date) - +new Date(metadata.seen.first);
-				const specified: FrontMatter = {
-					category,
-					slug: `${category}/${slug}`,
-
-					date: metadata.date,
-					released: metadata.released,
-					composed: delta / 24 / 60 / 60 / 1000,
-
-					title: metadata.title,
-					genres: metadata.genres,
-					rating: scope((ratings = metadata.rating as string[]) => {
-						if (!ratings || ratings.some((n) => Number.isNaN(+n))) return;
-						const total = ratings.reduce((acc, cur) => +cur + acc, 0);
-						return Math.round((total / ratings.length + Number.EPSILON) * 100) / 100;
-					}),
-					completed: scope((ratio = metadata.completed as string) => {
-						if (!ratio) return 80;
-						const [watched, total] = ratio.split('/');
-						return Math.round((+watched / +total) * 80);
-					}),
-					verdict: metadata.verdict,
-					image: metadata.image,
-					seen: {
-						first: Array.isArray(metadata.seen.first)
-							? metadata.seen.first[metadata.seen.first.length - 1]
-							: metadata.seen.first,
-						last: Array.isArray(metadata.seen.last)
-							? metadata.seen.last[metadata.seen.last.length - 1]
-							: metadata.seen.last,
+				short: optional(string()),
+				en: string(),
+				jp: optional(string()),
+			},
+			genres: array(string()),
+			rating: optional(
+				record(
+					array(
+						record(
+							// @TODO: have `number` coerce strings to numbers
+							string((v) => Number(v)),
+							(pts) => sum(Object.values(pts)),
+						),
+						(score) => sum(score) / score.length,
+					),
+					(rubric) => {
+						const ratings = Object.values(rubric);
+						return (sum(ratings) / ratings.length).toFixed(2);
 					},
-				};
+				),
+			),
+			completed: optional(
+				string((ratio) => {
+					if (!ratio) return 80;
+					const [watched, total] = ratio.split('/');
+					return Math.round((+watched / +total) * 80);
+				}),
+			),
+			verdict: literal('pending', 'not-recommended', 'contextual', 'recommended', 'must-watch'),
+			backdrop: optional(string()),
+			image: {
+				en: string(),
+				jp: optional(string()),
+			},
+			seen: {
+				first: string(),
+				last: optional(string()),
+			},
+			link: optional(record(string())),
+		}));
 
-				const content = siblings.reduce((content, { type, breadcrumb: [file], buffer }) => {
-					if (type !== 'file') return content;
-					const output = assemble(buffer, `/reviews/${category}/${slug}/${file}`);
-					return content.replace(`./${file}`, output || `./${file}`);
-				}, body);
+		const items = await traverse(
+			'../content/routes/reviews',
+			({ breadcrumb: [file, slug, category] }) => {
+				if (file !== '+article.md') return;
 
-				return {
-					...metadata,
-					...specified,
-					content: marker.render(content),
-					branches: siblings.flatMap(({ type, breadcrumb: [name], buffer }) => {
-						if (type !== 'file' || name[0] !== '+') return [];
-						const { body, metadata: extras } = parse(buffer.toString('utf-8'));
+				return async ({ buffer, marker, parse, siblings, task }) => {
+					const { body, frontmatter } = parse(buffer.toString('utf-8'));
+					if (!frontmatter || frontmatter.draft) return;
+					const metadata = schema(frontmatter);
+
+					const umbrella = `reviews/${category}/${slug}`;
+					const content = body.replace(/\.\/([^\s)]+)/g, (m, relative) => {
+						const asset = siblings.find(({ filename }) => relative.endsWith(filename));
+						if (!asset || !/\.(jpe?g|png|svg|mp4)$/.test(asset.filename)) return m;
+
+						const output = /\.(mp4)$/.test(asset.filename)
+							? asset.filename
+							: asset.filename.replace(/\.[^/.]+$/, '.webp');
+						task(async ({ fs }) => {
+							await fs.mkdir(`${ROOT}/${umbrella}`, { recursive: true });
+							const payload = await asset.buffer;
+							if (/\.(mp4)$/.test(asset.filename)) {
+								return fs.writeFile(`${ROOT}/${umbrella}/${asset.filename}`, payload);
+							}
+							const webp = sharp(payload).webp();
+							return void webp.toFile(`${ROOT}/${umbrella}/${output}`);
+						});
+
+						if (/\.(mp4)$/.test(asset.filename)) {
+							return `/uploads/${umbrella}/${asset.filename}`;
+						}
+						return `/uploads/${umbrella}/${asset.filename.replace(/\.[^/.]+$/, '.webp')}`;
+					});
+
+					const branches = siblings.map(async (branch) => {
+						if (branch.filename[0] !== '+') return;
+						const payload = (await branch.buffer).toString('utf-8');
+						const { body, frontmatter: extras } = parse(payload);
+						if (!extras || extras.draft) return;
 						return {
+							slug: `${category}/${slug}`,
+							category,
+							...frontmatter,
 							...metadata,
-							...specified,
 							...extras,
-							branch: name.slice(1, -3),
+							branch: branch.filename.slice(1, -3),
 							content: marker.render(body),
 						};
-					}),
+					});
+
+					return {
+						slug: `${category}/${slug}`,
+						category,
+						...frontmatter,
+						...metadata,
+						composed: date(metadata.date).delta(metadata.seen.first).days,
+						content: marker.render(content),
+						branches: (await Promise.all(branches)).filter((b) => b != null),
+					};
 				};
 			},
-			(path) => path.endsWith('+article.md'),
 		);
 
 		return chain(items, {
-			base: 'reviews/',
+			sort: drill('date', date.sort.newest),
 			breakpoint: (r) => !r.rating || r.verdict === 'pending',
-			sort: (x, y) => compare.date(x.date, y.date),
+			transform: ({ slug, title }) => ({ slug: `/reviews/${slug}`, title }),
 		});
 	},
 } as const;
 
-// const git = {
-// 	lastModified(path: string) {
-// 		const output = execSync(`git log -1 --format=%ad --date=iso-strict "${path}"`);
-// 		return output.toString().trim();
-// 	},
-// };
+export type Items = {
+	[key in keyof typeof DATA]: Awaited<ReturnType<(typeof DATA)[key]>>;
+};

@@ -5,7 +5,6 @@ title:
   en: To Your Eternity
   jp: Fumetsu no Anata e
 genres: [adventure, drama, supernatural]
-rating: [story,artwork,sound,characters]
 completed: 21/40
 verdict: pending
 

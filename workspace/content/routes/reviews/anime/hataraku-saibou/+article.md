@@ -5,7 +5,6 @@ title:
   en: Cells at Work!
   jp: Hataraku Saibou
 genres: [comedy, shounen]
-rating: [story,artwork,sound,characters]
 completed: 14/21
 verdict: pending
 
@@ -13,7 +12,7 @@ backdrop: https://www.themoviedb.org/t/p/original/znwEvECDz94pc3ZWML4OettkPto.jp
 image:en: https://www.themoviedb.org/t/p/original/sgwwEGvNy7vCJN8IVnl44tuVlMZ.jpg
 
 seen:
-  first: [2021-02-10, 2021-10-17T17:31:13]
+  first: "2021-02-10"
   last: "2021-07-04"
 
 link:

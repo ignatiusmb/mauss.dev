@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Article from '$lib/pages/Article.svelte';
 
-	import { format } from 'mauss/date';
+	import { date } from 'mauss';
 
 	const { data } = $props();
 </script>
@@ -22,10 +22,10 @@
 			<i data-icon="article"></i>
 			<span>/posts</span>
 		</h2>
-		{#each data.posts as { slug, title, date }}
+		{#each data.posts as { slug, title, date: created }}
 			<article>
 				<a href="/posts/{slug}">{title}</a>
-				<time datetime={date}>{format(date)('DD MMM YYYY')}</time>
+				<time datetime={created}>{date(created).format('DD MMM YYYY')}</time>
 			</article>
 		{/each}
 		<a href="/posts">
@@ -39,10 +39,10 @@
 			<i data-icon="books"></i>
 			<span>/curated</span>
 		</h2>
-		{#each data.curated as { slug, title, date }}
+		{#each data.curated as { slug, title, date: created }}
 			<article>
 				<a href="/curated/{slug}">{title}</a>
-				<time datetime={date}>{format(date)('DD MMM YYYY')}</time>
+				<time datetime={created}>{date(created).format('DD MMM YYYY')}</time>
 			</article>
 		{/each}
 		<a href="/curated">
@@ -56,10 +56,10 @@
 			<i data-icon="list-star"></i>
 			<span>/reviews</span>
 		</h2>
-		{#each data.reviews as { slug, title, date }}
+		{#each data.reviews as { slug, title, date: created }}
 			<article>
 				<a href="/reviews/{slug}">{title.short || title.en}</a>
-				<time datetime={date}>{format(date)('DD MMM YYYY')}</time>
+				<time datetime={created}>{date(created).format('DD MMM YYYY')}</time>
 			</article>
 		{/each}
 		<a href="/reviews">

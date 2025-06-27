@@ -3,7 +3,6 @@ date: "2020"
 released: "2014-04-06"
 title:en: Haikyuu!!
 genres: [comedy, sports, drama]
-rating:
 verdict: pending
 
 seen:first: "2020-12-19"

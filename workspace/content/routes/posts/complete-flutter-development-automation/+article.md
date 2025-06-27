@@ -11,7 +11,7 @@ I'm sure most of you developers have at least seen this logo before, or are even
 
 ## What even is Flutter
 
-For those who've never heard of this, Flutter is Google's UI framework to develop mainly mobile applications for Android and iOS with their built-in SDK.
+If you've (surprisingly) never heard of this, Flutter is Google's UI framework to develop mainly mobile applications for Android and iOS with their built-in SDK.
 
 > Flutter is Google's UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase
 > -flutter.dev

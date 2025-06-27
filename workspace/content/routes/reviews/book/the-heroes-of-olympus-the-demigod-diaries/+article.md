@@ -3,7 +3,6 @@ date: "2020"
 released: "2012-08-14"
 title:en: "The Heroes of Olympus: The Demigod Diaries"
 genres: [adventure, fantasy, mystery]
-rating:
 verdict: pending
 
 seen:first: 2020

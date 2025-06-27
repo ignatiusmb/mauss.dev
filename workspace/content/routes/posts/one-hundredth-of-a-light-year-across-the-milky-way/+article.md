@@ -59,7 +59,7 @@ When you stop caring about what others think and not care about the personal pre
 
 I've survived another year, another revolution around the sun. I don't care about your wishes when it only comes once a year and this isn't exclusive to just myself, but also to those around you. It would not only feel disingenuous, but it would also show how fake you are.
 
-That aside, for those who've been with me throughout these years, whether you're still with me, or has been with me and have moved on, I'm grateful for all the experience we share together. After all, you've quite literally been a part of my life, and have played a role in it.
+That aside, if you've been with me throughout these years, whether you're still with me, or has been with me and have moved on, I'm grateful for all the experience we share together. After all, you've quite literally been a part of my life, and have played a role in it.
 
 Yes, I do remember and am referring to you, if any of you have reached this far, thank you for taking the time to read this, and thank you for playing a part in my life, I'm grateful for all the things we did and didn't do, and also for all the experiences we had together.
 

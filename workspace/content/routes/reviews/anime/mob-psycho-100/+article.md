@@ -3,9 +3,30 @@ date: "2020"
 released: "2016-07-11"
 title:en: Mob Psycho 100
 genres: [action, comedy, supernatural]
-rating: [10,9,10,10]
 completed: 37/37
 verdict: pending
+rating:
+  narrative:
+    - premise: 10
+    - pacing: 10
+    - resolution: 10
+    - direction: 10
+  characterization:
+    - development: 10
+    - dynamics: 10
+    - seiyuu: 10
+  presentation:
+    - style: 9
+    - animation: 10
+    - visuals: 9
+  audio:
+    - ambience: 10
+    - songs: 10
+    - soundtrack: 10
+  personal:
+    - engagement: 10
+    - relatable: 10
+    - impact: 10
 
 backdrop: 
 image:en: https://image.tmdb.org/t/p/original/5Wf9Y6gucbu1LMe1FyqD8TQjaNM.jpg

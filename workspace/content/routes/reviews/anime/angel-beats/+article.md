@@ -3,7 +3,6 @@ date: "2020"
 released: "2010-04-03"
 title:en: Angel Beats!
 genres: [action, comedy, drama, school, supernatural]
-rating: [story,artwork,sound,characters]
 verdict: pending
 
 seen:first: "2020-06-30"

@@ -88,9 +88,9 @@ You'll typically have a wrapper that'll make it reusable and convenient to use r
 
 ## Securing requests
 
-For those who have the luxury of having the server available in the same domain as the client, rejoice and be delightful for it is probably the most secure and convenient way to have it set up. You can disable CORS completely and have a peace of mind. It means having the app served in `awesome.com` and your server in `awesome.com/api`. Of course, there's some caveat to having everything in one place, like a potential DDoS that will shut everything down completely if it were to happen. But, that's another story for another time.
+If you have the luxury of having the server available in the same domain as the client, rejoice and be delightful for it is probably the most secure and convenient way to have it set up. You can disable CORS completely and have a peace of mind. It means having the app served in `awesome.com` and your server in `awesome.com/api`. Of course, there's some caveat to having everything in one place, like a potential DDoS that will shut everything down completely if it were to happen. But, that's another story for another time.
 
-Those who have it served as a subdomain or at another place would have to resort to conventional methods. In addition to setting an origin to `Access-Control-Allow-Origin`, you could also have your server manage session and credentials by serving cookies as `HttpOnly` from the server. This is another deep dive that will be covered in another post, you can research it and study for yourself if you're eager to know more. I'll update this section when I've posted about it.
+If you have it served as a subdomain or at another place would have to resort to conventional methods. In addition to setting an origin to `Access-Control-Allow-Origin`, you could also have your server manage session and credentials by serving cookies as `HttpOnly` from the server. This is another deep dive that will be covered in another post, you can research it and study for yourself if you're eager to know more. I'll update this section when I've posted about it.
 
 The important thing is that your server explicitly sets an specific origin to allow requests and credentials to be sent from. So as long as it's not a wildcard `*`, you're already one step further towards securing your application.
 

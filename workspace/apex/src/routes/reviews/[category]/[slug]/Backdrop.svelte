@@ -2,7 +2,7 @@
 	interface Props {
 		post: {
 			backdrop?: string;
-			rating?: number;
+			rating?: string;
 			title: string | { short?: string; en?: string; jp?: string };
 		};
 	}

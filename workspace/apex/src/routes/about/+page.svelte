@@ -21,7 +21,7 @@
 		<span>expertise.</span>
 	</h3>
 	<!-- prettier-ignore -->
-	<p>I'm a software engineer by trade, but I like to think of myself more as a <em>software alchemist</em>. I see what I'm doing as a kind of art — taking something complex and trying to refine it into something simple and elegant.</p>
+	<p>I'm a software engineer by trade, but I like to think of myself more as a <em>software alchemist</em>. I see it as an art — being able to create something out of nothing, or transforming raw and unrefined thoughts (solutions) into something beautiful.</p>
 	<!-- prettier-ignore -->
 	<p>My strength lies in restructuring systems and streamlining logic, shaving away the noise until what remains just works. I found that the time I spent there is well worth the payoff: easier debugging, quicker iteration, and codebases I don't dread revisiting.</p>
 	<!-- prettier-ignore -->

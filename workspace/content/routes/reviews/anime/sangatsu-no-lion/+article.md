@@ -5,7 +5,6 @@ title:
   en: March comes in like a lion
   jp: 3-gatsu no Lion
 genres: [slice of life, drama, seinen]
-rating: [story,artwork,sound,characters]
 completed: 44/44
 verdict: pending
 
@@ -15,8 +14,8 @@ image:
   jp: https://www.themoviedb.org/t/p/original/4VljT9YV6oTG757x7yGsMc34hNs.jpg
 
 seen:
-  first: [2022-03-18T22:11:20, 2022-07-25T23:00:32]
-  last: [2022-07-23T21:16:20, 2022-08-01T11:17:18]
+  first: "2022-03-18T22:11:20"
+  last: "2022-08-01T11:17:18"
 
 link:
   MyAnimeList: https://myanimelist.net/anime/31646/3-gatsu_no_Lion

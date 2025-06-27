@@ -3,7 +3,6 @@ date: "2020"
 released: "2018-01-11"
 title:en: Violet Evergarden
 genres: [slice of life, drama, fantasy]
-rating: [story,artwork,sound,characters]
 completed: 13/13
 verdict: pending
 

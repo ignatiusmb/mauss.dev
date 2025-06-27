@@ -2,44 +2,48 @@
 	import SearchBar from 'syv/core/SearchBar.svelte';
 	import Link from '$lib/components/Link.svelte';
 
+	import type { Commands } from './search.worker';
+	import { qse } from 'mauss/web';
 	import { TIME } from 'syv/options';
+	import { spawn } from 'syv/worker';
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
+	import { replaceState } from '$app/navigation';
+	import { page } from '$app/state';
+	import worker from './search.worker?worker&url';
 
 	const { data } = $props();
+
+	let index = $state(data.list);
+	const invoke = spawn<Commands>(worker, (invoke) => invoke('init', data.list));
 </script>
 
 <header>
-	<h1>things worth keeping</h1>
-	<small>selected pieces of the internet — timeless, meaningful, and worth revisiting.</small>
+	<h1>timeless pieces</h1>
+	<small>things that can stand the test of time.</small>
 </header>
 
 <SearchBar
 	value={data.query.replace(/\+/g, ' ')}
-	items={data.list}
-	sieve={({ query, normalize, item }) => {
-		const value = normalize(query);
-		if (item.slug.includes(value)) return true;
-		if (normalize(item.title).includes(value)) return true;
-		return false;
+	oninput={async (q) => {
+		replaceState(qse({ q }) || page.url.pathname, {});
+		index = await invoke('search', { search: q });
 	}}
->
-	{#snippet children({ index })}
-		<div id="layout">
-			{#each index as { title, slug } (slug)}
-				<section
-					animate:flip={{ duration: TIME.SLIDE }}
-					transition:scale|local={{ duration: TIME.SLIDE }}
-				>
-					<small>{title}</small>
-					<Link href="/curated/{slug}" style="primary">READ</Link>
-				</section>
-			{:else}
-				<p style:grid-column="1 / -1" style:text-align="center">There are no matching titles</p>
-			{/each}
-		</div>
-	{/snippet}
-</SearchBar>
+/>
+
+<div id="layout">
+	{#each index as { title, slug } (slug)}
+		<section
+			animate:flip={{ duration: TIME.SLIDE }}
+			transition:scale|local={{ duration: TIME.SLIDE }}
+		>
+			<small>{title}</small>
+			<Link href="/curated/{slug}" style="primary">READ</Link>
+		</section>
+	{:else}
+		<p style:grid-column="1 / -1" style:text-align="center">There are no matching titles</p>
+	{/each}
+</div>
 
 <style>
 	header {

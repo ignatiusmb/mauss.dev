@@ -5,7 +5,6 @@ title:
   en: Mushi-Shi
   jp: Mushishi
 genres: [adventure, mystery, slice of life, supernatural, historical, fantasy, seinen]
-rating: [story,artwork,sound,characters]
 completed: 27/46
 verdict: pending
 

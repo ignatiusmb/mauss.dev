@@ -5,7 +5,6 @@ title:
   en: Miss Kobayashi's Dragon Maid
   jp: Kobayashi-san Chi no Maid Dragon
 genres: [fantasy, slice of life]
-rating: [story,artwork,sound,characters]
 completed: 25/25
 verdict: pending
 
@@ -15,8 +14,8 @@ image:
   jp: https://www.themoviedb.org/t/p/original/g8gof5OzYtS8Ebt5BlmpPExUjlJ.jpg
 
 seen:
-  first: [2022-04-06T21:55:05, 2022-04-09T23:14:41]
-  last: [2022-04-09T14:10:40, 2022-05-14T16:44:04]
+  first: "2022-04-06T21:55:05"
+  last: "2022-05-14T16:44:04"
 
 link:
   MyAnimeList: https://myanimelist.net/anime/33206/Kobayashi-san_Chi_no_Maid_Dragon/

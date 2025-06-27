@@ -21,7 +21,7 @@ Here's another really [good and simple explanation](https://www.reddit.com/r/pri
 
 - [[Kira McLean](https://kiramclean.com/blog/what-i-use-now-instead-of-google/)] What I Use Now Instead Of Google
 
-For those who rely heavily on Google, read this and take a look on all those alternatives. Unclutter and decentralize your life from Google (or any one company), try to be independent and not rely everything heavily on them. Start early and slow, you don't need to do it in one jump, as long as you progress.
+If you rely heavily on Google, read this and take a look at all of the alternatives. Unclutter and decentralize your life from Google (or any one company), try to be independent and not rely everything heavily on them. Start early and slow, you don't need to do it in one jump, as long as you progress.
 
 - [[Reddit](https://www.reddit.com/r/socialskills/comments/kqaiow/if_you_think_you_are_boring_read_this/)] If you think you are boring read this
 
@@ -34,7 +34,7 @@ For th... no, everyone should read this. Read the post and its comments, reflect
 (and more)
 - [[Medium](https://blog.usejournal.com/how-i-stole-the-data-in-millions-of-peoples-google-accounts-aa1b72dcc075)] How I stole the data in millions of people's Google accounts
 
-A Google product related articles. Worth the read for those learning Computer Science or any developers out there. It's quite technical, but worth it once you get the idea behind it. The first 2 articles are bug hunting reports related to YouTube made by the same person, a fun read on behind the scenes when "attacking" these things.
+A Google product related articles. Worth the read if you're learning Computer Science or a developer. It's quite technical, but worth it once you get the idea behind it. The first 2 articles are bug hunting reports related to YouTube made by the same person, a fun read on behind the scenes when "attacking" these things.
 
 ## Content of the month
 

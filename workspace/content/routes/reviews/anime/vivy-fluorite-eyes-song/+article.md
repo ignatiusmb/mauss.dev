@@ -5,9 +5,30 @@ title:
   en: "Vivy: Fluorite Eye's Song"
   jp: "Vivy -Fluorite Eye's Song-"
 genres: [music, action, sci-fi, suspense]
-rating: [10, 9, 10, 9]
 completed: 13/13
 verdict: pending
+rating:
+  narrative:
+    - premise: 10
+    - pacing: 9
+    - resolution: 10
+    - direction: 10
+  characterization:
+    - development: 9
+    - dynamics: 8
+    - seiyuu: 9
+  presentation:
+    - style: 9
+    - animation: 8
+    - visuals: 8
+  audio:
+    - ambience: 10
+    - songs: 10
+    - soundtrack: 10
+  personal:
+    - engagement: 10
+    - relatable: 7
+    - impact: 9
 
 backdrop: https://www.themoviedb.org/t/p/original/sPYlIOvJ2kqf23Rnw7qSuBSEi1b.jpg
 image:

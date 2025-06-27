@@ -4,7 +4,6 @@ released: "2012-04-08"
 title:en: Kuroko's Basketball
 title:jp: Kuroko no Basuke
 genres: [sports, school, comedy]
-rating:
 verdict: pending
 
 seen:first: "2020-05-10"

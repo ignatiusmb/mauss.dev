@@ -4,8 +4,30 @@ released: "2010-10-04"
 title:short: Yosuga no Sora
 title:en: "Yosuga no Sora: In Solitude, Where We Are Least Alone"
 genres: [drama, romance, tsundere, ecchi, harem]
-rating: [4,7,10,5]
 verdict: contextual
+rating:
+  narrative:
+    - premise: 8
+    - pacing: 5
+    - resolution: 9
+    - direction: 8
+  characterization:
+    - protagonist: 3
+    - development: 4
+    - dynamics: 5
+    - seiyuu: 8
+  presentation:
+    - style: 10
+    - animation: 9
+    - visuals: 9
+  audio:
+    - ambience: 10
+    - songs: 10
+    - soundtrack: 10
+  personal:
+    - engagement: 9
+    - relatable: 4
+    - impact: 8
 
 seen:first: "2020-06-06"
 image:en: https://image.tmdb.org/t/p/original/9F80WGUD6WYfoEDMImf988NlXhC.jpg

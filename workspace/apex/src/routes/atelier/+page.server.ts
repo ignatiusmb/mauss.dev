@@ -1,4 +1,5 @@
-export async function load({}) {
+export const prerender = true;
+export async function load() {
 	return {
 		meta: {
 			canonical: '/atelier',

@@ -2,84 +2,122 @@
 	import Image from 'syv/core/Image.svelte';
 	import SearchBar from 'syv/core/SearchBar.svelte';
 	import Link from '$lib/components/Link.svelte';
+	import SearchFilter from '$lib/dialog/SearchFilter.svelte';
 
-	import { format } from 'mauss/date';
-	import { dialog } from 'syv';
+	import type { Query } from './search.svelte';
+	import type { Commands } from './search.worker';
+	import { date } from 'mauss';
+	import { qsd, qse } from 'mauss/web';
 	import { TIME } from 'syv/options';
+	import { spawn } from 'syv/worker';
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
-	import { by } from './search.svelte';
+	import { pushState, replaceState } from '$app/navigation';
+	import { page } from '$app/state';
+	import worker from './search.worker?worker&url';
 
 	const { data } = $props();
+	const memory = $state({
+		params: qsd(page.url.search),
+		matches: data.results,
+		filters: data.metadata,
+	});
+	const params = $derived.by(() => {
+		const { tags, sort_by } = memory.filters;
+		return {
+			search: String(memory.params.q?.[0] || ''),
+			tags: tags.flatMap((g) => (g.selected ? [g.name] : [])),
+			sort_by: sort_by.selected as Query['sort_by'],
+		} satisfies Query;
+	});
 
-	// https://github.com/sveltejs/svelte/issues/12435
-	const filters = $state(data.filters);
-	const { category, tags, sort_by } = filters;
+	let index = $state(data.results);
+	const invoke = spawn<Commands>(worker, (invoke) => invoke('init', data.index));
 </script>
 
+{#if page.state.dialog}
+	<SearchFilter
+		matches={memory.matches.length}
+		filters={memory.filters}
+		onclose={() => {
+			// history.back();
+			index = memory.matches;
+			const { search: q, ...filters } = params;
+			const url = qse({ q, ...filters }) || page.url.pathname;
+			replaceState(url, { dialog: false });
+		}}
+		onchange={async (item) => {
+			const { key, value, required } = item;
+			if (!memory.params[key]) memory.params[key] = [];
+			if (required) memory.params[key] = [value];
+			else {
+				if (!memory.params[key].includes(value)) memory.params[key].push(value);
+				else memory.params[key] = memory.params[key].filter((v) => v !== value);
+			}
+			const { search: q, ...filters } = params;
+			replaceState(qse({ q, ...filters }) || page.url.pathname, { dialog: true });
+			memory.matches = await invoke('search', { ...params, search: q });
+		}}
+	/>
+{/if}
+
 <header>
-	<h1>ongoing thoughts and documentation</h1>
-	<small>entries written as i go — part journal, part technical, fully honest.</small>
+	<h1>ongoing thoughts and experiences</h1>
+	<small>entries written as i go — mostly journal, sometimes technical.</small>
 </header>
 
 <SearchBar
 	value={data.query.replace(/\+/g, ' ')}
-	items={data.list}
-	sieve={({ query, normalize, item: { slug, title, description } }) => {
-		const value = normalize(query);
-		return (
-			slug.includes(value) ||
-			normalize(title).includes(value) ||
-			(description && normalize(description).includes(value))
-		);
+	filter={() => pushState('', { dialog: true })}
+	oninput={async (value) => {
+		memory.params.q = [value];
+		const { search: q, ...filters } = params;
+		const url = qse({ q, ...filters });
+		replaceState(url || page.url.pathname, {});
+		const query = { ...params, search: q };
+		memory.matches = await invoke('search', query);
+		index = memory.matches;
 	}}
-	filter={() => {
-		dialog.load(import('$lib/components/Dialog$SearchFilter.svelte'), {
-			filters: filters,
-		});
-	}}
->
-	{#snippet children({ query, index })}
-		{@const filtered = index.filter((item) => {
-			const grouped = tags.filter((g) => g.selected).map((g) => g.name);
-			const heuristics = [
-				category.selected && item.category !== category.selected,
-				grouped.length && !grouped.every((g) => item.tags.includes(g)),
-			];
-			return heuristics.every((h) => !h);
-		})}
+/>
 
-		<div id="layout">
-			{#each filtered.sort(by[sort_by.selected]) as post (post.slug)}
-				<section
-					animate:flip={{ duration: TIME.SLIDE }}
-					transition:scale|local={{ duration: TIME.SLIDE }}
-				>
-					<Image src={post.thumbnail || ''} alt={post.title}>
-						<span>{post.title}</span>
-					</Image>
-
-					<div class="content">
-						<h3>{post.title}</h3>
-						{#if post.description}
-							<small>{post.description}</small>
-						{/if}
-					</div>
-
-					<aside>
-						<time datetime={post.date}>{format(post.date)('DD MMMM YYYY')}</time>
-						<small>{post.estimate} min read</small>
-						<Link href="/posts/{post.slug}" style="primary">READ</Link>
-					</aside>
-				</section>
-			{:else}
-				<p style:grid-column="1 / -1" style:text-align="center">
-					There are no matching {query ? 'titles' : 'filters'}
-				</p>
+<div id="layout">
+	{#if params.search || params.tags.length}
+		{@const total = memory.matches.length}
+		<p class="notice">
+			<span>{total} matches for</span>
+			{#if params.search}<span>"{params.search}"</span>{/if}
+			{#if params.search && params.tags.length}<span>and</span>{/if}
+			{#each params.tags as tag, idx}
+				{#if idx > 0}<span>+</span>{/if}
+				<a href="?tags={tag}">#{tag}</a>
 			{/each}
-		</div>
-	{/snippet}
-</SearchBar>
+		</p>
+	{/if}
+
+	{#each index as post (post.slug)}
+		<section
+			animate:flip={{ duration: TIME.SLIDE }}
+			transition:scale|local={{ duration: TIME.SLIDE }}
+		>
+			<Image src={post.thumbnail || ''} alt={post.title}>
+				<span>{post.title}</span>
+			</Image>
+
+			<div class="content">
+				<h3>{post.title}</h3>
+				{#if post.description}
+					<small>{post.description}</small>
+				{/if}
+			</div>
+
+			<aside>
+				<time datetime={post.date}>{date(post.date).format('DD MMMM YYYY')}</time>
+				<small>{post.estimate} min read</small>
+				<Link href="/posts/{post.slug}" style="primary">READ</Link>
+			</aside>
+		</section>
+	{/each}
+</div>
 
 <style>
 	header {
@@ -93,6 +131,16 @@
 		gap: 1rem;
 		grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
 		transition: var(--transition-base);
+
+		.notice {
+			grid-column: 1 / -1;
+			display: flex;
+			gap: 0.25rem;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+		}
 
 		section {
 			display: grid;

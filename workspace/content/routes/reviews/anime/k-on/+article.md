@@ -3,7 +3,6 @@ date: "2020"
 released: "2009-04-03"
 title:en: K-ON!
 genres: [music, slice of life, comedy, school]
-rating: [story,artwork,sound,characters]
 completed: 36/36
 verdict: pending
 
@@ -13,7 +12,7 @@ image:
   jp: https://image.tmdb.org/t/p/original/kjun1ktN6Xdkk94ejhhZp9jAo3G.jpg
 
 seen:
-  first: [2020-12-11, 2021-07-10]
+  first: "2020-12-11"
   last: "2021-10-07T08:13:58"
 
 link:

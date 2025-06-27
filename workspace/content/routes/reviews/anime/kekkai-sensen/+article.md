@@ -5,7 +5,6 @@ title:
   en: Blood Blockade Battlefront
   jp: Kekkai Sensen
 genres: [action, super power, supernatural, comedy, vampire, fantasy, shounen]
-rating: [story,artwork,sound,characters]
 completed: 13/24
 verdict: pending
 

@@ -5,7 +5,6 @@ title:
   en: Don't Toy with Me, Miss Nagatoro
   jp: Ijiranaide, Nagatoro-san
 genres: [slice of life, comedy, romance]
-rating: [story,artwork,sound,characters]
 completed: 24/24
 verdict: pending
 

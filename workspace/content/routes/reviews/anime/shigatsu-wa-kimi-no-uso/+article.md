@@ -4,8 +4,29 @@ released: "2014-10-10"
 title:en: Your Lie in April
 title:jp: Shigatsu wa Kimi no Uso
 genres: [drama, music, romance, school, slice of life]
-rating: [9,8,10,8]
 verdict: recommended
+rating:
+  narrative:
+    - premise: 8
+    - pacing: 10
+    - resolution: 10
+    - direction: 9
+  characterization:
+    - development: 8
+    - dynamics: 7
+    - seiyuu: 9
+  presentation:
+    - style: 9
+    - animation: 8
+    - visuals: 10
+  audio:
+    - ambience: 10
+    - songs: 10
+    - soundtrack: 10
+  personal:
+    - engagement: 10
+    - relatable: 7
+    - impact: 9
 
 seen:first: "2020-08-14"
 image:en: https://image.tmdb.org/t/p/original/nksFLYTydth9OYVpMuMbtOBkvMO.jpg

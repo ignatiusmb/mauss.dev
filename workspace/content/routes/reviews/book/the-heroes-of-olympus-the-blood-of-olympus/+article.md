@@ -3,7 +3,6 @@ date: "2020"
 released: "2014-10-07"
 title:en: "The Heroes of Olympus: The Blood of Olympus"
 genres: [adventure, fantasy, mystery]
-rating:
 verdict: pending
 
 seen:first: 2020

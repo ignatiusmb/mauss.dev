@@ -3,7 +3,6 @@ date: "2020"
 released: "2015-07-12"
 title:en: God Eater
 genres: [action, sci-fi, military, fantasy]
-rating: [story,artwork,sound,characters]
 completed: 13/13
 verdict: pending
 

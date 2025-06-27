@@ -5,7 +5,6 @@ title:
   en: The Great Jahy Will Not Be Defeated!
   jp: Jahy-sama wa Kujikenai!
 genres: [comedy, supernatural, shounen]
-rating: [story,artwork,sound,characters]
 completed: 20/20
 verdict: pending
 

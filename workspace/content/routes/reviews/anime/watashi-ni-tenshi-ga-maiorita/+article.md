@@ -1,11 +1,33 @@
 ---
 date: "2020-08-24"
 released: "2019-01-08"
+title:short: Wataten!
 title:en: "WATATEN!: an Angel Flew Down to Me"
 title:jp: Watashi ni Tenshi ga Maiorita!
 genres: [comedy, slice of life, shoujo ai]
-rating: [8,10,9,9]
 verdict: recommended
+rating:
+  narrative:
+    - premise: 8
+    - pacing: 10
+    # - resolution: 10
+    - direction: 9
+  characterization:
+    - development: 9
+    - dynamics: 8
+    - seiyuu: 9
+  presentation:
+    - style: 9
+    - animation: 10
+    - visuals: 9
+  audio:
+    - ambience: 10
+    - songs: 10
+    - soundtrack: 10
+  personal:
+    - engagement: 10
+    - relatable: 7
+    - impact: 8
 
 seen:first: "2020-08-23"
 image:en: https://image.tmdb.org/t/p/original/yaIs7UDJ6Vo7DbWPl4cTdv4bUw7.jpg

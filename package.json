@@ -11,9 +11,9 @@
 	"packageManager": "pnpm@10.12.1",
 	"prettier": "mauss/prettier.config.js",
 	"devDependencies": {
-		"@types/node": "^24.0.3",
-		"mauss": "^0.9.2",
-		"prettier": "^3.5.3",
+		"@types/node": "^24.0.4",
+		"mauss": "^0.10.4",
+		"prettier": "^3.6.2",
 		"prettier-plugin-sort-package-json": "^1.1.0",
 		"prettier-plugin-svelte": "^3.4.0",
 		"typescript": "^5.8.3"

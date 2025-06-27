@@ -59,7 +59,7 @@ export function RSS(
 			(item) => escape`
 			<item>
 				<title>${item.title}</title>
-				<link>https://${channel.domain}/${item.slug}/</link>
+				<link>https://${channel.domain}/${item.slug}</link>
 				<description>${item.description}</description>
 				<pubDate>${new Date(item.date).toUTCString()}</pubDate>
 			</item>`,

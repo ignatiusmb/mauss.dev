@@ -4,7 +4,6 @@ released: "2015-04-08"
 title:en: Sound! Euphonium
 title:jp: Hibike! Euphonium
 genres: [music, school, drama]
-rating: [story,artwork,sound,characters]
 verdict: pending
 
 seen:first: 2020

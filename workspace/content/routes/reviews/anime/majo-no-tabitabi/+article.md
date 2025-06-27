@@ -5,7 +5,6 @@ title:short: The Journey of Elaina
 title:en: "Wandering Witch: The Journey of Elaina"
 title:jp: Majo no Tabitabi
 genres: [adventure, fantasy]
-rating: [story,artwork,sound,characters]
 verdict: pending
 
 seen:first: "2020-12-20"

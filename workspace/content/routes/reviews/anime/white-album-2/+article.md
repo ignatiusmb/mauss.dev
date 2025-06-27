@@ -3,7 +3,6 @@ date: "2020"
 released: "2013-10-06"
 title:en: White Album 2
 genres: [drama, music, romance, slice of life]
-rating: [story,artwork,sound,characters]
 completed: 13/13
 verdict: pending
 

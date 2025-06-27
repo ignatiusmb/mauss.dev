@@ -1,7 +1,34 @@
-import type { Schema } from '$content/posts.json/+server';
-import * as compare from 'mauss/compare';
+import type { Items } from '$lib/content';
+import { date, drill } from 'mauss';
 
-type Item = Schema['items'][number];
+export type Query = {
+	search: string;
+	tags: string[];
+	sort_by: keyof typeof by;
+};
+
+export function sift(items: Items['posts/'], payload: Query) {
+	const value = normalize(payload.search);
+	const results = items.filter((item) => {
+		const filters: any[] = [
+			// payload.category && payload.category !== item.category,
+			payload.tags.length && !payload.tags.every((g) => item.tags.includes(g)),
+		];
+		const flags = [
+			item.slug.includes(value),
+			normalize(item.title).includes(value),
+			item.description && normalize(item.description).includes(value),
+		];
+		return filters.every((h) => !h) && flags.some((f) => f);
+	});
+	return results.sort(by[payload.sort_by]);
+}
+
+function normalize(str: string): string {
+	return str.replace(/[(){}[\]<>"']/g, '').toLowerCase();
+}
+
+type Schema = Items['posts/'][number];
 export const by = {
-	date: (x, y) => compare.date(x.date, y.date),
-} satisfies Record<string, (x: Item, y: Item) => number>;
+	date: drill('date', date.sort.newest),
+} satisfies Record<string, (x: Schema, y: Schema) => number>;

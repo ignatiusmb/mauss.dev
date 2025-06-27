@@ -5,7 +5,6 @@ title:
   en: How Heavy Are the Dumbbells You Lift?
   jp: Dumbbell Nan Kilo Moteru?
 genres: [comedy, ecchi]
-rating: [story,artwork,sound,characters]
 completed: 12/12
 verdict: pending
 

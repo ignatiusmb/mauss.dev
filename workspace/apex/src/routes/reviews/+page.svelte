@@ -2,20 +2,67 @@
 	import Image from 'syv/core/Image.svelte';
 	import SearchBar from 'syv/core/SearchBar.svelte';
 	import Link from '$lib/components/Link.svelte';
+	import SearchFilter from '$lib/dialog/SearchFilter.svelte';
 	import Verdict from './[category]/[slug]/Verdict.svelte';
 
-	import { dialog } from 'syv';
+	import type { Query } from './search.svelte';
+	import type { Commands } from './search.worker';
+	import { qsd, qse } from 'mauss/web';
+	import { spawn } from 'syv/worker';
 	import { TIME } from 'syv/options';
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
-	import { by } from './search.svelte';
+	import { replaceState } from '$app/navigation';
+	import { page } from '$app/state';
+	import worker from './search.worker?worker&url';
 
 	const { data } = $props();
+	const memory = $state({
+		params: qsd(page.url.search),
+		matches: data.results,
+		filters: data.filters,
+	});
+	const params = $derived.by(() => {
+		const { category, genres, verdict, sort_by } = memory.filters;
+		return {
+			search: String(memory.params.q?.[0] || ''),
+			category: String(category.selected),
+			genres: genres.flatMap((g) => (g.selected ? [g.name] : [])),
+			verdict: String(verdict.selected),
+			sort_by: sort_by.selected as Query['sort_by'],
+		} satisfies Query;
+	});
 
-	// https://github.com/sveltejs/svelte/issues/12435
-	const filters = $state(data.filters);
-	const { category, genres, verdict, sort_by } = filters;
+	let index = $state(data.results);
+	const invoke = spawn<Commands>(worker, (invoke) => invoke('init', data.index));
 </script>
+
+{#if page.state.dialog}
+	<SearchFilter
+		matches={memory.matches.length}
+		filters={memory.filters}
+		onclose={() => {
+			// history.back();
+			index = memory.matches;
+			const { search: q, ...filters } = params;
+			const url = qse({ q, ...filters }) || page.url.pathname;
+			replaceState(url, { dialog: false });
+		}}
+		onchange={async (item) => {
+			const { key, value, required } = item;
+			memory.params[key] = memory.params[key] || [];
+			if (required) memory.params[key] = [value];
+			else {
+				if (!memory.params[key].includes(value)) memory.params[key].push(value);
+				else memory.params[key] = memory.params[key].filter((v) => v !== value);
+			}
+			const { search: q, ...filters } = params;
+			const url = qse({ q, ...filters }) || page.url.pathname;
+			replaceState(url, { dialog: true });
+			memory.matches = await invoke('search', $state.snapshot(params));
+		}}
+	/>
+{/if}
 
 <header>
 	<h1>the world through kaleidoscope</h1>
@@ -25,69 +72,59 @@
 
 <SearchBar
 	value={data.query.replace(/\+/g, ' ')}
-	items={data.list}
-	sieve={({ query, normalize, item: { slug, title, released } }) => {
-		const value = normalize(query);
-		return (
-			slug.includes(value) ||
-			released.includes(value) ||
-			normalize(title.en).includes(value) ||
-			(title.jp && normalize(title.jp).includes(value))
-		);
+	filter={() => replaceState('', { dialog: true })}
+	oninput={async (value) => {
+		memory.params.q = [value];
+		const { search: q, ...filters } = params;
+		const url = qse({ q, ...filters });
+		replaceState(url || page.url.pathname, {});
+		const query = { ...params, search: q };
+		memory.matches = await invoke('search', query);
+		index = memory.matches;
 	}}
-	filter={() => {
-		dialog.load(import('$lib/components/Dialog$SearchFilter.svelte'), {
-			filters: filters,
-		});
-	}}
->
-	{#snippet autocomplete({ index, update })}
-		{#each index as { title, slug } (slug)}
-			<button onpointerdown={() => update(slug)}>
-				{title.en}
-			</button>
-		{/each}
-	{/snippet}
+/>
 
-	{#snippet children({ query, index })}
-		{@const filtered = index.filter((item) => {
-			const grouped = genres.filter((g) => g.selected).map((g) => g.name);
-			const heuristics = [
-				category.selected && item.category !== category.selected,
-				grouped.length && !grouped.every((g) => item.genres.includes(g)),
-				verdict.selected && item.verdict !== verdict.selected,
-			];
-			return heuristics.every((h) => !h);
-		})}
+<div id="layout">
+	{#if Object.values(memory.params).some(Boolean)}
+		{@const total = memory.matches.length}
+		<p class="notice">
+			<span>{total} matches </span>
+			{#if params.search}
+				<span>for "{params.search}"</span>
+				{#if params.category || params.genres.length || params.verdict}
+					<span>and</span>
+				{/if}
+			{/if}
+			{#if params.category || params.genres.length || params.verdict}
+				<span>with some filters</span>
+			{/if}
+			{#if params.sort_by}
+				<span>sorted by {params.sort_by}</span>
+			{/if}
+		</p>
+	{/if}
 
-		<div id="layout">
-			{#each filtered.sort(by[sort_by.selected]) as post (post.slug)}
-				{@const disabled = !post.rating || post.verdict === 'pending'}
+	{#each index as post (post.slug)}
+		{@const disabled = !post.rating || post.verdict === 'pending'}
 
-				<section animate:flip={{ duration: TIME.SLIDE }} in:scale={{ duration: TIME.SLIDE }}>
-					<Image src={post.image.en} alt={post.title.en} ratio={3 / 2} />
+		<section animate:flip={{ duration: TIME.SLIDE }} in:scale={{ duration: TIME.SLIDE }}>
+			<Image src={post.image.en} alt={post.title.en} ratio={3 / 2} />
 
-					<aside>
-						<span>{post.title.short || post.title.jp || post.title.en}</span>
-						<Verdict verdict={post.verdict} />
-						<small>
-							<span>⭐ {post.rating || '~'}</span>
-							<span>{post.released.split('-')[0]}</span>
-							<span>{post.category}</span>
-						</small>
-						<Link href="/reviews/{post.slug}" style="primary" {disabled}>
-							{disabled ? 'Work-in-Progress' : 'READ'}
-						</Link>
-					</aside>
-				</section>
-			{:else}
-				<p style:grid-column="1 / -1" style:text-align="center">
-					There are no matching {query ? 'titles' : 'filters'}
-				</p>
-			{/each}
-		</div>
-	{/snippet}
-</SearchBar>
+			<aside>
+				<span>{post.title.short || post.title.en}</span>
+				<Verdict verdict={post.verdict} />
+				<small>
+					<span>{post.rating || 'TBD'}</span>
+					<span>{post.released.split('-')[0]}</span>
+					<span>{post.category}</span>
+				</small>
+				<Link href="/reviews/{post.slug}" style="primary" {disabled}>
+					{disabled ? 'Work-in-Progress' : 'READ'}
+				</Link>
+			</aside>
+		</section>
+	{/each}
+</div>
 
 <style>
 	header {
@@ -101,6 +138,16 @@
 		gap: 1rem;
 		grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
 		transition: var(--transition-base);
+
+		.notice {
+			grid-column: 1 / -1;
+			display: flex;
+			gap: 0.25rem;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+		}
 
 		section {
 			position: relative;

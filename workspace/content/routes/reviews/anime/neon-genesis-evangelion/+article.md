@@ -3,7 +3,6 @@ date: "2020"
 released: "1995-10-04"
 title:en: Neon Genesis Evangelion
 genres: [action, drama, mecha, psychological, sci-fi, suspense]
-rating: [story,artwork,sound,characters]
 completed: 26/26
 verdict: pending
 

@@ -3,7 +3,6 @@ date: "2020"
 released: "2020-07-08"
 title:en: Deca-Dence
 genres: [action, adventure, sci-fi]
-rating: [story,artwork,sound,characters]
 completed: 12/12
 verdict: pending
 

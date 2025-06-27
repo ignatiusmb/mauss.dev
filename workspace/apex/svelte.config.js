@@ -14,6 +14,7 @@ const config = {
 
 		alias: {
 			$content: './src/routes/content',
+			// aubade: '../../../ignatiusmb.aubade/workspace/aubade/src',
 			// syv: '../../../ignatiusmb.syv/src/lib',
 		},
 

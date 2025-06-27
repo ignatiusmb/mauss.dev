@@ -3,8 +3,27 @@ date: "2020-08-19"
 released: "2017-04-05"
 title:en: "Boruto: Naruto Next Generations"
 genres: [action, adventure, super power, martial arts, shounen]
-rating: [2,1,4,2]
 verdict: not-recommended
+rating:
+  narrative:
+    - premise: 8
+    - pacing: 0
+    - resolution: 0
+    - direction: 1
+  characterization:
+    - development: 1
+    - dynamics: 7
+    - seiyuu: 5
+  immersion:
+    - style: 2
+    - animation: 1
+    - soundtrack: 3
+    - ambience: 3
+    - songs: 7
+  personal:
+    - engagement: 0
+    - relatable: 0
+    - impact: 0
 
 seen:first: "2020-07-12"
 image:en: https://image.tmdb.org/t/p/original/t1eJhngNgHywjXYAg2iAdSJ3PiL.jpg

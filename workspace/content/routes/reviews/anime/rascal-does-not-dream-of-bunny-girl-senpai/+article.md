@@ -1,12 +1,33 @@
 ---
 date: "2020"
 released: "2018-10-04"
-title:short: Seishun Buta Yarou / Bunny Girl Senpai
+alias: [Seishun Buta Yarou, Bunny Girl Senpai]
 title:en: Rascal Does Not Dream of Bunny Girl Senpai
 title:jp: Seishun Buta Yarou wa Bunny Girl Senpai no Yume wo Minai
 genres: [comedy, romance, school, mystery, supernatural]
-rating: [9,9,10,9]
 verdict: pending
+rating:
+  narrative:
+    - premise: 10
+    - pacing: 8
+    - resolution: 10
+    - direction: 9
+  characterization:
+    - development: 10
+    - dynamics: 9
+    - seiyuu: 10
+  presentation:
+    - style: 10
+    - animation: 10
+    - visuals: 10
+  audio:
+    - ambience: 10
+    - songs: 10
+    - soundtrack: 10
+  personal:
+    - engagement: 9
+    - relatable: 7
+    - impact: 8
 
 seen:first: "2020-07-23"
 image:en: https://image.tmdb.org/t/p/original/cU4jHfo1Q9AEPnFqFqtuSA74gdi.jpg

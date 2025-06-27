@@ -3,7 +3,6 @@ date: "2020"
 released: "2021-04-08"
 title:en: Before Your Eyes
 genres: [adventure, indie]
-rating: [story,artwork,sound,characters]
 verdict: pending
 
 seen:first: "2021-05-22"

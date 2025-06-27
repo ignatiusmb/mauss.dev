@@ -33,7 +33,7 @@ Near the end of 2020, Apple released their first ARM-based laptop powered by the
 
 [![MacBook Air M3 (2024)](https://www.apple.com/newsroom/images/2024/03/apple-unveils-the-new-13-and-15-inch-macbook-air-with-the-powerful-m3-chip/article/Apple-MacBook-Air-2-up-hero-240304_big.jpg.large.jpg "MacBook Air M3 from Apple Newsroom")](https://www.apple.com/newsroom/2024/03/apple-unveils-the-new-13-and-15-inch-macbook-air-with-the-powerful-m3-chip/)
 
-With the MacBook series being recommended everywhere and the newly released MacBook Air M3, there's essentially no reason for anyone in any field to buy anything other than a MacBook — obligatory, other than those who needs to work or use Windows-only software, games, and such. Those persons are still stuck with these "old-gen" laptops with barely-usable battery life, which includes me.
+With the MacBook series being recommended everywhere and the newly released MacBook Air M3, there's essentially no reason for anyone in any field to buy anything other than a MacBook — obligatory, other than the people who needs to work or use Windows-only software, games, and such. They're still stuck with these "old-gen" laptops with barely-usable battery life, which includes me.
 
 ## Catching Up
 

@@ -4,8 +4,29 @@ released: "2019-07-19"
 title:en: Weathering With You
 title:jp: Tenki no Ko
 genres: [animation, slice of life, supernatural, drama, fantasy, adventure, romance]
-rating: [7,10,10,9]
 verdict: pending
+rating:
+  narrative:
+    - premise: 7
+    - pacing: 8
+    - resolution: 7
+    - direction: 9
+  characterization:
+    - development: 8
+    - dynamics: 9
+    - seiyuu: 10
+  presentation:
+    - style: 10
+    - animation: 10
+    - visuals: 10
+  audio:
+    - ambience: 10
+    - songs: 10
+    - soundtrack: 10
+  personal:
+    - engagement: 10
+    - relatable: 7
+    - impact: 9
 
 seen:first: "2020-08-30"
 image:en: https://image.tmdb.org/t/p/original/qgrk7r1fV4IjuoeiGS5HOhXNdLJ.jpg

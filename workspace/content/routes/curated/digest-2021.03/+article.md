@@ -49,7 +49,7 @@ I'll try my best to give these the [review they deserved](/reviews), someday. Bu
 
 At first, it felt like just another beautiful song I've heard from Tristam. But, as the lyrics sank into me, I realized there's more behind this particular song. As someone who've followed and listened since around 2015 (can't believe it's been 6 yrs since then), this year releases hits different.
 
-I'm beyond grateful that I can't relate to this well enough as I've not lost someone close recently, but I do know that this must be hard for a lot of people out there that needs to go through the experience. I've read from some of those people that this helps them get through it. Although, the actual purpose behind the song might just be in this pinned comment from the artist himself
+I'm beyond grateful that I can't relate to this well enough as I've not lost someone close recently, but I do know that this must be hard for a lot of people out there that needs to go through the experience. I've read that this helps them get through it. Although, the actual purpose behind the song might just be in this pinned comment from the artist himself
 
 > Appreciate what you have now. Much love.
 > \- Tristam
@@ -58,7 +58,7 @@ I'm beyond grateful that I can't relate to this well enough as I've not lost som
 
 ![!YouTube#d](ZNFKZI7L9xE "YOASOBI「三原色」ahamo Special Movie")
 
-This was surprising as I thought it was only some kind of teaser for an upcoming project with only two and a half minute runtime. But, fortunately it wasn't, and it was (as expected) good just like their previous releases. I'm hoping that they would cover a lot more anime OP/ED in the future, just like they did with season 2 of Beastars (for those who didn't know).
+This was surprising as I thought it was only some kind of teaser for an upcoming project with only two and a half minute runtime. But, fortunately it wasn't, and it was (as expected) good just like their previous releases. I'm hoping that they would cover a lot more anime OP/ED in the future, just like they did with season 2 of Beastars (if you didn't know about it).
 
 ![!YouTube#d](iFkPgNLa5LQ "[[YTMusic](https://music.youtube.com/watch?v=643igntgKY8)] Grant - Won't Give Up")
 
@@ -102,7 +102,7 @@ The answer to my old-age question! I used to wonder this as a kid. What and why 
 
 This was too special to just be put in the video section, but it's finally here. There's so much to discuss, but I would like to say that we shouldn't let our guards down yet. Though, I gotta say that it's so amazing to know these were developed in only (roughly) a year.
 
-For those who haven't got it, please be patient and don't let your 1 year of waiting inside your home go to waste by going out prematurely. For those who got it already, please be considerate and understand that not all of us has got it, don't go out either and risk bringing home the virus. You might not get sick, but you might still caught it and spread it to those around you.
+If you haven't got it, please be patient and don't let your 1 year of waiting inside your home go to waste by going out prematurely. If you got it already, please be considerate and understand that not all of us has got it, don't go out either and risk bringing home the virus. You might not get sick, but you might still caught it and spread it to those around you.
 
 ![!YouTube#d](K3odScka55A "Why you can't compare Covid-19 vaccines")
 

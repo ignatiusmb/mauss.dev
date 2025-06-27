@@ -3,7 +3,6 @@ date: "2020"
 released: "2009-07-03"
 title:en: The Monogatari Series
 genres: [animation, mystery, supernatural, romance]
-rating: [story,artwork,sound,characters]
 verdict: pending
 
 seen:first: 2020

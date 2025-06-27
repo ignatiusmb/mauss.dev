@@ -4,7 +4,6 @@ released: "2016-07-04"
 title:en: The Disastrous Life of Saiki K.
 title:jp: Saiki Kusuo no Ψ-nan
 genres: [comedy, slice of life, supernatural, school, shounen]
-rating: [story,artwork,sound,characters]
 verdict: pending
 
 seen:first: "2021-02-18"

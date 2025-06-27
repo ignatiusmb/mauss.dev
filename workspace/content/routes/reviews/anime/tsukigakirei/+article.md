@@ -5,7 +5,6 @@ title:
   en: The Moon Is Beautiful
   jp: Tsuki ga Kirei
 genres: [romance, school]
-rating: [story,artwork,sound,characters]
 completed: 12/12
 verdict: pending
 
