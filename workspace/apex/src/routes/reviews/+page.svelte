@@ -14,7 +14,7 @@
 	import { scale } from 'svelte/transition';
 	import { replaceState } from '$app/navigation';
 	import { page } from '$app/state';
-	import worker from './search.worker?url';
+	import worker from './search.worker?worker&url';
 
 	const { data } = $props();
 	const memory = $state({
