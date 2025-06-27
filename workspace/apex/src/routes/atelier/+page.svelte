@@ -96,7 +96,6 @@
 			<li>built a recursive file reader that transforms directories into structured JSON</li>
 			<li>wrote a minimal, dependency-free YAML-like parser from scratch</li>
 			<li>implemented safe, static metadata injection directly into markdown content</li>
-			<li>estimated reading time based on real word count and image density</li>
 			<li>designed a table of contents generator with nested, stable heading anchors</li>
 			<li>wrote a transformer that links sibling entries in a sorted list</li>
 			<li>explored static code highlighting with zero runtime cost</li>
