@@ -1,9 +1,7 @@
 ---
 date: "2020"
 released: "2013-10-04"
-title:short:
-title:en: Kill la Kill
-title:jp:
+title: Kill la Kill
 genres: [action, super power, comedy, ecchi, school]
 verdict: pending
 

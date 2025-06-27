@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2019-11-08"
-title:short: "Re:ZERO - Frozen Bonds"
+alias: ["Re:ZERO - Frozen Bonds"]
 title:en: "Re:ZERO -Starting Life in Another World-: Frozen Bonds"
 genres: [animation, drama, thriller, fantasy]
 verdict: pending

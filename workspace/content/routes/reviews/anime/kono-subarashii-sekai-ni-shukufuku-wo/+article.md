@@ -1,8 +1,8 @@
 ---
 date: "2020"
 released: "2016-01-14"
-title:short: KonoSuba
-title:en: "KonoSuba: God's Blessing on This Wonderful World!"
+alias: [KonoSuba]
+title: "KonoSuba: God's Blessing on This Wonderful World!"
 title:jp: Kono Subarashii Sekai ni Shukufuku wo!
 genres: [isekai, adventure, comedy, fantasy, parody, supernatural]
 verdict: pending
