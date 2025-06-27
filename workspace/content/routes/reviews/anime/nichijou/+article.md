@@ -1,5 +1,5 @@
 ---
-date: "2025-06"
+date: "2020"
 released: "2011-04-03"
 title:short: Nichijou
 title:en: "Nichijou: My Ordinary Life"

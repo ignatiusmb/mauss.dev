@@ -26,7 +26,7 @@ there are also many japanese puns that we really wouldn't get because it doesn't
 
 ### trolling done right
 
-we also have a couple of characters that really seems like their only purpose is to troll the, which is a fantastic way to make us expect the unexpected. like, every time *mai* is on screen or when *mio* is with her big sister, we just know that something ridiculous is going to happen.
+we also have a couple of characters that really seems like their only purpose is to troll the, which is a fantastic way to make us expect the unexpected. like, every time *mai* or *mio*'s big sister is on screen, we just know that something ridiculous is going to happen.
 
 the trolling is done without malice, it never feels like they're being mean-spirited or cruel. but rather, they're so unpredictable and confuses the characters around them that it makes for some of the funniest moments in the show, with or without context!
 
@@ -46,4 +46,6 @@ let me causally dump a couple of youtube clips with some of the most iconic mome
 
 ## the successor!
 
-what are the odds that i would (finally) reviewed *nichijou*, just to find out that kyoani is working on
+unfortunately, *nichijou* didn't sell that well and as of this writing, there has not been any news about season 2 or any continuation of the series.
+
+however! what are the odds that i would (finally) review *nichijou*, just to find out that [kyoani has announced *city the animation*](/curated/harvest-2025.06#headlines-the-goats-are-back), which is the closest thing we got to nichijou season 2. based the manga by the same author, Keiichi Arawi, *city* is set to premiere on the 7th this month!

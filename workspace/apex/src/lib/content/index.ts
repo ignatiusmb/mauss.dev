@@ -30,7 +30,7 @@ export const DATA = {
 
 				const umbrella = `curated/${slug}`;
 				const content = body.replace(/\.\/([^\s)]+)/g, (m, relative) => {
-					const asset = siblings.find(({ filename }) => relative.endsWith(filename));
+					const asset = siblings.find(({ filename }) => relative === filename);
 					if (!asset || !/\.(jpe?g|png|svg|mp4)$/.test(asset.filename)) return m;
 
 					const output = /\.(mp4)$/.test(asset.filename)
@@ -50,7 +50,7 @@ export const DATA = {
 					if (/\.(mp4)$/.test(asset.filename)) {
 						return `/uploads/${umbrella}/${asset.filename}`;
 					}
-					return `/uploads/${umbrella}/${asset.filename.replace(/\.[^/.]+$/, '.webp')})`;
+					return `/uploads/${umbrella}/${asset.filename.replace(/\.[^/.]+$/, '.webp')}`;
 				});
 
 				const branches = siblings.map(async (branch) => {
@@ -100,7 +100,7 @@ export const DATA = {
 
 				const umbrella = `posts/${slug}`;
 				const content = body.replace(/\.\/([^\s)]+)/g, (m, relative) => {
-					const asset = siblings.find(({ filename }) => relative.endsWith(filename));
+					const asset = siblings.find(({ filename }) => relative === filename);
 					if (!asset || !/\.(jpe?g|png|svg|mp4)$/.test(asset.filename)) return m;
 
 					const output = /\.(mp4)$/.test(asset.filename)
@@ -119,7 +119,7 @@ export const DATA = {
 					if (/\.(mp4)$/.test(asset.filename)) {
 						return `/uploads/${umbrella}/${asset.filename}`;
 					}
-					return `/uploads/${umbrella}/${asset.filename.replace(/\.[^/.]+$/, '.webp')})`;
+					return `/uploads/${umbrella}/${asset.filename.replace(/\.[^/.]+$/, '.webp')}`;
 				});
 
 				const thumbnail = siblings.find(({ filename }) => filename.startsWith('thumbnail.'));
@@ -241,7 +241,7 @@ export const DATA = {
 						if (/\.(mp4)$/.test(asset.filename)) {
 							return `/uploads/${umbrella}/${asset.filename}`;
 						}
-						return `/uploads/${umbrella}/${asset.filename.replace(/\.[^/.]+$/, '.webp')})`;
+						return `/uploads/${umbrella}/${asset.filename.replace(/\.[^/.]+$/, '.webp')}`;
 					});
 
 					const branches = siblings.map(async (branch) => {
