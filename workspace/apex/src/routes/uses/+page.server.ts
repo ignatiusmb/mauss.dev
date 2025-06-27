@@ -1,3 +1,4 @@
+export const prerender = true;
 export async function load() {
 	return {
 		updated: '2023-11-21',
