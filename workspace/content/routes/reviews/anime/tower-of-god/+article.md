@@ -2,7 +2,7 @@
 date: "2020"
 released: "2020-04-02"
 title:en: Tower of God
-title:jp: Kami no Tou
+romaji: Kami no Tou
 genres: [action, adventure, mystery, drama, fantasy]
 verdict: pending
 

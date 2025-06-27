@@ -1,9 +1,8 @@
 ---
 date: "2020"
 released: "2015-04-05"
-title:
-  en: Blood Blockade Battlefront
-  jp: Kekkai Sensen
+title:en: Blood Blockade Battlefront
+romaji: Kekkai Sensen
 genres: [action, super power, supernatural, comedy, vampire, fantasy, shounen]
 completed: 13/24
 verdict: pending

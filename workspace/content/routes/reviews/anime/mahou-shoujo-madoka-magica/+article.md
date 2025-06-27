@@ -2,7 +2,7 @@
 date: "2020"
 released: "2011-01-07"
 title:en: Puella Magi Madoka Magica
-title:jp: Mahou Shoujo Madoka★Magica
+romaji: Mahou Shoujo Madoka★Magica
 genres: [psychological, magic, drama, thriller]
 verdict: pending
 

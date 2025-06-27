@@ -1,9 +1,8 @@
 ---
 date: "2020"
 released: "2021-04-06"
-title:
-  en: Oddtaxi
-  jp: Odd Taxi
+alias: [Odd Taxi]
+title:en: Oddtaxi
 genres: [mystery]
 completed: 13/13
 verdict: pending

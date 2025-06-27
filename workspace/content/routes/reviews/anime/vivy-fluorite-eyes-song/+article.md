@@ -1,9 +1,7 @@
 ---
 date: "2020"
 released: "2021-04-03"
-title:
-  en: "Vivy: Fluorite Eye's Song"
-  jp: "Vivy -Fluorite Eye's Song-"
+title:en: "Vivy: Fluorite Eye's Song"
 genres: [music, action, sci-fi, suspense]
 completed: 13/13
 verdict: pending

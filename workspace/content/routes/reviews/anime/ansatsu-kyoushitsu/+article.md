@@ -2,7 +2,7 @@
 date: "2020"
 released: "2015-01-10"
 title:en: Assassination Classroom
-title:jp: Ansatsu Kyoushitsu
+romaji: Ansatsu Kyoushitsu
 genres: [action, comedy, school, shounen]
 completed: 47/47
 verdict: pending

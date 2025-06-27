@@ -2,7 +2,7 @@
 date: "2020"
 released: "2016-04-03"
 title:en: My Hero Academia
-title:jp: Boku no Hero Academia
+romaji: Boku no Hero Academia
 genres: [action, comedy, school, shounen]
 completed: 138/138
 verdict: pending

@@ -3,7 +3,7 @@ date: "2020"
 released: "2020-10-02"
 alias: [The Journey of Elaina]
 title:en: "Wandering Witch: The Journey of Elaina"
-title:jp: Majo no Tabitabi
+romaji: Majo no Tabitabi
 genres: [adventure, fantasy]
 verdict: pending
 

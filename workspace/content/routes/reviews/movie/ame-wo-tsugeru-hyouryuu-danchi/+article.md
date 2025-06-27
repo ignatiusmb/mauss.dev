@@ -1,9 +1,8 @@
 ---
 date: "2020"
 released: "2022-09-16"
-title:
-  en: Drifting Home
-  jp: Ame wo Tsugeru Hyouryuu Danchi
+title:en: Drifting Home
+romaji: Ame wo Tsugeru Hyouryuu Danchi
 genres: [animation, adventure, family, fantasy]
 verdict: pending
 

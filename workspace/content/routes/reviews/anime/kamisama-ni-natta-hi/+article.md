@@ -2,7 +2,7 @@
 date: "2020"
 released: "2020-10-11"
 title:en: The Day I Become a God
-title:jp: Kamisama ni Natta Hi
+romaji: Kamisama ni Natta Hi
 genres: [comedy, drama, fantasy]
 verdict: pending
 

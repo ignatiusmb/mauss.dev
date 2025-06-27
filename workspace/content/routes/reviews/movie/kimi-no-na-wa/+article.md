@@ -2,7 +2,7 @@
 date: "2020"
 released: "2016-08-26"
 title:en: Your Name.
-title:jp: Kimi no Na wa.
+romaji: Kimi no Na wa.
 genres: [animation, romance, supernatural, drama, school]
 verdict: pending
 rating:

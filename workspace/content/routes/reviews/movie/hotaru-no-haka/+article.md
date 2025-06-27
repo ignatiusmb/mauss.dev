@@ -2,7 +2,7 @@
 date: "2020"
 released: "1988-04-16"
 title:en: Grave of the Fireflies
-title:jp: Hotaru no Haka
+romaji: Hotaru no Haka
 genres: [animation, drama, historical]
 verdict: pending
 

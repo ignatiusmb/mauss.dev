@@ -2,7 +2,7 @@
 date: "2020"
 released: "2018-09-01"
 title:en: I want to eat your pancreas
-title:jp: Kimi no Suizou wo Tabetai
+romaji: Kimi no Suizou wo Tabetai
 genres: [animation, drama, romance]
 verdict: pending
 # rating: [8,8,8,8]

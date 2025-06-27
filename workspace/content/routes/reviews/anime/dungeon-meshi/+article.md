@@ -1,9 +1,8 @@
 ---
 date: "2020"
 released: "2024-01-04"
-title:
-  en: Delicious in Dungeon
-  jp: Dungeon Meshi
+title:en: Delicious in Dungeon
+romaji: Dungeon Meshi
 genres: [adventure, comedy, fantasy]
 completed: 24/24
 verdict: pending

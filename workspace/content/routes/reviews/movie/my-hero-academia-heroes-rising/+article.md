@@ -2,7 +2,7 @@
 date: "2020"
 released: "2019-12-20"
 title:en: "My Hero Academia: Heroes Rising"
-title:jp: "Boku no Hero Academia: Heroes:Rising"
+romaji: "Boku no Hero Academia: Heroes:Rising"
 genres: [animation]
 verdict: pending
 # rating: [5,10,9,8]

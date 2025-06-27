@@ -2,7 +2,7 @@
 date: "2020"
 released: "2015-04-08"
 title:en: Sound! Euphonium
-title:jp: Hibike! Euphonium
+romaji: Hibike! Euphonium
 genres: [music, school, drama]
 verdict: pending
 

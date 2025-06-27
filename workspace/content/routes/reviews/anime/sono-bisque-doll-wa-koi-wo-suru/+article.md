@@ -1,9 +1,8 @@
 ---
 date: "2020"
 released: "2022-01-09"
-title:
-  en: My Dress-Up Darling
-  jp: Sono Bisque Doll wa Koi wo Suru
+title:en: My Dress-Up Darling
+romaji: Sono Bisque Doll wa Koi wo Suru
 genres: [romance, slice of life]
 completed: 12/12
 verdict: pending
