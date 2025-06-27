@@ -1,5 +1,5 @@
 import type { Items } from '$lib/content';
-import { commander, type Dispatch } from 'syv';
+import { commander, type Dispatch } from 'syv/worker';
 import { sift, type Query } from './search.svelte';
 
 let dataset: Items['curated/'] = [];

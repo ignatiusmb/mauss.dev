@@ -2,9 +2,10 @@
 	import SearchBar from 'syv/core/SearchBar.svelte';
 	import Link from '$lib/components/Link.svelte';
 
+	import type { Commands } from './search.worker';
 	import { qse } from 'mauss/web';
-	import { worker } from 'syv';
 	import { TIME } from 'syv/options';
+	import { spawn } from 'syv/worker';
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
 	import { replaceState } from '$app/navigation';
@@ -13,8 +14,8 @@
 	const { data } = $props();
 
 	let index = $state(data.list);
-	const invoke = worker<import('./search.worker').Commands>(
-		new URL('./search.worker', import.meta.url),
+	const invoke = spawn<Commands>(
+		new URL('./search.worker', import.meta.url), //
 		(invoke) => invoke('init', data.list),
 	);
 </script>

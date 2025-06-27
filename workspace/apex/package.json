@@ -17,13 +17,13 @@
 		"@fontsource-variable/karla": "^5.2.6",
 		"@ignatiusmb/styles": "^0.1.1",
 		"@sveltejs/adapter-vercel": "^5.7.2",
-		"@sveltejs/kit": "^2.22.1",
+		"@sveltejs/kit": "^2.22.2",
 		"@sveltejs/vite-plugin-svelte": "^5.1.0",
 		"aubade": "^0.10.0",
 		"sharp": "^0.34.2",
 		"svelte": "^5.34.8",
 		"svelte-check": "^4.2.2",
-		"syv": "^0.0.47",
+		"syv": "^0.0.48",
 		"vite": "^7.0.0"
 	}
 }

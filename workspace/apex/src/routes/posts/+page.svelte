@@ -5,10 +5,11 @@
 	import SearchFilter from '$lib/dialog/SearchFilter.svelte';
 
 	import type { Query } from './search.svelte';
+	import type { Commands } from './search.worker';
 	import { date } from 'mauss';
 	import { qsd, qse } from 'mauss/web';
-	import { worker } from 'syv';
 	import { TIME } from 'syv/options';
+	import { spawn } from 'syv/worker';
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
 	import { pushState, replaceState } from '$app/navigation';
@@ -30,8 +31,8 @@
 	});
 
 	let index = $state(data.results);
-	const invoke = worker<import('./search.worker').Commands>(
-		new URL('./search.worker', import.meta.url),
+	const invoke = spawn<Commands>(
+		new URL('./search.worker', import.meta.url), //
 		(invoke) => invoke('init', data.index),
 	);
 </script>

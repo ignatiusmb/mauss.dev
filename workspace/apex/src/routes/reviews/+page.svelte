@@ -8,7 +8,7 @@
 	import type { Query } from './search.svelte';
 	import type { Commands } from './search.worker';
 	import { qsd, qse } from 'mauss/web';
-	import { worker } from 'syv';
+	import { spawn } from 'syv/worker';
 	import { TIME } from 'syv/options';
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
@@ -33,8 +33,9 @@
 	});
 
 	let index = $state(data.results);
-	const invoke = worker<Commands>(new URL('./search.worker', import.meta.url), (invoke) =>
-		invoke('init', data.index),
+	const invoke = spawn<Commands>(
+		new URL('./search.worker', import.meta.url), //
+		(invoke) => invoke('init', data.index),
 	);
 </script>
 
