@@ -1,6 +1,5 @@
 import { channel } from './rss.xml/builder';
 
-export const prerender = true;
 export async function load({ fetch }) {
 	const [{ items: curated }, { items: posts }, { items: reviews }]: [
 		import('$content/curated.json/+server').Schema,
