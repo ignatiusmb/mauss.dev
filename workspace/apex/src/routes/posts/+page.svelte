@@ -70,7 +70,7 @@
 	value={data.query.replace(/\+/g, ' ')}
 	filter={() => pushState('', { dialog: true })}
 	oninput={async (value) => {
-		memory.params.q = [value];
+		memory.params.q = [value.trim()];
 		const { search: q, ...filters } = params;
 		const url = qse({ q, ...filters });
 		replaceState(url || page.url.pathname, {});
