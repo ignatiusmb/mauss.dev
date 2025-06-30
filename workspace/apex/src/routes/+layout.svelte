@@ -19,6 +19,7 @@
 	const noscroll = $derived.by(() => {
 		const { pathname } = page.url;
 		return (
+			page.error ||
 			pathname === '/' ||
 			pathname === '/uses' ||
 			pathname === '/fine-print' ||
