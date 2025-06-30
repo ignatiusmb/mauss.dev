@@ -2,10 +2,17 @@ import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 import { ROUTES } from './src/routes/content/builder';
 
-const uploads = await ROUTES['/uploads']();
-for (const route in uploads) {
-	console.log(`Uploaded ${uploads[route].length} files for ${route}`);
-}
+const uploads = {
+	name: 'mauss:/uploads',
+	apply: 'build' as const,
+	async buildStart() {
+		const uploads = await ROUTES['/uploads']();
+		for (const route in uploads) {
+			console.log(`Transferred ${uploads[route].length} files to /${route}`);
+			for (const file of uploads[route]) console.log(`  - ${file}`);
+		}
+	},
+};
 
 export default defineConfig(() => {
 	return {
@@ -13,7 +20,7 @@ export default defineConfig(() => {
 			cssTarget: 'chrome111',
 		},
 
-		plugins: [sveltekit()],
+		plugins: [uploads, sveltekit()],
 
 		server: {
 			fs: { allow: ['..'] },
