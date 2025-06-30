@@ -40,11 +40,9 @@ export const ROUTES = {
 					task(async ({ fs }) => {
 						await fs.mkdir(`${ROOT}/${umbrella}`, { recursive: true });
 						const payload = await asset.buffer;
-						if (/\.(mp4)$/.test(asset.filename)) {
-							return fs.writeFile(`${ROOT}/${umbrella}/${asset.filename}`, payload);
-						}
-						const webp = sharp(payload).webp();
-						return void webp.toFile(`${ROOT}/${umbrella}/${output}`);
+						const filename = `${ROOT}/${umbrella}/${output}`;
+						if (output.endsWith('.mp4')) return fs.writeFile(filename, payload);
+						return void sharp(payload).webp().toFile(filename);
 					});
 
 					return `/uploads/${umbrella}/${output}`;
@@ -106,11 +104,9 @@ export const ROUTES = {
 					task(async ({ fs }) => {
 						await fs.mkdir(`${ROOT}/${umbrella}`, { recursive: true });
 						const payload = await asset.buffer;
-						if (/\.(mp4)$/.test(asset.filename)) {
-							return fs.writeFile(`${ROOT}/${umbrella}/${asset.filename}`, payload);
-						}
-						const webp = sharp(payload).webp();
-						return void webp.toFile(`${ROOT}/${umbrella}/${output}`);
+						const filename = `${ROOT}/${umbrella}/${output}`;
+						if (output.endsWith('.mp4')) return fs.writeFile(filename, payload);
+						return void sharp(payload).webp().toFile(filename);
 					});
 
 					return `/uploads/${umbrella}/${output}`;
@@ -223,11 +219,9 @@ export const ROUTES = {
 						task(async ({ fs }) => {
 							await fs.mkdir(`${ROOT}/${umbrella}`, { recursive: true });
 							const payload = await asset.buffer;
-							if (/\.(mp4)$/.test(asset.filename)) {
-								return fs.writeFile(`${ROOT}/${umbrella}/${asset.filename}`, payload);
-							}
-							const webp = sharp(payload).webp();
-							return void webp.toFile(`${ROOT}/${umbrella}/${output}`);
+							const filename = `${ROOT}/${umbrella}/${output}`;
+							if (output.endsWith('.mp4')) return fs.writeFile(filename, payload);
+							return void sharp(payload).webp().toFile(filename);
 						});
 
 						return `/uploads/${umbrella}/${output}`;
