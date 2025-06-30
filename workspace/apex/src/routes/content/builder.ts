@@ -12,8 +12,8 @@ import sharp from 'sharp';
 // }
 
 const ROOT = `${process.cwd()}/static/uploads`;
-export const DATA = {
-	async 'curated/'() {
+export const ROUTES = {
+	async '/curated'() {
 		const schema = define(({ optional, string }) => ({
 			date: string(),
 			title: string(),
@@ -47,10 +47,7 @@ export const DATA = {
 						return void webp.toFile(`${ROOT}/${umbrella}/${output}`);
 					});
 
-					if (/\.(mp4)$/.test(asset.filename)) {
-						return `/uploads/${umbrella}/${asset.filename}`;
-					}
-					return `/uploads/${umbrella}/${asset.filename.replace(/\.[^/.]+$/, '.webp')}`;
+					return `/uploads/${umbrella}/${output}`;
 				});
 
 				const branches = siblings.map(async (branch) => {
@@ -80,7 +77,7 @@ export const DATA = {
 		return items.sort(drill('date', date.sort.newest));
 	},
 
-	async 'posts/'() {
+	async '/posts'() {
 		const schema = define(({ optional, string, array }) => ({
 			date: string(),
 			title: string(),
@@ -116,10 +113,7 @@ export const DATA = {
 						return void webp.toFile(`${ROOT}/${umbrella}/${output}`);
 					});
 
-					if (/\.(mp4)$/.test(asset.filename)) {
-						return `/uploads/${umbrella}/${asset.filename}`;
-					}
-					return `/uploads/${umbrella}/${asset.filename.replace(/\.[^/.]+$/, '.webp')}`;
+					return `/uploads/${umbrella}/${output}`;
 				});
 
 				const thumbnail = siblings.find(({ filename }) => filename.startsWith('thumbnail.'));
@@ -148,7 +142,7 @@ export const DATA = {
 		});
 	},
 
-	async 'quotes/'() {
+	async '/quotes'() {
 		const items = await traverse('../content/routes/quotes', ({ breadcrumb: [file] }) => {
 			return async ({ buffer, parse }) => {
 				const content: Array<{ author: string; quote: string; from: string }> = [];
@@ -164,7 +158,7 @@ export const DATA = {
 		return items.flat();
 	},
 
-	async 'reviews/'() {
+	async '/reviews'() {
 		const schema = define(({ optional, array, record, string, literal }) => ({
 			date: string(),
 			released: string(),
@@ -236,10 +230,7 @@ export const DATA = {
 							return void webp.toFile(`${ROOT}/${umbrella}/${output}`);
 						});
 
-						if (/\.(mp4)$/.test(asset.filename)) {
-							return `/uploads/${umbrella}/${asset.filename}`;
-						}
-						return `/uploads/${umbrella}/${asset.filename.replace(/\.[^/.]+$/, '.webp')}`;
+						return `/uploads/${umbrella}/${output}`;
 					});
 
 					const branches = siblings.map(async (branch) => {
@@ -277,8 +268,51 @@ export const DATA = {
 			transform: ({ slug, title }) => ({ slug: `/reviews/${slug}`, title }),
 		});
 	},
+
+	async '/uploads'() {
+		const uploads = await traverse('../content/routes', ({ breadcrumb, depth }) => {
+			if (breadcrumb[0] !== '+article.md') return;
+			const paths = breadcrumb.slice(1, depth + 1).reverse();
+			return async ({ buffer, parse, siblings, task }) => {
+				const { body, frontmatter } = parse(buffer.toString('utf-8'));
+				if (!frontmatter || frontmatter.draft) return;
+				const umbrella = paths.join('/');
+				const uploaded: string[] = [];
+				body.replace(/\.\/([^\s)]+)/g, (m, relative) => {
+					const asset = siblings.find(({ filename }) => relative.endsWith(filename));
+					if (!asset || !/\.(jpe?g|png|svg|mp4)$/.test(asset.filename)) return m;
+
+					const output = /\.(mp4)$/.test(asset.filename)
+						? asset.filename
+						: asset.filename.replace(/\.[^/.]+$/, '.webp');
+					task(async ({ fs }) => {
+						await fs.mkdir(`${ROOT}/${umbrella}`, { recursive: true });
+						const payload = await asset.buffer;
+						if (output.endsWith('.mp4')) {
+							return fs.writeFile(`${ROOT}/${umbrella}/${asset.filename}`, payload);
+						}
+						const webp = sharp(payload).webp();
+						return void webp.toFile(`${ROOT}/${umbrella}/${output}`);
+					});
+
+					uploaded.push(`/uploads/${umbrella}/${output}`);
+					return uploaded[uploaded.length - 1];
+				});
+
+				return { [paths[0]]: uploaded };
+			};
+		});
+		const transferred: Record<string, string[]> = {};
+		for (const item of uploads) {
+			for (const route in item) {
+				if (!transferred[route]) transferred[route] = item[route];
+				else transferred[route].push(...item[route]);
+			}
+		}
+		return transferred;
+	},
 } as const;
 
 export type Items = {
-	[key in keyof typeof DATA]: Awaited<ReturnType<(typeof DATA)[key]>>;
+	[key in keyof typeof ROUTES]: Awaited<ReturnType<(typeof ROUTES)[key]>>;
 };
