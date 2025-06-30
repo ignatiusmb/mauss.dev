@@ -270,46 +270,41 @@ export const ROUTES = {
 	},
 
 	async '/uploads'() {
-		const uploads = await traverse('../content/routes', ({ breadcrumb, depth }) => {
-			if (breadcrumb[0] !== '+article.md') return;
-			const paths = breadcrumb.slice(1, depth + 1).reverse();
-			return async ({ buffer, parse, siblings, task }) => {
-				const { body, frontmatter } = parse(buffer.toString('utf-8'));
-				if (!frontmatter || frontmatter.draft) return;
-				const umbrella = paths.join('/');
-				const uploaded: string[] = [];
-				body.replace(/\.\/([^\s)]+)/g, (m, relative) => {
-					const asset = siblings.find(({ filename }) => relative.endsWith(filename));
-					if (!asset || !/\.(jpe?g|png|svg|mp4)$/.test(asset.filename)) return m;
+		return await traverse<[umbrella: string, files: string[]]>(
+			'../content/routes',
+			({ breadcrumb, depth }) => {
+				if (breadcrumb[0] !== '+article.md') return;
+				const paths = breadcrumb.slice(1, depth + 1).reverse();
+				return async ({ buffer, parse, siblings, task }) => {
+					const { body, frontmatter } = parse(buffer.toString('utf-8'));
+					if (!frontmatter || frontmatter.draft) return;
+					const umbrella = paths.join('/');
+					const uploaded: string[] = [];
+					body.replace(/\.\/([^\s)]+)/g, (m, relative) => {
+						const asset = siblings.find(({ filename }) => relative.endsWith(filename));
+						if (!asset || !/\.(jpe?g|png|svg|mp4)$/.test(asset.filename)) return m;
 
-					const output = /\.(mp4)$/.test(asset.filename)
-						? asset.filename
-						: asset.filename.replace(/\.[^/.]+$/, '.webp');
-					task(async ({ fs }) => {
-						await fs.mkdir(`${ROOT}/${umbrella}`, { recursive: true });
-						const payload = await asset.buffer;
-						if (output.endsWith('.mp4')) {
-							return fs.writeFile(`${ROOT}/${umbrella}/${asset.filename}`, payload);
-						}
-						const webp = sharp(payload).webp();
-						return void webp.toFile(`${ROOT}/${umbrella}/${output}`);
+						const output = /\.(mp4)$/.test(asset.filename)
+							? asset.filename
+							: asset.filename.replace(/\.[^/.]+$/, '.webp');
+						task(async ({ fs }) => {
+							await fs.mkdir(`${ROOT}/${umbrella}`, { recursive: true });
+							const payload = await asset.buffer;
+							if (output.endsWith('.mp4')) {
+								return fs.writeFile(`${ROOT}/${umbrella}/${asset.filename}`, payload);
+							}
+							const webp = sharp(payload).webp();
+							return void webp.toFile(`${ROOT}/${umbrella}/${output}`);
+						});
+
+						uploaded.push(`/uploads/${umbrella}/${output}`);
+						return uploaded[uploaded.length - 1];
 					});
 
-					uploaded.push(`/uploads/${umbrella}/${output}`);
-					return uploaded[uploaded.length - 1];
-				});
-
-				return { [paths[0]]: uploaded };
-			};
-		});
-		const transferred: Record<string, string[]> = {};
-		for (const item of uploads) {
-			for (const route in item) {
-				if (!transferred[route]) transferred[route] = item[route];
-				else transferred[route].push(...item[route]);
-			}
-		}
-		return transferred;
+					return [umbrella, uploaded];
+				};
+			},
+		);
 	},
 } as const;
 
