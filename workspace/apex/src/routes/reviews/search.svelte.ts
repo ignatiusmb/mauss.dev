@@ -9,7 +9,7 @@ export type Query = {
 	sort_by: keyof typeof by;
 };
 
-export function sift(items: Items['reviews/'], payload: Query) {
+export function sift(items: Items['/reviews'], payload: Query) {
 	const value = normalize(payload.search);
 	const results = items.filter((item) => {
 		const filters = [
@@ -58,7 +58,7 @@ export const by = {
 		);
 	},
 } satisfies Record<string, (x: Schema, y: Schema) => number>;
-type Schema = Items['reviews/'][number];
+type Schema = Items['/reviews'][number];
 function fallback(x: Schema, y: Schema): number {
 	if (x.date && y.date && x.date !== y.date) {
 		return date.sort.newest(x.date, y.date);

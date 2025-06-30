@@ -7,7 +7,7 @@ export type Query = {
 	sort_by: keyof typeof by;
 };
 
-export function sift(items: Items['posts/'], payload: Query) {
+export function sift(items: Items['/posts'], payload: Query) {
 	const value = normalize(payload.search);
 	const results = items.filter((item) => {
 		const filters: any[] = [
@@ -28,7 +28,7 @@ function normalize(str: string): string {
 	return str.replace(/[(){}[\]<>"']/g, '').toLowerCase();
 }
 
-type Schema = Items['posts/'][number];
+type Schema = Items['/posts'][number];
 export const by = {
 	date: drill('date', date.sort.newest),
 } satisfies Record<string, (x: Schema, y: Schema) => number>;

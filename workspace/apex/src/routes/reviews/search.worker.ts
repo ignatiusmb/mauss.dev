@@ -2,9 +2,9 @@ import type { Items } from '$content/builder';
 import { commander, type Dispatch } from 'syv/worker';
 import { sift, type Query } from './search.svelte';
 
-let dataset: Items['reviews/'] = [];
+let dataset: Items['/reviews'] = [];
 const commands = {
-	init(payload: Items['reviews/']) {
+	init(payload: Items['/reviews']) {
 		dataset = payload;
 		return true;
 	},
