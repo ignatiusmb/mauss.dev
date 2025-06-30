@@ -275,15 +275,11 @@ export const ROUTES = {
 			({ breadcrumb, depth }) => {
 				if (breadcrumb[0] !== '+article.md') return;
 				const paths = breadcrumb.slice(1, depth + 1).reverse();
-				return async ({ buffer, parse, siblings, task }) => {
-					const { body, frontmatter } = parse(buffer.toString('utf-8'));
-					if (!frontmatter || frontmatter.draft) return;
+				return async ({ siblings, task }) => {
+					if (siblings.length === 0) return;
 					const umbrella = paths.join('/');
-					const uploaded: string[] = [];
-					body.replace(/\.\/([^\s)]+)/g, (m, relative) => {
-						const asset = siblings.find(({ filename }) => relative.endsWith(filename));
-						if (!asset || !/\.(jpe?g|png|svg|mp4)$/.test(asset.filename)) return m;
-
+					const uploaded = siblings.flatMap((asset) => {
+						if (!/\.(jpe?g|png|svg|mp4)$/.test(asset.filename)) return [];
 						const output = /\.(mp4)$/.test(asset.filename)
 							? asset.filename
 							: asset.filename.replace(/\.[^/.]+$/, '.webp');
@@ -296,9 +292,7 @@ export const ROUTES = {
 							const webp = sharp(payload).webp();
 							return void webp.toFile(`${ROOT}/${umbrella}/${output}`);
 						});
-
-						uploaded.push(`/uploads/${umbrella}/${output}`);
-						return uploaded[uploaded.length - 1];
+						return output;
 					});
 
 					if (uploaded.length === 0) return;

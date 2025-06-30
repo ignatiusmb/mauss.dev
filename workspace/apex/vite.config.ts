@@ -8,7 +8,7 @@ const uploads = {
 	async buildStart() {
 		const uploads = await ROUTES['/uploads']();
 		for (const [umbrella, files] of uploads) {
-			console.log(`Transferred ${files.length} files to /${umbrella}`);
+			console.log(`Uploaded ${files.length} files for /${umbrella}`);
 			for (const asset of files) console.log(`  - ${asset}`);
 		}
 	},
