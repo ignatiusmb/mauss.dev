@@ -25,7 +25,8 @@
 
 <SearchBar
 	value={data.query.replace(/\+/g, ' ')}
-	oninput={async (q) => {
+	oninput={async (value) => {
+		const q = value.trim();
 		replaceState(qse({ q }) || page.url.pathname, {});
 		index = await invoke('search', { search: q });
 	}}
