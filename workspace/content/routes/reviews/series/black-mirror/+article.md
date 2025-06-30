@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2011-12-04"
-title:en: Black Mirror
+title: Black Mirror
 genres: [drama, sci-fi, thriller]
 verdict: pending
 

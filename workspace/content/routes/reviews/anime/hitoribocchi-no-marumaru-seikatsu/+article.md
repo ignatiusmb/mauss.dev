@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2019-04-06"
-title:en: Hitoribocchi no Marumaru Seikatsu
+title: Hitoribocchi no Marumaru Seikatsu
 genres: [comedy, school, slice of life, shounen]
 completed: 12/12
 verdict: pending

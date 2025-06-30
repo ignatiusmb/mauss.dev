@@ -1,8 +1,7 @@
 ---
 date: "2020"
 released: "2011-04-15"
-title:en: "anohana: The Flower We Saw That Day"
-title:jp:
+title: "anohana: The Flower We Saw That Day"
 genres: [drama, slice of life, supernatural]
 verdict: pending
 

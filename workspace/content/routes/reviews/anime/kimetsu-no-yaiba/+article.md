@@ -1,9 +1,8 @@
 ---
 date: "2020"
 released: "2019-04-06"
-title:
-  en: Demon Slayer
-  jp: Kimetsu no Yaiba
+title: Demon Slayer
+romaji: Kimetsu no Yaiba
 genres: [action, demons, historical, shounen, supernatural]
 completed: 63/63
 verdict: pending

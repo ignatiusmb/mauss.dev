@@ -1,9 +1,8 @@
 ---
 date: 2020
 released: "2022-01-09"
-title:
-  en: Akebi's Sailor Uniform
-  jp: Akebi-chan no Sailor-fuku
+title: Akebi's Sailor Uniform
+romaji: Akebi-chan no Sailor-fuku
 genres: [romance, slice of life]
 completed: 12/12
 verdict: pending

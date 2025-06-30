@@ -168,11 +168,9 @@ export const DATA = {
 		const schema = define(({ optional, array, record, string, literal }) => ({
 			date: string(),
 			released: string(),
-			title: {
-				short: optional(string()),
-				en: string(),
-				jp: optional(string()),
-			},
+			alias: optional(array(string())),
+			title: string(),
+			romaji: optional(string()),
 			genres: array(string()),
 			rating: optional(
 				record(

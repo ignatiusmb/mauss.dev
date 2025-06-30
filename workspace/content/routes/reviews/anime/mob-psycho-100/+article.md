@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2016-07-11"
-title:en: Mob Psycho 100
+title: Mob Psycho 100
 genres: [action, comedy, supernatural]
 completed: 37/37
 verdict: pending

@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2011-10-02"
-title:en: Hunter x Hunter (2011)
+title: Hunter x Hunter (2011)
 genres: [action, adventure, fantasy, shounen, super power]
 completed: 148/148
 verdict: pending

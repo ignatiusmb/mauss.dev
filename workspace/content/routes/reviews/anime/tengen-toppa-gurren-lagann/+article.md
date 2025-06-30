@@ -1,8 +1,8 @@
 ---
 date: "2020"
 released: "2007-04-01"
-title:en: Gurren Lagann
-title:jp: Tengen Toppa Gurren Lagann
+title: Gurren Lagann
+romaji: Tengen Toppa Gurren Lagann
 genres: [action, adventure, comedy, mecha, sci-fi]
 verdict: pending
 

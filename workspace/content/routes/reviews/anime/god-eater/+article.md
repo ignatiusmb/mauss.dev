@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2015-07-12"
-title:en: God Eater
+title: God Eater
 genres: [action, sci-fi, military, fantasy]
 completed: 13/13
 verdict: pending

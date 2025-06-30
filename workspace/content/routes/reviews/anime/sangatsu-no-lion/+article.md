@@ -1,9 +1,8 @@
 ---
 date: "2020"
 released: "2016-10-08"
-title:
-  en: March comes in like a lion
-  jp: 3-gatsu no Lion
+title: March comes in like a lion
+romaji: 3-gatsu no Lion
 genres: [slice of life, drama, seinen]
 completed: 44/44
 verdict: pending

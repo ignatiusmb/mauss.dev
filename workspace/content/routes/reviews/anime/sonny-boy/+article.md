@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2021-07-16"
-title:en: Sonny Boy
+title: Sonny Boy
 genres: [sci-fi, super power]
 completed: 12/12
 verdict: pending

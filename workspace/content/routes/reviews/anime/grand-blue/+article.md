@@ -1,8 +1,8 @@
 ---
 date: "2020"
 released: "2018-06-14"
-title:en: Grand Blue Dreaming
-title:jp: Grand Blue
+title: Grand Blue Dreaming
+romaji: Grand Blue
 genres: [slice of life, comedy, seinen]
 verdict: pending
 

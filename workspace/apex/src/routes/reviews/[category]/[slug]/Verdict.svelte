@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Items } from '$lib/content';
+	import type { Items } from '$content/builder';
 	interface Props {
 		verdict: Items['reviews/'][number]['verdict'];
 		size?: string;

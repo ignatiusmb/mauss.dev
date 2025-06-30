@@ -1,4 +1,4 @@
-import type { Items } from '$lib/content';
+import type { Items } from '$content/builder';
 import { compare, date, inspect } from 'mauss';
 
 export type Query = {
@@ -20,8 +20,9 @@ export function sift(items: Items['reviews/'], payload: Query) {
 		const flags = [
 			item.slug.includes(value),
 			item.released.includes(value),
-			normalize(item.title.en).includes(value),
-			item.title.jp && normalize(item.title.jp).includes(value),
+			normalize(item.title).includes(value),
+			item.alias && item.alias.some((a) => normalize(a).includes(value)),
+			item.romaji && normalize(item.romaji).includes(value),
 		];
 		return filters.every((h) => !h) && flags.some((f) => f);
 	});

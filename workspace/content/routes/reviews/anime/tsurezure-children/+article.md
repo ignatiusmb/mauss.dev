@@ -1,8 +1,8 @@
 ---
 date: "2020"
 released: "2017-07-04"
-title:en: Tsuredure Children
-title:jp: Tsurezure Children
+title: Tsuredure Children
+romaji: Tsurezure Children
 genres: [comedy, romance, school, shounen]
 verdict: pending
 

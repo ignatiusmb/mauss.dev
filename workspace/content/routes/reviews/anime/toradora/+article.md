@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2008-10-02"
-title:en: Toradora!
+title: Toradora!
 genres: [romance, comedy, slice of life, school]
 verdict: pending
 

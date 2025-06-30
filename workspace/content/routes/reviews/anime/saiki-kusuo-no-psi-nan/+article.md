@@ -1,8 +1,8 @@
 ---
 date: "2020"
 released: "2016-07-04"
-title:en: The Disastrous Life of Saiki K.
-title:jp: Saiki Kusuo no Ψ-nan
+title: The Disastrous Life of Saiki K.
+romaji: Saiki Kusuo no Ψ-nan
 genres: [comedy, slice of life, supernatural, school, shounen]
 verdict: pending
 

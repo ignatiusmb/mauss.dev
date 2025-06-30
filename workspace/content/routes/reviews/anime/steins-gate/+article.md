@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2011-04-06"
-title:en: Steins;Gate
+title: Steins;Gate
 genres: [drama, sci-fi, suspense, psychological]
 completed: 24/24
 verdict: pending

@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2021-12-24"
-title:en: Jujutsu Kaisen 0
+title: Jujutsu Kaisen 0
 genres: [animation]
 verdict: pending
 

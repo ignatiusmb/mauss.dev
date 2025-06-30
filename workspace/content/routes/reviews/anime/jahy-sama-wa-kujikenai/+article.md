@@ -1,9 +1,8 @@
 ---
 date: "2020"
 released: "2021-08-01"
-title:
-  en: The Great Jahy Will Not Be Defeated!
-  jp: Jahy-sama wa Kujikenai!
+title: The Great Jahy Will Not Be Defeated!
+romaji: Jahy-sama wa Kujikenai!
 genres: [comedy, supernatural, shounen]
 completed: 20/20
 verdict: pending

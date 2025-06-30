@@ -1,8 +1,8 @@
 ---
 date: "2020"
 released: "2016-01-11"
-title:en: "Grimgar: Ashes and Illusions"
-title:jp: Hai to Gensou no Grimgar
+title: "Grimgar: Ashes and Illusions"
+romaji: Hai to Gensou no Grimgar
 genres: [isekai, fantasy, adventure, action, drama]
 verdict: pending
 

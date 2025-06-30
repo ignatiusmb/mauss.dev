@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2012-07-06"
-title:en: Joshiraku
+title: Joshiraku
 genres: [comedy, slice of life]
 verdict: pending
 

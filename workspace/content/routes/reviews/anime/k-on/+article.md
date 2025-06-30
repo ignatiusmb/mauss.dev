@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2009-04-03"
-title:en: K-ON!
+title: K-ON!
 genres: [music, slice of life, comedy, school]
 completed: 36/36
 verdict: pending

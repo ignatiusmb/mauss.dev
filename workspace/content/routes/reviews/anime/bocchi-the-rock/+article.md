@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2022-10-09"
-title:en: Bocchi the Rock!
+title: Bocchi the Rock!
 genres: [music, comedy, school]
 completed: 12/12
 verdict: pending

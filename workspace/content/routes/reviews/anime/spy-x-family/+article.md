@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2022-10-12"
-title:en: Spy x Family
+title: Spy x Family
 genres: [action, comedy]
 completed: 25/37
 verdict: pending

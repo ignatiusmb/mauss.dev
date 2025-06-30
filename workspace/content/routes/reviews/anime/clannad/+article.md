@@ -1,8 +1,8 @@
 ---
 date: "2020"
 released: "2007-10-05"
-title:en: Clannad
-title:jp: CLANNAD
+title: Clannad
+romaji: CLANNAD
 genres: [comedy, drama, romance, school, slice of life, supernatural]
 completed: 44/44
 verdict: pending

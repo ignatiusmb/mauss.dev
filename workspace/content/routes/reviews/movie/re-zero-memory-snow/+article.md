@@ -1,8 +1,11 @@
 ---
 date: "2020"
 released: "2018-10-06"
-title:short: "Re:ZERO - Memory Snow"
-title:en: "Re:ZERO -Starting Life in Another World-: Memory Snow"
+title: "Re:ZERO -Starting Life in Another World-: Memory Snow"
+alias: 
+  - "Re ZERO"
+  - "Re:ZERO - Memory Snow"
+
 genres: [animation, adventure, fantasy]
 verdict: pending
 

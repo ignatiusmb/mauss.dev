@@ -1,6 +1,6 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
-import { DATA } from './src/lib/content';
+import { DATA } from './src/routes/content/builder';
 
 export default defineConfig(async ({ command }) => {
 	if (command === 'build' /* @ts-expect-error - generate static assets */) {

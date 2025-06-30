@@ -1,8 +1,8 @@
 ---
 date: "2020"
 released: "2014-10-12"
-title:en: Fate/stay night [Unlimited Blade Works]
-title:jp: "Fate/stay night: Unlimited Blade Works"
+title: Fate/stay night [Unlimited Blade Works]
+romaji: "Fate/stay night: Unlimited Blade Works"
 genres: [action, supernatural, magic, fantasy]
 verdict: pending
 

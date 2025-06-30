@@ -1,8 +1,8 @@
 ---
 date: "2020"
 released: "2006-04-03"
-title:en: The Melancholy of Haruhi Suzumiya
-title:jp: Suzumiya Haruhi no Yuuutsu
+title: The Melancholy of Haruhi Suzumiya
+romaji: Suzumiya Haruhi no Yuuutsu
 genres: [slice of life, mystery, comedy, school, sci-fi]
 verdict: pending
 

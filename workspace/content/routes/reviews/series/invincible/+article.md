@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2021-03-26"
-title:en: Invincible
+title: Invincible
 genres: [animation, action, sci-fi, fantasy]
 verdict: pending
 

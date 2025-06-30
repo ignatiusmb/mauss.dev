@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2022-10-12"
-title:en: Chainsaw Man
+title: Chainsaw Man
 genres: [action, fantasy]
 completed: 12/12
 verdict: pending

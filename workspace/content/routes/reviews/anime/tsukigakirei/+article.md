@@ -1,9 +1,8 @@
 ---
 date: "2020"
 released: "2017-04-07"
-title:
-  en: The Moon Is Beautiful
-  jp: Tsuki ga Kirei
+title: The Moon Is Beautiful
+romaji: Tsuki ga Kirei
 genres: [romance, school]
 completed: 12/12
 verdict: pending

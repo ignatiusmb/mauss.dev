@@ -1,9 +1,8 @@
 ---
 date: "2020"
 released: "2017-01-12"
-title:
-  en: Miss Kobayashi's Dragon Maid
-  jp: Kobayashi-san Chi no Maid Dragon
+title: Miss Kobayashi's Dragon Maid
+romaji: Kobayashi-san Chi no Maid Dragon
 genres: [fantasy, slice of life]
 completed: 25/25
 verdict: pending

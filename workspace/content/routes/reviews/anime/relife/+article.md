@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2016-07-02"
-title:en: ReLIFE
+title: ReLIFE
 genres: [slice of life, romance, drama]
 verdict: pending
 

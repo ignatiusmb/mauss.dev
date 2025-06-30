@@ -1,10 +1,11 @@
 ---
 date: "2020"
 released: "2019-01-12"
-title:
-  short: "Kaguya-sama: Love is War"
-  en: "Kaguya-sama: Love is War"
-  jp: "Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen"
+title: "Kaguya-sama: Love is War"
+romaji: "Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen"
+alias: 
+  - "Kaguya-sama: Love is War"
+
 genres: [comedy, romance, school, seinen]
 completed: 37/37
 verdict: pending

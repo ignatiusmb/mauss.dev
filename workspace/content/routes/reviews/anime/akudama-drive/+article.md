@@ -1,8 +1,7 @@
 ---
 date: "2020"
 released: "2020-10-08"
-title:en: Akudama Drive
-title:jp:
+title: Akudama Drive
 genres: [action, sci-fi]
 verdict: pending
 

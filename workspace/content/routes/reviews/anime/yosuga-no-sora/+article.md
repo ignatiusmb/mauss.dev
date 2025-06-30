@@ -1,9 +1,10 @@
 ---
 date: "2020-06-25"
 released: "2010-10-04"
-title:short: Yosuga no Sora
-title:en: "Yosuga no Sora: In Solitude, Where We Are Least Alone"
+title: "Yosuga no Sora: In Solitude, Where We Are Least Alone"
 genres: [drama, romance, tsundere, ecchi, harem]
+alias: [Yosuga no Sora]
+
 verdict: contextual
 rating:
   narrative:

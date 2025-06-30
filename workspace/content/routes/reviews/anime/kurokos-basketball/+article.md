@@ -1,8 +1,8 @@
 ---
 date: "2020"
 released: "2012-04-08"
-title:en: Kuroko's Basketball
-title:jp: Kuroko no Basuke
+title: Kuroko's Basketball
+romaji: Kuroko no Basuke
 genres: [sports, school, comedy]
 verdict: pending
 

@@ -1,7 +1,7 @@
 ---
 date: "2020"
 released: "2020-08-15"
-title:en: "Fate/stay night: Heaven's Feel Trilogy"
+title: "Fate/stay night: Heaven's Feel Trilogy"
 genres: [animation, mystery, supernatural, romance]
 completed: 3/3
 verdict: pending
