@@ -6,7 +6,7 @@
 		matches: number;
 		filters: {
 			[category: string]:
-				| Array<{ name: string; selected: boolean }>
+				| { name: string; selected: boolean }[]
 				| {
 						required?: boolean;
 						selected: string | number | boolean;

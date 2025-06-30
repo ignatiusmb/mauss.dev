@@ -6,7 +6,9 @@
 </script>
 
 <header>
-	<Logo animate />
+	<a href="/">
+		<Logo animate />
+	</a>
 </header>
 
 <div class="actions">
@@ -32,8 +34,18 @@
 		display: grid;
 		justify-items: center;
 
-		:global(svg) {
+		a {
 			max-width: 10rem;
+			border-radius: 50%;
+			outline: 0.25rem solid transparent;
+
+			&:focus {
+				outline-color: var(--color-border);
+			}
+		}
+
+		:global(svg) {
+			width: 100%;
 		}
 	}
 
