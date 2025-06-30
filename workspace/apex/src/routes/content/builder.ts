@@ -301,6 +301,7 @@ export const ROUTES = {
 						return uploaded[uploaded.length - 1];
 					});
 
+					if (uploaded.length === 0) return;
 					return [umbrella, uploaded];
 				};
 			},
