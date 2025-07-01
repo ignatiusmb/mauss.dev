@@ -155,7 +155,7 @@ export const ROUTES = {
 	},
 
 	async '/reviews'() {
-		const schema = define(({ optional, array, record, string, literal }) => ({
+		const schema = define(({ optional, array, record, literal, string, number }) => ({
 			date: string(),
 			released: string(),
 			alias: optional(array(string())),
@@ -181,11 +181,7 @@ export const ROUTES = {
 			rating: optional(
 				record(
 					array(
-						record(
-							// @TODO: have `number` coerce strings to numbers
-							string((v) => Number(v)),
-							(pts) => sum(Object.values(pts)),
-						),
+						record(number(), (pts) => sum(Object.values(pts))),
 						(score) => sum(score) / score.length,
 					),
 					(rubric) => {
