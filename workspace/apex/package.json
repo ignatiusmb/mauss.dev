@@ -9,7 +9,7 @@
 		"prepare": "cp -n .env.example .env && svelte-kit sync"
 	},
 	"dependencies": {
-		"mauss": "^0.10.4",
+		"mauss": "^0.10.5",
 		"pocketbase": "^0.26.1"
 	},
 	"devDependencies": {
@@ -21,7 +21,7 @@
 		"@sveltejs/vite-plugin-svelte": "^5.1.0",
 		"aubade": "^0.10.0",
 		"sharp": "^0.34.2",
-		"svelte": "^5.34.8",
+		"svelte": "^5.34.9",
 		"svelte-check": "^4.2.2",
 		"syv": "^0.0.49",
 		"vite": "^7.0.0"
