@@ -1,11 +1,11 @@
 ---
-date: "2020"
+date: "2025-07-01"
 released: "2011-04-03"
 title: "Nichijou: My Ordinary Life"
 alias: [Nichijou]
 
 genres: [comedy, slapstick, slice of life, school, shounen]
-verdict: pending
+verdict: must-watch
 rating:
   narrative:
     - premise: 10
@@ -39,10 +39,10 @@ link:
 
 **a timeless comedy gold**, made by one of my favorite studios, Kyoto Animation. an anime that the animators had a lot of fun making will never be not fun to watch, and this is no exception, you can feel the love and care that went into every frame.
 
-*nichijou*, my ordinary life, is anything but ordinary. it's humor was 20 years ahead of its time, a perfect example of comedy that transcends time and culture, creating a unique blend of everything that resonates with people all over the world.
+Nichijou, my ordinary life, is anything but ordinary. it's humor was 20 years ahead of its time, a perfect example of comedy that transcends time and culture, creating a unique blend of everything that resonates with people all over the world.
 
 there's a non-zero chance that you might've seen some out of context clips out there, and thought to yourself "i'm sure it makes more sense in context, right?"... right???
 
-it's really hard for me to find something that helps me relax and cool my mind every now and then, and *nichijou* is one of those rare gems i can turn my brain off to and just enjoy from start to finish. even if i'm not laughing out loud every time, or when an episode ends and i'm waiting for the next one to start, i can't remember a time i wasn't grinning or smiling through the whole thing.
+it's really hard for me to find something that helps me relax and cool my mind every now and then, and Nichijou is one of those rare gems i can turn my brain off to and just enjoy from start to finish. even if i'm not laughing out loud every time, or when an episode ends and i'm waiting for the next one to start, i can't remember a time i wasn't grinning or smiling through the whole thing.
 
 please don't take that as a challenge — remember, what matters is that we have fun. not everyone will get the jokes here, but if you do, you'll appreciate it so much more. again, if you don't enjoy it as much as i do, that's too bad, but also totally fine.

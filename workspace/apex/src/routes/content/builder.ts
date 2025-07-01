@@ -162,6 +162,22 @@ export const ROUTES = {
 			title: string(),
 			romaji: optional(string()),
 			genres: array(string()),
+			progress: optional(
+				string((ratio) => {
+					const [watched, episodes] = ratio.split('/');
+					const total: number | '?' = episodes === '?' ? '?' : +episodes;
+					return { watched: +watched, total };
+				}),
+			),
+			completed: optional(
+				string((ratio) => {
+					if (!ratio) return 80;
+					const [watched, total] = ratio.split('/');
+					return Math.round((+watched / +total) * 80);
+				}),
+			),
+			verdict: literal('pending', 'not-recommended', 'contextual', 'recommended', 'must-watch'),
+
 			rating: optional(
 				record(
 					array(
@@ -178,14 +194,7 @@ export const ROUTES = {
 					},
 				),
 			),
-			completed: optional(
-				string((ratio) => {
-					if (!ratio) return 80;
-					const [watched, total] = ratio.split('/');
-					return Math.round((+watched / +total) * 80);
-				}),
-			),
-			verdict: literal('pending', 'not-recommended', 'contextual', 'recommended', 'must-watch'),
+
 			backdrop: optional(string()),
 			image: {
 				en: string(),

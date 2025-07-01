@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Image from 'syv/core/Image.svelte';
 	import SearchBar from 'syv/core/SearchBar.svelte';
-	import Link from '$lib/components/Link.svelte';
 	import SearchFilter from '$lib/dialog/SearchFilter.svelte';
 	import Verdict from './[category]/[slug]/Verdict.svelte';
 
@@ -71,6 +70,7 @@
 </header>
 
 <SearchBar
+	styles={{ '--background-color': 'var(--color-surface)' }}
 	value={data.query.replace(/\+/g, ' ')}
 	filter={() => replaceState('', { dialog: true })}
 	oninput={async (value) => {
@@ -107,7 +107,12 @@
 	{#each index as post (post.slug)}
 		{@const disabled = !post.rating || post.verdict === 'pending'}
 
-		<section animate:flip={{ duration: TIME.SLIDE }} in:scale={{ duration: TIME.SLIDE }}>
+		<a
+			href="/reviews/{post.slug}"
+			style:pointer-events={disabled ? 'none' : null}
+			animate:flip={{ duration: TIME.SLIDE }}
+			in:scale={{ duration: TIME.SLIDE }}
+		>
 			<Image src={post.image.en} alt={post.title} ratio={3 / 2} />
 
 			<aside>
@@ -118,11 +123,8 @@
 					<span>{post.released.split('-')[0]}</span>
 					<span>{post.category}</span>
 				</small>
-				<Link href="/reviews/{post.slug}" style="primary" {disabled}>
-					{disabled ? 'Work-in-Progress' : 'READ'}
-				</Link>
 			</aside>
-		</section>
+		</a>
 	{/each}
 </div>
 
@@ -149,14 +151,16 @@
 			text-align: center;
 		}
 
-		section {
+		a {
 			position: relative;
 			display: grid;
 			grid-template-rows: auto 1fr;
 			border-radius: var(--rounding-box);
 			background: var(--color-overlay);
 			transition: var(--transition-base);
+			text-decoration: none;
 
+			&:focus,
 			&:hover {
 				transform: translateY(-0.15rem);
 			}

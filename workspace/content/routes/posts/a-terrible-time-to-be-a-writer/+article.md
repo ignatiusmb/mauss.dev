@@ -7,17 +7,17 @@ tags: [writing, tech]
 
 in this day and age, with the rise of.. oh who am i kidding, let's just get to the point.
 
-blessed by the algorithm, i stumbled upon a gem this morning. as frustrating as it may be, i have to admit that the differences between AI and human writing are very apparent after watching it, just like *evan* said in the video.
+blessed by the algorithm, i stumbled upon a gem this morning. as frustrating as it may be, i have to admit that the differences between AI and human writing are very apparent after watching it, just like Evan said in the video.
 
 ![!YouTube](9Ch4a6ffPZY "I Can Spot AI Writing Instantly — Here's How You Can Too")
 
 > [This video was more than informative — it was a journey, a transformation, a metaphorical yoga retreat for the mind.](https://www.youtube.com/watch?v=9Ch4a6ffPZY&lc=UgwVN1wRP3ubBDgb3IZ4AaABAg)
 
-lmao. welp, truly a terrible time to be one of the few people who enjoys writing with these punctuations.
+lmao. welp, truly a terrible time to be one of the few people who enjoys writing with these punctuation marks.
 
-## dashes, semicolons, commas, and other punctuations
+## punctuation marks
 
-i've been using many punctuations in my writing for as long as i can remember. i am, in fact, actively trying to do so while also trying to not overuse a particular one, all from a perspective of how i would like to read it myself. having strategically placed punctuation makes it much easier for me to read and separate the concepts in my head, while also keeping the writing concise and the sentence structure intact.
+i've been using many punctuation marks in my writing for as long as i can remember. i am, in fact, actively trying to do so while also trying to not overuse a particular one, all from a perspective of how i would like to read it myself. having strategically placed punctuation makes it much easier for me to read and separate the concepts in my head, while also keeping the writing concise and the sentence structure intact.
 
 ### my favorite dash
 
@@ -35,11 +35,11 @@ commas are nice, i use them a lot. they're very easy to type in any keyboards, a
 
 ## the llm paradox
 
-"am i an llm for using fancy punctuations, or did i use fancy punctuations because i am an llm?"
+"am i an llm for using fancy punctuation marks, or did i use fancy punctuation marks because i am an llm?"
 
-if you didn't get that, i guess it's time to start watching [jujutsu kaisen](/reviews/anime/jujutsu-kaisen). jokes aside, now that i've watched the video though, i can't help but wonder if i should just stop using them altogether. em dashes and rule of threes in particular are the two things i like the most just because of how nicely they tie the sentence together. but, because people followed them in writing, and now that AI is trained on them as well, it's considered a red flag.
+if you didn't get that, i guess it's time to start watching [Jujutsu Kaisen](/reviews/anime/jujutsu-kaisen). jokes aside, now that i've watched the video though, i can't help but wonder if i should just stop using them altogether. em dashes and rule of threes in particular are the two things i like the most just because of how nicely they tie the sentence together. but, because people followed them in writing, and now that AI is trained on them as well, it's considered a red flag.
 
-there *is*.. one very obvious red flag mentioned in the video that you might've realized by now. it isn't just the use of punctuations, the parallel sentence structures, or the rule of threes — it's the combination and context of all of them together. (see what i did there?)
+there *is*.. one very obvious red flag mentioned in the video that you might've realized by now. it isn't just the use of punctuation marks, the parallel sentence structures, or the rule of threes — it's the combination and context of all of them together. (see what i did there?)
 
 ## trust your gut
 
