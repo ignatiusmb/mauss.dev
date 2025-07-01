@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Items } from '$content/builder';
 	interface Props {
-		verdict: Items['reviews/'][number]['verdict'];
+		verdict: Items['/reviews'][number]['verdict'];
 		size?: string;
 	}
 	const { verdict, size }: Props = $props();

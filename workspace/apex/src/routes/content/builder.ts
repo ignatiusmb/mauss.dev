@@ -12,8 +12,8 @@ import sharp from 'sharp';
 // }
 
 const ROOT = `${process.cwd()}/static/uploads`;
-export const DATA = {
-	async 'curated/'() {
+export const ROUTES = {
+	async '/curated'() {
 		const schema = define(({ optional, string }) => ({
 			date: string(),
 			title: string(),
@@ -40,17 +40,12 @@ export const DATA = {
 					task(async ({ fs }) => {
 						await fs.mkdir(`${ROOT}/${umbrella}`, { recursive: true });
 						const payload = await asset.buffer;
-						if (/\.(mp4)$/.test(asset.filename)) {
-							return fs.writeFile(`${ROOT}/${umbrella}/${asset.filename}`, payload);
-						}
-						const webp = sharp(payload).webp();
-						return void webp.toFile(`${ROOT}/${umbrella}/${output}`);
+						const filename = `${ROOT}/${umbrella}/${output}`;
+						if (output.endsWith('.mp4')) return fs.writeFile(filename, payload);
+						return void sharp(payload).webp().toFile(filename);
 					});
 
-					if (/\.(mp4)$/.test(asset.filename)) {
-						return `/uploads/${umbrella}/${asset.filename}`;
-					}
-					return `/uploads/${umbrella}/${asset.filename.replace(/\.[^/.]+$/, '.webp')}`;
+					return `/uploads/${umbrella}/${output}`;
 				});
 
 				const branches = siblings.map(async (branch) => {
@@ -80,7 +75,7 @@ export const DATA = {
 		return items.sort(drill('date', date.sort.newest));
 	},
 
-	async 'posts/'() {
+	async '/posts'() {
 		const schema = define(({ optional, string, array }) => ({
 			date: string(),
 			title: string(),
@@ -109,17 +104,12 @@ export const DATA = {
 					task(async ({ fs }) => {
 						await fs.mkdir(`${ROOT}/${umbrella}`, { recursive: true });
 						const payload = await asset.buffer;
-						if (/\.(mp4)$/.test(asset.filename)) {
-							return fs.writeFile(`${ROOT}/${umbrella}/${asset.filename}`, payload);
-						}
-						const webp = sharp(payload).webp();
-						return void webp.toFile(`${ROOT}/${umbrella}/${output}`);
+						const filename = `${ROOT}/${umbrella}/${output}`;
+						if (output.endsWith('.mp4')) return fs.writeFile(filename, payload);
+						return void sharp(payload).webp().toFile(filename);
 					});
 
-					if (/\.(mp4)$/.test(asset.filename)) {
-						return `/uploads/${umbrella}/${asset.filename}`;
-					}
-					return `/uploads/${umbrella}/${asset.filename.replace(/\.[^/.]+$/, '.webp')}`;
+					return `/uploads/${umbrella}/${output}`;
 				});
 
 				const thumbnail = siblings.find(({ filename }) => filename.startsWith('thumbnail.'));
@@ -148,7 +138,7 @@ export const DATA = {
 		});
 	},
 
-	async 'quotes/'() {
+	async '/quotes'() {
 		const items = await traverse('../content/routes/quotes', ({ breadcrumb: [file] }) => {
 			return async ({ buffer, parse }) => {
 				const content: Array<{ author: string; quote: string; from: string }> = [];
@@ -164,7 +154,7 @@ export const DATA = {
 		return items.flat();
 	},
 
-	async 'reviews/'() {
+	async '/reviews'() {
 		const schema = define(({ optional, array, record, string, literal }) => ({
 			date: string(),
 			released: string(),
@@ -229,17 +219,12 @@ export const DATA = {
 						task(async ({ fs }) => {
 							await fs.mkdir(`${ROOT}/${umbrella}`, { recursive: true });
 							const payload = await asset.buffer;
-							if (/\.(mp4)$/.test(asset.filename)) {
-								return fs.writeFile(`${ROOT}/${umbrella}/${asset.filename}`, payload);
-							}
-							const webp = sharp(payload).webp();
-							return void webp.toFile(`${ROOT}/${umbrella}/${output}`);
+							const filename = `${ROOT}/${umbrella}/${output}`;
+							if (output.endsWith('.mp4')) return fs.writeFile(filename, payload);
+							return void sharp(payload).webp().toFile(filename);
 						});
 
-						if (/\.(mp4)$/.test(asset.filename)) {
-							return `/uploads/${umbrella}/${asset.filename}`;
-						}
-						return `/uploads/${umbrella}/${asset.filename.replace(/\.[^/.]+$/, '.webp')}`;
+						return `/uploads/${umbrella}/${output}`;
 					});
 
 					const branches = siblings.map(async (branch) => {
@@ -277,8 +262,41 @@ export const DATA = {
 			transform: ({ slug, title }) => ({ slug: `/reviews/${slug}`, title }),
 		});
 	},
+
+	async '/uploads'() {
+		return await traverse<[umbrella: string, files: string[]]>(
+			'../content/routes',
+			({ breadcrumb, depth }) => {
+				if (breadcrumb[0] !== '+article.md') return;
+				const paths = breadcrumb.slice(1, depth + 1).reverse();
+				return async ({ siblings, task }) => {
+					if (siblings.length === 0) return;
+					const umbrella = paths.join('/');
+					const uploaded = siblings.flatMap((asset) => {
+						if (!/\.(jpe?g|png|svg|mp4)$/.test(asset.filename)) return [];
+						const output = /\.(mp4)$/.test(asset.filename)
+							? asset.filename
+							: asset.filename.replace(/\.[^/.]+$/, '.webp');
+						task(async ({ fs }) => {
+							await fs.mkdir(`${ROOT}/${umbrella}`, { recursive: true });
+							const payload = await asset.buffer;
+							if (output.endsWith('.mp4')) {
+								return fs.writeFile(`${ROOT}/${umbrella}/${asset.filename}`, payload);
+							}
+							const webp = sharp(payload).webp();
+							return void webp.toFile(`${ROOT}/${umbrella}/${output}`);
+						});
+						return output;
+					});
+
+					if (uploaded.length === 0) return;
+					return [umbrella, uploaded];
+				};
+			},
+		);
+	},
 } as const;
 
 export type Items = {
-	[key in keyof typeof DATA]: Awaited<ReturnType<(typeof DATA)[key]>>;
+	[key in keyof typeof ROUTES]: Awaited<ReturnType<(typeof ROUTES)[key]>>;
 };

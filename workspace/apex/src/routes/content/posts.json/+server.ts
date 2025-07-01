@@ -1,8 +1,8 @@
 import { json } from '@sveltejs/kit';
-import { DATA, type Items } from '$content/builder';
+import { ROUTES, type Items } from '$content/builder';
 
 export interface Schema {
-	items: Items['posts/'];
+	items: Items['/posts'];
 	metadata: {
 		categories: string[];
 		tags: string[];
@@ -11,7 +11,7 @@ export interface Schema {
 
 export const prerender = true;
 export async function GET() {
-	const items = await DATA['posts/']();
+	const items = await ROUTES['/posts']();
 
 	return json({
 		items,
