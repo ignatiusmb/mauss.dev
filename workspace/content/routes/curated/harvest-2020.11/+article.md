@@ -1,9 +1,9 @@
 ---
 date: "2020-12-01"
-title: Monthly Digest - November 2020
+title: Harvest • November 2020
 ---
 
-Hey folks, welcome back to our monthly digest! As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section.
+Hey folks, welcome back to the Harvest! As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section.
 
 ## Article of the month
 
@@ -143,6 +143,8 @@ SAO Progressive goes all the way back to the start and it follows Asuna's journe
 
 Source(s): [[ComicBook](https://comicbook.com/anime/news/sword-art-online-progressive-movie-trailer-anime/)]
 
-***
+## footnotes
 
 That's it for our recap of November 2020, folks! Stay safe, have a great December and Merry Christmas 👋
+
+*originally published as part of the "Monthly Digest" series*. renamed to "Harvest" in 2025.

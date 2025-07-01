@@ -1,9 +1,9 @@
 ---
 date: "2021-05-01"
-title: Monthly Digest - April 2021
+title: Harvest • April 2021
 ---
 
-Hey folks, welcome back to our monthly digest! As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section.
+Hey folks, welcome back to the Harvest! As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section.
 
 ## Article of the month
 
@@ -127,6 +127,8 @@ Source(s):
 1. Edge, Mozilla, and others reject FLoC [[TheVerge](https://www.theverge.com/2021/4/16/22387492/google-floc-ad-tech-privacy-browsers-brave-vivaldi-edge-mozilla-chrome-safari?scrolla=5eb6d68b7fedc32c19ef33b4) | [Reddit](https://www.reddit.com/r/webdev/comments/muo76b/edge_and_mozilla_reject_floc/)]
 2. How to fight back against Google FLoC [[Plausible](https://plausible.io/blog/google-floc) | [Reddit](https://www.reddit.com/r/degoogle/comments/mrd8zb/how_to_fight_back_against_google_floc/)]
 
-***
+## footnotes
 
 That's it for our recap of April 2021, folks! Stay safe and have a great May 👋
+
+*originally published as part of the "Monthly Digest" series*. renamed to "Harvest" in 2025.

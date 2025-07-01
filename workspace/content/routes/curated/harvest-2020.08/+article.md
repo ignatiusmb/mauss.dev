@@ -1,9 +1,9 @@
 ---
 date: "2020-09-01"
-title: Monthly Digest - August 2020
+title: Harvest • August 2020
 ---
 
-Hey folks, welcome to the debut of my monthly digest! We're starting things off strong with amazing highlights August has offered followed by a recap of the month. Feel free to use the quick links provided above to jump to your preferred section.
+Hey folks, welcome to the debut of the Harvest! We're starting things off strong with amazing highlights August has offered followed by a recap of the month. Feel free to use the quick links provided above to jump to your preferred section.
 
 ## Article of the month
 
@@ -57,7 +57,7 @@ Uploaded on June 30 this year (a little late to the party but better late than n
 
 ![!YouTube#hb](766qmHTc2ro "[[Spotify](spotify:track:0UtSPZyW63m5ZHODCwhakB)] Waiting for Rain by Minami")
 
-This month's choice is a really tough one to choose, there's a couple of nominees for this spot and all of them is from Minami. Almost every of her MVs I watch and listen are absolute bangers, and this one's are no different, the only reason *Waiting for Rain* is chosen is because it was recently released and would make more sense for this month's digest.
+This month's choice is a really tough one to choose, there's a couple of nominees for this spot and all of them is from Minami. Almost every of her MVs I watch and listen are absolute bangers, and this one's are no different, the only reason *Waiting for Rain* is chosen is because it was recently released and would make more sense for this month's Harvest.
 
 ![!YouTube#d](HIRiduzNLzQ "[[Spotify](spotify:track:4FAUrZ8wdf8mV202FcEgn6)] Hollowness by Minami")
 
@@ -89,7 +89,7 @@ I've been listening to a lot of J-Pop lately and almost forgot why I used to lov
 
 ## Video of the month | [YouTube Playlist](https://www.youtube.com/playlist?list=PLtthNj7yut57rZSJ5a1NeFaNZ5d-bhbbQ)
 
-Have you ever wondered where that random ringing sound comes from? Did you sometimes freak out when it isn't going away, thinking you might go deaf from it? Well, don't worry. Turns out, it occurs to practically everyone in the world and it's not harmful or anything. August's digest got you covered with an informative video from TED-Ed explaining this phenomenon.
+Have you ever wondered where that random ringing sound comes from? Did you sometimes freak out when it isn't going away, thinking you might go deaf from it? Well, don't worry. Turns out, it occurs to practically everyone in the world and it's not harmful or anything. August's Harvest got you covered with an informative video from TED-Ed explaining this phenomenon.
 
 ![!YouTube#hb](TnsCsR2wDdk "[What's that ringing in your ears? - Marc Fagelson](https://youtu.be/TnsCsR2wDdk)")
 
@@ -131,6 +131,8 @@ MAP or Minor Attracted People/Person, just a modern way of saying pedophile, is 
 
 Source(s): [[YouTube](https://youtu.be/msI2SxmED4E) | Reddit [P1](https://www.reddit.com/r/Cringetopia/comments/iahhqe/map_minor_attracted_person_people/) / [P2](https://www.reddit.com/r/Cringetopia/comments/iaoppj/apparently_theyre_trying_to_make_it_a_movement/)]
 
-***
+## footnotes
 
 That's it for our recap of August 2020, folks! Stay safe and have a great September 👋
+
+*originally published as part of the "Monthly Digest" series*. renamed to "Harvest" in 2025.

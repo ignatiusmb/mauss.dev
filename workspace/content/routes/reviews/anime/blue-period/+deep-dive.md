@@ -34,7 +34,7 @@ i couldn't help but reflect on myself multiple times while watching Yatora throu
 
 episode 10, minute 10. i didn't expect to get philosophical with Blue Period, but damn — i absolutely contemplated my life and the choices i've made after reading that. oh, and i love that the show ties this moment directly into helping Yatora with his entrance exam too.
 
-## afterthoughts
+## reflections
 
 i like how it portrays the importance of pursuing one's passion and the struggles that come with it. going against societal expectations and parental pressure is never easy, and the way Yatora goes through it is the realest thing i've seen in a while.
 

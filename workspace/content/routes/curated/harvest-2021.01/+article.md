@@ -1,9 +1,9 @@
 ---
 date: "2021-02-01"
-title: Monthly Digest - January 2021
+title: Harvest • January 2021
 ---
 
-Hey folks, welcome back to our monthly digest! Let's slow down things and start off the year calm, cool, and collected. A lot happened even though 2021 just started, but I'll try to start the year slowly so I don't quickly exhaust myself with overambitious things.
+Hey folks, welcome back to the Harvest! Let's slow down things and start off the year calm, cool, and collected. A lot happened even though 2021 just started, but I'll try to start the year slowly so I don't quickly exhaust myself with overambitious things.
 
 As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section.
 
@@ -48,7 +48,7 @@ This is a given. You know it's coming. The highlight of January 2021. A great wa
 
 ![!YouTube-s#d](PLZRRxQcaEjA4qyEuYfAMCazlL0vQDkIj2 "[[IMDb](https://www.imdb.com/title/tt6439562/)] Mind Field: Season 1")
 
-I've finished the first season last December, and this isn't quite fair to the show because it's such an amazing series, so putting it as an honorable mention doesn't really represent the whole series. But, I've only watched the first one and haven't seen the next seasons, so I'll put it here for this month's digest.
+I've finished the first season last December, and this isn't quite fair to the show because it's such an amazing series, so putting it as an honorable mention doesn't really represent the whole series. But, I've only watched the first one and haven't seen the next seasons, so I'll put it here for this month's Harvest.
 
 ![!YouTube#d](d9ak52ZVL5k "[[MyAnimeList](https://myanimelist.net/anime/38295/Joshikausei)] Joshikausei")
 
@@ -142,6 +142,8 @@ They've had baby chicks and there was an accident involving a truck and a baby c
 
 Source(s): [[Reddit](https://www.reddit.com/r/TIHI/comments/kv3kqr/thanks_i_hate_cannibalistic_chickens/givz78k?context=3)]
 
-***
+## footnotes
 
 That's it for our recap of January 2021, folks! Stay safe and have a great February 👋
+
+*originally published as part of the "Monthly Digest" series*. renamed to "Harvest" in 2025.

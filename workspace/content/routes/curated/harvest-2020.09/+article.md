@@ -1,9 +1,9 @@
 ---
 date: "2020-10-01"
-title: Monthly Digest - September 2020
+title: Harvest • September 2020
 ---
 
-Hey folks, welcome back to our monthly digest! This time, September was pretty slow with everything except the articles. As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section.
+Hey folks, welcome back to the Harvest! This time, September was pretty slow with everything except the articles. As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section.
 
 ## Article of the month
 
@@ -122,6 +122,8 @@ Note the word "Accused". But, doesn't mean that they're not spying on you, even 
 
 Source(s): [[Bloomberg](https://www.bloomberg.com/news/articles/2020-09-18/facebook-accused-of-watching-instagram-users-through-cameras)]
 
-***
+## footnotes
 
 That's it for our recap of September 2020, folks! Stay safe and have a great October 👋
+
+*originally published as part of the "Monthly Digest" series*. renamed to "Harvest" in 2025.

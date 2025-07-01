@@ -1,9 +1,9 @@
 ---
 date: "2021-01-01"
-title: Monthly Digest - December 2020
+title: Harvest • December 2020
 ---
 
-Hey folks, welcome back to our monthly digest and Happy New Year!! 🥳🎉
+Hey folks, welcome back to the Harvest and Happy New Year!! 🥳🎉
 
 As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section.
 
@@ -141,8 +141,10 @@ Being a programmer myself and studying Computer Science, I can assure you that t
 
 Source(s): [[Reddit/OutOfTheLoop](https://www.reddit.com/r/OutOfTheLoop/comments/kgxxmu/whats_up_with_everyone_deleting_instagram_over/ggi3tv4?context=3) - [TL;DR Legal](https://tldrlegal.com/license/instagram-terms-of-use) | [Reddit/PrivacyToolsIO](https://www.reddit.com/r/privacytoolsIO/comments/khj9vh/facebook_secretly_tracks_your_iphone_locationthis/) - [Forbes](https://www.forbes.com/sites/zakdoffman/2020/12/13/facebook-tracks-apple-iphone-locations-even-ios-14-and-iphone-12-12-pro-and-pro-max) | [Reddit/Privacy](https://www.reddit.com/r/privacy/comments/kfx2de/a_facebook_bug_exposed_instagram_users_personal/) - [TheVerge](https://www.theverge.com/2020/12/18/22189494/facebook-bug-instagram-email-birthdays-messages)]
 
-***
+## footnotes
 
 That's it for our recap of December 2020, folks! Stay safe and have a great January 👋
 
 I'll publish another post to recap the year, be sure to check it out to get the best bits!
+
+*originally published as part of the "Monthly Digest" series*. renamed to "Harvest" in 2025.

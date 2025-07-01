@@ -24,7 +24,7 @@ some stories are carried by the animation, some by the plot, and some by the cha
 
 let's not even get started how off the power balance is. how much they nerfed the original cast. i can't...
 
-## afterthoughts
+## reflections
 
 i know this review is harsh, but i really wanted to like Boruto. okay, to be fair, maybe i was *also* a spoiled brat like Boruto coz i watched **Naruto Kai** instead — the Naruto fan project that removes all the filler and nonsense that dragged the original series down.
 

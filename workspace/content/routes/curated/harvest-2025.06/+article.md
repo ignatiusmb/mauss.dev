@@ -97,7 +97,7 @@ i have so much respect for him and his crew, his channel may be centered around 
 
 ![!YouTube#d](FEEh7tCM5nQ "This Is What a Stroke Does to Your Brain (in Minutes)")
 
-## afterthoughts
+## reflections
 
 i'm glad i finally got to write this (again). there have been so many instances where i thought, "this would be great to include in the monthly series", but i never got around to it. i set the bar too high for myself, overthought everything, and ended up writing nothing at all. which, ironically, only deepened my writer's block.
 

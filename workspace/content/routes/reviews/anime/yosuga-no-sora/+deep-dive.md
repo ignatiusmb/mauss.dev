@@ -156,7 +156,7 @@ the show's tagline. and the key to understanding everything. they weren't runnin
 
 where no one else could reach them.
 
-## afterthoughts
+## reflections
 
 damn, that was depressing.
 
