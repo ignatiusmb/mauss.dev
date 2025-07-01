@@ -37,7 +37,7 @@ I consider myself as a perfectionist, and most of my friends can vouch for this.
 
 No really, that was mostly it. On most occasions, that would be more than enough. The human mind is amazing, when you focus and really put your all into it, you can virtually accomplish anything. But, on certain days like this, I needed a little bit more boost, I have to trade off something, and that is my sanity... by not sleeping. So, more like my sleep? Yes, you could say I'm compensating for my mental energy by not sleeping to finish my work one at a time.
 
-One last thing was find something to accompany yourself, preferably something that could make you laugh because a good laugh really is the best cure to recharge your mental energy. Nichijou was the one that helps me brighten up my mood and lets me escape reality for a short time, I highly recommend you to check it out, also take a look at my [October 2020 Monthly Digest](/curated/digest-2020.10) if you haven't already.
+One last thing was find something to accompany yourself, preferably something that could make you laugh because a good laugh really is the best cure to recharge your mental energy. Nichijou was the one that helps me brighten up my mood and lets me escape reality for a short time, I highly recommend you to check it out, also take a look at my [last month's Harvest](/curated/harvest-2020.10) if you haven't already.
 
 Looking back again, this is more or less what life is really all about is it. You live through your days, you suffer through some of it, and you gain experience through it too. All of this is essential for us to grow as a person, as a human. You really need knowledge to fully grow, and some of them requires you to experience it first-hand.
 

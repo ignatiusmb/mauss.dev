@@ -36,9 +36,9 @@
 		<span>how i write</span>
 	</h2>
 	<!-- prettier-ignore -->
-	<p>most of my writing on this site is in lowercase. it might seem unusual if you're not used to this style, but i feel more grounded and honest as it helps me convey my thoughts and feelings better. like chatting in an instant messenger your good friend, it strips away the pressure to perform and lets me focus on what i'm trying to say, not how it's dressed up.</p>
+	<p>most of my writing on this site is in lowercase. it might seem unusual if you're not used to this style, but i feel more grounded and honest as it helps me convey my thoughts and feelings better. like chatting with a good friend, it strips away the pressure to perform and lets me focus on what i'm trying to say, not how it's dressed up.</p>
 	<!-- prettier-ignore -->
-	<p>that said, <em>i can write formally when it counts</em>. for formal spaces, i switch to proper casing. the rest is almost always an organized mess — written as freely and naturally as i think it, as i try to make sense and articulate myself.</p>
+	<p>however, i do have more time to write here and i sometimes get confused myself with <em>everything</em> lowercased. so, i try my best to case the words in places where it matters and where it makes it easier to read. the rest is written as freely and naturally as i think it, as i try to make sense and articulate myself.</p>
 
 	<section data-info="warning" style:margin="2rem 0">
 		<!-- prettier-ignore -->
@@ -58,6 +58,12 @@
 	</h2>
 	<!-- prettier-ignore -->
 	<p>the content that holds up no matter when it's read. things i find meaningful enough that i wished i had or was able to see back then.</p>
+	<h3>
+		<i data-icon="basket"></i>
+		<span>harvest</span>
+	</h3>
+	<!-- prettier-ignore -->
+	<p>the harvest series is a snapshot of the things that were memorable to me during the month. it's a way for me to reflect on the past month and see what i've learned or experienced.</p>
 
 	<h2 id="posts">
 		<i data-icon="article"></i>
@@ -179,6 +185,9 @@
 	}
 
 	i[data-icon] {
+		&[data-icon='basket'] {
+			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"><line x1="128" y1="120" x2="128" y2="176"/><polyline points="184 88 128 24 72 88"/><line x1="180.8" y1="120" x2="175.2" y2="176"/><line x1="75.2" y1="120" x2="80.8" y2="176"/><path d="M24,88H232L216.93,201.06A8,8,0,0,1,209,208H47a8,8,0,0,1-7.93-6.94Z"/></svg>');
+		}
 		&[data-icon='certificate'] {
 			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"><line x1="72" y1="136" x2="120" y2="136"/><line x1="72" y1="104" x2="120" y2="104"/><circle cx="196" cy="124" r="44"/><path d="M168,192H40a8,8,0,0,1-8-8V56a8,8,0,0,1,8-8H216a8,8,0,0,1,8,8V90.06"/><polyline points="168 157.94 168 224 196 208 224 224 224 157.94"/></svg>');
 		}

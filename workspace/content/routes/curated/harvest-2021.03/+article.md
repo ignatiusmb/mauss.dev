@@ -1,13 +1,13 @@
 ---
 date: "2021-04-01"
-title: Monthly Digest - March 2021
+title: Harvest • March 2021
 ---
 
-Hey folks, welcome back to our monthly digest! As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section.
+Hey folks, welcome back to the Harvest! As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section.
 
 ## Article of the month
 
-Sorry, I've bamboozled you who've read the article highlights in previous digests, thinking it was an article only to find out it was a blog post. I present to you, for real this time, the article of this month.
+Sorry, I've bamboozled you who've read the article highlights in previous Harvests, thinking it was an article only to find out it was a blog post. I present to you, for real this time, the article of this month.
 
 ![traits table#f#fb](https://journals.plos.org/plosone/article/figure/image?size=large&id=info:doi/10.1371/journal.pone.0248895.t003 "[[PLOS ONE](https://doi.org/10.1371/journal.pone.0248895)] Personality trait predictors of adjustment during the COVID pandemic among college students")
 
@@ -124,6 +124,8 @@ Exactly on the 9th to be precise, [Jellyfin v10.7.0](https://www.reddit.com/r/je
 
 Another one and probably my favorite is [SvelteKit](https://kit.svelte.dev/)! It's finally in beta and [the repository](https://github.com/sveltejs/kit) is finally [open to public on the 12th](https://www.reddit.com/r/sveltejs/comments/m337r7/sveltekit_repository_is_now_public_on_github/). I'll be rewriting a lot of my sites and applications as well as starting new ones with this.
 
-***
+## footnotes
 
 That's it for our recap of March 2021, folks! Stay safe and have a great April 👋
+
+*originally published as part of the "Monthly Digest" series*. renamed to "Harvest" in 2025.

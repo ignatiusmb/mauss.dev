@@ -54,7 +54,7 @@ soundtracks:
     spotify: 6a0PMD9AsNoK3XD5Nnheig
 ---
 
-a repeat watch every time april rolls around. *shigatsu wa kimi no uso* is a beautifully crafted story with a perfect blend of music, emotion, and character development. the pacing is slow, but perfect for the story it tells and wraps up (also) perfectly in one season.
+a repeat watch every time april rolls around. Your Lie in April is a beautifully crafted story with a perfect blend of music, emotion, and character development. the pacing is slow, but perfect for the story it tells and wraps up (also) perfectly in one season.
 
 it's visually stunning in all the right places, the animation is fluid, the sound design is fantastic. it's just a good and well-rounded show that checks all the boxes for me to recommend it.
 

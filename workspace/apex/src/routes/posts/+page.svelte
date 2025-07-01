@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Image from 'syv/core/Image.svelte';
 	import SearchBar from 'syv/core/SearchBar.svelte';
-	import Link from '$lib/components/Link.svelte';
 	import SearchFilter from '$lib/dialog/SearchFilter.svelte';
 
 	import type { Query } from './search.svelte';
@@ -67,6 +66,7 @@
 </header>
 
 <SearchBar
+	styles={{ '--background-color': 'var(--color-surface)' }}
 	value={data.query.replace(/\+/g, ' ')}
 	filter={() => pushState('', { dialog: true })}
 	oninput={async (value) => {
@@ -95,13 +95,12 @@
 	{/if}
 
 	{#each index as post (post.slug)}
-		<section
+		<a
+			href="/posts/{post.slug}"
 			animate:flip={{ duration: TIME.SLIDE }}
 			transition:scale|local={{ duration: TIME.SLIDE }}
 		>
-			<Image src={post.thumbnail || ''} alt={post.title}>
-				<span>{post.title}</span>
-			</Image>
+			<Image src={post.thumbnail || ''} alt={post.title} />
 
 			<div class="content">
 				<h3>{post.title}</h3>
@@ -113,9 +112,8 @@
 			<aside>
 				<time datetime={post.date}>{date(post.date).format('DD MMMM YYYY')}</time>
 				<small>{post.estimate} min read</small>
-				<Link href="/posts/{post.slug}" style="primary">READ</Link>
 			</aside>
-		</section>
+		</a>
 	{/each}
 </div>
 
@@ -142,7 +140,7 @@
 			text-align: center;
 		}
 
-		section {
+		a {
 			display: grid;
 			grid-template-rows: auto 1fr 3rem;
 			border-radius: var(--rounding-box);
@@ -150,10 +148,13 @@
 				0 2px 1px -1px oklch(0 0 0 / 20%),
 				0 1px 1px 0 oklch(0 0 0 / 14%),
 				0 1px 3px 0 oklch(0 0 0 / 12%);
-			background-color: var(--color-overlay);
+			background-color: var(--color-surface);
 			transition: var(--transition-base);
+			text-decoration: none;
 
+			&:focus,
 			&:hover {
+				background-color: var(--color-overlay);
 				transform: translateY(-0.15rem);
 			}
 
@@ -172,9 +173,8 @@
 			}
 
 			aside {
-				display: grid;
+				display: flex;
 				gap: 0.5rem;
-				grid-template-columns: auto auto 1fr;
 				align-items: center;
 				padding: 0.5rem;
 				padding-left: 1rem;
@@ -188,10 +188,6 @@
 					content: '•';
 					color: var(--color-accent-primary);
 					margin-right: 0.5rem;
-				}
-
-				& :global(:last-child) {
-					justify-self: end;
 				}
 			}
 		}

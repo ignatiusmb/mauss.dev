@@ -1,9 +1,9 @@
 ---
 date: "2021-03-01"
-title: Monthly Digest - February 2021
+title: Harvest • February 2021
 ---
 
-Hey folks, welcome back to our monthly digest! February's short month caught me off guard, even then it's been a month already. As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section. I got a lot of interesting stuff to share even with the short month.
+Hey folks, welcome back to the Harvest! February's short month caught me off guard, even then it's been a month already. As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section. I got a lot of interesting stuff to share even with the short month.
 
 ## Article of the month
 
@@ -55,7 +55,7 @@ I'll save the detailed explanation for the complete review, but if you're patien
 
 This is on par with the top tier comedy stuff I found. To make things even better, it's a whole 25 episodes season with 2 seasons and some OVAs to top it off. I can't remember how many episodes I watched each time, but I do know that I'll laugh and smile every time I watch this.
 
-I've mentioned on the previous digests that we absolutely need something that makes us laugh every time we need it, this was it for me this month. I have my [trump cards](/reviews/anime/nichijou), but it does lessen the effect when you watch it repeatedly. This was a good breather and addition to that list.
+I've mentioned on the previous Harvests that we absolutely need something that makes us laugh every time we need it, this was it for me this month. I have my [trump cards](/reviews/anime/nichijou), but it does lessen the effect when you watch it repeatedly. This was a good breather and addition to that list.
 
 - [[Alkamauss](/reviews/anime/tsurezure-children)] Tsurezure Children
 
@@ -137,6 +137,8 @@ They truly shot themselves in the foot (see their blog post or Android comment t
 
 Source(s): [[Reddit/Android](https://www.reddit.com/r/Android/comments/ll5ebu/changes_to_lastpass_free_one_free_device_only/) | [Reddit/SelfHosted](https://www.reddit.com/r/selfhosted/comments/ll4htz/lastpass_is_finally_a_nobrainer_to_ditch_bitwarden/) | [LastPass Blog](https://blog.lastpass.com/2021/02/changes-to-lastpass-free/)]
 
-***
+## footnotes
 
 That's it for our recap of February 2021, folks! Stay safe and have a great March 👋
+
+*originally published as part of the "Monthly Digest" series*. renamed to "Harvest" in 2025.

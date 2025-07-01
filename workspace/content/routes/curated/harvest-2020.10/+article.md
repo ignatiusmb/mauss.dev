@@ -1,9 +1,9 @@
 ---
 date: "2020-11-01"
-title: Monthly Digest - October 2020
+title: Harvest • October 2020
 ---
 
-Hey folks, welcome back to our monthly digest! As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section.
+Hey folks, welcome back to the Harvest! As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section.
 
 ## Article of the month
 
@@ -138,6 +138,8 @@ Not long after, the Streisand effect takes place and GitHub is flooded with new 
 
 Source(s): [[Reddit/Takedown](https://www.reddit.com/r/programming/comments/jgub36/youtubedl_just_received_a_dmca_takedown_from_riaa/) | [GH/DMCA](https://github.com/github/dmca/blob/master/2020/10/2020-10-23-RIAA.md) | [Reddit/Exploit](https://www.reddit.com/r/programming/comments/jhlhok/someone_replaced_the_github_dmca_repo_with/) | [Reddit/StreisandEffect](https://www.reddit.com/r/Piracy/comments/jiwzf2/angry_youtubedl_users_flood_github_with_new_repos/) | [BleepingComputer](https://www.bleepingcomputer.com/news/software/angry-youtube-dl-users-flood-github-with-new-repos-after-takedown/) | [TorrentFreak](https://torrentfreak.com/riaas-youtube-dl-takedown-ticks-of-developers-and-githubs-ceo-201027/)]
 
-***
+## footnotes
 
 That's it for our recap of October 2020, folks! Stay safe and have a great November 👋
+
+*originally published as part of the "Monthly Digest" series*. renamed to "Harvest" in 2025.
