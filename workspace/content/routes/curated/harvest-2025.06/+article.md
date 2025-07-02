@@ -23,7 +23,7 @@ i miss this art style so much, not to mention how much the animation has improve
 
 ## stories
 
-![finally discovering what you love](./blue-period-trailer.png "[[Trailer](https://www.youtube.com/watch?v=IV0-SYn3YuM)] [Blue Period](/reviews/anime/blue-period)")
+![finally discovering what you love](./blue-period-trailer.png "[Blue Period](/reviews/anime/blue-period) [[Trailer](https://www.youtube.com/watch?v=IV0-SYn3YuM)]")
 
 i might've spoiled you more from that image alone than [the review itself](/reviews/anime/blue-period), but i think that's a great phrase to describe Blue Period. it's doesn't have the best animation, but damn does the story and characters more than make up for it. it might finally be the one that pushes me to start reading manga.
 
@@ -37,7 +37,7 @@ i might've spoiled you more from that image alone than [the review itself](/revi
 
 ## pieces
 
-![cover image by Caravane Au Coucher Du Soleil, Charles Théodore Frère](https://aethermug.com/assets/posts/i-do-not-remember-my-life-and-it-s-fine/516720ldsdl.webp "[[Aether Mug](https://aethermug.com/posts/i-do-not-remember-my-life-and-it-s-fine)] I Do Not Remember My Life and It's Fine")
+![cover image by Caravane Au Coucher Du Soleil, Charles Théodore Frère](https://aethermug.com/assets/posts/i-do-not-remember-my-life-and-it-s-fine/516720ldsdl.webp "[I Do Not Remember My Life and It's Fine](https://aethermug.com/posts/i-do-not-remember-my-life-and-it-s-fine)")
 
 i'm afraid to say how eerily relatable this article is to me, i need some more time to write my own thoughts about it, but i'll definitely write something similar about this.
 
@@ -47,7 +47,7 @@ i'm afraid to say how eerily relatable this article is to me, i need some more t
 
 ## tracks
 
-![!YouTube#hb](5Duje_sZko8 "[Take Me to the Beach (feat. Ado)](https://music.youtube.com/watch?v=p7DnxRRuqzM)")
+![!YouTube#hb](5Duje_sZko8 "[Take Me to the Beach (feat. Ado)](https://music.youtube.com/watch?v=p7DnxRRuqzM) by Imagine Dragons")
 
 look, i might be a bit biased with Ado, but hear me out. i created a playlist for each month at the start of every month, and somehow this song finds its way and was on every single one of them since it was released. it's *so good*, her vocals are crazy (good) as always!
 
@@ -55,15 +55,15 @@ i think it's time to put it to rest. hopefully with this, i can start fresh with
 
 ### more
 
-![!YouTube#d](5FrhtahQiRc "[Heavy Is The Crown](https://music.youtube.com/watch?v=h0OK2oOG1no)")
+![!YouTube#d](5FrhtahQiRc "[Heavy Is The Crown ft. Linkin Park](https://music.youtube.com/watch?v=h0OK2oOG1no) by League of Legends")
 
-![!YouTube#d](jv-laQtaLjE "[Let You Fade](https://music.youtube.com/watch?v=I-vcTugsQXY)")
+![!YouTube#d](jv-laQtaLjE "[Let You Fade](https://music.youtube.com/watch?v=I-vcTugsQXY) by Linkin Park")
 
-![!YouTube#d](x1UsJ2Znjk0 "[罪と罰 / Crime & Punishment](https://music.youtube.com/watch?v=w_7CXh5s8pk)")
+![!YouTube#d](x1UsJ2Znjk0 "[罪と罰 / Crime & Punishment](https://music.youtube.com/watch?v=w_7CXh5s8pk) by Ado")
 
-![!YouTube#d](L5uV3gmOH9g "[Teardrops](https://music.youtube.com/watch?v=iKhHd9ySXEw)")
+![!YouTube#d](L5uV3gmOH9g "[Teardrops](https://music.youtube.com/watch?v=iKhHd9ySXEw) by Bring Me The Horizon")
 
-![!YouTube#d](L6tHMDaGgho "[LosT](https://music.youtube.com/watch?v=1cGSUgX6JTU)")
+![!YouTube#d](L6tHMDaGgho "[LosT](https://music.youtube.com/watch?v=1cGSUgX6JTU) by Bring Me The Horizon")
 
 ## clips
 

@@ -3,15 +3,15 @@ date: "2021-05-01"
 title: Harvest • April 2021
 ---
 
-Hey folks, welcome back to the Harvest! As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section.
+Hello and welcome back to the Harvest! As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section.
 
-## Article of the month
+## pieces
 
 ![article header#f#fb](https://github.blog/wp-content/uploads/2020/12/commits-are-snapshots-not-diffs.png "[[GitHub Blog](https://github.blog/2020-12-17-commits-are-snapshots-not-diffs/)] Commits are snapshots, not diffs")
 
 Written on the GitHub blog, you can be sure that it's at the very least well-researched. Very important for all software engineers and practically everyone that uses any VCS, not just Git. I think [this comment](https://www.reddit.com/r/programming/comments/mn9pwp/commits_are_snapshots_not_diffs_the_github_blog/gtwlcpx) perfectly describes the feeling of reading this. I've also just found out about the existence of [Git book](https://git-scm.com/book/en/v2).
 
-### Honorable article mentions
+### more
 
 - [[Je suis un dev](https://www.jesuisundev.com/en/the-project-that-made-me-burnout/)] The project that made me burnout
 
@@ -25,7 +25,7 @@ It's sad to see that, [not just CI](https://www.reddit.com/r/programming/comment
 
 An interesting article from one of my favorite community, Jellyfin software. Read how one of the core member setup their repository CDN, being open source with members and users all across the globe, there's bound to be some problem with ways on solving them. It's amazing how they managed to handle all of it on their spare time.
 
-## Content of the month
+## stories
 
 ![DDLC Backdrop#f#fb](https://wallpapercave.com/wp/wp2367709.png "[[WallpaperCave](https://wallpapercave.com/wp/wp2367709.png)] Doki Doki Literature Club | [See Review](/reviews/anime/doki-doki-literature-club)")
 
@@ -33,7 +33,7 @@ A bit different this month, and perhaps way too late, but I know a lot who doesn
 
 An amazing game *no one* should ever play. Yeah, I know I'm contradicting myself here, it was also an exaggeration. It was indeed a visual novel masterpiece, but still wouldn't probably recommend for the casual people. Look forward to the full review, where I'll explain more in details.
 
-### Honorable content mentions
+### more
 
 - [[Alkamauss](/reviews/anime/mahou-shoujo-madoka-magica)] Mahou Shoujo Madoka★Magica
 
@@ -47,13 +47,13 @@ Taking a break from all the psychological horror/thriller, this was really a nic
 
 An odd leftover from last winter's, this was just a really good and wholesome show. If you at least read some anime news, you've definitely heard about this one. The rest of this review is perhaps better saved for the full review later, so until then, just watch this, you'll know it when you watch it.
 
-## Music of the month
+## tracks
 
 ![!YouTube#hb](B3vsRXOSBqc "[[YTMusic](https://music.youtube.com/watch?v=oPJMiTL88W8)] Eve - This World to You")
 
 Actually, the whole [Otogi album](https://www.youtube.com/playlist?list=OLAK5uy_lPKot6WS4guwujMpxdaNgx2s_k7UWAo6E) is amazing, especially Ambivalent, Kaede, and Kiminisekai (which is this spotlight). Just the songs themselves are so good, but it gets better when you get to know the lyrics.
 
-### Honorable music mentions | [YouTube Music](https://music.youtube.com/playlist?list=PLtthNj7yut57IQwFRdHZZcM9VCmerrMFp)
+### more
 
 ![!YouTube#d](s17DzFKRPQs "Tristam - With Love Until We Die")
 
@@ -67,7 +67,7 @@ Such a good and catchy song, I was wondering that this would fit into an OP/ED o
 
 Premiered on the last day of the month, perhaps a bit biased, but Eve seems to always deliver with their songs. It also has a unique tone to it which grows on you the more and longer you listen to them.
 
-## Video of the month
+## clips
 
 ![!YouTube#hb](sGG-A80Tl5g "Eating less Meat won't save the Planet. Here's Why")
 
@@ -77,7 +77,7 @@ Again, I recommend to watch the video and decide for yourself, don't just take m
 
 My point here is that this video is well-made, no matter how you looked at it. It gives a well developed, rational and logical counter-arguments for those they point out. Cutting off meat production right now isn't a solution, there are a lot of other problems that aren't and should be discussed instead of pointlessly blaming other things.
 
-### Honorable video mentions | [YouTube](https://www.youtube.com/playlist?list=PLtthNj7yut55OwvXq_Q6S0i3el8yjHSoO)
+### more
 
 ![!YouTube#d](_ArVh3Cj9rw "The Future Of Reasoning")
 
@@ -95,9 +95,7 @@ One of the best talks this month about JavaScript and web technologies, highly r
 
 Bonus video! One of the best collaboration reaction video from PewDiePie and CinnamonToastKen. It was absolutely hilarious and disgusting at the same time, really enjoyable to watch.
 
-***
-
-## Headlines of the month
+## headlines
 
 ### Leaked Mark Zuckerberg Phone Number's Reveals He Is on Signal
 
@@ -131,4 +129,4 @@ Source(s):
 
 That's it for our recap of April 2021, folks! Stay safe and have a great May 👋
 
-*originally published as part of the "Monthly Digest" series*. renamed to "Harvest" in 2025.
+*originally published as part of the "Monthly Digest" series, renamed "Harvest" in 2025*.

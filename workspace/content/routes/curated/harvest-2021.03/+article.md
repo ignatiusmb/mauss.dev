@@ -3,9 +3,9 @@ date: "2021-04-01"
 title: Harvest • March 2021
 ---
 
-Hey folks, welcome back to the Harvest! As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section.
+Hello and welcome back to the Harvest! As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section.
 
-## Article of the month
+## pieces
 
 Sorry, I've bamboozled you who've read the article highlights in previous Harvests, thinking it was an article only to find out it was a blog post. I present to you, for real this time, the article of this month.
 
@@ -17,7 +17,7 @@ Of course, that's just an oversimplified summary from the article itself. I foun
 
 Mainly from the perspective of an introvert, this isn't really "surprising" to say the least, but I'm sure most of us also guessed it. Extroverts gets their energy by spending time with other people, and introverts (you guessed it) gets it from spending time and by being alone in solitude. Having to spend most of our time inside (at home), introverts (at least me) get to have a lot more time for ourselves, and as such, have better moods overall.
 
-### Honorable article mentions
+### more
 
 - [[seedubjay](https://seedubjay.com/blog/jpeg-visualisation/)] Why Does JPEG Look So Weird?
 
@@ -27,13 +27,13 @@ One of the best explanation and visualization of JPEG out there. What really is 
 
 This isn't the typical article I used to feature here, but I've had my share with game development a couple of months ago and this was well written. My experience with game dev wasn't the best, but reading through this was fun and definitely informative. Especially when you're thinking of going to the game dev rabbit hole, this will definitely help out a lot, specifically for Godot made games.
 
-## Content of the month
+## stories
 
 ![Jujutsu Kaisen Backdrop#f#fb](https://www.themoviedb.org/t/p/original/eqM26U3HHfvwEcFoMObQc5NYGoc.jpg "[[TMDB](https://www.themoviedb.org/t/p/original/eqM26U3HHfvwEcFoMObQc5NYGoc.jpg)] Jujutsu Kaisen | [See Review](/reviews/anime/jujutsu-kaisen)")
 
 It was tough between Jujutsu Kaisen and Re:Zero Season 2, but JJK really won me with their continuous action scenes every 3 to 4 episodes. It's indeed action-heavy and it was a real pleasure to watch every episode of it.
 
-### Honorable content mentions
+### more
 
 - [[Alkamauss](/reviews/anime/re-zero-starting-life-in-another-world)] Re:Zero Season 2
 - [[Alkamauss](/reviews/anime/mushoku-tensei)] Mushoku Tensei
@@ -43,7 +43,7 @@ Doesn't mean that these shows are to be ignored, especially the second season of
 
 I'll try my best to give these the [review they deserved](/reviews), someday. But until then, these are my picks to end the tightly packed Winter 2021 Anime Season.
 
-## Music of the month
+## tracks
 
 ![!YouTube#hb](BYP7zHceSiU?start=26 "[[YTMusic](https://music.youtube.com/watch?v=3mL4B4emkuM)] Tristam - Over the Edge")
 
@@ -54,7 +54,7 @@ I'm beyond grateful that I can't relate to this well enough as I've not lost som
 > Appreciate what you have now. Much love.
 > \- Tristam
 
-### Honorable music mentions | [YouTube Music](https://music.youtube.com/playlist?list=PLtthNj7yut57mWDxoFjCsybZvuglUJEZk)
+### more
 
 ![!YouTube#d](ZNFKZI7L9xE "YOASOBI「三原色」ahamo Special Movie")
 
@@ -68,7 +68,7 @@ There's not much to say about this. It's Grant. You don't need to listen to know
 
 I'm a sucker for acoustic covers. In addition to being one of my favorite songs, this is a perfect combination for me. Released right before March ends, it was such a pleasant surprise.
 
-## Video of the month
+## clips
 
 ![!YouTube#hb](ZI0w_pwZY3E "A Message From the Skype CEO")
 
@@ -78,7 +78,7 @@ Okay, enough with the introduction. I've always loved these "Message from X CEO"
 
 I mean, seriously though, we had it in our mouth, everyone knew what Skype was (at least everyone I know), but what the hell happened?! What even is Zoom?! I didn't even knew it until this particular situation and long distance learning ~~forces~~ *ahm*, asks me to use it.
 
-### Honorable video mentions | [YouTube](https://www.youtube.com/playlist?list=PLtthNj7yut56-k1XojKax9VkvC7EOBNrm)
+### more
 
 There are so many good and awesome videos this month, I can't put them all here! These are my best picks for this month, but I highly suggest you to look at the playlist (link above) and watch more than just these ones.
 
@@ -94,9 +94,7 @@ Exactly the title, "This is why we can't have nice things"!! Is what I've been f
 
 The answer to my old-age question! I used to wonder this as a kid. What and why does every living things have this "number" where they only "live until then". Can't you really go past that, what happens if you do, and how does one determine this "number". The number being life expectancy, and of course, I forgot all about it until I saw this video.
 
-***
-
-## Headlines of the month
+## headlines
 
 ### COVID vaccines are finally here!
 
@@ -128,4 +126,4 @@ Another one and probably my favorite is [SvelteKit](https://kit.svelte.dev/)! It
 
 That's it for our recap of March 2021, folks! Stay safe and have a great April 👋
 
-*originally published as part of the "Monthly Digest" series*. renamed to "Harvest" in 2025.
+*originally published as part of the "Monthly Digest" series, renamed "Harvest" in 2025*.

@@ -3,9 +3,9 @@ date: "2020-12-01"
 title: Harvest • November 2020
 ---
 
-Hey folks, welcome back to the Harvest! As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section.
+Hello and welcome back to the Harvest! As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section.
 
-## Article of the month
+## pieces
 
 ![article of the month hero image#f#fb](https://letterstoanewdeveloper.files.wordpress.com/2020/11/gary-chan-yzszn3qvheo-unsplash.jpg?w=640&#038;h=480&#038;crop=1 "[[Letters To A New Developer](https://letterstoanewdeveloper.com/2020/11/23/always-leave-the-code-better-than-you-found-it/)] Always leave the code better than you found it")
 
@@ -15,7 +15,7 @@ I really couldn't have said it better. This isn't exclusive to new developers, b
 
 Of course, whenever I encounter anything related to programming like this, I always feel like this isn't exclusive to software engineers as well, but when we really get the idea behind it, we could virtually apply it to anything in our life and improve ourselves. This is also one of it.
 
-### Honorable article mentions
+### more
 
 - [[CSS-Tricks](https://css-tricks.com/lots-of-ways-to-use-math-random-in-javascript/)] Lots of Ways to Use Math.random() in JavaScript
 
@@ -33,13 +33,13 @@ A well researched and written essay of why Anime has such bad reputation in cert
 
 Not really an article, but a really informative reply explaining what and why Google's search URL is so long.
 
-## Content of the month
+## stories
 
 ![alt#f#fb](https://image.tmdb.org/t/p/original/gdGALiQygd7x4MpazAEvpjB6quS.jpg "[[TMDB](https://image.tmdb.org/t/p/original/gdGALiQygd7x4MpazAEvpjB6quS.jpg)] Grimgar: Ashes and Illusions | [See Review](/reviews/anime/hai-to-gensou-no-grimgar)")
 
 Probably the best Isekai Drama that will ever exist (*ahem* prove me wrong). It's truly sad that this might not ever get a second season. Yes, sorry to spoil the fun early but you deserve to know this before you get too attached to Grimgar like myself. Feel free to explore why that's the case here, but either way, this is a truly good show to watch and follow.
 
-### Honorable content mentions
+### more
 
 This month is also quite slow but there's still some interesting shows I finished just in time before December starts. Here's some of my recommendations.
 
@@ -55,7 +55,7 @@ One of the best animated movie (not like there's a lot of movies to begin with),
 
 Not as sad or touching as I imagined, perhaps my expectations were a bit high because of the barrage of recommendations for this movie. But, either way this is still a good movie with a unique story.
 
-## Music of the month
+## tracks
 
 ![!YouTube#hb](qU-181e-hSw "[[Spotify](spotify:track:7DTk1207Efq0HBUEYmbcTB)] Stonebank - Scared")
 
@@ -63,7 +63,7 @@ Another awesome release from Stonebank (a.k.a. StoneDank because the releases ar
 
 There's also a lot of amazing mixes released this month, be sure to check them out in the new YouTube Music playlist down below.
 
-### Honorable music mentions | [Spotify](spotify:playlist:3u52u0faYK0uLQz5wgL7k3) / [YouTube](https://www.youtube.com/playlist?list=PLtthNj7yut551MwQsLcNFs8kL5guFzDPY)
+### more
 
 ![!YouTube#d](IVQkcd706-4 "[[Spotify](spotify:track:1St4foaXsAX3vvkXXRA0l2)] EBEN - My Decree (feat. Micah Martin)")
 
@@ -77,13 +77,13 @@ I think [this meme](https://www.reddit.com/r/Monstercat/comments/jlx7ru/meme_eve
 
 Another worthy mention to MUZZ and Danyka Nadeau latest release, Somewhere Else. Such a great song and animations, it's shocking how far Monstercat releases has improved over the time.
 
-## Video of the month
+## clips
 
 ![!YouTube#hb](jRvxnpfCDSo "Why do you get a fever when you're sick?")
 
 This is one of those videos everyone must watch no matter what their background is. Everyone can and will get sick someday, and you need to understand why and how it happens. This video explains it perfectly in around 5 minutes.
 
-### Honorable video mentions | [YouTube](https://www.youtube.com/playlist?list=PLtthNj7yut56ZNuJAMeu9-o63Idh9auJ3)
+### more
 
 ![!YouTube#d](thOifuHs6eY "Hexagons are the Bestagons")
 
@@ -97,9 +97,7 @@ A must-watch for you science geek out there! Horseshoe crab is one of those anci
 
 The biggest lies about good posture, debunked by calisthenics experts! Everyone, especially if you spend most of your time sitting, whether that's in front of a computer, or in front of your TV, or really anything else that allows you to stay statically for a long time.
 
-***
-
-## Headlines of the month
+## headlines
 
 ### Kick Google Play Outside Your Smartphone With AuroraStore
 
@@ -147,4 +145,4 @@ Source(s): [[ComicBook](https://comicbook.com/anime/news/sword-art-online-progre
 
 That's it for our recap of November 2020, folks! Stay safe, have a great December and Merry Christmas 👋
 
-*originally published as part of the "Monthly Digest" series*. renamed to "Harvest" in 2025.
+*originally published as part of the "Monthly Digest" series, renamed "Harvest" in 2025*.
