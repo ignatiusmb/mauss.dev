@@ -1,6 +1,7 @@
 ---
 date: "2025-07-01"
 title: Harvest • June 2025
+series: the-harvest
 ---
 
 i'm so excited that i even brought this series back, albeit rebranded.

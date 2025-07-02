@@ -1,13 +1,14 @@
 ---
 date: "2020-12-01"
 title: Harvest • November 2020
+series: the-harvest
 ---
 
 Hello and welcome back to the Harvest! As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section.
 
 ## pieces
 
-![article of the month hero image#f#fb](https://letterstoanewdeveloper.files.wordpress.com/2020/11/gary-chan-yzszn3qvheo-unsplash.jpg?w=640&#038;h=480&#038;crop=1 "[[Letters To A New Developer](https://letterstoanewdeveloper.com/2020/11/23/always-leave-the-code-better-than-you-found-it/)] Always leave the code better than you found it")
+![article of the month hero image](https://letterstoanewdeveloper.files.wordpress.com/2020/11/gary-chan-yzszn3qvheo-unsplash.jpg?w=640&#038;h=480&#038;crop=1 "[Always leave the code better than you found it](https://letterstoanewdeveloper.com/2020/11/23/always-leave-the-code-better-than-you-found-it/)")
 
 I really couldn't have said it better. This isn't exclusive to new developers, but really anyone working with a team or encountering any codebase.
 
@@ -17,25 +18,17 @@ Of course, whenever I encounter anything related to programming like this, I alw
 
 ### more
 
-- [[CSS-Tricks](https://css-tricks.com/lots-of-ways-to-use-math-random-in-javascript/)] Lots of Ways to Use Math.random() in JavaScript
+**[Lots of Ways to Use Math.random() in JavaScript](https://css-tricks.com/lots-of-ways-to-use-math-random-in-javascript/)** — An amazing and well-written article showcasing the different uses from a simple `Math.random()` API. From animations to computer-generated music, and even generative art. Go check it out!
 
-An amazing and well-written article showcasing the different uses from a simple `Math.random()` API. From animations to computer-generated music, and even generative art. Go check it out!
+**[Google's ReCAPTCHA Privacy Nightmare](https://hfet.org/google-recaptcha-privacy-nightmare/)** — You're forced to agree to Google's Privacy Policy on sites that uses ReCAPTCHA. Yes, by clicking on those "I'm not a robot" checkboxes, it also means you agree to their terms. Read more on the article for a thorough explanation and alternatives.
 
-- [[HFET](https://hfet.org/google-recaptcha-privacy-nightmare/)] Google's ReCAPTCHA Privacy Nightmare
+**[Why Your Mate Think Anime is Gore ...](https://www.reddit.com/r/anime/comments/jm7w66/this_is_why_your_mates_think_anime_is_gore_filled/)** — A well researched and written essay of why Anime has such bad reputation in certain places. Included with all the sources, if you know anyone who thinks about Anime this way, you could ask them to try have an open-mind and read this essay. Even if you don't, you should at least know the history if you're in the Anime community.
 
-You're forced to agree to Google's Privacy Policy on sites that uses ReCAPTCHA. Yes, by clicking on those "I'm not a robot" checkboxes, it also means you agree to their terms. Read more on the article for a thorough explanation and alternatives.
-
-- [[Reddit](https://www.reddit.com/r/anime/comments/jm7w66/this_is_why_your_mates_think_anime_is_gore_filled/)] Why Your Mate Think Anime is Gore ...
-
-A well researched and written essay of why Anime has such bad reputation in certain places. Included with all the sources, if you know anyone who thinks about Anime this way, you could ask them to try have an open-mind and read this essay. Even if you don't, you should at least know the history if you're in the Anime community.
-
-**Bonus**: [[Reddit](https://www.reddit.com/r/explainlikeimfive/comments/jt41d9/eli5_why_is_the_url_of_google_searches_so_long/gc3g0js?context=3)] Google's long search URL explained
-
-Not really an article, but a really informative reply explaining what and why Google's search URL is so long.
+**[Google's long search URL explained](https://www.reddit.com/r/explainlikeimfive/comments/jt41d9/eli5_why_is_the_url_of_google_searches_so_long/gc3g0js?context=3)** — Not really an article, but a really informative reply explaining what and why Google's search URL is so long.
 
 ## stories
 
-![alt#f#fb](https://image.tmdb.org/t/p/original/gdGALiQygd7x4MpazAEvpjB6quS.jpg "[[TMDB](https://image.tmdb.org/t/p/original/gdGALiQygd7x4MpazAEvpjB6quS.jpg)] Grimgar: Ashes and Illusions | [See Review](/reviews/anime/hai-to-gensou-no-grimgar)")
+![grimgar backdrop](https://image.tmdb.org/t/p/original/gdGALiQygd7x4MpazAEvpjB6quS.jpg "[Grimgar: Ashes and Illusions](/reviews/anime/hai-to-gensou-no-grimgar) [[TMDB](https://www.themoviedb.org/tv/65369)]")
 
 Probably the best Isekai Drama that will ever exist (*ahem* prove me wrong). It's truly sad that this might not ever get a second season. Yes, sorry to spoil the fun early but you deserve to know this before you get too attached to Grimgar like myself. Feel free to explore why that's the case here, but either way, this is a truly good show to watch and follow.
 
@@ -43,21 +36,15 @@ Probably the best Isekai Drama that will ever exist (*ahem* prove me wrong). It'
 
 This month is also quite slow but there's still some interesting shows I finished just in time before December starts. Here's some of my recommendations.
 
-- [[Alkamauss](/reviews/anime/danshi-koukousei-no-nichijou)] Daily Lives of High School Boys
+**[Daily Lives of High School Boys](/reviews/anime/danshi-koukousei-no-nichijou)** — A contestant to last month's content, Nichijou. Their absurd humour rivals each other and really just a fun show to watch that will certainly make you laugh. It's comedy is just direct and plain funny without having to think too hard like Nichijou.
 
-A contestant to last month's content, Nichijou. Their absurd humour rivals each other and really just a fun show to watch that will certainly make you laugh. It's comedy is just direct and plain funny without having to think too hard like Nichijou.
+**[KONOSUBA Movie: Legend of Crimson](/reviews/movie/konosuba-legend-of-crimson)** — One of the best animated movie (not like there's a lot of movies to begin with), especially if you follow KonoSuba from the first season and enjoyed it as much as the second season. Totally recommended for you who have watched the show, but totally not recommended if you haven't. Watch the show first before you watch this! Trust me on this.
 
-- [[Alkamauss](/reviews/movie/konosuba-legend-of-crimson)] KONOSUBA Movie: Legend of Crimson
-
-One of the best animated movie (not like there's a lot of movies to begin with), especially if you follow KonoSuba from the first season and enjoyed it as much as the second season. Totally recommended for you who have watched the show, but totally not recommended if you haven't. Watch the show first before you watch this! Trust me on this.
-
-- [[Alkamauss](/reviews/movie/maquia-when-the-promised-flower-blooms)] Maquia: When the Promised Flower Blooms
-
-Not as sad or touching as I imagined, perhaps my expectations were a bit high because of the barrage of recommendations for this movie. But, either way this is still a good movie with a unique story.
+**[Maquia: When the Promised Flower Blooms](/reviews/movie/maquia-when-the-promised-flower-blooms)** — Not as sad as I imagined, perhaps my expectations were a bit high because of the barrage of recommendations for this movie. But, either way this is still a good movie with a unique story.
 
 ## tracks
 
-![!YouTube#hb](qU-181e-hSw "[[Spotify](spotify:track:7DTk1207Efq0HBUEYmbcTB)] Stonebank - Scared")
+![!YouTube#hb](qU-181e-hSw "[Scared](https://music.youtube.com/watch?v=cRu_JhKPVdI) by Stonebank [[Spotify](spotify:track:7DTk1207Efq0HBUEYmbcTB)]")
 
 Another awesome release from Stonebank (a.k.a. StoneDank because the releases are always Dank). Not to mention the genre is Drum and Bass (DnB), one of my favorites in the EDM scope.
 
@@ -65,15 +52,15 @@ There's also a lot of amazing mixes released this month, be sure to check them o
 
 ### more
 
-![!YouTube#d](IVQkcd706-4 "[[Spotify](spotify:track:1St4foaXsAX3vvkXXRA0l2)] EBEN - My Decree (feat. Micah Martin)")
+![!YouTube#d](IVQkcd706-4 "[My Decree (feat. Micah Martin)](https://music.youtube.com/watch?v=zx4kHyX35c0) by EBEN [[Spotify](spotify:track:1St4foaXsAX3vvkXXRA0l2)]")
 
 Awesome song with amazing vocals by Micah Martin. With psyched up Mob as the background, it gives off such vibes that gets you all pumped up.
 
-![!YouTube#d](S1CaLdzwuU4 "[[Spotify](spotify:track:2raUfi0wM6gDa3RDKNQySD)] Tristam - Violence")
+![!YouTube#d](y0P4znsQVYI "Violence by Tristam [[Spotify](spotify:track:2raUfi0wM6gDa3RDKNQySD)]")
 
 I think [this meme](https://www.reddit.com/r/Monstercat/comments/jlx7ru/meme_everyone_hearing_violence_for_the_first_time/) from the community describes everyone who knew about Tristam well. It was such a great feeling when I first saw it, and it's also a great release.
 
-![!YouTube#d](TYxzSjAABng "[[Spotify](spotify:track:10r998Pph8xlvZ9eUKz4mD)] MUZZ - Somewhere Else (feat. Danyka Nadeau)")
+![!YouTube#d](TYxzSjAABng "[Somewhere Else (feat. Danyka Nadeau)](https://music.youtube.com/watch?v=qc6E8TZd7Ic) by MUZZ [[Spotify](spotify:track:10r998Pph8xlvZ9eUKz4mD)]")
 
 Another worthy mention to MUZZ and Danyka Nadeau latest release, Somewhere Else. Such a great song and animations, it's shocking how far Monstercat releases has improved over the time.
 
@@ -103,43 +90,43 @@ The biggest lies about good posture, debunked by calisthenics experts! Everyone,
 
 Built to truly be an alternative to Google Play Store (and not something like F-Droid). This is perfect for you who wanted to start your privacy-focused journey. AuroraStore is easy to install and includes both apps and games, just like Play Store does.
 
-Source(s): [[FOSS Post](https://fosspost.org/aurorastore-google-play-alternative/)]
+see: [FOSS Post](https://fosspost.org/aurorastore-google-play-alternative/)
 
 ### PSA: Your Public Domain Is Part of Your Infrastructure and Not Just Your Homepage
 
 The post itself describes it well in a form of rant. Generally, don't do anything with your domain without consulting your IT, don't even give keys or access to others, especially telling "web guys" to cancel "that old homepage".
 
-Source(s): [[Reddit](https://www.reddit.com/r/sysadmin/comments/jm2iu3/psa_your_public_domain_is_part_of_your/)]
+see: [r/sysadmin](https://www.reddit.com/r/sysadmin/comments/jm2iu3/psa_your_public_domain_is_part_of_your/)
 
 ### Your Phone Number May Be Readily Available to Anyone if You Play Genshin Impact
 
 The forgot password feature can be used to show your phone number to anyone, if you linked a mobile number to your account. Email would be partially censored, but not the phone number. This seems to be fixed now, but we don't know how many phone numbers were exposed publicly.
 
-Source(s): [[Reddit/Privacy](https://www.reddit.com/r/privacy/comments/jr2d3f/if_you_play_genshin_impact_your_phone_number_may/) | [Reddit/Thread](https://www.reddit.com/r/Genshin_Impact/comments/jqzcw7/if_you_linked_via_mobile_your_phone_numbers_are/)]
+see: [r/privacy](https://www.reddit.com/r/privacy/comments/jr2d3f/if_you_play_genshin_impact_your_phone_number_may/) | [r/genshin_impact](https://www.reddit.com/r/Genshin_Impact/comments/jqzcw7/if_you_linked_via_mobile_your_phone_numbers_are/)
 
 ### Google Photos will end its free unlimited storage on June 1st, 2021
 
 The time has finally come for Google to kill one of it's products again, this time it's their unlimited photos service. With almost everyone I knew using Google Photos to back up all of the photos since the beginning of time, most people have now found a way to download and archive all of it using tools across the internet. It was a good run, I personally didn't use it because I don't like my photos compressed, so I still keep it there but with the original option checked, so everything counts towards my quota.
 
-Source(s): [[Reddit](https://www.reddit.com/r/Android/comments/jsd5kf/google_photos_will_end_its_free_unlimited_storage/) | [The Verge](https://www.theverge.com/2020/11/11/21560810/google-photos-unlimited-cap-free-uploads-15gb-ending) | [Google Blog](https://blog.google/products/photos/storage-changes/)]
+see: [r/android](https://www.reddit.com/r/Android/comments/jsd5kf/google_photos_will_end_its_free_unlimited_storage/) | [The Verge](https://www.theverge.com/2020/11/11/21560810/google-photos-unlimited-cap-free-uploads-15gb-ending) | [Google Blog](https://blog.google/products/photos/storage-changes/)
 
 ### YouTube will run ads on smaller creators' videos without paying them
 
 It's forced, even on channels that opt out of showing advertisements on their videos. Nothing more to add to the title. Read the sources for more information.
 
-Source(s): [[Reddit](https://www.reddit.com/r/technology/comments/jx77c8/youtube_will_run_ads_on_smaller_creators_videos/) | [Engadget](https://www.engadget.com/youtube-ads-on-small-creator-videos-111043478.html) | [Forbes](https://www.forbes.com/sites/johnkoetsier/2020/11/18/youtube-will-now-show-ads-on-all-videos-even-if-creators-dont-want-them/?sh=7d4d56424913)]
+see: [r/technology](https://www.reddit.com/r/technology/comments/jx77c8/youtube_will_run_ads_on_smaller_creators_videos/) | [Engadget](https://www.engadget.com/youtube-ads-on-small-creator-videos-111043478.html) | [Forbes](https://www.forbes.com/sites/johnkoetsier/2020/11/18/youtube-will-now-show-ads-on-all-videos-even-if-creators-dont-want-them/?sh=7d4d56424913)
 
 ### Flappy bird in 341 bytes of URI formatted HTML and JavaScript
 
 One madman created an entirely playable Flappy Bird in 341 bytes of HTML and JavaScript encoded as URI. As of writing this, the community has tried to reduce it even more and it stands at less than 200 bytes, 195 bytes to be exact.
 
-Source(s): [[Reddit](https://www.reddit.com/r/programming/comments/k3alda/flappy_bird_in_341_bytes/) | [GitHub](https://gist.github.com/gullyn/95b2ab9e465317f1d4e4607cf6e94205)]
+see: [r/programming](https://www.reddit.com/r/programming/comments/k3alda/flappy_bird_in_341_bytes/) | [GitHub](https://gist.github.com/gullyn/95b2ab9e465317f1d4e4607cf6e94205)
 
 ### Sword Art Online Progressive will be a Movie instead
 
 SAO Progressive goes all the way back to the start and it follows Asuna's journey on Aincrad. But, unlike most fans expected (including myself), this story will be made as a movie instead of a new series/show as a whole season. Either way, I'm still looking forward to this since Aincrad arc felt super rushed, there's a lot of room for the story to be shown, so having a chance to experience it again is always nice.
 
-Source(s): [[ComicBook](https://comicbook.com/anime/news/sword-art-online-progressive-movie-trailer-anime/)]
+see: [ComicBook](https://comicbook.com/anime/news/sword-art-online-progressive-movie-trailer-anime/)
 
 ## footnotes
 
