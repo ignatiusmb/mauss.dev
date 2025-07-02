@@ -4,7 +4,7 @@ title: Harvest • October 2020
 series: the-harvest
 ---
 
-Hey folks, welcome back to the Harvest! As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section.
+Hello and welcome back to the Harvest! As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section.
 
 ## pieces
 

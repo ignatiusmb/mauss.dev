@@ -3,11 +3,9 @@ date: "2021-01-01"
 title: Harvest • December 2020
 ---
 
-Hey folks, welcome back to the Harvest and Happy New Year!! 🥳🎉
+Hello and welcome back to the Harvest and Happy New Year! As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section.
 
-As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section.
-
-## Article of the month
+## pieces
 
 ![Code Review#f#fb](https://mtlynch.io/code-review-love/cover.png "[How to Make Your Code Reviewer Fall in Love with You](https://mtlynch.io/code-review-love/) by Michael Lynch")
 
@@ -17,7 +15,7 @@ Code review isn't just about the reviewer's work and job, it is the whole team's
 
 TL;DR review the code yourself first and automate stuff that can be automated, that way your reviewer can give you high-quality feedback to improve yourself and reduce the workloads for both of you (and probably the whole team waiting for that PR to merge).
 
-### Honorable article mentions
+### more
 
 - [[PrivacyTools](https://write.privacytools.io/freddy/why-privacy-matters-even-if-you-have-nothing-to-hide)] Privacy matters even if "you have nothing to hide"
 
@@ -37,13 +35,13 @@ Another mind-blowing technique using pure CSS. I can't of anything useful to use
 
 Honestly, please tell me if you really did. On the other hand, this post is a fair assessment, perhaps a little too much on the rambling. But, you should know what it's talking about, especially as someone who studied Computer Science. Others who took the *software development* track on college would probably understand too.
 
-## Content of the month
+## stories
 
 ![yorimoi backdrop#f#fb](https://image.tmdb.org/t/p/original/bTIbUZVoKnlMt2IrZQv2ODPVs0N.jpg "[[TMDB](https://image.tmdb.org/t/p/original/bTIbUZVoKnlMt2IrZQv2ODPVs0N.jpg)] A Place Further Than the Universe | [See Review](/reviews/anime/sora-yori-mo-tooi-basho)")
 
 I'm such a sucker for SOLs, and this might just be the best one, so far. A story about a group of high-school girls that leads to Antarctica. It's pretty slow-paced early on, but that's what makes slice of life so good. I can't really describe how good this is in a paragraph, but this is definitely the best one on my list, placed first when anyone asks for a slice of life anime recommendation.
 
-### Honorable content mentions
+### more
 
 - [[Alkamauss](/reviews/anime/enen-no-shouboutai)] Fire Force Season 2
 - [[Alkamauss](/reviews/anime/maoujou-de-oyasumi)] Sleepy Princess in the Demon Castle
@@ -55,13 +53,13 @@ Sleepy Princess on the other hand is the comedy that keeps me going in the middl
 
 Last but not least is Akudama Drive, the actual underdog of this Fall 2020 anime season. This is a short 12 episode, single series anime that manages to deliver its story to the audience while still having some character development in the cramped episodes. It's worth the watch just to see its action and the story it has to give, not to mention it has banging OP.
 
-## Music of the month
+## tracks
 
 ![!YouTube#hb](vd3IlOjSUGQ "[[Spotify](spotify:track:6wKmxUeMJAoz2GpMrw95z5)] YOASOBI「ハルカ」 (Haruka)")
 
 Another amazing release from YOASOBI! This was an unexpectedly welcomed release to close the year. I love the vocals so much and it has a catchy beat too. I might be a little bit biased at this point, but if you love the previous releases, you'll definitely love this as well.
 
-### Honorable music mentions | [Spotify](spotify:playlist:5kV8nVYgylds5wxuVGuctC) / [YouTube](https://www.youtube.com/playlist?list=PLtthNj7yut55qVn14CrIoYAWQ5y7Pw8td)
+### more
 
 ![!YouTube#d](Y4nEEZwckuU "[[Spotify](spotify:track:0T4AitQuq8IJhWBWuZwkFA)] YOASOBI「群青」 (Ultramarine)")
 
@@ -75,13 +73,13 @@ Another YOASOBI release, yes I know. This might seem excessive and it's not even
 
 Might just be another bias, but every Slippy release are always a banger. While we're on the topic of Monstercat, the OG artists are back with banger remixes. Even PBN did a remix of another song, which is unheard of.
 
-## Video of the month
+## clips
 
 ![!YouTube#hb](8PyiA7o8LLE "Honobono Log")
 
 I'm not sure how I've just discovered this, but wow is it such a nice series to watch. I probably won't always remember this, but when you do stumble upon it again, it really gives off a nostalgic feeling as when you first watched it. This is the complete series as one video, if you prefer to watch by parts, go search it for yourself, I think it's complete in YouTube.
 
-### Honorable video mentions | [YouTube](https://www.youtube.com/playlist?list=PLtthNj7yut574E71vVR0sYZ14qWQS-eYb)
+### more
 
 ![!YouTube#d](dBap_Lp-0oc "The Illusion You Need To See")
 
@@ -95,9 +93,7 @@ Yes. Yes. Yes. For you who hasn't opened your mind (and eye) that animation is n
 
 Considering we're still in the middle of a global pandemic, there's no harm in understanding how a Coronavirus spreads and attack its host. I feel this video has explained it nicely, even if you didn't study science in high school to understand it well. It also explains how the vaccine is made, and how it works.
 
-***
-
-## Headlines of the month
+## headlines
 
 ### Attack on Titan Final Season is MyAnimeList's Biggest Premiere Ever
 

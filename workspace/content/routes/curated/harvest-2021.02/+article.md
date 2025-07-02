@@ -3,9 +3,9 @@ date: "2021-03-01"
 title: Harvest • February 2021
 ---
 
-Hey folks, welcome back to the Harvest! February's short month caught me off guard, even then it's been a month already. As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section. I got a lot of interesting stuff to share even with the short month.
+Hello and welcome to the Harvest! February's short month caught me off guard, even then it's been a month already. As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section. I got a lot of interesting stuff to share even with the short month.
 
-## Article of the month
+## pieces
 
 ![security, privacy, and anonymity#f#fb](https://images.unsplash.com/photo-1548092372-0d1bd40894a3 "[[PrivacyTools](https://blog.privacytools.io/privacy-security-anonymity/)] What are security, privacy, and anonymity?")
 
@@ -17,7 +17,7 @@ These words are frequently used interchangeably, but what's their difference? Th
 >
 > Anonymity - no name on your shirt
 
-### Honorable article mentions
+### more
 
 - [[VICE](https://www.vice.com/en/article/n7v5y7/browser-favicons-can-be-used-as-undeletable-supercookies-to-track-you-online)] Browser 'Favicons' Can Be Used as Undeletable 'Supercookies' to Track You Online
 
@@ -35,7 +35,7 @@ Take a look on some of the comments and examples [Reddit](https://www.reddit.com
 
 Title says it all, it described the situation exactly. You know the feeling when somebody's watching you? Expect that to be all the time when you're online. There's so much that went wrong here, it's better for you to read and decide for yourself. Here's also a [Reddit thread](https://www.reddit.com/r/programming/comments/lj0iu1/dev_creeped_out_after_he_fired_up_ubuntu_vm_on/) to see what others say.
 
-## Content of the month
+## stories
 
 ![Clannad Backdrop#f#fb](https://www.themoviedb.org/t/p/original/h9nAWM6TF59g39l3fDzqTgW7ap2.jpg "[[TMDB](https://www.themoviedb.org/t/p/original/h9nAWM6TF59g39l3fDzqTgW7ap2.jpg)] Clannad + AS | [See Review](/reviews/anime/clannad)")
 
@@ -49,7 +49,7 @@ I'll save the detailed explanation for the complete review, but if you're patien
 
 \*Note: It's a really slow burn so you really need to be patient. Also, if it's your first time watching this, DO NOT search up anything about this until you've finished it. It hits different when you least expect it, and you'll be more satisfied with it, trust me.
 
-### Honorable content mentions
+### more
 
 - [[Alkamauss](/reviews/anime/Ssaiki-kusuo-no-psi-nan)] The Disastrous Life of Saiki K.
 
@@ -61,7 +61,7 @@ I've mentioned on the previous Harvests that we absolutely need something that m
 
 This is no different than above, but without any supernatural powers, a little touch of wholesome, and some romance. The fact that this doesn't have a second season is a crime. It's an even bigger crime that it only has 12 episodes with only 12 minutes per episode. Jokes aside, this show checks all of my list on a slice-of-life romance comedy with a school setting.
 
-## Music of the month
+## tracks
 
 ![!YouTube#hb](lxw4Y8qzq4w "[[YTMusic](https://music.youtube.com/watch?v=nW_aQ572geU) | [Spotify](spotify:track:6QX5xybvl9Gk750M5Mm4qe)] 平行線 (Heikousen) - Eve × suis from ヨルシカ")
 
@@ -69,7 +69,7 @@ Another amazing release with a great animation video to pair it with. I'll be ho
 
 Also, yes we're slowly moving to YouTube Music.
 
-### Honorable music mentions | [Spotify](spotify:playlist:0Ebdfpcs6LJCPSMTnIMocf) / [YouTube](https://www.youtube.com/watch?v=r2Ig85ycGKQ&list=PLtthNj7yut56R6WQ1RcvsYhgQsoJ9VF2h)
+### more
 
 ![!YouTube#d](4DxL6IKmXx4?start=10 "[[YTMusic](https://music.youtube.com/watch?v=NinLIDs9qmU) | [Spotify](spotify:track:0cSkn2l67csUljEy0EEBPn)] LiSA -『炎』(Homura)")
 
@@ -83,7 +83,7 @@ Another one from Grabbitz! His vocals are just too good to pass on. I'm glad tha
 
 Well, this was definitely unexpected. I've never thought of the day that Chinese lyrics would be released on Monstercat in their own label, it's catchy and surprisingly soothing too. Well, the last is to be expected as it's released on the Instinct channel.
 
-## Video of the month
+## clips
 
 ![!YouTube#hb](Z9cJQN6lw3w "Why Jakarta is sinking")
 
@@ -91,7 +91,7 @@ Jakarta is the current Indonesia's capital city. The capital city will be moved 
 
 Jakarta is already sinking by a couple of centimeters each year, and with the increasing sea levels, it's even more prominent. But, there's also another factor that will cause a major disaster the longer the government solves it. This video perfectly explained what's going on with the current capital city of Indonesia.
 
-### Honorable video mentions | [YouTube](https://www.youtube.com/playlist?list=PLtthNj7yut54z5dbRy8rncDbKbm6aNwSV)
+### more
 
 ![!YouTube#d](g3Ud6mHdhlQ "How Do Nuclear Submarines Make Oxygen?")
 
@@ -107,9 +107,7 @@ A quick, less than 7-minutes, video explaining how mRNA vaccines work and how it
 
 Cancel culture. How did it get this far. What makes someone think they're decent enough to judge others and act as they're flawless themselves. This is a pretty heavy topic to discuss, and I can't say much as I would be indifferent with "those" people. But, Anna Akana did a great job explaining and discussing this topic in her video. She uses a lot of excellent clips where they discusses what we should actually do, and I love every one of it.
 
-***
-
-## Headlines of the month
+## headlines
 
 ### Android FTW
 

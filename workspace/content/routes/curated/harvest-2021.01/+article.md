@@ -3,11 +3,11 @@ date: "2021-02-01"
 title: Harvest • January 2021
 ---
 
-Hey folks, welcome back to the Harvest! Let's slow down things and start off the year calm, cool, and collected. A lot happened even though 2021 just started, but I'll try to start the year slowly so I don't quickly exhaust myself with overambitious things.
+Hello and welcome back to the Harvest! Let's slow down things and start off the year calm, cool, and collected. A lot happened even though 2021 just started, but I'll try to start the year slowly so I don't quickly exhaust myself with overambitious things.
 
 As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section.
 
-## Article of the month
+## pieces
 
 ![WhatsApp#f#fb](https://pocketnow.com/files/2020/04/whatsapp-800x468.jpg "[[Reddit](https://www.reddit.com/r/Android/comments/kwnuh9/whatsapp_says_it_cant_see_your_shared_location/)] [WhatsApp says it can't see your shared location; its privacy policy says otherwise](https://pocketnow.com/whatsapp-says-it-cant-see-your-shared-location-its-privacy-policy-says-otherwise) from Pocketnow")
 
@@ -17,7 +17,7 @@ They've created an infographic saying they can't see shared location and other s
 
 Here's another really [good and simple explanation](https://www.reddit.com/r/privacytoolsIO/comments/ktn16q/tell_me_in_simple_words_why_whatsapps_new_privacy/gin6y7h?context=3) why everyone is concerned about the new WhatsApp policy.
 
-### Honorable article mentions
+### more
 
 - [[Kira McLean](https://kiramclean.com/blog/what-i-use-now-instead-of-google/)] What I Use Now Instead Of Google
 
@@ -36,7 +36,7 @@ For th... no, everyone should read this. Read the post and its comments, reflect
 
 A Google product related articles. Worth the read if you're learning Computer Science or a developer. It's quite technical, but worth it once you get the idea behind it. The first 2 articles are bug hunting reports related to YouTube made by the same person, a fun read on behind the scenes when "attacking" these things.
 
-## Content of the month
+## stories
 
 ![Demon Slayer Mugen Train#f#fb](https://www.themoviedb.org/t/p/original/xoqr4dMbRJnzuhsWDF3XNHQwJ9x.jpg "[[TMDB](https://www.themoviedb.org/t/p/original/xoqr4dMbRJnzuhsWDF3XNHQwJ9x.jpg)] Demon Slayer: Infinity Train | [See Review](/reviews/movie/kimetsu-no-yaiba-movie-mugen-ressha-hen)")
 
@@ -44,7 +44,7 @@ This is a given. You know it's coming. The highlight of January 2021. A great wa
 
 \*Note that you can't really see this without watching the first season of Demon Slayer since this movie is a direct continuation of the first season.
 
-### Honorable content mentions
+### more
 
 ![!YouTube-s#d](PLZRRxQcaEjA4qyEuYfAMCazlL0vQDkIj2 "[[IMDb](https://www.imdb.com/title/tt6439562/)] Mind Field: Season 1")
 
@@ -54,13 +54,13 @@ I've finished the first season last December, and this isn't quite fair to the s
 
 A short slice of life series consisting of 12 3-min episodes. With absolutely no dialogue, Joshikausei tells a story about the every day life of 3 high school girls by only using expressions and their actions. It isn't like the classics, say *Tom and Jerry* or *Pink Panther* level, but I still enjoy it nevertheless since it's not something you see often in a form of Anime. There's also a lot of fan service, if you're into that kind of stuff. Aside from that, their comedy amusing enough and the whole series is available on YouTube (dropdown video above) in one-sitting for 35 minutes, so there's not really much to lose.
 
-## Music of the month
+## tracks
 
 ![!YouTube#hb](TsWiuqzhtis?start=88 "[[Spotify](spotify:track:61wLzCC9mT2goJ88deGPx0)] Tristam - Children in the Dark")
 
 A release from Tristam never seems to disappoint, with such beautiful vocals, melody, and lyrics, *Children in the Dark* easily takes the spot for this month's featured music. Just kidding, it wasn't that easy, but I've certainly come to like this the more I listened to it.
 
-### Honorable music mentions | [Spotify](spotify:playlist:593qWEwY7H7sRdNL8d3dV2) / [YouTube](https://www.youtube.com/playlist?list=PLtthNj7yut55t_60yCQ7L0tQZlV2tCukX)
+### more
 
 ![!YouTube#d](vcGbefQBvJ4 "[[Spotify](spotify:track:465JzFiajJO59sUrDFsxdC)] YOASOBI「アンコール」(Encore)")
 
@@ -74,13 +74,13 @@ This is (from what I heard) the last release IZ*ONE will produce, they'll be dis
 
 Monstercat has a lot of artists lately and it's quite hard to keep track of all of them, but this is one of those release that sticks to your ear. An Instinct release, this brings back a lot of memories when I first discovered Future Bass.
 
-## Video of the month
+## clips
 
 ![!YouTube#hb](PKtnafFtfEo "MrBeast's Youtube Rewind 2020")
 
 If you haven't subscribed to this man, where have you been and what are you doing all this time? Go subscribe to the best YouTube philanthropist out there! This is the long awaited YouTube rewind that we want and needed but never got from YouTube.
 
-### Honorable video mentions | [YouTube](https://www.youtube.com/playlist?list=PLtthNj7yut57WLW3GoLqbR_vTzTk72Hcb)
+### more
 
 ![!YouTube#d](p8u_k2LIZyo "Fast Inverse Square Root — A Quake III Algorithm")
 
@@ -94,9 +94,7 @@ I've been watching Mushi-shi lately and I love every single episode of it. Wheth
 
 They finally delivers another video and most of them from this video hits too close to home. These skits are humorous and aren't harmful like most "pranks" these days. Most of their other videos are also fun to watch so definitely check them out when you don't have much to do.
 
-***
-
-## Headlines of the month
+## headlines
 
 ### Signal and Telegram as WhatsApp Alternatives
 
