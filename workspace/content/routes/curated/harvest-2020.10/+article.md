@@ -142,4 +142,4 @@ Source(s): [[Reddit/Takedown](https://www.reddit.com/r/programming/comments/jgub
 
 That's it for our recap of October 2020, folks! Stay safe and have a great November 👋
 
-*originally published as part of the "Monthly Digest" series*. renamed to "Harvest" in 2025.
+*originally published as part of the "Monthly Digest" series, renamed "Harvest" in 2025*.

@@ -146,4 +146,4 @@ Source(s): [[Reddit](https://www.reddit.com/r/TIHI/comments/kv3kqr/thanks_i_hate
 
 That's it for our recap of January 2021, folks! Stay safe and have a great February 👋
 
-*originally published as part of the "Monthly Digest" series*. renamed to "Harvest" in 2025.
+*originally published as part of the "Monthly Digest" series, renamed "Harvest" in 2025*.

@@ -147,4 +147,4 @@ That's it for our recap of December 2020, folks! Stay safe and have a great Janu
 
 I'll publish another post to recap the year, be sure to check it out to get the best bits!
 
-*originally published as part of the "Monthly Digest" series*. renamed to "Harvest" in 2025.
+*originally published as part of the "Monthly Digest" series, renamed "Harvest" in 2025*.

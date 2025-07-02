@@ -131,4 +131,4 @@ Source(s):
 
 That's it for our recap of April 2021, folks! Stay safe and have a great May 👋
 
-*originally published as part of the "Monthly Digest" series*. renamed to "Harvest" in 2025.
+*originally published as part of the "Monthly Digest" series, renamed "Harvest" in 2025*.

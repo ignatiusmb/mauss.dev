@@ -128,4 +128,4 @@ Another one and probably my favorite is [SvelteKit](https://kit.svelte.dev/)! It
 
 That's it for our recap of March 2021, folks! Stay safe and have a great April 👋
 
-*originally published as part of the "Monthly Digest" series*. renamed to "Harvest" in 2025.
+*originally published as part of the "Monthly Digest" series, renamed "Harvest" in 2025*.

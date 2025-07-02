@@ -147,4 +147,4 @@ Source(s): [[ComicBook](https://comicbook.com/anime/news/sword-art-online-progre
 
 That's it for our recap of November 2020, folks! Stay safe, have a great December and Merry Christmas 👋
 
-*originally published as part of the "Monthly Digest" series*. renamed to "Harvest" in 2025.
+*originally published as part of the "Monthly Digest" series, renamed "Harvest" in 2025*.

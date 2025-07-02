@@ -141,4 +141,4 @@ Source(s): [[Reddit/Android](https://www.reddit.com/r/Android/comments/ll5ebu/ch
 
 That's it for our recap of February 2021, folks! Stay safe and have a great March 👋
 
-*originally published as part of the "Monthly Digest" series*. renamed to "Harvest" in 2025.
+*originally published as part of the "Monthly Digest" series, renamed "Harvest" in 2025*.
