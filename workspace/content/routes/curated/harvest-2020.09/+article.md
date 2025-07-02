@@ -93,8 +93,6 @@ What a great video explaining the various database paradigms that's available ri
 
 If you still think everyone is overreacting about the new series from Netflix, watch both videos above. There's clearly something wrong with everyone who allowed this to happen.
 
-***
-
 ## headlines
 
 ### Turn impostor syndrome into an advantage
