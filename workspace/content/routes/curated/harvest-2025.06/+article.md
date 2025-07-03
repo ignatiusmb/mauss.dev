@@ -68,7 +68,7 @@ i think it's time to put it to rest. hopefully with this, i can start fresh with
 
 ## clips
 
-![!YouTube#hb](p7P8DmTbjUY "Surviving Afghanistan’s Extreme Street Food!!")
+![!YouTube#hb](p7P8DmTbjUY "Surviving Afghanistan's Extreme Street Food!!")
 
 damn, this was a hard pick. there were so many good videos this month, but i think this one takes the cake. Sony from the [Best Ever Food Review Show](https://www.youtube.com/@BestEverFoodReviewShow) has some of the best content on YouTube, in terms of quality.
 
