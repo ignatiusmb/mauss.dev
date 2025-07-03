@@ -140,7 +140,7 @@
 			text-align: center;
 		}
 
-		a {
+		> a {
 			display: grid;
 			grid-template-rows: auto 1fr 3rem;
 			border-radius: var(--rounding-box);

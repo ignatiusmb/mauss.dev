@@ -324,13 +324,6 @@
 				margin-left: unset;
 			}
 		}
-		p,
-		ol,
-		ul {
-			code {
-				font-size: clamp(0.8rem, 2vw, 1rem);
-			}
-		}
 		img,
 		video {
 			max-height: 42rem;
@@ -586,8 +579,11 @@
 			}
 		}
 
-		.mrq[data-mrq='header'] {
+		[data-aubade='header'] {
 			line-height: 1;
+		}
+		[data-aubade='pre'] {
+			background: var(--color-code-block);
 		}
 	}
 
