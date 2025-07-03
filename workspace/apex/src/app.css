@@ -37,6 +37,12 @@ body {
 	color: var(--color-text);
 }
 
+:focus,
+:focus-visible {
+	border-radius: calc(var(--rounding-base) / 5);
+	outline: 1px solid var(--color-text);
+}
+
 a,
 .underlined {
 	color: oklch(0.9086 0.0055 298);
@@ -49,10 +55,12 @@ a:hover,
 	text-decoration-color: oklch(0.5999 0 0 / 80%);
 }
 
-:focus,
-:focus-visible {
-	border-radius: calc(var(--rounding-base) / 5);
-	outline: 1px solid var(--color-text);
+code {
+	top: unset;
+	padding: 0;
+	border-radius: var(--rounding-base);
+	background: unset;
+	line-height: unset;
 }
 
 @media (min-width: 549px) {
