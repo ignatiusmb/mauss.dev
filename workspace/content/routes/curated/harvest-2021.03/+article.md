@@ -1,6 +1,7 @@
 ---
 date: "2021-04-01"
 title: Harvest • March 2021
+series: the-harvest
 ---
 
 Hello and welcome back to the Harvest! As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section.
@@ -9,7 +10,7 @@ Hello and welcome back to the Harvest! As always, feel free to skip ahead to you
 
 Sorry, I've bamboozled you who've read the article highlights in previous Harvests, thinking it was an article only to find out it was a blog post. I present to you, for real this time, the article of this month.
 
-![traits table#f#fb](https://journals.plos.org/plosone/article/figure/image?size=large&id=info:doi/10.1371/journal.pone.0248895.t003 "[[PLOS ONE](https://doi.org/10.1371/journal.pone.0248895)] Personality trait predictors of adjustment during the COVID pandemic among college students")
+![traits table#f](https://journals.plos.org/plosone/article/figure/image?size=large&id=info:doi/10.1371/journal.pone.0248895.t003 "[Personality trait predictors of adjustment during the COVID pandemic among college students](https://doi.org/10.1371/journal.pone.0248895)")
 
 A recent study of students at a certain university in the US found that more extroverted people suffered mood declines while more introverted people actually saw mood improvements during this pandemic. But, it also found that extroversion had the opposite effect on stress level where it was reduced in extroverts but increased for introverts.
 
@@ -19,33 +20,27 @@ Mainly from the perspective of an introvert, this isn't really "surprising" to s
 
 ### more
 
-- [[seedubjay](https://seedubjay.com/blog/jpeg-visualisation/)] Why Does JPEG Look So Weird?
+**[Why Does JPEG Look So Weird?](https://seedubjay.com/blog/jpeg-visualisation/)** — One of the best explanation and visualization of JPEG out there. What really is JPEG and why can it be both amazing and awful sometimes. Read through this to really understand JPEG. In conclusion, JPEG is unique because it looks different to every other person, the end result can't really be scored objectively as we all see pictures differently, so it will be subjective.
 
-One of the best explanation and visualization of JPEG out there. What really is JPEG and why can it be both amazing and awful sometimes. Read through this to really understand JPEG. In conclusion, JPEG is unique because it looks different to every other person, the end result can't really be scored objectively as we all see pictures differently, so it will be subjective.
-
-- [[Godot Reddit Thread](https://www.reddit.com/r/godot/comments/m3ghec/how_to_build_a_dialog_system_without_selling_your/)] Build a Dialog System Without Selling Your Soul
-
-This isn't the typical article I used to feature here, but I've had my share with game development a couple of months ago and this was well written. My experience with game dev wasn't the best, but reading through this was fun and definitely informative. Especially when you're thinking of going to the game dev rabbit hole, this will definitely help out a lot, specifically for Godot made games.
+**[Build a Dialog System Without Selling Your Soul](https://www.reddit.com/r/godot/comments/m3ghec/how_to_build_a_dialog_system_without_selling_your/)** — This isn't the typical article I used to feature here, but I've had my share with game development a couple of months ago and this was well written. My experience with game dev wasn't the best, but reading through this was fun and definitely informative. Especially when you're thinking of going to the game dev rabbit hole, this will definitely help out a lot, specifically for Godot made games.
 
 ## stories
 
-![Jujutsu Kaisen Backdrop#f#fb](https://www.themoviedb.org/t/p/original/eqM26U3HHfvwEcFoMObQc5NYGoc.jpg "[[TMDB](https://www.themoviedb.org/t/p/original/eqM26U3HHfvwEcFoMObQc5NYGoc.jpg)] Jujutsu Kaisen | [See Review](/reviews/anime/jujutsu-kaisen)")
+![Jujutsu Kaisen Backdrop#f](https://www.themoviedb.org/t/p/original/eqM26U3HHfvwEcFoMObQc5NYGoc.jpg "[Jujutsu Kaisen](/reviews/anime/jujutsu-kaisen) [[TMDB](https://www.themoviedb.org/tv/95479)]")
 
 It was tough between Jujutsu Kaisen and Re:Zero Season 2, but JJK really won me with their continuous action scenes every 3 to 4 episodes. It's indeed action-heavy and it was a real pleasure to watch every episode of it.
 
 ### more
 
-- [[Alkamauss](/reviews/anime/re-zero-starting-life-in-another-world)] Re:Zero Season 2
-- [[Alkamauss](/reviews/anime/mushoku-tensei)] Mushoku Tensei
-- [[Alkamauss](/reviews/anime/hataraku-saibou-black)] Cells at Work! CODE BLACK!
+**[Re:Zero Season 2](/reviews/anime/re-zero-starting-life-in-another-world)** — Don't sleep on this one, it would've definitely be my content highlight if only it didn't end in the same month as Jujutsu Kaisen.
 
-Doesn't mean that these shows are to be ignored, especially the second season of Re:Zero! It would've definitely be my content highlight if only it didn't end in the same month as Jujutsu Kaisen. Premieres will be prioritized too, that's why Re:Zero is here.
+**[Mushoku Tensei](/reviews/anime/mushoku-tensei)** — A refreshing take on the isekai genre, this was a great watch and I can't wait for the next season.
 
-I'll try my best to give these the [review they deserved](/reviews), someday. But until then, these are my picks to end the tightly packed Winter 2021 Anime Season.
+**[Cells at Work! CODE BLACK!](/reviews/anime/hataraku-saibou-black)** — A darker take on the Cells at Work! universe, this was a great watch and a realistic take on the not-so-healthy body.
 
 ## tracks
 
-![!YouTube#hb](BYP7zHceSiU?start=26 "[[YTMusic](https://music.youtube.com/watch?v=3mL4B4emkuM)] Tristam - Over the Edge")
+![!YouTube#hb](BYP7zHceSiU?start=26 "[Over the Edge](https://music.youtube.com/watch?v=3mL4B4emkuM) by Tristam")
 
 At first, it felt like just another beautiful song I've heard from Tristam. But, as the lyrics sank into me, I realized there's more behind this particular song. As someone who've followed and listened since around 2015 (can't believe it's been 6 yrs since then), this year releases hits different.
 
@@ -56,15 +51,15 @@ I'm beyond grateful that I can't relate to this well enough as I've not lost som
 
 ### more
 
-![!YouTube#d](ZNFKZI7L9xE "YOASOBI「三原色」ahamo Special Movie")
+![!YouTube#d](ZNFKZI7L9xE "[「三原色」ahamo Special Movie](https://music.youtube.com/watch?v=07SWfNXgKGo) by YOASOBI")
 
 This was surprising as I thought it was only some kind of teaser for an upcoming project with only two and a half minute runtime. But, fortunately it wasn't, and it was (as expected) good just like their previous releases. I'm hoping that they would cover a lot more anime OP/ED in the future, just like they did with season 2 of Beastars (if you didn't know about it).
 
-![!YouTube#d](iFkPgNLa5LQ "[[YTMusic](https://music.youtube.com/watch?v=643igntgKY8)] Grant - Won't Give Up")
+![!YouTube#d](iFkPgNLa5LQ "[Won't Give Up](https://music.youtube.com/watch?v=643igntgKY8) by Grant")
 
 There's not much to say about this. It's Grant. You don't need to listen to know that's it's good. That was a hyperbolic statement in case you're still wondering. But, if you've haven't heard of Grant, now's a good time. I'm sure most of you would agree that his songs are just beautiful.
 
-![!YouTube#d](abscL9XloGk "[[YTMusic](https://music.youtube.com/watch?v=w2sXB57cOuA)] Sabai - Million Days (Acoustic) feat. Hoang & Claire Ridgely")
+![!YouTube#d](abscL9XloGk "[Million Days (Acoustic) feat. Hoang & Claire Ridgely](https://music.youtube.com/watch?v=w2sXB57cOuA) by Sabai")
 
 I'm a sucker for acoustic covers. In addition to being one of my favorite songs, this is a perfect combination for me. Released right before March ends, it was such a pleasant surprise.
 
