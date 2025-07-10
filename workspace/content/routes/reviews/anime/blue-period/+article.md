@@ -4,6 +4,7 @@ released: 2021-10-02
 title: Blue Period
 genres: [school]
 progress: 12/12
+tier: B
 verdict: must-watch
 rating:
   narrative:

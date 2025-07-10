@@ -162,7 +162,7 @@ export const ROUTES = {
 			alias: optional(array(string())),
 
 			released: string(),
-			tier: optional(literal('S', 'A', 'B', 'C', 'D', '?')),
+			tier: optional(literal('S', 'A', 'B', 'C', 'D', '?'), '?'),
 			progress: optional(
 				string((ratio) => {
 					const [watched, episodes] = ratio.split('/');

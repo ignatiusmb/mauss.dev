@@ -4,6 +4,7 @@ released: 2019-01-08
 title: "WATATEN!: an Angel Flew Down to Me"
 romaji: "Watashi ni Tenshi ga Maiorita!"
 alias: ["Wataten!"]
+tier: B
 genres: [comedy, slice of life, shoujo ai]
 verdict: recommended
 rating:

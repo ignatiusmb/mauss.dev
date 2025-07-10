@@ -2,6 +2,7 @@
 date: 2020-08-19
 released: 2017-04-05
 title: "Boruto: Naruto Next Generations"
+tier: D
 genres: [action, adventure, super power, martial arts, shounen]
 verdict: not-recommended
 rating:
