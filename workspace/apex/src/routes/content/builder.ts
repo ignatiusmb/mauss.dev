@@ -157,11 +157,12 @@ export const ROUTES = {
 	async '/reviews'() {
 		const schema = define(({ optional, array, record, literal, string, number }) => ({
 			date: string(),
-			released: string(),
-			alias: optional(array(string())),
 			title: string(),
 			romaji: optional(string()),
-			genres: array(string()),
+			alias: optional(array(string())),
+
+			released: string(),
+			tier: optional(literal('S', 'A', 'B', 'C', 'D', '?')),
 			progress: optional(
 				string((ratio) => {
 					const [watched, episodes] = ratio.split('/');
@@ -176,8 +177,12 @@ export const ROUTES = {
 					return Math.round((+watched / +total) * 80);
 				}),
 			),
-			verdict: literal('pending', 'not-recommended', 'contextual', 'recommended', 'must-watch'),
-
+			verdict: optional(
+				literal('pending', 'not-recommended', 'contextual', 'recommended', 'must-watch'),
+				'pending',
+			),
+			genres: array(string()),
+			seen: { first: string(), last: optional(string()) },
 			rating: optional(
 				record(
 					array(
@@ -191,15 +196,8 @@ export const ROUTES = {
 				),
 			),
 
+			image: { en: string(), jp: optional(string()) },
 			backdrop: optional(string()),
-			image: {
-				en: string(),
-				jp: optional(string()),
-			},
-			seen: {
-				first: string(),
-				last: optional(string()),
-			},
 			link: optional(record(string())),
 		}));
 

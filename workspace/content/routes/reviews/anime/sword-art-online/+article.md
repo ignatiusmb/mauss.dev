@@ -1,13 +1,13 @@
 ---
-date: "2020"
-released: "2012-07-08"
+date: 2020
+released: 2012-07-08
 title: Sword Art Online
 genres: [action, adventure, fantasy, game, romance]
-verdict: pending
-
-seen:first: "2020-04-01"
-image:en: https://image.tmdb.org/t/p/original/7LTDVXVuQKERnukKJLoBbdNzMYh.jpg
-
+tier: "?"
+seen:
+  first: 2020-04-01
+image:
+  en: https://image.tmdb.org/t/p/original/7LTDVXVuQKERnukKJLoBbdNzMYh.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/11757/Sword_Art_Online
 ---

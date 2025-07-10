@@ -19,11 +19,11 @@
 		"@sveltejs/adapter-vercel": "^5.7.2",
 		"@sveltejs/kit": "^2.22.2",
 		"@sveltejs/vite-plugin-svelte": "^5.1.0",
-		"aubade": "^0.10.0",
+		"aubade": "^0.10.2",
 		"sharp": "^0.34.2",
-		"svelte": "^5.34.9",
+		"svelte": "^5.35.4",
 		"svelte-check": "^4.2.2",
 		"syv": "^0.0.49",
-		"vite": "^7.0.0"
+		"vite": "^7.0.3"
 	}
 }

@@ -1,19 +1,16 @@
 ---
-date: "2020"
-released: "2019-01-12"
+date: 2020
+released: 2019-01-12
 title: "Kaguya-sama: Love is War"
 romaji: "Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen"
-alias: 
-  - "Kaguya-sama: Love is War"
-
+alias: ["Kaguya-sama: Love is War"]
 genres: [comedy, romance, school, seinen]
 completed: 37/37
-verdict: pending
+tier: "?"
 rating:
   narrative:
     - premise: 10
     - pacing: 10
-    # - resolution: 10
     - direction: 10
   characterization:
     - development: 10
@@ -31,15 +28,13 @@ rating:
     - engagement: 10
     - relatable: 8
     - impact: 8
-
-backdrop:
-image:en: https://image.tmdb.org/t/p/original/dA93MnalfNLHMMlDcTCfX4QJb5Q.jpg
-image:jp:
-
+backdrop: 
+image:
+  en: https://image.tmdb.org/t/p/original/dA93MnalfNLHMMlDcTCfX4QJb5Q.jpg
+  jp: 
 seen:
-  first: "2020-07-21"
+  first: 2020-07-21
   last: "2022-07-10T23:30:00"
-
 link:
   MyAnimeList: https://myanimelist.net/anime/37999/Kaguya-sama_wa_Kokurasetai__Tensai-tachi_no_Renai_Zunousen
   TMDB: https://www.themoviedb.org/tv/83121

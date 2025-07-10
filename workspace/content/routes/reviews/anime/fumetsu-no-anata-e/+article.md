@@ -1,19 +1,17 @@
 ---
-date: "2020"
-released: "2021-04-12"
+date: 2020
 title: To Your Eternity
 romaji: Fumetsu no Anata e
-genres: [adventure, drama, supernatural]
+released: 2021-04-12
+tier: "?"
 completed: 21/40
-verdict: pending
-
-backdrop: https://www.themoviedb.org/t/p/original/qmeC99iX9YPbxi3Dwsw5VvxIbCC.jpg
-image:en: https://www.themoviedb.org/t/p/original/jxtLpQq0I7MF8kP99w0Q0K39UpG.jpg
-
+genres: [adventure, drama, supernatural]
 seen:
-  first: "2022-04-18"
+  first: 2022-04-18
   last: "2022-12-24T14:28:00+07:00"
-
+image:
+  en: https://www.themoviedb.org/t/p/original/jxtLpQq0I7MF8kP99w0Q0K39UpG.jpg
+backdrop: https://www.themoviedb.org/t/p/original/qmeC99iX9YPbxi3Dwsw5VvxIbCC.jpg
 link:
   IMDb: https://www.imdb.com/title/tt12063450/
   MyAnimeList: https://myanimelist.net/anime/41025/Fumetsu_no_Anata_e

@@ -1,25 +1,21 @@
 ---
-date: "2020"
-released: "2013-04-07"
+date: 2020
+released: 2013-04-07
 title: Attack on Titan
 romaji: Shingeki no Kyojin
 genres: [action, military, mystery, fantasy, drama, shounen]
 completed: 87/87
-verdict: pending
-
+tier: "?"
 backdrop: 
-image:en: https://image.tmdb.org/t/p/original/2wxoRovckZPxxFLROZGdujJiNcC.jpg
-
+image:
+  en: https://image.tmdb.org/t/p/original/2wxoRovckZPxxFLROZGdujJiNcC.jpg
 seen:
-  first: "2020-05-12"
+  first: 2020-05-12
   last: "2023-11-05T22:53:35+07:00"
-
 link:
   MyAnimeList: https://myanimelist.net/anime/16498/Shingeki_no_Kyojin
   TMDB: https://www.themoviedb.org/tv/1429
 ---
-
-
 
 ## $SEASON 4
 

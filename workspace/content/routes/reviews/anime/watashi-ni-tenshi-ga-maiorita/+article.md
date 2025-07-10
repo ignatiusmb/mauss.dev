@@ -1,17 +1,15 @@
 ---
-date: "2020-08-24"
-released: "2019-01-08"
+date: 2020-08-24
+released: 2019-01-08
 title: "WATATEN!: an Angel Flew Down to Me"
-romaji: Watashi ni Tenshi ga Maiorita!
-alias: [Wataten!]
-
+romaji: "Watashi ni Tenshi ga Maiorita!"
+alias: ["Wataten!"]
 genres: [comedy, slice of life, shoujo ai]
 verdict: recommended
 rating:
   narrative:
     - premise: 8
     - pacing: 10
-    # - resolution: 10
     - direction: 9
   characterization:
     - development: 9
@@ -29,15 +27,14 @@ rating:
     - engagement: 10
     - relatable: 7
     - impact: 8
-
-seen:first: "2020-08-23"
-image:en: https://image.tmdb.org/t/p/original/yaIs7UDJ6Vo7DbWPl4cTdv4bUw7.jpg
-image:jp: https://image.tmdb.org/t/p/original/yaIs7UDJ6Vo7DbWPl4cTdv4bUw7.jpg
+seen:
+  first: 2020-08-23
+image:
+  en: https://image.tmdb.org/t/p/original/yaIs7UDJ6Vo7DbWPl4cTdv4bUw7.jpg
+  jp: https://image.tmdb.org/t/p/original/yaIs7UDJ6Vo7DbWPl4cTdv4bUw7.jpg
 backdrop: https://image.tmdb.org/t/p/original/djKJBmJI4gS9snTn2Tzg3JO23YC.jpg
-
 link:
   MyAnimeList: https://myanimelist.net/anime/37993/Watashi_ni_Tenshi_ga_Maiorita
-
 soundtracks:
   - name: Kimama na Tenshitachi
     type: OP/ED

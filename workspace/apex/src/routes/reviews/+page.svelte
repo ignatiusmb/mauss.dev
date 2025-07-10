@@ -2,7 +2,7 @@
 	import Image from 'syv/core/Image.svelte';
 	import SearchBar from 'syv/core/SearchBar.svelte';
 	import SearchFilter from '$lib/dialog/SearchFilter.svelte';
-	import Verdict from './[category]/[slug]/Verdict.svelte';
+	import Tier from './Tier.svelte';
 
 	import type { Query } from './search.svelte';
 	import type { Commands } from './search.worker';
@@ -106,6 +106,8 @@
 
 	{#each index as post (post.slug)}
 		{@const disabled = !post.rating || post.verdict === 'pending'}
+		{@const [year, month] = post.released.split('-').map(Number)}
+		{@const season = ['winter', 'spring', 'summer', 'fall'][Math.floor((month - 1) / 3)]}
 
 		<a
 			href="/reviews/{post.slug}"
@@ -113,17 +115,16 @@
 			animate:flip={{ duration: TIME.SLIDE }}
 			in:scale={{ duration: TIME.SLIDE }}
 		>
-			<Image src={post.image.en} alt={post.title} ratio={3 / 2} />
+			<span class="released">{season || month} {year}</span>
+			<Image src={post.image.en} alt={post.title} ratio={3 / 2} styles={{ '--border-radius': 0 }}>
+				<span class="title">{post.title}</span>
+			</Image>
 
-			<aside>
-				<span>{post.title}</span>
-				<Verdict verdict={post.verdict} />
-				<small>
-					<span>{post.rating || 'TBD'}</span>
-					<span>{post.released.split('-')[0]}</span>
-					<span>{post.category}</span>
-				</small>
-			</aside>
+			<div class="category">
+				<Tier tier={post.tier || '?'} />
+				<span>{post.category}</span>
+				<span>{post.rating || 'TBD'}</span>
+			</div>
 		</a>
 	{/each}
 </div>
@@ -159,40 +160,56 @@
 			background: var(--color-overlay);
 			transition: var(--transition-base);
 			text-decoration: none;
+			text-align: center;
+			font-size: 0.9rem;
 
 			&:focus,
 			&:hover {
 				transform: translateY(-0.15rem);
 			}
 
-			aside {
-				display: grid;
-				gap: 0.5rem;
-				padding: 0.5rem;
-				border-radius: inherit;
-				text-align: center;
+			.released {
+				padding: 0.1rem 0 0.2rem;
+				border-top-right-radius: inherit;
+				border-top-left-radius: inherit;
+				font-weight: 500;
+				text-transform: capitalize;
+			}
 
-				& > span:first-child {
-					overflow: hidden;
-					padding: 0.25rem 0.5rem;
+			.title {
+				position: absolute;
+				top: 0;
+				width: 100%;
+				height: calc(100% + 1px);
+				display: flex;
+				align-items: end;
+				justify-content: center;
+				padding: 0 0.25rem 0.5rem;
+				background: linear-gradient(to bottom, transparent 50%, var(--color-base));
+				text-shadow:
+					-1px -1px 0 var(--color-base),
+					1px -1px 0 var(--color-base),
+					-1px 1px 0 var(--color-base),
+					1px 1px 0 var(--color-base),
+					0 0 2px var(--color-base);
+				text-wrap: balance;
+				text-align: center;
+				font-weight: 500;
+				font-size: 0.92rem;
+			}
+
+			.category {
+				display: grid;
+				gap: 0.3rem;
+				align-items: center;
+				grid-template-columns: 5ch 1fr 5ch;
+				padding: 0.3rem;
+
+				> span {
+					padding: 0.3rem;
 					border-radius: var(--rounding-base);
 					background: var(--color-base);
-					white-space: nowrap;
-					text-overflow: ellipsis;
-				}
-
-				small {
-					display: grid;
-					gap: 0.25rem;
-					grid-template-columns: repeat(3, 1fr);
-					border-radius: var(--rounding-base);
-
-					span {
-						padding: 0.25rem;
-						border-radius: var(--rounding-base);
-						background: var(--color-base);
-						text-transform: capitalize;
-					}
+					text-transform: capitalize;
 				}
 			}
 		}

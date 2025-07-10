@@ -1,47 +1,16 @@
 ---
-date: "2020"
-released: "2019-07-06"
+date: 2020
 title: Fire Force
 romaji: Enen no Shouboutai
+released: 2019-07-06
+tier: "?"
 genres: [action, supernatural, shounen, comedy]
-verdict: pending
-
-seen:first: "2020-12-16"
-image:en: https://image.tmdb.org/t/p/original/zLDxWMM0BLImdAsnkqGeeoqjYev.jpg
-image:jp: https://image.tmdb.org/t/p/original/qDNgM4STqdzl4IBMyqCVMIr6uUV.jpg
+seen:
+  first: 2020-12-16
+image:
+  en: https://image.tmdb.org/t/p/original/zLDxWMM0BLImdAsnkqGeeoqjYev.jpg
+  jp: https://image.tmdb.org/t/p/original/qDNgM4STqdzl4IBMyqCVMIr6uUV.jpg
 backdrop: https://image.tmdb.org/t/p/original/iD3AJxGuBPUpipRfPmVuRDKVqjZ.jpg
-
 link:
   MyAnimeList: https://myanimelist.net/anime/38671/Enen_no_Shouboutai
 ---
-
-
-## Synopsis
-
-## Plot
-
-![Backdrop]()
-
-## Highlights
-
-### !{rating:0}/10 | Story & Plot
-
-### !{rating:1}/10 | Artwork & Animation
-
-### !{rating:2}/10 | Sound
-
-### !{rating:3}/10 | Characters
-
-## Verdict
-
-## $SPOILERS
-
-## $CLOSING
-
-## Soundtracks
-
-***
-Reference(s):
-
-- 1
-- 2
