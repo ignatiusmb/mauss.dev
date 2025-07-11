@@ -6,9 +6,9 @@ released: 2020-10-03
 genres: [action, demons, supernatural, school, shounen]
 seen:
   first: 2021-03-27
-image:
-  en: https://www.themoviedb.org/t/p/original/g1rK2nRXSidcMwNliWDIroWWGTn.jpg
-  jp: https://www.themoviedb.org/t/p/original/ZhFzMk2UvUZMvWEsCW5lKXn9tN.jpg
+poster:
+  source: tmdb
+  path: g1rK2nRXSidcMwNliWDIroWWGTn.jpg
 backdrop: https://www.themoviedb.org/t/p/original/8DLpbLeUylcUnE4nTlRC4b6jzNz.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/40748/Jujutsu_Kaisen_TV

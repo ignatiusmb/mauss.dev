@@ -30,9 +30,9 @@ rating:
     - engagement: 10
     - relatable: 7
     - impact: 8
-image:
-  en: https://image.tmdb.org/t/p/original/yaIs7UDJ6Vo7DbWPl4cTdv4bUw7.jpg
-  jp: https://image.tmdb.org/t/p/original/yaIs7UDJ6Vo7DbWPl4cTdv4bUw7.jpg
+poster:
+  source: tmdb
+  path: yaIs7UDJ6Vo7DbWPl4cTdv4bUw7.jpg
 backdrop: https://image.tmdb.org/t/p/original/djKJBmJI4gS9snTn2Tzg3JO23YC.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/37993/Watashi_ni_Tenshi_ga_Maiorita

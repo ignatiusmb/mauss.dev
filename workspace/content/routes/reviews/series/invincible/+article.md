@@ -6,8 +6,9 @@ released: 2021-03-26
 genres: [animation, action, sci-fi, fantasy]
 seen:
   first: 2021-05-15
-image:
-  en: https://www.themoviedb.org/t/p/original/yDWJYRAwMNKbIYT8ZB33qy84uzO.jpg
+poster:
+  source: tmdb
+  path: yDWJYRAwMNKbIYT8ZB33qy84uzO.jpg
 backdrop: https://www.themoviedb.org/t/p/original/dDdXTkM2mFcIiXbbNjT1paIPYXI.jpg
 link:
   Amazon: https://www.amazon.com/dp/B08WJMRHYZ

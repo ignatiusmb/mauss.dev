@@ -7,9 +7,9 @@ released: 2018-09-01
 genres: [animation, drama, romance]
 seen:
   first: 2020-09-05
-image:
-  en: https://image.tmdb.org/t/p/original/vHdVU0HyyB6k6kuYt8qjwTz9one.jpg
-  jp: https://image.tmdb.org/t/p/original/uyXndDbzlqjo19isdVW2dcCOUy6.jpg
+poster:
+  source: tmdb
+  path: vHdVU0HyyB6k6kuYt8qjwTz9one.jpg
 backdrop: https://image.tmdb.org/t/p/original/Zzk9YZlNkuOktEZUuaf2HKNc6B.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/36098/Kimi_no_Suizou_wo_Tabetai

@@ -6,8 +6,9 @@ released: 2012-07-08
 genres: [action, adventure, fantasy, game, romance]
 seen:
   first: 2020-04-01
-image:
-  en: https://image.tmdb.org/t/p/original/7LTDVXVuQKERnukKJLoBbdNzMYh.jpg
+poster:
+  source: tmdb
+  path: 7LTDVXVuQKERnukKJLoBbdNzMYh.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/11757/Sword_Art_Online
 ---

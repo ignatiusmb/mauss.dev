@@ -9,9 +9,9 @@ genres: [action, horror, supernatural, drama, fantasy]
 seen:
   first: 2021-02-07
   last: 2021-06-20
-image:
-  en: https://www.themoviedb.org/t/p/original/uBmcAZ7BRfVzb9nMPYm1MqpvNme.jpg
-  jp: https://www.themoviedb.org/t/p/original/5Iw4PGoSxJCAoFqmOa3ZnPWS5jY.jpg
+poster:
+  source: tmdb
+  path: uBmcAZ7BRfVzb9nMPYm1MqpvNme.jpg
 backdrop: https://www.themoviedb.org/t/p/original/rl3cHVMuHXr6XJ7jKDoXJamoqPI.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/28623/Koutetsujou_no_Kabaneri

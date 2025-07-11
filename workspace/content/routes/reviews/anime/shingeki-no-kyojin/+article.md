@@ -9,8 +9,9 @@ genres: [action, military, mystery, fantasy, drama, shounen]
 seen:
   first: 2020-05-12
   last: "2023-11-05T22:53:35+07:00"
-image:
-  en: https://image.tmdb.org/t/p/original/2wxoRovckZPxxFLROZGdujJiNcC.jpg
+poster:
+  source: tmdb
+  path: 2wxoRovckZPxxFLROZGdujJiNcC.jpg
 backdrop: 
 link:
   MyAnimeList: https://myanimelist.net/anime/16498/Shingeki_no_Kyojin

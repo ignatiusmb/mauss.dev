@@ -8,9 +8,9 @@ released: 2016-01-14
 genres: [isekai, adventure, comedy, fantasy, parody, supernatural]
 seen:
   first: 2020-09-27
-image:
-  en: https://image.tmdb.org/t/p/original/oRaOeQlwktbGSd2T31FYAcgHZlh.jpg
-  jp: https://image.tmdb.org/t/p/original/ekQD9ItsjglqlCvoJiXqGXJb5Jz.jpg
+poster:
+  source: tmdb
+  path: oRaOeQlwktbGSd2T31FYAcgHZlh.jpg
 backdrop: https://image.tmdb.org/t/p/original/lmZAguzTv7cxzkRMH7M4fJ0UnJl.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/30831/Kono_Subarashii_Sekai_ni_Shukufuku_wo

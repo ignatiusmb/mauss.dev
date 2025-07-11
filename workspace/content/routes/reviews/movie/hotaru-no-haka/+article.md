@@ -7,9 +7,9 @@ released: 1988-04-16
 genres: [animation, drama, historical]
 seen:
   first: 2020-09-06
-image:
-  en: https://image.tmdb.org/t/p/original/wcNkHDbyc290hcWk7KXbBZUuXpq.jpg
-  jp: https://image.tmdb.org/t/p/original/dAtZXhY4kC0mJt224FqmNcMUD64.jpg
+poster:
+  source: tmdb
+  path: wcNkHDbyc290hcWk7KXbBZUuXpq.jpg
 backdrop: https://image.tmdb.org/t/p/original/dlC0ed9Ugh3FzydnkBtV5lRXUu4.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/578/Hotaru_no_Haka

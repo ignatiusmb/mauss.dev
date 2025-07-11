@@ -8,8 +8,9 @@ genres: [drama]
 seen:
   first: 2021-02-06
   last: "2021-07-30T20:54:08"
-image:
-  en: https://www.themoviedb.org/t/p/original/sGmtNIVyZHqB0MLmbleNG4GmRVV.jpg
+poster:
+  source: tmdb
+  path: sGmtNIVyZHqB0MLmbleNG4GmRVV.jpg
 backdrop: https://www.themoviedb.org/t/p/original/pFlKmFYSf90lsKTSbNlqTtAQhyN.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/6211/Tokyo_Magnitude_80

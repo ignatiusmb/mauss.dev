@@ -8,9 +8,9 @@ genres: [comedy, supernatural]
 seen:
   first: "2022-03-20T11:13:20"
   last: "2022-03-29T00:32:30"
-image:
-  en: https://www.themoviedb.org/t/p/original/dS5dut05RFNi3fOCn6iO31Eag9x.jpg
-  jp: https://www.themoviedb.org/t/p/original/7QxejkPuKYDJdN0vG8nmPeugDMV.jpg
+poster:
+  source: tmdb
+  path: dS5dut05RFNi3fOCn6iO31Eag9x.jpg
 backdrop: https://www.themoviedb.org/t/p/original/zscbGuTQ5DX7UL4Xrl9XxIVtXDN.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/33731/Gabriel_DropOut

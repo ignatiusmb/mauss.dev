@@ -8,9 +8,9 @@ genres: [sci-fi, super power]
 seen:
   first: "2021-07-31T20:11:30"
   last: "2021-10-02T10:25:45"
-image:
-  en: https://www.themoviedb.org/t/p/original/v34w6s4ZFSa13Arw0B7JHo84YfG.jpg
-  jp: https://www.themoviedb.org/t/p/original/bAzjpvXMd0D84BiBFTidZVpvHAW.jpg
+poster:
+  source: tmdb
+  path: v34w6s4ZFSa13Arw0B7JHo84YfG.jpg
 backdrop: https://www.themoviedb.org/t/p/original/dmIAGZwfk9r5hN7ONpRJLDij9GN.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/48849/Sonny_Boy

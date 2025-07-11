@@ -8,8 +8,9 @@ genres: [action, comedy]
 seen:
   first: "2022-04-10T13:00:00+07:00"
   last: "2023-01-04T13:57:00+07:00"
-image:
-  en: https://www.themoviedb.org/t/p/original/gHZqglFWJTFwx6rnTq4vkPRnuxu.jpg
+poster:
+  source: tmdb
+  path: gHZqglFWJTFwx6rnTq4vkPRnuxu.jpg
 backdrop: https://www.themoviedb.org/t/p/original/wgMxlmsqonV8vymd0JimlUvg82D.jpg
 link:
   IMDb: https://www.imdb.com/title/tt13706018/

@@ -31,8 +31,9 @@ rating:
     - engagement: 10
     - relatable: 10
     - impact: 10
-image:
-  en: https://image.tmdb.org/t/p/original/cyCMX96AoqT9igMbE0a6njreAEd.jpg
+poster:
+  source: tmdb
+  path: cyCMX96AoqT9igMbE0a6njreAEd.jpg
 backdrop: https://image.tmdb.org/t/p/original/wCDf6ARpEIEsXDYXtOTGMspuGtq.jpg
 link:
   IMDb: https://www.imdb.com/title/tt14115912

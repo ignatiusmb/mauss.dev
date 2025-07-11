@@ -30,8 +30,9 @@ rating:
     - engagement: 10
     - relatable: 10
     - impact: 10
-image:
-  en: https://image.tmdb.org/t/p/original/qmi1VpOvPFRHg02fbLuc3pVrMbt.jpg
+poster:
+  source: tmdb
+  path: qmi1VpOvPFRHg02fbLuc3pVrMbt.jpg
 backdrop: https://image.tmdb.org/t/p/original/us9UFxr1ScqDxtVvuLFziCbddnK.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/10165/Nichijou

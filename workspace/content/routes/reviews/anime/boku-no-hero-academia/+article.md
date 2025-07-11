@@ -9,8 +9,9 @@ genres: [action, comedy, school, shounen]
 seen:
   first: 2020-07-02
   last: "2021-09-26T18:04:14"
-image:
-  en: https://image.tmdb.org/t/p/original/mWHCII5OWHx5pRSN2VYYLvT8DbB.jpg
+poster:
+  source: tmdb
+  path: mWHCII5OWHx5pRSN2VYYLvT8DbB.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/31964/Boku_no_Hero_Academia
 ---

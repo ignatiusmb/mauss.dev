@@ -196,7 +196,7 @@ export const ROUTES = {
 				),
 			),
 
-			image: { en: string(), jp: optional(string()) },
+			poster: { source: literal('url', 'tmdb'), path: string() },
 			backdrop: optional(string()),
 			link: optional(record(string())),
 		}));

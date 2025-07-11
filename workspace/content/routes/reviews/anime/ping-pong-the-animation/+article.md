@@ -28,8 +28,9 @@ rating:
     - engagement: 10
     - relatable: 10
     - impact: 10
-image:
-  en: https://www.themoviedb.org/t/p/original/snzSlLQwaIizMOx6A7WJ9aty4zp.jpg
+poster:
+  source: tmdb
+  path: snzSlLQwaIizMOx6A7WJ9aty4zp.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/22135/Ping_Pong_the_Animation
 ---

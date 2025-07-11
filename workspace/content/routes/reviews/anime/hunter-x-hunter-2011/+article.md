@@ -8,8 +8,9 @@ genres: [action, adventure, fantasy, shounen, super power]
 seen:
   first: 2021-03-14
   last: "2022-11-18T00:09:00+07:00"
-image:
-  en: https://www.themoviedb.org/t/p/original/tolQj5yffSxkEGXusPwNcvYrbph.jpg
+poster:
+  source: tmdb
+  path: tolQj5yffSxkEGXusPwNcvYrbph.jpg
 backdrop: https://www.themoviedb.org/t/p/original/A702KA1gXlI3hB33hdhwPM708pY.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/11061/Hunter_x_Hunter_2011

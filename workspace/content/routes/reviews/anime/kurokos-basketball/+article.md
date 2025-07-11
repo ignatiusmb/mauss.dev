@@ -7,8 +7,9 @@ released: 2012-04-08
 genres: [sports, school, comedy]
 seen:
   first: 2020-05-10
-image:
-  en: https://image.tmdb.org/t/p/original/mlJQS0Oh9MGv7pJrh0xsVYRYpFp.jpg
+poster:
+  source: tmdb
+  path: mlJQS0Oh9MGv7pJrh0xsVYRYpFp.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/11771/Kuroko_no_Basket
 ---

@@ -7,9 +7,9 @@ released: 2016-01-11
 genres: [isekai, fantasy, adventure, action, drama]
 seen:
   first: 2020-11-16
-image:
-  en: https://image.tmdb.org/t/p/original/zrnwS0cKsdpi0SpJxqSz1Dw2JGS.jpg
-  jp: 
+poster:
+  source: tmdb
+  path: zrnwS0cKsdpi0SpJxqSz1Dw2JGS.jpg
 backdrop: https://image.tmdb.org/t/p/original/hQSjBpfBMeqOOHsGPLacb7Gx3aZ.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/31859/Hai_to_Gensou_no_Grimgar

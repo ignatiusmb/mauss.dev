@@ -6,9 +6,9 @@ released: 2009-10-07
 genres: [slice of life, drama, romance, school, shoujo]
 seen:
   first: 2021-02-13
-image:
-  en: https://www.themoviedb.org/t/p/original/2XZ0Ofg1ZUZMFrbyWJuakSJAKZz.jpg
-  jp: 
+poster:
+  source: tmdb
+  path: 2XZ0Ofg1ZUZMFrbyWJuakSJAKZz.jpg
 backdrop: https://www.themoviedb.org/t/p/original/1AXPzsKXFFNmMaiik6H6I4uBrLZ.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/6045/Kimi_ni_Todoke

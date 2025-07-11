@@ -31,8 +31,9 @@ rating:
     - engagement: 9
     - relatable: 4
     - impact: 8
-image:
-  en: https://image.tmdb.org/t/p/original/9F80WGUD6WYfoEDMImf988NlXhC.jpg
+poster:
+  source: tmdb
+  path: 9F80WGUD6WYfoEDMImf988NlXhC.jpg
 backdrop: https://image.tmdb.org/t/p/original/haeBJjV2JHfopKl4dYE7RJwASlF.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/8861/Yosuga_no_Sora__In_Solitude_Where_We_Are_Least_Alone

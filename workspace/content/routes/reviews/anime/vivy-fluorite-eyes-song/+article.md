@@ -30,9 +30,9 @@ rating:
     - engagement: 10
     - relatable: 7
     - impact: 9
-image:
-  en: https://www.themoviedb.org/t/p/original/nJnatRZUXAS6I5MpBaBO5T1W8Ca.jpg
-  jp: https://www.themoviedb.org/t/p/original/mPFwA18HsqwvONVCi6ynjfy1TOZ.jpg
+poster:
+  source: tmdb
+  path: nJnatRZUXAS6I5MpBaBO5T1W8Ca.jpg
 backdrop: https://www.themoviedb.org/t/p/original/sPYlIOvJ2kqf23Rnw7qSuBSEi1b.jpg
 link:
   IMDb: https://www.imdb.com/title/tt13851958/

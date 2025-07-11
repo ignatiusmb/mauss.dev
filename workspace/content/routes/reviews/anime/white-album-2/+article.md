@@ -8,8 +8,9 @@ genres: [drama, music, romance, slice of life]
 seen:
   first: "2021-07-31T22:30:40"
   last: "2022-03-10T14:12:18"
-image:
-  en: https://www.themoviedb.org/t/p/original/lwRNHfZyPWOI2oFNfIoaXsiwGJB.jpg
+poster:
+  source: tmdb
+  path: lwRNHfZyPWOI2oFNfIoaXsiwGJB.jpg
 backdrop: https://www.themoviedb.org/t/p/original/8zpgSUqiYbMP3UPMKBnNbiB32c5.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/18245/White_Album_2

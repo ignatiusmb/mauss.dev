@@ -30,9 +30,9 @@ rating:
     - engagement: 9
     - relatable: 7
     - impact: 8
-image:
-  en: https://image.tmdb.org/t/p/original/cU4jHfo1Q9AEPnFqFqtuSA74gdi.jpg
-  jp: https://image.tmdb.org/t/p/original/lq3HcsmM005htHUVL4fcjalCUrq.jpg
+poster:
+  source: tmdb
+  path: cU4jHfo1Q9AEPnFqFqtuSA74gdi.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/37450/Seishun_Buta_Yarou_wa_Bunny_Girl_Senpai_no_Yume_wo_Minai
 ---

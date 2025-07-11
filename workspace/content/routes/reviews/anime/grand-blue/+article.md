@@ -7,9 +7,9 @@ released: 2018-06-14
 genres: [slice of life, comedy, seinen]
 seen:
   first: 2021-01-01
-image:
-  en: https://www.themoviedb.org/t/p/original/1WP2MrTIXJ8NI5tvqBk4ZD4ju9O.jpg
-  jp: https://www.themoviedb.org/t/p/original/6bhBDOTFQltBGya5VvkGOjJsfP5.jpg
+poster:
+  source: tmdb
+  path: 1WP2MrTIXJ8NI5tvqBk4ZD4ju9O.jpg
 backdrop: https://www.themoviedb.org/t/p/original/uhbZZqqWMZ1IXyNperZY5URF9ah.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/37105/Grand_Blue

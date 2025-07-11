@@ -8,8 +8,9 @@ genres: [action, fantasy]
 seen:
   first: "2022-10-14T22:20:00+07:00"
   last: "2023-01-04T13:31:00+07:00"
-image:
-  en: https://www.themoviedb.org/t/p/original/sB2DASpJtfnTs7iK3RqkUMFVDEa.jpg
+poster:
+  source: tmdb
+  path: sB2DASpJtfnTs7iK3RqkUMFVDEa.jpg
 backdrop: https://www.themoviedb.org/t/p/original/Vq4L8A88fNQxBqM27xHtDi4DrL.jpg
 link:
   IMDb: https://www.imdb.com/title/tt13616990/

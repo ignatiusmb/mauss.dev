@@ -8,9 +8,9 @@ genres: [animation, drama]
 seen:
   first: "2021-10-16T09:00:00"
   last: "2021-10-16T14:21:57"
-image:
-  en: https://www.themoviedb.org/t/p/original/tuFaWiqX0TXoWu7DGNcmX3UW7sT.jpg
-  jp: https://www.themoviedb.org/t/p/original/7clTvRa9RRh78c8epoC0YrNZoD6.jpg
+poster:
+  source: tmdb
+  path: tuFaWiqX0TXoWu7DGNcmX3UW7sT.jpg
 backdrop: https://www.themoviedb.org/t/p/original/q5HZvtyqG8Vz39Ee9uTQbLeEml.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/28851/koe_no_katachi

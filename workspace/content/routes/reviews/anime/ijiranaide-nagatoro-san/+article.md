@@ -9,9 +9,9 @@ genres: [slice of life, comedy, romance]
 seen:
   first: 2021-04-11
   last: "2023-03-25T21:45:00+07:00"
-image:
-  en: https://www.themoviedb.org/t/p/original/dHSRVAi83iapl4yazkPiyv3atQZ.jpg
-  jp: https://www.themoviedb.org/t/p/original/wpV16RDxMJsj9YEI8hqwVgEGoHb.jpg
+poster:
+  source: tmdb
+  path: dHSRVAi83iapl4yazkPiyv3atQZ.jpg
 backdrop: https://www.themoviedb.org/t/p/original/uxmxWA4mmxeAWG8NNiUpGC7W462.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/42361/Ijiranaide_Nagatoro-san

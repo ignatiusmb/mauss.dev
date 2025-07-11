@@ -6,9 +6,9 @@ released: 2020-10-02
 genres: [animation, action, magic, fantasy, shounen]
 seen:
   first: 2021-01-27
-image:
-  en: https://www.themoviedb.org/t/p/original/ySCAoHkQZPlcmux6ZhkIiBRmEOI.jpg
-  jp: https://www.themoviedb.org/t/p/original/6MzxxctLWIyBxI3HlEDq1FMp83F.jpg
+poster:
+  source: tmdb
+  path: ySCAoHkQZPlcmux6ZhkIiBRmEOI.jpg
 backdrop: https://www.themoviedb.org/t/p/original/q2OgeW2ysHsKGUxQLUBHZwv2rcw.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/41468/Burn_the_Witch

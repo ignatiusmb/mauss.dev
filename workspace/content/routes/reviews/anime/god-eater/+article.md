@@ -8,9 +8,9 @@ genres: [action, sci-fi, military, fantasy]
 seen:
   first: 2021-03-14
   last: 2021-06-27
-image:
-  en: https://www.themoviedb.org/t/p/original/5H2XJUqkuLdhoYAxUOpa3NYLo8T.jpg
-  jp: https://www.themoviedb.org/t/p/original/sBtOc2W3FDDQlWEMD2QvGc6hUDU.jpg
+poster:
+  source: tmdb
+  path: 5H2XJUqkuLdhoYAxUOpa3NYLo8T.jpg
 backdrop: https://www.themoviedb.org/t/p/original/ptiSlEK0UhqUGQxeOlS3rn5FBSn.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/27631/God_Eater

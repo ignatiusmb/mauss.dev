@@ -9,9 +9,9 @@ genres: [comedy, ecchi]
 seen:
   first: "2022-04-02T13:36:33"
   last: "2022-04-04T23:00:32"
-image:
-  en: https://www.themoviedb.org/t/p/original/v5KppPlKaQGTdwvCNmlVSSPvJBw.jpg
-  jp: https://www.themoviedb.org/t/p/original/5hws6HYvW6mcWNPjvbcWtMC7KvK.jpg
+poster:
+  source: tmdb
+  path: v5KppPlKaQGTdwvCNmlVSSPvJBw.jpg
 backdrop: https://www.themoviedb.org/t/p/original/f1Poy5jpwu5sRBEojO8ZWwvqXUD.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/39026/Dumbbell_Nan_Kilo_Moteru/

@@ -25,8 +25,9 @@ rating:
     - engagement: 10
     - relatable: 8
     - impact: 8
-image:
-  en: https://image.tmdb.org/t/p/original/5ZFUEOULaVml7pQuXxhpR2SmVUw.jpg
+poster:
+  source: tmdb
+  path: 5ZFUEOULaVml7pQuXxhpR2SmVUw.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/5114/fullmetal_alchemist__brotherhood/
 ---

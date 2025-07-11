@@ -7,9 +7,9 @@ released: 2012-01-10
 genres: [slice of life, comedy, school]
 seen:
   first: 2020-11-11
-image:
-  en: https://image.tmdb.org/t/p/original/kPzPTbw3rkB66qKSsjlWtOetQWc.jpg
-  jp: https://image.tmdb.org/t/p/original/q6OeemACDKP2Uj8yvrzpDklGOnw.jpg
+poster:
+  source: tmdb
+  path: kPzPTbw3rkB66qKSsjlWtOetQWc.jpg
 backdrop: https://image.tmdb.org/t/p/original/hBHhgVhm4NGlWiWuXQyoQFm17Pp.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/11843/Danshi_Koukousei_no_Nichijou/

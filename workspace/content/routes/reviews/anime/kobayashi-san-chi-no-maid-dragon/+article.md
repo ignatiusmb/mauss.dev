@@ -9,9 +9,9 @@ genres: [fantasy, slice of life]
 seen:
   first: "2022-04-06T21:55:05"
   last: "2022-05-14T16:44:04"
-image:
-  en: https://www.themoviedb.org/t/p/original/tNznuhcf7WKzEmPQEsIgGMrB3Az.jpg
-  jp: https://www.themoviedb.org/t/p/original/g8gof5OzYtS8Ebt5BlmpPExUjlJ.jpg
+poster:
+  source: tmdb
+  path: tNznuhcf7WKzEmPQEsIgGMrB3Az.jpg
 backdrop: https://www.themoviedb.org/t/p/original/xfkOv2PSuVjehptAmRagT4MzatQ.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/33206/Kobayashi-san_Chi_no_Maid_Dragon/

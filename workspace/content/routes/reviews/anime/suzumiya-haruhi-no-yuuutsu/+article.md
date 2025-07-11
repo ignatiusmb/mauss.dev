@@ -7,9 +7,9 @@ released: 2006-04-03
 genres: [slice of life, mystery, comedy, school, sci-fi]
 seen:
   first: 2021-02-17
-image:
-  en: https://www.themoviedb.org/t/p/original/5rbehM5zkF8xlLce4F9kJZWhqmU.jpg
-  jp: https://www.themoviedb.org/t/p/original/ioCuc65eEnAjulwjd9i8nOuIcRV.jpg
+poster:
+  source: tmdb
+  path: 5rbehM5zkF8xlLce4F9kJZWhqmU.jpg
 backdrop: https://www.themoviedb.org/t/p/original/gDlx60iOCQjTLH53ybjAPOUyVIp.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/849/suzumiya_haruhi_no_yuuutsu, https://myanimelist.net/anime/4382/Suzumiya_Haruhi_no_Yuuutsu_2009/

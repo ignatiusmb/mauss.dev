@@ -9,8 +9,9 @@ genres: [comedy, shounen]
 seen:
   first: 2021-02-10
   last: 2021-07-04
-image:
-  en: https://www.themoviedb.org/t/p/original/sgwwEGvNy7vCJN8IVnl44tuVlMZ.jpg
+poster:
+  source: tmdb
+  path: sgwwEGvNy7vCJN8IVnl44tuVlMZ.jpg
 backdrop: https://www.themoviedb.org/t/p/original/znwEvECDz94pc3ZWML4OettkPto.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/37141/Hataraku_Saibou_TV/

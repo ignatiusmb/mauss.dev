@@ -25,8 +25,9 @@ rating:
     - engagement: 8
     - relatable: 4
     - impact: 7
-image:
-  en: https://image.tmdb.org/t/p/original/vR6rPnVyWUSU7im2QcKXwSjjCXM.jpg
+poster:
+  source: tmdb
+  path: vR6rPnVyWUSU7im2QcKXwSjjCXM.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/32901/eromanga-sensei
 ---

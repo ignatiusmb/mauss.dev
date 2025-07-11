@@ -9,8 +9,9 @@ genres: [adventure, drama, supernatural]
 seen:
   first: 2022-04-18
   last: "2022-12-24T14:28:00+07:00"
-image:
-  en: https://www.themoviedb.org/t/p/original/jxtLpQq0I7MF8kP99w0Q0K39UpG.jpg
+poster:
+  source: tmdb
+  path: jxtLpQq0I7MF8kP99w0Q0K39UpG.jpg
 backdrop: https://www.themoviedb.org/t/p/original/qmeC99iX9YPbxi3Dwsw5VvxIbCC.jpg
 link:
   IMDb: https://www.imdb.com/title/tt12063450/

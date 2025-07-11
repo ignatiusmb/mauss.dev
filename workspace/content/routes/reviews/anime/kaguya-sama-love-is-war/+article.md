@@ -31,9 +31,9 @@ rating:
     - engagement: 10
     - relatable: 8
     - impact: 8
-image:
-  en: https://image.tmdb.org/t/p/original/dA93MnalfNLHMMlDcTCfX4QJb5Q.jpg
-  jp: 
+poster:
+  source: tmdb
+  path: dA93MnalfNLHMMlDcTCfX4QJb5Q.jpg
 backdrop: 
 link:
   MyAnimeList: https://myanimelist.net/anime/37999/Kaguya-sama_wa_Kokurasetai__Tensai-tachi_no_Renai_Zunousen

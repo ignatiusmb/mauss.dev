@@ -9,9 +9,9 @@ genres: [comedy, harem, romance, ecchi, school]
 seen:
   first: 2021-03-20
   last: "2021-11-02T23:34:42"
-image:
-  en: https://www.themoviedb.org/t/p/original/eTeE1JiS2DugsL13cUSVkROXBP9.jpg
-  jp: https://www.themoviedb.org/t/p/original/52SBO3YQIp1ObRuXJLToMC1Yh8d.jpg
+poster:
+  source: tmdb
+  path: eTeE1JiS2DugsL13cUSVkROXBP9.jpg
 backdrop: https://www.themoviedb.org/t/p/original/ee0MEplgTMVitRrOl6D0AAu3ywl.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/23277/Saenai_Heroine_no_Sodatekata
