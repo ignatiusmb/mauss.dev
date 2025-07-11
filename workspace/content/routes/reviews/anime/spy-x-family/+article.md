@@ -11,7 +11,9 @@ seen:
 poster:
   source: tmdb
   path: gHZqglFWJTFwx6rnTq4vkPRnuxu.jpg
-backdrop: https://www.themoviedb.org/t/p/original/wgMxlmsqonV8vymd0JimlUvg82D.jpg
+backdrop:
+  source: tmdb
+  path: wgMxlmsqonV8vymd0JimlUvg82D.jpg
 link:
   IMDb: https://www.imdb.com/title/tt13706018/
   MyAnimeList: https://myanimelist.net/anime/50265/Spy_x_Family

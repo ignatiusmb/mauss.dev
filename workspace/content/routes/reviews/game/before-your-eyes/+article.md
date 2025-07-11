@@ -9,7 +9,9 @@ seen:
 poster:
   source: url
   path: https://images.igdb.com/igdb/image/upload/t_cover_big/co2x7h.webp
-backdrop: https://cdn.cloudflare.steamstatic.com/steam/apps/1082430/header.jpg
+backdrop:
+  source: url
+  path: https://cdn.cloudflare.steamstatic.com/steam/apps/1082430/header.jpg
 link:
   Website: https://www.beforeyoureyesgame.com/
   Steam: https://store.steampowered.com/app/1082430/Before_Your_Eyes/

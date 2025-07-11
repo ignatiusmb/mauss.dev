@@ -9,7 +9,9 @@ seen:
 poster:
   source: tmdb
   path: mMsibXak1hJ9tsRYCF7tDYN319w.jpg
-backdrop: https://www.themoviedb.org/t/p/original/olaQVzQsMGVvcOWzekUsRhMJlXJ.jpg
+backdrop:
+  source: tmdb
+  path: olaQVzQsMGVvcOWzekUsRhMJlXJ.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/34618/Blend_S
 ---

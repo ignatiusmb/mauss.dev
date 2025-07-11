@@ -10,7 +10,9 @@ seen:
 poster:
   source: tmdb
   path: ais8cfoSbS3URahXLP6LwlwIZ6e.jpg
-backdrop: https://www.themoviedb.org/t/p/original/hI76O9slOz3vPkhQWWQoN36WyhG.jpg
+backdrop:
+  source: tmdb
+  path: hI76O9slOz3vPkhQWWQoN36WyhG.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/33255/Saiki_Kusuo_no_%CE%A8-nan
 ---

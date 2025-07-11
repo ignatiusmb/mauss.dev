@@ -9,7 +9,9 @@ seen:
 poster:
   source: tmdb
   path: f1Qpd7kzhLRFt1M2WZ7aCvgbRY6.jpg
-backdrop: https://www.themoviedb.org/t/p/original/gTmCOfKDVFrQp34tOUSx9qgd6LF.jpg
+backdrop:
+  source: tmdb
+  path: gTmCOfKDVFrQp34tOUSx9qgd6LF.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/5081/Bakemonogatari
 ---

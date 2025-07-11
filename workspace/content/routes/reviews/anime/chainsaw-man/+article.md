@@ -11,7 +11,9 @@ seen:
 poster:
   source: tmdb
   path: sB2DASpJtfnTs7iK3RqkUMFVDEa.jpg
-backdrop: https://www.themoviedb.org/t/p/original/Vq4L8A88fNQxBqM27xHtDi4DrL.jpg
+backdrop:
+  source: tmdb
+  path: Vq4L8A88fNQxBqM27xHtDi4DrL.jpg
 link:
   IMDb: https://www.imdb.com/title/tt13616990/
   MyAnimeList: https://myanimelist.net/anime/44511/Chainsaw_Man

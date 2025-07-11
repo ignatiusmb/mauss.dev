@@ -10,7 +10,9 @@ seen:
 poster:
   source: tmdb
   path: hL3NqRE2ccR4Y2sYSJTrmalRjrz.jpg
-backdrop: https://image.tmdb.org/t/p/original/4AxRcsZx6RaUtmcc4nsRiAx5mWW.jpg
+backdrop:
+  source: tmdb
+  path: 4AxRcsZx6RaUtmcc4nsRiAx5mWW.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/35851/Sayonara_no_Asa_ni_Yakusoku_no_Hana_wo_Kazarou
 ---

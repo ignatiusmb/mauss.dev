@@ -10,7 +10,9 @@ seen:
 poster:
   source: tmdb
   path: wcNkHDbyc290hcWk7KXbBZUuXpq.jpg
-backdrop: https://image.tmdb.org/t/p/original/dlC0ed9Ugh3FzydnkBtV5lRXUu4.jpg
+backdrop:
+  source: tmdb
+  path: dlC0ed9Ugh3FzydnkBtV5lRXUu4.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/578/Hotaru_no_Haka
 ---

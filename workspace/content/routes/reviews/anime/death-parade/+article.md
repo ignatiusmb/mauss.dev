@@ -11,7 +11,9 @@ seen:
 poster:
   source: tmdb
   path: qeD9wDenN7CPA99FScSErJCvcWb.jpg
-backdrop: https://www.themoviedb.org/t/p/original/kE4DhDPgjzxvv2BJCHhs0xbdwun.jpg
+backdrop:
+  source: tmdb
+  path: kE4DhDPgjzxvv2BJCHhs0xbdwun.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/28223/Death_Parade
   TMDB: https://www.themoviedb.org/tv/61901-death-parade

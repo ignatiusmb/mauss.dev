@@ -9,7 +9,9 @@ seen:
 poster:
   source: tmdb
   path: 1s3fwsH3AjuyzObYHiptiYRgFa.jpg
-backdrop: https://image.tmdb.org/t/p/original/iUJpT94rezsCxM57sgo4egMTOyz.jpg
+backdrop:
+  source: tmdb
+  path: iUJpT94rezsCxM57sgo4egMTOyz.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/41433/Akudama_Drive/
 ---

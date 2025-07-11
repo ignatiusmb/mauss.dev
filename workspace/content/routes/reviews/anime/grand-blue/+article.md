@@ -10,7 +10,9 @@ seen:
 poster:
   source: tmdb
   path: 1WP2MrTIXJ8NI5tvqBk4ZD4ju9O.jpg
-backdrop: https://www.themoviedb.org/t/p/original/uhbZZqqWMZ1IXyNperZY5URF9ah.jpg
+backdrop:
+  source: tmdb
+  path: uhbZZqqWMZ1IXyNperZY5URF9ah.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/37105/Grand_Blue
 ---

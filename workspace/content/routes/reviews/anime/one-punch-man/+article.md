@@ -9,6 +9,9 @@ seen:
 poster:
   source: tmdb
   path: iE3s0lG5QVdEHOEZnoAxjmMtvne.jpg
+backdrop:
+  source: tmdb
+  path: s0w8JbuNNxL1YgaHeDWih12C3jG.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/30276/One_Punch_Man
 ---

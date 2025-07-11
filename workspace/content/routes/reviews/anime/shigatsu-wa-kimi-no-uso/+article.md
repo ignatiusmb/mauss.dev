@@ -33,7 +33,9 @@ rating:
 poster:
   source: tmdb
   path: nksFLYTydth9OYVpMuMbtOBkvMO.jpg
-backdrop: https://image.tmdb.org/t/p/original/3qQFa8n5sFmrxMhcjUnKdg2CCOU.jpg
+backdrop:
+  source: tmdb
+  path: 3qQFa8n5sFmrxMhcjUnKdg2CCOU.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/23273/Shigatsu_wa_Kimi_no_Uso
 soundtracks:

@@ -11,7 +11,9 @@ seen:
 poster:
   source: tmdb
   path: ubSi3iHLD1CB11Wj23dnSekfTaN.jpg
-backdrop: https://www.themoviedb.org/t/p/original/uFnOcTKW9Hrv670B9EMvTfmDqJo.jpg
+backdrop:
+  source: tmdb
+  path: uFnOcTKW9Hrv670B9EMvTfmDqJo.jpg
 link:
   MyAnimeList-I: https://myanimelist.net/anime/25537
   MyAnimeList-II: https://myanimelist.net/anime/33049

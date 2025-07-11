@@ -11,7 +11,9 @@ seen:
 poster:
   source: tmdb
   path: qAv0UoAQVZWd6HGc83fsli1aKmo.jpg
-backdrop: https://www.themoviedb.org/t/p/original/zfS3dVsGcSByt9HdCWuajVzl9RQ.jpg
+backdrop:
+  source: tmdb
+  path: zfS3dVsGcSByt9HdCWuajVzl9RQ.jpg
 link:
   IMDb: https://www.imdb.com/title/tt13207736/
   TMDB: https://www.themoviedb.org/tv/113988-dahmer-monster-the-jeffrey-dahmer-story

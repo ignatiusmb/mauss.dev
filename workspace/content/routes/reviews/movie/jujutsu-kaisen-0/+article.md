@@ -10,7 +10,9 @@ seen:
 poster:
   source: tmdb
   path: 3pTwMUEavTzVOh6yLN0aEwR7uSy.jpg
-backdrop: https://www.themoviedb.org/t/p/original/10jVpNPcl9uzVR7W6EXKRyKLTXZ.jpg
+backdrop:
+  source: tmdb
+  path: 10jVpNPcl9uzVR7W6EXKRyKLTXZ.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/48561/Jujutsu_Kaisen_0_Movie
   TMDB: https://www.themoviedb.org/movie/810693-0

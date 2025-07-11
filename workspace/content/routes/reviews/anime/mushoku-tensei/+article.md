@@ -11,7 +11,9 @@ seen:
 poster:
   source: tmdb
   path: fSHa8kwMPhD29grGX3miBq1BWCN.jpg
-backdrop: https://www.themoviedb.org/t/p/original/T8J9UFUzKK0ybPyEIoBWgOQHoa.jpg
+backdrop:
+  source: tmdb
+  path: T8J9UFUzKK0ybPyEIoBWgOQHoa.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/39535/mushoku_tensei__isekai_ittara_honki_dasu
 ---

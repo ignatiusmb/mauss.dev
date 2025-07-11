@@ -10,7 +10,9 @@ seen:
 poster:
   source: tmdb
   path: mvsIMKsSlAu4XgnTsPYQf41Im0H.jpg
-backdrop: https://www.themoviedb.org/t/p/original/xZbQWN8dVZxiLo7C7Cqa725lFc5.jpg
+backdrop:
+  source: tmdb
+  path: xZbQWN8dVZxiLo7C7Cqa725lFc5.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/40594/Tatoeba_Last_Dungeon_Mae_no_Mura_no_Shounen_ga_Joban_no_Machi_de_Kurasu_Youna_Monogatari
 ---

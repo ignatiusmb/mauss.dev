@@ -11,7 +11,9 @@ seen:
 poster:
   source: tmdb
   path: jyFHtqYeVvc2A9nLhFGvM49xGPg.jpg
-backdrop: https://www.themoviedb.org/t/p/original/wifUfM6OVSZJokNn2ZzDMmjKcvv.jpg
+backdrop:
+  source: tmdb
+  path: wifUfM6OVSZJokNn2ZzDMmjKcvv.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/37520/Dororo
   TMDB: https://www.themoviedb.org/tv/83100

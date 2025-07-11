@@ -12,7 +12,9 @@ seen:
 poster:
   source: tmdb
   path: v5KppPlKaQGTdwvCNmlVSSPvJBw.jpg
-backdrop: https://www.themoviedb.org/t/p/original/f1Poy5jpwu5sRBEojO8ZWwvqXUD.jpg
+backdrop:
+  source: tmdb
+  path: f1Poy5jpwu5sRBEojO8ZWwvqXUD.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/39026/Dumbbell_Nan_Kilo_Moteru/
   TMDB: https://www.themoviedb.org/tv/88045

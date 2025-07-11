@@ -11,7 +11,9 @@ seen:
 poster:
   source: tmdb
   path: 1ZFzedg6kYDBFjZANxcDdERsN08.jpg
-backdrop: https://www.themoviedb.org/t/p/original/5pl88CUfQnOgPEY7jP5wORX4Kc0.jpg
+backdrop:
+  source: tmdb
+  path: 5pl88CUfQnOgPEY7jP5wORX4Kc0.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/22147/Amagi_Brilliant_Park
   TMDB: https://www.themoviedb.org/tv/65332-amagi-brilliant-park

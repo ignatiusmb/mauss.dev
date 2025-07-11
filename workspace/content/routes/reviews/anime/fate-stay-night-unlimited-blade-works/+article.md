@@ -9,7 +9,9 @@ seen:
 poster:
   source: tmdb
   path: jyqi5BkDoKKIA2WAoz3HBtRHld3.jpg
-backdrop: https://www.themoviedb.org/t/p/original/uqOcBHNHsmYPePmrvYhjraRxLdJ.jpg
+backdrop:
+  source: tmdb
+  path: uqOcBHNHsmYPePmrvYhjraRxLdJ.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/22297/Fatestaynight:UnlimitedBladeWorks
 ---

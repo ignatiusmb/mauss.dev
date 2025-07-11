@@ -9,8 +9,9 @@ seen:
 poster:
   source: tmdb
   path: 4F1WtP3dFIwLPOfa3u29VEVnNkf.jpg
+backdrop:
+  source: tmdb
+  path: kFJTEDYjm1EuowbYo7qcaJUBFXA.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/18679/Kill_la_Kill
 ---
-
-![Kill la Kill Backdrop](https://image.tmdb.org/t/p/original/kFJTEDYjm1EuowbYo7qcaJUBFXA.jpg)

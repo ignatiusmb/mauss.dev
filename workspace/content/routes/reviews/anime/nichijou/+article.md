@@ -33,7 +33,9 @@ rating:
 poster:
   source: tmdb
   path: qmi1VpOvPFRHg02fbLuc3pVrMbt.jpg
-backdrop: https://image.tmdb.org/t/p/original/us9UFxr1ScqDxtVvuLFziCbddnK.jpg
+backdrop:
+  source: tmdb
+  path: us9UFxr1ScqDxtVvuLFziCbddnK.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/10165/Nichijou
 ---

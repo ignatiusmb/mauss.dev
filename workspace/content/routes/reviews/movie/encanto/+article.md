@@ -10,7 +10,9 @@ seen:
 poster:
   source: tmdb
   path: 4j0PNHkMr5ax3IA8tjtxcmPU3QT.jpg
-backdrop: https://www.themoviedb.org/t/p/original/fst9hM26nIJMF4FTkFLasUwmBC.jpg
+backdrop:
+  source: tmdb
+  path: fst9hM26nIJMF4FTkFLasUwmBC.jpg
 link:
   IMDb: https://www.imdb.com/title/tt2953050/
   TMDB: https://www.themoviedb.org/movie/568124-encanto

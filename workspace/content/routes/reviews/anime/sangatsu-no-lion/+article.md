@@ -12,7 +12,9 @@ seen:
 poster:
   source: tmdb
   path: z7XceZ0n0f032yaq8R2zSimsjVl.jpg
-backdrop: https://www.themoviedb.org/t/p/original/2TGzDJb2Hjy5qVkw3W1Z5Drj19U.jpg
+backdrop:
+  source: tmdb
+  path: 2TGzDJb2Hjy5qVkw3W1Z5Drj19U.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/31646/3-gatsu_no_Lion
   TMDB: https://www.themoviedb.org/tv/65336

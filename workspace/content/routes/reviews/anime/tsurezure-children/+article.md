@@ -10,7 +10,9 @@ seen:
 poster:
   source: tmdb
   path: 7cCFzTvhpU27G2hK1aIFQ6DLVlJ.jpg
-backdrop: https://www.themoviedb.org/t/p/original/8bvcMjlU0ahkyQTXcwQLbjJ3ZMq.jpg
+backdrop:
+  source: tmdb
+  path: 8bvcMjlU0ahkyQTXcwQLbjJ3ZMq.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/34902/Tsurezure_Children
 ---

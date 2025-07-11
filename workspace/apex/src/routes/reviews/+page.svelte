@@ -104,6 +104,8 @@
 	{/if}
 
 	{#each index as post (post.slug)}
+		{@const { source, path: image } = post.poster}
+		{@const tmdb = source === 'tmdb' && 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/'}
 		{@const [year, month] = post.released.split('-').map(Number)}
 		{@const season = ['winter', 'spring', 'summer', 'fall'][Math.floor((month - 1) / 3)]}
 
@@ -117,7 +119,12 @@
 			<header>
 				<span>{post.category}</span>
 			</header>
-			<Image src={post.image.en} alt={post.title} ratio={3 / 2} styles={{ '--border-radius': 0 }}>
+			<Image
+				src="{tmdb || ''}{image}"
+				alt={post.title}
+				ratio={3 / 2}
+				styles={{ '--border-radius': 0 }}
+			>
 				<!-- {@const check = new Promise((resolve) => {
 					const img = new window.Image();
 					img.onload = () => resolve(true);
@@ -149,8 +156,12 @@
 	#layout {
 		display: grid;
 		gap: 1rem;
-		grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+		grid-template-columns: 1fr 1fr;
 		transition: var(--transition-base);
+
+		@media (min-width: 549px) {
+			grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+		}
 
 		.notice {
 			grid-column: 1 / -1;

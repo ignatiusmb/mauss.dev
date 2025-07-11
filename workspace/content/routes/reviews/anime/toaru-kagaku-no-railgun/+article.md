@@ -11,7 +11,9 @@ seen:
 poster:
   source: tmdb
   path: dZt1dqw0K4JGhwcqTh8yExHYK9w.jpg
-backdrop: https://www.themoviedb.org/t/p/original/1XNqQkRWSwWtXQ0BuQ95wjcs9SP.jpg
+backdrop:
+  source: tmdb
+  path: 1XNqQkRWSwWtXQ0BuQ95wjcs9SP.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/6213/Toaru_Kagaku_no_Railgun
 ---

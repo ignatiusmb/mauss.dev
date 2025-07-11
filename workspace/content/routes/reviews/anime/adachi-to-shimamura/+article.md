@@ -10,7 +10,9 @@ seen:
 poster:
   source: tmdb
   path: teSwoEFkqWFdmL2EdSvGVLU6sse.jpg
-backdrop: https://image.tmdb.org/t/p/original/syhRB7HfO1SaJyvCF1RPUx3M49g.jpg
+backdrop:
+  source: tmdb
+  path: syhRB7HfO1SaJyvCF1RPUx3M49g.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/39790/Adachi_to_Shimamura
 ---

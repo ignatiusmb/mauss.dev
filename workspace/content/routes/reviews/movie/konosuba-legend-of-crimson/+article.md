@@ -10,7 +10,9 @@ seen:
 poster:
   source: tmdb
   path: fv5BgcfkpWh3V6Pb1qVlXESBOdl.jpg
-backdrop: https://image.tmdb.org/t/p/original/bGKFAQsxS0dzRYSvyspRm0rZlfo.jpg
+backdrop:
+  source: tmdb
+  path: bGKFAQsxS0dzRYSvyspRm0rZlfo.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/38040
 ---

@@ -10,8 +10,9 @@ seen:
 poster:
   source: tmdb
   path: fUs9KMgEJj3wYJGa75MtPSdyJXk.jpg
+backdrop:
+  source: tmdb
+  path: bkvkJyLqOk2ZbELDEukEAXEatrt.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/40221/Kami_no_Tou
 ---
-
-![Tower of God Backdrop](https://image.tmdb.org/t/p/original/bkvkJyLqOk2ZbELDEukEAXEatrt.jpg)

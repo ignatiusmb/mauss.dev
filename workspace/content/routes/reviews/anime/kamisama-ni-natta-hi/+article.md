@@ -10,7 +10,9 @@ seen:
 poster:
   source: tmdb
   path: vE0GqiDa3uNZ5zXUrFtLO6BYghc.jpg
-backdrop: https://image.tmdb.org/t/p/original/blLWNqVBjV45DC6mwDaJL9whfiq.jpg
+backdrop:
+  source: tmdb
+  path: blLWNqVBjV45DC6mwDaJL9whfiq.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/41930/Kamisama_ni_Natta_Hi
 ---

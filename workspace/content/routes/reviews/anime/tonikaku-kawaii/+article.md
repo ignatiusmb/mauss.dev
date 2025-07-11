@@ -10,7 +10,9 @@ seen:
 poster:
   source: tmdb
   path: 6u3VZhQP5ZzK7mUBZRVfeoruhcm.jpg
-backdrop: https://image.tmdb.org/t/p/original/pKAx7FPsJ41zoN9UIC5MYO4CFsH.jpg
+backdrop:
+  source: tmdb
+  path: pKAx7FPsJ41zoN9UIC5MYO4CFsH.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/41389/Tonikaku_Kawaii
 ---

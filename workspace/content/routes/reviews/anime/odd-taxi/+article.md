@@ -12,7 +12,9 @@ seen:
 poster:
   source: tmdb
   path: 9zLfAyCGLBYbSK7lEQpAY5BRBrc.jpg
-backdrop: https://www.themoviedb.org/t/p/original/rhkUlX7Ahod8sagYIZa21aHpglz.jpg
+backdrop:
+  source: tmdb
+  path: rhkUlX7Ahod8sagYIZa21aHpglz.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/46102/Odd_Taxi
   TMDB: https://www.themoviedb.org/tv/116727

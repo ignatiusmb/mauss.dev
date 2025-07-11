@@ -30,7 +30,9 @@ rating:
 poster:
   source: tmdb
   path: t1eJhngNgHywjXYAg2iAdSJ3PiL.jpg
-backdrop: https://image.tmdb.org/t/p/original/hy7CPzl227MOlByLUcD9nWuwbjn.jpg
+backdrop:
+  source: tmdb
+  path: hy7CPzl227MOlByLUcD9nWuwbjn.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/34566/Boruto__Naruto_Next_Generations
 ---

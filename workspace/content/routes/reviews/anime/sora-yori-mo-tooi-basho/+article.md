@@ -10,7 +10,9 @@ seen:
 poster:
   source: tmdb
   path: iERXyBf0K6DfAQ8oKEYrdjf1vIs.jpg
-backdrop: https://image.tmdb.org/t/p/original/gHaqtksrERg4PhDzsnrvW7dTs6z.jpg
+backdrop:
+  source: tmdb
+  path: gHaqtksrERg4PhDzsnrvW7dTs6z.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/35839/Sora_yori_mo_Tooi_Basho
 ---

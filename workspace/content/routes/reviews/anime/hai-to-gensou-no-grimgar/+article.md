@@ -10,7 +10,9 @@ seen:
 poster:
   source: tmdb
   path: zrnwS0cKsdpi0SpJxqSz1Dw2JGS.jpg
-backdrop: https://image.tmdb.org/t/p/original/hQSjBpfBMeqOOHsGPLacb7Gx3aZ.jpg
+backdrop:
+  source: tmdb
+  path: hQSjBpfBMeqOOHsGPLacb7Gx3aZ.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/31859/Hai_to_Gensou_no_Grimgar
 ---

@@ -30,7 +30,9 @@ rating:
 poster:
   source: tmdb
   path: h8Rb9gBr48ODIwYUttZNYeMWeUU.jpg
-backdrop: https://www.themoviedb.org/t/p/original/xoqr4dMbRJnzuhsWDF3XNHQwJ9x.jpg
+backdrop:
+  source: tmdb
+  path: xoqr4dMbRJnzuhsWDF3XNHQwJ9x.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/40456/Kimetsu_no_Yaiba_Movie__Mugen_Ressha-hen
 ---

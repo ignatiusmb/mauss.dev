@@ -11,7 +11,9 @@ seen:
 poster:
   source: tmdb
   path: tuFaWiqX0TXoWu7DGNcmX3UW7sT.jpg
-backdrop: https://www.themoviedb.org/t/p/original/q5HZvtyqG8Vz39Ee9uTQbLeEml.jpg
+backdrop:
+  source: tmdb
+  path: q5HZvtyqG8Vz39Ee9uTQbLeEml.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/28851/koe_no_katachi
   TMDB: https://www.themoviedb.org/movie/378064

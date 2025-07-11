@@ -11,7 +11,9 @@ seen:
 poster:
   source: tmdb
   path: oRaOeQlwktbGSd2T31FYAcgHZlh.jpg
-backdrop: https://image.tmdb.org/t/p/original/lmZAguzTv7cxzkRMH7M4fJ0UnJl.jpg
+backdrop:
+  source: tmdb
+  path: lmZAguzTv7cxzkRMH7M4fJ0UnJl.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/30831/Kono_Subarashii_Sekai_ni_Shukufuku_wo
 ---

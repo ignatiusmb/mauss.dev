@@ -11,7 +11,9 @@ seen:
 poster:
   source: tmdb
   path: yORTvQOQTZzZ9JRIpRH4QaIaQBm.jpg
-backdrop: https://image.tmdb.org/t/p/original/p1swd15DRtCnNj20U904dbXeVsi.jpg
+backdrop:
+  source: tmdb
+  path: p1swd15DRtCnNj20U904dbXeVsi.jpg
 link:
   IMDb: https://www.imdb.com/title/tt21209804/
   MyAnimeList: https://myanimelist.net/anime/52211/Mashle

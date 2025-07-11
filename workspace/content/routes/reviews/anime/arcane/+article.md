@@ -11,7 +11,9 @@ seen:
 poster:
   source: tmdb
   path: 3YBpdwJwLecxGDguVITeDBP0kTd.jpg
-backdrop: https://www.themoviedb.org/t/p/original/q8eejQcg1bAqImEV8jh8RtBD4uH.jpg
+backdrop:
+  source: tmdb
+  path: q8eejQcg1bAqImEV8jh8RtBD4uH.jpg
 link:
   IMDb: https://www.imdb.com/title/tt11126994/
   TMDB: https://www.themoviedb.org/tv/94605-arcane

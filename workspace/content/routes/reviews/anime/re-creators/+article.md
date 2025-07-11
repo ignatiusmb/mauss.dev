@@ -9,7 +9,9 @@ seen:
 poster:
   source: tmdb
   path: kVxFvpttZ8V3zog5eoFmzMVFppy.jpg
-backdrop: https://www.themoviedb.org/t/p/original/A695xuEj2MJgAxMn5EfvbbHPyBx.jpg
+backdrop:
+  source: tmdb
+  path: A695xuEj2MJgAxMn5EfvbbHPyBx.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/34561/Re_Creators
 ---

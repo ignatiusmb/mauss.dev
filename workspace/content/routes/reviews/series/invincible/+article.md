@@ -9,7 +9,9 @@ seen:
 poster:
   source: tmdb
   path: yDWJYRAwMNKbIYT8ZB33qy84uzO.jpg
-backdrop: https://www.themoviedb.org/t/p/original/dDdXTkM2mFcIiXbbNjT1paIPYXI.jpg
+backdrop:
+  source: tmdb
+  path: dDdXTkM2mFcIiXbbNjT1paIPYXI.jpg
 link:
   Amazon: https://www.amazon.com/dp/B08WJMRHYZ
   IMDb: https://www.imdb.com/title/tt6741278/

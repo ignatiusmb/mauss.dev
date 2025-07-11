@@ -10,7 +10,9 @@ seen:
 poster:
   source: tmdb
   path: c9TNv9KryKb16eDDBzFg9eKwtDC.jpg
-backdrop: https://www.themoviedb.org/t/p/original/5sWFfvKcETyNBNfmniLk8b3kOS3.jpg
+backdrop:
+  source: tmdb
+  path: 5sWFfvKcETyNBNfmniLk8b3kOS3.jpg
 link:
   MyDramaList: https://mydramalist.com/40911-go-ahead
 ---

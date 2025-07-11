@@ -9,7 +9,9 @@ seen:
 poster:
   source: tmdb
   path: zLNnCb6SL2HxyiRsDJ4t4S1mb91.jpg
-backdrop: https://www.themoviedb.org/t/p/original/1s5LAbi8udSIIc5AghjwuKfy87i.jpg
+backdrop:
+  source: tmdb
+  path: 1s5LAbi8udSIIc5AghjwuKfy87i.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/42897/Horimiya
 ---

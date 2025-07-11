@@ -11,7 +11,9 @@ seen:
 poster:
   source: tmdb
   path: 6iysgZr6Upm5RlAlVFo5f4D9euu.jpg
-backdrop: https://www.themoviedb.org/t/p/original/ly0tvRfOp936Zmr6vepusFeo7lp.jpg
+backdrop:
+  source: tmdb
+  path: ly0tvRfOp936Zmr6vepusFeo7lp.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/9253/Steins_Gate
   TMDB: https://www.themoviedb.org/tv/42509-steins-gate

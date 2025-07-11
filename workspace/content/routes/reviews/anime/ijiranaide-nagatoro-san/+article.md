@@ -12,7 +12,9 @@ seen:
 poster:
   source: tmdb
   path: dHSRVAi83iapl4yazkPiyv3atQZ.jpg
-backdrop: https://www.themoviedb.org/t/p/original/uxmxWA4mmxeAWG8NNiUpGC7W462.jpg
+backdrop:
+  source: tmdb
+  path: uxmxWA4mmxeAWG8NNiUpGC7W462.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/42361/Ijiranaide_Nagatoro-san
   TMDB: https://www.themoviedb.org/tv/105556

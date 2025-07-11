@@ -10,7 +10,9 @@ seen:
 poster:
   source: tmdb
   path: kPzPTbw3rkB66qKSsjlWtOetQWc.jpg
-backdrop: https://image.tmdb.org/t/p/original/hBHhgVhm4NGlWiWuXQyoQFm17Pp.jpg
+backdrop:
+  source: tmdb
+  path: hBHhgVhm4NGlWiWuXQyoQFm17Pp.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/11843/Danshi_Koukousei_no_Nichijou/
 ---

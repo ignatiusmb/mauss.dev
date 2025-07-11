@@ -9,6 +9,9 @@ seen:
 poster:
   source: tmdb
   path: skQ8qieQPRHXeE4NW5PjVpwsAj8.jpg
+backdrop:
+  source: tmdb
+  path: lV5n3E6GkHHEIBClkett0hSyqo.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/6547/Angel_Beats
 ---

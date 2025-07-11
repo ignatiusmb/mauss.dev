@@ -11,7 +11,9 @@ seen:
 poster:
   source: tmdb
   path: 1RLXQqX3Lv50uBECZIzuqGW887t.jpg
-backdrop: https://www.themoviedb.org/t/p/original/nj20Lwljko9rqJfbRgfcgxPkqIC.jpg
+backdrop:
+  source: tmdb
+  path: nj20Lwljko9rqJfbRgfcgxPkqIC.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/36296/Hinamatsuri_TV
   TMDB: https://www.themoviedb.org/tv/76758

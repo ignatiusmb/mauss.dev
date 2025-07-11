@@ -11,7 +11,9 @@ seen:
 poster:
   source: tmdb
   path: iNf1wC8cK6e8zgNyuMUqWFT7Din.jpg
-backdrop: https://www.themoviedb.org/t/p/original/1AMgaLqo6tIRVAqJM4D7rMub9K.jpg
+backdrop:
+  source: tmdb
+  path: 1AMgaLqo6tIRVAqJM4D7rMub9K.jpg
 link:
   IMDb: https://www.imdb.com/title/tt15494038/
   MyAnimeList: https://myanimelist.net/anime/49938/Ame_wo_Tsugeru_Hyouryuu_Danchi

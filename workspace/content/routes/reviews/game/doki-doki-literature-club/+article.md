@@ -9,7 +9,9 @@ seen:
 poster:
   source: url
   path: https://images.igdb.com/igdb/image/upload/t_cover_big/co6p5e.webp
-backdrop: https://wallpapercave.com/wp/wp2501296.jpg
+backdrop:
+  source: url
+  path: https://wallpapercave.com/wp/wp2501296.jpg
 link:
   Website: https://ddlc.moe/
   itch.io: https://teamsalvato.itch.io/ddlc

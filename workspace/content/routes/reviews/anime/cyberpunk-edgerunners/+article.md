@@ -11,7 +11,9 @@ seen:
 poster:
   source: tmdb
   path: lqcDVZ8pyk08AVftMBildDR3QUK.jpg
-backdrop: https://www.themoviedb.org/t/p/original/he4mtQe9KWsXpScDf3seER8Pkq6.jpg
+backdrop:
+  source: tmdb
+  path: he4mtQe9KWsXpScDf3seER8Pkq6.jpg
 link:
   IMDb: https://www.imdb.com/title/tt12590266/
   MyAnimeList: https://myanimelist.net/anime/42310/Cyberpunk__Edgerunners

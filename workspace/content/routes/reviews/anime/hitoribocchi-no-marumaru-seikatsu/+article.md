@@ -11,7 +11,9 @@ seen:
 poster:
   source: tmdb
   path: q1Z1zzbcUfPWW2bdUqra5iJ2MiS.jpg
-backdrop: https://www.themoviedb.org/t/p/original/gpi9DnTI1sn3DVRbWfctyJVecvv.jpg
+backdrop:
+  source: tmdb
+  path: gpi9DnTI1sn3DVRbWfctyJVecvv.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/37614/hitoribocchi_no_marumaru_seikatsu
   TMDB: https://www.themoviedb.org/tv/85990

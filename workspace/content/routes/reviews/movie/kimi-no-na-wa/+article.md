@@ -32,7 +32,9 @@ rating:
 poster:
   source: tmdb
   path: f7UABkINaQCWMHUOkq1XdB7SFOS.jpg
-backdrop: https://image.tmdb.org/t/p/original/e7TRYDKXHQD6xLcmA1b0OtVt0E0.jpg
+backdrop:
+  source: tmdb
+  path: e7TRYDKXHQD6xLcmA1b0OtVt0E0.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/32281/kimi_no_na_wa
 ---

@@ -10,7 +10,9 @@ seen:
 poster:
   source: tmdb
   path: nqqovhsvsWbsb7LcGaIGDRZrwgB.jpg
-backdrop: https://www.themoviedb.org/t/p/original/gCQklTHvnlrTSugqU8zurw0zIy2.jpg
+backdrop:
+  source: tmdb
+  path: gCQklTHvnlrTSugqU8zurw0zIy2.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/12355/Ookami_Kodomo_no_Ame_to_Yuki
 ---

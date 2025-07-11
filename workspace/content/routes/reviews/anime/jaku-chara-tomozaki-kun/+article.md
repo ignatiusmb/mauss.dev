@@ -10,7 +10,9 @@ seen:
 poster:
   source: tmdb
   path: spDlNOiLxhcJ6ToZkcKgNUDwi3V.jpg
-backdrop: https://www.themoviedb.org/t/p/original/qYPha4t7w9x4F7B0VrjoOeX1Jkz.jpg
+backdrop:
+  source: tmdb
+  path: qYPha4t7w9x4F7B0VrjoOeX1Jkz.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/40530/Jaku-Chara_Tomozaki-kun
 ---

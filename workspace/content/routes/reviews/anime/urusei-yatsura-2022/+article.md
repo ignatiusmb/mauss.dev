@@ -11,7 +11,9 @@ seen:
 poster:
   source: tmdb
   path: gIvkC2kshTTF310fXMG1esFmVBA.jpg
-backdrop: https://www.themoviedb.org/t/p/original/hi3i7S1RAKHtDhCijAPw1eYdL8N.jpg
+backdrop:
+  source: tmdb
+  path: hi3i7S1RAKHtDhCijAPw1eYdL8N.jpg
 link:
   IMDb: https://www.imdb.com/title/tt16764368/
   MyAnimeList: https://myanimelist.net/anime/50710/Urusei_Yatsura_2022

@@ -11,7 +11,9 @@ seen:
 poster:
   source: tmdb
   path: zWE3bnCILcRpfQCsxBkMsgcEjOE.jpg
-backdrop: https://www.themoviedb.org/t/p/original/8VN3MyfoFCdFTR9GDh5Tx9pbdCV.jpg
+backdrop:
+  source: tmdb
+  path: 8VN3MyfoFCdFTR9GDh5Tx9pbdCV.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/37171/Asobi_Asobase
   TMDB: https://www.themoviedb.org/tv/80539-asobi-asobase

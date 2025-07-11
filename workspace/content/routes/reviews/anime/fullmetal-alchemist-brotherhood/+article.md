@@ -28,6 +28,9 @@ rating:
 poster:
   source: tmdb
   path: 5ZFUEOULaVml7pQuXxhpR2SmVUw.jpg
+backdrop:
+  source: tmdb
+  path: 2UG177tWHy7xRmMKWJHB7nAUmKd.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/5114/fullmetal_alchemist__brotherhood/
 ---

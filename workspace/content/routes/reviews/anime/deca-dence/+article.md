@@ -11,7 +11,9 @@ seen:
 poster:
   source: tmdb
   path: i0XUehTP9Brtmb8YevpJYMNEWZT.jpg
-backdrop: https://image.tmdb.org/t/p/original/3VPPB2VGmp0l3XkUE3Pde2tZ4gi.jpg
+backdrop:
+  source: tmdb
+  path: 3VPPB2VGmp0l3XkUE3Pde2tZ4gi.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/40056/Deca-Dence/
   TMDB: https://www.themoviedb.org/tv/92588-deca-dence

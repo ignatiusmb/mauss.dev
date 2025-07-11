@@ -10,7 +10,9 @@ seen:
 poster:
   source: tmdb
   path: m80kPdrmmtEh9wlLroCp0bwUGH0.jpg
-backdrop: https://www.themoviedb.org/t/p/original/6clQoxgYxinQJeDVw504Zn4Ff2q.jpg
+backdrop:
+  source: tmdb
+  path: 6clQoxgYxinQJeDVw504Zn4Ff2q.jpg
 link:
   IMDb: https://www.imdb.com/title/tt16183464/
   MyAnimeList: https://myanimelist.net/anime/50410/One_Piece_Film__Red

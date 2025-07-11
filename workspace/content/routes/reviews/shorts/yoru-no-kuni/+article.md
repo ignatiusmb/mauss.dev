@@ -10,7 +10,9 @@ seen:
 poster:
   source: tmdb
   path: 4NLWBZFXz6C2RJ95R4ql0p4j4yA.jpg
-backdrop: https://www.themoviedb.org/t/p/original/lLqwrKWNPnw1jWAZ8DC3G6n82lE.jpg
+backdrop:
+  source: tmdb
+  path: lLqwrKWNPnw1jWAZ8DC3G6n82lE.jpg
 link:
   watch: https://www.youtube.com/watch?v=g_M9yDqMBoI
 ---

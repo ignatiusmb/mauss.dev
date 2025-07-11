@@ -9,4 +9,7 @@ seen:
 poster:
   source: tmdb
   path: dw7jYk7EdrkrHozG7F1Yg2eFJTm.jpg
+backdrop:
+  source: tmdb
+  path: dg3OindVAGZBjlT3xYKqIAdukPL.jpg
 ---

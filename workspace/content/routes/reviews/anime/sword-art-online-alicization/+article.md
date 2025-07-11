@@ -9,7 +9,9 @@ seen:
 poster:
   source: tmdb
   path: vEeTQpAJkf8ztwL56z5ACe3qd7E.jpg
-backdrop: https://image.tmdb.org/t/p/original/z9bJdyQwQqp141eEGbaQvW1IZhR.jpg
+backdrop:
+  source: tmdb
+  path: z9bJdyQwQqp141eEGbaQvW1IZhR.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/36474/Sword_Art_Online__Alicization
 ---

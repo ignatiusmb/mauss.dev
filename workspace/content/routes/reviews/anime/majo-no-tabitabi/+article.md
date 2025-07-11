@@ -11,7 +11,9 @@ seen:
 poster:
   source: tmdb
   path: z5DovowisN9CKl9JYM0HXtQX1O2.jpg
-backdrop: https://image.tmdb.org/t/p/original/lOO4S4gE5j0UMuld2sH5Boaausm.jpg
+backdrop:
+  source: tmdb
+  path: lOO4S4gE5j0UMuld2sH5Boaausm.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/40571/Majo_no_Tabitabi
 ---

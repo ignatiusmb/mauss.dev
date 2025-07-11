@@ -12,7 +12,9 @@ seen:
 poster:
   source: tmdb
   path: w09TpdruCEhZcIPGDMhM6sGDhg7.jpg
-backdrop: https://www.themoviedb.org/t/p/original/jyCeRldLBa2ofS8BFztVpxl6qaN.jpg
+backdrop:
+  source: tmdb
+  path: jyCeRldLBa2ofS8BFztVpxl6qaN.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/48736/Sono_Bisque_Doll_wa_Koi_wo_Suru
   TMDB: https://www.themoviedb.org/tv/123249

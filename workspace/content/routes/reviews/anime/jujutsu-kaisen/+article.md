@@ -9,7 +9,9 @@ seen:
 poster:
   source: tmdb
   path: g1rK2nRXSidcMwNliWDIroWWGTn.jpg
-backdrop: https://www.themoviedb.org/t/p/original/8DLpbLeUylcUnE4nTlRC4b6jzNz.jpg
+backdrop:
+  source: tmdb
+  path: 8DLpbLeUylcUnE4nTlRC4b6jzNz.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/40748/Jujutsu_Kaisen_TV
 ---

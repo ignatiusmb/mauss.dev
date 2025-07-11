@@ -9,7 +9,9 @@ seen:
 poster:
   source: tmdb
   path: ySCAoHkQZPlcmux6ZhkIiBRmEOI.jpg
-backdrop: https://www.themoviedb.org/t/p/original/q2OgeW2ysHsKGUxQLUBHZwv2rcw.jpg
+backdrop:
+  source: tmdb
+  path: q2OgeW2ysHsKGUxQLUBHZwv2rcw.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/41468/Burn_the_Witch
 ---

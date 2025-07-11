@@ -1,7 +1,7 @@
 import { traverse } from 'aubade/compass';
 import { chain } from 'aubade/transform';
 // import { exec } from 'node:child_process';
-import { date, define, drill, sum } from 'mauss';
+import { attempt, date, define, drill, sum } from 'mauss';
 import { exists } from 'mauss/guards';
 import sharp from 'sharp';
 
@@ -155,61 +155,67 @@ export const ROUTES = {
 	},
 
 	async '/reviews'() {
-		const schema = define(({ optional, array, record, literal, string, number }) => ({
-			date: string(),
-			title: string(),
-			romaji: optional(string()),
-			alias: optional(array(string())),
+		const schema = attempt.wrap(
+			define(({ optional, array, record, literal, string, number }) => ({
+				date: string(),
+				title: string(),
+				romaji: optional(string()),
+				alias: optional(array(string())),
 
-			released: string(),
-			tier: optional(literal('S', 'A', 'B', 'C', 'D', '?'), '?'),
-			progress: optional(
-				string((ratio) => {
-					const [watched, episodes] = ratio.split('/');
-					const total: number | '?' = episodes === '?' ? '?' : +episodes;
-					return { watched: +watched, total };
-				}),
-			),
-			completed: optional(
-				string((ratio) => {
-					if (!ratio) return 80;
-					const [watched, total] = ratio.split('/');
-					return Math.round((+watched / +total) * 80);
-				}),
-			),
-			verdict: optional(
-				literal('pending', 'not-recommended', 'contextual', 'recommended', 'must-watch'),
-				'pending',
-			),
-			genres: array(string()),
-			seen: { first: string(), last: optional(string()) },
-			rating: optional(
-				record(
-					array(
-						record(number(), (pts) => sum(Object.values(pts))),
-						(score) => sum(score) / score.length,
-					),
-					(rubric) => {
-						const ratings = Object.values(rubric);
-						return (sum(ratings) / ratings.length).toFixed(2);
-					},
+				released: string(),
+				tier: optional(literal('S', 'A', 'B', 'C', 'D', '?'), '?'),
+				progress: optional(
+					string((ratio) => {
+						const [watched, episodes] = ratio.split('/');
+						const total: number | '?' = episodes === '?' ? '?' : +episodes;
+						return { watched: +watched, total };
+					}),
 				),
-			),
+				completed: optional(
+					string((ratio) => {
+						if (!ratio) return 80;
+						const [watched, total] = ratio.split('/');
+						return Math.round((+watched / +total) * 80);
+					}),
+				),
+				verdict: optional(
+					literal('pending', 'not-recommended', 'contextual', 'recommended', 'must-watch'),
+					'pending',
+				),
+				genres: array(string()),
+				seen: { first: string(), last: optional(string()) },
+				rating: optional(
+					record(
+						array(
+							record(number(), (pts) => sum(Object.values(pts))),
+							(score) => sum(score) / score.length,
+						),
+						(rubric) => {
+							const ratings = Object.values(rubric);
+							return (sum(ratings) / ratings.length).toFixed(2);
+						},
+					),
+				),
 
-			poster: { source: literal('url', 'tmdb'), path: string() },
-			backdrop: optional(string()),
-			link: optional(record(string())),
-		}));
+				poster: { source: literal('url', 'tmdb'), path: string() },
+				backdrop: { source: literal('url', 'tmdb'), path: string() },
+				link: optional(record(string())),
+			})),
+		);
 
 		const items = await traverse(
 			'../content/routes/reviews',
-			({ breadcrumb: [file, slug, category] }) => {
+			({ breadcrumb: [file, slug, category], path }) => {
 				if (file !== '+article.md') return;
 
 				return async ({ buffer, marker, parse, siblings, task }) => {
 					const { body, frontmatter } = parse(buffer.toString('utf-8'));
 					if (!frontmatter || frontmatter.draft) return;
-					const metadata = schema(frontmatter);
+					const { data: metadata, error } = schema(frontmatter);
+					if (!metadata) {
+						console.log(`workspace/${path.slice(3)}`, (error as any).issues);
+						return;
+					}
 
 					const umbrella = `reviews/${category}/${slug}`;
 					const content = body.replace(/\.\/([^\s)]+)/g, (m, relative) => {

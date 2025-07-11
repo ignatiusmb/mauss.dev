@@ -34,7 +34,9 @@ rating:
 poster:
   source: tmdb
   path: cyCMX96AoqT9igMbE0a6njreAEd.jpg
-backdrop: https://image.tmdb.org/t/p/original/wCDf6ARpEIEsXDYXtOTGMspuGtq.jpg
+backdrop:
+  source: tmdb
+  path: wCDf6ARpEIEsXDYXtOTGMspuGtq.jpg
 link:
   IMDb: https://www.imdb.com/title/tt14115912
   MyAnimeList: https://myanimelist.net/anime/46352/Blue_Period

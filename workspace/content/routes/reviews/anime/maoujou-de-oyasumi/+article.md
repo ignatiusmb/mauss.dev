@@ -10,7 +10,9 @@ seen:
 poster:
   source: tmdb
   path: 3bmu7Mg7Sc6IfHgvt98WNChaOkR.jpg
-backdrop: https://image.tmdb.org/t/p/original/ya0GSNDIwlD3W0DJNCBizlf0dkf.jpg
+backdrop:
+  source: tmdb
+  path: ya0GSNDIwlD3W0DJNCBizlf0dkf.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/40397/Maoujou_de_Oyasumi
 ---

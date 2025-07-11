@@ -11,6 +11,9 @@ seen:
 poster:
   source: tmdb
   path: uJFL8PETMI09hj0AJ4oCpRDWRnk.jpg
+backdrop:
+  source: tmdb
+  path: jfMxNkSh6CP6jWpOS60IzciMHa0.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/8769/Ore_no_Imouto_ga_Konnani_Kawaii_Wake_ga_Nai
 ---

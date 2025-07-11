@@ -12,7 +12,9 @@ seen:
 poster:
   source: tmdb
   path: sgwwEGvNy7vCJN8IVnl44tuVlMZ.jpg
-backdrop: https://www.themoviedb.org/t/p/original/znwEvECDz94pc3ZWML4OettkPto.jpg
+backdrop:
+  source: tmdb
+  path: znwEvECDz94pc3ZWML4OettkPto.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/37141/Hataraku_Saibou_TV/
   TMDB: https://www.themoviedb.org/tv/80671

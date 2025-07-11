@@ -10,7 +10,9 @@ seen:
 poster:
   source: tmdb
   path: utYAqKUQdUOVVQlM2FJBTWdONf9.jpg
-backdrop: https://www.themoviedb.org/t/p/original/3X96zO7PnN0iIWubiI2tAThrhqL.jpg
+backdrop:
+  source: tmdb
+  path: 3X96zO7PnN0iIWubiI2tAThrhqL.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/40679/243__Seiin_Koukou_Danshi_Volley-bu
 ---

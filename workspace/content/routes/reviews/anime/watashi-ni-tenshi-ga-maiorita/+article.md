@@ -33,7 +33,9 @@ rating:
 poster:
   source: tmdb
   path: yaIs7UDJ6Vo7DbWPl4cTdv4bUw7.jpg
-backdrop: https://image.tmdb.org/t/p/original/djKJBmJI4gS9snTn2Tzg3JO23YC.jpg
+backdrop:
+  source: tmdb
+  path: djKJBmJI4gS9snTn2Tzg3JO23YC.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/37993/Watashi_ni_Tenshi_ga_Maiorita
 soundtracks:

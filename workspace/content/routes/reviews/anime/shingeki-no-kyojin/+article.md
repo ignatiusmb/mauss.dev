@@ -13,6 +13,8 @@ poster:
   source: tmdb
   path: 2wxoRovckZPxxFLROZGdujJiNcC.jpg
 backdrop: 
+  source: tmdb
+  path: aok7IhrbA83josNz9Dqh8tNA0Ao.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/16498/Shingeki_no_Kyojin
   TMDB: https://www.themoviedb.org/tv/1429

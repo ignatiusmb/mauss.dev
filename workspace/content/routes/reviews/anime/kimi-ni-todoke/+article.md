@@ -9,7 +9,9 @@ seen:
 poster:
   source: tmdb
   path: 2XZ0Ofg1ZUZMFrbyWJuakSJAKZz.jpg
-backdrop: https://www.themoviedb.org/t/p/original/1AXPzsKXFFNmMaiik6H6I4uBrLZ.jpg
+backdrop:
+  source: tmdb
+  path: 1AXPzsKXFFNmMaiik6H6I4uBrLZ.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/6045/Kimi_ni_Todoke
 ---

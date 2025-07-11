@@ -11,7 +11,9 @@ seen:
 poster:
   source: tmdb
   path: 3c5BIEfAhTCWrIi4C8WMuwOl6bX.jpg
-backdrop: https://www.themoviedb.org/t/p/original/oczFTWRBhKrJ4rNNhqKgp1O1PAu.jpg
+backdrop:
+  source: tmdb
+  path: oczFTWRBhKrJ4rNNhqKgp1O1PAu.jpg
 link:
   IMDb: https://www.imdb.com/title/tt3742982/
   MyAnimeList: https://myanimelist.net/anime/22199/Akame_ga_Kill/

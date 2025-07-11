@@ -10,7 +10,9 @@ seen:
 poster:
   source: tmdb
   path: 3NiRdFXb9xz7ZFgmZ0RmoWjkTvz.jpg
-backdrop: https://www.themoviedb.org/t/p/original/8fsV0aqSHQlbyvZlWyynruat0MP.jpg
+backdrop:
+  source: tmdb
+  path: 8fsV0aqSHQlbyvZlWyynruat0MP.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/41006/Higurashi_no_Naku_Koro_ni_Gou
 ---

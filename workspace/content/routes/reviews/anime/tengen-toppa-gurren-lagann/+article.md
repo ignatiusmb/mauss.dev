@@ -10,7 +10,9 @@ seen:
 poster:
   source: tmdb
   path: 1KNHEhMTzQoQnCco0lTOEsTYRtT.jpg
-backdrop: https://www.themoviedb.org/t/p/original/9IAfHmcPcQjKEzlAwnY777iItbi.jpg
+backdrop:
+  source: tmdb
+  path: 9IAfHmcPcQjKEzlAwnY777iItbi.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/2001/Tengen_Toppa_Gurren_Lagann/
 ---

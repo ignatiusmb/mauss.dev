@@ -12,7 +12,9 @@ seen:
 poster:
   source: tmdb
   path: saveaoAwq632sDlppmhEIjNOpC.jpg
-backdrop: https://image.tmdb.org/t/p/original/9qngg89Hohbdib3bZEdLZa5qhOl.jpg
+backdrop:
+  source: tmdb
+  path: 9qngg89Hohbdib3bZEdLZa5qhOl.jpg
 link:
   IMDb: https://www.imdb.com/title/tt21621494/
   MyAnimeList: https://myanimelist.net/anime/52701/Dungeon_Meshi

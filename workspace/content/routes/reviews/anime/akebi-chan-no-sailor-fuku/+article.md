@@ -12,7 +12,9 @@ seen:
 poster:
   source: tmdb
   path: OYFPuwKz7rs0yH5RkaExrOKVz7.jpg
-backdrop: https://www.themoviedb.org/t/p/original/a1WoczWsA55SkWMCBmfLIO0KgGJ.jpg
+backdrop:
+  source: tmdb
+  path: a1WoczWsA55SkWMCBmfLIO0KgGJ.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/48553/Akebi-chan_no_Sailor-fuku
 ---

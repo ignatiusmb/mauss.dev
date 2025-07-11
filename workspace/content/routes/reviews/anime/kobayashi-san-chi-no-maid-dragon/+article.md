@@ -12,7 +12,9 @@ seen:
 poster:
   source: tmdb
   path: tNznuhcf7WKzEmPQEsIgGMrB3Az.jpg
-backdrop: https://www.themoviedb.org/t/p/original/xfkOv2PSuVjehptAmRagT4MzatQ.jpg
+backdrop:
+  source: tmdb
+  path: xfkOv2PSuVjehptAmRagT4MzatQ.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/33206/Kobayashi-san_Chi_no_Maid_Dragon/
   TMDB: https://www.themoviedb.org/tv/69291-kobayashi-san-chi-no-maid-dragon

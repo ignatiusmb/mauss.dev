@@ -33,8 +33,9 @@ rating:
 poster:
   source: tmdb
   path: gNrlP20MC11QfeH1xLtAovsVW4g.jpg
-backdrop: https://image.tmdb.org/t/p/original/pwRAGni0MbMTttzcaKyQj5kNVNT.jpg
-logo: https://image.tmdb.org/t/p/original/bgfzXFL7FcjPUf9qiO4NiSjfp4r.png
+backdrop:
+  source: tmdb
+  path: pwRAGni0MbMTttzcaKyQj5kNVNT.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/41361/Eiga_Daisuki_Pompo-san
 ---

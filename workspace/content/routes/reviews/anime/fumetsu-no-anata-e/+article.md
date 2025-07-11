@@ -12,7 +12,9 @@ seen:
 poster:
   source: tmdb
   path: jxtLpQq0I7MF8kP99w0Q0K39UpG.jpg
-backdrop: https://www.themoviedb.org/t/p/original/qmeC99iX9YPbxi3Dwsw5VvxIbCC.jpg
+backdrop:
+  source: tmdb
+  path: qmeC99iX9YPbxi3Dwsw5VvxIbCC.jpg
 link:
   IMDb: https://www.imdb.com/title/tt12063450/
   MyAnimeList: https://myanimelist.net/anime/41025/Fumetsu_no_Anata_e

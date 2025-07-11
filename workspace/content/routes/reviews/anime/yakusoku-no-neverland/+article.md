@@ -10,7 +10,9 @@ seen:
 poster:
   source: tmdb
   path: 1sKCm6vJbDq64zcfHNOY67ltLns.jpg
-backdrop: https://www.themoviedb.org/t/p/original/lIvlMDEKImf3pkDtLjjKZqRZ5AM.jpg
+backdrop:
+  source: tmdb
+  path: lIvlMDEKImf3pkDtLjjKZqRZ5AM.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/37779/yakusoku_no_neverland
 ---

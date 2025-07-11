@@ -9,7 +9,9 @@ seen:
 poster:
   source: tmdb
   path: qhjAjkQibM2HhBEKiUgYWsENKux.jpg
-backdrop: https://www.themoviedb.org/t/p/original/7wBUJF6Wvx8o8AOB8BgyK0HMQdP.jpg
+backdrop:
+  source: tmdb
+  path: 7wBUJF6Wvx8o8AOB8BgyK0HMQdP.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/33241/Honobono_Log
 ---

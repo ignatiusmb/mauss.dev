@@ -10,7 +10,9 @@ seen:
 poster:
   source: tmdb
   path: vHdVU0HyyB6k6kuYt8qjwTz9one.jpg
-backdrop: https://image.tmdb.org/t/p/original/Zzk9YZlNkuOktEZUuaf2HKNc6B.jpg
+backdrop:
+  source: tmdb
+  path: Zzk9YZlNkuOktEZUuaf2HKNc6B.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/36098/Kimi_no_Suizou_wo_Tabetai
 ---

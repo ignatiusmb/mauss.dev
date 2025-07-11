@@ -12,7 +12,9 @@ seen:
 poster:
   source: tmdb
   path: 1IKNrWEqu2cpOmSpwHqaCbnbIzE.jpg
-backdrop: https://www.themoviedb.org/t/p/original/95dwaqiPjGFND2e4X0yWIzcIjWg.jpg
+backdrop:
+  source: tmdb
+  path: 95dwaqiPjGFND2e4X0yWIzcIjWg.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/24439/Kekkai_Sensen
   TMDB: https://www.themoviedb.org/tv/62327

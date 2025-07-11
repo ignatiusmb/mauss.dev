@@ -34,36 +34,10 @@ rating:
 poster:
   source: tmdb
   path: dA93MnalfNLHMMlDcTCfX4QJb5Q.jpg
-backdrop: 
+backdrop:
+  source: tmdb
+  path: dJ8yrSokdTMnhKJw06MllSfCegb.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/37999/Kaguya-sama_wa_Kokurasetai__Tensai-tachi_no_Renai_Zunousen
   TMDB: https://www.themoviedb.org/tv/83121
 ---
-
-![Kaguya-sama Love is War Backdrop](https://image.tmdb.org/t/p/original/dJ8yrSokdTMnhKJw06MllSfCegb.jpg)
-
-## Synopsis
-
-## Plot
-
-## Highlights
-
-### /10 | Story & Plot
-
-### /10 | Artwork & Animation
-
-### /10 | Sound
-
-### /10 | Characters
-
-## Verdict
-
-<!-- SPOILERS -->
-
-<!-- CLOSING -->
-
----
-Reference(s):
-
-- 1
-- 2

@@ -32,7 +32,9 @@ rating:
 poster:
   source: tmdb
   path: qgrk7r1fV4IjuoeiGS5HOhXNdLJ.jpg
-backdrop: https://image.tmdb.org/t/p/original/ize3ZieqSy0TCWljmVoEiy8fSFS.jpg
+backdrop:
+  source: tmdb
+  path: ize3ZieqSy0TCWljmVoEiy8fSFS.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/38826/Tenki_no_Ko
 ---

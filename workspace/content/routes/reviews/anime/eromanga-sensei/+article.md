@@ -28,6 +28,9 @@ rating:
 poster:
   source: tmdb
   path: vR6rPnVyWUSU7im2QcKXwSjjCXM.jpg
+backdrop:
+  source: tmdb
+  path: 6hbd2zP73s9pm8ndy1xwEv7Ehem.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/32901/eromanga-sensei
 ---

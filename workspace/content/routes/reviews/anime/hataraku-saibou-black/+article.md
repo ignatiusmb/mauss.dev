@@ -10,7 +10,9 @@ seen:
 poster:
   source: tmdb
   path: ehz2kV5YxoIbfD9WQnP5pkSkKUv.jpg
-backdrop: https://www.themoviedb.org/t/p/original/wpJnPlRAGBf5YRxp0b64T1hZKOM.jpg
+backdrop:
+  source: tmdb
+  path: wpJnPlRAGBf5YRxp0b64T1hZKOM.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/41694/Hataraku_Saibou_Black_TV
 ---

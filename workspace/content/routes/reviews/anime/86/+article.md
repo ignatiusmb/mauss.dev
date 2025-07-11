@@ -11,7 +11,9 @@ seen:
 poster:
   source: tmdb
   path: 96mUvRlJBYOMBdbn30wtoh7QrpY.jpg
-backdrop: https://www.themoviedb.org/t/p/original/lSlL2CAPSDJ9gf2MZX0x2u2inKX.jpg
+backdrop:
+  source: tmdb
+  path: lSlL2CAPSDJ9gf2MZX0x2u2inKX.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/41457/86
 ---

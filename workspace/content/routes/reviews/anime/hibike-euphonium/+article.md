@@ -10,7 +10,9 @@ seen:
 poster:
   source: tmdb
   path: l0hKrx6PjQRrHiMzK2Fanen2xbL.jpg
-backdrop: https://www.themoviedb.org/t/p/original/jG1PPk0g3lNkpmu1eOQjLVTG4ml.jpg
+backdrop:
+  source: tmdb
+  path: jG1PPk0g3lNkpmu1eOQjLVTG4ml.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/27989/Hibike_Euphonium
 ---

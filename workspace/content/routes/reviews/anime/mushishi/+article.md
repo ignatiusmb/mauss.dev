@@ -12,7 +12,9 @@ seen:
 poster:
   source: tmdb
   path: ianYYQaLkksLGCfeisFNYJE7jIO.jpg
-backdrop: https://www.themoviedb.org/t/p/original/bo53Yk3OuRivHtSAB4WLRWWPHq9.jpg
+backdrop:
+  source: tmdb
+  path: bo53Yk3OuRivHtSAB4WLRWWPHq9.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/457/mushishi
   TMDB: https://www.themoviedb.org/tv/26867-mushi-shi
