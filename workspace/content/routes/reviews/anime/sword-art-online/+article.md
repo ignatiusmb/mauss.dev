@@ -16,7 +16,6 @@ link:
   MyAnimeList: https://myanimelist.net/anime/11757/Sword_Art_Online
 ---
 
-
 <!-- SEASON DIVIDER -->
 ## Season 1 - Aincrad Arc
 

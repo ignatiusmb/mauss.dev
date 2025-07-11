@@ -19,5 +19,4 @@ link:
   MyAnimeList: https://myanimelist.net/anime/31964/Boku_no_Hero_Academia
 ---
 
-
 Finished S6 on 2023-03-25T21:18:00+07:00

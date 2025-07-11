@@ -33,7 +33,7 @@ rating:
 poster:
   source: tmdb
   path: 5Wf9Y6gucbu1LMe1FyqD8TQjaNM.jpg
-backdrop: 
+backdrop:
   source: tmdb
   path: deOIxqHGfAavUhRonk5z24iaXXd.jpg
 link:
