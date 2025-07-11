@@ -7,10 +7,12 @@ released: 2012-07-21
 genres: [animation, fantasy, slice of life]
 seen:
   first: 2020
-image:
-  en: https://www.themoviedb.org/t/p/original/nqqovhsvsWbsb7LcGaIGDRZrwgB.jpg
-  jp: https://www.themoviedb.org/t/p/original/g95ioEtHZwGg1rlNViE7NSF6lqQ.jpg
-backdrop: https://www.themoviedb.org/t/p/original/gCQklTHvnlrTSugqU8zurw0zIy2.jpg
+poster:
+  source: tmdb
+  path: nqqovhsvsWbsb7LcGaIGDRZrwgB.jpg
+backdrop:
+  source: tmdb
+  path: gCQklTHvnlrTSugqU8zurw0zIy2.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/12355/Ookami_Kodomo_no_Ame_to_Yuki
 ---

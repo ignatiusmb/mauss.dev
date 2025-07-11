@@ -7,10 +7,12 @@ genres: [animation, action, adventure, fantasy]
 seen:
   first: "2022-09-24T17:40:00"
   last: "2022-09-24T19:53:35"
-image:
-  en: https://www.themoviedb.org/t/p/original/m80kPdrmmtEh9wlLroCp0bwUGH0.jpg
-  jp: https://www.themoviedb.org/t/p/original/4Th8JP3S3yKpvqcrV4VS2z8c5Sp.jpg
-backdrop: https://www.themoviedb.org/t/p/original/6clQoxgYxinQJeDVw504Zn4Ff2q.jpg
+poster:
+  source: tmdb
+  path: m80kPdrmmtEh9wlLroCp0bwUGH0.jpg
+backdrop:
+  source: tmdb
+  path: 6clQoxgYxinQJeDVw504Zn4Ff2q.jpg
 link:
   IMDb: https://www.imdb.com/title/tt16183464/
   MyAnimeList: https://myanimelist.net/anime/50410/One_Piece_Film__Red

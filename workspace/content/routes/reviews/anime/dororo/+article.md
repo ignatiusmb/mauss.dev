@@ -8,10 +8,12 @@ genres: [action, adventure, demons, historical, samurai, supernatural, shounen]
 seen:
   first: 2021-02-10
   last: "2022-01-31T00:56:13"
-image:
-  en: https://www.themoviedb.org/t/p/original/jyFHtqYeVvc2A9nLhFGvM49xGPg.jpg
-  jp: https://www.themoviedb.org/t/p/original/bzE0BYQL7lQbOjlNjJ171ytFpwc.jpg
-backdrop: https://www.themoviedb.org/t/p/original/wifUfM6OVSZJokNn2ZzDMmjKcvv.jpg
+poster:
+  source: tmdb
+  path: jyFHtqYeVvc2A9nLhFGvM49xGPg.jpg
+backdrop:
+  source: tmdb
+  path: wifUfM6OVSZJokNn2ZzDMmjKcvv.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/37520/Dororo
   TMDB: https://www.themoviedb.org/tv/83100

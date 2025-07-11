@@ -7,10 +7,12 @@ released: 2012-10-09
 genres: [slice of life, comedy, drama, romance, school]
 seen:
   first: 2021-03-20
-image:
-  en: https://image.tmdb.org/t/p/original/6XQ2F5bZLWfAmayKyJtZKxn5Tcl.jpg
-  jp: 
-backdrop: https://image.tmdb.org/t/p/original/5LR3Mu8AgaVEQmGFvYKqlzaxzTg.jpg
+poster:
+  source: tmdb
+  path: 6XQ2F5bZLWfAmayKyJtZKxn5Tcl.jpg
+backdrop:
+  source: tmdb
+  path: 5LR3Mu8AgaVEQmGFvYKqlzaxzTg.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/13759/Sakura-sou_no_Pet_na_Kanojo
 ---

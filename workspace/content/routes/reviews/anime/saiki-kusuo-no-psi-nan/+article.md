@@ -7,10 +7,12 @@ released: 2016-07-04
 genres: [comedy, slice of life, supernatural, school, shounen]
 seen:
   first: 2021-02-18
-image:
-  en: https://www.themoviedb.org/t/p/original/ais8cfoSbS3URahXLP6LwlwIZ6e.jpg
-  jp: https://www.themoviedb.org/t/p/original/vwfsAOrBUdUEW4AAjRCcUlCvd4G.jpg
-backdrop: https://www.themoviedb.org/t/p/original/hI76O9slOz3vPkhQWWQoN36WyhG.jpg
+poster:
+  source: tmdb
+  path: ais8cfoSbS3URahXLP6LwlwIZ6e.jpg
+backdrop:
+  source: tmdb
+  path: hI76O9slOz3vPkhQWWQoN36WyhG.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/33255/Saiki_Kusuo_no_%CE%A8-nan
 ---

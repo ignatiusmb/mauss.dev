@@ -6,8 +6,12 @@ released: 2010-04-03
 genres: [action, comedy, drama, school, supernatural]
 seen:
   first: 2020-06-30
-image:
-  en: https://image.tmdb.org/t/p/original/skQ8qieQPRHXeE4NW5PjVpwsAj8.jpg
+poster:
+  source: tmdb
+  path: skQ8qieQPRHXeE4NW5PjVpwsAj8.jpg
+backdrop:
+  source: tmdb
+  path: lV5n3E6GkHHEIBClkett0hSyqo.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/6547/Angel_Beats
 ---

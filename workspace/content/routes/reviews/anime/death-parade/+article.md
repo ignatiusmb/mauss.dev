@@ -8,10 +8,12 @@ genres: [drama, mystery, suspense]
 seen:
   first: "2021-10-22T23:43:10"
   last: "2021-11-01T22:08:08"
-image:
-  en: https://www.themoviedb.org/t/p/original/qeD9wDenN7CPA99FScSErJCvcWb.jpg
-  jp: https://www.themoviedb.org/t/p/original/pgnHXXTn2Uy0unuNCKFKHhL7BHR.jpg
-backdrop: https://www.themoviedb.org/t/p/original/kE4DhDPgjzxvv2BJCHhs0xbdwun.jpg
+poster:
+  source: tmdb
+  path: qeD9wDenN7CPA99FScSErJCvcWb.jpg
+backdrop:
+  source: tmdb
+  path: kE4DhDPgjzxvv2BJCHhs0xbdwun.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/28223/Death_Parade
   TMDB: https://www.themoviedb.org/tv/61901-death-parade

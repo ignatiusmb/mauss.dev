@@ -9,10 +9,12 @@ genres: [romance, school]
 seen:
   first: 2020-12-11
   last: 2021-07-06
-image:
-  en: https://image.tmdb.org/t/p/original/5JtqWxw69IanadNcraJ9v6Ccj2W.jpg
-  jp: https://image.tmdb.org/t/p/original/2bpndpu56tH2Vl02fQpmTpdOkLe.jpg
-backdrop: https://image.tmdb.org/t/p/original/cifs43XOpsUYUgEDzcsU52AvcaP.jpg
+poster:
+  source: tmdb
+  path: 5JtqWxw69IanadNcraJ9v6Ccj2W.jpg
+backdrop:
+  source: tmdb
+  path: cifs43XOpsUYUgEDzcsU52AvcaP.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/34822/Tsuki_ga_Kirei
   TMDB: https://www.themoviedb.org/tv/70880-tsuki-ga-kirei

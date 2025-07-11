@@ -7,9 +7,12 @@ released: 2020-10-09
 genres: [slice of life, romance, school, shoujo ai]
 seen:
   first: 2020-12-27
-image:
-  en: https://image.tmdb.org/t/p/original/teSwoEFkqWFdmL2EdSvGVLU6sse.jpg
-backdrop: https://image.tmdb.org/t/p/original/syhRB7HfO1SaJyvCF1RPUx3M49g.jpg
+poster:
+  source: tmdb
+  path: teSwoEFkqWFdmL2EdSvGVLU6sse.jpg
+backdrop:
+  source: tmdb
+  path: syhRB7HfO1SaJyvCF1RPUx3M49g.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/39790/Adachi_to_Shimamura
 ---

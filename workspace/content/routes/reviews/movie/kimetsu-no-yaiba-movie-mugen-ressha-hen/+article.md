@@ -27,10 +27,12 @@ rating:
     - engagement: 10
     - relatable: 7
     - impact: 10
-image:
-  en: https://www.themoviedb.org/t/p/original/h8Rb9gBr48ODIwYUttZNYeMWeUU.jpg
-  jp: https://www.themoviedb.org/t/p/original/m9cn5mhW519QKr1YGpGxNWi98VJ.jpg
-backdrop: https://www.themoviedb.org/t/p/original/xoqr4dMbRJnzuhsWDF3XNHQwJ9x.jpg
+poster:
+  source: tmdb
+  path: h8Rb9gBr48ODIwYUttZNYeMWeUU.jpg
+backdrop:
+  source: tmdb
+  path: xoqr4dMbRJnzuhsWDF3XNHQwJ9x.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/40456/Kimetsu_no_Yaiba_Movie__Mugen_Ressha-hen
 ---

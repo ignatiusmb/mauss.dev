@@ -8,9 +8,12 @@ genres: [animation, mystery, supernatural, romance]
 seen:
   first: 2021-06-28
   last: 2021-06-28
-image:
-  en: https://www.themoviedb.org/t/p/original/ubSi3iHLD1CB11Wj23dnSekfTaN.jpg
-backdrop: https://www.themoviedb.org/t/p/original/uFnOcTKW9Hrv670B9EMvTfmDqJo.jpg
+poster:
+  source: tmdb
+  path: ubSi3iHLD1CB11Wj23dnSekfTaN.jpg
+backdrop:
+  source: tmdb
+  path: uFnOcTKW9Hrv670B9EMvTfmDqJo.jpg
 link:
   MyAnimeList-I: https://myanimelist.net/anime/25537
   MyAnimeList-II: https://myanimelist.net/anime/33049

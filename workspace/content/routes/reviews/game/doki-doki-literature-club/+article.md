@@ -6,9 +6,12 @@ released: 2017-09-22
 genres: [visual novel]
 seen:
   first: 2021-04-15
-image:
-  en: https://i.redd.it/aa82mb7ipav01.png
-backdrop: https://wallpapercave.com/wp/wp2501296.jpg
+poster:
+  source: url
+  path: https://images.igdb.com/igdb/image/upload/t_cover_big/co6p5e.webp
+backdrop:
+  source: url
+  path: https://wallpapercave.com/wp/wp2501296.jpg
 link:
   Website: https://ddlc.moe/
   itch.io: https://teamsalvato.itch.io/ddlc

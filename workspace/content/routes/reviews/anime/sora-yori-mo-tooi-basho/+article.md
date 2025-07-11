@@ -7,10 +7,12 @@ released: 2018-01-02
 genres: [slice of life, adventure, comedy, drama]
 seen:
   first: 2020-12-25
-image:
-  en: https://image.tmdb.org/t/p/original/iERXyBf0K6DfAQ8oKEYrdjf1vIs.jpg
-  jp: https://image.tmdb.org/t/p/original/vxlM17UMi8RMm9qHHOo1y8RjVcu.jpg
-backdrop: https://image.tmdb.org/t/p/original/gHaqtksrERg4PhDzsnrvW7dTs6z.jpg
+poster:
+  source: tmdb
+  path: iERXyBf0K6DfAQ8oKEYrdjf1vIs.jpg
+backdrop:
+  source: tmdb
+  path: gHaqtksrERg4PhDzsnrvW7dTs6z.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/35839/Sora_yori_mo_Tooi_Basho
 ---

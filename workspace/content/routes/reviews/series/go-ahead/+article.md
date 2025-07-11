@@ -7,9 +7,12 @@ released: 2020-08-10
 genres: [drama, comedy, romance, family]
 seen:
   first: 2021-05-01
-image:
-  en: https://www.themoviedb.org/t/p/original/c9TNv9KryKb16eDDBzFg9eKwtDC.jpg
-backdrop: https://www.themoviedb.org/t/p/original/5sWFfvKcETyNBNfmniLk8b3kOS3.jpg
+poster:
+  source: tmdb
+  path: c9TNv9KryKb16eDDBzFg9eKwtDC.jpg
+backdrop:
+  source: tmdb
+  path: 5sWFfvKcETyNBNfmniLk8b3kOS3.jpg
 link:
   MyDramaList: https://mydramalist.com/40911-go-ahead
 ---

@@ -8,10 +8,12 @@ completed: 1/73
 genres: [action, sci-fi, super power]
 seen:
   first: "2021-08-10T23:28:25"
-image:
-  en: https://www.themoviedb.org/t/p/original/dZt1dqw0K4JGhwcqTh8yExHYK9w.jpg
-  jp: https://www.themoviedb.org/t/p/original/vUTIKSGdoMGHUOgSv0wcLnLacVf.jpg
-backdrop: https://www.themoviedb.org/t/p/original/1XNqQkRWSwWtXQ0BuQ95wjcs9SP.jpg
+poster:
+  source: tmdb
+  path: dZt1dqw0K4JGhwcqTh8yExHYK9w.jpg
+backdrop:
+  source: tmdb
+  path: 1XNqQkRWSwWtXQ0BuQ95wjcs9SP.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/6213/Toaru_Kagaku_no_Railgun
 ---

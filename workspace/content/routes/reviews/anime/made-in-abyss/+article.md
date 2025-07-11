@@ -29,9 +29,12 @@ rating:
     - engagement: 10
     - relatable: 7
     - impact: 9
-image:
-  en: https://www.themoviedb.org/t/p/original/n30CBH4BoN5Z34tCpOWIPGJYOaS.jpg
-backdrop: https://www.themoviedb.org/t/p/original/faEKyqjgnPw6oZ0niowLYsjT5qD.jpg
+poster:
+  source: tmdb
+  path: n30CBH4BoN5Z34tCpOWIPGJYOaS.jpg
+backdrop:
+  source: tmdb
+  path: faEKyqjgnPw6oZ0niowLYsjT5qD.jpg
 link:
   IMDb: https://www.imdb.com/title/tt7222086/
   MyAnimeList: https://myanimelist.net/anime/34599/Made_in_Abyss

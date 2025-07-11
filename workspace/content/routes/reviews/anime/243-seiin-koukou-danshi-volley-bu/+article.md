@@ -7,10 +7,12 @@ released: 2021-01-08
 genres: [sports, slice of life, drama, school]
 seen:
   first: 2021-03-26
-image:
-  en: https://www.themoviedb.org/t/p/original/utYAqKUQdUOVVQlM2FJBTWdONf9.jpg
-  jp: https://www.themoviedb.org/t/p/original/5YPnuuDYqRTkdmeNUzb52ZwW9JT.jpg
-backdrop: https://www.themoviedb.org/t/p/original/3X96zO7PnN0iIWubiI2tAThrhqL.jpg
+poster:
+  source: tmdb
+  path: utYAqKUQdUOVVQlM2FJBTWdONf9.jpg
+backdrop:
+  source: tmdb
+  path: 3X96zO7PnN0iIWubiI2tAThrhqL.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/40679/243__Seiin_Koukou_Danshi_Volley-bu
 ---

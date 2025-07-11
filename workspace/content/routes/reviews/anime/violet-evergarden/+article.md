@@ -8,9 +8,12 @@ genres: [slice of life, drama, fantasy]
 seen:
   first: "2021-10-17T19:35:17"
   last: "2021-10-31T22:58:58"
-image:
-  en: https://www.themoviedb.org/t/p/original/ImvHbM4GsJJykarnOzhtpG6ax6.jpg
-backdrop: https://www.themoviedb.org/t/p/original/jGaGlwJbg1MqUjswCe3zxTHbo8G.jpg
+poster:
+  source: tmdb
+  path: ImvHbM4GsJJykarnOzhtpG6ax6.jpg
+backdrop:
+  source: tmdb
+  path: jGaGlwJbg1MqUjswCe3zxTHbo8G.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/33352/Violet_Evergarden
   TMDB: https://www.themoviedb.org/tv/75214-violet-evergarden

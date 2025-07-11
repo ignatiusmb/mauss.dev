@@ -1,21 +1,18 @@
 <script lang="ts">
+	import type { Items } from '$content/builder';
+
 	interface Props {
-		post: {
-			backdrop?: string;
-			rating?: string;
-			title: string | { short?: string; en?: string; jp?: string };
-		};
+		review: Omit<Items['/reviews'][number], 'branches' | 'flank'>;
 	}
-	const { post }: Props = $props();
+	const { review }: Props = $props();
+
+	const prefix = review.backdrop.source === 'tmdb' && 'https://image.tmdb.org/t/p/w780/';
 </script>
 
 <div class="banner">
-	<img
-		src={post.backdrop}
-		alt="{typeof post.title === 'string' ? post.title : post.title.short || post.title.en} backdrop"
-	/>
+	<img src="{prefix || ''}{review.backdrop.path}" alt="{review.title} backdrop" />
 
-	<small class="rating">⭐ {post.rating}</small>
+	<small class="rating">⭐ {review.rating}</small>
 
 	<!-- TODO: figure out the UI
 	<small class="composed">

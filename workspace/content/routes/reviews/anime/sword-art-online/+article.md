@@ -6,13 +6,15 @@ released: 2012-07-08
 genres: [action, adventure, fantasy, game, romance]
 seen:
   first: 2020-04-01
-image:
-  en: https://image.tmdb.org/t/p/original/7LTDVXVuQKERnukKJLoBbdNzMYh.jpg
+poster:
+  source: tmdb
+  path: 7LTDVXVuQKERnukKJLoBbdNzMYh.jpg
+backdrop:
+  source: tmdb
+  path: pDqx7g9nQxRCGch5WFKvDFmJ87o.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/11757/Sword_Art_Online
 ---
-
-![SAO Main Backdrop](https://image.tmdb.org/t/p/original/pDqx7g9nQxRCGch5WFKvDFmJ87o.jpg)
 
 <!-- SEASON DIVIDER -->
 ## Season 1 - Aincrad Arc

@@ -20,9 +20,8 @@ export const schema = define(({ optional, array, record, literal, string, number
 	seen: { first: string(), last: optional(string()) },
 	rating: optional(record(array(record(number())))),
 
-	image: { en: string(), jp: optional(string()) },
-	backdrop: optional(string()),
-	logo: optional(string()),
+	poster: { source: literal('url', 'tmdb'), path: string() },
+	backdrop: { source: literal('url', 'tmdb'), path: string() },
 	link: optional(record(string())),
 	soundtracks: optional(
 		array({
@@ -40,7 +39,7 @@ await orchestrate('./routes/reviews', ({ breadcrumb: [file, slug, category], pat
 	const validate = attempt.wrap(schema);
 	return async ({ assemble, buffer, task }) => {
 		const { manifest, meta } = assemble(buffer.toString('utf-8'));
-		if (!manifest) throw new Error(`Manifest not found in ${file}`);
+		if (!manifest) throw new Error(`Manifest not found in ${category}/${slug}`);
 		const { data, error } = validate(manifest);
 		if (data) {
 			const unexpected = Object.keys(manifest).filter((key) => {

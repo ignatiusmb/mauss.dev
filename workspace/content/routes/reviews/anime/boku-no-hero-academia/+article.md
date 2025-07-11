@@ -9,12 +9,14 @@ genres: [action, comedy, school, shounen]
 seen:
   first: 2020-07-02
   last: "2021-09-26T18:04:14"
-image:
-  en: https://image.tmdb.org/t/p/original/mWHCII5OWHx5pRSN2VYYLvT8DbB.jpg
+poster:
+  source: tmdb
+  path: mWHCII5OWHx5pRSN2VYYLvT8DbB.jpg
+backdrop:
+  source: tmdb
+  path: ol0H2DGp4ifBHA4JDlCpwJWxnY2.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/31964/Boku_no_Hero_Academia
 ---
-
-![Boku no Hero Academia Backdrop](https://artworks.thetvdb.com/banners/fanart/original/305074-4.jpg)
 
 Finished S6 on 2023-03-25T21:18:00+07:00

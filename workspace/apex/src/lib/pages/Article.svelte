@@ -149,7 +149,7 @@
 		gap: 0.8rem;
 		justify-items: center;
 		padding: 0 0.5rem;
-		margin-top: 2rem;
+		margin: 2rem 0;
 
 		line-height: 1;
 
@@ -251,9 +251,6 @@
 			+ p:empty {
 				margin-top: 0.5rem;
 			}
-		}
-		> header + :not(section) {
-			margin-top: 4rem;
 		}
 		> .half-bleed,
 		> .breakout {

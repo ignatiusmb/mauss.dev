@@ -9,10 +9,12 @@ genres: [action, demons, historical, shounen, supernatural]
 seen:
   first: 2020-04-20
   last: "2022-02-14T02:11:18"
-image:
-  en: https://image.tmdb.org/t/p/original/wrCVHdkBlBWdJUZPvnJWcBRuhSY.jpg
-  jp: 
-backdrop: 
+poster:
+  source: tmdb
+  path: wrCVHdkBlBWdJUZPvnJWcBRuhSY.jpg
+backdrop:
+  source: tmdb
+  path: ugg7TDrDNct3xTtpfTVIcqMcSB7.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/38000/Kimetsu_no_Yaiba
   TMDB: https://www.themoviedb.org/tv/85937

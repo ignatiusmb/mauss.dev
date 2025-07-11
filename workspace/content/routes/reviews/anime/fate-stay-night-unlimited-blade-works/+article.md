@@ -6,10 +6,12 @@ released: 2014-10-12
 genres: [action, supernatural, magic, fantasy]
 seen:
   first: 2021-06-13
-image:
-  en: https://www.themoviedb.org/t/p/original/jyqi5BkDoKKIA2WAoz3HBtRHld3.jpg
-  jp: https://www.themoviedb.org/t/p/original/mZfLRVb51S0M51JDMp4i3bW6nzX.jpg
-backdrop: https://www.themoviedb.org/t/p/original/uqOcBHNHsmYPePmrvYhjraRxLdJ.jpg
+poster:
+  source: tmdb
+  path: jyqi5BkDoKKIA2WAoz3HBtRHld3.jpg
+backdrop:
+  source: tmdb
+  path: uqOcBHNHsmYPePmrvYhjraRxLdJ.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/22297/Fatestaynight:UnlimitedBladeWorks
 ---

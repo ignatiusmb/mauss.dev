@@ -29,10 +29,12 @@ rating:
     - engagement: 10
     - relatable: 7
     - impact: 9
-image:
-  en: https://image.tmdb.org/t/p/original/qgrk7r1fV4IjuoeiGS5HOhXNdLJ.jpg
-  jp: https://image.tmdb.org/t/p/original/sGBRqb0Y3DlUpmYXPGUsy587ofd.jpg
-backdrop: https://image.tmdb.org/t/p/original/ize3ZieqSy0TCWljmVoEiy8fSFS.jpg
+poster:
+  source: tmdb
+  path: qgrk7r1fV4IjuoeiGS5HOhXNdLJ.jpg
+backdrop:
+  source: tmdb
+  path: ize3ZieqSy0TCWljmVoEiy8fSFS.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/38826/Tenki_no_Ko
 ---

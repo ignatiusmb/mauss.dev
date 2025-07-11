@@ -9,10 +9,12 @@ genres: [action, super power, supernatural, comedy, vampire, fantasy, shounen]
 seen:
   first: 2021-02-07
   last: "2022-01-09T14:38:44"
-image:
-  en: https://www.themoviedb.org/t/p/original/1IKNrWEqu2cpOmSpwHqaCbnbIzE.jpg
-  jp: https://www.themoviedb.org/t/p/original/uOUn6sBwkUjD72e9uf4F6nVfBRv.jpg
-backdrop: https://www.themoviedb.org/t/p/original/95dwaqiPjGFND2e4X0yWIzcIjWg.jpg
+poster:
+  source: tmdb
+  path: 1IKNrWEqu2cpOmSpwHqaCbnbIzE.jpg
+backdrop:
+  source: tmdb
+  path: 95dwaqiPjGFND2e4X0yWIzcIjWg.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/24439/Kekkai_Sensen
   TMDB: https://www.themoviedb.org/tv/62327

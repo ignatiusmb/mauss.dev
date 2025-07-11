@@ -9,10 +9,12 @@ genres: [romance, slice of life]
 seen:
   first: "2022-02-16T21:36:16"
   last: "2022-03-27T09:04:10"
-image:
-  en: https://www.themoviedb.org/t/p/original/w09TpdruCEhZcIPGDMhM6sGDhg7.jpg
-  jp: https://www.themoviedb.org/t/p/original/i9TswU0pOi9MTi75qeFxKqIBwz2.jpg
-backdrop: https://www.themoviedb.org/t/p/original/jyCeRldLBa2ofS8BFztVpxl6qaN.jpg
+poster:
+  source: tmdb
+  path: w09TpdruCEhZcIPGDMhM6sGDhg7.jpg
+backdrop:
+  source: tmdb
+  path: jyCeRldLBa2ofS8BFztVpxl6qaN.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/48736/Sono_Bisque_Doll_wa_Koi_wo_Suru
   TMDB: https://www.themoviedb.org/tv/123249

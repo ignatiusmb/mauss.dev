@@ -29,10 +29,12 @@ rating:
     - engagement: 10
     - relatable: 6
     - impact: 8
-image:
-  en: https://image.tmdb.org/t/p/original/f7UABkINaQCWMHUOkq1XdB7SFOS.jpg
-  jp: https://image.tmdb.org/t/p/original/iyGAE2VqsRFT2Yp0e63L90qjHwU.jpg
-backdrop: https://image.tmdb.org/t/p/original/e7TRYDKXHQD6xLcmA1b0OtVt0E0.jpg
+poster:
+  source: tmdb
+  path: f7UABkINaQCWMHUOkq1XdB7SFOS.jpg
+backdrop:
+  source: tmdb
+  path: e7TRYDKXHQD6xLcmA1b0OtVt0E0.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/32281/kimi_no_na_wa
 ---

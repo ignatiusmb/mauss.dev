@@ -30,9 +30,12 @@ rating:
     - engagement: 10
     - relatable: 10
     - impact: 10
-image:
-  en: https://image.tmdb.org/t/p/original/5Wf9Y6gucbu1LMe1FyqD8TQjaNM.jpg
-backdrop: 
+poster:
+  source: tmdb
+  path: 5Wf9Y6gucbu1LMe1FyqD8TQjaNM.jpg
+backdrop:
+  source: tmdb
+  path: deOIxqHGfAavUhRonk5z24iaXXd.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/32182/Mob_Psycho_100
   TMDB: https://www.themoviedb.org/tv/67075-100

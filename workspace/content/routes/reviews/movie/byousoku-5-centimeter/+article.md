@@ -29,8 +29,12 @@ rating:
     - engagement: 8
     - relatable: 10
     - impact: 9
-image:
-  en: https://image.tmdb.org/t/p/original/t0ISGhwZtghakg46TWCOWBTIflZ.jpg
+poster:
+  source: tmdb
+  path: t0ISGhwZtghakg46TWCOWBTIflZ.jpg
+backdrop:
+  source: tmdb
+  path: zMj9lEBOi58Nj7EQ33EN2oOZRAR.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/1689/Byousoku_5_Centimeter/
 ---

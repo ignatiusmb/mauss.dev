@@ -9,10 +9,12 @@ genres: [action, comedy, school, shounen]
 seen:
   first: 2021-03-19
   last: 2021-06-26
-image:
-  en: https://www.themoviedb.org/t/p/original/wOd98jDHkoWy2LZ4gSy67X1ihv1.jpg
-  jp: https://www.themoviedb.org/t/p/original/fIOYLPOorKvP4wut9y0edpnWROz.jpg
-backdrop: https://www.themoviedb.org/t/p/original/62pIwEsYX2dtlyMJjDSM6zpDTU2.jpg
+poster:
+  source: tmdb
+  path: wOd98jDHkoWy2LZ4gSy67X1ihv1.jpg
+backdrop:
+  source: tmdb
+  path: 62pIwEsYX2dtlyMJjDSM6zpDTU2.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/24833/Ansatsu_Kyoushitsu
   TMDB: https://www.themoviedb.org/tv/62110-ansatsu-ky-shitsu
