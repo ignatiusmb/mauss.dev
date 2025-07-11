@@ -3,8 +3,5 @@
 	"type": "module",
 	"scripts": {
 		"sync": "node ./scripts/metadata.js"
-	},
-	"devDependencies": {
-		"aubade": "^0.10.2"
 	}
 }

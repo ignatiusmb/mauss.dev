@@ -12,6 +12,7 @@
 	"prettier": "mauss/prettier.config.js",
 	"devDependencies": {
 		"@types/node": "^24.0.13",
+		"aubade": "^0.10.3",
 		"mauss": "^0.10.6",
 		"prettier": "^3.6.2",
 		"prettier-plugin-sort-package-json": "^1.1.0",

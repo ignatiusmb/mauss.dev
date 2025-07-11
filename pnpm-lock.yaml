@@ -11,6 +11,9 @@ importers:
       '@types/node':
         specifier: ^24.0.13
         version: 24.0.13
+      aubade:
+        specifier: ^0.10.3
+        version: 0.10.3
       mauss:
         specifier: ^0.10.6
         version: 0.10.6
@@ -54,9 +57,6 @@ importers:
       '@sveltejs/vite-plugin-svelte':
         specifier: ^5.1.0
         version: 5.1.0(svelte@5.35.6)(vite@7.0.4(@types/node@24.0.13))
-      aubade:
-        specifier: ^0.10.3
-        version: 0.10.3
       sharp:
         specifier: ^0.34.3
         version: 0.34.3
@@ -73,11 +73,7 @@ importers:
         specifier: ^7.0.4
         version: 7.0.4(@types/node@24.0.13)
 
-  workspace/content:
-    devDependencies:
-      aubade:
-        specifier: ^0.10.2
-        version: 0.10.3
+  workspace/content: {}
 
 packages:
 
