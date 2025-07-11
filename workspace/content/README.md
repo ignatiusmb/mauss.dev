@@ -14,8 +14,8 @@ use this front matter block if you're writing your own post:
 ```yaml
 ---
 author:
-  name: <your_name>
-  img: /assets/profile/<filename>
-  link: <your_social_link>
+    name: <your_name>
+    img: /assets/profile/<filename>
+    link: <your_social_link>
 ---
 ```
