@@ -1,10 +1,12 @@
 ---
-date: "2020"
-released: "2021-01-06"
+date: 2020
 title: "Demon Slayer the Movie: Mugen Train"
 romaji: "Kimetsu no Yaiba Movie: Mugen Ressha-hen"
+tier: "?"
+released: 2021-01-06
 genres: [animation, action, demons, supernatural, shounen]
-verdict: pending
+seen:
+  first: 2021-01-15
 rating:
   narrative:
     - premise: 7
@@ -25,43 +27,10 @@ rating:
     - engagement: 10
     - relatable: 7
     - impact: 10
-
-seen:first: "2021-01-15"
-image:en: https://www.themoviedb.org/t/p/original/h8Rb9gBr48ODIwYUttZNYeMWeUU.jpg
-image:jp: https://www.themoviedb.org/t/p/original/m9cn5mhW519QKr1YGpGxNWi98VJ.jpg
+image:
+  en: https://www.themoviedb.org/t/p/original/h8Rb9gBr48ODIwYUttZNYeMWeUU.jpg
+  jp: https://www.themoviedb.org/t/p/original/m9cn5mhW519QKr1YGpGxNWi98VJ.jpg
 backdrop: https://www.themoviedb.org/t/p/original/xoqr4dMbRJnzuhsWDF3XNHQwJ9x.jpg
-
 link:
   MyAnimeList: https://myanimelist.net/anime/40456/Kimetsu_no_Yaiba_Movie__Mugen_Ressha-hen
 ---
-
-
-## Synopsis
-
-## Plot
-
-![Backdrop#f#fb](link "Source: TMDB")
-
-## Highlights
-
-### !{rating:0}/10 | Story & Plot
-
-### !{rating:1}/10 | Artwork & Animation
-
-### !{rating:2}/10 | Sound
-
-### !{rating:3}/10 | Characters
-
-## Verdict
-
-## $SPOILERS
-
-## $CLOSING
-
-## Soundtracks
-
-***
-Reference(s):
-
-- 1
-- 2

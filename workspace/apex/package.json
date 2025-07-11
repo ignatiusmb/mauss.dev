@@ -9,7 +9,7 @@
 		"prepare": "cp -n .env.example .env && svelte-kit sync"
 	},
 	"dependencies": {
-		"mauss": "^0.10.5",
+		"mauss": "^0.10.6",
 		"pocketbase": "^0.26.1"
 	},
 	"devDependencies": {
@@ -17,13 +17,12 @@
 		"@fontsource-variable/karla": "^5.2.6",
 		"@ignatiusmb/styles": "^0.1.1",
 		"@sveltejs/adapter-vercel": "^5.7.2",
-		"@sveltejs/kit": "^2.22.2",
+		"@sveltejs/kit": "^2.22.5",
 		"@sveltejs/vite-plugin-svelte": "^5.1.0",
-		"aubade": "^0.10.0",
-		"sharp": "^0.34.2",
-		"svelte": "^5.34.9",
+		"sharp": "^0.34.3",
+		"svelte": "^5.35.6",
 		"svelte-check": "^4.2.2",
-		"syv": "^0.0.49",
-		"vite": "^7.0.0"
+		"syv": "^0.0.50",
+		"vite": "^7.0.4"
 	}
 }

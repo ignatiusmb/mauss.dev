@@ -1,9 +1,11 @@
 ---
-date: "2020"
-released: "2017-04-09"
+date: 2020
 title: Eromanga-sensei
+tier: "?"
+released: 2017-04-09
 genres: [comedy, drama, romance, ecchi]
-verdict: pending
+seen:
+  first: 2020-06-07
 rating:
   narrative:
     - premise: 8
@@ -23,11 +25,8 @@ rating:
     - engagement: 8
     - relatable: 4
     - impact: 7
-
-seen:first: "2020-06-07"
-image:en: https://image.tmdb.org/t/p/original/vR6rPnVyWUSU7im2QcKXwSjjCXM.jpg
-image:jp:
-
+image:
+  en: https://image.tmdb.org/t/p/original/vR6rPnVyWUSU7im2QcKXwSjjCXM.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/32901/eromanga-sensei
 ---

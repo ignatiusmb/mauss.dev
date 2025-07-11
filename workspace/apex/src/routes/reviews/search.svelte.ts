@@ -3,9 +3,9 @@ import { compare, date, inspect } from 'mauss';
 
 export type Query = {
 	search: string;
+	tier: string;
 	category: string;
 	genres: string[];
-	verdict: string;
 	sort_by: keyof typeof by;
 };
 
@@ -13,8 +13,8 @@ export function sift(items: Items['/reviews'], payload: Query) {
 	const value = normalize(payload.search);
 	const results = items.filter((item) => {
 		const filters = [
+			payload.tier && payload.tier !== item.tier,
 			payload.category && payload.category !== item.category,
-			payload.verdict && payload.verdict !== item.verdict,
 			payload.genres.length && !payload.genres.every((g) => item.genres.includes(g)),
 		];
 		const flags = [

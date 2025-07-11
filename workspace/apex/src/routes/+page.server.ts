@@ -14,7 +14,7 @@ export async function load({ fetch }) {
 	return {
 		curated: curated.slice(0, 4),
 		posts: posts.slice(0, 4),
-		reviews: reviews.filter((x) => x.rating && x.verdict !== 'pending').slice(0, 4),
+		reviews: reviews.slice(0, 4),
 		meta: {
 			title: channel.title,
 			description: channel.description,

@@ -2,7 +2,6 @@
 	import Article from '$lib/pages/Article.svelte';
 	import LinkSpread from './[branch]/LinkSpread.svelte';
 	import Backdrop from './Backdrop.svelte';
-	import Verdict from './Verdict.svelte';
 
 	const { data } = $props();
 </script>
@@ -15,8 +14,6 @@
 			<LinkSpread links={data.article.link} />
 		{/if}
 	{/snippet}
-
-	<Verdict verdict={data.article.verdict} size="1.25rem" />
 
 	<section data-info="warning" style:margin="1rem 0">
 		<!-- prettier-ignore -->

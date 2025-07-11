@@ -1,15 +1,17 @@
 ---
-date: "2020"
-released: "2017-07-07"
+date: 2020
 title: Made in Abyss
-genres: [adventure, fantasy, mystery]
+tier: "?"
+released: 2017-07-07
 completed: 25/25
-verdict: pending
+genres: [adventure, fantasy, mystery]
+seen:
+  first: "2023-01-24T21:09:00+07:00"
+  last: "2023-02-11T00:47:00+07:00"
 rating:
   narrative:
     - premise: 10
     - pacing: 8
-    # - resolution: 10
     - direction: 10
   characterization:
     - development: 10
@@ -27,14 +29,9 @@ rating:
     - engagement: 10
     - relatable: 7
     - impact: 9
-
+image:
+  en: https://www.themoviedb.org/t/p/original/n30CBH4BoN5Z34tCpOWIPGJYOaS.jpg
 backdrop: https://www.themoviedb.org/t/p/original/faEKyqjgnPw6oZ0niowLYsjT5qD.jpg
-image:en: https://www.themoviedb.org/t/p/original/n30CBH4BoN5Z34tCpOWIPGJYOaS.jpg
-
-seen:
-  first: "2023-01-24T21:09:00+07:00"
-  last: "2023-02-11T00:47:00+07:00"
-
 link:
   IMDb: https://www.imdb.com/title/tt7222086/
   MyAnimeList: https://myanimelist.net/anime/34599/Made_in_Abyss

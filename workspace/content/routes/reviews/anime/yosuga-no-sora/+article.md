@@ -1,11 +1,13 @@
 ---
-date: "2020-06-25"
-released: "2010-10-04"
+date: 2020-06-25
 title: "Yosuga no Sora: In Solitude, Where We Are Least Alone"
-genres: [drama, romance, tsundere, ecchi, harem]
 alias: [Yosuga no Sora]
-
+tier: C
+released: 2010-10-04
 verdict: contextual
+genres: [drama, romance, tsundere, ecchi, harem]
+seen:
+  first: 2020-06-06
 rating:
   narrative:
     - premise: 8
@@ -29,24 +31,21 @@ rating:
     - engagement: 9
     - relatable: 4
     - impact: 8
-
-seen:first: "2020-06-06"
-image:en: https://image.tmdb.org/t/p/original/9F80WGUD6WYfoEDMImf988NlXhC.jpg
+image:
+  en: https://image.tmdb.org/t/p/original/9F80WGUD6WYfoEDMImf988NlXhC.jpg
 backdrop: https://image.tmdb.org/t/p/original/haeBJjV2JHfopKl4dYE7RJwASlF.jpg
-
 link:
   MyAnimeList: https://myanimelist.net/anime/8861/Yosuga_no_Sora__In_Solitude_Where_We_Are_Least_Alone
-
 soundtracks:
-  - name: 比翼の羽根
+  - title: 比翼の羽根
     type: OP
     artist: eufonius
     youtube: Q3GrcwZqZNU
-  - name: ツナグキズナ
+  - title: ツナグキズナ
     type: ED
     artist: Team.Nekokan feat. Junka Amaoto
     youtube: NAGTD9S4XN4
-  - name: Pinky Jones
+  - title: Pinky Jones
     type: ED Specials
     artist: Momoiro Clover Z
     youtube: qVn3_qeIrBA

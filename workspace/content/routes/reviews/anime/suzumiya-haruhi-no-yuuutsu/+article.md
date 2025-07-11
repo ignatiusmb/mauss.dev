@@ -1,24 +1,19 @@
 ---
-date: "2020"
-released: "2006-04-03"
+date: 2020
 title: The Melancholy of Haruhi Suzumiya
 romaji: Suzumiya Haruhi no Yuuutsu
+tier: "?"
+released: 2006-04-03
 genres: [slice of life, mystery, comedy, school, sci-fi]
-verdict: pending
-
-seen:first: "2021-02-17"
-image:en: https://www.themoviedb.org/t/p/original/5rbehM5zkF8xlLce4F9kJZWhqmU.jpg
-image:jp: https://www.themoviedb.org/t/p/original/ioCuc65eEnAjulwjd9i8nOuIcRV.jpg
+seen:
+  first: 2021-02-17
+image:
+  en: https://www.themoviedb.org/t/p/original/5rbehM5zkF8xlLce4F9kJZWhqmU.jpg
+  jp: https://www.themoviedb.org/t/p/original/ioCuc65eEnAjulwjd9i8nOuIcRV.jpg
 backdrop: https://www.themoviedb.org/t/p/original/gDlx60iOCQjTLH53ybjAPOUyVIp.jpg
-
 link:
   MyAnimeList: https://myanimelist.net/anime/849/suzumiya_haruhi_no_yuuutsu, https://myanimelist.net/anime/4382/Suzumiya_Haruhi_no_Yuuutsu_2009/
 ---
-
-
-## Synopsis
-
-## Plot
 
 <!-- TODO: explain ways to watch -->
 
@@ -29,27 +24,3 @@ Here's an elaboration on why I highly recommend to watch the broadcast order fir
 ![broadcast and chronological order#d#f](https://i.imgur.com/CMaAuPB.png "Infographic on how to watch Haruhi")
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/gDlx60iOCQjTLH53ybjAPOUyVIp.jpg "Source: TMDB")
-
-## Highlights
-
-### !{rating:0}/10 | Story & Plot
-
-### !{rating:1}/10 | Artwork & Animation
-
-### !{rating:2}/10 | Sound
-
-### !{rating:3}/10 | Characters
-
-## Verdict
-
-## $SPOILERS
-
-## $CLOSING
-
-## Soundtracks
-
-***
-Reference(s):
-
-- 1
-- 2

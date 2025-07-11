@@ -1,11 +1,13 @@
 ---
-date: "2025-07-01"
-released: "2011-04-03"
+date: 2025-07-01
 title: "Nichijou: My Ordinary Life"
 alias: [Nichijou]
-
-genres: [comedy, slapstick, slice of life, school, shounen]
+tier: S
+released: 2011-04-03
 verdict: must-watch
+genres: [comedy, slapstick, slice of life, school, shounen]
+seen:
+  first: 2020-08-09
 rating:
   narrative:
     - premise: 10
@@ -28,11 +30,9 @@ rating:
     - engagement: 10
     - relatable: 10
     - impact: 10
-
-seen:first: "2020-08-09"
-image:en: https://image.tmdb.org/t/p/original/qmi1VpOvPFRHg02fbLuc3pVrMbt.jpg
+image:
+  en: https://image.tmdb.org/t/p/original/qmi1VpOvPFRHg02fbLuc3pVrMbt.jpg
 backdrop: https://image.tmdb.org/t/p/original/us9UFxr1ScqDxtVvuLFziCbddnK.jpg
-
 link:
   MyAnimeList: https://myanimelist.net/anime/10165/Nichijou
 ---
