@@ -1,11 +1,11 @@
 ---
 date: 2020
-released: 2016-01-14
 title: "KonoSuba: God's Blessing on This Wonderful World!"
 romaji: "Kono Subarashii Sekai ni Shukufuku wo!"
 alias: [KonoSuba]
-genres: [isekai, adventure, comedy, fantasy, parody, supernatural]
 tier: "?"
+released: 2016-01-14
+genres: [isekai, adventure, comedy, fantasy, parody, supernatural]
 seen:
   first: 2020-09-27
 image:

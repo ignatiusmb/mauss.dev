@@ -1,18 +1,18 @@
 ---
 date: 2020
-released: 2019-04-06
 title: Demon Slayer
 romaji: Kimetsu no Yaiba
-genres: [action, demons, historical, shounen, supernatural]
-completed: 63/63
 tier: "?"
-backdrop: 
-image:
-  en: https://image.tmdb.org/t/p/original/wrCVHdkBlBWdJUZPvnJWcBRuhSY.jpg
-  jp: 
+released: 2019-04-06
+completed: 63/63
+genres: [action, demons, historical, shounen, supernatural]
 seen:
   first: 2020-04-20
   last: "2022-02-14T02:11:18"
+image:
+  en: https://image.tmdb.org/t/p/original/wrCVHdkBlBWdJUZPvnJWcBRuhSY.jpg
+  jp: 
+backdrop: 
 link:
   MyAnimeList: https://myanimelist.net/anime/38000/Kimetsu_no_Yaiba
   TMDB: https://www.themoviedb.org/tv/85937

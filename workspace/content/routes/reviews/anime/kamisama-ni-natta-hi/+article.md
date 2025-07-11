@@ -1,10 +1,10 @@
 ---
 date: 2020
-released: 2020-10-11
 title: The Day I Become a God
 romaji: Kamisama ni Natta Hi
-genres: [comedy, drama, fantasy]
 tier: "?"
+released: 2020-10-11
+genres: [comedy, drama, fantasy]
 seen:
   first: 2020-12-27
 image:

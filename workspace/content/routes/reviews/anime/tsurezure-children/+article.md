@@ -1,10 +1,10 @@
 ---
 date: 2020
-released: 2017-07-04
 title: Tsuredure Children
 romaji: Tsurezure Children
-genres: [comedy, romance, school, shounen]
 tier: "?"
+released: 2017-07-04
+genres: [comedy, romance, school, shounen]
 seen:
   first: 2021-02-03
 image:
@@ -13,6 +13,5 @@ backdrop: https://www.themoviedb.org/t/p/original/8bvcMjlU0ahkyQTXcwQLbjJ3ZMq.jp
 link:
   MyAnimeList: https://myanimelist.net/anime/34902/Tsurezure_Children
 ---
-
 
 ![Tsuredure Backdrop#f#fb](https://www.themoviedb.org/t/p/original/wVIpBQ7elYVOincJdmc71SFwnQJ.jpg "Source: TMDB")

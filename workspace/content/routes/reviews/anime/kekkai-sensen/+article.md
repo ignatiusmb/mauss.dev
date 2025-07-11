@@ -1,22 +1,21 @@
 ---
 date: 2020
-released: 2015-04-05
 title: Blood Blockade Battlefront
 romaji: Kekkai Sensen
-genres: [action, super power, supernatural, comedy, vampire, fantasy, shounen]
-completed: 13/24
 tier: "?"
-backdrop: https://www.themoviedb.org/t/p/original/95dwaqiPjGFND2e4X0yWIzcIjWg.jpg
-image:
-  en: https://www.themoviedb.org/t/p/original/1IKNrWEqu2cpOmSpwHqaCbnbIzE.jpg
-  jp: https://www.themoviedb.org/t/p/original/uOUn6sBwkUjD72e9uf4F6nVfBRv.jpg
+released: 2015-04-05
+completed: 13/24
+genres: [action, super power, supernatural, comedy, vampire, fantasy, shounen]
 seen:
   first: 2021-02-07
   last: "2022-01-09T14:38:44"
+image:
+  en: https://www.themoviedb.org/t/p/original/1IKNrWEqu2cpOmSpwHqaCbnbIzE.jpg
+  jp: https://www.themoviedb.org/t/p/original/uOUn6sBwkUjD72e9uf4F6nVfBRv.jpg
+backdrop: https://www.themoviedb.org/t/p/original/95dwaqiPjGFND2e4X0yWIzcIjWg.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/24439/Kekkai_Sensen
   TMDB: https://www.themoviedb.org/tv/62327
 ---
-
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/iQFyfYCZh0Y2E3nAOIHF0ZackS9.jpg "Source: TMDB")

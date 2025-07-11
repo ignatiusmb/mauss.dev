@@ -1,9 +1,9 @@
 ---
 date: 2020
-released: 2014-04-06
 title: "Haikyuu!!"
-genres: [comedy, sports, drama]
 tier: "?"
+released: 2014-04-06
+genres: [comedy, sports, drama]
 seen:
   first: 2020-12-19
 image:

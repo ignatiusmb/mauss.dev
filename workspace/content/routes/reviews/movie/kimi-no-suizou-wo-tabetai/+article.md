@@ -1,10 +1,10 @@
 ---
 date: 2020
-released: 2018-09-01
 title: I want to eat your pancreas
 romaji: Kimi no Suizou wo Tabetai
-genres: [animation, drama, romance]
 tier: "?"
+released: 2018-09-01
+genres: [animation, drama, romance]
 seen:
   first: 2020-09-05
 image:

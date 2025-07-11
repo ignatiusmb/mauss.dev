@@ -1,10 +1,10 @@
 ---
 date: 2020
-released: 2019-11-08
 title: "Re:ZERO -Starting Life in Another World-: Frozen Bonds"
 alias: [Re ZERO, "Re:ZERO - Frozen Bonds"]
-genres: [animation, drama, thriller, fantasy]
 tier: "?"
+released: 2019-11-08
+genres: [animation, drama, thriller, fantasy]
 seen:
   first: 2020-10-04
 image:

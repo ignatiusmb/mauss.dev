@@ -1,8 +1,8 @@
 ---
 date: 2020
 title: "Corpse Party: Tortured Souls"
-released: 2013-07-24
 tier: "?"
+released: 2013-07-24
 completed: 4/4
 genres: [horror, mystery, supernatural]
 seen:

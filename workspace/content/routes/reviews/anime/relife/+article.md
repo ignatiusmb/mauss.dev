@@ -1,9 +1,9 @@
 ---
 date: 2020
-released: 2016-07-02
 title: ReLIFE
-genres: [slice of life, romance, drama]
 tier: "?"
+released: 2016-07-02
+genres: [slice of life, romance, drama]
 seen:
   first: 2020-05-30
 image:

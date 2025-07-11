@@ -1,9 +1,9 @@
 ---
 date: 2020
-released: 2014-10-07
 title: "The Heroes of Olympus: The Blood of Olympus"
-genres: [adventure, fantasy, mystery]
 tier: "?"
+released: 2014-10-07
+genres: [adventure, fantasy, mystery]
 seen:
   first: 2020
 image:

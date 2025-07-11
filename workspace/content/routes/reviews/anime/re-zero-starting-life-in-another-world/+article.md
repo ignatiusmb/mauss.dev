@@ -1,9 +1,9 @@
 ---
 date: 2020
-released: 2016-04-04
 title: "Re:Zero -Starting Life in Another World-"
-genres: [isekai, drama, comedy, fantasy, adventure, thriller, action]
 tier: "?"
+released: 2016-04-04
+genres: [isekai, drama, comedy, fantasy, adventure, thriller, action]
 seen:
   first: 2021-03-25
 image:

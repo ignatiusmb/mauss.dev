@@ -1,8 +1,8 @@
 ---
 date: 2020
 title: God Eater
-released: 2015-07-12
 tier: "?"
+released: 2015-07-12
 completed: 13/13
 genres: [action, sci-fi, military, fantasy]
 seen:

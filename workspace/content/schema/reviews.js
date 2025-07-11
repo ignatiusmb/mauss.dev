@@ -6,15 +6,15 @@ export const schema = define(({ optional, array, record, literal, string, number
 	date: string(),
 	title: string(),
 	romaji: optional(string()),
+	hanzi: optional(string()),
 	alias: optional(array(string())),
 
-	released: string(),
 	tier: optional(literal('S', 'A', 'B', 'C', 'D', '?'), '?'),
+	released: string(),
 	progress: optional(string()),
 	completed: optional(string()),
 	verdict: optional(
 		literal('pending', 'not-recommended', 'contextual', 'recommended', 'must-watch'),
-		'pending',
 	),
 	genres: array(string()),
 	seen: { first: string(), last: optional(string()) },
@@ -22,7 +22,17 @@ export const schema = define(({ optional, array, record, literal, string, number
 
 	image: { en: string(), jp: optional(string()) },
 	backdrop: optional(string()),
+	logo: optional(string()),
 	link: optional(record(string())),
+	soundtracks: optional(
+		array({
+			title: string(),
+			type: optional(string()),
+			artist: optional(string()),
+			youtube: optional(string()),
+			spotify: optional(string()),
+		}),
+	),
 }));
 
 await orchestrate('./routes/reviews', ({ breadcrumb: [file, slug, category], path }) => {
@@ -33,12 +43,17 @@ await orchestrate('./routes/reviews', ({ breadcrumb: [file, slug, category], pat
 		if (!manifest) throw new Error(`Manifest not found in ${file}`);
 		const { data, error } = validate(manifest);
 		if (data) {
-			console.log(`\x1b[32m✓\x1b[0m ${category}/${slug}`);
+			const unexpected = Object.keys(manifest).filter((key) => {
+				if (key in data) return false;
+				console.log(`\x1b[33m⚠\x1b[0m ${category}/${slug} - Unexpected "${key}"`);
+				return true;
+			});
+			if (!unexpected.length) console.log(`\x1b[32m✓\x1b[0m ${category}/${slug}`);
+			const metadata = stringify(unexpected.length ? manifest : data);
 			task(async ({ fs }) => {
 				const body = meta.body.trim();
 				const gutter = body.length ? '\n\n' : '';
-				// @TODO: use `data` instead of `manifest`, but handle additional fields
-				await fs.writeFile(path, `---\n${stringify(manifest)}\n---${gutter + body}\n`);
+				await fs.writeFile(path, `---\n${metadata}\n---${gutter + body}\n`);
 			});
 		} else {
 			const path = `\x1b[31m✘\x1b[0m ${category}/${slug}`;

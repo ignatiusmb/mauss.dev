@@ -1,8 +1,8 @@
 ---
 date: 2020
 title: Dr. Stone
-released: 2019-07-05
 tier: "?"
+released: 2019-07-05
 genres: [adventure, sci-fi, shounen]
 seen:
   first: 2021-05-23

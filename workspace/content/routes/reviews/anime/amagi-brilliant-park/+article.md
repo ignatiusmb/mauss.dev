@@ -1,8 +1,8 @@
 ---
 date: 2020
 title: Amagi Brilliant Park
-released: 2014-10-07
 tier: "?"
+released: 2014-10-07
 completed: 13/13
 genres: [comedy, drama, fantasy]
 seen:

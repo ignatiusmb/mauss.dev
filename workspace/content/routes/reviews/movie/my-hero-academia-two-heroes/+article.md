@@ -1,10 +1,10 @@
 ---
 date: 2020
-released: 2018-08-03
 title: "My Hero Academia: Two Heroes"
 romaji: "Boku no Hero Academia: Futari no Hero"
-genres: [animation, action, shounen, super power]
 tier: "?"
+released: 2018-08-03
+genres: [animation, action, shounen, super power]
 seen:
   first: 2020-07-19
 image:

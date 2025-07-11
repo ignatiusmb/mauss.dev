@@ -1,9 +1,9 @@
 ---
 date: 2020
-released: 2011-12-04
 title: Black Mirror
-genres: [drama, sci-fi, thriller]
 tier: "?"
+released: 2011-12-04
+genres: [drama, sci-fi, thriller]
 seen:
   first: 2020
 image:

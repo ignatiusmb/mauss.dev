@@ -1,9 +1,9 @@
 ---
 date: 2020
-released: 2021-01-10
 title: Horimiya
-genres: [slice of life, romance, comedy, school, shounen]
 tier: "?"
+released: 2021-01-10
+genres: [slice of life, romance, comedy, school, shounen]
 seen:
   first: 2021-05-01
 image:

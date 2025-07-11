@@ -1,9 +1,9 @@
 ---
 date: 2020
-released: 2017-04-08
 title: "Re:Creators"
-genres: [action, sci-fi, fantasy, mecha]
 tier: "?"
+released: 2017-04-08
+genres: [action, sci-fi, fantasy, mecha]
 seen:
   first: 2021-03-14
 image:
@@ -12,6 +12,5 @@ backdrop: https://www.themoviedb.org/t/p/original/A695xuEj2MJgAxMn5EfvbbHPyBx.jp
 link:
   MyAnimeList: https://myanimelist.net/anime/34561/Re_Creators
 ---
-
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/4Q6eUPWDSQmws34Y1U9bZRZxjuz.jpg "Source: TMDB")

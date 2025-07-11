@@ -1,10 +1,10 @@
 ---
 date: 2020
-released: 2020-10-06
 title: Sleepy Princess in the Demon Castle
 romaji: Maoujou de Oyasumi
-genres: [slice of life, comedy, supernatural, magic, fantasy, shounen]
 tier: "?"
+released: 2020-10-06
+genres: [slice of life, comedy, supernatural, magic, fantasy, shounen]
 seen:
   first: 2020-12-22
 image:

@@ -1,9 +1,9 @@
 ---
 date: 2020
-released: 2013-10-08
 title: "The Heroes of Olympus: The House of Hades"
-genres: [adventure, fantasy, mystery]
 tier: "?"
+released: 2013-10-08
+genres: [adventure, fantasy, mystery]
 seen:
   first: 2020
 image:

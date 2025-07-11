@@ -1,9 +1,9 @@
 ---
 date: 2020
-released: 2017-09-22
 title: "Doki Doki Literature Club!"
-genres: [visual novel]
 tier: "?"
+released: 2017-09-22
+genres: [visual novel]
 seen:
   first: 2021-04-15
 image:
@@ -14,6 +14,5 @@ link:
   itch.io: https://teamsalvato.itch.io/ddlc
   Steam: https://store.steampowered.com/app/698780/Doki_Doki_Literature_Club/
 ---
-
 
 ![Backdrop#f#fb](https://wallpapercave.com/wp/wp2367709.png "Source: WallpaperCave")

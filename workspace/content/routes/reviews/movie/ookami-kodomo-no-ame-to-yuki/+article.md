@@ -1,10 +1,10 @@
 ---
 date: 2020
-released: 2012-07-21
 title: Wolf Children
 romaji: Ookami Kodomo no Ame to Yuki
-genres: [animation, fantasy, slice of life]
 tier: "?"
+released: 2012-07-21
+genres: [animation, fantasy, slice of life]
 seen:
   first: 2020
 image:

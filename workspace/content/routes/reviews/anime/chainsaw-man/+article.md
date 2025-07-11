@@ -1,8 +1,8 @@
 ---
 date: 2020
 title: Chainsaw Man
-released: 2022-10-12
 tier: "?"
+released: 2022-10-12
 completed: 12/12
 genres: [action, fantasy]
 seen:

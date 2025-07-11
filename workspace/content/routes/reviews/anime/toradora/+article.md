@@ -1,9 +1,9 @@
 ---
 date: 2020
-released: 2008-10-02
 title: "Toradora!"
-genres: [romance, comedy, slice of life, school]
 tier: "?"
+released: 2008-10-02
+genres: [romance, comedy, slice of life, school]
 seen:
   first: 2020
 image:

@@ -1,10 +1,13 @@
 ---
 date: 2020
-released: 2016-07-11
 title: Mob Psycho 100
-genres: [action, comedy, supernatural]
-completed: 37/37
 tier: "?"
+released: 2016-07-11
+completed: 37/37
+genres: [action, comedy, supernatural]
+seen:
+  first: 2020-07-14
+  last: "2022-12-22T02:24:00+07:00"
 rating:
   narrative:
     - premise: 10
@@ -27,17 +30,13 @@ rating:
     - engagement: 10
     - relatable: 10
     - impact: 10
-backdrop: 
 image:
   en: https://image.tmdb.org/t/p/original/5Wf9Y6gucbu1LMe1FyqD8TQjaNM.jpg
-seen:
-  first: 2020-07-14
-  last: "2022-12-22T02:24:00+07:00"
+backdrop: 
 link:
   MyAnimeList: https://myanimelist.net/anime/32182/Mob_Psycho_100
   TMDB: https://www.themoviedb.org/tv/67075-100
 ---
-
 
 Started S3 on 2022-10-06T23:58:00+07:00
 

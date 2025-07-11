@@ -1,9 +1,9 @@
 ---
 date: 2020
-released: 2015-04-05
 title: Plastic Memories
-genres: [romance, sci-fi, drama]
 tier: "?"
+released: 2015-04-05
+genres: [romance, sci-fi, drama]
 seen:
   first: 2020-08-03
 image:

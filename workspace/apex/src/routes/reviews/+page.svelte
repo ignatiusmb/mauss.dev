@@ -116,7 +116,6 @@
 			in:scale={{ duration: TIME.SLIDE }}
 		>
 			<header>
-				<!-- <Tier tier={post.tier || '?'} /> -->
 				<span>{post.category}</span>
 			</header>
 			<Image src={post.image.en} alt={post.title} ratio={3 / 2} styles={{ '--border-radius': 0 }}>

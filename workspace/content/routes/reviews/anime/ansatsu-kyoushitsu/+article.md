@@ -2,10 +2,10 @@
 date: 2020
 title: Assassination Classroom
 romaji: Ansatsu Kyoushitsu
-released: 2015-01-10
 tier: "?"
-genres: [action, comedy, school, shounen]
+released: 2015-01-10
 completed: 47/47
+genres: [action, comedy, school, shounen]
 seen:
   first: 2021-03-19
   last: 2021-06-26

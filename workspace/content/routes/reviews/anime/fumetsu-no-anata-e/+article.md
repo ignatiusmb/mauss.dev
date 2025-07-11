@@ -2,8 +2,8 @@
 date: 2020
 title: To Your Eternity
 romaji: Fumetsu no Anata e
-released: 2021-04-12
 tier: "?"
+released: 2021-04-12
 completed: 21/40
 genres: [adventure, drama, supernatural]
 seen:

@@ -1,12 +1,14 @@
 ---
 date: 2020-08-24
-released: 2019-01-08
 title: "WATATEN!: an Angel Flew Down to Me"
 romaji: "Watashi ni Tenshi ga Maiorita!"
 alias: ["Wataten!"]
 tier: B
-genres: [comedy, slice of life, shoujo ai]
+released: 2019-01-08
 verdict: recommended
+genres: [comedy, slice of life, shoujo ai]
+seen:
+  first: 2020-08-23
 rating:
   narrative:
     - premise: 8
@@ -28,8 +30,6 @@ rating:
     - engagement: 10
     - relatable: 7
     - impact: 8
-seen:
-  first: 2020-08-23
 image:
   en: https://image.tmdb.org/t/p/original/yaIs7UDJ6Vo7DbWPl4cTdv4bUw7.jpg
   jp: https://image.tmdb.org/t/p/original/yaIs7UDJ6Vo7DbWPl4cTdv4bUw7.jpg
@@ -37,12 +37,12 @@ backdrop: https://image.tmdb.org/t/p/original/djKJBmJI4gS9snTn2Tzg3JO23YC.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/37993/Watashi_ni_Tenshi_ga_Maiorita
 soundtracks:
-  - name: Kimama na Tenshitachi
+  - title: Kimama na Tenshitachi
     type: OP/ED
     artist: Wataten☆Five
     youtube: KE_eUJeyMzM
     spotify: 7GXPTAop1kVgWds4ZiAboh
-  - name: Happy Happy Friends
+  - title: Happy Happy Friends
     type: ED02
     artist: Wataten☆Five
     youtube: RQVUsWlq8yw

@@ -2,8 +2,8 @@
 date: 2020
 title: My Hero Academia
 romaji: Boku no Hero Academia
-released: 2016-04-03
 tier: "?"
+released: 2016-04-03
 completed: 138/138
 genres: [action, comedy, school, shounen]
 seen:

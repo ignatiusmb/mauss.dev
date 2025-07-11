@@ -1,8 +1,8 @@
 ---
 date: 2020
 title: Asobi Asobase
-released: 2018-07-08
 tier: "?"
+released: 2018-07-08
 completed: 12/12
 genres: [comedy, school]
 seen:

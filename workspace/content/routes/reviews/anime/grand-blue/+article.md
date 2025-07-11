@@ -1,10 +1,10 @@
 ---
 date: 2020
-released: 2018-06-14
 title: Grand Blue Dreaming
 romaji: Grand Blue
-genres: [slice of life, comedy, seinen]
 tier: "?"
+released: 2018-06-14
+genres: [slice of life, comedy, seinen]
 seen:
   first: 2021-01-01
 image:

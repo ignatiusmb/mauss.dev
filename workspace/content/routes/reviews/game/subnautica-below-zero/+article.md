@@ -1,9 +1,9 @@
 ---
 date: 2020
-released: 2021-05-14
 title: "Subnautica: Below Zero"
-genres: [open world, survival]
 tier: "?"
+released: 2021-05-14
+genres: [open world, survival]
 seen:
   first: 2021-05-27
 image:

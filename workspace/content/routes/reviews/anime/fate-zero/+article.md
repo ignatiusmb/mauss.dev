@@ -1,8 +1,8 @@
 ---
 date: 2020
 title: Fate/Zero
-released: 2011-10-02
 tier: "?"
+released: 2011-10-02
 completed: 25/25
 genres: [action, fantasy, supernatural]
 seen:

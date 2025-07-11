@@ -1,8 +1,8 @@
 ---
 date: 2020
 title: Gabriel DropOut
-released: 2017-01-09
 tier: "?"
+released: 2017-01-09
 completed: 12/12
 genres: [comedy, supernatural]
 seen:

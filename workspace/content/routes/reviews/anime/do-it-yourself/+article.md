@@ -1,8 +1,8 @@
 ---
 date: 2020
 title: "Do It Yourself!!"
-released: 2022-10-06
 tier: "?"
+released: 2022-10-06
 completed: 12/12
 genres: [slice of life, school]
 seen:

@@ -1,8 +1,8 @@
 ---
 date: 2020
 title: Dororo
-released: 2019-01-07
 tier: "?"
+released: 2019-01-07
 completed: 24/24
 genres: [action, adventure, demons, historical, samurai, supernatural, shounen]
 seen:

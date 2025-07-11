@@ -2,8 +2,8 @@
 date: 2020
 title: Fire Force
 romaji: Enen no Shouboutai
-released: 2019-07-06
 tier: "?"
+released: 2019-07-06
 genres: [action, supernatural, shounen, comedy]
 seen:
   first: 2020-12-16

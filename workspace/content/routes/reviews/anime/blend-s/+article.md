@@ -1,8 +1,8 @@
 ---
 date: 2020
 title: BLEND-S
-released: 2017-10-08
 tier: "?"
+released: 2017-10-08
 genres: [slice of life, comedy, romance]
 seen:
   first: 2021-04-26

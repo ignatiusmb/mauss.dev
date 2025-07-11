@@ -1,8 +1,8 @@
 ---
 date: 2020
 title: "Akame ga Kill!"
-released: 2014-07-07
 tier: "?"
+released: 2014-07-07
 completed: 24/24
 genres: [action, adventure, drama, fantasy, shounen]
 seen:

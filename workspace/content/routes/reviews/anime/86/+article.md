@@ -1,8 +1,8 @@
 ---
 date: 2020
 title: "86: Eighty Six"
-released: 2021-04-11
 tier: "?"
+released: 2021-04-11
 completed: 23/23
 genres: [action, drama, sci-fi]
 seen:

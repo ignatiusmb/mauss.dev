@@ -1,10 +1,10 @@
 ---
 date: 2020
-released: 2021-01-08
 title: Bottom-Tier Character Tomozaki
 romaji: Jaku-Chara Tomozaki-kun
-genres: [drama, romance, school]
 tier: "?"
+released: 2021-01-08
+genres: [drama, romance, school]
 seen:
   first: 2021-05-17
 image:
@@ -14,6 +14,5 @@ backdrop: https://www.themoviedb.org/t/p/original/qYPha4t7w9x4F7B0VrjoOeX1Jkz.jp
 link:
   MyAnimeList: https://myanimelist.net/anime/40530/Jaku-Chara_Tomozaki-kun
 ---
-
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/xWhkbeNtpdvtmLkknzjbLoBghrA.jpg "Source: TMDB")

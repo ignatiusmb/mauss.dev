@@ -1,8 +1,8 @@
 ---
 date: 2020
 title: Arcane
-released: 2021-11-06
 tier: "?"
+released: 2021-11-06
 completed: 9/9
 genres: [animation, action, adventure, drama, sci-fi, steampunk]
 seen:

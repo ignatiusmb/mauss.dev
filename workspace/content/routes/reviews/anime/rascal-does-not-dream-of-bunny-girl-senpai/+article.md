@@ -1,11 +1,13 @@
 ---
 date: 2020
-released: 2018-10-04
 title: Rascal Does Not Dream of Bunny Girl Senpai
 romaji: Seishun Buta Yarou wa Bunny Girl Senpai no Yume wo Minai
 alias: [Seishun Buta Yarou, Bunny Girl Senpai]
-genres: [comedy, romance, school, mystery, supernatural]
 tier: "?"
+released: 2018-10-04
+genres: [comedy, romance, school, mystery, supernatural]
+seen:
+  first: 2020-07-23
 rating:
   narrative:
     - premise: 10
@@ -28,15 +30,12 @@ rating:
     - engagement: 9
     - relatable: 7
     - impact: 8
-seen:
-  first: 2020-07-23
 image:
   en: https://image.tmdb.org/t/p/original/cU4jHfo1Q9AEPnFqFqtuSA74gdi.jpg
   jp: https://image.tmdb.org/t/p/original/lq3HcsmM005htHUVL4fcjalCUrq.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/37450/Seishun_Buta_Yarou_wa_Bunny_Girl_Senpai_no_Yume_wo_Minai
 ---
-
 
 > A melancholic anime with the most misleading title ever
 

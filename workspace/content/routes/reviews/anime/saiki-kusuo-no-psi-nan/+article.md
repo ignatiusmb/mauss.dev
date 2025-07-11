@@ -1,10 +1,10 @@
 ---
 date: 2020
-released: 2016-07-04
 title: The Disastrous Life of Saiki K.
 romaji: Saiki Kusuo no Ψ-nan
-genres: [comedy, slice of life, supernatural, school, shounen]
 tier: "?"
+released: 2016-07-04
+genres: [comedy, slice of life, supernatural, school, shounen]
 seen:
   first: 2021-02-18
 image:
@@ -14,6 +14,5 @@ backdrop: https://www.themoviedb.org/t/p/original/hI76O9slOz3vPkhQWWQoN36WyhG.jp
 link:
   MyAnimeList: https://myanimelist.net/anime/33255/Saiki_Kusuo_no_%CE%A8-nan
 ---
-
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/8rO7i1rjAbBwzV6CJgkscbBVG2u.jpg "Source: TMDB")

@@ -1,8 +1,8 @@
 ---
 date: 2020
 title: "Fullmetal Alchemist: Brotherhood"
-released: 2009-04-05
 tier: "?"
+released: 2009-04-05
 genres: [action, adventure, fantasy, magic, drama]
 seen:
   first: 2020-06-09

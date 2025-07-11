@@ -2,8 +2,8 @@
 date: 2020
 title: Adachi and Shimamura
 romaji: Adachi to Shimamura
-released: 2020-10-09
 tier: "?"
+released: 2020-10-09
 genres: [slice of life, romance, school, shoujo ai]
 seen:
   first: 2020-12-27

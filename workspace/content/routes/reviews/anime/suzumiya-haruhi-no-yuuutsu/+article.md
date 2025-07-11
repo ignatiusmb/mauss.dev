@@ -1,10 +1,10 @@
 ---
 date: 2020
-released: 2006-04-03
 title: The Melancholy of Haruhi Suzumiya
 romaji: Suzumiya Haruhi no Yuuutsu
-genres: [slice of life, mystery, comedy, school, sci-fi]
 tier: "?"
+released: 2006-04-03
+genres: [slice of life, mystery, comedy, school, sci-fi]
 seen:
   first: 2021-02-17
 image:
@@ -14,7 +14,6 @@ backdrop: https://www.themoviedb.org/t/p/original/gDlx60iOCQjTLH53ybjAPOUyVIp.jp
 link:
   MyAnimeList: https://myanimelist.net/anime/849/suzumiya_haruhi_no_yuuutsu, https://myanimelist.net/anime/4382/Suzumiya_Haruhi_no_Yuuutsu_2009/
 ---
-
 
 <!-- TODO: explain ways to watch -->
 

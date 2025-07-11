@@ -2,8 +2,8 @@
 date: 2020
 title: Delicious in Dungeon
 romaji: Dungeon Meshi
-released: 2024-01-04
 tier: "?"
+released: 2024-01-04
 completed: 24/24
 genres: [adventure, comedy, fantasy]
 seen:

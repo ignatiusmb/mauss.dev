@@ -1,9 +1,9 @@
 ---
 date: 2020
-released: 2015-10-05
 title: One Punch Man
-genres: [action, sci-fi, comedy, super power, supernatural]
 tier: "?"
+released: 2015-10-05
+genres: [action, sci-fi, comedy, super power, supernatural]
 seen:
   first: 2020
 image:

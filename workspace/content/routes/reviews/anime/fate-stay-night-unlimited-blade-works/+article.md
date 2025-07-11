@@ -1,8 +1,8 @@
 ---
 date: 2020
 title: "Fate/stay night: Unlimited Blade Works"
-released: 2014-10-12
 tier: "?"
+released: 2014-10-12
 genres: [action, supernatural, magic, fantasy]
 seen:
   first: 2021-06-13

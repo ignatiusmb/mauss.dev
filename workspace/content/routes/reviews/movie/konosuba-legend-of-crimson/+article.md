@@ -1,10 +1,10 @@
 ---
 date: 2020
-released: 2019-08-30
 title: "KONOSUBA -God's blessing on this wonderful world!- Legend of Crimson"
 alias: [KONOSUBA - Legend of Crimson]
-genres: [animation, adventure, comedy, fantasy, magic]
 tier: "?"
+released: 2019-08-30
+genres: [animation, adventure, comedy, fantasy, magic]
 seen:
   first: 2020-11-05
 image:
@@ -14,6 +14,5 @@ backdrop: https://image.tmdb.org/t/p/original/bGKFAQsxS0dzRYSvyspRm0rZlfo.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/38040
 ---
-
 
 ![KONOSUBA Legend of Crimson Backdrop#f#fb](https://image.tmdb.org/t/p/original/m5HPKCi7GdhKmxPTcOQmcLfEmZ9.jpg "Source: TMDB")

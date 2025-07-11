@@ -1,9 +1,9 @@
 ---
 date: 2020
-released: 2012-07-08
 title: Sword Art Online
-genres: [action, adventure, fantasy, game, romance]
 tier: "?"
+released: 2012-07-08
+genres: [action, adventure, fantasy, game, romance]
 seen:
   first: 2020-04-01
 image:

@@ -1,9 +1,9 @@
 ---
 date: 2020
-released: 2021-04-08
 title: Before Your Eyes
-genres: [adventure, indie]
 tier: "?"
+released: 2021-04-08
+genres: [adventure, indie]
 seen:
   first: 2021-05-22
 image:

@@ -1,15 +1,15 @@
 ---
 date: 2020
-released: 2021-12-24
 title: Jujutsu Kaisen 0
-genres: [animation]
 tier: "?"
-backdrop: https://www.themoviedb.org/t/p/original/10jVpNPcl9uzVR7W6EXKRyKLTXZ.jpg
-image:
-  en: https://www.themoviedb.org/t/p/original/3pTwMUEavTzVOh6yLN0aEwR7uSy.jpg
+released: 2021-12-24
+genres: [animation]
 seen:
   first: "2022-03-14T16:26:00"
   last: "2022-03-14T18:04:00"
+image:
+  en: https://www.themoviedb.org/t/p/original/3pTwMUEavTzVOh6yLN0aEwR7uSy.jpg
+backdrop: https://www.themoviedb.org/t/p/original/10jVpNPcl9uzVR7W6EXKRyKLTXZ.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/48561/Jujutsu_Kaisen_0_Movie
   TMDB: https://www.themoviedb.org/movie/810693-0

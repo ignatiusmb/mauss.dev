@@ -1,11 +1,14 @@
 ---
 date: 2025-07-01
-released: 2021-10-02
 title: Blue Period
-genres: [school]
-progress: 12/12
 tier: B
+released: 2021-10-02
+progress: 12/12
 verdict: must-watch
+genres: [school]
+seen:
+  first: 2025-06-12
+  last: 2025-06-18
 rating:
   narrative:
     - premise: 10
@@ -28,12 +31,9 @@ rating:
     - engagement: 10
     - relatable: 10
     - impact: 10
-backdrop: https://image.tmdb.org/t/p/original/wCDf6ARpEIEsXDYXtOTGMspuGtq.jpg
 image:
   en: https://image.tmdb.org/t/p/original/cyCMX96AoqT9igMbE0a6njreAEd.jpg
-seen:
-  first: 2025-06-12
-  last: 2025-06-18
+backdrop: https://image.tmdb.org/t/p/original/wCDf6ARpEIEsXDYXtOTGMspuGtq.jpg
 link:
   IMDb: https://www.imdb.com/title/tt14115912
   MyAnimeList: https://myanimelist.net/anime/46352/Blue_Period

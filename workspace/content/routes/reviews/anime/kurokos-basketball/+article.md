@@ -1,10 +1,10 @@
 ---
 date: 2020
-released: 2012-04-08
 title: Kuroko's Basketball
 romaji: Kuroko no Basuke
-genres: [sports, school, comedy]
 tier: "?"
+released: 2012-04-08
+genres: [sports, school, comedy]
 seen:
   first: 2020-05-10
 image:

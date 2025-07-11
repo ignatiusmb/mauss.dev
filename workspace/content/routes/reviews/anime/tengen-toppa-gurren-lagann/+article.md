@@ -1,10 +1,10 @@
 ---
 date: 2020
-released: 2007-04-01
 title: Gurren Lagann
 romaji: Tengen Toppa Gurren Lagann
-genres: [action, adventure, comedy, mecha, sci-fi]
 tier: "?"
+released: 2007-04-01
+genres: [action, adventure, comedy, mecha, sci-fi]
 seen:
   first: 2021-01-24
 image:

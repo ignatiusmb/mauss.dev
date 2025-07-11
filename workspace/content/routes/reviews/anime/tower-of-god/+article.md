@@ -1,10 +1,10 @@
 ---
 date: 2020
-released: 2020-04-02
 title: Tower of God
 romaji: Kami no Tou
-genres: [action, adventure, mystery, drama, fantasy]
 tier: "?"
+released: 2020-04-02
+genres: [action, adventure, mystery, drama, fantasy]
 seen:
   first: 2020-07-07
 image:

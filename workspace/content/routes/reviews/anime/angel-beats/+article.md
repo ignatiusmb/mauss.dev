@@ -1,8 +1,8 @@
 ---
 date: 2020
 title: "Angel Beats!"
-released: 2010-04-03
 tier: "?"
+released: 2010-04-03
 genres: [action, comedy, drama, school, supernatural]
 seen:
   first: 2020-06-30

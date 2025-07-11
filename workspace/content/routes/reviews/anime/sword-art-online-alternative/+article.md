@@ -1,10 +1,10 @@
 ---
 date: 2020
-released: 2018-04-08
 title: "Sword Art Online Alternative: Gun Gale Online"
 alias: [Sword Art Online - GGO]
-genres: [action, fantasy, game, sci-fi]
 tier: "?"
+released: 2018-04-08
+genres: [action, fantasy, game, sci-fi]
 seen:
   first: 2020
 image:

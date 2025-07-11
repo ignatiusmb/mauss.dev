@@ -1,8 +1,8 @@
 ---
 date: 2020
 title: Deca-Dence
-released: 2020-07-08
 tier: "?"
+released: 2020-07-08
 completed: 12/12
 genres: [action, adventure, sci-fi]
 seen:

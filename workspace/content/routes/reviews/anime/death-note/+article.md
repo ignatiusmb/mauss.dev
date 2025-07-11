@@ -1,8 +1,8 @@
 ---
 date: 2020
 title: Death Note
-released: 2006-10-04
 tier: "?"
+released: 2006-10-04
 genres: [mystery, psychological, supernatural, thriller, shounen]
 seen:
   first: 2021-02-21

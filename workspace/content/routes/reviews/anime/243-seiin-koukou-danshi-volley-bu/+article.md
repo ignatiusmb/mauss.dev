@@ -2,8 +2,8 @@
 date: 2020
 title: "2.43: Seiin High School Boys Volleyball Team"
 romaji: "2.43: Seiin Koukou Danshi Volley-bu"
-released: 2021-01-08
 tier: "?"
+released: 2021-01-08
 genres: [sports, slice of life, drama, school]
 seen:
   first: 2021-03-26

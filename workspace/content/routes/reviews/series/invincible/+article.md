@@ -1,9 +1,9 @@
 ---
 date: 2020
-released: 2021-03-26
 title: Invincible
-genres: [animation, action, sci-fi, fantasy]
 tier: "?"
+released: 2021-03-26
+genres: [animation, action, sci-fi, fantasy]
 seen:
   first: 2021-05-15
 image:

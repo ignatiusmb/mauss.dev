@@ -2,8 +2,8 @@
 date: 2020
 title: Clannad
 alias: [After Story]
-released: 2007-10-05
 tier: "?"
+released: 2007-10-05
 completed: 44/44
 genres: [comedy, drama, romance, school, slice of life, supernatural]
 seen:

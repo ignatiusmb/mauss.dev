@@ -1,9 +1,9 @@
 ---
 date: 2020
-released: 2011-10-04
 title: "The Heroes of Olympus: The Son of Neptune"
-genres: [adventure, fantasy, mystery]
 tier: "?"
+released: 2011-10-04
+genres: [adventure, fantasy, mystery]
 seen:
   first: 2020
 image:

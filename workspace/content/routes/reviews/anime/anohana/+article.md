@@ -1,8 +1,8 @@
 ---
 date: 2020
 title: "anohana: The Flower We Saw That Day"
-released: 2011-04-15
 tier: "?"
+released: 2011-04-15
 genres: [drama, slice of life, supernatural]
 seen:
   first: 2020-06-08

@@ -1,10 +1,12 @@
 ---
 date: 2020
-released: 2019-07-19
 title: Weathering With You
 romaji: Tenki no Ko
-genres: [animation, slice of life, supernatural, drama, fantasy, adventure, romance]
 tier: "?"
+released: 2019-07-19
+genres: [animation, slice of life, supernatural, drama, fantasy, adventure, romance]
+seen:
+  first: 2020-08-30
 rating:
   narrative:
     - premise: 7
@@ -27,8 +29,6 @@ rating:
     - engagement: 10
     - relatable: 7
     - impact: 9
-seen:
-  first: 2020-08-30
 image:
   en: https://image.tmdb.org/t/p/original/qgrk7r1fV4IjuoeiGS5HOhXNdLJ.jpg
   jp: https://image.tmdb.org/t/p/original/sGBRqb0Y3DlUpmYXPGUsy587ofd.jpg
@@ -36,6 +36,5 @@ backdrop: https://image.tmdb.org/t/p/original/ize3ZieqSy0TCWljmVoEiy8fSFS.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/38826/Tenki_no_Ko
 ---
-
 
 ![Weathering with You Backdrop](https://image.tmdb.org/t/p/original/a6TTvdiMAeetvyxTS4HaBEbiBfr.jpg)

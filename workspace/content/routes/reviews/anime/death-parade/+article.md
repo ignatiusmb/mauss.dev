@@ -1,8 +1,8 @@
 ---
 date: 2020
 title: Death Parade
-released: 2015-01-10
 tier: "?"
+released: 2015-01-10
 completed: 12/12
 genres: [drama, mystery, suspense]
 seen:

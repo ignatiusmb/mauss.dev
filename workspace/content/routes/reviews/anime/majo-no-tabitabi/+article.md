@@ -1,11 +1,11 @@
 ---
 date: 2020
-released: 2020-10-02
-alias: [The Journey of Elaina]
 title: "Wandering Witch: The Journey of Elaina"
 romaji: Majo no Tabitabi
-genres: [adventure, fantasy]
+alias: [The Journey of Elaina]
 tier: "?"
+released: 2020-10-02
+genres: [adventure, fantasy]
 seen:
   first: 2020-12-20
 image:
@@ -15,6 +15,5 @@ backdrop: https://image.tmdb.org/t/p/original/lOO4S4gE5j0UMuld2sH5Boaausm.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/40571/Majo_no_Tabitabi
 ---
-
 
 ![The Journey of Elaina Backdrop#f#fb](https://image.tmdb.org/t/p/original/kZE2LlQ0HKubeLEOI9ukhqRXGx2.jpg "Source: TMDB")

@@ -1,9 +1,9 @@
 ---
 date: 2020
-released: 2009-07-03
 title: The Monogatari Series
-genres: [animation, mystery, supernatural, romance]
 tier: "?"
+released: 2009-07-03
+genres: [animation, mystery, supernatural, romance]
 seen:
   first: 2020
 image:
@@ -12,7 +12,6 @@ backdrop: https://www.themoviedb.org/t/p/original/gTmCOfKDVFrQp34tOUSx9qgd6LF.jp
 link:
   MyAnimeList: https://myanimelist.net/anime/5081/Bakemonogatari
 ---
-
 
 <https://www.reddit.com/r/Animesuggest/comments/n1kg8t/well_known_really_monogatari_series/>
 

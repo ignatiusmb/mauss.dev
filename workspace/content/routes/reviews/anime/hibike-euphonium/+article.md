@@ -1,10 +1,10 @@
 ---
 date: 2020
-released: 2015-04-08
 title: "Sound! Euphonium"
 romaji: "Hibike! Euphonium"
-genres: [music, school, drama]
 tier: "?"
+released: 2015-04-08
+genres: [music, school, drama]
 seen:
   first: 2020
 image:

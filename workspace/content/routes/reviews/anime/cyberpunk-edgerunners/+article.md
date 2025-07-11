@@ -1,8 +1,8 @@
 ---
 date: 2020
 title: "Cyberpunk: Edgerunners"
-released: 2022-09-13
 tier: "?"
+released: 2022-09-13
 completed: 10/10
 genres: [action, sci-fi, gore, psychological]
 seen:

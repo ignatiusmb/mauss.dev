@@ -1,9 +1,9 @@
 ---
 date: 2020
-released: 2020-07-06
 title: The God of High School
-genres: [action, adventure, supernatural, martial arts, fantasy, comedy]
 tier: "?"
+released: 2020-07-06
+genres: [action, adventure, supernatural, martial arts, fantasy, comedy]
 seen:
   first: 2020-09-28
 image:

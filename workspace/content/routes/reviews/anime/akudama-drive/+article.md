@@ -1,8 +1,8 @@
 ---
 date: 2020
 title: Akudama Drive
-released: 2020-10-08
 tier: "?"
+released: 2020-10-08
 genres: [action, sci-fi]
 seen:
   first: 2020-12-25

@@ -1,9 +1,9 @@
 ---
 date: 2020
-released: 2013-10-04
 title: Kill la Kill
-genres: [action, super power, comedy, ecchi, school]
 tier: "?"
+released: 2013-10-04
+genres: [action, super power, comedy, ecchi, school]
 seen:
   first: 2020-08-04
 image:

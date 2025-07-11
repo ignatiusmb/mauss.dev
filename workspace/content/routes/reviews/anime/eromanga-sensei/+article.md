@@ -1,8 +1,8 @@
 ---
 date: 2020
 title: Eromanga-sensei
-released: 2017-04-09
 tier: "?"
+released: 2017-04-09
 genres: [comedy, drama, romance, ecchi]
 seen:
   first: 2020-06-07

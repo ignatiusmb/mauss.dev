@@ -1,9 +1,9 @@
 ---
 date: 2020
-released: 2010-10-12
 title: "The Heroes of Olympus: The Lost Hero"
-genres: [adventure, fantasy, mystery]
 tier: "?"
+released: 2010-10-12
+genres: [adventure, fantasy, mystery]
 seen:
   first: 2020
 image:

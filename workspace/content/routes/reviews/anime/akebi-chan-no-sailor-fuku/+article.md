@@ -2,8 +2,8 @@
 date: 2020
 title: Akebi's Sailor Uniform
 romaji: Akebi-chan no Sailor-fuku
-released: 2022-01-09
 tier: "?"
+released: 2022-01-09
 completed: 12/12
 genres: [romance, slice of life]
 seen:
