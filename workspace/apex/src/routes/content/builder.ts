@@ -242,11 +242,8 @@ export const ROUTES = {
 						const { body, frontmatter: extras } = parse(payload);
 						if (!extras || extras.draft) return;
 						return {
-							slug: `${category}/${slug}`,
-							category,
-							...frontmatter,
-							...metadata,
 							...extras,
+							branches: [],
 							branch: branch.filename.slice(1, -3),
 							content: marker.render(body),
 						};
@@ -259,8 +256,8 @@ export const ROUTES = {
 						...frontmatter,
 						...metadata,
 						composed: date(metadata.date).delta(metadata.seen.first).days,
-						content: marker.render(content),
 						branches: (await Promise.all(branches)).filter((b) => b != null),
+						content: marker.render(content),
 					};
 				};
 			},
@@ -305,7 +302,7 @@ export const ROUTES = {
 			},
 		);
 	},
-} as const;
+};
 
 export type Items = {
 	[key in keyof typeof ROUTES]: Awaited<ReturnType<(typeof ROUTES)[key]>>;

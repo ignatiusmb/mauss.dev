@@ -9,7 +9,7 @@
 
 <Article post={data.article} path={data.source}>
 	{#snippet header()}
-		<Backdrop post={data.article} />
+		<Backdrop review={data.article} />
 
 		{#if data.article.link}
 			<LinkSpread links={data.article.link} />

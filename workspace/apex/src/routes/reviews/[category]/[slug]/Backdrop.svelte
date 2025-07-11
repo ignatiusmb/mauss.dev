@@ -2,7 +2,7 @@
 	import type { Items } from '$content/builder';
 
 	interface Props {
-		review: Items['/reviews'][number];
+		review: Omit<Items['/reviews'][number], 'branches' | 'flank'>;
 	}
 	const { review }: Props = $props();
 
