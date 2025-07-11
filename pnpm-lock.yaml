@@ -76,7 +76,7 @@ importers:
   workspace/content:
     devDependencies:
       aubade:
-        specifier: ^0.10.3
+        specifier: ^0.10.2
         version: 0.10.3
 
 packages:
