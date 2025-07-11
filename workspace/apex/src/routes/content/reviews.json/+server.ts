@@ -4,9 +4,9 @@ import { ROUTES, type Items } from '$content/builder';
 export interface Schema {
 	items: Items['/reviews'];
 	metadata: {
+		tier: [value: string, label: string][];
 		categories: string[];
 		genres: string[];
-		verdicts: [value: string, label: string][];
 		sort_by: [value: string, label: string][];
 	};
 }
@@ -18,15 +18,16 @@ export async function GET() {
 	return json({
 		items,
 		metadata: {
+			tier: [
+				['S', 'S-tier'],
+				['A', 'A-tier'],
+				['B', 'B-tier'],
+				['C', 'C-tier'],
+				['D', 'D-tier'],
+				['?', 'TBD'],
+			],
 			categories: [...new Set(items.map((p) => p.category))].sort(),
 			genres: [...new Set(items.flatMap((p) => p.genres))].sort(),
-			verdicts: [
-				['must-watch', 'Must Watch'],
-				['recommended', 'Recommended'],
-				['contextual', 'Contextual'],
-				['not-recommended', 'Not Recommended'],
-				['pending', 'Pending'],
-			],
 			sort_by: [
 				['date', 'date'],
 				['premiere', 'premiere'],

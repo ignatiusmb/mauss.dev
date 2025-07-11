@@ -247,6 +247,7 @@ export const ROUTES = {
 					});
 
 					return {
+						draft: date(metadata.date).is.before('2020-06-25'),
 						slug: `${category}/${slug}`,
 						category,
 						...frontmatter,
@@ -261,7 +262,7 @@ export const ROUTES = {
 
 		return chain(items, {
 			sort: drill('date', date.sort.newest),
-			breakpoint: (r) => !r.rating || r.verdict === 'pending',
+			breakpoint: ({ draft }) => draft,
 			transform: ({ slug, title }) => ({ slug: `/reviews/${slug}`, title }),
 		});
 	},

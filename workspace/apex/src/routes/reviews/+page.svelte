@@ -21,12 +21,12 @@
 		filters: data.filters,
 	});
 	const params = $derived.by(() => {
-		const { category, genres, verdict, sort_by } = memory.filters;
+		const { tier, category, genres, sort_by } = memory.filters;
 		return {
 			search: String(memory.params.q?.[0] || ''),
+			tier: String(tier.selected),
 			category: String(category.selected),
 			genres: genres.flatMap((g) => (g.selected ? [g.name] : [])),
-			verdict: String(verdict.selected),
 			sort_by: sort_by.selected as Query['sort_by'],
 		} satisfies Query;
 	});
@@ -90,11 +90,11 @@
 			<span>{total} matches </span>
 			{#if params.search}
 				<span>for "{params.search}"</span>
-				{#if params.category || params.genres.length || params.verdict}
+				{#if params.tier || params.category || params.genres.length}
 					<span>and</span>
 				{/if}
 			{/if}
-			{#if params.category || params.genres.length || params.verdict}
+			{#if params.tier || params.category || params.genres.length}
 				<span>with some filters</span>
 			{/if}
 			{#if params.sort_by}
@@ -104,14 +104,13 @@
 	{/if}
 
 	{#each index as post (post.slug)}
-		{@const disabled = !post.rating || post.verdict === 'pending'}
 		{@const [year, month] = post.released.split('-').map(Number)}
 		{@const season = ['winter', 'spring', 'summer', 'fall'][Math.floor((month - 1) / 3)]}
 
 		<a
 			href="/reviews/{post.slug}"
 			data-tier={post.tier}
-			style:pointer-events={disabled ? 'none' : null}
+			style:pointer-events={post.draft ? 'none' : null}
 			animate:flip={{ duration: TIME.SLIDE }}
 			in:scale={{ duration: TIME.SLIDE }}
 		>

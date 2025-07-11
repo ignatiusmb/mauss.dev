@@ -5,9 +5,8 @@ export async function load({ parent, params }) {
 	const slug = `${params.category}/${params.slug}`;
 	const article = items.find((i) => i.slug === slug);
 	if (!article) error(404, 'Review not found');
-	if (!article.rating || article.verdict === 'pending') {
-		error(404, 'Not yet reviewed');
-	}
+	if (!article.draft) error(404, 'Not yet reviewed');
+
 	const branch = article.branches.find((i) => i.branch === params.branch);
 	if (!branch) redirect(307, `/reviews/${slug}`);
 
