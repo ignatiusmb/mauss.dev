@@ -15,7 +15,7 @@ backdrop:
   source: tmdb
   path: gpi9DnTI1sn3DVRbWfctyJVecvv.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/37614/hitoribocchi_no_marumaru_seikatsu
+  MyAnimeList: https://myanimelist.net/anime/37614
   TMDB: https://www.themoviedb.org/tv/85990
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: the realest story about effort
+title: the weight of passion
 ---
 
 ## depicting the harsh reality

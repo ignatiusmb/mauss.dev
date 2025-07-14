@@ -13,7 +13,7 @@ backdrop:
   source: tmdb
   path: uqOcBHNHsmYPePmrvYhjraRxLdJ.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/22297/Fatestaynight:UnlimitedBladeWorks
+  MyAnimeList: https://myanimelist.net/anime/22297
 ---
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/kMK5Vx0FGppeAxqCQHTiBQEd6nm.jpg "Source: TMDB")

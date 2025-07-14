@@ -4,7 +4,7 @@ title: Wolf Children
 romaji: Ookami Kodomo no Ame to Yuki
 tier: "?"
 released: 2012-07-21
-genres: [animation, fantasy, slice of life]
+genres: [anime, fantasy, slice of life]
 seen:
   first: 2020
 poster:
@@ -14,7 +14,7 @@ backdrop:
   source: tmdb
   path: gCQklTHvnlrTSugqU8zurw0zIy2.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/12355/Ookami_Kodomo_no_Ame_to_Yuki
+  MyAnimeList: https://myanimelist.net/anime/12355
 ---
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/78EAqp0sdvtaRryS9QtBQxiQBes.jpg "Source: TMDB")

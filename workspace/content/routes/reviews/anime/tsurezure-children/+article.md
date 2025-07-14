@@ -14,7 +14,7 @@ backdrop:
   source: tmdb
   path: 8bvcMjlU0ahkyQTXcwQLbjJ3ZMq.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/34902/Tsurezure_Children
+  MyAnimeList: https://myanimelist.net/anime/34902
 ---
 
 ![Tsuredure Backdrop#f#fb](https://www.themoviedb.org/t/p/original/wVIpBQ7elYVOincJdmc71SFwnQJ.jpg "Source: TMDB")

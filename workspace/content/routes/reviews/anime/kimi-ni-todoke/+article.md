@@ -13,7 +13,7 @@ backdrop:
   source: tmdb
   path: 1AXPzsKXFFNmMaiik6H6I4uBrLZ.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/6045/Kimi_ni_Todoke
+  MyAnimeList: https://myanimelist.net/anime/6045
 ---
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/5Ktpz72iBqPTlC1sXJU6EvAaE5N.jpg "Source: TMDB")

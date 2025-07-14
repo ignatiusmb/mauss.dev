@@ -15,8 +15,8 @@ backdrop:
   source: tmdb
   path: zscbGuTQ5DX7UL4Xrl9XxIVtXDN.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/33731/Gabriel_DropOut
-  TMDB: https://www.themoviedb.org/tv/69285-gabriel-dropout
+  MyAnimeList: https://myanimelist.net/anime/33731
+  TMDB: https://www.themoviedb.org/tv/69285
 ---
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/qyABrcOHxEK0k7CxNTrjPErB3Q0.jpg "Source: TMDB")

@@ -4,7 +4,7 @@ title: "Demon Slayer the Movie: Mugen Train"
 romaji: "Kimetsu no Yaiba Movie: Mugen Ressha-hen"
 tier: "?"
 released: 2021-01-06
-genres: [animation, action, demons, supernatural, shounen]
+genres: [anime, action, demons, supernatural, shounen]
 seen:
   first: 2021-01-15
 rating:
@@ -34,5 +34,5 @@ backdrop:
   source: tmdb
   path: xoqr4dMbRJnzuhsWDF3XNHQwJ9x.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/40456/Kimetsu_no_Yaiba_Movie__Mugen_Ressha-hen
+  MyAnimeList: https://myanimelist.net/anime/40456
 ---

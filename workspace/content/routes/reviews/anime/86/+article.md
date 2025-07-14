@@ -15,7 +15,7 @@ backdrop:
   source: tmdb
   path: lSlL2CAPSDJ9gf2MZX0x2u2inKX.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/41457/86
+  MyAnimeList: https://myanimelist.net/anime/41457
 ---
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/8N2sxXuztrFbOeHh01M9HuUWeNw.jpg "Source: TMDB")

@@ -15,7 +15,7 @@ backdrop:
   source: tmdb
   path: lOO4S4gE5j0UMuld2sH5Boaausm.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/40571/Majo_no_Tabitabi
+  MyAnimeList: https://myanimelist.net/anime/40571
 ---
 
 ![The Journey of Elaina Backdrop#f#fb](https://image.tmdb.org/t/p/original/kZE2LlQ0HKubeLEOI9ukhqRXGx2.jpg "Source: TMDB")

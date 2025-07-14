@@ -13,7 +13,7 @@ backdrop:
   source: tmdb
   path: A695xuEj2MJgAxMn5EfvbbHPyBx.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/34561/Re_Creators
+  MyAnimeList: https://myanimelist.net/anime/34561
 ---
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/4Q6eUPWDSQmws34Y1U9bZRZxjuz.jpg "Source: TMDB")

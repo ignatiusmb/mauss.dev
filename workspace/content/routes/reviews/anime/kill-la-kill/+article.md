@@ -13,5 +13,5 @@ backdrop:
   source: tmdb
   path: kFJTEDYjm1EuowbYo7qcaJUBFXA.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/18679/Kill_la_Kill
+  MyAnimeList: https://myanimelist.net/anime/18679
 ---

@@ -16,8 +16,8 @@ backdrop:
   source: tmdb
   path: bo53Yk3OuRivHtSAB4WLRWWPHq9.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/457/mushishi
-  TMDB: https://www.themoviedb.org/tv/26867-mushi-shi
+  MyAnimeList: https://myanimelist.net/anime/457
+  TMDB: https://www.themoviedb.org/tv/26867
 ---
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/8ysRHGV3URjOJT7u7NkZiFjvObk.jpg "Source: TMDB")

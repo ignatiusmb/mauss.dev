@@ -14,7 +14,7 @@ backdrop:
   source: tmdb
   path: hI76O9slOz3vPkhQWWQoN36WyhG.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/33255/Saiki_Kusuo_no_%CE%A8-nan
+  MyAnimeList: https://myanimelist.net/anime/33255
 ---
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/8rO7i1rjAbBwzV6CJgkscbBVG2u.jpg "Source: TMDB")

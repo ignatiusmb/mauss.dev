@@ -32,5 +32,5 @@ backdrop:
   source: tmdb
   path: 2UG177tWHy7xRmMKWJHB7nAUmKd.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/5114/fullmetal_alchemist__brotherhood/
+  MyAnimeList: https://myanimelist.net/anime/5114
 ---

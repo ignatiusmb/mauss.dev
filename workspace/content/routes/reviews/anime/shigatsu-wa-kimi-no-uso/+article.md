@@ -37,7 +37,7 @@ backdrop:
   source: tmdb
   path: 3qQFa8n5sFmrxMhcjUnKdg2CCOU.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/23273/Shigatsu_wa_Kimi_no_Uso
+  MyAnimeList: https://myanimelist.net/anime/23273
 soundtracks:
   - title: Hikarunara
     artist: Goose house
@@ -57,8 +57,8 @@ soundtracks:
     spotify: 6a0PMD9AsNoK3XD5Nnheig
 ---
 
-a repeat watch every time april rolls around. Your Lie in April is a beautifully crafted story with a perfect blend of music, emotion, and character development. the pacing is slow, but perfect for the story it tells and wraps up (also) perfectly in one season.
+**can't think of April without this**. *Your Lie in April* is a beautifully crafted story with a perfect blend of music, emotion, and character development. the pacing is slow, but it suits the story and wraps up beautifully in one season.
 
-it's visually stunning in all the right places, the animation is fluid, the sound design is fantastic. it's just a good and well-rounded show that checks all the boxes for me to recommend it.
+it's visually stunning in all the right scenes, the animation is fluid, and the sound design is fantastic. it's a well-rounded show that checks all the boxes for me to consider it A-tier.
 
-i mean, there's a reason why this show is highly rated and loved by many. go prepare some snacks or tea, and enjoy the story while you can. it's one of those shows that stays with you long after it ends, and the first watch is always the best experience.
+there's a reason this show is so highly rated and loved. go prepare some snacks or tea, and enjoy the story while you can. it's one of those shows that stays with you long after it ends — and the first watch is always the best.

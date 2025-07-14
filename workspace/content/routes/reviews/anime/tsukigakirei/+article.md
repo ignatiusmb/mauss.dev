@@ -16,8 +16,8 @@ backdrop:
   source: tmdb
   path: cifs43XOpsUYUgEDzcsU52AvcaP.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/34822/Tsuki_ga_Kirei
-  TMDB: https://www.themoviedb.org/tv/70880-tsuki-ga-kirei
+  MyAnimeList: https://myanimelist.net/anime/34822
+  TMDB: https://www.themoviedb.org/tv/70880
 ---
 
 > As the Moon, So Beautiful

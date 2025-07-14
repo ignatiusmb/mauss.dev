@@ -16,7 +16,7 @@ backdrop:
   source: tmdb
   path: rl3cHVMuHXr6XJ7jKDoXJamoqPI.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/28623/Koutetsujou_no_Kabaneri
+  MyAnimeList: https://myanimelist.net/anime/28623
   TMDB: https://www.themoviedb.org/tv/65945
 ---
 

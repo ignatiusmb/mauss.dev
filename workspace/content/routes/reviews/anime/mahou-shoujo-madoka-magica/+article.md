@@ -14,7 +14,7 @@ backdrop:
   source: tmdb
   path: lW2deyLDrwcYO2iHCuVpj7r1FnQ.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/9756/Mahou_Shoujo_Madoka%E2%98%85Magica
+  MyAnimeList: https://myanimelist.net/anime/9756
 ---
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/pAlPAlLWo35WOHNYZ9ekpQVzTSS.jpg "Source: TMDB")

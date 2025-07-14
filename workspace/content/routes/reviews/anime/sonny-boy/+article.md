@@ -15,8 +15,8 @@ backdrop:
   source: tmdb
   path: dmIAGZwfk9r5hN7ONpRJLDij9GN.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/48849/Sonny_Boy
-  TMDB: https://www.themoviedb.org/tv/124396-sonny-boy
+  MyAnimeList: https://myanimelist.net/anime/48849
+  TMDB: https://www.themoviedb.org/tv/124396
 ---
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/ll8YvMWNMi5xDkP4V9Mt755zy3M.jpg "Source: TMDB")

@@ -16,7 +16,7 @@ Yosuga no Sora adapts the branching format of its original adult visual novel. o
 
 it's jarring at first, especially without warning. if you didn't know better, episode 5 feels like a glitch. but once you understand the format, the narrative experiment becomes more interesting — even if not all arcs are equally strong. i didn't know it was based on a visual novel, or that it followed a branching narrative: different girls, different choices, different endings. i like that it plays out like a game with a save point, letting us experience every path. but it also feels like wasted potential. a linear plot might've landed better.
 
-<details>
+<details open>
   <summary>story flowchart</summary>
   <div style="display: grid; grid-template-columns: repeat(7, 1fr); grid-template-rows: repeat(10, 1fr); text-align: center; --nb: 3px solid var(--color-text); --line: 0.25px solid var(--color-text);">
     <span style="grid-area:1/4/2/5; padding: 0.2rem 0; border: var(--nb); border-radius: var(--rounding-base);">1</span>

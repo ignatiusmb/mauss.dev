@@ -3,7 +3,7 @@ date: 2020
 title: "One Piece Film: Red"
 tier: "?"
 released: 2022-09-21
-genres: [animation, action, adventure, fantasy]
+genres: [anime, action, adventure, fantasy]
 seen:
   first: "2022-09-24T17:40:00"
   last: "2022-09-24T19:53:35"
@@ -15,8 +15,8 @@ backdrop:
   path: 6clQoxgYxinQJeDVw504Zn4Ff2q.jpg
 link:
   IMDb: https://www.imdb.com/title/tt16183464/
-  MyAnimeList: https://myanimelist.net/anime/50410/One_Piece_Film__Red
-  TMDB: https://www.themoviedb.org/movie/900667-one-piece-film-red
+  MyAnimeList: https://myanimelist.net/anime/50410
+  TMDB: https://www.themoviedb.org/movie/900667
 ---
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/Ach0puWzxuO2imh1yWEUK7CGsx.jpg "Source: TMDB")

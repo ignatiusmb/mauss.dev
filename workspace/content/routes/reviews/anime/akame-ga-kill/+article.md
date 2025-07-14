@@ -16,7 +16,7 @@ backdrop:
   path: oczFTWRBhKrJ4rNNhqKgp1O1PAu.jpg
 link:
   IMDb: https://www.imdb.com/title/tt3742982/
-  MyAnimeList: https://myanimelist.net/anime/22199/Akame_ga_Kill/
+  MyAnimeList: https://myanimelist.net/anime/22199
   TMDB: https://www.themoviedb.org/tv/61223
 ---
 

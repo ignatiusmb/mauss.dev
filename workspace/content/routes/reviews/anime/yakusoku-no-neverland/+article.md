@@ -14,5 +14,5 @@ backdrop:
   source: tmdb
   path: lIvlMDEKImf3pkDtLjjKZqRZ5AM.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/37779/yakusoku_no_neverland
+  MyAnimeList: https://myanimelist.net/anime/37779
 ---

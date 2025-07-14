@@ -16,7 +16,7 @@ backdrop:
   path: q8eejQcg1bAqImEV8jh8RtBD4uH.jpg
 link:
   IMDb: https://www.imdb.com/title/tt11126994/
-  TMDB: https://www.themoviedb.org/tv/94605-arcane
+  TMDB: https://www.themoviedb.org/tv/94605
 ---
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/tOwd1kLWFeQXwrtCnSQrIMmrX6V.jpg "Source: TMDB")

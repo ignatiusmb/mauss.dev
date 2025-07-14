@@ -14,7 +14,7 @@ backdrop:
   source: tmdb
   path: jG1PPk0g3lNkpmu1eOQjLVTG4ml.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/27989/Hibike_Euphonium
+  MyAnimeList: https://myanimelist.net/anime/27989
 ---
 
 <https://www.reddit.com/r/anime/comments/n0yjqm/protect_that_smile_hibike_euphonium/>

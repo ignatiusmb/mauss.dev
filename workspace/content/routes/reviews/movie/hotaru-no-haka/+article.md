@@ -4,7 +4,7 @@ title: Grave of the Fireflies
 romaji: Hotaru no Haka
 tier: "?"
 released: 1988-04-16
-genres: [animation, drama, historical]
+genres: [anime, drama, historical]
 seen:
   first: 2020-09-06
 poster:
@@ -14,7 +14,7 @@ backdrop:
   source: tmdb
   path: dlC0ed9Ugh3FzydnkBtV5lRXUu4.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/578/Hotaru_no_Haka
+  MyAnimeList: https://myanimelist.net/anime/578
 ---
 
 > [The best movie that you'll only watch once.](https://www.reddit.com/r/AskReddit/comments/j3jjom/what_movie_fucked_you_straight_in_your_feelings/g7cm9qe?context=3)

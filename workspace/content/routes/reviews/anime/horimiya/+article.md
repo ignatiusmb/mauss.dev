@@ -13,5 +13,5 @@ backdrop:
   source: tmdb
   path: 1s5LAbi8udSIIc5AghjwuKfy87i.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/42897/Horimiya
+  MyAnimeList: https://myanimelist.net/anime/42897
 ---

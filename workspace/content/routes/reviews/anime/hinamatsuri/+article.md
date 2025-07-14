@@ -15,7 +15,7 @@ backdrop:
   source: tmdb
   path: nj20Lwljko9rqJfbRgfcgxPkqIC.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/36296/Hinamatsuri_TV
+  MyAnimeList: https://myanimelist.net/anime/36296
   TMDB: https://www.themoviedb.org/tv/76758
 ---
 

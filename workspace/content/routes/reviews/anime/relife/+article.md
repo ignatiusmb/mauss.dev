@@ -13,5 +13,5 @@ backdrop:
   source: tmdb
   path: j8gNkno0nWmwAsIJd19wa3wryn6.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/30015/ReLIFE
+  MyAnimeList: https://myanimelist.net/anime/30015
 ---

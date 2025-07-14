@@ -2,10 +2,10 @@
 date: "2025-06-15T17:30:00+07:00"
 title: "Pompo: The Cinéphile"
 romaji: Eiga Daisuki Pompo-san
-tier: A
+tier: B
 released: 2021-06-04
 verdict: recommended
-genres: [animation, comedy, drama]
+genres: [anime, comedy, drama]
 seen:
   first: "2025-06-15T14:00:00+07:00"
 rating:
@@ -37,7 +37,7 @@ backdrop:
   source: tmdb
   path: pwRAGni0MbMTttzcaKyQj5kNVNT.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/41361/Eiga_Daisuki_Pompo-san
+  MyAnimeList: https://myanimelist.net/anime/41361
 ---
 
 *less can be more*. in a landscape full of bloated, overlong movies, it feels refreshing to watch such a lean and focused film. it managed to hook me early on, and wrapped everything up in just 90 minutes.

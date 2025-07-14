@@ -4,7 +4,7 @@ title: I want to eat your pancreas
 romaji: Kimi no Suizou wo Tabetai
 tier: "?"
 released: 2018-09-01
-genres: [animation, drama, romance]
+genres: [anime, drama, romance]
 seen:
   first: 2020-09-05
 poster:
@@ -14,7 +14,7 @@ backdrop:
   source: tmdb
   path: Zzk9YZlNkuOktEZUuaf2HKNc6B.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/36098/Kimi_no_Suizou_wo_Tabetai
+  MyAnimeList: https://myanimelist.net/anime/36098
 ---
 
 > I want to cry

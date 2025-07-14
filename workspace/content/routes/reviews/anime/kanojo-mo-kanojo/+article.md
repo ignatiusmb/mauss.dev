@@ -16,6 +16,6 @@ backdrop:
   source: tmdb
   path: fmdDkTWvjrCYyOD9Xgqc3AbQcZr.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/43969/Kanojo_mo_Kanojo
+  MyAnimeList: https://myanimelist.net/anime/43969
   TMDB: https://www.themoviedb.org/tv/113137
 ---

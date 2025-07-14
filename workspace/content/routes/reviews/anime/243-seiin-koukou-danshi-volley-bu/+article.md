@@ -14,7 +14,7 @@ backdrop:
   source: tmdb
   path: 3X96zO7PnN0iIWubiI2tAThrhqL.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/40679/243__Seiin_Koukou_Danshi_Volley-bu
+  MyAnimeList: https://myanimelist.net/anime/40679
 ---
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/jQSrkLbUtWV3u02MwSfNS43vJEf.jpg "Source: TMDB")

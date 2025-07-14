@@ -39,13 +39,13 @@ backdrop:
   path: wCDf6ARpEIEsXDYXtOTGMspuGtq.jpg
 link:
   IMDb: https://www.imdb.com/title/tt14115912
-  MyAnimeList: https://myanimelist.net/anime/46352/Blue_Period
+  MyAnimeList: https://myanimelist.net/anime/46352
   TMDB: https://www.themoviedb.org/tv/116983
 ---
 
-remind me why i love anime so much — it's everything in and with Blue Period. being interested in art was the last thing i expected. yeah, yeah, what could an anime about art possibly bring to the table? that was my initial thought too, and i'm so glad Blue Period proved me wrong in the best way possible.
+**this deserved better than the adaptation it got**. being interested in art was the last thing i expected. yeah, yeah, what could an anime about art possibly bring to the table? that was my initial thought too, and i'm so glad Blue Period proved me wrong in the best way possible.
 
-ironically, the animation isn't the best for an art anime, but damn, the story and characters more than make up for it. no complaints about the pacing either, it's wraps up nicely for a 12-episode series. i didn't expect to be moved by the direction of this anime so much, but by the end of it, i was left with a sense of fulfillment.
+unfortunately, the adaptation didn't do justice to the manga. there were moments that felt rushed, and the animation quality was inconsistent. but despite that, the story shines through. it's ironic that the animation isn't the best for an art anime, but the narrative and character development are so strong that it still manages to leave a lasting impression.
 
 the only regret i have is not watching this sooner, even though it had been in my watchlist since before it even aired. thankfully, a friend nudged me to bump it to the top. maybe that's a sign to start chipping away at my watchlist, one at a time. who knows, maybe i'll find more hidden gems like this.
 

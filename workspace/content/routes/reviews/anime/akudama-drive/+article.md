@@ -13,5 +13,5 @@ backdrop:
   source: tmdb
   path: iUJpT94rezsCxM57sgo4egMTOyz.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/41433/Akudama_Drive/
+  MyAnimeList: https://myanimelist.net/anime/41433
 ---

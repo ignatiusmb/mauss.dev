@@ -13,7 +13,7 @@ backdrop:
   source: tmdb
   path: brO0acsI82ikvp7S0yszhbUupiF.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/1535/Death_Note
+  MyAnimeList: https://myanimelist.net/anime/1535
 ---
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/3hLizkVeYxy9taUpOpeoxDNxDQN.jpg "Source: TMDB")

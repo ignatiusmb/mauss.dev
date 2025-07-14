@@ -4,7 +4,7 @@ title: "KONOSUBA -God's blessing on this wonderful world!- Legend of Crimson"
 alias: [KONOSUBA - Legend of Crimson]
 tier: "?"
 released: 2019-08-30
-genres: [animation, adventure, comedy, fantasy, magic]
+genres: [anime, adventure, comedy, fantasy, magic]
 seen:
   first: 2020-11-05
 poster:

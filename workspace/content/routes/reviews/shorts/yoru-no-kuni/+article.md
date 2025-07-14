@@ -4,7 +4,7 @@ title: Night World
 romaji: Yoru no Kuni
 tier: "?"
 released: 2021-04-16
-genres: [animation, slice of life, romance]
+genres: [anime, slice of life, romance]
 seen:
   first: 2021-05-10
 poster:

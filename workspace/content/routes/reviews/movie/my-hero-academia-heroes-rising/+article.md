@@ -4,7 +4,7 @@ title: "My Hero Academia: Heroes Rising"
 romaji: "Boku no Hero Academia: Heroes:Rising"
 tier: "?"
 released: 2019-12-20
-genres: [animation]
+genres: [anime]
 seen:
   first: 2020-07-12
 poster:
@@ -14,5 +14,5 @@ backdrop:
   source: tmdb
   path: 9guoVF7zayiiUq5ulKQpt375VIy.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/39565/Boku_no_Hero_Academia_the_Movie_2__Heroes_Rising
+  MyAnimeList: https://myanimelist.net/anime/39565
 ---

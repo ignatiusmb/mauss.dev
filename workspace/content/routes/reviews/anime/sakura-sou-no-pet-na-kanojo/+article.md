@@ -14,7 +14,7 @@ backdrop:
   source: tmdb
   path: 5LR3Mu8AgaVEQmGFvYKqlzaxzTg.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/13759/Sakura-sou_no_Pet_na_Kanojo
+  MyAnimeList: https://myanimelist.net/anime/13759
 ---
 
 <https://www.reddit.com/r/anime/comments/jcoce4/how_phrasing_can_ruin_a_boys_reputation_sakurasou/>

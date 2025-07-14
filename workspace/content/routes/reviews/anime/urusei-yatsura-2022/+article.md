@@ -16,7 +16,7 @@ backdrop:
   path: hi3i7S1RAKHtDhCijAPw1eYdL8N.jpg
 link:
   IMDb: https://www.imdb.com/title/tt16764368/
-  MyAnimeList: https://myanimelist.net/anime/50710/Urusei_Yatsura_2022
+  MyAnimeList: https://myanimelist.net/anime/50710
   TMDB: https://www.themoviedb.org/tv/154524
 ---
 

@@ -13,7 +13,7 @@ backdrop:
   source: tmdb
   path: pDqx7g9nQxRCGch5WFKvDFmJ87o.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/11757/Sword_Art_Online
+  MyAnimeList: https://myanimelist.net/anime/11757
 ---
 
 <!-- SEASON DIVIDER -->

@@ -38,6 +38,6 @@ backdrop:
   path: sPYlIOvJ2kqf23Rnw7qSuBSEi1b.jpg
 link:
   IMDb: https://www.imdb.com/title/tt13851958/
-  MyAnimeList: https://myanimelist.net/anime/46095/Vivy__Fluorite_Eyes_Song
+  MyAnimeList: https://myanimelist.net/anime/46095
   TMDB: https://www.themoviedb.org/tv/116725
 ---

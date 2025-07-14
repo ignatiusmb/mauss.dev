@@ -13,5 +13,5 @@ backdrop:
   source: tmdb
   path: ai8bVS8Suvu4ErBhmgBvtESirBY.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/31240/Re_Zero_kara_Hajimeru_Isekai_Seikatsu
+  MyAnimeList: https://myanimelist.net/anime/31240
 ---

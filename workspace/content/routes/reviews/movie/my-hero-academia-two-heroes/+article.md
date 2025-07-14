@@ -4,7 +4,7 @@ title: "My Hero Academia: Two Heroes"
 romaji: "Boku no Hero Academia: Futari no Hero"
 tier: "?"
 released: 2018-08-03
-genres: [animation, action, shounen, super power]
+genres: [anime, action, shounen, super power]
 seen:
   first: 2020-07-19
 poster:
@@ -14,5 +14,5 @@ backdrop:
   source: tmdb
   path: b9qGMCOrMbxUjD6xDAYPoIPnYcC.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/36896/Boku_no_Hero_Academia_the_Movie_1__Futari_no_Hero
+  MyAnimeList: https://myanimelist.net/anime/36896
 ---

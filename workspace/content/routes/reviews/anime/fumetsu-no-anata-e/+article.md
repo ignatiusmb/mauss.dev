@@ -17,7 +17,7 @@ backdrop:
   path: qmeC99iX9YPbxi3Dwsw5VvxIbCC.jpg
 link:
   IMDb: https://www.imdb.com/title/tt12063450/
-  MyAnimeList: https://myanimelist.net/anime/41025/Fumetsu_no_Anata_e
+  MyAnimeList: https://myanimelist.net/anime/41025
   TMDB: https://www.themoviedb.org/tv/97525
 ---
 

@@ -4,7 +4,7 @@ title: Your Name.
 romaji: Kimi no Na wa.
 tier: "?"
 released: 2016-08-26
-genres: [animation, romance, supernatural, drama, school]
+genres: [anime, romance, supernatural, drama, school]
 seen:
   first: 2020-08-29
 rating:
@@ -36,7 +36,7 @@ backdrop:
   source: tmdb
   path: e7TRYDKXHQD6xLcmA1b0OtVt0E0.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/32281/kimi_no_na_wa
+  MyAnimeList: https://myanimelist.net/anime/32281
 ---
 
 ![Your Name Backdrop](https://image.tmdb.org/t/p/original/3VIRYQTEC6pZSv3kUE5yPGVVg0i.jpg)

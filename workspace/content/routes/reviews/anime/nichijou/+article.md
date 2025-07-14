@@ -37,7 +37,7 @@ backdrop:
   source: tmdb
   path: us9UFxr1ScqDxtVvuLFziCbddnK.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/10165/Nichijou
+  MyAnimeList: https://myanimelist.net/anime/10165
 ---
 
 **a timeless comedy gold**, made by one of my favorite studios, Kyoto Animation. an anime that the animators had a lot of fun making will never be not fun to watch, and this is no exception, you can feel the love and care that went into every frame.

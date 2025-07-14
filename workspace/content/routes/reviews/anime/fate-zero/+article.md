@@ -16,6 +16,6 @@ backdrop:
   path: ij86kCAHM0B6EP75so3UscZVWIo.jpg
 link:
   IMDb: https://www.imdb.com/title/tt2051178/
-  MyAnimeList: https://myanimelist.net/anime/10087/fate_zero
-  TMDB: https://www.themoviedb.org/tv/45845-fate-zero
+  MyAnimeList: https://myanimelist.net/anime/10087
+  TMDB: https://www.themoviedb.org/tv/45845
 ---

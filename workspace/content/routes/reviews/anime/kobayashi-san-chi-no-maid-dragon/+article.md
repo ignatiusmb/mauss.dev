@@ -11,13 +11,13 @@ seen:
   last: "2022-05-14T16:44:04"
 poster:
   source: tmdb
-  path: tNznuhcf7WKzEmPQEsIgGMrB3Az.jpg
+  path: jnmL1DoqCYcQH1vGvBvEv4CElnF.jpg
 backdrop:
   source: tmdb
   path: xfkOv2PSuVjehptAmRagT4MzatQ.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/33206/Kobayashi-san_Chi_no_Maid_Dragon/
-  TMDB: https://www.themoviedb.org/tv/69291-kobayashi-san-chi-no-maid-dragon
+  MyAnimeList: https://myanimelist.net/anime/33206
+  TMDB: https://www.themoviedb.org/tv/69291
 ---
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/vc3GVrH46tZPUk7RxRpQO6wH3ny.jpg "Source: TMDB")

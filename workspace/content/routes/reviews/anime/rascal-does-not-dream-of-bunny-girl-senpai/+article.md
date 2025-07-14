@@ -37,7 +37,7 @@ backdrop:
   source: tmdb
   path: ffvaWDSYLcIQRCLFLG1a3lC0xPX.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/37450/Seishun_Buta_Yarou_wa_Bunny_Girl_Senpai_no_Yume_wo_Minai
+  MyAnimeList: https://myanimelist.net/anime/37450
 ---
 
 > A melancholic anime with the most misleading title ever

@@ -14,5 +14,5 @@ backdrop:
   source: tmdb
   path: blLWNqVBjV45DC6mwDaJL9whfiq.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/41930/Kamisama_ni_Natta_Hi
+  MyAnimeList: https://myanimelist.net/anime/41930
 ---

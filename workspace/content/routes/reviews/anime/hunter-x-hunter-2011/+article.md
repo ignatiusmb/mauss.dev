@@ -15,8 +15,8 @@ backdrop:
   source: tmdb
   path: A702KA1gXlI3hB33hdhwPM708pY.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/11061/Hunter_x_Hunter_2011
-  TMDB: https://www.themoviedb.org/tv/46298-hunter-x-hunter
+  MyAnimeList: https://myanimelist.net/anime/11061
+  TMDB: https://www.themoviedb.org/tv/46298
 ---
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/rAQy7uX1SVJAKMN02i6OtlrRsDY.jpg "Source: TMDB")

@@ -1,9 +1,10 @@
 ---
 date: 2020
 title: Rascal Does Not Dream of a Dreaming Girl
+alias: [Seishun Buta Yarou wa Yumemiru Shoujo no Yume wo Minai]
 tier: "?"
 released: 2019-06-15
-genres: [animation, romance, drama, fantasy, supernatural]
+genres: [anime, romance, drama, fantasy, supernatural]
 seen:
   first: 2020-07-25
 poster:
@@ -13,5 +14,5 @@ backdrop:
   source: tmdb
   path: 5MgMCnslrxQfOfaq6T5ndkLlcCk.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/38329/Seishun_Buta_Yarou_wa_Yumemiru_Shoujo_no_Yume_wo_Minai
+  MyAnimeList: https://myanimelist.net/anime/38329
 ---

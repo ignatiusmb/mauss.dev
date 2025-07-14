@@ -17,6 +17,6 @@ backdrop:
   path: 9qngg89Hohbdib3bZEdLZa5qhOl.jpg
 link:
   IMDb: https://www.imdb.com/title/tt21621494/
-  MyAnimeList: https://myanimelist.net/anime/52701/Dungeon_Meshi
+  MyAnimeList: https://myanimelist.net/anime/52701
   TMDB: https://www.themoviedb.org/tv/207784
 ---
