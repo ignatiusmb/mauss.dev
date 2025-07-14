@@ -1,16 +1,16 @@
 ---
-date: "2021-02-21"
-title: Bash Utility Cheat Sheet
+title: Notes • Bash
+series: my-notes
 ---
 
-These are my scripts that I use to manage my home media server. I'm not a bash expert so I'm sure there are better ways to do this, but this is what I have so far.
+my personal notes on bash scripting. they are mostly scripts that i use to manage my home media server. i forget things easily, so i write them down here for future reference. these notes are not meant to be comprehensive, and i'm no expert in bash, so please let me know if you have any suggestions or improvements.
 
-## Using Nano Editor
+## nano editor
 
-Nano is a lightweight text editor that is present in virtually any OS out there, other alternatives are Vim and Emacs. There's no point in debating which are the best editor, Nano works well for my use case as far as I'm concerned, so here's some tips to make your CLI editing better.
+`nano` is a lightweight text editor that is present in virtually any OS out there.
 
 ```bash
-# Default arguments for most use cases
+# default arguments for most use cases
 sudo nano -lit filename
 # l - Enables line numbers in front of text
 # i - Automatically indent new lines
@@ -22,7 +22,7 @@ sudo nano -litET 4 main.py
 # T 4 - Set tab size to 4 instead of 8
 ```
 
-## Resource management
+## resource management
 
 `df`, displays the amount of disk space available on the file system containing each file name argument. Used more for calculating the overall disk space or file system.
 
@@ -47,9 +47,9 @@ du -sh path/to/directory
 du -a path/to/start | sort -nr | head -n 10
 ```
 
-## File and directory manipulation
+## filesystem manipulation
 
-`Copy method`, it creates a hard link for the file or everything in the directory to the desired destination. Hard linking is crucial for media management so that you won't have a lot of wasted space with duplicates or multiple files with similar data and different file names.
+`cp -al`, use this to create a hard link for the file or everything in the directory to the desired destination. hard linking is crucial for media management so that you won't have a lot of wasted space with duplicates or multiple files with similar data and different file names.
 
 ```bash
 #$ file: Copy Method
@@ -57,7 +57,7 @@ du -a path/to/start | sort -nr | head -n 10
 cp -al /path/to/source /path/to/destination
 ```
 
-`Find method`, it quickly finds your desired file or directory with many additional functionalities. It could do many things such as
+`find`, it quickly finds your desired file or directory with many additional functionalities. It could do many things such as
 
 - Search for empty files or directories
 - Search files and directories with specific hard link counts
@@ -96,7 +96,7 @@ find . -name .unwanted -exec rm -rf {} \;
 find . -type f -perm 777 -exec chmod -x {} \;
 ```
 
-`Rename method`, it renames multiple files or directories with a specific regex pattern. One of the most useful scripts to have for media management.
+`rename`, it renames multiple files or directories with a specific regex pattern. One of the most useful scripts to have for media management.
 
 ```bash
 #$ file: Rename Method
