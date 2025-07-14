@@ -14,7 +14,7 @@ backdrop:
   source: tmdb
   path: dlC0ed9Ugh3FzydnkBtV5lRXUu4.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/578/Hotaru_no_Haka
+  MyAnimeList: https://myanimelist.net/anime/578
 ---
 
 > [The best movie that you'll only watch once.](https://www.reddit.com/r/AskReddit/comments/j3jjom/what_movie_fucked_you_straight_in_your_feelings/g7cm9qe?context=3)

@@ -14,7 +14,7 @@ backdrop:
   source: tmdb
   path: gCQklTHvnlrTSugqU8zurw0zIy2.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/12355/Ookami_Kodomo_no_Ame_to_Yuki
+  MyAnimeList: https://myanimelist.net/anime/12355
 ---
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/78EAqp0sdvtaRryS9QtBQxiQBes.jpg "Source: TMDB")

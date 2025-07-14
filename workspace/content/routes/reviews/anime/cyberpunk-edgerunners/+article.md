@@ -16,6 +16,6 @@ backdrop:
   path: he4mtQe9KWsXpScDf3seER8Pkq6.jpg
 link:
   IMDb: https://www.imdb.com/title/tt12590266/
-  MyAnimeList: https://myanimelist.net/anime/42310/Cyberpunk__Edgerunners
+  MyAnimeList: https://myanimelist.net/anime/42310
   TMDB: https://www.themoviedb.org/tv/105248-cyberpunk-edgerunners
 ---

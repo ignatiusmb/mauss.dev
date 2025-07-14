@@ -14,7 +14,7 @@ backdrop:
   source: tmdb
   path: gDlx60iOCQjTLH53ybjAPOUyVIp.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/849/suzumiya_haruhi_no_yuuutsu, https://myanimelist.net/anime/4382/Suzumiya_Haruhi_no_Yuuutsu_2009/
+  MyAnimeList: https://myanimelist.net/anime/849, https://myanimelist.net/anime/4382/
 ---
 
 <!-- TODO: explain ways to watch -->

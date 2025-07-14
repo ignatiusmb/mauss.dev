@@ -38,7 +38,7 @@ backdrop:
   source: tmdb
   path: haeBJjV2JHfopKl4dYE7RJwASlF.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/8861/Yosuga_no_Sora__In_Solitude_Where_We_Are_Least_Alone
+  MyAnimeList: https://myanimelist.net/anime/8861
 soundtracks:
   - title: 比翼の羽根
     type: OP

@@ -13,7 +13,7 @@ backdrop:
   source: tmdb
   path: gTmCOfKDVFrQp34tOUSx9qgd6LF.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/5081/Bakemonogatari
+  MyAnimeList: https://myanimelist.net/anime/5081
 ---
 
 <https://www.reddit.com/r/Animesuggest/comments/n1kg8t/well_known_really_monogatari_series/>

@@ -13,7 +13,7 @@ backdrop:
   source: tmdb
   path: 6qLYgjxvDtAwu5RA9fFpoyg23aX.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/12679/Joshiraku
+  MyAnimeList: https://myanimelist.net/anime/12679
 ---
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/6qLYgjxvDtAwu5RA9fFpoyg23aX.jpg "Source: TMDB")

@@ -13,7 +13,7 @@ backdrop:
   source: tmdb
   path: 3mBtXzyOIzh5zJNEgHqIIYTPb6n.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/20583/Haikyuu
+  MyAnimeList: https://myanimelist.net/anime/20583
 ---
 
 ![Backdrop](https://image.tmdb.org/t/p/original/dlPVXJglJ4XiIwbGwEFJj5C20Sr.jpg)

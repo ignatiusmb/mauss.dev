@@ -38,6 +38,6 @@ backdrop:
   path: 8YAHgLKhEyk5CBmB726xYfDFwBX.jpg
 link:
   IMDb: https://www.imdb.com/title/tt17158756/
-  MyAnimeList: https://myanimelist.net/anime/47917/Bocchi_the_Rock
+  MyAnimeList: https://myanimelist.net/anime/47917
   TMDB: https://www.themoviedb.org/tv/119100
 ---

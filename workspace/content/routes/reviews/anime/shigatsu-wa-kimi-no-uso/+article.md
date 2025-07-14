@@ -37,7 +37,7 @@ backdrop:
   source: tmdb
   path: 3qQFa8n5sFmrxMhcjUnKdg2CCOU.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/23273/Shigatsu_wa_Kimi_no_Uso
+  MyAnimeList: https://myanimelist.net/anime/23273
 soundtracks:
   - title: Hikarunara
     artist: Goose house

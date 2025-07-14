@@ -34,5 +34,5 @@ backdrop:
   source: tmdb
   path: xoqr4dMbRJnzuhsWDF3XNHQwJ9x.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/40456/Kimetsu_no_Yaiba_Movie__Mugen_Ressha-hen
+  MyAnimeList: https://myanimelist.net/anime/40456
 ---

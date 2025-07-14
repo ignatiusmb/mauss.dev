@@ -13,5 +13,5 @@ backdrop:
   source: tmdb
   path: oIpHsVYc8rKXnebc97DDIpw8KFn.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/41353/The_God_of_High_School
+  MyAnimeList: https://myanimelist.net/anime/41353
 ---

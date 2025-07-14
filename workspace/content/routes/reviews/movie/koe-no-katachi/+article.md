@@ -15,7 +15,7 @@ backdrop:
   source: tmdb
   path: q5HZvtyqG8Vz39Ee9uTQbLeEml.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/28851/koe_no_katachi
+  MyAnimeList: https://myanimelist.net/anime/28851
   TMDB: https://www.themoviedb.org/movie/378064
 ---
 

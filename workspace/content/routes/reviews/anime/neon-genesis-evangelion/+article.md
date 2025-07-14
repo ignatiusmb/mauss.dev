@@ -15,7 +15,7 @@ backdrop:
   source: tmdb
   path: qtmlwuXj0VyJnCjnrvdpDjo15vI.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/30/Neon_Genesis_Evangelion
+  MyAnimeList: https://myanimelist.net/anime/30
   TMDB: https://www.themoviedb.org/tv/890-neon-genesis-evangelion
 ---
 

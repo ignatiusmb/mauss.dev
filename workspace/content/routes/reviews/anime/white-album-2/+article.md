@@ -15,7 +15,7 @@ backdrop:
   source: tmdb
   path: 8zpgSUqiYbMP3UPMKBnNbiB32c5.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/18245/White_Album_2
+  MyAnimeList: https://myanimelist.net/anime/18245
   TMDB: https://www.themoviedb.org/tv/70072-2
 ---
 

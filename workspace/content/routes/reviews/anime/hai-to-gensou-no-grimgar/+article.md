@@ -14,7 +14,7 @@ backdrop:
   source: tmdb
   path: hQSjBpfBMeqOOHsGPLacb7Gx3aZ.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/31859/Hai_to_Gensou_no_Grimgar
+  MyAnimeList: https://myanimelist.net/anime/31859
 ---
 
 ![Grimgar Backdrop#f#fb](https://image.tmdb.org/t/p/original/gdGALiQygd7x4MpazAEvpjB6quS.jpg "Source: TMDB")

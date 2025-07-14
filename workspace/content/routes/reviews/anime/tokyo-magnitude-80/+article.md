@@ -15,7 +15,7 @@ backdrop:
   source: tmdb
   path: pFlKmFYSf90lsKTSbNlqTtAQhyN.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/6211/Tokyo_Magnitude_80
+  MyAnimeList: https://myanimelist.net/anime/6211
   TMDB: https://www.themoviedb.org/tv/37866-tokyo-magnitude-8-0
 ---
 

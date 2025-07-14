@@ -14,7 +14,7 @@ backdrop:
   source: tmdb
   path: 8fsV0aqSHQlbyvZlWyynruat0MP.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/41006/Higurashi_no_Naku_Koro_ni_Gou
+  MyAnimeList: https://myanimelist.net/anime/41006
 ---
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/8fsV0aqSHQlbyvZlWyynruat0MP.jpg "Source: TMDB")

@@ -38,6 +38,6 @@ backdrop:
   source: tmdb
   path: dJ8yrSokdTMnhKJw06MllSfCegb.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/37999/Kaguya-sama_wa_Kokurasetai__Tensai-tachi_no_Renai_Zunousen
+  MyAnimeList: https://myanimelist.net/anime/37999
   TMDB: https://www.themoviedb.org/tv/83121
 ---

@@ -14,5 +14,5 @@ backdrop:
   source: tmdb
   path: tcrVoPkD1keSsHQqMoQJjZxHRFk.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/36286/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_-_Memory_Snow
+  MyAnimeList: https://myanimelist.net/anime/36286
 ---

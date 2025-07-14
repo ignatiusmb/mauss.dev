@@ -15,7 +15,7 @@ backdrop:
   source: tmdb
   path: ptiSlEK0UhqUGQxeOlS3rn5FBSn.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/27631/God_Eater
+  MyAnimeList: https://myanimelist.net/anime/27631
   TMDB: https://www.themoviedb.org/tv/62773-god-eater
 ---
 

@@ -15,7 +15,7 @@ backdrop:
   source: tmdb
   path: jGaGlwJbg1MqUjswCe3zxTHbo8G.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/33352/Violet_Evergarden
+  MyAnimeList: https://myanimelist.net/anime/33352
   TMDB: https://www.themoviedb.org/tv/75214-violet-evergarden
 ---
 

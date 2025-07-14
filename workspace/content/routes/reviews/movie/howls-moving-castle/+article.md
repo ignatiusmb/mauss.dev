@@ -14,5 +14,5 @@ backdrop:
   path: sQSBPNPvmq8FDerPeFQsicj1faw.jpg
 link:
   IMDb: https://www.imdb.com/title/tt0347149/
-  MyAnimeList: https://myanimelist.net/anime/431/Howl_no_Ugoku_Shiro/
+  MyAnimeList: https://myanimelist.net/anime/431/
 ---

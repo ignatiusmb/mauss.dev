@@ -14,7 +14,7 @@ backdrop:
   source: tmdb
   path: syhRB7HfO1SaJyvCF1RPUx3M49g.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/39790/Adachi_to_Shimamura
+  MyAnimeList: https://myanimelist.net/anime/39790
 ---
 
 ![Adashima Backdrop#f#fb](https://image.tmdb.org/t/p/original/zOfOs7a9Kal6TVvgf8UdtdozckE.jpg "Source: TMDB")

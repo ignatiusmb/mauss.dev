@@ -16,7 +16,7 @@ backdrop:
   source: tmdb
   path: a1WoczWsA55SkWMCBmfLIO0KgGJ.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/48553/Akebi-chan_no_Sailor-fuku
+  MyAnimeList: https://myanimelist.net/anime/48553
 ---
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/55QY5FJVUJD5JMPynzLvLmIVJwT.jpg "Source: TMDB")

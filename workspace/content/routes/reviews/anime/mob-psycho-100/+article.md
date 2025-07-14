@@ -37,7 +37,7 @@ backdrop:
   source: tmdb
   path: deOIxqHGfAavUhRonk5z24iaXXd.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/32182/Mob_Psycho_100
+  MyAnimeList: https://myanimelist.net/anime/32182
   TMDB: https://www.themoviedb.org/tv/67075-100
 ---
 

@@ -16,6 +16,6 @@ backdrop:
   path: p1swd15DRtCnNj20U904dbXeVsi.jpg
 link:
   IMDb: https://www.imdb.com/title/tt21209804/
-  MyAnimeList: https://myanimelist.net/anime/52211/Mashle
+  MyAnimeList: https://myanimelist.net/anime/52211
   TMDB: https://www.themoviedb.org/tv/204832-mashle
 ---

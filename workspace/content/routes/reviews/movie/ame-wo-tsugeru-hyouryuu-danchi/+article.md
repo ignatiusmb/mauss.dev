@@ -16,6 +16,6 @@ backdrop:
   path: 1AMgaLqo6tIRVAqJM4D7rMub9K.jpg
 link:
   IMDb: https://www.imdb.com/title/tt15494038/
-  MyAnimeList: https://myanimelist.net/anime/49938/Ame_wo_Tsugeru_Hyouryuu_Danchi
+  MyAnimeList: https://myanimelist.net/anime/49938
   TMDB: https://www.themoviedb.org/movie/877957
 ---

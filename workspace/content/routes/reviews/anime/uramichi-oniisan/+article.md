@@ -16,6 +16,6 @@ backdrop:
   source: tmdb
   path: py5DjCbDekHpQkauSJToeO2FWjS.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/40620/Uramichi_Oniisan
+  MyAnimeList: https://myanimelist.net/anime/40620
   TMDB: https://www.themoviedb.org/tv/96442
 ---

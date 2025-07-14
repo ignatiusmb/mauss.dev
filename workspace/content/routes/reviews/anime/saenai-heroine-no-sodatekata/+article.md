@@ -16,6 +16,6 @@ backdrop:
   source: tmdb
   path: ee0MEplgTMVitRrOl6D0AAu3ywl.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/23277/Saenai_Heroine_no_Sodatekata
+  MyAnimeList: https://myanimelist.net/anime/23277
   TMDB: https://www.themoviedb.org/tv/69367-saekano-how-to-raise-a-boring-girlfriend
 ---

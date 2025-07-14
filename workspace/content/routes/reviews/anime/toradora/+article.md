@@ -13,5 +13,5 @@ backdrop:
   source: tmdb
   path: 82hAXKATyuldbt4PxSNnHHy2BVO.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/4224/toradora
+  MyAnimeList: https://myanimelist.net/anime/4224
 ---

@@ -34,7 +34,7 @@ backdrop:
   source: tmdb
   path: hy7CPzl227MOlByLUcD9nWuwbjn.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/34566/Boruto__Naruto_Next_Generations
+  MyAnimeList: https://myanimelist.net/anime/34566
 ---
 
 another weekly anime trying to stay relevant by milking a legacy name. it follows the son of a legend: a whiny clone with one less whisker per cheek, longer hair, and a k-pop attitude. he wants to step out of his father's shadow but ends up as a tantrum in motion.

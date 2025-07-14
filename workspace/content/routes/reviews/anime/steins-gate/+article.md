@@ -15,7 +15,7 @@ backdrop:
   source: tmdb
   path: ly0tvRfOp936Zmr6vepusFeo7lp.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/9253/Steins_Gate
+  MyAnimeList: https://myanimelist.net/anime/9253
   TMDB: https://www.themoviedb.org/tv/42509-steins-gate
 ---
 

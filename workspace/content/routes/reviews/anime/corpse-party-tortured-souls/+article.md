@@ -15,6 +15,6 @@ backdrop:
   source: tmdb
   path: g2c3CmSjnNujga6jQHRmH1CwFtH.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/15037/corpse_party__tortured_souls_-_bougyakusareta_tamashii_no_jukyou
+  MyAnimeList: https://myanimelist.net/anime/15037
   TMDB: https://www.themoviedb.org/tv/61178-tortured-souls
 ---

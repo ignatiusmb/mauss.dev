@@ -16,7 +16,7 @@ backdrop:
   source: tmdb
   path: ugg7TDrDNct3xTtpfTVIcqMcSB7.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/38000/Kimetsu_no_Yaiba
+  MyAnimeList: https://myanimelist.net/anime/38000
   TMDB: https://www.themoviedb.org/tv/85937
 ---
 

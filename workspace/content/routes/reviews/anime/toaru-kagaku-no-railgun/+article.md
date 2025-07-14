@@ -15,7 +15,7 @@ backdrop:
   source: tmdb
   path: 1XNqQkRWSwWtXQ0BuQ95wjcs9SP.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/6213/Toaru_Kagaku_no_Railgun
+  MyAnimeList: https://myanimelist.net/anime/6213
 ---
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/cGgqLzBGUY0dxsE5i3W7SXBGRbe.jpg "Source: TMDB")

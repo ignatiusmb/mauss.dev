@@ -36,7 +36,7 @@ backdrop:
   source: tmdb
   path: e7TRYDKXHQD6xLcmA1b0OtVt0E0.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/32281/kimi_no_na_wa
+  MyAnimeList: https://myanimelist.net/anime/32281
 ---
 
 ![Your Name Backdrop](https://image.tmdb.org/t/p/original/3VIRYQTEC6pZSv3kUE5yPGVVg0i.jpg)

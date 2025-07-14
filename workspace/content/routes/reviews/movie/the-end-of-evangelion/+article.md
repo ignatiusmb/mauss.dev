@@ -14,7 +14,7 @@ backdrop:
   source: tmdb
   path: AfyuI3glMCBDFmNPj9PY6DwbgGp.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/32/Neon_Genesis_Evangelion__The_End_of_Evangelion
+  MyAnimeList: https://myanimelist.net/anime/32
   TMDB: https://www.themoviedb.org/movie/18491-air
 ---
 

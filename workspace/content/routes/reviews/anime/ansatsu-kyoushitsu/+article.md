@@ -16,7 +16,7 @@ backdrop:
   source: tmdb
   path: 62pIwEsYX2dtlyMJjDSM6zpDTU2.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/24833/Ansatsu_Kyoushitsu
+  MyAnimeList: https://myanimelist.net/anime/24833
   TMDB: https://www.themoviedb.org/tv/62110-ansatsu-ky-shitsu
 ---
 

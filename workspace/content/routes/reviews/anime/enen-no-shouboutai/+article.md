@@ -14,5 +14,5 @@ backdrop:
   source: tmdb
   path: iD3AJxGuBPUpipRfPmVuRDKVqjZ.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/38671/Enen_no_Shouboutai
+  MyAnimeList: https://myanimelist.net/anime/38671
 ---

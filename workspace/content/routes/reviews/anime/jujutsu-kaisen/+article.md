@@ -13,7 +13,7 @@ backdrop:
   source: tmdb
   path: 8DLpbLeUylcUnE4nTlRC4b6jzNz.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/40748/Jujutsu_Kaisen_TV
+  MyAnimeList: https://myanimelist.net/anime/40748
 ---
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/lthkKBLe1rX6iThgVFg22O02sJw.jpg "Source: TMDB")

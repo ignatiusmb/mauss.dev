@@ -13,5 +13,5 @@ backdrop:
   source: tmdb
   path: 4WeHwdOmGvrsGiXWqLFeUcLmr7o.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/27775/Plastic_Memories
+  MyAnimeList: https://myanimelist.net/anime/27775
 ---

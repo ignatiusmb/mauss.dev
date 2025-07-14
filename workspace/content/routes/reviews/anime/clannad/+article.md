@@ -16,7 +16,7 @@ backdrop:
   source: tmdb
   path: h9nAWM6TF59g39l3fDzqTgW7ap2.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/2167/Clannad/
+  MyAnimeList: https://myanimelist.net/anime/2167/
   TMDB: https://www.themoviedb.org/tv/24835
 ---
 

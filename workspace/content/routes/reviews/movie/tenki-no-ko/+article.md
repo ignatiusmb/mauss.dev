@@ -36,7 +36,7 @@ backdrop:
   source: tmdb
   path: ize3ZieqSy0TCWljmVoEiy8fSFS.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/38826/Tenki_no_Ko
+  MyAnimeList: https://myanimelist.net/anime/38826
 ---
 
 ![Weathering with You Backdrop](https://image.tmdb.org/t/p/original/a6TTvdiMAeetvyxTS4HaBEbiBfr.jpg)

@@ -39,7 +39,7 @@ backdrop:
   path: wCDf6ARpEIEsXDYXtOTGMspuGtq.jpg
 link:
   IMDb: https://www.imdb.com/title/tt14115912
-  MyAnimeList: https://myanimelist.net/anime/46352/Blue_Period
+  MyAnimeList: https://myanimelist.net/anime/46352
   TMDB: https://www.themoviedb.org/tv/116983
 ---
 

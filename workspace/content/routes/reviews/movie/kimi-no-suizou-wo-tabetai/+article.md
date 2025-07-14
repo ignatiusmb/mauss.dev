@@ -14,7 +14,7 @@ backdrop:
   source: tmdb
   path: Zzk9YZlNkuOktEZUuaf2HKNc6B.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/36098/Kimi_no_Suizou_wo_Tabetai
+  MyAnimeList: https://myanimelist.net/anime/36098
 ---
 
 > I want to cry

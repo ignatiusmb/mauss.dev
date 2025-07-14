@@ -37,7 +37,7 @@ backdrop:
   source: tmdb
   path: djKJBmJI4gS9snTn2Tzg3JO23YC.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/37993/Watashi_ni_Tenshi_ga_Maiorita
+  MyAnimeList: https://myanimelist.net/anime/37993
 soundtracks:
   - title: Kimama na Tenshitachi
     type: OP/ED

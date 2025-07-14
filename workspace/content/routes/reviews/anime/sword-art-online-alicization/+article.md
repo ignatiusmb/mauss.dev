@@ -13,7 +13,7 @@ backdrop:
   source: tmdb
   path: z9bJdyQwQqp141eEGbaQvW1IZhR.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/36474/Sword_Art_Online__Alicization
+  MyAnimeList: https://myanimelist.net/anime/36474
 ---
 
 <https://www.reddit.com/r/swordartonline/comments/iyriv1/what_a_great_opening/>

@@ -13,5 +13,5 @@ backdrop:
   source: tmdb
   path: lN13BPAEnc5iXmoxxBQHOZ1ScfZ.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/38691/Dr_Stone
+  MyAnimeList: https://myanimelist.net/anime/38691
 ---

@@ -16,6 +16,6 @@ backdrop:
   path: bzG9AongeMWW75U2Gn0rjoSymki.jpg
 link:
   IMDb: https://www.imdb.com/title/tt14323890/
-  MyAnimeList: https://myanimelist.net/anime/48542/Do_It_Yourself
+  MyAnimeList: https://myanimelist.net/anime/48542
   TMDB: https://www.themoviedb.org/tv/121702-do-it-yourself
 ---

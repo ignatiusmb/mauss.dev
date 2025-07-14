@@ -14,7 +14,7 @@ backdrop:
   source: tmdb
   path: gHaqtksrERg4PhDzsnrvW7dTs6z.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/35839/Sora_yori_mo_Tooi_Basho
+  MyAnimeList: https://myanimelist.net/anime/35839
 ---
 
 ![Yorimoi Backdrop#f#fb](https://image.tmdb.org/t/p/original/bTIbUZVoKnlMt2IrZQv2ODPVs0N.jpg "Source: TMDB")

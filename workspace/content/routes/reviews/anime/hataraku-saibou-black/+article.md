@@ -14,7 +14,7 @@ backdrop:
   source: tmdb
   path: wpJnPlRAGBf5YRxp0b64T1hZKOM.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/41694/Hataraku_Saibou_Black_TV
+  MyAnimeList: https://myanimelist.net/anime/41694
 ---
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/fsnHf3qC4SJAMaYolZqmqvRaVw3.jpg "Source: TMDB")

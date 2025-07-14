@@ -13,7 +13,7 @@ backdrop:
   source: tmdb
   path: 7wBUJF6Wvx8o8AOB8BgyK0HMQdP.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/33241/Honobono_Log
+  MyAnimeList: https://myanimelist.net/anime/33241
 ---
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/2CWh6yHfu2HIiQ72zsJ98MYZQYl.jpg "Source: TMDB")

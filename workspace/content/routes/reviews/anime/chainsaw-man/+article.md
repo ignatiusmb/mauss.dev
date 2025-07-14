@@ -16,6 +16,6 @@ backdrop:
   path: Vq4L8A88fNQxBqM27xHtDi4DrL.jpg
 link:
   IMDb: https://www.imdb.com/title/tt13616990/
-  MyAnimeList: https://myanimelist.net/anime/44511/Chainsaw_Man
+  MyAnimeList: https://myanimelist.net/anime/44511
   TMDB: https://www.themoviedb.org/tv/114410
 ---

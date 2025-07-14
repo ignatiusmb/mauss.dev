@@ -13,7 +13,7 @@ backdrop:
   source: tmdb
   path: lV5n3E6GkHHEIBClkett0hSyqo.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/6547/Angel_Beats
+  MyAnimeList: https://myanimelist.net/anime/6547
 ---
 
 ![Angel Beats Backdrop](https://image.tmdb.org/t/p/original/lV5n3E6GkHHEIBClkett0hSyqo.jpg)

@@ -36,5 +36,5 @@ backdrop:
   source: tmdb
   path: zMj9lEBOi58Nj7EQ33EN2oOZRAR.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/1689/Byousoku_5_Centimeter/
+  MyAnimeList: https://myanimelist.net/anime/1689/
 ---

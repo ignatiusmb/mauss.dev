@@ -13,5 +13,5 @@ backdrop:
   source: tmdb
   path: s0w8JbuNNxL1YgaHeDWih12C3jG.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/30276/One_Punch_Man
+  MyAnimeList: https://myanimelist.net/anime/30276
 ---

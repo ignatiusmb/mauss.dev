@@ -37,7 +37,7 @@ backdrop:
   path: faEKyqjgnPw6oZ0niowLYsjT5qD.jpg
 link:
   IMDb: https://www.imdb.com/title/tt7222086/
-  MyAnimeList: https://myanimelist.net/anime/34599/Made_in_Abyss
+  MyAnimeList: https://myanimelist.net/anime/34599
   TMDB: https://www.themoviedb.org/tv/72636-made-in-abyss
 ---
 

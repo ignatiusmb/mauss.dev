@@ -14,5 +14,5 @@ backdrop:
   source: tmdb
   path: ya0GSNDIwlD3W0DJNCBizlf0dkf.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/40397/Maoujou_de_Oyasumi
+  MyAnimeList: https://myanimelist.net/anime/40397
 ---

@@ -16,7 +16,7 @@ backdrop:
   source: tmdb
   path: zfPtBlU7pJVXP3CbdaUwvlAkGKv.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/48753/Jahy-sama_wa_Kujikenai
+  MyAnimeList: https://myanimelist.net/anime/48753
   TMDB: https://www.themoviedb.org/tv/123446
 ---
 

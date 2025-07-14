@@ -14,5 +14,5 @@ backdrop:
   source: tmdb
   path: bkvkJyLqOk2ZbELDEukEAXEatrt.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/40221/Kami_no_Tou
+  MyAnimeList: https://myanimelist.net/anime/40221
 ---

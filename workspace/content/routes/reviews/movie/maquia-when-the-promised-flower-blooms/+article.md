@@ -14,7 +14,7 @@ backdrop:
   source: tmdb
   path: 4AxRcsZx6RaUtmcc4nsRiAx5mWW.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/35851/Sayonara_no_Asa_ni_Yakusoku_no_Hana_wo_Kazarou
+  MyAnimeList: https://myanimelist.net/anime/35851
 ---
 
 ![Maquia Backdrop#f#fb](https://image.tmdb.org/t/p/original/yjfwNSDljAKsuHwwE34xjlY3tQj.jpg "Source: TMDB")

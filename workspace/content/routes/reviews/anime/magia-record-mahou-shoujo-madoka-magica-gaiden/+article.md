@@ -16,6 +16,6 @@ backdrop:
   source: tmdb
   path: aP4W7Lqcc0EU5ykc03DhLDZN9uP.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/38256/Magia_Record__Mahou_Shoujo_Madoka%E2%98%86Magica_Gaiden_TV
+  MyAnimeList: https://myanimelist.net/anime/38256
   TMDB: https://www.themoviedb.org/tv/94523
 ---

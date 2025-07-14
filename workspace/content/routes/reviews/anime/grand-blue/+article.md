@@ -14,7 +14,7 @@ backdrop:
   source: tmdb
   path: uhbZZqqWMZ1IXyNperZY5URF9ah.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/37105/Grand_Blue
+  MyAnimeList: https://myanimelist.net/anime/37105
 ---
 
 ![Grand Blue Backdrop#f#fb](https://www.themoviedb.org/t/p/original/sLxzl4NzHgiVIlhvajnNCaIddG7.jpg "Source: TMDB")

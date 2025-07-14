@@ -13,7 +13,7 @@ backdrop:
   source: tmdb
   path: olaQVzQsMGVvcOWzekUsRhMJlXJ.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/34618/Blend_S
+  MyAnimeList: https://myanimelist.net/anime/34618
 ---
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/shat7d2no6y7p29568WprhohTAu.jpg "Source: TMDB")

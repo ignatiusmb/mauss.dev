@@ -15,7 +15,7 @@ backdrop:
   source: tmdb
   path: 8UwpclMJMPbJV0FCgDd8R8XilRY.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/5680/K-On
+  MyAnimeList: https://myanimelist.net/anime/5680
   TMDB: https://www.themoviedb.org/tv/42253-k-on
 ---
 

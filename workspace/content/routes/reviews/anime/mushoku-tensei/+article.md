@@ -15,7 +15,7 @@ backdrop:
   source: tmdb
   path: T8J9UFUzKK0ybPyEIoBWgOQHoa.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/39535/mushoku_tensei__isekai_ittara_honki_dasu
+  MyAnimeList: https://myanimelist.net/anime/39535
 ---
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/5OdAoJBlVmERjKA2CpjSl5zERAA.jpg "Source: TMDB")

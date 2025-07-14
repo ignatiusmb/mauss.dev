@@ -14,7 +14,7 @@ backdrop:
   source: tmdb
   path: hBHhgVhm4NGlWiWuXQyoQFm17Pp.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/11843/Danshi_Koukousei_no_Nichijou/
+  MyAnimeList: https://myanimelist.net/anime/11843/
 ---
 
 <https://www.reddit.com/r/anime/comments/jhjf8u/frankfurter_daily_lives_of_high_school_boys/>

@@ -16,7 +16,7 @@ backdrop:
   path: wgMxlmsqonV8vymd0JimlUvg82D.jpg
 link:
   IMDb: https://www.imdb.com/title/tt13706018/
-  MyAnimeList: https://myanimelist.net/anime/50265/Spy_x_Family
+  MyAnimeList: https://myanimelist.net/anime/50265
   TMDB: https://www.themoviedb.org/tv/120089-spyxfamily
 ---
 

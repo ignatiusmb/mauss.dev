@@ -16,7 +16,7 @@ backdrop:
   source: tmdb
   path: uxmxWA4mmxeAWG8NNiUpGC7W462.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/42361/Ijiranaide_Nagatoro-san
+  MyAnimeList: https://myanimelist.net/anime/42361
   TMDB: https://www.themoviedb.org/tv/105556
 ---
 

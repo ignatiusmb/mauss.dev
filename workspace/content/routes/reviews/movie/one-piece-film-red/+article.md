@@ -15,7 +15,7 @@ backdrop:
   path: 6clQoxgYxinQJeDVw504Zn4Ff2q.jpg
 link:
   IMDb: https://www.imdb.com/title/tt16183464/
-  MyAnimeList: https://myanimelist.net/anime/50410/One_Piece_Film__Red
+  MyAnimeList: https://myanimelist.net/anime/50410
   TMDB: https://www.themoviedb.org/movie/900667-one-piece-film-red
 ---
 

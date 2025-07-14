@@ -14,7 +14,7 @@ backdrop:
   source: tmdb
   path: pKAx7FPsJ41zoN9UIC5MYO4CFsH.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/41389/Tonikaku_Kawaii
+  MyAnimeList: https://myanimelist.net/anime/41389
 ---
 
 ![TONIKAWA backdrop#f#fb](https://image.tmdb.org/t/p/original/rnf2BDKeF1sxPEPhAcdvL0auuxr.jpg "Source: TMDB")
