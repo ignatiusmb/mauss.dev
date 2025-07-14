@@ -104,13 +104,13 @@
 	{/if}
 
 	{#each index as post (post.slug)}
-		{@const { source, path: image } = post.poster}
-		{@const tmdb = source === 'tmdb' && 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/'}
+		{@const tmdb = post.poster.source === 'tmdb' && 'https://image.tmdb.org/t/p/w300/'}
 		{@const [year, month] = post.released.split('-').map(Number)}
 		{@const season = ['winter', 'spring', 'summer', 'fall'][Math.floor((month - 1) / 3)]}
 
 		<a
 			href="/reviews/{post.slug}"
+			aria-label={post.title}
 			data-tier={post.tier}
 			style:pointer-events={post.draft ? 'none' : null}
 			animate:flip={{ duration: TIME.SLIDE }}
@@ -120,7 +120,7 @@
 				<span>{post.category}</span>
 			</header>
 			<Image
-				src="{tmdb || ''}{image}"
+				src="{tmdb || ''}{post.poster.path}"
 				alt={post.title}
 				ratio={3 / 2}
 				styles={{ '--border-radius': 0 }}

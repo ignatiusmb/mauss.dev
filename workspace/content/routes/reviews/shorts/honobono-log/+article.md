@@ -3,7 +3,7 @@ date: 2020
 title: Honobono Log
 tier: "?"
 released: 2016-06-07
-genres: [animation, slice of life, romance]
+genres: [anime, slice of life, romance]
 seen:
   first: 2020-12-20
 poster:
