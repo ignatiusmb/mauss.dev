@@ -16,7 +16,7 @@ backdrop:
 link:
   IMDb: https://www.imdb.com/title/tt16183464/
   MyAnimeList: https://myanimelist.net/anime/50410
-  TMDB: https://www.themoviedb.org/movie/900667-one-piece-film-red
+  TMDB: https://www.themoviedb.org/movie/900667
 ---
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/Ach0puWzxuO2imh1yWEUK7CGsx.jpg "Source: TMDB")

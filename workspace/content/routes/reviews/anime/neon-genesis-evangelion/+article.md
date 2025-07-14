@@ -16,7 +16,7 @@ backdrop:
   path: qtmlwuXj0VyJnCjnrvdpDjo15vI.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/30
-  TMDB: https://www.themoviedb.org/tv/890-neon-genesis-evangelion
+  TMDB: https://www.themoviedb.org/tv/890
 ---
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/qtmlwuXj0VyJnCjnrvdpDjo15vI.jpg "Source: TMDB")

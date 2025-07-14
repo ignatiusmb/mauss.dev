@@ -14,7 +14,7 @@ backdrop:
   source: tmdb
   path: gDlx60iOCQjTLH53ybjAPOUyVIp.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/849, https://myanimelist.net/anime/4382/
+  MyAnimeList: https://myanimelist.net/anime/849
 ---
 
 <!-- TODO: explain ways to watch -->

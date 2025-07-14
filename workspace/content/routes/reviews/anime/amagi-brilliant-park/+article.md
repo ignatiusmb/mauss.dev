@@ -16,7 +16,7 @@ backdrop:
   path: 5pl88CUfQnOgPEY7jP5wORX4Kc0.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/22147
-  TMDB: https://www.themoviedb.org/tv/65332-amagi-brilliant-park
+  TMDB: https://www.themoviedb.org/tv/65332
 ---
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/lvBdVlkEqzq6rCu0VQo3UFpdvxP.jpg "Source: TMDB")

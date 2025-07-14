@@ -16,8 +16,8 @@ backdrop:
   source: tmdb
   path: xfkOv2PSuVjehptAmRagT4MzatQ.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/33206/
-  TMDB: https://www.themoviedb.org/tv/69291-kobayashi-san-chi-no-maid-dragon
+  MyAnimeList: https://myanimelist.net/anime/33206
+  TMDB: https://www.themoviedb.org/tv/69291
 ---
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/vc3GVrH46tZPUk7RxRpQO6wH3ny.jpg "Source: TMDB")

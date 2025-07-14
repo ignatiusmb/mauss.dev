@@ -38,7 +38,7 @@ backdrop:
   path: deOIxqHGfAavUhRonk5z24iaXXd.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/32182
-  TMDB: https://www.themoviedb.org/tv/67075-100
+  TMDB: https://www.themoviedb.org/tv/67075
 ---
 
 Started S3 on 2022-10-06T23:58:00+07:00

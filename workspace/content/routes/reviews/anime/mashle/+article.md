@@ -17,5 +17,5 @@ backdrop:
 link:
   IMDb: https://www.imdb.com/title/tt21209804/
   MyAnimeList: https://myanimelist.net/anime/52211
-  TMDB: https://www.themoviedb.org/tv/204832-mashle
+  TMDB: https://www.themoviedb.org/tv/204832
 ---

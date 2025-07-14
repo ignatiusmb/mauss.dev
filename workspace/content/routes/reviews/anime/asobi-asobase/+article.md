@@ -16,7 +16,7 @@ backdrop:
   path: 8VN3MyfoFCdFTR9GDh5Tx9pbdCV.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/37171
-  TMDB: https://www.themoviedb.org/tv/80539-asobi-asobase
+  TMDB: https://www.themoviedb.org/tv/80539
 ---
 
 > Nichijou but it's R-rated

@@ -15,6 +15,6 @@ backdrop:
   source: tmdb
   path: 3VPPB2VGmp0l3XkUE3Pde2tZ4gi.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/40056/
-  TMDB: https://www.themoviedb.org/tv/92588-deca-dence
+  MyAnimeList: https://myanimelist.net/anime/40056
+  TMDB: https://www.themoviedb.org/tv/92588
 ---

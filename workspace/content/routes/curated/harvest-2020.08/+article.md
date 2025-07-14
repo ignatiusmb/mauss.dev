@@ -24,7 +24,7 @@ Semantic Commit Message was written to remind myself and make it easy for me to 
 
 ## stories
 
-![Kill la Kill backdrop](https://image.tmdb.org/t/p/original/kFJTEDYjm1EuowbYo7qcaJUBFXA.jpg "[Kill la Kill](/reviews/anime/kill-la-kill) [[TMDB](https://www.themoviedb.org/tv/60728-kill-la-kill)]")
+![Kill la Kill backdrop](https://image.tmdb.org/t/p/original/kFJTEDYjm1EuowbYo7qcaJUBFXA.jpg "[Kill la Kill](/reviews/anime/kill-la-kill) [[TMDB](https://www.themoviedb.org/tv/60728)]")
 
 [Kill la Kill](/reviews/anime/kill-la-kill) or **Dressed to Kill** is an over the top action anime with a unique art style, absolutely stellar soundtracks, and one of the best stories out there.
 

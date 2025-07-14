@@ -15,7 +15,7 @@ backdrop:
   path: fst9hM26nIJMF4FTkFLasUwmBC.jpg
 link:
   IMDb: https://www.imdb.com/title/tt2953050/
-  TMDB: https://www.themoviedb.org/movie/568124-encanto
+  TMDB: https://www.themoviedb.org/movie/568124
 ---
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/3G1Q5xF40HkUBJXxt2DQgQzKTp5.jpg "Source: TMDB")

@@ -17,5 +17,5 @@ backdrop:
   path: ee0MEplgTMVitRrOl6D0AAu3ywl.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/23277
-  TMDB: https://www.themoviedb.org/tv/69367-saekano-how-to-raise-a-boring-girlfriend
+  TMDB: https://www.themoviedb.org/tv/69367
 ---

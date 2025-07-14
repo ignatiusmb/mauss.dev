@@ -15,7 +15,7 @@ backdrop:
   path: AfyuI3glMCBDFmNPj9PY6DwbgGp.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/32
-  TMDB: https://www.themoviedb.org/movie/18491-air
+  TMDB: https://www.themoviedb.org/movie/18491
 ---
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/nwSyFnZORd5ptu0RClAMgsF5dkE.jpg "Source: TMDB")

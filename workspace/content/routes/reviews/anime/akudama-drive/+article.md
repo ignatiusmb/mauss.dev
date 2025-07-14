@@ -13,5 +13,5 @@ backdrop:
   source: tmdb
   path: iUJpT94rezsCxM57sgo4egMTOyz.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/41433/
+  MyAnimeList: https://myanimelist.net/anime/41433
 ---

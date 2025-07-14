@@ -32,7 +32,7 @@ In other words, we as developers could contribute to the effort of decreasing gl
 
 ## stories
 
-![The God of High School banner#f](https://image.tmdb.org/t/p/original/bhPDfwKeRklEfeOgNzbbz0tUggq.jpg "[The God of High School](/reviews/anime/the-god-of-high-school) [[TMDB](https://www.themoviedb.org/tv/99778-the-god-of-high-school)]")
+![The God of High School banner#f](https://image.tmdb.org/t/p/original/bhPDfwKeRklEfeOgNzbbz0tUggq.jpg "[The God of High School](/reviews/anime/the-god-of-high-school) [[TMDB](https://www.themoviedb.org/tv/99778)]")
 
 The God of High School just aired their final episode for Season 1 on 28th of August and it was amazing. A manhwa adaptation with full-throttle action-packed episodes. I need to compare this to Tower of God, since they're both a webtoon turned anime, and because it was quite a letdown for me. Although the story is where it shines, there's really no action in Tower of God and when there is, it ends in with just a move. It left me unsatisfied even though I still enjoy going through the story.
 

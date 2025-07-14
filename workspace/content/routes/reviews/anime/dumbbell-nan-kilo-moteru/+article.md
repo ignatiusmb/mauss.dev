@@ -16,7 +16,7 @@ backdrop:
   source: tmdb
   path: f1Poy5jpwu5sRBEojO8ZWwvqXUD.jpg
 link:
-  MyAnimeList: https://myanimelist.net/anime/39026/
+  MyAnimeList: https://myanimelist.net/anime/39026
   TMDB: https://www.themoviedb.org/tv/88045
 ---
 

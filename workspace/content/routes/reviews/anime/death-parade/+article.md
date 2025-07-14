@@ -16,7 +16,7 @@ backdrop:
   path: kE4DhDPgjzxvv2BJCHhs0xbdwun.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/28223
-  TMDB: https://www.themoviedb.org/tv/61901-death-parade
+  TMDB: https://www.themoviedb.org/tv/61901
 ---
 
 ![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/3zyN1QL3xPcaitg3DXMAtSnq64y.jpg "Source: TMDB")

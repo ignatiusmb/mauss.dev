@@ -38,7 +38,7 @@ backdrop:
 link:
   IMDb: https://www.imdb.com/title/tt7222086/
   MyAnimeList: https://myanimelist.net/anime/34599
-  TMDB: https://www.themoviedb.org/tv/72636-made-in-abyss
+  TMDB: https://www.themoviedb.org/tv/72636
 ---
 
 Finished S1 on 2023-01-26T23:38:00+07:00
