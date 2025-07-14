@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: "Onimai: I'm Now Your Sister!"
-alias: [Oniichan wa Oshimai!]
+alias: ["Oniichan wa Oshimai!"]
 tier: "?"
 released: 2023-01-05
 genres: [comedy]
