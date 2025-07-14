@@ -3,7 +3,7 @@ date: 2020
 title: Jujutsu Kaisen 0
 tier: "?"
 released: 2021-12-24
-genres: [animation]
+genres: [anime]
 seen:
   first: "2022-03-14T16:26:00"
   last: "2022-03-14T18:04:00"

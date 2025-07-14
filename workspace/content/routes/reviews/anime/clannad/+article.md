@@ -19,5 +19,3 @@ link:
   MyAnimeList: https://myanimelist.net/anime/2167
   TMDB: https://www.themoviedb.org/tv/24835
 ---
-
-do you want to *cry on demand*?

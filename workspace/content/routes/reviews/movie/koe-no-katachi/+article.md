@@ -4,7 +4,7 @@ title: A Silent Voice
 romaji: Koe no Katachi
 tier: "?"
 released: 2016-09-17
-genres: [animation, drama]
+genres: [anime, drama]
 seen:
   first: "2021-10-16T09:00:00"
   last: "2021-10-16T14:21:57"

@@ -3,7 +3,7 @@ date: 2020
 title: Howl's Moving Castle
 tier: "?"
 released: 2004-11-20
-genres: [animation, adventure, drama, fantasy, romance]
+genres: [anime, adventure, drama, fantasy, romance]
 seen:
   first: 2020-10-03
 poster:

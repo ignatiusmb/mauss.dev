@@ -1,5 +1,5 @@
 ---
-title: the sequel that shouldn't be
+title: should've been a slice-of-life
 ---
 
 ## flashback inception

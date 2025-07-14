@@ -4,7 +4,7 @@ title: Drifting Home
 romaji: Ame wo Tsugeru Hyouryuu Danchi
 tier: "?"
 released: 2022-09-16
-genres: [animation, adventure, family, fantasy]
+genres: [anime, adventure, family, fantasy]
 seen:
   first: "2022-10-03T18:18:00+07:00"
   last: "2022-10-03T20:59:00+07:00"

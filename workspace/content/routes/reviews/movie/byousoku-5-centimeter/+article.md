@@ -4,7 +4,7 @@ title: 5 Centimeters per Second
 romaji: Byousoku 5 Centimeter
 tier: "?"
 released: 2007-03-03
-genres: [animation, drama, romance, slice of life]
+genres: [anime, drama, romance, slice of life]
 seen:
   first: 2020-08-08
 rating:

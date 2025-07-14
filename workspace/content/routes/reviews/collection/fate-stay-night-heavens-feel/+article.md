@@ -4,7 +4,7 @@ title: "Fate/stay night: Heaven's Feel Trilogy"
 tier: "?"
 released: 2020-08-15
 completed: 3/3
-genres: [animation, mystery, supernatural, romance]
+genres: [anime, mystery, supernatural, romance]
 seen:
   first: 2021-06-28
   last: 2021-06-28

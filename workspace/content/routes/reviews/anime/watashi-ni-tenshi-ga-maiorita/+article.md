@@ -51,7 +51,7 @@ soundtracks:
     spotify: 2dPU25vkiOuE6VpKpVnGWC
 ---
 
-a slice-of-life about two sisters and their friends doing everyday things. i'm a sucker for these kinds of shows, so the verdict might be a bit biased. but for real though, it's like a warm hug or a cozy blanket on a cold rainy day. the humor is just right, gave me the same kind of joy [Nichijou](/reviews/anime/nichijou) did — that rare feeling of genuinely laughing out loud without expecting to.
+**a wholesome slice-of-life with two sisters and their friends living their lives**. i'm a sucker for these kinds of shows, so the verdict might be a bit biased. but for real though, it's like a warm hug or a cozy blanket on a cold rainy day. the humor is just right, gave me the same kind of joy [Nichijou](/reviews/anime/nichijou) did — that rare feeling of genuinely laughing out loud without expecting to.
 
 the animation has that warmth and attention to detail you don't notice until you pay a closer attention to the details. i mean, just look at the food! this short preview of episode one almost made me drool and had me craving buttered toast.
 

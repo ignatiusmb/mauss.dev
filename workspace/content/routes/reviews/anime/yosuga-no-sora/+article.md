@@ -54,12 +54,10 @@ soundtracks:
     youtube: qVn3_qeIrBA
 ---
 
-Yosuga no Sora is a bold experiment — structured unlike most anime. it tells multiple stories across separate arcs, each emotionally distinct, but all rooted in the same quiet and rural backdrop. it's not a typical romance or slice-of-life. this isn't a light or casual watch, and it doesn't pretend to be one.
+**not your typical romance anime**. *Yosuga no Sora* is **not** hentai — seriously, there are plenty of decent ones out there if that's what you're after, but this is definitely not one of them.
 
-this wasn't my first anime, but it was the first that made me want to write about what i'd watched. for a 2010 anime, the visuals holds up well. backgrounds are vivid, detailed, and thoughtfully composed. the soundtrack is stellar, though it leans a bit too hard on one track for both sad and happy moments.
+this wasn't my first anime, but it was the first that made me reflect so much that i needed to write about it. yes, it's got the *ecchi* tag, though i would've preferred if it didn't have it at all. i think the story would've stood out more if there were less fanservice and sex scenes — or none at all.
 
-it's *almost* hentai — but if that's what you're after, you'll find better elsewhere. this isn't your typical harem or romance anime, and it's not trying to be.
+if you're into fanservice or loli figures, by all means, enjoy. i'm not here to judge. but if you're here just to get off, grab an actual hentai instead, will you?
 
-go in with the right mindset. it's not for everyone. but if you're willing to sit with complex relationships and uncomfortable emotions, Yosuga no Sora might surprise you in ways i never expected myself.
-
-if you give this a shot, i'll see you on ***the other page***.
+if you do give this a shot, i'll see you on ***the other page***.

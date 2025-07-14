@@ -3,7 +3,7 @@ date: 2020
 title: "Neon Genesis Evangelion: The End of Evangelion"
 tier: "?"
 released: 1997-07-19
-genres: [animation, drama, mecha, psychological, sci-fi]
+genres: [anime, drama, mecha, psychological, sci-fi]
 seen:
   first: "2022-11-01T23:02:00+07:00"
   last: "2022-11-02T00:37:00+07:00"

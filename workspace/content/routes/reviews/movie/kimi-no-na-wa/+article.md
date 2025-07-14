@@ -4,7 +4,7 @@ title: Your Name.
 romaji: Kimi no Na wa.
 tier: "?"
 released: 2016-08-26
-genres: [animation, romance, supernatural, drama, school]
+genres: [anime, romance, supernatural, drama, school]
 seen:
   first: 2020-08-29
 rating:

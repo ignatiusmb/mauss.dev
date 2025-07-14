@@ -3,7 +3,7 @@ date: 2020
 title: Burn the Witch
 tier: "?"
 released: 2020-10-02
-genres: [animation, action, magic, fantasy, shounen]
+genres: [anime, action, magic, fantasy, shounen]
 seen:
   first: 2021-01-27
 poster:

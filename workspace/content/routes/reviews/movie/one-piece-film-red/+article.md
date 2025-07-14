@@ -3,7 +3,7 @@ date: 2020
 title: "One Piece Film: Red"
 tier: "?"
 released: 2022-09-21
-genres: [animation, action, adventure, fantasy]
+genres: [anime, action, adventure, fantasy]
 seen:
   first: "2022-09-24T17:40:00"
   last: "2022-09-24T19:53:35"

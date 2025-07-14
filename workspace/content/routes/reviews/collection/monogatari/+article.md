@@ -3,7 +3,7 @@ date: 2020
 title: The Monogatari Series
 tier: "?"
 released: 2009-07-03
-genres: [animation, mystery, supernatural, romance]
+genres: [anime, mystery, supernatural, romance]
 seen:
   first: 2020
 poster:

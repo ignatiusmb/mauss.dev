@@ -11,7 +11,7 @@ seen:
   last: "2022-05-14T16:44:04"
 poster:
   source: tmdb
-  path: tNznuhcf7WKzEmPQEsIgGMrB3Az.jpg
+  path: jnmL1DoqCYcQH1vGvBvEv4CElnF.jpg
 backdrop:
   source: tmdb
   path: xfkOv2PSuVjehptAmRagT4MzatQ.jpg
