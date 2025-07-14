@@ -69,7 +69,6 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		margin-top: 3rem;
 		text-align: left;
 
 		h1 {

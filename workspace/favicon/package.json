@@ -6,16 +6,11 @@
 		"dev-host": "vite dev --host",
 		"build": "vite build",
 		"check": "svelte-check src --tsconfig ./tsconfig.json",
-		"prepare": "cp -n .env.example .env && svelte-kit sync"
-	},
-	"dependencies": {
-		"mauss": "^0.10.6",
-		"pocketbase": "^0.26.1"
+		"prepare": "svelte-kit sync"
 	},
 	"devDependencies": {
 		"@fontsource-variable/fira-code": "^5.2.6",
 		"@fontsource-variable/karla": "^5.2.6",
-		"@sveltejs/adapter-vercel": "^5.7.2",
-		"sharp": "^0.34.3"
+		"@sveltejs/adapter-static": "^3.0.8"
 	}
 }
