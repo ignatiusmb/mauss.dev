@@ -106,7 +106,7 @@
 	{#each index as post (post.slug)}
 		{@const tmdb = post.poster.source === 'tmdb' && 'https://image.tmdb.org/t/p/w300/'}
 		{@const [year, month] = post.released.split('-').map(Number)}
-		{@const season = ['winter', 'spring', 'summer', 'fall'][Math.floor((month - 1) / 3)]}
+		{@const season = ['winter', 'spring', 'summer', 'fall'][Math.floor(month / 3)]}
 
 		<a
 			href="/reviews/{post.slug}"

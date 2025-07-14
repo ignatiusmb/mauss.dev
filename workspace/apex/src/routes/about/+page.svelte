@@ -7,13 +7,14 @@
 	<header>
 		<WeavedImage src="/assets/profile/mauss.jpg" alt="Igna's profile picture" />
 
-		<h1>
-			<i data-icon="hand-waving" style:width="2rem" style:height="2rem"></i>
-			<span style:margin-left="0.5rem">hello.</span>
-		</h1>
+		<h1>Ignatius Bagus.</h1>
+		<span><em>Software Alchemist</em> — code and prose, perfectly distilled</span>
 
 		<!-- prettier-ignore -->
-		<p>I'm Igna. I'm more comfortable focusing on my thoughts and ideas, which also means most of my time goes into building something to clear out my mind. When I'm not at the desk, I try to move myself as it also helps clears the noise.</p>
+		<p>hello, i'm an independent software engineer based in Southeast Asia (GMT+7&ndash;8), <a href="https://github.com/ignatiusmb" target="_blank">building in public</a> — <a href="/atelier">mostly open source</a>. i also take on consulting and freelance projects, specifically tailored if you're looking for something custom and/or private. if you need me, you can reach out through one of <a href="#elsewhere">my socials</a>.</p>
+
+		<!-- prettier-ignore -->
+		<p>i tend to build quietly and write to make sense of it all. it's a way for me to process lessons, share discoveries, and explore new ideas. if you're curious, the <a href="/help">help page</a> is the dedicated page to get you started — or jump straight to any of the links below.</p>
 	</header>
 
 	<h3 id="expertise">
@@ -21,13 +22,13 @@
 		<span>expertise.</span>
 	</h3>
 	<!-- prettier-ignore -->
-	<p>I'm a software engineer by trade, but I like to think of myself more as a <em>software alchemist</em>. I see it as an art — being able to create something out of nothing, or transforming raw and unrefined thoughts (solutions) into something beautiful.</p>
+	<p>i'm a software engineer by trade, but I like to think of myself more as a <em>software alchemist</em>. i see it as an art — being able to create something out of nothing, or transforming raw and unrefined thoughts (solutions) into something beautiful.</p>
 	<!-- prettier-ignore -->
-	<p>My strength lies in restructuring systems and streamlining logic, shaving away the noise until what remains just works. I found that the time I spent there is well worth the payoff: easier debugging, quicker iteration, and codebases I don't dread revisiting.</p>
+	<p>my strength lies in restructuring systems and streamlining logic, shaving away the noise until what remains just works. i found that the time i spent there is well worth the payoff: easier debugging, quicker iteration, and codebases i don't dread revisiting.</p>
 	<!-- prettier-ignore -->
-	<p>As a solo dev, I build mostly for the web, working with <a href="https://svelte.dev" target="_blank">Svelte</a> and <a href="https://www.typescriptlang.org" target="_blank">TypeScript</a>. I've also explored a wide spectrum of languages: <a href="https://en.wikipedia.org/wiki/Assembly_language" target="_blank">Assembly</a>, <a href="https://www.gnu.org/software/bash" target="_blank">Bash</a>, <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank">C</a>, <a href="https://en.wikipedia.org/wiki/C++" target="_blank">C++</a>, <a href="https://dart.dev" target="_blank">Dart</a> (<a href="https://flutter.dev" target="_blank">Flutter</a>), <a href="https://godotengine.org" target="_blank">GDScript</a>, <a href="https://www.haskell.org" target="_blank">Haskell</a>, <a href="https://en.wikipedia.org/wiki/Java_%28programming_language%29" target="_blank">Java</a>, <a href="https://www.python.org" target="_blank">Python</a>, and a few others I've probably forgotten. I don't mind the language that much, once you understand the fundamentals, the rest will follow naturally.</p>
+	<p>as a solo dev, i build mostly for the web, working with <a href="https://svelte.dev" target="_blank">Svelte</a> and <a href="https://www.typescriptlang.org" target="_blank">TypeScript</a>. i've also explored a wide spectrum of languages: <a href="https://en.wikipedia.org/wiki/Assembly_language" target="_blank">Assembly</a>, <a href="https://www.gnu.org/software/bash" target="_blank">Bash</a>, <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank">C</a>, <a href="https://en.wikipedia.org/wiki/C++" target="_blank">C++</a>, <a href="https://dart.dev" target="_blank">Dart</a> (<a href="https://flutter.dev" target="_blank">Flutter</a>), <a href="https://godotengine.org" target="_blank">GDScript</a>, <a href="https://www.haskell.org" target="_blank">Haskell</a>, <a href="https://en.wikipedia.org/wiki/Java_%28programming_language%29" target="_blank">Java</a>, <a href="https://www.python.org" target="_blank">Python</a>, and a few others i've probably forgotten. i don't mind the language that much, once you understand the fundamentals, the rest will follow naturally.</p>
 	<!-- prettier-ignore -->
-	<p>Though I can go full-stack when needed, my focus is frontend as I care about the interfaces I spent my time on.</p>
+	<p>though i can go full-stack when needed, i usually put more focus on the frontend as i care about the interfaces i spent my time on and the people that are going to use them.</p>
 
 	<h3 id="now">
 		<i data-icon="calendar-dots"></i>
@@ -197,9 +198,12 @@
 </Article>
 
 <style>
-	h1 {
-		display: flex;
-		align-items: center;
+	header {
+		h1 {
+			text-align: left;
+			font-size: 1.875rem;
+			font-weight: 600;
+		}
 	}
 
 	/* add specificity */
@@ -221,9 +225,6 @@
 	i[data-icon] {
 		&[data-icon='calendar-dots'] {
 			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"><rect x="40" y="40" width="176" height="176" rx="8"/><line x1="176" y1="24" x2="176" y2="56"/><line x1="80" y1="24" x2="80" y2="56"/><line x1="40" y1="88" x2="216" y2="88"/><circle cx="128" cy="132" r="12"/><circle cx="172" cy="132" r="12"/><circle cx="84" cy="172" r="12"/><circle cx="128" cy="172" r="12"/><circle cx="172" cy="172" r="12"/></svg>');
-		}
-		&[data-icon='hand-waving'] {
-			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"><path d="M96.65,62a20,20,0,0,1,34.64-20l30,52"/><path d="M69.32,94.67,55.08,70A20,20,0,0,1,89.73,50l31.17,54"/><path d="M158.87,160A40,40,0,0,1,168,105.58L161.32,94A20,20,0,0,1,196,74l17.31,30A80,80,0,0,1,74.7,184l-40-69.32a20,20,0,0,1,34.64-20L88.57,128"/><path d="M192,33.78A51.84,51.84,0,0,1,223.67,58l.33.57"/><path d="M74.62,232A111.88,111.88,0,0,1,47,200"/></svg>');
 		}
 		&[data-icon='pulse'] {
 			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><polyline points="24 128 56 128 96 40 160 208 200 128 232 128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>');

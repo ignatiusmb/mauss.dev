@@ -1,76 +1,80 @@
 import { traverse } from 'aubade/compass';
 import { chain } from 'aubade/transform';
-// import { exec } from 'node:child_process';
+import { exec } from 'node:child_process';
 import { attempt, date, define, drill, sum } from 'mauss';
 import { exists } from 'mauss/guards';
 import sharp from 'sharp';
 
-// async function updated(path: string): Promise<string> {
-// 	return await new Promise((resolve) => {
-// 		exec(`git log -1 --format=%ad --date=iso-strict "${path}"`, (_, out) => resolve(out.trim()));
-// 	});
-// }
+async function updated(path: string): Promise<string> {
+	return await new Promise((resolve) => {
+		exec(`git log -1 --format=%ad --date=iso-strict "${path}"`, (_, out) => resolve(out.trim()));
+	});
+}
 
 const ROOT = `${process.cwd()}/static/uploads`;
 export const ROUTES = {
 	async '/curated'() {
 		const schema = define(({ optional, string }) => ({
-			date: string(),
+			date: optional(string(), ''), // if empty, use the file's last modified date
 			title: string(),
 			tags: optional(string()),
 		}));
 
-		const items = await traverse('../content/routes/curated', ({ breadcrumb: [file, slug] }) => {
-			if (file !== '+article.md') return;
+		const items = await traverse(
+			'../content/routes/curated',
+			({ breadcrumb: [file, slug], path }) => {
+				if (file !== '+article.md') return;
 
-			return async ({ buffer, marker, parse, siblings, task }) => {
-				const { body, frontmatter } = parse(buffer.toString('utf-8'));
-				if (!frontmatter || frontmatter.draft) return;
-				const metadata = schema(frontmatter);
+				return async ({ buffer, marker, parse, siblings, task }) => {
+					const { body, frontmatter } = parse(buffer.toString('utf-8'));
+					if (!frontmatter || frontmatter.draft) return;
+					const metadata = schema(frontmatter);
+					metadata.date = metadata.date || (await updated(path));
 
-				const umbrella = `curated/${slug}`;
-				const content = body.replace(/\.\/([^\s)]+)/g, (m, relative) => {
-					const asset = siblings.find(({ filename }) => relative === filename);
-					if (!asset || !/\.(jpe?g|png|svg|mp4)$/.test(asset.filename)) return m;
+					const umbrella = `curated/${slug}`;
+					const content = body.replace(/\.\/([^\s)]+)/g, (m, relative) => {
+						const asset = siblings.find(({ filename }) => relative === filename);
+						if (!asset || !/\.(jpe?g|png|svg|mp4)$/.test(asset.filename)) return m;
 
-					const output = /\.(mp4)$/.test(asset.filename)
-						? asset.filename
-						: asset.filename.replace(/\.[^/.]+$/, '.webp');
+						const output = /\.(mp4)$/.test(asset.filename)
+							? asset.filename
+							: asset.filename.replace(/\.[^/.]+$/, '.webp');
 
-					task(async ({ fs }) => {
-						await fs.mkdir(`${ROOT}/${umbrella}`, { recursive: true });
-						const payload = await asset.buffer;
-						const filename = `${ROOT}/${umbrella}/${output}`;
-						if (output.endsWith('.mp4')) return fs.writeFile(filename, payload);
-						return void sharp(payload).webp().toFile(filename);
+						task(async ({ fs }) => {
+							await fs.mkdir(`${ROOT}/${umbrella}`, { recursive: true });
+							const payload = await asset.buffer;
+							const filename = `${ROOT}/${umbrella}/${output}`;
+							if (output.endsWith('.mp4')) return fs.writeFile(filename, payload);
+							return void sharp(payload).webp().toFile(filename);
+						});
+
+						return `/uploads/${umbrella}/${output}`;
 					});
 
-					return `/uploads/${umbrella}/${output}`;
-				});
+					const branches = siblings.map(async (branch) => {
+						if (branch.filename[0] !== '+') return;
+						const { body, frontmatter: extras } = parse((await branch.buffer).toString('utf-8'));
+						if (!extras || extras.draft) return;
+						return {
+							slug,
+							...frontmatter,
+							...metadata,
+							...extras,
+							branch: branch.filename.slice(1, -3),
+							content: marker.render(body),
+						};
+					});
 
-				const branches = siblings.map(async (branch) => {
-					if (branch.filename[0] !== '+') return;
-					const { body, frontmatter: extras } = parse((await branch.buffer).toString('utf-8'));
-					if (!extras || extras.draft) return;
 					return {
 						slug,
 						...frontmatter,
 						...metadata,
-						...extras,
-						branch: branch.filename.slice(1, -3),
-						content: marker.render(body),
+						content: marker.render(content),
+						branches: (await Promise.all(branches)).filter((b) => b != null),
 					};
-				});
-
-				return {
-					slug,
-					...frontmatter,
-					...metadata,
-					content: marker.render(content),
-					branches: (await Promise.all(branches)).filter((b) => b != null),
 				};
-			};
-		});
+			},
+		);
 
 		return items.sort(drill('date', date.sort.newest));
 	},

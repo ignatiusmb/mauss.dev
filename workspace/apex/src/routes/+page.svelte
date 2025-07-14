@@ -8,31 +8,9 @@
 
 <Article>
 	<header>
-		<h1>Ignatius Bagus.</h1>
-		<span><em>Software Alchemist</em> — code and prose, perfectly distilled</span>
+		<h1>Alkamauss</h1>
+		<span><em>by</em> <a href="/about">Ignatius Bagus.</a></span>
 	</header>
-
-	<!-- prettier-ignore -->
-	<p><a href="/about#expertise">Independent software engineer</a> based in Southeast Asia (GMT+7&ndash;8), <a href="https://github.com/ignatiusmb" target="_blank">building in public</a> — <a href="/atelier">mostly open source</a>. I also take on consulting and freelance projects, tailored for you if you're looking for something custom, focused, and private. If that resonates, feel free to reach out through one of <a href="/about#elsewhere">my socials</a>.</p>
-	<!-- prettier-ignore -->
-	<p>I tend to build quietly and write to make sense of it all. It's a way for me to process lessons, share discoveries, and explore new ideas. If you're curious, the <a href="/help">help page</a> is the dedicated page to get you started — or jump straight to any of the links below.</p>
-
-	<section>
-		<h2>
-			<i data-icon="article"></i>
-			<span>/posts</span>
-		</h2>
-		{#each data.posts as { slug, title, date: created }}
-			<article>
-				<a href="/posts/{slug}">{title}</a>
-				<time datetime={created}>{date(created).format('DD MMM YYYY')}</time>
-			</article>
-		{/each}
-		<a href="/posts">
-			<span>All posts</span>
-			<i data-icon="arrow-circle-right"></i>
-		</a>
-	</section>
 
 	<section>
 		<h2>
@@ -47,6 +25,23 @@
 		{/each}
 		<a href="/curated">
 			<span>All curated things</span>
+			<i data-icon="arrow-circle-right"></i>
+		</a>
+	</section>
+
+	<section>
+		<h2>
+			<i data-icon="article"></i>
+			<span>/posts</span>
+		</h2>
+		{#each data.posts as { slug, title, date: created }}
+			<article>
+				<a href="/posts/{slug}">{title}</a>
+				<time datetime={created}>{date(created).format('DD MMM YYYY')}</time>
+			</article>
+		{/each}
+		<a href="/posts">
+			<span>All posts</span>
 			<i data-icon="arrow-circle-right"></i>
 		</a>
 	</section>

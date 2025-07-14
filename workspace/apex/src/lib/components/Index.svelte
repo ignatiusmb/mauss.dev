@@ -8,7 +8,7 @@
 	const balancer = $derived(items.reduce((c, i) => Math.min(c, i.level || 2), 4));
 </script>
 
-<details id="index">
+<details open id="index">
 	<summary>
 		<i data-icon="compass-rose"></i>
 		<span>{summary}</span>

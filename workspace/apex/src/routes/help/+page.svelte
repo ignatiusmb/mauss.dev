@@ -5,7 +5,7 @@
 
 <Article>
 	<h1>you've made port.</h1>
-	<small style:text-align="center">still afloat. always drifting, never adrift.</small>
+	<small style:text-align="center">always drifting, never adrift.</small>
 
 	<!-- prettier-ignore -->
 	<p>Alkamauss is a virtual abode — filled with reflections of my experiences and evolving thoughts, it's a space where i try to express myself with clarity and honesty. embracing the idea of <strong>a digital garden</strong>, i treat this site as a living archive that will always be under construction, slowly growing as i plant new seeds and tend to older ones. over time, i hope it becomes a space worth visiting: <em>imperfect, but alive</em>.</p>
@@ -36,9 +36,9 @@
 		<span>how i write</span>
 	</h2>
 	<!-- prettier-ignore -->
-	<p>most of my writing on this site is in lowercase. it might seem unusual if you're not used to this style, but i feel more grounded and honest as it helps me convey my thoughts and feelings better. like chatting with a good friend, it strips away the pressure to perform and lets me focus on what i'm trying to say, not how it's dressed up.</p>
+	<p>if you don't see anything weird, perfect. if you do, i hope you get used to it. writing this way helps me be more honest with myself and express my thoughts and feelings more clearly. like chatting with a good friend — we just type whatever's on our mind, no need to worry about how it's dressed up.</p>
 	<!-- prettier-ignore -->
-	<p>however, i do have more time to write here and i sometimes get confused myself with <em>everything</em> lowercased. so, i try my best to case the words in places where it matters and where it makes it easier to read. the rest is written as freely and naturally as i think it, as i try to make sense and articulate myself.</p>
+	<p>however, i do have more time when writing here and i sometimes get confused myself with <em>everything</em> lowercased. so, i try my best to case the words in places where it matters and where it makes it easier to read. the rest is written as freely and naturally as i think it, as i try to make sense and articulate myself.</p>
 
 	<section data-info="warning" style:margin="2rem 0">
 		<!-- prettier-ignore -->
