@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: Mob Psycho 100
-tier: "?"
+tier: S
 released: 2016-07-11
 completed: 37/37
 genres: [action, comedy, supernatural]
@@ -32,7 +32,7 @@ rating:
     - impact: 10
 poster:
   source: tmdb
-  path: 5Wf9Y6gucbu1LMe1FyqD8TQjaNM.jpg
+  path: zkL0htm5fwnYPlTndmvNZpyejTT.jpg
 backdrop:
   source: tmdb
   path: deOIxqHGfAavUhRonk5z24iaXXd.jpg
