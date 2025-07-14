@@ -15,7 +15,7 @@ const ROOT = `${process.cwd()}/static/uploads`;
 export const ROUTES = {
 	async '/curated'() {
 		const schema = define(({ optional, string }) => ({
-			date: optional(string()), // if empty, use the file's last modified date
+			date: optional(string(), ''), // if empty, use the file's last modified date
 			title: string(),
 			tags: optional(string()),
 		}));
