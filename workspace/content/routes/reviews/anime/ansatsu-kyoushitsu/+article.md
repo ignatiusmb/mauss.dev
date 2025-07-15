@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: Assassination Classroom
-romaji: Ansatsu Kyoushitsu
+alias: [Ansatsu Kyoushitsu]
 tier: "?"
 released: 2015-01-10
 completed: 47/47
@@ -11,7 +11,7 @@ seen:
   last: 2021-06-26
 poster:
   source: tmdb
-  path: wOd98jDHkoWy2LZ4gSy67X1ihv1.jpg
+  path: qf0l0nQ2t06Es3cSXflqx6l6vsJ.jpg
 backdrop:
   source: tmdb
   path: 62pIwEsYX2dtlyMJjDSM6zpDTU2.jpg
