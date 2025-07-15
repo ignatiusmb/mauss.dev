@@ -1,8 +1,7 @@
 ---
 date: 2020
 title: My Little Sister Can't Be This Cute
-romaji: Ore no Imouto ga Konnani Kawaii Wake ga Nai
-alias: [OreImo]
+alias: [OreImo, Ore no Imouto ga Konnani Kawaii Wake ga Nai]
 tier: "?"
 released: 2010-10-03
 genres: [comedy, drama, romance, slice of life, harem, ecchi]
@@ -10,7 +9,7 @@ seen:
   first: 2020-06-23
 poster:
   source: tmdb
-  path: uJFL8PETMI09hj0AJ4oCpRDWRnk.jpg
+  path: efZcn6XAMhz4n5vHVKRPVvvBfJ2.jpg
 backdrop:
   source: tmdb
   path: jfMxNkSh6CP6jWpOS60IzciMHa0.jpg
