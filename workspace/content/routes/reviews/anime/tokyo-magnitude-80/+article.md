@@ -10,7 +10,7 @@ seen:
   last: "2021-07-30T20:54:08"
 poster:
   source: tmdb
-  path: sGmtNIVyZHqB0MLmbleNG4GmRVV.jpg
+  path: ztpq6SVVLrznYJBSATCPSkgT5vo.jpg
 backdrop:
   source: tmdb
   path: pFlKmFYSf90lsKTSbNlqTtAQhyN.jpg

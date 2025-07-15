@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: "Grimgar: Ashes and Illusions"
-romaji: Hai to Gensou no Grimgar
+alias: [Hai to Gensou no Grimgar]
 tier: "?"
 released: 2016-01-11
 genres: [isekai, fantasy, adventure, action, drama]
@@ -9,7 +9,7 @@ seen:
   first: 2020-11-16
 poster:
   source: tmdb
-  path: zrnwS0cKsdpi0SpJxqSz1Dw2JGS.jpg
+  path: eTOmyljFExcAM13kaxNjZzpJdwt.jpg
 backdrop:
   source: tmdb
   path: hQSjBpfBMeqOOHsGPLacb7Gx3aZ.jpg

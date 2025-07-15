@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: Kuroko's Basketball
-romaji: Kuroko no Basuke
+alias: [Kuroko no Basuke]
 tier: "?"
 released: 2012-04-08
 genres: [sports, school, comedy]
@@ -9,7 +9,7 @@ seen:
   first: 2020-05-10
 poster:
   source: tmdb
-  path: mlJQS0Oh9MGv7pJrh0xsVYRYpFp.jpg
+  path: 5CEIm6RPRU9iy4jBpfreUwJkydv.jpg
 backdrop:
   source: tmdb
   path: fOyOP702oDeGyM2H4I8mQ5pdKne.jpg

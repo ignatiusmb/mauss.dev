@@ -8,7 +8,7 @@ seen:
   first: 2020-08-03
 poster:
   source: tmdb
-  path: ypQKH5Q1ifDaRKoo6oQozmtFIvN.jpg
+  path: oc3AfytQXugOdX0uxDtL8ZLIDKJ.jpg
 backdrop:
   source: tmdb
   path: 4WeHwdOmGvrsGiXWqLFeUcLmr7o.jpg

@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: A Silent Voice
-romaji: Koe no Katachi
+alias: [Koe no Katachi]
 tier: "?"
 released: 2016-09-17
 genres: [anime, drama]
@@ -10,7 +10,7 @@ seen:
   last: "2021-10-16T14:21:57"
 poster:
   source: tmdb
-  path: tuFaWiqX0TXoWu7DGNcmX3UW7sT.jpg
+  path: drlyoSKDOPnxzJFrRWGqzDsyJvR.jpg
 backdrop:
   source: tmdb
   path: q5HZvtyqG8Vz39Ee9uTQbLeEml.jpg

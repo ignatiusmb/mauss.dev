@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: A Place Further Than The Universe
-romaji: Sora yori mo Tooi Basho
+alias: [Yorimoi, Sora yori mo Tooi Basho]
 tier: "?"
 released: 2018-01-02
 genres: [slice of life, adventure, comedy, drama]
@@ -9,7 +9,7 @@ seen:
   first: 2020-12-25
 poster:
   source: tmdb
-  path: iERXyBf0K6DfAQ8oKEYrdjf1vIs.jpg
+  path: rZE929GaNVCYU2K9nwWDV9rsG2K.jpg
 backdrop:
   source: tmdb
   path: gHaqtksrERg4PhDzsnrvW7dTs6z.jpg

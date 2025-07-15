@@ -10,7 +10,7 @@ seen:
   last: "2022-03-10T14:12:18"
 poster:
   source: tmdb
-  path: lwRNHfZyPWOI2oFNfIoaXsiwGJB.jpg
+  path: bYl6hBOV3Bzb0uAV1mzZ9JnDl1z.jpg
 backdrop:
   source: tmdb
   path: 8zpgSUqiYbMP3UPMKBnNbiB32c5.jpg

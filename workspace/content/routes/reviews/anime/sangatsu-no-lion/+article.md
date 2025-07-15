@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: March comes in like a lion
-romaji: 3-gatsu no Lion
+alias: [3-gatsu no, sangatsu]
 tier: "?"
 released: 2016-10-08
 completed: 44/44
@@ -11,7 +11,7 @@ seen:
   last: "2022-08-01T11:17:18"
 poster:
   source: tmdb
-  path: z7XceZ0n0f032yaq8R2zSimsjVl.jpg
+  path: sokReNdjEwG2TkdUzJcVnD6sChT.jpg
 backdrop:
   source: tmdb
   path: 2TGzDJb2Hjy5qVkw3W1Z5Drj19U.jpg
