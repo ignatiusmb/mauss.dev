@@ -30,7 +30,7 @@ rating:
     - impact: 10
 poster:
   source: tmdb
-  path: snzSlLQwaIizMOx6A7WJ9aty4zp.jpg
+  path: frgVn3ww547TVQH8vS2bWKZnEBu.jpg
 backdrop:
   source: tmdb
   path: 1rEPk87q49PspQmBJ74bwsXBVkH.jpg
