@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: Tsuredure Children
-romaji: Tsurezure Children
+alias: [Tsurezure]
 tier: "?"
 released: 2017-07-04
 genres: [comedy, romance, school, shounen]
@@ -9,7 +9,7 @@ seen:
   first: 2021-02-03
 poster:
   source: tmdb
-  path: 7cCFzTvhpU27G2hK1aIFQ6DLVlJ.jpg
+  path: aTxUzYlMAzmtmO1S8R99irHL2hi.jpg
 backdrop:
   source: tmdb
   path: 8bvcMjlU0ahkyQTXcwQLbjJ3ZMq.jpg
