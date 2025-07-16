@@ -3,7 +3,6 @@ date: "2020-07-30T17:38:25+07:00"
 title: CORS Crash Course - Client or Server?
 description: A brief yet sufficient explanation for Cross-Origin Resource Sharing (CORS)
 tags: [tutorial, javascript, cors]
-thumbnail: https://media.prod.mdn.mozit.cloud/attachments/2020/05/29/17268/e968e20752fdfbc05c911f9cc0afb30f/preflight_correct.png
 ---
 
 > Answer is **Server**. Read the rest for the explanation.

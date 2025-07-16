@@ -35,12 +35,14 @@
 		<span>now.</span>
 	</h3>
 	<ul>
-		<li>bulking up</li>
+		<li>building with sveltekit</li>
+		<li>materializing ideas in <a href="/atelier">/atelier</a></li>
+		<li>crafting collections in <a href="/curated">/curated</a></li>
+		<li>sharing thoughts in <a href="/posts">/posts</a></li>
+		<li>reigniting passion in <a href="/reviews">/reviews</a></li>
+		<li>parsing markdown in <a href="https://github.com/ignatiusmb/aubade">Aubade</a></li>
+		<li>stacking plates, bulking up</li>
 		<li>learning japanese</li>
-		<li>building with sveltekit + pocketbase</li>
-		<li>rethinking my design system</li>
-		<li>reviving my <a href="/reviews">reviews</a></li>
-		<li>refreshing my <a href="/uses">/uses</a> page</li>
 	</ul>
 
 	<h3 id="movement">

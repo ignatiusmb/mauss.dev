@@ -146,10 +146,12 @@
 			<strong><a href="https://svelte.dev" target="_blank">sveltekit</a></strong>
 			<span>the web framework that makes all of this feel effortless.</span>
 		</li>
+		<!-- re-enable when it's actually used
 		<li>
 			<strong><a href="https://pocketbase.io" target="_blank">pocketbase</a></strong>
 			<span>the minimal and lightweight, all-in-one backend + database.</span>
 		</li>
+		-->
 		<li>
 			<strong><a href="https://phosphoricons.com" target="_blank">phosphor</a></strong>
 			<span>clean, beautiful, and versatile open-source icons.</span>

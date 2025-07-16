@@ -3,7 +3,6 @@ date: "2020-10-02T17:38:25+07:00"
 title: Shallow Water Blackout
 description: What is it and why is it important for you to know this
 tags: [lpt, emergency]
-thumbnail: https://images.squarespace-cdn.com/content/v1/55c22b97e4b08ccd27c0a7ab/1440771925872-EEC5XOH5XNAKWIM45S9Y/swblackoutdiagram2.png?format=750w
 ---
 
 ![!Video#f](https://v.redd.it/0rp9ccwgl8951/DASH_240 "[[Reddit](https://www.reddit.com/r/MovieDetails/comments/hm7gov/mission_impossible_fallout_2018_lane/)] Mission Impossible: Fallout (2018)")

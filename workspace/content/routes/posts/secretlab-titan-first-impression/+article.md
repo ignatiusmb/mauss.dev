@@ -3,7 +3,6 @@ date: "2020-06-13T17:38:25+07:00"
 title: Secretlab TITAN Chair First Impression
 description: First impression of Secretlab chair TITAN series
 tags: [daily]
-thumbnail: https://topgamingchair.com/wp-content/uploads/2019/06/resources_titan_2020_US.jpg
 ---
 
 My Secretlab TITAN chair just arrived at `17:20` and I finished unboxing and assembling it after around an hour later at `18:30`. I'll be honest, I've been slacking a lot lately, so I'm completely exhausted by the time I've moved the box upstairs.
