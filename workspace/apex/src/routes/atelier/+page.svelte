@@ -5,6 +5,7 @@
 	const alkamauss = $state({
 		atelier: true,
 		aubade: true,
+		favicon: true,
 	});
 	const modules = $state({
 		mauss: true,
@@ -100,6 +101,29 @@
 			<li>wrote a transformer that links sibling entries in a sorted list</li>
 			<li>explored static code highlighting with zero runtime cost</li>
 			<li>no-build native JS with JSDoc is nice, but writing TS with strict inference is better</li>
+		</ul>
+	</Project>
+
+	<Project
+		link="https://favicon.mauss.dev"
+		name="SVG to Favicon"
+		est="2025-07"
+		bind:open={alkamauss['favicon']}
+	>
+		{#snippet logo()}
+			<Logo />
+		{/snippet}
+
+		<!-- prettier-ignore -->
+		<p><strong>minimal SVG to favicon generator</strong>. generates a complete favicon set from a single SVG, <a href="/posts/svg-to-favicon">read more</a>.</p>
+		<ul>
+			<li>explored SVG-to-raster conversion using canvas</li>
+			<li>wrote a pure JavaScript ICO encoder that embeds a PNG file</li>
+			<li>built a minimal interface for uploading and downloading assets</li>
+			<li>wrote a pure JavaScript ZIP archiver to bundle the generated files</li>
+			<li>
+				explored SvelteKit's <code>bundleStrategy: 'inline'</code> for a self-contained HTML file
+			</li>
 		</ul>
 	</Project>
 

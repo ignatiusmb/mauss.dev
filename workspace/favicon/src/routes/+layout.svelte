@@ -3,10 +3,10 @@
 	import '@fontsource-variable/fira-code';
 	import '@ignatiusmb/styles/core.css';
 	import '$apex/app.css';
+	import favicon from './favicon.png';
 
 	import MetaHead from 'syv/core/MetaHead.svelte';
 	import Footer from '$apex/routes/Footer.svelte';
-	import { dev } from '$app/environment';
 	import { page } from '$app/state';
 
 	const { children } = $props();
@@ -16,20 +16,23 @@
 	domain="https://favicon.mauss.dev"
 	title="SVG to Favicon • Alkamauss"
 	canonical="/"
-	description="The favicon generator you'll love to use. Open-source, locally processed, and portable."
+	description="A minimal SVG to favicon generator. Open-source, locally processed, and portable."
 	authors={['Ignatius Bagus.']}
-	scripts={{
-		'/_vercel/insights/script.js': !dev && { 'data-disable-auto-track': '1' },
-		'/_vercel/speed-insights/script.js': !dev && { 'data-route': page.route.id },
-	}}
-/>
+>
+	<link rel="icon" href={favicon} />
+</MetaHead>
 
 <div>
 	<header>
-		<h1>the favicon generator you'll love to use</h1>
+		<h1>a minimal SVG to favicon generator</h1>
 		<p>
-			<span>open-source, locally processed, and portable!</span>
-			<a href="." download="favicon.html">download this app</a>
+			<a href="https://github.com/ignatiusmb/mauss.dev/tree/master/workspace/favicon">
+				open-source,
+			</a>
+			<span>locally processed, and portable</span>
+			{#if page.url.protocol !== 'file:'}
+				(<a href="/" download="favicon.html">download this app</a>)
+			{/if}
 		</p>
 	</header>
 
@@ -40,13 +43,9 @@
 	<Footer
 		from={2025}
 		items={[
-			{ href: 'https://mauss.dev', label: 'Alkamauss', icon: 'flask' },
+			{ href: 'https://mauss.dev/atelier#svg-to-favicon', label: 'Alkamauss', icon: 'flask' },
 			{ href: 'https://mauss.dev/sponsor', label: 'sponsor', icon: 'hand-heart' },
-			{
-				href: 'https://github.com/ignatiusmb/mauss.dev/tree/master/workspace/favicon',
-				label: 'source code',
-				icon: 'book-open',
-			},
+			{ href: 'https://mauss.dev/posts/svg-to-favicon', label: 'devlog', icon: 'book-open' },
 		]}
 	/>
 </div>

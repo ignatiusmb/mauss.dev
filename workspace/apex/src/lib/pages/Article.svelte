@@ -576,6 +576,9 @@
 			}
 		}
 
+		[data-aubade] {
+			--aubade-rounding: var(--rounding-base);
+		}
 		[data-aubade='header'] {
 			line-height: 1;
 		}
