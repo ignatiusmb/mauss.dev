@@ -1,6 +1,6 @@
 <script>
-	import '@fontsource-variable/karla';
 	import '@fontsource-variable/fira-code';
+	import '@fontsource-variable/karla';
 	import '@ignatiusmb/styles/core.css';
 	import 'aubade/styles/code.css';
 	import '../app.css';
