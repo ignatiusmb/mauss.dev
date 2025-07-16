@@ -40,6 +40,7 @@
 		<li>crafting collections in <a href="/curated">/curated</a></li>
 		<li>sharing thoughts in <a href="/posts">/posts</a></li>
 		<li>reigniting passion in <a href="/reviews">/reviews</a></li>
+		<li>parsing markdown in <a href="https://github.com/ignatiusmb/aubade">Aubade</a></li>
 		<li>stacking plates, bulking up</li>
 		<li>learning japanese</li>
 	</ul>
