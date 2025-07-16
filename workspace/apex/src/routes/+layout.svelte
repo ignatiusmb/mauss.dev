@@ -16,6 +16,7 @@
 	import { onMount } from 'svelte';
 
 	const { children } = $props();
+	const hosted = $derived(!dev && page.url.host === 'mauss.dev');
 	const noscroll = $derived.by(() => {
 		const { pathname } = page.url;
 		return (
@@ -52,9 +53,9 @@
 	}}
 	alternate={[{ type: 'application/rss+xml', title: 'RSS', href: '/rss.xml' }]}
 	scripts={{
-		'/_vercel/insights/script.js': !dev && { 'data-disable-auto-track': '1' },
-		'/_vercel/speed-insights/script.js': !dev && { 'data-route': page.route.id },
-		'https://static.cloudflareinsights.com/beacon.min.js': !dev && {
+		'/_vercel/insights/script.js': hosted && { 'data-disable-auto-track': '1' },
+		'/_vercel/speed-insights/script.js': hosted && { 'data-route': page.route.id },
+		'https://static.cloudflareinsights.com/beacon.min.js': hosted && {
 			'data-cf-beacon': '{"token": "402cd91137d14890a1117569bda0ee41"}',
 		},
 	}}

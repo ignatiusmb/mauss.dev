@@ -580,6 +580,7 @@
 			--aubade-rounding: var(--rounding-base);
 		}
 		[data-aubade='header'] {
+			background: var(--color-border);
 			line-height: 1;
 		}
 		[data-aubade='pre'] {

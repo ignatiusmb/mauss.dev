@@ -100,19 +100,17 @@
 			animate:flip={{ duration: TIME.SLIDE }}
 			transition:scale|local={{ duration: TIME.SLIDE }}
 		>
-			<Image src={post.thumbnail || ''} alt={post.title} />
+			<Image ratio={9 / 16} src={post.thumbnail || ''} alt={post.title}>
+				<div class="canvas" class:overlay={post.thumbnail}>
+					<h3>{post.title}</h3>
+					<small style:line-height="1.5">{post.description || ''}</small>
 
-			<div class="content">
-				<h3>{post.title}</h3>
-				{#if post.description}
-					<small>{post.description}</small>
-				{/if}
-			</div>
-
-			<aside>
-				<time datetime={post.date}>{date(post.date).format('DD MMMM YYYY')}</time>
-				<small>{post.estimate} min read</small>
-			</aside>
+					<footer>
+						<time datetime={post.date}>{date(post.date).format('DD MMMM YYYY')}</time>
+						<span>{post.estimate} min read</span>
+					</footer>
+				</div>
+			</Image>
 		</a>
 	{/each}
 </div>
@@ -141,50 +139,56 @@
 		}
 
 		> a {
-			display: grid;
-			grid-template-rows: auto 1fr 3rem;
 			border-radius: var(--rounding-box);
 			box-shadow:
 				0 2px 1px -1px oklch(0 0 0 / 20%),
 				0 1px 1px 0 oklch(0 0 0 / 14%),
 				0 1px 3px 0 oklch(0 0 0 / 12%);
-			background-color: var(--color-surface);
+			background: var(--color-surface);
 			transition: var(--transition-base);
 			text-decoration: none;
 
 			&:focus,
 			&:hover {
-				background-color: var(--color-overlay);
+				background: var(--color-overlay);
 				transform: translateY(-0.15rem);
 			}
 
-			& > :global(.syv-core-image) {
-				border-bottom-right-radius: 0;
-				border-bottom-left-radius: 0;
-				background-color: oklch(0 0 0 / 15%);
-			}
+			.canvas {
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				top: 0;
 
-			.content {
 				display: grid;
-				gap: 1rem;
-				align-content: flex-start;
+				gap: 0.8rem;
+				grid-template-rows: auto 1fr auto;
+
 				padding: 1rem;
-				line-height: 1.5;
-			}
+				border-radius: inherit;
 
-			aside {
-				display: flex;
-				gap: 0.5rem;
-				align-items: center;
-				padding: 0.5rem;
-				padding-left: 1rem;
-				border-radius: var(--rounding-box);
+				text-wrap: balance;
+				text-align: center;
 
-				time {
-					font-size: 0.8rem;
+				&.overlay {
+					background: oklch(0 0 0 / 80%);
 				}
 
-				small::before {
+				h3 {
+					font-weight: 500;
+				}
+			}
+
+			footer {
+				display: grid;
+				gap: 0.5rem;
+				grid-template-columns: auto auto;
+				justify-content: center;
+				align-items: center;
+				border-radius: var(--rounding-box);
+				font-size: 0.8rem;
+
+				span::before {
 					content: '•';
 					color: var(--color-accent-primary);
 					margin-right: 0.5rem;

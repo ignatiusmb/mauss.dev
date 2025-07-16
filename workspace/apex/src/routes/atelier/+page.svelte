@@ -61,8 +61,9 @@
 			<li>kept the <a href="https://github.com/ignatiusmb/mauss.dev">codebase</a> lean and current for around <em>{ongoing} years</em> now</li>
 			<li>developed a personal design system, with responsive and native css workflows</li>
 			<li>hand-crafted svg logos and favicons, every path and shape written from scratch</li>
+			<!-- @TODO: see /help#colophon -->
 			<!-- prettier-ignore -->
-			<li>integrated <a href="https://svelte.dev">sveltekit</a> with <a href="https://pocketbase.io">pocketbase</a> for full-stack, server-side workflows</li>
+			<!-- <li>integrated <a href="https://svelte.dev">sveltekit</a> with <a href="https://pocketbase.io">pocketbase</a> for full-stack, server-side workflows</li> -->
 			<li>experimented with git submodules — not the way to go</li>
 			<li>maintained a monorepo with clean internal tooling and streamlined workflows</li>
 			<!-- prettier-ignore -->

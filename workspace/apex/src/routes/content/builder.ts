@@ -29,7 +29,7 @@ export const ROUTES = {
 					const { body, frontmatter } = parse(buffer.toString('utf-8'));
 					if (!frontmatter || frontmatter.draft) return;
 					const metadata = schema(frontmatter);
-					metadata.date = metadata.date || (await updated(path));
+					metadata.date ||= (await updated(path)) || new Date().toISOString();
 
 					const umbrella = `curated/${slug}`;
 					const content = body.replace(/\.\/([^\s)]+)/g, (m, relative) => {
