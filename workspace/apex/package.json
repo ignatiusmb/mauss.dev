@@ -13,9 +13,8 @@
 		"pocketbase": "^0.26.1"
 	},
 	"devDependencies": {
-		"@fontsource-variable/fira-code": "^5.2.6",
-		"@fontsource-variable/karla": "^5.2.6",
 		"@sveltejs/adapter-vercel": "^5.7.2",
+		"@sveltejs/kit": "^2.22.5",
 		"sharp": "^0.34.3"
 	}
 }

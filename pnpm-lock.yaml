@@ -8,6 +8,12 @@ importers:
 
   .:
     devDependencies:
+      '@fontsource-variable/fira-code':
+        specifier: ^5.2.6
+        version: 5.2.6
+      '@fontsource-variable/karla':
+        specifier: ^5.2.6
+        version: 5.2.6
       '@ignatiusmb/styles':
         specifier: ^0.1.1
         version: 0.1.1
@@ -60,15 +66,12 @@ importers:
         specifier: ^0.26.1
         version: 0.26.1
     devDependencies:
-      '@fontsource-variable/fira-code':
-        specifier: ^5.2.6
-        version: 5.2.6
-      '@fontsource-variable/karla':
-        specifier: ^5.2.6
-        version: 5.2.6
       '@sveltejs/adapter-vercel':
         specifier: ^5.7.2
         version: 5.7.2(@sveltejs/kit@2.22.5(@sveltejs/vite-plugin-svelte@6.0.0(svelte@5.35.6)(vite@7.0.4(@types/node@24.0.13)))(svelte@5.35.6)(vite@7.0.4(@types/node@24.0.13)))(rollup@4.45.0)
+      '@sveltejs/kit':
+        specifier: ^2.22.5
+        version: 2.22.5(@sveltejs/vite-plugin-svelte@6.0.0(svelte@5.35.6)(vite@7.0.4(@types/node@24.0.13)))(svelte@5.35.6)(vite@7.0.4(@types/node@24.0.13))
       sharp:
         specifier: ^0.34.3
         version: 0.34.3
@@ -77,15 +80,12 @@ importers:
 
   workspace/favicon:
     devDependencies:
-      '@fontsource-variable/fira-code':
-        specifier: ^5.2.6
-        version: 5.2.6
-      '@fontsource-variable/karla':
-        specifier: ^5.2.6
-        version: 5.2.6
       '@sveltejs/adapter-static':
         specifier: ^3.0.8
         version: 3.0.8(@sveltejs/kit@2.22.5(@sveltejs/vite-plugin-svelte@6.0.0(svelte@5.35.6)(vite@7.0.4(@types/node@24.0.13)))(svelte@5.35.6)(vite@7.0.4(@types/node@24.0.13)))
+      '@sveltejs/kit':
+        specifier: ^2.22.5
+        version: 2.22.5(@sveltejs/vite-plugin-svelte@6.0.0(svelte@5.35.6)(vite@7.0.4(@types/node@24.0.13)))(svelte@5.35.6)(vite@7.0.4(@types/node@24.0.13))
 
 packages:
 
