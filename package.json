@@ -11,12 +11,21 @@
 	"packageManager": "pnpm@10.12.1",
 	"prettier": "mauss/prettier.config.js",
 	"devDependencies": {
+		"@fontsource-variable/fira-code": "^5.2.6",
+		"@fontsource-variable/karla": "^5.2.6",
+		"@ignatiusmb/styles": "^0.1.1",
+		"@sveltejs/kit": "^2.22.5",
+		"@sveltejs/vite-plugin-svelte": "^6.0.0",
 		"@types/node": "^24.0.13",
 		"aubade": "^0.10.3",
 		"mauss": "^0.10.6",
 		"prettier": "^3.6.2",
 		"prettier-plugin-sort-package-json": "^1.1.0",
 		"prettier-plugin-svelte": "^3.4.0",
-		"typescript": "^5.8.3"
+		"svelte": "^5.35.6",
+		"svelte-check": "^4.2.2",
+		"syv": "^0.0.50",
+		"typescript": "^5.8.3",
+		"vite": "^7.0.4"
 	}
 }

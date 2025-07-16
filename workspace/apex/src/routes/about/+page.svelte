@@ -22,7 +22,7 @@
 		<span>expertise.</span>
 	</h3>
 	<!-- prettier-ignore -->
-	<p>i'm a software engineer by trade, but I like to think of myself more as a <em>software alchemist</em>. i see it as an art — being able to create something out of nothing, or transforming raw and unrefined thoughts (solutions) into something beautiful.</p>
+	<p>i'm a software engineer by trade, but i like to think of myself more as a <em>software alchemist</em>. i see it as an art — being able to create something out of nothing, or transforming raw and unrefined thoughts (solutions) into something beautiful.</p>
 	<!-- prettier-ignore -->
 	<p>my strength lies in restructuring systems and streamlining logic, shaving away the noise until what remains just works. i found that the time i spent there is well worth the payoff: easier debugging, quicker iteration, and codebases i don't dread revisiting.</p>
 	<!-- prettier-ignore -->
@@ -127,7 +127,7 @@
 		</li>
 		<li>
 			<a href="https://www.instagram.com/ignatiusmb" target="_blank">instagram</a>
-			<span>come say hi</span>
+			<span>a black hole of time</span>
 		</li>
 		<li>
 			<a href="https://discord.com/users/231822751504138240" target="_blank">discord</a>
@@ -139,7 +139,7 @@
 		</li>
 		<li>
 			<a href="https://open.spotify.com/user/ignatiusmb" target="_blank">spotify</a>
-			<span>monthly music picks</span>
+			<span>headphones advised</span>
 		</li>
 		<li>
 			<strong>whatsapp</strong>
@@ -193,7 +193,8 @@
 			<strong>scorpio</strong>
 			<span>if that means anything to you</span>
 		</li>
-		<li>can hold my breath for around 2 minutes</li>
+		<li>can hold his breath for around 2 minutes</li>
+		<li>swims faster in breaststroke than in front crawl</li>
 	</ul>
 </Article>
 

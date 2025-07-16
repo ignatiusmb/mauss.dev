@@ -1,21 +1,34 @@
+<script lang="ts">
+	interface Props {
+		from: number;
+		items: {
+			href: string;
+			label: string;
+			icon: string;
+		}[];
+	}
+	const { from, items }: Props = $props();
+	const range = $derived.by(() => {
+		const current = new Date().getFullYear();
+		if (from === current) return from;
+		return `${from}&ndash;${current}`;
+	});
+</script>
+
 <footer>
 	<section>
 		<span>&Larr;</span>
-		<a href="/about" aria-label="about alkamauss">
-			<i data-icon="id-badge"></i>
-		</a>
-		<a href="/sponsor" aria-label="sponsor alkamauss">
-			<i data-icon="hand-heart"></i>
-		</a>
-		<a href="/rss.xml" aria-label="alkamauss rss feed">
-			<i data-icon="rss"></i>
-		</a>
+		{#each items as { href, label, icon }}
+			<a {href} aria-label={label}>
+				<i data-icon={icon}></i>
+			</a>
+		{/each}
 		<span>&Rarr;</span>
 	</section>
 
 	<p>
 		<i data-icon="copyright"></i>
-		<span>2017&ndash;{new Date().getFullYear()} Ignatius Bagus.</span>
+		<span>{@html range} Ignatius Bagus.</span>
 	</p>
 </footer>
 

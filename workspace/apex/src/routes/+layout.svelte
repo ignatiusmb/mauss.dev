@@ -70,7 +70,14 @@
 	</main>
 
 	{#if !page.url.pathname.startsWith('/auth')}
-		<Footer />
+		<Footer
+			from={2017}
+			items={[
+				{ href: '/about', label: 'about', icon: 'id-badge' },
+				{ href: '/sponsor', label: 'sponsor', icon: 'hand-heart' },
+				{ href: '/rss.xml', label: 'rss feed', icon: 'rss' },
+			]}
+		/>
 	{/if}
 
 	{#if !noscroll}

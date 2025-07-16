@@ -9,9 +9,13 @@
 		children: import('svelte').Snippet;
 	}
 	let { link, logo, name, est, open = $bindable(true), children }: Props = $props();
+	const id = name
+		.toLowerCase()
+		.replace(/[^a-z0-9]+/g, '-')
+		.replace(/^-+|-+$|(?<=-)-+/g, '');
 </script>
 
-<section id={name.split(' ')[0].toLowerCase()}>
+<section {id}>
 	<a href={link}>
 		{@render logo()}
 		<div>
