@@ -10,6 +10,7 @@
 	import { page } from '$app/state';
 
 	const { children } = $props();
+	const hosted = $derived(page.url.hostname === 'favicon.mauss.dev');
 </script>
 
 <MetaHead
@@ -18,6 +19,9 @@
 	canonical="/"
 	description="A minimal SVG to favicon generator. Open-source, locally processed, and portable."
 	authors={['Ignatius Bagus.']}
+	scripts={{
+		'/_vercel/insights/script.js': hosted && { 'data-disable-auto-track': '1' },
+	}}
 >
 	<link rel="icon" href={favicon} />
 </MetaHead>

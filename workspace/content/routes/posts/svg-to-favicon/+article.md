@@ -155,11 +155,11 @@ the only thing left is to prerender the app (or the single page, in this case). 
 
 wow, that's a long way of saying that i need the app to essentially be a [single-page app](https://svelte.dev/docs/kit/single-page-apps) (SPA). but, there's a reason why i explained all of this, and it's because SvelteKit has a "new" way of creating SPAs, which is to set the `router.type` to `'hash'` in the `svelte.config.js` file. it disables SSR and prerendering, which means it will fully rely on client-side rendering (CSR), and since we're inlining everything, it will generate a fully self-contained HTML file that can be opened in any browser, even without a web server, directly with the `file:` protocol.
 
-the final HTML file is about `97,5 KB` in size, i don't know if that's a lot or not. however, i do know that `314 KB` is a lot, which is the size of the HTML file if i included the fonts. i probably could've trimmed it down further by removing the icons, but it won't look as nice if it's too minimal.
+the final HTML file is about `314 KB` in size, including the fonts. what surprises me was that using non-variable fonts resulted in a larger file size around `370 KB`, even though i made sure to only include one weight and style for each font. without fonts, the file size drops to about `97,5 KB`, which could be reduced further by removing icons and other stylistic elements. but then again, *perfection is attained not when there is nothing more to add, but when there is nothing left to take away* — from *Wind, Sand and Stars* by Antoine de Saint-Exupéry.
 
 ## it's live!
 
-the app is live at [favicon.mauss.dev](https://favicon.mauss.dev) and you can try it out right now. you can also take it with you wherever you go (i'm not here to judge), it is self-contained in a single HTML file after all. no tracking and definitely no ads, *pinky promise*. i mean, you can audit the code yourself if you want to, the source code is linked below at the end of my [reflections](#reflections).
+the app is live at [favicon.mauss.dev](https://favicon.mauss.dev) and you can try it out right now. you can also take it with you wherever you go (i'm not here to judge), it is self-contained in a single HTML file after all. no tracking and definitely no ads, *pinky promise*. well, only the basic visitor's analytics, and it's off if you download the file. you can audit the code yourself if you want to, the source code is linked below at the end of my [reflections](#reflections).
 
 ![input#d#f](./favicon-input.png "a preview of the initial page")
 
