@@ -4,6 +4,7 @@ import { defineConfig } from 'vite';
 export default defineConfig(() => {
 	return {
 		build: {
+			assetsInlineLimit: Infinity,
 			cssTarget: 'chrome111',
 		},
 

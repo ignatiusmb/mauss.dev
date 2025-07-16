@@ -9,8 +9,8 @@
 		"prepare": "svelte-kit sync"
 	},
 	"devDependencies": {
-		"@fontsource-variable/fira-code": "^5.2.6",
-		"@fontsource-variable/karla": "^5.2.6",
+		"@fontsource/fira-code": "^5.2.6",
+		"@fontsource/karla": "^5.2.6",
 		"@sveltejs/adapter-static": "^3.0.8",
 		"@sveltejs/kit": "^2.22.5"
 	}
