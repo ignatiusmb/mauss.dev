@@ -1,6 +1,6 @@
 <script>
-	import '@fontsource/fira-code';
-	import '@fontsource/karla';
+	import '@fontsource-variable/fira-code';
+	import '@fontsource-variable/karla';
 	import '@ignatiusmb/styles/core.css';
 	import '$apex/app.css';
 	import favicon from './favicon.png';
@@ -53,8 +53,6 @@
 <style>
 	div /* holy grail */ {
 		--font-scale: 1;
-		--font-monospace: 'Fira Code', monospace;
-		font-family: Karla, sans-serif;
 
 		min-height: 100dvh;
 		width: 100%;
