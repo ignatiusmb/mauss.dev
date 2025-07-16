@@ -8,12 +8,6 @@ importers:
 
   .:
     devDependencies:
-      '@fontsource-variable/fira-code':
-        specifier: ^5.2.6
-        version: 5.2.6
-      '@fontsource-variable/karla':
-        specifier: ^5.2.6
-        version: 5.2.6
       '@ignatiusmb/styles':
         specifier: ^0.1.1
         version: 0.1.1
@@ -66,6 +60,12 @@ importers:
         specifier: ^0.26.1
         version: 0.26.1
     devDependencies:
+      '@fontsource-variable/fira-code':
+        specifier: ^5.2.6
+        version: 5.2.6
+      '@fontsource-variable/karla':
+        specifier: ^5.2.6
+        version: 5.2.6
       '@sveltejs/adapter-vercel':
         specifier: ^5.7.2
         version: 5.7.2(@sveltejs/kit@2.22.5(@sveltejs/vite-plugin-svelte@6.0.0(svelte@5.35.6)(vite@7.0.4(@types/node@24.0.13)))(svelte@5.35.6)(vite@7.0.4(@types/node@24.0.13)))(rollup@4.45.0)
@@ -80,10 +80,10 @@ importers:
 
   workspace/favicon:
     devDependencies:
-      '@fontsource-variable/fira-code':
+      '@fontsource/fira-code':
         specifier: ^5.2.6
         version: 5.2.6
-      '@fontsource-variable/karla':
+      '@fontsource/karla':
         specifier: ^5.2.6
         version: 5.2.6
       '@sveltejs/adapter-static':
@@ -263,6 +263,12 @@ packages:
 
   '@fontsource-variable/karla@5.2.6':
     resolution: {integrity: sha512-O8u1HeGzyUx+TuzrQdy9e85b6+JuvMNJRsjMlQa1vG/fVtD0MfmDNH/TMtcQo5slydHsyVmn+OUf8YspOB+TQQ==}
+
+  '@fontsource/fira-code@5.2.6':
+    resolution: {integrity: sha512-wCkIpPm0BqlkCPLYeY4Vui96ODmVUV0/GpEe3OfJ4v8EJn/BF2SlyxvarFsTs1CKiGjrO2cXlIZbBrKi9F+hUQ==}
+
+  '@fontsource/karla@5.2.6':
+    resolution: {integrity: sha512-7/rHgmOKB/BaAKFYSyB2n6TldG6mwLVQ49bWGV/5zKg96pPw7fW4pV81oavKTUhHbEUqkkvms6k4lYOYzOHTqg==}
 
   '@ignatiusmb/styles@0.1.1':
     resolution: {integrity: sha512-2Py7LWaRCtsd2HKTAjNft598+wFkVplV9+QYzdgSkv7QkTE/D5soIqNQNLxzK1MB3Uu4Gr0krMNHIfCNY5CEeA==}
@@ -1322,6 +1328,10 @@ snapshots:
   '@fontsource-variable/fira-code@5.2.6': {}
 
   '@fontsource-variable/karla@5.2.6': {}
+
+  '@fontsource/fira-code@5.2.6': {}
+
+  '@fontsource/karla@5.2.6': {}
 
   '@ignatiusmb/styles@0.1.1': {}
 
