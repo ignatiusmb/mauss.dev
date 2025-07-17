@@ -4,6 +4,11 @@
 	import { date } from 'mauss';
 
 	const { data } = $props();
+	const indexes = [
+		{ name: 'curated', icon: 'books' },
+		{ name: 'posts', icon: 'article' },
+		{ name: 'reviews', icon: 'list-star' },
+	] as const;
 </script>
 
 <Article>
@@ -12,56 +17,24 @@
 		<span><em>by</em> <a href="/about">Ignatius Bagus.</a></span>
 	</header>
 
-	<section>
-		<h2>
-			<i data-icon="books"></i>
-			<span>/curated</span>
-		</h2>
-		{#each data.curated as { slug, title, date: created }}
-			<article>
-				<a href="/curated/{slug}">{title}</a>
-				<time datetime={created}>{date(created).format('DD MMM YYYY')}</time>
-			</article>
-		{/each}
-		<a href="/curated">
-			<span>All curated things</span>
-			<i data-icon="arrow-circle-right"></i>
-		</a>
-	</section>
-
-	<section>
-		<h2>
-			<i data-icon="article"></i>
-			<span>/posts</span>
-		</h2>
-		{#each data.posts as { slug, title, date: created }}
-			<article>
-				<a href="/posts/{slug}">{title}</a>
-				<time datetime={created}>{date(created).format('DD MMM YYYY')}</time>
-			</article>
-		{/each}
-		<a href="/posts">
-			<span>All posts</span>
-			<i data-icon="arrow-circle-right"></i>
-		</a>
-	</section>
-
-	<section>
-		<h2>
-			<i data-icon="list-star"></i>
-			<span>/reviews</span>
-		</h2>
-		{#each data.reviews as { slug, title, date: created }}
-			<article>
-				<a href="/reviews/{slug}">{title}</a>
-				<time datetime={created}>{date(created).format('DD MMM YYYY')}</time>
-			</article>
-		{/each}
-		<a href="/reviews">
-			<span>All reviews</span>
-			<i data-icon="arrow-circle-right"></i>
-		</a>
-	</section>
+	{#each indexes as { icon, name }}
+		<section>
+			<h2>
+				<i data-icon={icon}></i>
+				<span>/{name}</span>
+			</h2>
+			{#each data[name] as { slug, title, date: created }}
+				<article>
+					<a href="/{name}/{slug}">{title}</a>
+					<time datetime={created}>{date(created).format('DD MMM YYYY')}</time>
+				</article>
+			{/each}
+			<a href="/{name}">
+				<span>see more</span>
+				<i data-icon="arrow-circle-right"></i>
+			</a>
+		</section>
+	{/each}
 </Article>
 
 <style>
@@ -70,10 +43,11 @@
 		flex-direction: column;
 		justify-content: center;
 		text-align: left;
+		line-height: 2;
 
 		h1 {
 			text-align: left;
-			font-size: 1.875rem;
+			font-size: var(--size-h2);
 			font-weight: 600;
 		}
 	}
@@ -82,11 +56,12 @@
 		display: grid;
 		gap: 0.75rem;
 		justify-items: start;
+		line-height: 1.5;
 
 		h2 {
+			--size: 2rem;
 			display: flex;
 			align-items: center;
-			font-size: 1.5rem;
 
 			i[data-icon] {
 				margin-right: 0.5rem;

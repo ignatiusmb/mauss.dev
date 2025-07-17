@@ -37,10 +37,8 @@
 <style>
 	small {
 		display: flex;
+		gap: 0.5rem;
 		flex-wrap: wrap;
-
-		& :global(:not(:last-child)) {
-			margin-right: 0.5rem;
-		}
+		justify-content: center;
 	}
 </style>

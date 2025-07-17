@@ -11,7 +11,7 @@
 		path?: string;
 		post?: null | {
 			date: string;
-			title: string | { en?: string; jp?: string };
+			title: string;
 			table: ComponentProps<typeof Index>['items'];
 
 			slug?: string;
@@ -41,18 +41,12 @@
 				{/if}
 			</aside>
 
-			{#if typeof post.title === 'string'}
-				<h1>{post.title}</h1>
-			{:else if post.title.jp}
-				<h1>{post.title.jp}</h1>
-			{:else}
-				<h1>{post.title.en}</h1>
-			{/if}
+			<h1>{post.title}</h1>
 
 			{@render header()}
 
 			{#if post.description}
-				<p style:text-align="center">{post.description}</p>
+				<p style:margin="0" style:line-height="1.5" style:text-align="center">{post.description}</p>
 			{/if}
 		</header>
 
@@ -131,7 +125,6 @@
 		display: grid;
 		grid-template-columns: 1fr min(80ch, 100%) 1fr;
 		word-wrap: break-word;
-		line-height: 1.5;
 
 		#end-card {
 			padding: 0.4rem 0.8rem;
@@ -151,14 +144,12 @@
 		padding: 0 0.5rem;
 		margin: 2rem 0;
 
-		line-height: 1;
-
 		aside {
 			display: grid;
 			gap: 0.5rem;
 			grid-auto-flow: column;
 			align-items: center;
-			font-size: 0.875rem;
+			font-size: var(--size-small);
 		}
 
 		:global(.separator) {
@@ -286,8 +277,8 @@
 		}
 		p,
 		li {
-			font-size: clamp(1rem, 2vw, 1.15rem);
-			line-height: 2rem;
+			font-size: clamp(1rem, 2vw + 0.5rem, 1.15rem);
+			line-height: 1.8;
 		}
 		p {
 			margin-top: 0.75rem;
@@ -303,8 +294,9 @@
 				}
 			}
 		}
+		/* @TODO: have 2 quote styles */
 		blockquote {
-			line-height: 1.5;
+			line-height: 1.325;
 			text-align: center;
 			font-style: italic;
 			font-size: clamp(1.4rem, 3vw, 1.8rem);
@@ -336,7 +328,6 @@
 			}
 		}
 		h1 {
-			font-size: clamp(2.5rem, 4vw, 3rem);
 			text-align: center;
 			text-wrap: balance;
 			color: oklch(1 0 0 / 90%);
@@ -352,7 +343,6 @@
 		}
 		h2 {
 			margin-top: 1.5rem;
-			font-size: clamp(1.5rem, 4vw, 2rem);
 			color: oklch(1 0 0 / 85%);
 
 			+ h3 {
@@ -361,7 +351,6 @@
 		}
 		h3 {
 			margin: 1.5rem 0 -0.25rem;
-			font-size: clamp(1.2rem, 4vw, 1.5rem);
 			color: oklch(1 0 0 / 80%);
 		}
 		ol,

@@ -102,7 +102,7 @@
 		>
 			<Image ratio={9 / 16} src={post.thumbnail || ''} alt={post.title}>
 				<div class="canvas" class:overlay={post.thumbnail}>
-					<h3>{post.title}</h3>
+					<header>{post.title}</header>
 					<small style:line-height="1.5">{post.description || ''}</small>
 
 					<footer>
@@ -155,16 +155,17 @@
 			}
 
 			.canvas {
+				overflow: hidden;
 				position: absolute;
 				height: 100%;
 				width: 100%;
 				top: 0;
 
 				display: grid;
-				gap: 0.8rem;
+				gap: 2%;
 				grid-template-rows: auto 1fr auto;
 
-				padding: 1rem;
+				padding: 3% 4%;
 				border-radius: inherit;
 
 				text-wrap: balance;
@@ -174,7 +175,8 @@
 					background: oklch(0 0 0 / 80%);
 				}
 
-				h3 {
+				header {
+					font-size: var(--size-h4);
 					font-weight: 500;
 				}
 			}
@@ -186,7 +188,7 @@
 				justify-content: center;
 				align-items: center;
 				border-radius: var(--rounding-box);
-				font-size: 0.8rem;
+				font-size: var(--size-small);
 
 				span::before {
 					content: '•';

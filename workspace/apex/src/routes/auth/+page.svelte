@@ -75,7 +75,7 @@
 
 		.error {
 			color: indianred;
-			font-size: 0.875rem;
+			font-size: var(--size-small);
 			text-align: center;
 			margin-top: 1rem;
 		}

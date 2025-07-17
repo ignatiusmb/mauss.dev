@@ -182,7 +182,7 @@
 			transition: var(--transition-base);
 			text-decoration: none;
 			text-align: center;
-			font-size: 0.9rem;
+			font-size: var(--size-small);
 
 			&:focus,
 			&:hover {
@@ -219,7 +219,6 @@
 				text-wrap: balance;
 				text-align: center;
 				font-weight: 500;
-				font-size: 0.92rem;
 			}
 
 			footer {

@@ -7,6 +7,12 @@
 	--transition-fast: calc(var(--transition-base) / 2);
 	--transition-slow: calc(var(--transition-base) * 2);
 
+	--size-h1: clamp(2rem, 5vw + 1rem, 3.4rem);
+	--size-h2: clamp(1.8rem, 5vw + 0.75rem, 2.6rem);
+	--size-h3: clamp(1.5rem, 4vw + 0.5rem, 2rem);
+	--size-h4: clamp(1.1rem, 3vw + 0.25rem, 1.4rem);
+	--size-small: clamp(0.8rem, 2vw + 0.1rem, 0.9rem);
+
 	--color-base: oklch(0.1554 0.0042 286);
 	--color-surface: oklch(0.1978 0.0042 286);
 	--color-overlay: oklch(0.2402 0.0042 286);
@@ -61,6 +67,31 @@ code {
 	border-radius: var(--rounding-base);
 	background: unset;
 	line-height: unset;
+}
+
+h1 {
+	--size: var(--size-h1);
+	line-height: 1;
+	font-size: var(--size);
+}
+h2 {
+	--size: var(--size-h2);
+	line-height: 1.1;
+	font-size: var(--size);
+}
+h3 {
+	--size: var(--size-h3);
+	line-height: 1.2;
+	font-size: var(--size);
+}
+h4 {
+	--size: var(--size-h4);
+	line-height: 1.4;
+	font-size: var(--size);
+}
+
+small {
+	font-size: var(--size-small);
 }
 
 @media (min-width: 549px) {
