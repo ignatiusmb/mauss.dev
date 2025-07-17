@@ -23,9 +23,6 @@
 <style>
 	small {
 		display: flex;
-
-		:not(:first-child) {
-			margin-left: 0.25rem;
-		}
+		gap: 0.25rem;
 	}
 </style>

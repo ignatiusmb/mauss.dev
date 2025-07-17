@@ -22,7 +22,7 @@
 
 		<section data-info="warning" style:margin>
 			<!-- prettier-ignore -->
-			<em><strong>spoiler warning!</strong> this is a deeper look into the story and everything the {page.params.category} has to offer. if you haven't finished it yet and came here by accident, you might want to go back and finish the story first.</em>
+			<p><em><strong>spoiler warning!</strong> this is a deeper look into the story and everything the {page.params.category} has to offer. if you haven't finished it yet and came here by accident, you might want to go back and finish the story first.</em></p>
 
 			<a href={page.url.pathname.slice(0, idx)}>
 				<i data-icon="hand-pointing"></i>

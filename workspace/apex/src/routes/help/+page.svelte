@@ -40,7 +40,7 @@
 
 	<section data-info="warning" style:margin="1rem 0 0">
 		<!-- prettier-ignore -->
-		<em>policies, stances, and other small-but-important details live in the <a href="/fine-print">fine print</a>.</em>
+		<p><em>policies, stances, and other small-but-important details live in the <a href="/fine-print">fine print</a>.</em></p>
 	</section>
 
 	<h2 id="atelier">

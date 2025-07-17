@@ -17,7 +17,7 @@
 
 	<section data-info="warning" style:margin="1rem 0">
 		<!-- prettier-ignore -->
-		<em>see <a href="/help#reviews-how-i-review">how i review</a>. intentionally written without synopsis, plot, or summary. and yes, these are just my thoughts — for more context, see the <a href="/fine-print">fine print</a>.</em>
+		<p><em>see <a href="/help#reviews-how-i-review">how i review</a>. intentionally written without synopsis, plot, or summary. and yes, these are just my thoughts — for more context, see the <a href="/fine-print">fine print</a>.</em></p>
 	</section>
 
 	{@html data.article.content}

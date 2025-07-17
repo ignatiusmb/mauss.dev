@@ -111,7 +111,7 @@
 	{/if}
 
 	{#if path}
-		<section id="end-card">
+		<section data-info>
 			<!-- prettier-ignore -->
 			<p>open-source and open to improvement — <a href="https://github.com/ignatiusmb/mauss.dev/issues" target="_blank">file an issue</a> or <a href="https://github.com/ignatiusmb/mauss.dev/blob/master/workspace/content/routes/{path}" target="_blank">suggest changes</a> via github</p>
 		</section>
@@ -125,14 +125,6 @@
 		display: grid;
 		grid-template-columns: 1fr min(80ch, 100%) 1fr;
 		word-wrap: break-word;
-
-		#end-card {
-			padding: 0.4rem 0.8rem;
-			border: 0 solid var(--color-accent-primary);
-			border-left-width: var(--rounding-base);
-			border-radius: var(--rounding-base);
-			background: var(--color-surface);
-		}
 	}
 
 	header {
@@ -166,7 +158,7 @@
 
 		a {
 			display: grid;
-			gap: 0.2rem;
+			gap: 0.5rem;
 			grid-template-rows: auto 1fr;
 			padding: 0.8rem;
 			border-radius: var(--rounding-base);
@@ -458,10 +450,11 @@
 		}
 
 		[data-info] {
-			padding: 1rem 1.5rem;
+			padding: min(2%, 0.8rem) min(4%, 1.2rem);
 			border-radius: var(--rounding-base);
-			border-left: var(--rounding-base) solid oklch(0.5624 0 0);
+			border-left: var(--rounding-base) solid var(--color-accent-primary);
 			margin: 2rem 0;
+			background: var(--color-surface);
 
 			&:not([id]) {
 				margin-left: -0.25rem;
@@ -485,35 +478,6 @@
 			}
 			p {
 				margin-bottom: 0;
-			}
-
-			&[data-info='objective'] {
-				position: relative;
-				border-top: clamp(2.5rem, 9vw, 3.5rem) solid;
-				border-right: 0.25rem solid;
-				border-bottom: 0.25rem solid;
-				border-color: oklch(0.2686 0.1394 288 / 40%);
-				background: oklch(0.2686 0.1394 288 / 10%);
-				color: oklch(0.2686 0.1394 288 / 70%);
-
-				h3 {
-					position: absolute;
-					width: 100%;
-					top: 0;
-					left: 0;
-					transform: translateY(-125%);
-					text-align: center;
-					color: inherit;
-				}
-				h4 {
-					margin: 1rem 0 0.5rem;
-					font-weight: 500;
-				}
-				var,
-				code {
-					background: oklch(0.2686 0.1394 288);
-					color: white;
-				}
 			}
 
 			&[data-info='warning'] {
