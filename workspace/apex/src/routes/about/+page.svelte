@@ -11,7 +11,7 @@
 		<span><em>Software Alchemist</em> — code and prose, perfectly distilled</span>
 
 		<!-- prettier-ignore -->
-		<p>hello, i'm an independent software engineer based in Southeast Asia (GMT+7&ndash;8), <a href="https://github.com/ignatiusmb" target="_blank">building in public</a> — <a href="/atelier">mostly open source</a>. i also take on consulting and freelance projects, specifically tailored if you're looking for something custom and/or private. if you need me, you can reach out through one of <a href="#elsewhere">my socials</a>.</p>
+		<p>i'm an independent software engineer based in Southeast Asia (GMT+7&ndash;8), <a href="https://github.com/ignatiusmb" target="_blank">building in public</a> — <a href="/atelier">mostly open source</a>. i also take on consulting and freelance projects, specifically tailored if you're looking for something custom and/or private. if you need me, you can reach out through one of <a href="#elsewhere">my socials</a>.</p>
 
 		<!-- prettier-ignore -->
 		<p>i tend to build quietly and write to make sense of it all. it's a way for me to process lessons, share discoveries, and explore new ideas. if you're curious, the <a href="/help">help page</a> is the dedicated page to get you started — or jump straight to any of the links below.</p>
@@ -203,8 +203,9 @@
 <style>
 	header {
 		h1 {
+			margin-bottom: 0.6rem;
 			text-align: left;
-			font-size: 1.875rem;
+			font-size: var(--size-h2);
 			font-weight: 600;
 		}
 	}

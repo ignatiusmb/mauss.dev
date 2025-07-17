@@ -10,7 +10,7 @@
 
 <details open id="index">
 	<summary>
-		<i data-icon="compass-rose"></i>
+		<i data-icon="duotone-caret-right"></i>
 		<span>{summary}</span>
 	</summary>
 	<div>
@@ -39,7 +39,7 @@
 				border-bottom-left-radius: 0;
 
 				i[data-icon] {
-					transform: rotate(315deg);
+					transform: rotate(90deg);
 				}
 			}
 		}
@@ -50,7 +50,7 @@
 			user-select: none;
 
 			display: grid;
-			gap: 0.5rem;
+			gap: 0.25rem;
 			align-items: center;
 			grid-template-columns: auto 1fr;
 			padding: 0.5rem 1rem;
@@ -68,7 +68,6 @@
 			display: grid;
 			margin: 0;
 			line-height: 2;
-			font-size: 1rem;
 
 			a {
 				padding: 0.25rem 1rem;
@@ -85,9 +84,9 @@
 			}
 		}
 
-		i[data-icon='compass-rose'] {
-			transition: var(--transition-slow) ease-out;
-			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"><polygon points="128 8 104 104 128 128 152 104 128 8"/><polygon points="128 248 104 152 128 128 152 152 128 248"/><polyline points="152 104 248 128 152 152"/><polyline points="104 104 8 128 104 152"/><path d="M40.37,119.91a88,88,0,0,1,79.54-79.54"/><path d="M119.91,215.63a88,88,0,0,1-79.54-79.54"/><path d="M215.63,136.09a88,88,0,0,1-79.54,79.54"/><path d="M136.09,40.37a88,88,0,0,1,79.54,79.54"/></svg>');
+		i[data-icon='duotone-caret-right'] {
+			transition: var(--transition-fast) ease-out;
+			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><polygon points="96 48 176 128 96 208 96 48" opacity="0.2"/><polygon points="96 48 176 128 96 208 96 48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>');
 		}
 	}
 </style>

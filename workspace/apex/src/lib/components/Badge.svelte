@@ -44,7 +44,6 @@
 	a {
 		padding: 0.2rem 0.4rem;
 		border-radius: var(--rounding-base);
-		margin-top: 0.5rem;
-		font-size: 0.875rem;
+		font-size: var(--size-small);
 	}
 </style>

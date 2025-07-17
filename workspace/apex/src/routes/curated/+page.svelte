@@ -74,7 +74,6 @@
 			background-color: var(--color-surface);
 			transition: var(--transition-base);
 			text-decoration: none;
-			font-size: 0.95rem;
 
 			&:focus,
 			&:hover {

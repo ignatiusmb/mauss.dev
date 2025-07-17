@@ -265,7 +265,6 @@
 			display: flex;
 			justify-content: space-between;
 			margin: 1.5rem 0 -0.25rem;
-			font-size: clamp(1.2rem, 4vw, 1.5rem);
 			font-weight: 500;
 			color: oklch(1 0 0 / 80%);
 
@@ -278,6 +277,7 @@
 
 			button {
 				display: inline-flex;
+				align-items: center;
 				padding: 0.25rem;
 				border-radius: var(--rounding-base);
 				color: currentColor;
@@ -298,8 +298,8 @@
 	}
 
 	i[data-image] {
-		width: 1.5rem;
-		height: 1.5rem;
+		width: calc(var(--size, 1.875rem) * 0.8);
+		height: calc(var(--size, 1.875rem) * 0.8);
 		background: currentColor var(--svg) no-repeat center / contain;
 
 		&[data-image='github'] {

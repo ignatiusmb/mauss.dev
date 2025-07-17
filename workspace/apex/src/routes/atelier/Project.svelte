@@ -96,7 +96,7 @@
 				display: grid;
 				gap: 0.5rem;
 				padding: 0.5rem;
-				font-size: 0.98rem;
+				font-size: 1rem;
 				line-height: 1.67;
 			}
 		}
