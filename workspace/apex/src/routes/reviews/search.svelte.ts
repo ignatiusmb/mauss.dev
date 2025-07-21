@@ -9,9 +9,9 @@ export type Query = {
 	sort_by: keyof typeof by;
 };
 
-export type Review = Omit<Items['/reviews'][number], 'branches' | 'content'>;
+export type Schema = Omit<Items['/reviews'][number], 'branches' | 'content'>;
 
-export function sift(items: Review[], payload: Query) {
+export function sift(items: Schema[], payload: Query) {
 	const value = normalize(payload.search);
 	const results = items.filter((item) => {
 		const filters = [
@@ -59,8 +59,8 @@ export const by = {
 			) || fallback(x, y)
 		);
 	},
-} satisfies Record<string, (x: Review, y: Review) => number>;
-function fallback(x: Review, y: Review): number {
+} satisfies Record<string, (x: Schema, y: Schema) => number>;
+function fallback(x: Schema, y: Schema): number {
 	if (x.date && y.date && x.date !== y.date) {
 		return date.sort.newest(x.date, y.date);
 	}

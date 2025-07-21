@@ -4,7 +4,9 @@ export type Query = {
 	search: string;
 };
 
-export function sift(items: Items['/curated'], payload: Query) {
+export type Schema = Omit<Items['/curated'][number], 'branches' | 'content'>;
+
+export function sift(items: Schema[], payload: Query) {
 	const value = normalize(payload.search);
 	const results = items.filter((item) => {
 		const flags = [item.slug.includes(value), normalize(item.title).includes(value)];
