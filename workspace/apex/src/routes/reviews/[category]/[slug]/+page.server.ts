@@ -7,7 +7,7 @@ export async function load({ parent, params }) {
 	if (content.draft) error(404, 'Not yet reviewed');
 
 	return {
-		article: content,
+		article: { ...content, branches: content.branches.map(({ branch }) => branch) },
 		source: `reviews/${content.slug}/+article.md`,
 		meta: {
 			canonical: `/reviews/${content.slug}`,

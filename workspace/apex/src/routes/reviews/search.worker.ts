@@ -1,10 +1,10 @@
-import type { Items } from '$content/builder';
+import type { Query, Schema } from './search.svelte';
 import { commander, type Dispatch } from 'syv/worker';
-import { sift, type Query } from './search.svelte';
+import { sift } from './search.svelte';
 
-let dataset: Items['/reviews'] = [];
+let dataset: Schema[] = [];
 const commands = {
-	init(payload: Items['/reviews']) {
+	init(payload: Schema[]) {
 		dataset = payload;
 		return true;
 	},

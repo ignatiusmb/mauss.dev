@@ -17,7 +17,6 @@ export const ROUTES = {
 		const schema = define(({ optional, string }) => ({
 			date: optional(string(), ''), // if empty, use the file's last modified date
 			title: string(),
-			tags: optional(string()),
 		}));
 
 		const items = await traverse(
@@ -56,9 +55,6 @@ export const ROUTES = {
 						const { body, frontmatter: extras } = parse((await branch.buffer).toString('utf-8'));
 						if (!extras || extras.draft) return;
 						return {
-							slug,
-							...frontmatter,
-							...metadata,
 							...extras,
 							branch: branch.filename.slice(1, -3),
 							content: marker.render(body),
@@ -247,7 +243,6 @@ export const ROUTES = {
 						if (!extras || extras.draft) return;
 						return {
 							...extras,
-							branches: [],
 							branch: branch.filename.slice(1, -3),
 							content: marker.render(body),
 						};
