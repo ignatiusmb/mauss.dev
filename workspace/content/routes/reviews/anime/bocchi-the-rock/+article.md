@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: "Bocchi the Rock!"
-tier: "?"
+tier: S
 released: 2022-10-09
 completed: 12/12
 genres: [music, comedy, school]

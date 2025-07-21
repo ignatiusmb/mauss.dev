@@ -4,7 +4,6 @@ title: "Yosuga no Sora: In Solitude, Where We Are Least Alone"
 alias: [Yosuga no Sora]
 tier: C
 released: 2010-10-04
-verdict: contextual
 genres: [drama, romance, tsundere, ecchi, harem]
 seen:
   first: 2020-06-06

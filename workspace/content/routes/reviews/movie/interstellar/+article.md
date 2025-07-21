@@ -3,7 +3,6 @@ date: 2020
 title: Interstellar
 tier: S
 released: 2014-11-06
-verdict: pending
 genres: [adventure, drama, sci-fi]
 seen:
   first: 2014-11-06

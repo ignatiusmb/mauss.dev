@@ -13,9 +13,6 @@ export const schema = define(({ optional, array, record, literal, string, number
 	released: string(),
 	progress: optional(string()),
 	completed: optional(string()),
-	verdict: optional(
-		literal('pending', 'not-recommended', 'contextual', 'recommended', 'must-watch'),
-	),
 	genres: array(string()),
 	seen: { first: string(), last: optional(string()) },
 	rating: optional(record(array(record(number())))),
@@ -34,6 +31,8 @@ export const schema = define(({ optional, array, record, literal, string, number
 	),
 }));
 
+/** @type {string[]} */
+const trashed = [];
 await orchestrate('./routes/reviews', ({ breadcrumb: [file, slug, category], path }) => {
 	if (file !== '+article.md') return;
 	const validate = attempt.wrap(schema);
@@ -44,15 +43,14 @@ await orchestrate('./routes/reviews', ({ breadcrumb: [file, slug, category], pat
 		if (data) {
 			const unexpected = Object.keys(manifest).filter((key) => {
 				if (key in data) return false;
-				console.log(`\x1b[33m⚠\x1b[0m ${category}/${slug} - Unexpected "${key}"`);
+				console.log(`\x1b[33m⚠\x1b[0m [${category}/${slug}] "${key}" is removed`);
 				return true;
 			});
-			if (!unexpected.length) console.log(`\x1b[32m✓\x1b[0m ${category}/${slug}`);
-			const metadata = stringify(unexpected.length ? manifest : data);
+			if (unexpected.length) trashed.push(`${category}/${slug}`);
 			task(async ({ fs }) => {
 				const body = meta.body.trim();
 				const gutter = body.length ? '\n\n' : '';
-				await fs.writeFile(path, `---\n${metadata}\n---${gutter + body}\n`);
+				await fs.writeFile(path, `---\n${stringify(data)}\n---${gutter + body}\n`);
 			});
 		} else {
 			const path = `\x1b[31m✘\x1b[0m ${category}/${slug}`;
@@ -61,3 +59,6 @@ await orchestrate('./routes/reviews', ({ breadcrumb: [file, slug, category], pat
 		return [`${category}/${slug}`, !error];
 	};
 });
+
+if (!trashed.length) console.log(`\x1b[32m✓\x1b[0m all good!`);
+else console.log(`\x1b[33m⚠\x1b[0m ${trashed.length} reviews were modified`);

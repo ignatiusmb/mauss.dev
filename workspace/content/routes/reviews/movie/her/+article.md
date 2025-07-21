@@ -3,7 +3,6 @@ date: 2020
 title: Her
 tier: "?"
 released: 2014-03-12
-verdict: pending
 genres: [drama, romance, sci-fi]
 seen:
   first: "2025-06-02T22:37:12"

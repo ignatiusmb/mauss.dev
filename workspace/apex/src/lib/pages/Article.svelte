@@ -264,9 +264,6 @@
 				margin: 0;
 			}
 		}
-		section:first-of-type {
-			margin-top: 4rem;
-		}
 		p,
 		li {
 			font-size: clamp(1rem, 2vw + 0.5rem, 1.15rem);

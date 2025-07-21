@@ -4,7 +4,6 @@ title: "Nichijou: My Ordinary Life"
 alias: [Nichijou]
 tier: S
 released: 2011-04-03
-verdict: must-watch
 genres: [comedy, slapstick, slice of life, school, shounen]
 seen:
   first: 2020-08-09
