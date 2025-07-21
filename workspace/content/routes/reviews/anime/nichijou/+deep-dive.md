@@ -48,4 +48,4 @@ let me causally dump a couple of youtube clips with some of the most iconic mome
 
 unfortunately, Nichijou didn't sell that well and as of this writing, there has not been any news about season 2 or any continuation of the series.
 
-however! what are the odds that i would (finally) review Nichijou, just to find out that [KyoAni has announced *City the Animation*](/curated/harvest-2025.06#headlines-the-goats-are-back), which is the closest thing we got to Nichijou season 2. based the manga by the same author, Keiichi Arawi, *City* is set to premiere on the 7th this month!
+however! what are the odds that i would (finally) review Nichijou, just to find out that [KyoAni has announced City the Animation](/curated/harvest-2025.06#headlines-the-goats-are-back), which is the closest thing we got to Nichijou season 2. based the manga by the same author, Keiichi Arawi, City is set to premiere on the 7th this month!

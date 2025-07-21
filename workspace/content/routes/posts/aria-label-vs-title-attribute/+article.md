@@ -11,7 +11,7 @@ The title attribute adds a native browser tooltip on hover. If you want a toolti
 
 aria-label, on the other hand, is purpose-built for accessibility. It's consistently supported by screen readers and preferred when you want to label an element without showing visible text.
 
-**My recommendation**: use `aria-label` for accessibility, and build your own tooltip using CSS based on its value. This gives you full control over styling, positioning, and behavior — something the native title tooltip doesn't offer. Here's a simple example to get you started:
+I prefer to use `aria-label` and build my own tooltip using CSS based on its value. This gives me full control over styling, positioning, and behavior — something the native title tooltip doesn't offer. Here's a minimal CSS code to replicate the title tooltip using `aria-label`:
 
 ```css
 /* arrow pointing to the element */

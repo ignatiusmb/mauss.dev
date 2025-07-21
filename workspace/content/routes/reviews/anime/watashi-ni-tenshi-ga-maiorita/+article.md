@@ -5,7 +5,6 @@ romaji: "Watashi ni Tenshi ga Maiorita!"
 alias: ["Wataten!"]
 tier: B
 released: 2019-01-08
-verdict: recommended
 genres: [comedy, slice of life, shoujo ai]
 seen:
   first: 2020-08-23

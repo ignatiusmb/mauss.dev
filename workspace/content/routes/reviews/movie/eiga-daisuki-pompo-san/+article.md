@@ -4,7 +4,6 @@ title: "Pompo: The Cinéphile"
 romaji: Eiga Daisuki Pompo-san
 tier: B
 released: 2021-06-04
-verdict: recommended
 genres: [anime, comedy, drama]
 seen:
   first: "2025-06-15T14:00:00+07:00"
