@@ -6,7 +6,7 @@ export async function load({ parent, params }) {
 	if (!article) redirect(307, '/curated');
 
 	return {
-		article,
+		article: { ...article, branches: article.branches.map(({ branch }) => branch) },
 		source: `curated/${article.slug}/+article.md`,
 		meta: {
 			canonical: `/curated/${article.slug}`,

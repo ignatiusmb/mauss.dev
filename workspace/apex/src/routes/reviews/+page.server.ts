@@ -11,10 +11,12 @@ export async function load({ parent, url }) {
 		sort_by = ['date'],
 	} = qsd(url.search);
 
+	const index = items.map(({ branches, content, ...item }) => item);
+
 	return {
-		index: items,
+		index,
 		query: String(q[0]),
-		results: sift(items, {
+		results: sift(index, {
 			search: String(q[0]),
 			tier: String(tier[0]),
 			category: String(category[0]),

@@ -28,7 +28,7 @@
 	}}
 >
 	<header>
-		<h2>Search filters ({matches} matches)</h2>
+		<h3>Search filters ({matches} matches)</h3>
 
 		<button onclick={props.onclose} aria-label="Close">
 			<i data-icon="x"></i>
@@ -38,7 +38,7 @@
 	<div class="options">
 		{#each Object.entries(filters) as [key, item]}
 			<section>
-				<h3>{key.replace(/_/g, ' ')}</h3>
+				<h4>{key.replace(/_/g, ' ')}</h4>
 
 				{#if Array.isArray(item)}
 					{#each item as option}
@@ -110,7 +110,7 @@
 			align-content: start;
 			background: inherit;
 
-			h3 {
+			h4 {
 				position: sticky;
 				top: 0;
 				padding: 0.5rem;

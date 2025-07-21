@@ -18,9 +18,7 @@
 			author?: { name?: string; link?: string; img?: string };
 			description?: string;
 			estimate?: number;
-			branches?: Array<{
-				branch: string;
-			}>;
+			branches?: string[];
 		};
 		flank?: null | Partial<Record<'back' | 'next', Flank>>;
 
@@ -59,8 +57,8 @@
 
 	{#if flank || post}
 		<footer>
-			{#if post && (page.params.branch || post.branches?.length)}
-				{#each post.branches || [] as { branch }}
+			{#if post && post.branches?.length}
+				{#each post.branches.filter((branch) => branch !== page.params.branch) as branch}
 					{@const root = page.url.pathname.split('/')[1]}
 					<a href="/{root}/{post.slug}/{branch}" data-branch={branch}>
 						<strong style:grid-template-columns="1fr auto">
@@ -72,7 +70,9 @@
 							{/if}
 						</strong>
 					</a>
-				{:else}
+				{/each}
+
+				{#if page.params.branch}
 					{@const idx = page.url.pathname.lastIndexOf('/')}
 					<a href={page.url.pathname.slice(0, idx)} data-branch="index">
 						<strong style:grid-template-columns="auto 1fr">
@@ -80,7 +80,7 @@
 							<span>back to index</span>
 						</strong>
 					</a>
-				{/each}
+				{/if}
 			{/if}
 
 			{#if flank}

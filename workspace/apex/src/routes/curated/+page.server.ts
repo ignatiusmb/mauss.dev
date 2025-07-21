@@ -5,7 +5,7 @@ export async function load({ parent, url }) {
 	const { q = [''] } = qsd(url.search);
 
 	return {
-		list: items,
+		list: items.map(({ content, ...item }) => item),
 		query: String(q[0]),
 		meta: {
 			canonical: '/curated',

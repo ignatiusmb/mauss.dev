@@ -9,7 +9,7 @@ export async function load({ parent, params }) {
 
 	const branch = main.branches.find((i) => i.branch === params.branch);
 	if (!branch) redirect(307, `/reviews/${slug}`);
-	const article = { ...main, ...branch };
+	const article = { ...main, ...branch, branches: main.branches.map(({ branch }) => branch) };
 
 	return {
 		article,
