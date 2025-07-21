@@ -9,7 +9,8 @@ export type Query = {
 	sort_by: keyof typeof by;
 };
 
-type Review = Omit<Items['/reviews'][number], 'branches' | 'content'>;
+export type Review = Omit<Items['/reviews'][number], 'branches' | 'content'>;
+
 export function sift(items: Review[], payload: Query) {
 	const value = normalize(payload.search);
 	const results = items.filter((item) => {
