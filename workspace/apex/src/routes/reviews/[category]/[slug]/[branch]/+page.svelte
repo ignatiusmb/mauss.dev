@@ -17,10 +17,9 @@
 	{/snippet}
 
 	{#if page.params.branch === 'deep-dive'}
-		{@const margin = `${data.article.table.length ? 1 : 3}rem 0 1rem`}
 		{@const idx = page.url.pathname.lastIndexOf('/')}
 
-		<section data-info="warning" style:margin>
+		<section data-info="warning" style:margin-bottom="1rem">
 			<!-- prettier-ignore -->
 			<p><em><strong>spoiler warning!</strong> this is a deeper look into the story and everything the {page.params.category} has to offer. if you haven't finished it yet and came here by accident, you might want to go back and finish the story first.</em></p>
 

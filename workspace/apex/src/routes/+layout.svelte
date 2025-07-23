@@ -104,7 +104,7 @@
 		--pad: 1rem;
 
 		display: grid;
-		gap: 2rem 0;
+		gap: var(--pad) 0;
 		align-content: center;
 		grid-template-rows: [top-start] auto [content-start] 1fr [content-end] auto [top-end];
 		grid-template-columns:
@@ -121,6 +121,7 @@
 		transition: var(--transition-base);
 
 		@media (min-width: 549px) {
+			gap: calc(var(--pad) * 2) 0;
 			padding: 1rem 0 3rem;
 		}
 

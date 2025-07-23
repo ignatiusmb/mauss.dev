@@ -59,7 +59,7 @@
 		line-height: 1.5;
 
 		h2 {
-			--size: 2rem;
+			--size: var(--size-h3);
 			display: flex;
 			align-items: center;
 

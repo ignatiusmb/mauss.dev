@@ -1,18 +1,23 @@
 :root {
-	--font-scale: 1.067;
+	--font-scale: 1.034;
+	--font-base: 'Newsreader Variable', sans-serif;
+	--font-sans: 'Karla Variable', sans-serif;
+	--font-mono: 'Fira Code Variable', monospace;
+	--font-monospace: var(--font-mono);
+
+	--size-h1: calc(clamp(2rem, 5vw + 1rem, 3.4rem) * var(--font-scale));
+	--size-h2: calc(clamp(1.8rem, 5vw + 0.75rem, 2.6rem) * var(--font-scale));
+	--size-h3: calc(clamp(1.5rem, 4vw + 0.5rem, 2rem) * var(--font-scale));
+	--size-h4: calc(clamp(1.1rem, 3vw + 0.25rem, 1.4rem) * var(--font-scale));
+	--size-base: calc(clamp(1rem, 2vw + 0.5rem, 1.15rem) * var(--font-scale));
+	--size-small: calc(clamp(0.8rem, 2vw + 0.1rem, 0.9rem) * var(--font-scale));
+
 	--rounding-base: 0.325rem;
 	--rounding-box: calc(var(--rounding-base) * 2);
 
 	--transition-base: 150ms;
 	--transition-fast: calc(var(--transition-base) / 2);
 	--transition-slow: calc(var(--transition-base) * 2);
-
-	--size-h1: clamp(2rem, 5vw + 1rem, 3.4rem);
-	--size-h2: clamp(1.8rem, 5vw + 0.75rem, 2.6rem);
-	--size-h3: clamp(1.5rem, 4vw + 0.5rem, 2rem);
-	--size-h4: clamp(1.1rem, 3vw + 0.25rem, 1.4rem);
-	--size-base: clamp(1rem, 2vw + 0.5rem, 1.15rem);
-	--size-small: clamp(0.8rem, 2vw + 0.1rem, 0.9rem);
 
 	--color-base: oklch(0.1554 0.0042 286);
 	--color-surface: oklch(0.1978 0.0042 286);
@@ -28,11 +33,6 @@
 	--color-accent-tertiary: #ce5a57; /* red-rust */
 	--color-form-error: #b24d4d; /* red-oxide */
 	--color-form-highlight: #5fbceb;
-
-	--font-base: 'Newsreader Variable', sans-serif;
-	--font-sans: 'Karla Variable', sans-serif;
-	--font-mono: 'Fira Code Variable', monospace;
-	--font-monospace: var(--font-mono);
 }
 
 html,
@@ -96,6 +96,10 @@ h4 {
 
 small {
 	font-size: var(--size-small);
+}
+
+strong {
+	font-weight: 600;
 }
 
 @media (min-width: 549px) {
