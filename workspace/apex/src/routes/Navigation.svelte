@@ -125,6 +125,8 @@
 	}
 
 	menu {
+		--space: calc(var(--pad) * 1.5);
+
 		list-style: none;
 		visibility: hidden;
 		overflow: hidden;
@@ -135,16 +137,15 @@
 		left: 0;
 
 		display: grid;
-		gap: calc((var(--pad)) * 1.5);
+		gap: var(--space);
 		grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
 
-		padding: calc(var(--pad) * 2) calc(var(--pad) * 3);
+		padding: var(--space);
+		padding-top: 0;
 		margin: 0;
 		margin-left: auto;
 		border-bottom: 1px solid var(--color-border);
-		border-radius: var(--rounding-box);
-		border-top-left-radius: 0;
-		border-top-right-radius: 0;
+		border-radius: 0 0 var(--rounding-box) var(--rounding-box);
 		box-shadow: 0.25rem 0.25rem 0.25rem oklch(0 0 0 / 24%);
 		background-color: inherit;
 		transform: translateY(-100%);

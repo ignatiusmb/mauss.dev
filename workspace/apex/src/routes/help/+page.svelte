@@ -4,8 +4,10 @@
 </script>
 
 <Article>
-	<h1>you've made port.</h1>
-	<small style:text-align="center">always drifting, never adrift.</small>
+	<header>
+		<h1>you've made port</h1>
+		<small>always drifting, never adrift</small>
+	</header>
 
 	<!-- prettier-ignore -->
 	<p>welcome, you've stumbled upon a corner of the internet — my digital garden, a kind of virtual abode. it's a living archive, always <em>under construction</em>, slowly growing as i plant new seeds and tend to older ones. over time, it may become a garden worth wandering through.</p>
@@ -38,7 +40,7 @@
 	<!-- prettier-ignore -->
 	<p>if you don't see anything weird — perfect. if you do, i hope you get used to it. writing this way helps me be more honest and express my thoughts more clearly. like chatting with a good friend — we just type whatever's on our mind, no need to dress it up. i case the words where it matters and aids readability. the rest is written as freely as i think it, as i try to make sense of things and articulate myself.</p>
 
-	<section data-info="warning" style:margin="1rem 0 0">
+	<section data-info="warning">
 		<!-- prettier-ignore -->
 		<p><em>policies, stances, and other small-but-important details live in the <a href="/fine-print">fine print</a>.</em></p>
 	</section>
@@ -169,12 +171,19 @@
 		</li>
 		<li>
 			<strong><a href="https://vercel.com">vercel</a></strong>
-			<span>where this site lives and breathes. fast, reliable, and free.</span>
+			<span>where this site lives and breathes, fast and reliable.</span>
 		</li>
 	</ul>
 </Article>
 
 <style>
+	header {
+		display: grid;
+		gap: 0.3rem;
+		text-align: center;
+		text-wrap: balance;
+	}
+
 	h2,
 	h3 {
 		display: flex;

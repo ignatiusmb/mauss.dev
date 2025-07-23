@@ -248,9 +248,9 @@
 <style>
 	header {
 		display: grid;
-
 		gap: 1rem;
 		text-align: center;
+		text-wrap: balance;
 	}
 
 	#layout {

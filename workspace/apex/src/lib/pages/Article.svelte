@@ -44,7 +44,7 @@
 			{@render header()}
 
 			{#if post.description}
-				<p style:margin="0" style:line-height="1.5" style:text-align="center">{post.description}</p>
+				<p style:margin="0" style:line-height="1.5">{post.description}</p>
 			{/if}
 		</header>
 
@@ -135,6 +135,8 @@
 		justify-items: center;
 		padding: 0 0.5rem;
 		margin: 2rem 0;
+		text-align: center;
+		text-wrap: balance;
 
 		aside {
 			display: grid;
@@ -152,7 +154,7 @@
 	footer {
 		margin-top: 2rem;
 		display: grid;
-		gap: 0.325rem;
+		gap: 0.2rem 0.25rem;
 		border-radius: var(--rounding-box);
 		background: var(--color-text-muted);
 
@@ -341,17 +343,19 @@
 		ol,
 		ul {
 			padding: 0;
-			padding-left: 0.5rem;
 			margin: 0;
-			margin-top: 0.75rem;
-			margin-bottom: -0.5rem;
+			margin-top: 0.5rem;
+
+			&:not(:last-child) {
+				margin-bottom: -0.5rem;
+			}
 
 			+ h3 {
 				margin-top: 1.25rem;
 			}
 		}
 		li {
-			margin-left: 1rem;
+			margin-left: 1.25rem;
 
 			> ol,
 			> ul {
@@ -409,7 +413,7 @@
 			}
 
 			&[open] > summary {
-				margin-bottom: 0.5rem;
+				margin-bottom: 0.1rem;
 			}
 
 			> :not(summary) {
@@ -447,32 +451,8 @@
 			padding: min(2%, 0.8rem) min(4%, 1.2rem);
 			border-radius: var(--rounding-base);
 			border-left: var(--rounding-base) solid var(--color-accent-primary);
-			margin: 2rem 0;
+			margin: 1rem 0 0 -0.25rem;
 			background: var(--color-surface);
-
-			&:not([id]) {
-				margin-left: -0.25rem;
-			}
-
-			&[id] {
-				filter: invert() hue-rotate(180deg);
-
-				ol,
-				li {
-					margin: 0;
-
-					li {
-						margin-left: 0.5rem;
-						margin-bottom: 0 !important;
-					}
-				}
-			}
-			h3 {
-				margin-bottom: 0.3rem;
-			}
-			p {
-				margin-bottom: 0;
-			}
 
 			&[data-info='warning'] {
 				border-left-color: oklch(0.6793 0.1734 23 / 40%);
