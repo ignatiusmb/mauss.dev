@@ -1,10 +1,10 @@
-import type { Query, Schema } from './search.svelte';
+import type { Item, Query } from './search.svelte';
 import { commander, type Dispatch } from 'syv/worker';
 import { sift } from './search.svelte';
 
-let dataset: Schema[] = [];
+let dataset: Item[] = [];
 const commands = {
-	init(payload: Schema[]) {
+	init(payload: Item[]) {
 		dataset = payload;
 		return true;
 	},

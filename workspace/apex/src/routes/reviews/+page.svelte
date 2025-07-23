@@ -158,6 +158,7 @@
 		gap: 1rem;
 		grid-template-columns: 1fr 1fr;
 		transition: var(--transition-base);
+		font-family: var(--font-sans);
 
 		@media (min-width: 549px) {
 			grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));

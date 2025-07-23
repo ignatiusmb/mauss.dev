@@ -1,5 +1,5 @@
-import type { Items } from '$content/builder';
-import { compare, date, inspect } from 'mauss';
+import type { Schema } from '$content/reviews.json/+server';
+import { arrange, compare, date, inspect } from 'mauss';
 
 export type Query = {
 	search: string;
@@ -9,9 +9,9 @@ export type Query = {
 	sort_by: keyof typeof by;
 };
 
-export type Schema = Omit<Items['/reviews'][number], 'branches' | 'content'>;
+export type Item = Omit<Schema['items'][number], 'branches' | 'content'>;
 
-export function sift(items: Schema[], payload: Query) {
+export function sift(items: Item[], payload: Query) {
 	const value = normalize(payload.search);
 	const results = items.filter((item) => {
 		const filters = [
@@ -35,7 +35,8 @@ function normalize(str: string): string {
 	return str.replace(/[(){}[\]<>"']/g, '').toLowerCase();
 }
 
-export const by = {
+type By<T extends string> = { [K in T]: (x: Item, y: Item) => number };
+export const by: By<Schema['metadata']['sort_by'][number][0]> = {
 	date(x, y) {
 		if (x.date === y.date) return fallback(x, y);
 		return date.sort.newest(x.date, y.date);
@@ -59,8 +60,12 @@ export const by = {
 			) || fallback(x, y)
 		);
 	},
-} satisfies Record<string, (x: Schema, y: Schema) => number>;
-function fallback(x: Schema, y: Schema): number {
+	tier(x, y) {
+		if (x.tier === y.tier) return by.rating(x, y);
+		return arrange(['S', 'A', 'B', 'C', 'D', '?'])(x.tier, y.tier);
+	},
+};
+function fallback(x: Item, y: Item): number {
 	if (x.date && y.date && x.date !== y.date) {
 		return date.sort.newest(x.date, y.date);
 	}
