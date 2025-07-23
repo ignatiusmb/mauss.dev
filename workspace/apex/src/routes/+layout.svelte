@@ -138,9 +138,6 @@
 				align-content: center;
 			}
 
-			:global(.syv-core-pagination) {
-				max-width: 32rem;
-			}
 			:global(.syv-core-search-bar) {
 				border-radius: var(--rounding-box);
 			}

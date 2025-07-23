@@ -343,7 +343,6 @@
 		ol,
 		ul {
 			padding: 0;
-			padding-left: 0.25rem;
 			margin: 0;
 			margin-top: 0.5rem;
 
@@ -356,7 +355,7 @@
 			}
 		}
 		li {
-			margin-left: 1rem;
+			margin-left: 1.25rem;
 
 			> ol,
 			> ul {
