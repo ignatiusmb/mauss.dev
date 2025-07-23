@@ -230,10 +230,6 @@
 		}
 		> p:empty {
 			margin: 0;
-
-			+ p:empty {
-				margin-top: 0.5rem;
-			}
 		}
 		> .half-bleed,
 		> .breakout {
@@ -266,7 +262,7 @@
 		}
 		p,
 		li {
-			font-size: clamp(1rem, 2vw + 0.5rem, 1.15rem);
+			font-size: var(--size-base);
 			line-height: 1.8;
 		}
 		p {
@@ -391,19 +387,20 @@
 			figcaption {
 				padding: 0.5rem 0.25rem 0;
 				text-align: center;
-				font: 90% var(--font-monospace);
+				font-family: var(--font-sans);
+				font-size: var(--size-small);
 			}
 		}
 		details {
 			margin: 1rem 0 0;
-			border-radius: var(--rounding-box);
+			border-radius: var(--rounding-base);
 			background: var(--color-surface);
 
 			summary {
 				user-select: none;
-				padding: 0.2rem 0.8rem;
-				border-radius: var(--rounding-box);
-				font-family: var(--font-monospace);
+				padding: 0.4rem 0.8rem;
+				border-radius: var(--rounding-base);
+				font-family: var(--font-sans);
 
 				&:hover,
 				&:focus-visible {

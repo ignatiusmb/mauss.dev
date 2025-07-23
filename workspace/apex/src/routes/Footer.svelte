@@ -42,7 +42,7 @@
 		gap: 1rem;
 		text-align: center;
 		line-height: 1.5;
-		font-family: var(--font-monospace);
+		font-family: var(--font-sans);
 		font-size: var(--size-small);
 	}
 	section {

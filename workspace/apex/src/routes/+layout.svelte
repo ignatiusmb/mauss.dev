@@ -1,6 +1,7 @@
 <script>
 	import '@fontsource-variable/fira-code';
 	import '@fontsource-variable/karla';
+	import '@fontsource-variable/newsreader';
 	import '@ignatiusmb/styles/core.css';
 	import 'aubade/styles/code.css';
 	import '../app.css';
@@ -100,7 +101,7 @@
 
 		--max-content: 80rem;
 		--breakout: calc((calc(var(--max-content) + 12rem) - var(--max-content)) / 2);
-		--pad: 2rem;
+		--pad: 1rem;
 
 		display: grid;
 		gap: 2rem 0;

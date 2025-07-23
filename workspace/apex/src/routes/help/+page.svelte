@@ -8,7 +8,7 @@
 	<small style:text-align="center">always drifting, never adrift.</small>
 
 	<!-- prettier-ignore -->
-	<p>welcome! you've stumbled upon a corner of the internet — my <a href="/posts/digital-garden">digital garden</a>, a kind of virtual abode. it's a living archive, always <em>under construction</em>, slowly growing as i plant new seeds and tend to older ones. over time, it may become a garden worth wandering through.</p>
+	<p>welcome, you've stumbled upon a corner of the internet — my digital garden, a kind of virtual abode. it's a living archive, always <em>under construction</em>, slowly growing as i plant new seeds and tend to older ones. over time, it may become a garden worth wandering through.</p>
 
 	<!-- prettier-ignore -->
 	<p>the index is a <em>collapsible</em> overview of the page and a way to jump between sections or sub-sections. you'll mostly see this in articles with headings, so you can navigate with ease.</p>
@@ -36,7 +36,7 @@
 		<span>how i write</span>
 	</h2>
 	<!-- prettier-ignore -->
-	<p>if you don't see anything weird — perfect. if you do, i hope you get used to it. writing this way helps me be more honest and express my thoughts more clearly. like chatting with a good friend — we just type whatever's on our mind, no need to dress it up. i try to case the words where it matters and where it aids readability. the rest is written as freely as i think it, as i try to make sense of things and articulate myself.</p>
+	<p>if you don't see anything weird — perfect. if you do, i hope you get used to it. writing this way helps me be more honest and express my thoughts more clearly. like chatting with a good friend — we just type whatever's on our mind, no need to dress it up. i case the words where it matters and aids readability. the rest is written as freely as i think it, as i try to make sense of things and articulate myself.</p>
 
 	<section data-info="warning" style:margin="1rem 0 0">
 		<!-- prettier-ignore -->
@@ -78,7 +78,7 @@
 	<!-- prettier-ignore -->
 	<p>my favorite index. reviews are where i express myself most freely, this is where i reflect and appreciate the stories and experiences i got.</p>
 	<!-- prettier-ignore -->
-	<p>most entries come with a <strong>/deep-dive</strong> sub-page: a space for overanalysis, loose theorizing, or spotlighting the moments that i want to capture. some are made to start conversation, others just to get the thoughts out.</p>
+	<p>most entries come with a <strong>/deep-dive</strong> sub-page: a space for nuanced analysis or spotlighting the moments that i want to capture. some are made to start conversation, others just to get the thoughts out.</p>
 
 	<h3 id="reviews-how-i-review">
 		<i data-icon="strategy"></i>
