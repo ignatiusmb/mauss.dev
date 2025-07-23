@@ -11,6 +11,7 @@
 	--size-h2: clamp(1.8rem, 5vw + 0.75rem, 2.6rem);
 	--size-h3: clamp(1.5rem, 4vw + 0.5rem, 2rem);
 	--size-h4: clamp(1.1rem, 3vw + 0.25rem, 1.4rem);
+	--size-base: clamp(1rem, 2vw + 0.5rem, 1.15rem);
 	--size-small: clamp(0.8rem, 2vw + 0.1rem, 0.9rem);
 
 	--color-base: oklch(0.1554 0.0042 286);
@@ -28,7 +29,10 @@
 	--color-form-error: #b24d4d; /* red-oxide */
 	--color-form-highlight: #5fbceb;
 
-	--font-monospace: 'Fira Code Variable', monospace;
+	--font-base: 'Newsreader Variable', sans-serif;
+	--font-sans: 'Karla Variable', sans-serif;
+	--font-mono: 'Fira Code Variable', monospace;
+	--font-monospace: var(--font-mono);
 }
 
 html,
@@ -37,7 +41,7 @@ body {
 	display: flex;
 	flex-direction: column;
 
-	font-family: 'Karla Variable', sans-serif;
+	font-family: var(--font-base);
 	font-size: calc(1rem * var(--font-scale));
 	background: var(--color-base);
 	color: var(--color-text);

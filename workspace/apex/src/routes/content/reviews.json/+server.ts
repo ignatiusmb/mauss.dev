@@ -7,7 +7,7 @@ export interface Schema {
 		tier: [value: string, label: string][];
 		categories: string[];
 		genres: string[];
-		sort_by: [value: string, label: string][];
+		sort_by: [value: 'date' | 'premiere' | 'tier' | 'rating' | 'seen', label: string][];
 	};
 }
 
@@ -29,10 +29,11 @@ export async function GET() {
 			categories: [...new Set(items.map((p) => p.category))].sort(),
 			genres: [...new Set(items.flatMap((p) => p.genres))].sort(),
 			sort_by: [
-				['date', 'date'],
-				['premiere', 'premiere'],
+				['date', 'published'],
+				['premiere', 'premiered'],
 				['rating', 'rating'],
 				['seen', 'last seen'],
+				['tier', 'tier'],
 			],
 		},
 	} satisfies Schema);

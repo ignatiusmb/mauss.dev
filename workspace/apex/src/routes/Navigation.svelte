@@ -55,8 +55,8 @@
 		display: flex;
 		gap: var(--pad);
 		align-items: center;
-		padding: calc(var(--pad) * 2) calc(var(--pad) * 3);
-		padding-left: calc(var(--pad) * 3.4);
+		padding: calc(var(--pad) * 2) calc(var(--pad));
+		padding-left: calc(var(--pad) * 2);
 
 		background: var(--color-base);
 		color: var(--color-text);

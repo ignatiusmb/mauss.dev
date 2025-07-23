@@ -27,6 +27,7 @@
 		margin-bottom: 1rem;
 		border-radius: var(--rounding-box);
 		background: var(--color-surface);
+		font-size: var(--size-base);
 
 		&[open] {
 			border: 1px solid var(--color-border);
@@ -57,6 +58,7 @@
 			margin: 0;
 			border: 1px solid var(--color-border);
 			border-radius: var(--rounding-box);
+			font-weight: 500;
 
 			&:hover,
 			&:focus-within {
