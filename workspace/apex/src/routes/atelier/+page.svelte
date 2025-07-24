@@ -265,7 +265,6 @@
 			display: flex;
 			justify-content: space-between;
 			margin: 1.5rem 0 -0.25rem;
-			font-weight: 500;
 			color: oklch(1 0 0 / 80%);
 
 			div {

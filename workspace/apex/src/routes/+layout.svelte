@@ -1,7 +1,6 @@
 <script>
-	import '@fontsource-variable/fira-code';
-	import '@fontsource-variable/karla';
 	import '@fontsource-variable/newsreader';
+	import '@fontsource-variable/recursive/full';
 	import '@ignatiusmb/styles/core.css';
 	import 'aubade/styles/code.css';
 	import '../app.css';
@@ -149,6 +148,7 @@
 				height: calc(var(--size, 1.875rem) * 0.8);
 				display: inline-block;
 				background: currentColor;
+				color: oklch(0.9086 0.0055 298);
 				mask: no-repeat center / 100%;
 				mask-image: var(--svg);
 

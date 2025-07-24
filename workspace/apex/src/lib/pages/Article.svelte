@@ -55,9 +55,9 @@
 
 	{@render children()}
 
-	{#if flank || post}
+	{#if flank || post?.branches?.length}
 		<footer>
-			{#if post && post.branches?.length}
+			{#if post?.branches?.length}
 				{#each post.branches.filter((branch) => branch !== page.params.branch) as branch}
 					{@const root = page.url.pathname.split('/')[1]}
 					<a href="/{root}/{post.slug}/{branch}" data-branch={branch}>
@@ -322,7 +322,6 @@
 		h2,
 		h3 {
 			scroll-margin-top: 4.8rem;
-			font-weight: 500;
 
 			@media (min-width: 549px) {
 				scroll-margin-top: 1.5rem;
@@ -505,13 +504,25 @@
 
 		[data-aubade] {
 			--aubade-rounding: var(--rounding-base);
+			font-weight: 350;
 		}
 		[data-aubade='header'] {
 			background: var(--color-border);
 			line-height: 1;
+			font-family: var(--font-sans);
+			font-variation-settings: var(--font-sans-variation);
 		}
 		[data-aubade='pre'] {
 			background: var(--color-code-block);
+			font-family: var(--font-mono);
+			font-variation-settings: var(--font-mono-variation);
+		}
+		[data-aubade='tooltip'] {
+			border-radius: var(--rounding-base);
+			background: oklch(0.4 0.0084 286);
+		}
+		[data-aubade='tooltip']::after {
+			border-color: oklch(0.4 0.0084 286) transparent transparent transparent;
 		}
 	}
 

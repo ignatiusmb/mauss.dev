@@ -1,7 +1,7 @@
 ---
 date: 2025-07-16
 title: Crafting a Minimal SVG-to-Favicon Generator
-description: a dive into the process of building a self-contained favicon generator
+description: a technical dive into the process of building a self-contained favicon generator
 tags: [devlog, javascript, typescript, svelte]
 ---
 
@@ -63,7 +63,7 @@ async function png(raw: string, image: number, size: number): Promise<Blob> {
         img.onload = () => {
             ctx.drawImage(img, offset, offset, image, image);
             URL.revokeObjectURL(url);
-            canvas.toBlob((blob) => resolve(blob!), `image/png`);
+            canvas.toBlob((blob) => resolve(blob!), 'image/png');
         };
         img.onerror = () => resolve(new Blob());
         img.src = url;

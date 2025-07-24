@@ -1,6 +1,5 @@
 <script>
-	import '@fontsource-variable/fira-code';
-	import '@fontsource-variable/karla';
+	import '@fontsource-variable/crimson-pro';
 	import '@ignatiusmb/styles/core.css';
 	import '$apex/app.css';
 	import favicon from './favicon.png';
@@ -56,8 +55,6 @@
 
 <style>
 	div /* holy grail */ {
-		--font-scale: 1;
-
 		min-height: 100dvh;
 		width: 100%;
 		position: relative;
@@ -80,6 +77,7 @@
 			[full-bleed-padding-end] var(--pad)
 			[full-bleed-end];
 
+		font-family: 'Crimson Pro Variable', serif;
 		transition: var(--transition-base);
 
 		@media screen and (min-width: 549px) {
@@ -117,6 +115,7 @@
 			height: 1.5rem;
 			display: inline-block;
 			background: currentColor;
+			color: oklch(0.9086 0.0055 298);
 			mask: no-repeat center / 100%;
 			mask-image: var(--svg);
 

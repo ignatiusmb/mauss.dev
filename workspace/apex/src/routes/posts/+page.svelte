@@ -178,7 +178,6 @@
 
 				header {
 					font-size: var(--size-h4);
-					font-weight: 500;
 				}
 			}
 

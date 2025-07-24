@@ -139,7 +139,7 @@
 		> div {
 			display: grid;
 			gap: 0.5rem;
-			margin-top: 1rem;
+			margin-top: 0.75rem;
 
 			button {
 				display: grid;
