@@ -26,10 +26,7 @@
 		<span>&Rarr;</span>
 	</section>
 
-	<p>
-		<i data-icon="copyright"></i>
-		<span>{@html range} Ignatius Bagus.</span>
-	</p>
+	<p>&copy; {@html range} Ignatius Bagus.</p>
 </footer>
 
 <style>
@@ -42,7 +39,6 @@
 		gap: 1rem;
 		text-align: center;
 		line-height: 1.5;
-		font-family: var(--font-sans);
 		font-size: var(--size-small);
 	}
 	section {
@@ -51,6 +47,7 @@
 		align-items: center;
 		justify-content: center;
 		margin: auto;
+		font-family: var(--font-sans);
 
 		span {
 			width: 2rem;
@@ -79,21 +76,6 @@
 				color: var(--color-accent-primary);
 				transform: scale(1.5) translateY(-25%);
 			}
-		}
-	}
-	p {
-		display: grid;
-		gap: 0.5rem;
-		grid-auto-flow: column;
-		align-items: center;
-		justify-content: center;
-	}
-
-	i[data-icon] {
-		&[data-icon='copyright'] {
-			width: calc(var(--size-small) * 1.15);
-			height: calc(var(--size-small) * 1.15);
-			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"><circle cx="128" cy="128" r="96"/><path d="M160,152a40,40,0,1,1,0-48"/></svg>');
 		}
 	}
 </style>

@@ -43,7 +43,6 @@
 	.files {
 		display: grid;
 		gap: 1rem;
-		font-family: var(--font-mono);
 
 		h2 {
 			display: grid;

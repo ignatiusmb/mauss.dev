@@ -14,7 +14,7 @@
 <Article>
 	<header>
 		<h1>Alkamauss</h1>
-		<span><em>by</em> <a href="/about">Ignatius Bagus.</a></span>
+		<span>by <a href="/about">Ignatius Bagus.</a></span>
 	</header>
 
 	{#each indexes as { icon, name }}
@@ -44,11 +44,12 @@
 		justify-content: center;
 		text-align: left;
 		line-height: 2;
+		font-size: var(--size-base);
 
 		h1 {
 			text-align: left;
 			font-size: var(--size-h2);
-			font-weight: 600;
+			font-weight: 500;
 		}
 	}
 
@@ -57,6 +58,7 @@
 		gap: 0.75rem;
 		justify-items: start;
 		line-height: 1.5;
+		font-size: var(--size-base);
 
 		h2 {
 			--size: var(--size-h3);

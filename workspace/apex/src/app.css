@@ -1,9 +1,10 @@
 :root {
 	--font-scale: 1.034;
-	--font-base: 'Newsreader Variable', sans-serif;
-	--font-sans: 'Karla Variable', sans-serif;
-	--font-mono: 'Fira Code Variable', monospace;
-	--font-monospace: var(--font-mono);
+	--font-base: 'Newsreader Variable', 'Georgia', serif;
+	--font-sans: 'Recursive Variable', system-ui, sans-serif;
+	--font-mono: 'Recursive Variable', ui-monospace, monospace;
+	--font-sans-variation: 'MONO' 0, 'CASL' 0.4, 'CRSV' 0;
+	--font-mono-variation: 'MONO' 1, 'CASL' 0.1, 'CRSV' 0;
 
 	--size-h1: calc(clamp(2rem, 5vw + 1rem, 3.4rem) * var(--font-scale));
 	--size-h2: calc(clamp(1.8rem, 5vw + 0.75rem, 2.6rem) * var(--font-scale));
@@ -43,6 +44,7 @@ body {
 
 	font-family: var(--font-base);
 	font-size: calc(1rem * var(--font-scale));
+	font-variation-settings: var(--font-sans-variation);
 	background: var(--color-base);
 	color: var(--color-text);
 }
@@ -65,6 +67,17 @@ a:hover,
 	text-decoration-color: oklch(0.5999 0 0 / 80%);
 }
 
+code,
+kbd,
+pre,
+samp,
+tt,
+var,
+[data-aubade='pre'] {
+	font-family: var(--font-mono);
+	font-weight: 350;
+	font-variation-settings: var(--font-mono-variation);
+}
 code {
 	top: unset;
 	padding: 0;
@@ -100,6 +113,19 @@ small {
 
 strong {
 	font-weight: 600;
+}
+
+em {
+	font-style: italic;
+	font-variation-settings:
+		var(--font-sans-variation),
+		'slnt' -15;
+}
+code em,
+em code {
+	font-variation-settings:
+		var(--font-mono-variation),
+		'slnt' -15;
 }
 
 @media (min-width: 549px) {

@@ -197,7 +197,6 @@
 				padding: 0.1rem 0;
 				border-top-right-radius: inherit;
 				border-top-left-radius: inherit;
-				font-weight: 500;
 				text-transform: capitalize;
 			}
 
@@ -220,7 +219,6 @@
 				text-transform: capitalize;
 				text-wrap: balance;
 				text-align: center;
-				font-weight: 500;
 			}
 
 			footer {
@@ -237,7 +235,6 @@
 				> span {
 					padding: 0.3rem;
 					border-radius: var(--rounding-base);
-					/* background: var(--color-base); */
 				}
 			}
 		}

@@ -8,15 +8,15 @@ importers:
 
   .:
     devDependencies:
-      '@fontsource-variable/fira-code':
-        specifier: ^5.2.6
-        version: 5.2.6
-      '@fontsource-variable/karla':
+      '@fontsource-variable/crimson-pro':
         specifier: ^5.2.6
         version: 5.2.6
       '@fontsource-variable/newsreader':
         specifier: ^5.2.8
         version: 5.2.8
+      '@fontsource-variable/recursive':
+        specifier: ^5.2.6
+        version: 5.2.6
       '@ignatiusmb/styles':
         specifier: ^0.1.1
         version: 0.1.1
@@ -255,14 +255,14 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fontsource-variable/fira-code@5.2.6':
-    resolution: {integrity: sha512-TZe+3xOB0JofZOTNeITYVsD1y/OiFucwTmcmhC19mj+GOgCnNkbp7bb1Jobfg+HjlAHr11HdptENKu0B+VkWLg==}
-
-  '@fontsource-variable/karla@5.2.6':
-    resolution: {integrity: sha512-O8u1HeGzyUx+TuzrQdy9e85b6+JuvMNJRsjMlQa1vG/fVtD0MfmDNH/TMtcQo5slydHsyVmn+OUf8YspOB+TQQ==}
+  '@fontsource-variable/crimson-pro@5.2.6':
+    resolution: {integrity: sha512-LnicANpjEsOjwr9t/KGpyzkNCaGVbYw8f5GEmCQAp0QML/YnqwQnTmZi5Pa7ZqpCICwwaA7IqtQfBqP0Ac7ZqQ==}
 
   '@fontsource-variable/newsreader@5.2.8':
     resolution: {integrity: sha512-Ivo7tZPqQZ/erBbjx3mc+PvI0w+TuUhy93zlvIu3dupq2AlSF328sbkAjYyhwE91v8qpiJ88ogQB684hdiPtmw==}
+
+  '@fontsource-variable/recursive@5.2.6':
+    resolution: {integrity: sha512-nhYU43mj2Z77LTOL/w+aLW7fHEluKI3VEVp1SSZAV/vK+khiQwRIOiL8/R0VKXRLFO4N9ZDhj+mDFY5gfdzrZA==}
 
   '@ignatiusmb/styles@0.1.1':
     resolution: {integrity: sha512-2Py7LWaRCtsd2HKTAjNft598+wFkVplV9+QYzdgSkv7QkTE/D5soIqNQNLxzK1MB3Uu4Gr0krMNHIfCNY5CEeA==}
@@ -1319,11 +1319,11 @@ snapshots:
   '@esbuild/win32-x64@0.25.6':
     optional: true
 
-  '@fontsource-variable/fira-code@5.2.6': {}
-
-  '@fontsource-variable/karla@5.2.6': {}
+  '@fontsource-variable/crimson-pro@5.2.6': {}
 
   '@fontsource-variable/newsreader@5.2.8': {}
+
+  '@fontsource-variable/recursive@5.2.6': {}
 
   '@ignatiusmb/styles@0.1.1': {}
 

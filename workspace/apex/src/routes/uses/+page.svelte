@@ -149,12 +149,8 @@
 			margin-left: 0.5rem;
 		}
 	}
-	li > strong {
-		font-weight: 500;
-
-		& + span::before {
-			content: '| ';
-		}
+	li strong + span::before {
+		content: '| ';
 	}
 
 	i[data-icon] {

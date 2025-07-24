@@ -5,7 +5,7 @@
 
 <Article>
 	<header>
-		<WeavedImage src="/assets/profile/mauss.jpg" alt="Igna's profile picture" />
+		<WeavedImage src="/assets/profile/mauss.jpg" alt="at the summit of mt. Unzen" />
 
 		<h1>Ignatius Bagus.</h1>
 		<span><em>Software Alchemist</em> — code and prose, perfectly distilled</span>
@@ -14,7 +14,7 @@
 		<p>i'm an independent software engineer based in Southeast Asia (GMT+7&ndash;8), <a href="https://github.com/ignatiusmb" target="_blank">building in public</a> — <a href="/atelier">mostly open source</a>. i also take on consulting and freelance projects, specifically tailored if you're looking for something custom and/or private. if you need me, you can reach out through one of <a href="#elsewhere">my socials</a>.</p>
 
 		<!-- prettier-ignore -->
-		<p>i tend to build quietly and write to make sense of it all. it's a way for me to process lessons, share discoveries, and explore new ideas. if you're curious, the <a href="/help">help page</a> is the dedicated page to get you started — or jump straight to any of the links below.</p>
+		<p>i tend to build quietly and write to make sense of it all. it's a way for me to process lessons, share discoveries, and explore new ideas. if you're curious, the <a href="/help">help page</a> is the dedicated page to get you started.</p>
 	</header>
 
 	<h3 id="expertise">
@@ -42,7 +42,7 @@
 		<li>reigniting passion in <a href="/reviews">/reviews</a></li>
 		<li>parsing markdown in <a href="https://github.com/ignatiusmb/aubade">Aubade</a></li>
 		<li>stacking plates, bulking up</li>
-		<li>learning japanese</li>
+		<li>diving into linguistics and cultures</li>
 	</ul>
 
 	<h3 id="movement">
@@ -206,7 +206,6 @@
 			margin-bottom: 0.6rem;
 			text-align: left;
 			font-size: var(--size-h2);
-			font-weight: 600;
 		}
 	}
 

@@ -49,7 +49,7 @@ async function png(raw: string, image: number, size: number): Promise<Blob> {
 		img.onload = () => {
 			ctx.drawImage(img, offset, offset, image, image);
 			URL.revokeObjectURL(url);
-			canvas.toBlob((blob) => resolve(blob!), `image/png`);
+			canvas.toBlob((blob) => resolve(blob!), 'image/png');
 		};
 		img.onerror = () => resolve(new Blob());
 		img.src = url;
