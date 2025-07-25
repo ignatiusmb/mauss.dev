@@ -67,17 +67,6 @@ a:hover,
 	text-decoration-color: oklch(0.5999 0 0 / 80%);
 }
 
-code,
-kbd,
-pre,
-samp,
-tt,
-var,
-[data-aubade='pre'] {
-	font-family: var(--font-mono);
-	font-weight: 350;
-	font-variation-settings: var(--font-mono-variation);
-}
 code {
 	top: unset;
 	padding: 0;
@@ -109,23 +98,6 @@ h4 {
 
 small {
 	font-size: var(--size-small);
-}
-
-strong {
-	font-weight: 600;
-}
-
-em {
-	font-style: italic;
-	font-variation-settings:
-		var(--font-sans-variation),
-		'slnt' -15;
-}
-code em,
-em code {
-	font-variation-settings:
-		var(--font-mono-variation),
-		'slnt' -15;
 }
 
 @media (min-width: 549px) {
