@@ -58,16 +58,16 @@
 	{#if flank || post?.branches?.length}
 		<footer>
 			{#if post?.branches?.length}
+				{@const icons = {
+					'reviews/deep-dive': 'plugs-connected',
+				} as Record<string, string>}
+
 				{#each post.branches.filter((branch) => branch !== page.params.branch) as branch}
 					{@const root = page.url.pathname.split('/')[1]}
 					<a href="/{root}/{post.slug}/{branch}" data-branch={branch}>
 						<strong style:grid-template-columns="1fr auto">
 							<span style:text-align="right">{branch.replace(/-/g, ' ')}</span>
-							{#if root === 'reviews' && branch === 'deep-dive'}
-								<i data-icon="plugs-connected"></i>
-							{:else}
-								<i data-icon="binoculars"></i>
-							{/if}
+							<i data-icon={icons[`${root}/${branch}`] || 'binoculars'}></i>
 						</strong>
 					</a>
 				{/each}
@@ -137,13 +137,13 @@
 		margin: 2rem 0;
 		text-align: center;
 		text-wrap: balance;
+		font-size: var(--size-base);
 
 		aside {
 			display: grid;
 			gap: 0.5rem;
 			grid-auto-flow: column;
 			align-items: center;
-			font-size: var(--size-small);
 		}
 
 		:global(.separator) {
