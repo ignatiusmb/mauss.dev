@@ -10,11 +10,11 @@
 	},
 	"dependencies": {
 		"mauss": "^0.10.6",
-		"pocketbase": "^0.26.1"
+		"pocketbase": "^0.26.2"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-vercel": "^5.7.2",
-		"@sveltejs/kit": "^2.22.5",
+		"@sveltejs/adapter-vercel": "^5.8.1",
+		"@sveltejs/kit": "^2.26.0",
 		"sharp": "^0.34.3"
 	}
 }
