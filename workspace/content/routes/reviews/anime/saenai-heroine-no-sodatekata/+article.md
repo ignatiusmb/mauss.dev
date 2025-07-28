@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: "Saekano: How to Raise a Boring Girlfriend"
-romaji: Saenai Heroine no Sodatekata
+alias: [Saenai Heroine no Sodatekata]
 tier: "?"
 released: 2015-01-16
 completed: 12/23

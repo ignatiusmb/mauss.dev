@@ -1,8 +1,7 @@
 ---
 date: 2020
 title: "Kaguya-sama: Love is War"
-romaji: "Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen"
-alias: ["Kaguya-sama: Love is War"]
+alias: ["Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen"]
 tier: "?"
 released: 2019-01-12
 completed: 37/37

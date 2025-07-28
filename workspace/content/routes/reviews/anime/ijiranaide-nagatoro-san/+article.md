@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: "Don't Toy with Me, Miss Nagatoro"
-romaji: "Ijiranaide, Nagatoro-san"
+alias: ["Ijiranaide, Nagatoro-san"]
 tier: "?"
 released: 2021-04-11
 completed: 24/24

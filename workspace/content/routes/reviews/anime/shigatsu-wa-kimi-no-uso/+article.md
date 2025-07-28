@@ -1,7 +1,7 @@
 ---
 date: 2020-08-16
 title: Your Lie in April
-romaji: Shigatsu wa Kimi no Uso
+alias: [Shigatsu wa Kimi no Uso]
 tier: A
 released: 2014-10-10
 genres: [drama, music, romance, school, slice of life]

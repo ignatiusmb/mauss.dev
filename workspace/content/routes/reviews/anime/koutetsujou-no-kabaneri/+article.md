@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: Kabaneri of the Iron Fortress
-romaji: Koutetsujou no Kabaneri
+alias: [Koutetsujou no Kabaneri]
 tier: "?"
 released: 2016-04-08
 completed: 12/12

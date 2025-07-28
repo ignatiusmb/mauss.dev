@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: "The Great Jahy Will Not Be Defeated!"
-romaji: "Jahy-sama wa Kujikenai!"
+alias: ["Jahy-sama wa Kujikenai!"]
 tier: "?"
 released: 2021-08-01
 completed: 20/20

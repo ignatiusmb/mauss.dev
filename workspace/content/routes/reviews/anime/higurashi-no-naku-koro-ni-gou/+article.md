@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: "Higurashi: When They Cry – Gou"
-romaji: Higurashi no Naku Koro ni Gou
+alias: [Higurashi no Naku Koro ni Gou]
 tier: "?"
 released: 2020-10-01
 genres: [horror, mystery, supernatural, suspense]

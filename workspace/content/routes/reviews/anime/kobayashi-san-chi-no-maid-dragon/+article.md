@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: Miss Kobayashi's Dragon Maid
-romaji: Kobayashi-san Chi no Maid Dragon
+alias: [Kobayashi-san Chi no Maid Dragon]
 tier: "?"
 released: 2017-01-12
 completed: 25/25

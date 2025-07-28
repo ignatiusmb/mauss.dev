@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: "My Hero Academia: Two Heroes"
-romaji: "Boku no Hero Academia: Futari no Hero"
+alias: ["Boku no Hero Academia: Futari no Hero"]
 tier: "?"
 released: 2018-08-03
 genres: [anime, action, shounen, super power]

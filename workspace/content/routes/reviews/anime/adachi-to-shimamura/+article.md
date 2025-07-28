@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: Adachi and Shimamura
-romaji: Adachi to Shimamura
+alias: [Adachi to Shimamura]
 tier: "?"
 released: 2020-10-09
 genres: [slice of life, romance, school, shoujo ai]

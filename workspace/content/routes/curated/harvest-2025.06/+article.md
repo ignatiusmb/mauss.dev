@@ -16,11 +16,11 @@ WE'VE NEVER BEEN SO BACK, this is the closest we got to [Nichijou](/reviews/anim
 
 ![!YouTube#d](ldLdilBkwVg "『CITY THE ANIMATION』PV第1弾")
 
-this was the best unexpected news i encountered this month, and they made the PV looked so fun, i could cry. if you know what happened to kyoani back then, you'd understand why this is such a big deal.
+this was the best unexpected news i encountered this month, and they made the PV looked so fun, i could cry. if you know what happened to KyoAni back then, you'd understand why this is such a big deal.
 
 ![!YouTube#d](YP17uvO9amU "『CITY THE ANIMATION』PV第2弾")
 
-i miss this art style so much, not to mention how much the animation has improved since 2011, the adaptation is always so good! you can also hear how much fun the seiyuus had making this. kyoani absolutely nailed it with these trailers, i can't believe it premieres on 7th July, just one week from now!
+i miss this art style so much, not to mention how much the animation has improved since 2011, the adaptation is always so good! you can also hear how much fun the seiyuus had making this. KyoAni absolutely nailed it with these trailers, i can't believe it premieres on 7th July, just one week from now!
 
 ## stories
 

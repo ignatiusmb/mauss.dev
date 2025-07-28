@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: "My Hero Academia: Heroes Rising"
-romaji: "Boku no Hero Academia: Heroes:Rising"
+alias: ["Boku no Hero Academia: Heroes:Rising"]
 tier: "?"
 released: 2019-12-20
 genres: [anime]

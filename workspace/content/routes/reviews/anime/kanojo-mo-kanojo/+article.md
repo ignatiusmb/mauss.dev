@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: "Girlfriend, Girlfriend"
-romaji: Kanojo mo Kanojo
+alias: [Kanojo mo Kanojo]
 tier: "?"
 released: 2021-07-03
 completed: 12/24

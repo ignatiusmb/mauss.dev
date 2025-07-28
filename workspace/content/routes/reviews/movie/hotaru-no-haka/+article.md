@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: Grave of the Fireflies
-romaji: Hotaru no Haka
+alias: [Hotaru no Haka]
 tier: "?"
 released: 1988-04-16
 genres: [anime, drama, historical]

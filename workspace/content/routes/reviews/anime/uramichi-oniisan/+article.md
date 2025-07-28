@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: Life Lessons with Uramichi-Oniisan
-romaji: Uramichi Oniisan
+alias: [Uramichi Oniisan]
 tier: "?"
 released: 2021-07-06
 completed: 13/13

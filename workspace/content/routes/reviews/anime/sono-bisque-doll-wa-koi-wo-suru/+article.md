@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: My Dress-Up Darling
-romaji: Sono Bisque Doll wa Koi wo Suru
+alias: [Sono Bisque Doll wa Koi wo Suru]
 tier: "?"
 released: 2022-01-09
 completed: 12/12

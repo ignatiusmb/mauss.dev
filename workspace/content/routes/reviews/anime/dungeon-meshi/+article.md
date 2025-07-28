@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: Delicious in Dungeon
-romaji: Dungeon Meshi
+alias: [Dungeon Meshi]
 tier: "?"
 released: 2024-01-04
 completed: 24/24

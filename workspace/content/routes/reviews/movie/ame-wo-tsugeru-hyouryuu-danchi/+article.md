@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: Drifting Home
-romaji: Ame wo Tsugeru Hyouryuu Danchi
+alias: [Ame wo Tsugeru Hyouryuu Danchi]
 tier: "?"
 released: 2022-09-16
 genres: [anime, adventure, family, fantasy]

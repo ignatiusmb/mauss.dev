@@ -23,8 +23,7 @@ export function sift(items: Item[], payload: Query) {
 			item.slug.includes(value),
 			item.released.includes(value),
 			normalize(item.title).includes(value),
-			item.alias && item.alias.some((a) => normalize(a).includes(value)),
-			item.romaji && normalize(item.romaji).includes(value),
+			item.alias.some((a) => normalize(a).includes(value)),
 		];
 		return filters.every((h) => !h) && flags.some((f) => f);
 	});

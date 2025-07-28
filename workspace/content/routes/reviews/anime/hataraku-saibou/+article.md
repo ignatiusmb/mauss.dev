@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: "Cells at Work!"
-romaji: Hataraku Saibou
+alias: [Hataraku Saibou]
 tier: "?"
 released: 2018-07-08
 completed: 14/21

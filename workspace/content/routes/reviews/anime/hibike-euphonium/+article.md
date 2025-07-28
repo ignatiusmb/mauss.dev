@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: "Sound! Euphonium"
-romaji: "Hibike! Euphonium"
+alias: ["Hibike! Euphonium"]
 tier: "?"
 released: 2015-04-08
 genres: [music, school, drama]

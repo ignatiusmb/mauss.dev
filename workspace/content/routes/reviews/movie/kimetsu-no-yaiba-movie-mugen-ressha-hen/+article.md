@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: "Demon Slayer the Movie: Mugen Train"
-romaji: "Kimetsu no Yaiba Movie: Mugen Ressha-hen"
+alias: ["Kimetsu no Yaiba Movie: Mugen Ressha-hen"]
 tier: "?"
 released: 2021-01-06
 genres: [anime, action, demons, supernatural, shounen]

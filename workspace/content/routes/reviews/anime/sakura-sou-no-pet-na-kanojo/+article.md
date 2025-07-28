@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: The Pet Girl of Sakurasou
-romaji: Sakura-sou no Pet na Kanojo
+alias: [Sakura-sou no Pet na Kanojo]
 tier: "?"
 released: 2012-10-09
 genres: [slice of life, comedy, drama, romance, school]

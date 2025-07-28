@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: Demon Slayer
-romaji: Kimetsu no Yaiba
+alias: [Kimetsu no Yaiba]
 tier: "?"
 released: 2019-04-06
 completed: 63/63

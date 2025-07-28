@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: My Hero Academia
-romaji: Boku no Hero Academia
+alias: [Boku no Hero Academia]
 tier: "?"
 released: 2016-04-03
 completed: 138/138

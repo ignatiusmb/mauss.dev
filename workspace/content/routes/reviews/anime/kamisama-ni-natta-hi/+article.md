@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: The Day I Become a God
-romaji: Kamisama ni Natta Hi
+alias: [Kamisama ni Natta Hi]
 tier: "?"
 released: 2020-10-11
 genres: [comedy, drama, fantasy]

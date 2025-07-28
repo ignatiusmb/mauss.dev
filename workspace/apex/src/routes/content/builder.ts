@@ -174,11 +174,10 @@ export const ROUTES = {
 			define(({ optional, array, record, literal, string, number }) => ({
 				date: string(),
 				title: string(),
-				romaji: optional(string()),
-				alias: optional(array(string())),
+				alias: optional(array(string()), []),
 
+				tier: literal('S', 'A', 'B', 'C', 'D', '?'),
 				released: string(),
-				tier: optional(literal('S', 'A', 'B', 'C', 'D', '?'), '?'),
 				progress: optional(
 					string((ratio) => {
 						const [watched, episodes] = ratio.split('/');
@@ -192,10 +191,6 @@ export const ROUTES = {
 						const [watched, total] = ratio.split('/');
 						return Math.round((+watched / +total) * 80);
 					}),
-				),
-				verdict: optional(
-					literal('pending', 'not-recommended', 'contextual', 'recommended', 'must-watch'),
-					'pending',
 				),
 				genres: array(string()),
 				seen: { first: string(), last: optional(string()) },

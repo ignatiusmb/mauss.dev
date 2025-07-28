@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: The Disastrous Life of Saiki K.
-romaji: Saiki Kusuo no Ψ-nan
+alias: [Saiki Kusuo no Ψ-nan]
 tier: "?"
 released: 2016-07-04
 genres: [comedy, slice of life, supernatural, school, shounen]

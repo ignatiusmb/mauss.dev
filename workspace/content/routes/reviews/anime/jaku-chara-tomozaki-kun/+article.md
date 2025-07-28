@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: Bottom-Tier Character Tomozaki
-romaji: Jaku-Chara Tomozaki-kun
+alias: [Jaku-Chara Tomozaki-kun]
 tier: "?"
 released: 2021-01-08
 genres: [drama, romance, school]

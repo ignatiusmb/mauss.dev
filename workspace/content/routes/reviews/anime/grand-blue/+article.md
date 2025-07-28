@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: Grand Blue Dreaming
-romaji: Grand Blue
+alias: [Grand Blue]
 tier: "?"
 released: 2018-06-14
 genres: [slice of life, comedy, seinen]
