@@ -19,21 +19,12 @@ function escape(literals: TemplateStringsArray, ...inputs: Array<string | string
 }
 
 export const channel = {
-	domain: 'mauss.dev',
 	title: 'Alkamauss — A Digital Atelier',
 	description:
 		'seeing life through a shifting lens in a quiet corner of the web. where everyday moments, distant journeys, and personal echoes turn into stories worth holding.',
 };
 
 export function RSS(
-	channel: {
-		domain: string;
-		image?: string;
-		title: string;
-		slug?: string;
-		description: string;
-		language?: string;
-	},
 	items: Array<{
 		title: string;
 		slug: string;
@@ -43,23 +34,25 @@ export function RSS(
 ): string {
 	const xml = escape`
 	<?xml version="1.0" encoding="UTF-8"?>
-	<rss version="2.0">
+	<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>${channel.title}</title>
-		<link>https://${channel.domain}/${channel.slug || ''}</link>
+		<atom:link href="https://mauss.dev/rss.xml" rel="self" type="application/rss+xml" />
+		<title>Alkamauss — A Digital Atelier</title>
+		<link>https://mauss.dev</link>
 		<description>${channel.description}</description>
 		<lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
-		<language>${channel.language || 'en'}</language>
+		<language>en</language>
 		<image>
-			<url>https://${channel.domain}/${channel.image || 'favicon.ico'}</url>
-			<title>${channel.title}</title>
-			<link>https://${channel.domain}/${channel.slug || ''}</link>
+			<url>https://mauss.dev/assets/rss-image.png</url>
+			<title>Alkamauss — A Digital Atelier</title>
+			<link>https://mauss.dev</link>
 		</image>
 		${items.map(
 			(item) => escape`
 			<item>
 				<title>${item.title}</title>
-				<link>https://${channel.domain}/${item.slug}</link>
+				<link>https://mauss.dev/${item.slug}</link>
+				<guid isPermaLink="true">https://mauss.dev/${item.slug}</guid>
 				<description>${item.description}</description>
 				<pubDate>${new Date(item.date).toUTCString()}</pubDate>
 			</item>`,

@@ -1,10 +1,10 @@
 import { traverse } from 'aubade/compass';
 import { compare, date } from 'mauss';
-import { RSS, channel } from './builder';
+import { RSS } from './builder';
 
 const everything = await traverse(
 	'../content/routes',
-	({ breadcrumb: [file, ...rest], parent }) => {
+	({ breadcrumb: [file, ...breadcrumb], parent }) => {
 		if (!file.endsWith('+article.md')) return;
 
 		return async ({ buffer, parse }) => {
@@ -14,19 +14,19 @@ const everything = await traverse(
 
 			switch (true) {
 				case parent.includes('/curated/'): {
-					const slug = `curated/${rest[0]}`;
-					const description = `${title} curated by Alkamauss`;
+					const slug = `curated/${breadcrumb[0]}`;
+					const description = info || `${title} curated by Alkamauss`;
 					return { slug, title, description, date: frontmatter.date };
 				}
 				case parent.includes('/reviews/'): {
 					if (date(frontmatter.date).is.before('2020-06-25')) return;
-					const slug = `reviews/${rest[1]}/${rest[0]}`;
+					const slug = `reviews/${breadcrumb[1]}/${breadcrumb[0]}`;
 					const name = typeof title === 'string' ? title : title.en;
-					const description = `${name} reviewed by Alkamauss`;
+					const description = info || `${name} reviewed by Alkamauss`;
 					return { slug, title: name, description, date: frontmatter.date };
 				}
 				case parent.includes('/posts/'): {
-					const slug = `posts/${rest[0].replace('.md', '')}`;
+					const slug = `posts/${breadcrumb[0].replace('.md', '')}`;
 					const description = info || 'A post by Alkamauss';
 					return { slug, title, description, date: frontmatter.date };
 				}
@@ -44,6 +44,7 @@ export async function GET() {
 			? compare.string(x.title, y.title)
 			: date.sort.newest(x.date, y.date),
 	);
-	const headers = { 'Content-Type': 'application/xml' };
-	return new Response(RSS(channel, items), { headers });
+	return new Response(RSS(items), {
+		headers: { 'Content-Type': 'application/xml' },
+	});
 }
