@@ -139,6 +139,7 @@
 
 			:global(.syv-core-search-bar) {
 				border-radius: var(--rounding-box);
+				font-family: var(--font-sans);
 			}
 		}
 

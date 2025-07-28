@@ -4,10 +4,6 @@
 	const { data } = $props();
 </script>
 
-<Article post={data.article} path={data.source}>
-	{#snippet header()}
-		<!-- render the title -->
-	{/snippet}
-
+<Article path={data.source} post={data.article}>
 	{@html data.article.content}
 </Article>

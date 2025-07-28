@@ -5,8 +5,7 @@
 		tag: string;
 	}
 	const { tag }: Props = $props();
-
-	const table = {
+	const table: Record<string, [background: string, color: string]> = {
 		accessibility: ['#4285f4', 'oklch(1 0 0)'],
 		android: ['#56a036', 'oklch(1 0 0)'],
 		computing: ['#007acc', 'var(--color-base)'],
@@ -27,16 +26,17 @@
 		reflection: ['#708090', 'var(--color-base)'],
 		sapper: ['#159794', 'oklch(1 0 0)'],
 		stoicism: ['#789488', 'oklch(1 0 0)'],
-		svelte: ['#ff3e00', 'oklch(1 0 0)'],
+		svelte: ['#ff3e00', 'var(--color-base)'],
 		tutorial: ['#feffa5', '#b30047'],
 		typescript: ['#2775c3', 'oklch(1 0 0)'],
-	} as Record<string, [background: string, color: string]>;
-
-	const represent = $derived(table[tag] || ['#d6d9e0', 'var(--color-base)']);
-	const [, root] = $derived(page.url.pathname.split('/'));
+	};
 </script>
 
-<a href="/{root}?tags={tag}" style:background={represent[0]} style:color={represent[1]}>
+<a
+	href="/{page.url.pathname.split('/')[1]}?tags={tag}"
+	style:background={table[tag][0] || 'var(--color-text)'}
+	style:color={table[tag][1] || 'var(--color-base)'}
+>
 	#{tag}
 </a>
 
@@ -44,6 +44,7 @@
 	a {
 		padding: 0.2rem 0.4rem;
 		border-radius: var(--rounding-base);
+		font-family: var(--font-sans);
 		font-size: var(--size-small);
 	}
 </style>

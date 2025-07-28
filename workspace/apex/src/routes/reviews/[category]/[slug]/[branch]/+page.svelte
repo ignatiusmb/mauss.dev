@@ -7,7 +7,7 @@
 	const { data } = $props();
 </script>
 
-<Article post={data.article} path={data.source}>
+<Article path={data.source} post={data.article}>
 	{#snippet header()}
 		<Backdrop review={data.article} />
 

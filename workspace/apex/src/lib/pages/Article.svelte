@@ -1,35 +1,28 @@
 <script lang="ts">
 	import Index from '$lib/components/Index.svelte';
-
-	import type { ComponentProps } from 'svelte';
+	import type { IntersectUnion, Overwrite, PartialOmit } from 'mauss/typings';
+	import type { Items } from '$content/builder';
 	import { hydrate } from 'aubade/browser';
 	import { date } from 'mauss';
 	import { navigating, page } from '$app/state';
 
-	type Flank = null | { slug: string; title: string | Record<string, any> };
+	type Base = Items['/curated' | '/posts' | '/reviews'][number];
+	type Article = IntersectUnion<Base>;
 	interface Props {
 		path?: string;
-		post?: null | {
-			date: string;
-			title: string;
-			table: ComponentProps<typeof Index>['items'];
-
-			slug?: string;
-			author?: { name?: string; link?: string; img?: string };
-			description?: string;
-			estimate?: number;
-			branches?: string[];
-		};
-		flank?: null | Partial<Record<'back' | 'next', Flank>>;
+		post?: Overwrite<
+			PartialOmit<Article, keyof Omit<Article, keyof Base>>,
+			{ branches?: string[] }
+		>;
 
 		header?: import('svelte').Snippet;
 		children: import('svelte').Snippet;
 	}
-	const { path = '', post = null, flank = null, header, children }: Props = $props();
+	const { path = '', post, header, children }: Props = $props();
 </script>
 
 <article {@attach hydrate(navigating.from)}>
-	{#if header && post}
+	{#if post}
 		<header>
 			<aside>
 				<time datetime={post.date}>{date(post.date).format('DD MMMM YYYY')}</time>
@@ -41,7 +34,7 @@
 
 			<h1>{post.title}</h1>
 
-			{@render header()}
+			{@render header?.()}
 
 			{#if post.description}
 				<p style:margin="0" style:line-height="1.5">{post.description}</p>
@@ -55,7 +48,7 @@
 
 	{@render children()}
 
-	{#if flank || post?.branches?.length}
+	{#if post?.branches?.length || post?.flank}
 		<footer>
 			{#if post?.branches?.length}
 				{@const icons = {
@@ -83,16 +76,15 @@
 				{/if}
 			{/if}
 
-			{#if flank}
-				{@const end = (flank.next && !flank.back) || (!flank.next && flank.back)}
+			{#if post.flank}
+				{@const { back, next } = post.flank}
+				{@const end = (next && !back) || (!next && back)}
 				{@const wide = end ? '1 / -1' : ''}
 
-				{#if flank.back}{@render sibling('back', flank.back)}{/if}
-				{#if flank.next}{@render sibling('next', flank.next)}{/if}
+				{#if back}{@render sibling('back', back.slug, back.title)}{/if}
+				{#if next}{@render sibling('next', next.slug, next.title)}{/if}
 
-				{#snippet sibling(type: 'back' | 'next', { slug, title }: NonNullable<Flank>)}
-					{@const text = typeof title === 'string' ? title : title.jp || title.en}
-
+				{#snippet sibling(type: 'back' | 'next', slug: string, title: string)}
 					<a href={slug} data-flank={type} style:grid-column={wide}>
 						<strong>
 							{#if type === 'back'}
@@ -103,7 +95,7 @@
 								<i data-icon="arrow-circle-right"></i>
 							{/if}
 						</strong>
-						<span class="underlined">{text}</span>
+						<span class="underlined">{title}</span>
 					</a>
 				{/snippet}
 			{/if}
