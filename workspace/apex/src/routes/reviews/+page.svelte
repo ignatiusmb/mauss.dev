@@ -110,9 +110,9 @@
 
 		<a
 			href="/reviews/{post.slug}"
-			aria-label={post.title}
 			data-tier={post.tier}
-			style:pointer-events={post.draft ? 'none' : null}
+			aria-label={post.title}
+			aria-disabled={post.draft ? 'true' : null}
 			animate:flip={{ duration: TIME.SLIDE }}
 			in:scale={{ duration: TIME.SLIDE }}
 		>
@@ -328,6 +328,15 @@
 
 		&:focus-visible {
 			outline: 2px solid whitesmoke;
+		}
+
+		&[aria-disabled] {
+			pointer-events: none;
+			opacity: 0.84;
+			animation: none;
+			&::after {
+				animation: none;
+			}
 		}
 	}
 
