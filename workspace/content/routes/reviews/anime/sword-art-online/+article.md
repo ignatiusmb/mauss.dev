@@ -19,7 +19,7 @@ link:
 <!-- SEASON DIVIDER -->
 ## Season 1 - Aincrad Arc
 
-![SAO Season 1 Backdrop](https://image.tmdb.org/t/p/original/5PUo6C8LAzcTzkuPKgLXuUFjafi.jpg)
+![SAO Season 1 Backdrop](https://image.tmdb.org/t/p/w1280/5PUo6C8LAzcTzkuPKgLXuUFjafi.jpg)
 
 <!-- SEASON DIVIDER -->
 ## Season 1 - Fairy Dance Arc
@@ -36,11 +36,11 @@ link:
 <!-- SEASON DIVIDER -->
 ## Season 3 - Alicization Arc
 
-![SAO Season 3 Backdrop](https://image.tmdb.org/t/p/original/fsatKuTodTjj3EHQytcgsnbZ5qb.jpg)
+![SAO Season 3 Backdrop](https://image.tmdb.org/t/p/w1280/fsatKuTodTjj3EHQytcgsnbZ5qb.jpg)
 
 <!-- SEASON DIVIDER -->
 ## Season 4 - Alicization: War of Underworld
 
 > Part 2 Coming! Ep 13 on 11th of July 2020
 
-![SAO Season 4 Backdrop](https://image.tmdb.org/t/p/original/2kFZQTze4b0BhHsxNDYaOzJlKQX.jpg)
+![SAO Season 4 Backdrop](https://image.tmdb.org/t/p/w1280/2kFZQTze4b0BhHsxNDYaOzJlKQX.jpg)

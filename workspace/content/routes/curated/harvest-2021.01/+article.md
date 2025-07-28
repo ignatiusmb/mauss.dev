@@ -30,7 +30,7 @@ Here's another really [good and simple explanation](https://www.reddit.com/r/pri
 
 ## stories
 
-![Demon Slayer Mugen Train](https://www.themoviedb.org/t/p/original/xoqr4dMbRJnzuhsWDF3XNHQwJ9x.jpg "[Demon Slayer: Infinity Train](/reviews/movie/kimetsu-no-yaiba-movie-mugen-ressha-hen) [[TMDB](https://www.themoviedb.org/movie/635302)]")
+![Demon Slayer Mugen Train](https://image.tmdb.org/t/p/w1280/xoqr4dMbRJnzuhsWDF3XNHQwJ9x.jpg "[Demon Slayer: Infinity Train](/reviews/movie/kimetsu-no-yaiba-movie-mugen-ressha-hen) [[TMDB](https://www.themoviedb.org/movie/635302)]")
 
 This is a given. You know it's coming. The highlight of January 2021. A great way to start the year is to definitely watch this! It's popularity is on-par with Spirited Away and Your Name. If you haven't watched the first season, I highly recommend you do so. If you have, the what are you waiting for.
 

@@ -16,4 +16,4 @@ link:
   MyAnimeList: https://myanimelist.net/anime/6547
 ---
 
-![Angel Beats Backdrop](https://image.tmdb.org/t/p/original/lV5n3E6GkHHEIBClkett0hSyqo.jpg)
+![Angel Beats Backdrop](https://image.tmdb.org/t/p/w1280/lV5n3E6GkHHEIBClkett0hSyqo.jpg)

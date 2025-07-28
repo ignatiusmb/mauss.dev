@@ -21,4 +21,4 @@ link:
 
 > Nichijou but it's R-rated
 
-![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/y24IgH1jSYK6Xa2ufvWSaGqPyyb.jpg "Source: TMDB")
+![Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/y24IgH1jSYK6Xa2ufvWSaGqPyyb.jpg "Source: TMDB")

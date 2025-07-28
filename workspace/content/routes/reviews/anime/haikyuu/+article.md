@@ -16,4 +16,4 @@ link:
   MyAnimeList: https://myanimelist.net/anime/20583
 ---
 
-![Backdrop](https://image.tmdb.org/t/p/original/dlPVXJglJ4XiIwbGwEFJj5C20Sr.jpg)
+![Backdrop](https://image.tmdb.org/t/p/w1280/dlPVXJglJ4XiIwbGwEFJj5C20Sr.jpg)

@@ -48,7 +48,11 @@ export const by: By<Schema['metadata']['sort_by'][number][0]> = {
 	rating(x, y) {
 		const xr = Number.isNaN(Number(x.rating)) ? +!!x.rating : Number(x.rating);
 		const yr = Number.isNaN(Number(y.rating)) ? +!!y.rating : Number(y.rating);
-		return xr === yr ? fallback(x, y) : yr - xr;
+		if (xr !== yr) return yr - xr;
+		if (xr === 0 || yr === 0) {
+			return arrange(['S', 'A', 'B', 'C', 'D', '?'])(x.tier, y.tier);
+		}
+		return fallback(x, y);
 	},
 	seen(x, y) {
 		const xd = [x.seen.last, x.seen.first].filter((d) => d != null);

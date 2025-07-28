@@ -20,4 +20,4 @@ link:
   TMDB: https://www.themoviedb.org/tv/120089
 ---
 
-<https://www.themoviedb.org/t/p/original/zNugnnR5KEmq9EzLcl0Me1UmHYk.jpg>
+<https://image.tmdb.org/t/p/w1280/zNugnnR5KEmq9EzLcl0Me1UmHYk.jpg>

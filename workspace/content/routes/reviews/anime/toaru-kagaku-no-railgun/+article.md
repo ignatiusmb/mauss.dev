@@ -18,4 +18,4 @@ link:
   MyAnimeList: https://myanimelist.net/anime/6213
 ---
 
-![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/cGgqLzBGUY0dxsE5i3W7SXBGRbe.jpg "Source: TMDB")
+![Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/cGgqLzBGUY0dxsE5i3W7SXBGRbe.jpg "Source: TMDB")

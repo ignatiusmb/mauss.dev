@@ -28,7 +28,7 @@ Of course, whenever I encounter anything related to programming like this, I alw
 
 ## stories
 
-![grimgar backdrop](https://image.tmdb.org/t/p/original/gdGALiQygd7x4MpazAEvpjB6quS.jpg "[Grimgar: Ashes and Illusions](/reviews/anime/hai-to-gensou-no-grimgar) [[TMDB](https://www.themoviedb.org/tv/65369)]")
+![grimgar backdrop](https://image.tmdb.org/t/p/w1280/gdGALiQygd7x4MpazAEvpjB6quS.jpg "[Grimgar: Ashes and Illusions](/reviews/anime/hai-to-gensou-no-grimgar) [[TMDB](https://www.themoviedb.org/tv/65369)]")
 
 Probably the best Isekai Drama that will ever exist (*ahem* prove me wrong). It's truly sad that this might not ever get a second season. Yes, sorry to spoil the fun early but you deserve to know this before you get too attached to Grimgar like myself. Feel free to explore why that's the case here, but either way, this is a truly good show to watch and follow.
 

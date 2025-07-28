@@ -18,4 +18,4 @@ link:
   TMDB: https://www.themoviedb.org/movie/18491
 ---
 
-![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/nwSyFnZORd5ptu0RClAMgsF5dkE.jpg "Source: TMDB")
+![Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/nwSyFnZORd5ptu0RClAMgsF5dkE.jpg "Source: TMDB")

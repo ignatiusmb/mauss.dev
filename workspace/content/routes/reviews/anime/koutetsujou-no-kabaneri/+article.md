@@ -20,4 +20,4 @@ link:
   TMDB: https://www.themoviedb.org/tv/65945
 ---
 
-![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/9ydGmGHe6OHoMMtFoIFSWhuSrHz.jpg "Source: TMDB")
+![Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/9ydGmGHe6OHoMMtFoIFSWhuSrHz.jpg "Source: TMDB")

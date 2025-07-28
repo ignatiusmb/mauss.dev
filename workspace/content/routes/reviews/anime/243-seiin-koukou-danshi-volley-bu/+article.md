@@ -17,4 +17,4 @@ link:
   MyAnimeList: https://myanimelist.net/anime/40679
 ---
 
-![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/jQSrkLbUtWV3u02MwSfNS43vJEf.jpg "Source: TMDB")
+![Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/jQSrkLbUtWV3u02MwSfNS43vJEf.jpg "Source: TMDB")
