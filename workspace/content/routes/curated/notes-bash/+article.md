@@ -1,4 +1,5 @@
 ---
+date: 2025-07-17
 title: Notes • Bash
 series: my-notes
 ---

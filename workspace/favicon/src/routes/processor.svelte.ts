@@ -58,6 +58,7 @@ async function png(raw: string, image: number, size: number): Promise<Blob> {
 
 export const sizes = $state([
 	{ selected: true, name: 'favicon.ico', image: 32, canvas: 32, convert: ico },
+	{ selected: true, name: 'rss-image.png', image: 120, canvas: 120, convert: png },
 	{ selected: true, name: 'apple-touch-icon.png', image: 140, canvas: 180, convert: png },
 	{ selected: true, name: 'favicon-x192.png', image: 192, canvas: 192, convert: png },
 	{ selected: true, name: 'favicon-x512.png', image: 512, canvas: 512, convert: png },
