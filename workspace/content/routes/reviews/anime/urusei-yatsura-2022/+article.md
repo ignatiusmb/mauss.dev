@@ -20,5 +20,5 @@ link:
   TMDB: https://www.themoviedb.org/tv/154524
 ---
 
-<https://www.themoviedb.org/t/p/original/g1DgfhkneXTRzJH38POYm4Es3gQ.jpg>
-<https://www.themoviedb.org/t/p/original/xdXdZBT40r2QtzcQ69TwJ6PkrAI.jpg>
+<https://image.tmdb.org/t/p/w1280/g1DgfhkneXTRzJH38POYm4Es3gQ.jpg>
+<https://image.tmdb.org/t/p/w1280/xdXdZBT40r2QtzcQ69TwJ6PkrAI.jpg>

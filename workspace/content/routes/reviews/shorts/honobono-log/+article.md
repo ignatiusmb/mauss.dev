@@ -16,4 +16,4 @@ link:
   MyAnimeList: https://myanimelist.net/anime/33241
 ---
 
-![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/2CWh6yHfu2HIiQ72zsJ98MYZQYl.jpg "Source: TMDB")
+![Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/2CWh6yHfu2HIiQ72zsJ98MYZQYl.jpg "Source: TMDB")

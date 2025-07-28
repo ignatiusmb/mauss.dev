@@ -17,4 +17,4 @@ link:
   MyAnimeList: https://myanimelist.net/anime/31859
 ---
 
-![Grimgar Backdrop#f#fb](https://image.tmdb.org/t/p/original/gdGALiQygd7x4MpazAEvpjB6quS.jpg "Source: TMDB")
+![Grimgar Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/gdGALiQygd7x4MpazAEvpjB6quS.jpg "Source: TMDB")

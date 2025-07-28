@@ -21,7 +21,7 @@ link:
   TMDB: https://www.themoviedb.org/tv/97525
 ---
 
-<https://www.themoviedb.org/t/p/original/lLSaesumAlhdmmpdUPldH2Vk4kC.jpg>
+<https://image.tmdb.org/t/p/w1280/lLSaesumAlhdmmpdUPldH2Vk4kC.jpg>
 
 Finished S1 on 2022-12-24T14:28:00+07:00
 Started S2 on 2023-01-06T17:31:00+07:00

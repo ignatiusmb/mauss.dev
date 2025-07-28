@@ -17,4 +17,4 @@ link:
   MyAnimeList: https://myanimelist.net/anime/41006
 ---
 
-![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/8fsV0aqSHQlbyvZlWyynruat0MP.jpg "Source: TMDB")
+![Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/8fsV0aqSHQlbyvZlWyynruat0MP.jpg "Source: TMDB")

@@ -20,4 +20,4 @@ link:
   TMDB: https://www.themoviedb.org/tv/105556
 ---
 
-![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/kYXjrhd6J7vj0Oot1r1sJIcjwFg.jpg "Source: TMDB")
+![Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/kYXjrhd6J7vj0Oot1r1sJIcjwFg.jpg "Source: TMDB")

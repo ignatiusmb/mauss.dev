@@ -17,4 +17,4 @@ link:
   MyAnimeList: https://myanimelist.net/anime/35851
 ---
 
-![Maquia Backdrop#f#fb](https://image.tmdb.org/t/p/original/yjfwNSDljAKsuHwwE34xjlY3tQj.jpg "Source: TMDB")
+![Maquia Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/yjfwNSDljAKsuHwwE34xjlY3tQj.jpg "Source: TMDB")

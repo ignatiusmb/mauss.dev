@@ -16,4 +16,4 @@ link:
   MyAnimeList: https://myanimelist.net/anime/6045
 ---
 
-![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/5Ktpz72iBqPTlC1sXJU6EvAaE5N.jpg "Source: TMDB")
+![Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/5Ktpz72iBqPTlC1sXJU6EvAaE5N.jpg "Source: TMDB")

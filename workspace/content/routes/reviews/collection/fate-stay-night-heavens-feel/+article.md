@@ -24,4 +24,4 @@ link:
   Wikipedia: https://en.wikipedia.org/wiki/Fate%2Fstay_night%3A_Heaven%27s_Feel
 ---
 
-![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/4ZFQgzOObax1cTGRBmABxM73t6f.jpg "Source: TMDB")
+![Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/4ZFQgzOObax1cTGRBmABxM73t6f.jpg "Source: TMDB")

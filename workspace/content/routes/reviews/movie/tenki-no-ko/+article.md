@@ -39,4 +39,4 @@ link:
   MyAnimeList: https://myanimelist.net/anime/38826
 ---
 
-![Weathering with You Backdrop](https://image.tmdb.org/t/p/original/a6TTvdiMAeetvyxTS4HaBEbiBfr.jpg)
+![Weathering with You Backdrop](https://image.tmdb.org/t/p/w1280/a6TTvdiMAeetvyxTS4HaBEbiBfr.jpg)

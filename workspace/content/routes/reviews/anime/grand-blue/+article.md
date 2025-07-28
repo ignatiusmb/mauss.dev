@@ -17,4 +17,4 @@ link:
   MyAnimeList: https://myanimelist.net/anime/37105
 ---
 
-![Grand Blue Backdrop#f#fb](https://www.themoviedb.org/t/p/original/sLxzl4NzHgiVIlhvajnNCaIddG7.jpg "Source: TMDB")
+![Grand Blue Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/sLxzl4NzHgiVIlhvajnNCaIddG7.jpg "Source: TMDB")

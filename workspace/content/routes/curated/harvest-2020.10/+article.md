@@ -22,7 +22,7 @@ This was surprisingly cool and scary at the same time. It's crazy, how are you s
 
 ## stories
 
-![Nichijou banner](https://image.tmdb.org/t/p/original/3PQEbMOgQyOESo3XwtlJvZw6uoA.jpg "[Nichijou](/reviews/anime/nichijou) [[TMDB](https://www.themoviedb.org/tv/44684)]")
+![Nichijou banner](https://image.tmdb.org/t/p/w1280/3PQEbMOgQyOESo3XwtlJvZw6uoA.jpg "[Nichijou](/reviews/anime/nichijou) [[TMDB](https://www.themoviedb.org/tv/44684)]")
 
 This month has been quite stressful and I've just realized how comforting and encouraging a good laugh really is, and Nichijou has accompanied me and never fails to make me laugh or smile every time I watched it again. In fact, for some of their clips, it gets even funnier. You may need to think hard for some of the jokes, but it's really funny once you get it.
 

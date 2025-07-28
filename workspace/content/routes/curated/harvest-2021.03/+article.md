@@ -26,7 +26,7 @@ Mainly from the perspective of an introvert, this isn't really "surprising" to s
 
 ## stories
 
-![Jujutsu Kaisen Backdrop#f](https://www.themoviedb.org/t/p/original/eqM26U3HHfvwEcFoMObQc5NYGoc.jpg "[Jujutsu Kaisen](/reviews/anime/jujutsu-kaisen) [[TMDB](https://www.themoviedb.org/tv/95479)]")
+![Jujutsu Kaisen Backdrop#f](https://image.tmdb.org/t/p/w1280/eqM26U3HHfvwEcFoMObQc5NYGoc.jpg "[Jujutsu Kaisen](/reviews/anime/jujutsu-kaisen) [[TMDB](https://www.themoviedb.org/tv/95479)]")
 
 It was tough between Jujutsu Kaisen and Re:Zero Season 2, but JJK really won me with their continuous action scenes every 3 to 4 episodes. It's indeed action-heavy and it was a real pleasure to watch every episode of it.
 

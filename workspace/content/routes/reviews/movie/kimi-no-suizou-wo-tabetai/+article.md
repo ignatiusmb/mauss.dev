@@ -21,4 +21,4 @@ link:
 
 <https://www.reddit.com/r/Animemes/comments/my3z9y/its_actually_more_violent_than_any_violent_movies/>
 
-![I want to eat your pancreas backdrop](https://image.tmdb.org/t/p/original/YLyORLsYIjC0d1TFBSpJKk7piP.jpg)
+![I want to eat your pancreas backdrop](https://image.tmdb.org/t/p/w1280/YLyORLsYIjC0d1TFBSpJKk7piP.jpg)

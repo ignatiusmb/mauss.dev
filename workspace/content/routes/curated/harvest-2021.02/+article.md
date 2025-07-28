@@ -30,7 +30,7 @@ These words are frequently used interchangeably, but what's their difference? Th
 
 ## stories
 
-![Clannad Backdrop](https://www.themoviedb.org/t/p/original/h9nAWM6TF59g39l3fDzqTgW7ap2.jpg "[Clannad & After Story](/reviews/anime/clannad) [[TMDB](https://www.themoviedb.org/tv/24835)]")
+![Clannad Backdrop](https://image.tmdb.org/t/p/w1280/h9nAWM6TF59g39l3fDzqTgW7ap2.jpg "[Clannad & After Story](/reviews/anime/clannad) [[TMDB](https://www.themoviedb.org/tv/24835)]")
 
 > Clannad changed the way you see family and human interaction.
 

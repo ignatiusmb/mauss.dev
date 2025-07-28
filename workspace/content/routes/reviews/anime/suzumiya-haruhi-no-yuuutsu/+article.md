@@ -25,4 +25,4 @@ Here's an elaboration on why I highly recommend to watch the broadcast order fir
 
 ![broadcast and chronological order#d#f](https://i.imgur.com/CMaAuPB.png "Infographic on how to watch Haruhi")
 
-![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/gDlx60iOCQjTLH53ybjAPOUyVIp.jpg "Source: TMDB")
+![Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/gDlx60iOCQjTLH53ybjAPOUyVIp.jpg "Source: TMDB")

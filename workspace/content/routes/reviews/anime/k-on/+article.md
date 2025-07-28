@@ -19,6 +19,6 @@ link:
   TMDB: https://www.themoviedb.org/tv/42253
 ---
 
-![K-ON Backdrop](https://image.tmdb.org/t/p/original/xNi32Q5bIfOie0ls3Fd3D3WkWnO.jpg)
+![K-ON Backdrop](https://image.tmdb.org/t/p/w1280/xNi32Q5bIfOie0ls3Fd3D3WkWnO.jpg)
 
 ![!Video](./yui-wants-to-do-the-vocals.mp4 "Yui wants to do the vocals")

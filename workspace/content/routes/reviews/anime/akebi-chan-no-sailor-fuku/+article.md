@@ -19,4 +19,4 @@ link:
   MyAnimeList: https://myanimelist.net/anime/48553
 ---
 
-![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/55QY5FJVUJD5JMPynzLvLmIVJwT.jpg "Source: TMDB")
+![Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/55QY5FJVUJD5JMPynzLvLmIVJwT.jpg "Source: TMDB")

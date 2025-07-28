@@ -18,4 +18,4 @@ link:
 
 <https://www.reddit.com/r/Animesuggest/comments/n1kg8t/well_known_really_monogatari_series/>
 
-![Backdrop#f#fb](https://www.themoviedb.org/t/p/original/jsK6AVtQ7ANFBWSN6MRjJZVRdzQ.jpg "Source: TMDB")
+![Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/jsK6AVtQ7ANFBWSN6MRjJZVRdzQ.jpg "Source: TMDB")

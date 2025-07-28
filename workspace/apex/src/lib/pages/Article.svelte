@@ -7,13 +7,10 @@
 	import { navigating, page } from '$app/state';
 
 	type Base = Items['/curated' | '/posts' | '/reviews'][number];
-	type Article = IntersectUnion<Base>;
+	type Article = Overwrite<IntersectUnion<Base>, { branches?: string[] }>;
 	interface Props {
 		path?: string;
-		post?: Overwrite<
-			PartialOmit<Article, keyof Omit<Article, keyof Base>>,
-			{ branches?: string[] }
-		>;
+		post?: PartialOmit<Article, keyof Omit<Article, keyof Base>>;
 
 		header?: import('svelte').Snippet;
 		children: import('svelte').Snippet;

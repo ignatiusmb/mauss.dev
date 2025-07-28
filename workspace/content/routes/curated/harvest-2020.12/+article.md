@@ -26,7 +26,7 @@ TL;DR review the code yourself first and automate stuff that can be automated, t
 
 ## stories
 
-![yorimoi backdrop](https://image.tmdb.org/t/p/original/bTIbUZVoKnlMt2IrZQv2ODPVs0N.jpg "[A Place Further Than the Universe](/reviews/anime/sora-yori-mo-tooi-basho) [[TMDB](https://www.themoviedb.org/tv/76059)]")
+![yorimoi backdrop](https://image.tmdb.org/t/p/w1280/bTIbUZVoKnlMt2IrZQv2ODPVs0N.jpg "[A Place Further Than the Universe](/reviews/anime/sora-yori-mo-tooi-basho) [[TMDB](https://www.themoviedb.org/tv/76059)]")
 
 I'm such a sucker for SOLs, and this might just be the best one, so far. A story about a group of high-school girls that leads to Antarctica. It's pretty slow-paced early on, but that's what makes slice of life so good. I can't really describe how good this is in a paragraph, but this is definitely the best one on my list, placed first when anyone asks for a slice of life anime recommendation.
 

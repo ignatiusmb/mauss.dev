@@ -31,9 +31,9 @@ export async function GET() {
 			sort_by: [
 				['date', 'published'],
 				['premiere', 'premiered'],
-				['rating', 'rating'],
 				['seen', 'last seen'],
 				['tier', 'tier'],
+				['rating', 'rating'],
 			],
 		},
 	} satisfies Schema);
