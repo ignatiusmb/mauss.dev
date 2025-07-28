@@ -62,9 +62,6 @@ importers:
 
   workspace/apex:
     dependencies:
-      mauss:
-        specifier: ^0.10.6
-        version: 0.10.6
       pocketbase:
         specifier: ^0.26.2
         version: 0.26.2
@@ -78,6 +75,9 @@ importers:
       sharp:
         specifier: ^0.34.3
         version: 0.34.3
+      svelte:
+        specifier: ^5.36.16
+        version: 5.36.16
       svelte-check:
         specifier: ^4.3.0
         version: 4.3.0(picomatch@4.0.3)(svelte@5.36.16)(typescript@5.8.3)
@@ -92,6 +92,9 @@ importers:
       '@sveltejs/kit':
         specifier: ^2.26.0
         version: 2.26.0(@sveltejs/vite-plugin-svelte@6.1.0(svelte@5.36.16)(vite@7.0.6(@types/node@24.1.0)))(svelte@5.36.16)(vite@7.0.6(@types/node@24.1.0))
+      svelte:
+        specifier: ^5.36.16
+        version: 5.36.16
       svelte-check:
         specifier: ^4.3.0
         version: 4.3.0(picomatch@4.0.3)(svelte@5.36.16)(typescript@5.8.3)

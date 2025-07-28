@@ -8,7 +8,7 @@
 		"check:style": "prettier --check .",
 		"check:workspace": "pnpm --filter \"./workspace/*\" check"
 	},
-	"packageManager": "pnpm@10.12.1",
+	"packageManager": "pnpm@10.13.1",
 	"prettier": "mauss/prettier.config.js",
 	"devDependencies": {
 		"@fontsource-variable/crimson-pro": "^5.2.6",
