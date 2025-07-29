@@ -1,21 +1,60 @@
 <script lang="ts">
 	import SearchBar from 'syv/core/SearchBar.svelte';
+	import SearchFilter from '$lib/dialog/SearchFilter.svelte';
 
+	import type { Query } from './search.svelte';
 	import type { Commands } from './search.worker';
-	import { qse } from 'mauss/web';
+	import { qsd, qse } from 'mauss/web';
 	import { TIME } from 'syv/options';
 	import { spawn } from 'syv/worker';
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
-	import { replaceState } from '$app/navigation';
+	import { pushState, replaceState } from '$app/navigation';
 	import { page } from '$app/state';
 	import worker from './search.worker?worker&url';
 
 	const { data } = $props();
+	const memory = $state({
+		params: qsd(page.url.search),
+		matches: data.results,
+		filters: data.metadata,
+	});
+	const params = $derived.by(() => {
+		const { series } = memory.filters;
+		return {
+			search: String(memory.params.q?.[0] || ''),
+			series: String(series.selected),
+		} satisfies Query;
+	});
 
 	let index = $state(data.list);
 	const invoke = spawn<Commands>(worker, (invoke) => invoke('init', data.list));
 </script>
+
+{#if page.state.dialog}
+	<SearchFilter
+		matches={memory.matches.length}
+		filters={memory.filters}
+		onclose={() => {
+			index = memory.matches;
+			const { search: q, ...filters } = params;
+			const url = qse({ q, ...filters }) || page.url.pathname;
+			replaceState(url, { dialog: false });
+		}}
+		onchange={async (item) => {
+			const { key, value, required } = item;
+			if (!memory.params[key]) memory.params[key] = [];
+			if (required) memory.params[key] = [value];
+			else {
+				if (!memory.params[key].includes(value)) memory.params[key].push(value);
+				else memory.params[key] = memory.params[key].filter((v) => v !== value);
+			}
+			const { search: q, ...filters } = params;
+			replaceState(qse({ q, ...filters }) || page.url.pathname, { dialog: true });
+			memory.matches = await invoke('search', { ...params, search: q });
+		}}
+	/>
+{/if}
 
 <header>
 	<h1>timeless pieces</h1>
@@ -25,10 +64,13 @@
 <SearchBar
 	styles={{ '--background-color': 'var(--color-surface)' }}
 	value={data.query.replace(/\+/g, ' ')}
+	filter={() => pushState('', { dialog: true })}
 	oninput={async (value) => {
 		const q = value.trim();
 		replaceState(qse({ q }) || page.url.pathname, {});
-		index = await invoke('search', { search: q });
+		const query = { ...params, search: q };
+		memory.matches = await invoke('search', query);
+		index = memory.matches;
 	}}
 />
 

@@ -128,6 +128,10 @@
 				text-transform: capitalize;
 				color: var(--color-text);
 
+				&:last-child {
+					margin-bottom: 0.25rem;
+				}
+
 				&.selected,
 				&:hover {
 					background: var(--color-surface);

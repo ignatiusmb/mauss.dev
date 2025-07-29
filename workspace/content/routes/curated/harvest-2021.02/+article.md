@@ -1,7 +1,9 @@
 ---
-date: "2021-03-01"
+date: 2021-03-01
 title: Harvest • February 2021
-series: the-harvest
+series:
+  title: the-harvest
+  type: linear
 ---
 
 Hello and welcome to the Harvest! February's short month caught me off guard, even then it's been a month already. As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section. I got a lot of interesting stuff to share even with the short month.

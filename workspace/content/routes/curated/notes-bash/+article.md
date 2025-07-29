@@ -1,7 +1,9 @@
 ---
 date: 2025-07-17
 title: Notes • Bash
-series: my-notes
+series:
+  title: my-notes
+  type: collection
 ---
 
 my personal notes on bash scripting. they are mostly scripts that i use to manage my home media server. i forget things easily, so i write them down here for future reference. these notes are not meant to be comprehensive, and i'm no expert in bash, so please let me know if you have any suggestions or improvements.

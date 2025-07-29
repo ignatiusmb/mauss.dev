@@ -1,7 +1,7 @@
 import { traverse } from 'aubade/compass';
 import { chain } from 'aubade/transform';
 // import { exec } from 'node:child_process';
-import { attempt, date, define, drill, sum } from 'mauss';
+import { attempt, compare, date, define, drill, sum } from 'mauss';
 import { exists } from 'mauss/guards';
 import sharp from 'sharp';
 
@@ -15,13 +15,18 @@ const ROOT = `${process.cwd()}/static/uploads`;
 export const ROUTES = {
 	async '/curated'() {
 		const schema = attempt.wrap(
-			define(({ optional, string }) => ({
+			define(({ optional, literal, string }) => ({
 				date: string(),
 				title: string(),
-				series: optional(string()),
+				series: optional({
+					title: string(),
+					type: literal('linear', 'collection'),
+				}),
+				description: optional(string()),
 			})),
 		);
 
+		const series: Record<string, string> = {};
 		const items = await traverse(
 			'../content/routes/curated',
 			({ breadcrumb: [file, slug], path }) => {
@@ -34,6 +39,10 @@ export const ROUTES = {
 					if (!metadata) {
 						console.log(`workspace/${path.slice(3)}`, (error as any).issues);
 						return;
+					}
+
+					if (metadata.series && !series[metadata.series.title]) {
+						series[metadata.series.title] = metadata.series.type;
 					}
 
 					const umbrella = `curated/${slug}`;
@@ -78,12 +87,26 @@ export const ROUTES = {
 			},
 		);
 
+		type Schema = NonNullable<ReturnType<typeof schema>['data']>;
+		const sort: Record<NonNullable<Schema['series']>['type'], Parameters<typeof items.sort>[0]> = {
+			collection: drill('title', compare.string),
+			linear: drill('date', date.sort.newest),
+		};
+
+		for (const title in series) {
+			const filtered = items.filter((i) => i.series?.title === title);
+			chain(filtered, {
+				sort: sort[series[title] as keyof typeof sort],
+				transform: ({ slug, title }) => ({ slug: `/curated/${slug}`, title }),
+			});
+		}
+
 		return items.sort(drill('date', date.sort.newest));
 	},
 
 	async '/posts'() {
 		const schema = attempt.wrap(
-			define(({ optional, string, array }) => ({
+			define(({ optional, array, string }) => ({
 				date: string(),
 				title: string(),
 				description: optional(string()),
