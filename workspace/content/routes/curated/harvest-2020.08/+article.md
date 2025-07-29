@@ -1,5 +1,5 @@
 ---
-date: "2020-09-01"
+date: 2020-09-01
 title: Harvest • August 2020
 series:
   title: the-harvest

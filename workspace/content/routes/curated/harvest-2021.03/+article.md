@@ -1,7 +1,7 @@
 ---
-date: "2021-04-01"
+date: 2021-04-01
 title: Harvest • March 2021
-series: 
+series:
   title: the-harvest
   type: linear
 ---

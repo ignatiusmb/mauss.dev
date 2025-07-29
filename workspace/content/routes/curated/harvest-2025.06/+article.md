@@ -1,7 +1,7 @@
 ---
-date: "2025-07-01"
+date: 2025-07-01
 title: Harvest • June 2025
-series: 
+series:
   title: the-harvest
   type: linear
 ---

@@ -1,7 +1,7 @@
 ---
-date: "2020-10-01"
+date: 2020-10-01
 title: Harvest • September 2020
-series: 
+series:
   title: the-harvest
   type: linear
 ---

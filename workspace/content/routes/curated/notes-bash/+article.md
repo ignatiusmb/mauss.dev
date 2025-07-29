@@ -1,7 +1,7 @@
 ---
 date: 2025-07-17
 title: Notes • Bash
-series: 
+series:
   title: my-notes
   type: collection
 ---
