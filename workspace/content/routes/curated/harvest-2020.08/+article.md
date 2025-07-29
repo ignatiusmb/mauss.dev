@@ -10,7 +10,7 @@ Hello and welcome to the debut of the Harvest! We're starting things off strong 
 
 ## pieces
 
-![Semantic Commit Message#f#fb](/uploads/posts/semantic-commit-message/thumbnail.webp "[Semantic Commit Message](/posts/semantic-commit-message)")
+![Semantic Commit Message#f](/uploads/posts/semantic-commit-message/thumbnail.webp "[Semantic Commit Message](/posts/semantic-commit-message)")
 
 Semantic Commit Message was written to remind myself and make it easy for me to look at anywhere. Organizing your commits semantically isn't just useful as a programmer, but I feel it would also increase your productivity and life in general. Knowing how to organize your stuff cleanly and categorizing each items into its own section would help yourself in finding it later on, makes the place you're living in generally cleaner, and (personally) satisfying to just have everything organized.
 
