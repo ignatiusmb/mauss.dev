@@ -1,7 +1,9 @@
 ---
 date: "2021-02-01"
 title: Harvest • January 2021
-series: the-harvest
+series: 
+  title: the-harvest
+  type: linear
 ---
 
 Hello and welcome back to the Harvest! Let's slow down things and start off the year calm, cool, and collected. A lot happened even though 2021 just started, but I'll try to start the year slowly so I don't quickly exhaust myself with overambitious things.

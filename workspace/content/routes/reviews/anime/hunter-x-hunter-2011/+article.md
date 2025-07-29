@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: Hunter x Hunter (2011)
-tier: "?"
+tier: S
 released: 2011-10-02
 completed: 148/148
 genres: [action, adventure, fantasy, shounen, super power]

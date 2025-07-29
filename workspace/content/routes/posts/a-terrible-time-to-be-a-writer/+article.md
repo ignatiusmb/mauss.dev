@@ -1,11 +1,9 @@
 ---
 date: "2025-06-17T21:30:00+07:00"
-title: a terrible time to be a writer
+title: A Terrible Time to Be a Writer
 description: an effort to try and write something that feels real and honest
 tags: [writing, tech]
 ---
-
-in this day and age, with the rise of.. oh who am i kidding, let's just get to the point.
 
 blessed by the algorithm, i stumbled upon a gem this morning. as frustrating as it may be, i have to admit that the differences between AI and human writing are very apparent after watching it, just like Evan said in the video.
 
@@ -13,7 +11,7 @@ blessed by the algorithm, i stumbled upon a gem this morning. as frustrating as 
 
 > [This video was more than informative — it was a journey, a transformation, a metaphorical yoga retreat for the mind.](https://www.youtube.com/watch?v=9Ch4a6ffPZY&lc=UgwVN1wRP3ubBDgb3IZ4AaABAg)
 
-lmao. welp, truly a terrible time to be one of the few people who enjoys writing with these punctuation marks.
+lmao. truly a terrible time to be one of the few people who enjoys writing with these punctuation marks.
 
 ## punctuation marks
 
@@ -37,16 +35,16 @@ commas are nice, i use them a lot. they're very easy to type in any keyboards, a
 
 "am i an llm for using fancy punctuation marks, or did i use fancy punctuation marks because i am an llm?"
 
-if you didn't get that, i guess it's time to start watching [Jujutsu Kaisen](/reviews/anime/jujutsu-kaisen). jokes aside, now that i've watched the video though, i can't help but wonder if i should just stop using them altogether. em dashes and rule of threes in particular are the two things i like the most just because of how nicely they tie the sentence together. but, because people followed them in writing, and now that AI is trained on them as well, it's considered a red flag.
+that was a reference to [Jujutsu Kaisen](/reviews/anime/jujutsu-kaisen). jokes aside, now that i've watched the video though, i can't help but wonder if i should just stop using them altogether. em dashes and rule of threes in particular are the two things i like the most just because of how nicely they tie the sentence together. but, because people followed them in writing, and now that AI is trained on them as well, it's considered a red flag.
 
 there *is*.. one very obvious red flag mentioned in the video that you might've realized by now. it isn't just the use of punctuation marks, the parallel sentence structures, or the rule of threes — it's the combination and context of all of them together. (see what i did there?)
 
 ## trust your gut
 
-anyways, the video did a great job in getting the point across, better than i would've been able to do in writing here. i do still want to highlight a few things here.
+anyway, the video did a great job in getting the point across, better than i would've been able to do in writing here. i do still want to highlight a few things here.
 
 one of the most apparent things is the exaggerated empty praise, or when it's filled with vague statements, saying a lot while saying nothing at all with empty language. sometimes, it will also try too hard to have meaning by using analogies and metaphors that don't really make sense.
 
 AI writing feels generic because it is, it removes *you* from the equation, and what's left becomes bland. it cannot insert itself into the context, and it lacks the personal touch that makes our writing feels unique, how we naturally connect our memories and personal experiences with the topic at hand.
 
-*i truly can't unsee it now*, AI writing is everywhere. maybe that's why part of me tries to [unconsciously write informally](/help#writing)...
+*i truly can't unsee it now*, AI writing really is everywhere. writing this post made me super self-conscious about my own writing as well, which feels like it's way harder to write now.

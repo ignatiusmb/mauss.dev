@@ -15,9 +15,9 @@ export function sift(items: Item[], payload: Query) {
 	const value = normalize(payload.search);
 	const results = items.filter((item) => {
 		const filters = [
-			payload.tier && payload.tier !== item.tier,
-			payload.category && payload.category !== item.category,
-			payload.genres.length && !payload.genres.every((g) => item.genres.includes(g)),
+			payload.tier && payload.tier.toLowerCase() !== item.tier.toLowerCase(),
+			payload.category && payload.category.toLowerCase() !== item.category,
+			payload.genres.length && !payload.genres.every((g) => item.genres.includes(g.toLowerCase())),
 		];
 		const flags = [
 			item.slug.includes(value),
