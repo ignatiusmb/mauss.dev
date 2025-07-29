@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: Attack on Titan
-romaji: Shingeki no Kyojin
+alias: [Shingeki no Kyojin]
 tier: "?"
 released: 2013-04-07
 completed: 87/87

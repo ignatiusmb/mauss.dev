@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: The Moon Is Beautiful
-romaji: Tsuki ga Kirei
+alias: [Tsuki ga Kirei]
 tier: "?"
 released: 2017-04-07
 completed: 12/12

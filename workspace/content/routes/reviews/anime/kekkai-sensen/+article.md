@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: Blood Blockade Battlefront
-romaji: Kekkai Sensen
+alias: [Kekkai Sensen]
 tier: "?"
 released: 2015-04-05
 completed: 13/24

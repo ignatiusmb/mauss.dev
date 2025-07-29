@@ -1,8 +1,7 @@
 ---
 date: 2020
 title: "Mushoku Tensei: Jobless Reincarnation"
-romaji: "Mushoku Tensei: Isekai Ittara Honki Dasu"
-alias: [Mushoku Tensei]
+alias: ["Mushoku Tensei: Isekai Ittara Honki Dasu"]
 tier: "?"
 released: 2021-01-11
 genres: [fantasy, magic, drama, isekai]

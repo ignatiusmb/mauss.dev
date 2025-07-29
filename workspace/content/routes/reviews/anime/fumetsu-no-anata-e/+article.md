@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: To Your Eternity
-romaji: Fumetsu no Anata e
+alias: [Fumetsu no Anata e]
 tier: "?"
 released: 2021-04-12
 completed: 21/40

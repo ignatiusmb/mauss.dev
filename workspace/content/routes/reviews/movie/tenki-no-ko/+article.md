@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: Weathering With You
-romaji: Tenki no Ko
+alias: [Tenki no Ko]
 tier: "?"
 released: 2019-07-19
 genres: [anime, slice of life, supernatural, drama, fantasy, adventure, romance]

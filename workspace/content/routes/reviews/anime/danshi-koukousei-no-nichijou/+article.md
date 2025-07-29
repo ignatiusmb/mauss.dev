@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: Daily Lives of High School Boys
-romaji: Danshi Koukousei no Nichijou
+alias: [Danshi Koukousei no Nichijou]
 tier: "?"
 released: 2012-01-10
 genres: [slice of life, comedy, school]

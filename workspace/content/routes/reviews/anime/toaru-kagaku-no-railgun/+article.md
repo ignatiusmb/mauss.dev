@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: A Certain Scientific Railgun
-romaji: Toaru Kagaku no Railgun
+alias: [Toaru Kagaku no Railgun]
 tier: "?"
 released: 2009-10-03
 completed: 1/73

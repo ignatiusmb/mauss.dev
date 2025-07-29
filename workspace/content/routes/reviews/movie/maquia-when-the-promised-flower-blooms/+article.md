@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: "Maquia: When the Promised Flower Blooms"
-romaji: Sayonara no Asa ni Yakusoku no Hana wo Kazarou
+alias: [Sayonara no Asa ni Yakusoku no Hana wo Kazarou]
 tier: "?"
 released: 2018-02-24
 genres: [anime, drama, fantasy]

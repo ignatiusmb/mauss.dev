@@ -5,8 +5,6 @@ import { attempt, define } from 'mauss';
 export const schema = define(({ optional, array, record, literal, string, number }) => ({
 	date: string(),
 	title: string(),
-	romaji: optional(string()),
-	hanzi: optional(string()),
 	alias: optional(array(string())),
 
 	tier: optional(literal('S', 'A', 'B', 'C', 'D', '?'), '?'),

@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: The Promised Neverland
-romaji: Yakusoku no Neverland
+alias: [Yakusoku no Neverland]
 tier: "?"
 released: 2019-01-10
 genres: [sci-fi, mystery, horror, psychological, thriller, shounen]

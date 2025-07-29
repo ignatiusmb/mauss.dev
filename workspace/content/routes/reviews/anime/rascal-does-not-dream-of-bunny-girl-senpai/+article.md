@@ -1,8 +1,7 @@
 ---
 date: 2020
 title: Rascal Does Not Dream of Bunny Girl Senpai
-romaji: Seishun Buta Yarou wa Bunny Girl Senpai no Yume wo Minai
-alias: [Seishun Buta Yarou, Bunny Girl Senpai]
+alias: [Seishun Buta Yarou wa Bunny Girl Senpai no Yume wo Minai, AoButa]
 tier: "?"
 released: 2018-10-04
 genres: [comedy, romance, school, mystery, supernatural]

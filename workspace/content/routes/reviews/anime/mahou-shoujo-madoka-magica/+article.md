@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: Puella Magi Madoka Magica
-romaji: Mahou Shoujo Madoka★Magica
+alias: [Mahou Shoujo Madoka★Magica]
 tier: "?"
 released: 2011-01-07
 genres: [psychological, magic, drama, thriller]

@@ -1,8 +1,7 @@
 ---
 date: 2020-08-24
 title: "WATATEN!: an Angel Flew Down to Me"
-romaji: "Watashi ni Tenshi ga Maiorita!"
-alias: ["Wataten!"]
+alias: ["Watashi ni Tenshi ga Maiorita!", "Wataten!"]
 tier: B
 released: 2019-01-08
 genres: [comedy, slice of life, shoujo ai]

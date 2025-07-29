@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: "How Heavy Are the Dumbbells You Lift?"
-romaji: "Dumbbell Nan Kilo Moteru?"
+alias: ["Dumbbell Nan Kilo Moteru?"]
 tier: "?"
 released: 2019-07-03
 completed: 12/12

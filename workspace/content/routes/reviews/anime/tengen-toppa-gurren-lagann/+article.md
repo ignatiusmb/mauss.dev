@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: Gurren Lagann
-romaji: Tengen Toppa Gurren Lagann
+alias: [Tengen Toppa Gurren Lagann]
 tier: "?"
 released: 2007-04-01
 genres: [action, adventure, comedy, mecha, sci-fi]

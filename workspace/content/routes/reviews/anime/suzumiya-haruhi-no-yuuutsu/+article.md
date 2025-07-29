@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: The Melancholy of Haruhi Suzumiya
-romaji: Suzumiya Haruhi no Yuuutsu
+alias: [Suzumiya Haruhi no Yuuutsu]
 tier: "?"
 released: 2006-04-03
 genres: [slice of life, mystery, comedy, school, sci-fi]

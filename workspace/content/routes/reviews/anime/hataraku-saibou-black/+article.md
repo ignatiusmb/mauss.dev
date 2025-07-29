@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: "Cells at Work! CODE BLACK!"
-romaji: Hataraku Saibou Black
+alias: [Hataraku Saibou Black]
 tier: "?"
 released: 2021-01-10
 genres: [action, seinen]

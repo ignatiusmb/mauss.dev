@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: Your Name.
-romaji: Kimi no Na wa.
+alias: [Kimi no Na wa.]
 tier: "?"
 released: 2016-08-26
 genres: [anime, romance, supernatural, drama, school]

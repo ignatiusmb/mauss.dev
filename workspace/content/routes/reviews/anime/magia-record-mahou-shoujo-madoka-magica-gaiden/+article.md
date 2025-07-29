@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: "Magia Record: Puella Magi Madoka Magica Side Story"
-romaji: "Magia Record: Mahou Shoujo Madoka☆Magica Gaiden"
+alias: ["Magia Record: Mahou Shoujo Madoka☆Magica Gaiden"]
 tier: "?"
 released: 2020-01-05
 completed: 13/25

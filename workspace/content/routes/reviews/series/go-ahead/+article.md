@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: Go Ahead
-hanzi: 以家人之名
+alias: [以家人之名]
 tier: "?"
 released: 2020-08-10
 genres: [drama, comedy, romance, family]

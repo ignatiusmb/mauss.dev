@@ -1,8 +1,7 @@
 ---
 date: 2020
 title: "Wandering Witch: The Journey of Elaina"
-romaji: Majo no Tabitabi
-alias: [The Journey of Elaina]
+alias: [Majo no Tabitabi, The Journey of Elaina]
 tier: "?"
 released: 2020-10-02
 genres: [adventure, fantasy]
