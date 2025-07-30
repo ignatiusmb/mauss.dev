@@ -1,10 +1,10 @@
-import type { Items } from '$content/builder';
+import type { Item, Query } from './search.svelte';
 import { commander, type Dispatch } from 'syv/worker';
-import { sift, type Query } from './search.svelte';
+import { sift } from './search.svelte';
 
-let dataset: Items['/posts'] = [];
+let dataset: Item[] = [];
 const commands = {
-	init(payload: Items['/posts']) {
+	init(payload: Item[]) {
 		dataset = payload;
 		return true;
 	},

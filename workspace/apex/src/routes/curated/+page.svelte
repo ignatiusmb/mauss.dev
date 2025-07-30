@@ -17,7 +17,7 @@
 	const memory = $state({
 		params: qsd(page.url.search),
 		matches: data.results,
-		filters: data.metadata,
+		filters: data.filters,
 	});
 	const params = $derived.by(() => {
 		const { series } = memory.filters;
@@ -27,8 +27,8 @@
 		} satisfies Query;
 	});
 
-	let index = $state(data.list);
-	const invoke = spawn<Commands>(worker, (invoke) => invoke('init', data.list));
+	let index = $state(data.results);
+	const invoke = spawn<Commands>(worker, (invoke) => invoke('init', data.index));
 </script>
 
 {#if page.state.dialog}
@@ -58,7 +58,7 @@
 
 <header>
 	<h1>timeless pieces</h1>
-	<small>things that can stand the test of time.</small>
+	<small>recurring series, untethered from trend or timestamp.</small>
 </header>
 
 <SearchBar

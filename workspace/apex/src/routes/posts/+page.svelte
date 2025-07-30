@@ -19,7 +19,7 @@
 	const memory = $state({
 		params: qsd(page.url.search),
 		matches: data.results,
-		filters: data.metadata,
+		filters: data.filters,
 	});
 	const params = $derived.by(() => {
 		const { tags, sort_by } = memory.filters;
@@ -61,8 +61,8 @@
 {/if}
 
 <header>
-	<h1>ongoing thoughts and experiences</h1>
-	<small>entries written as i go — mostly journal, sometimes technical.</small>
+	<h1>thoughts in motion</h1>
+	<small>journal entries, scattered across time.</small>
 </header>
 
 <SearchBar

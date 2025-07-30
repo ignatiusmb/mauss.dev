@@ -33,13 +33,13 @@
 
 <header>
 	<h1>manifestations</h1>
-	<small>where ideas take form — a digital map of the garden.</small>
+	<small>a gallery within the digital atelier.</small>
 </header>
 
 <div id="layout">
 	<h3>
 		<div>
-			<i data-icon="flower-lotus"></i>
+			<i data-icon="potted-plant"></i>
 			<span>alkamauss</span>
 		</div>
 		<button aria-label="toggle notes" onclick={toggle(alkamauss, 'alkamauss')}>
@@ -320,11 +320,11 @@
 		&[data-icon='blueprint'] {
 			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"><path d="M24,176V64A24,24,0,0,1,48,40H64V152H48a24,24,0,0,0,0,48H232V64H64"/><line x1="128" y1="96" x2="128" y2="160"/><line x1="168" y1="96" x2="168" y2="160"/><line x1="104" y1="112" x2="192" y2="112"/><line x1="104" y1="144" x2="192" y2="144"/></svg>');
 		}
-		&[data-icon='flower-lotus'] {
-			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"><path d="M128,200s40-22,40-80.82c0-46-24.55-69.54-35.19-77.56a8,8,0,0,0-9.62,0C112.55,49.64,88,73.14,88,119.18,88,178,128,200,128,200Z"/><path d="M94.6,80.8C81.28,70,68.56,65.79,61,64.18a8.2,8.2,0,0,0-9.52,5.52c-3.88,12-8.78,39.66,11.11,74.27s53.07,53.4,65.37,56"/><path d="M161.4,80.8c13.32-10.82,26-15,33.56-16.62a8.2,8.2,0,0,1,9.52,5.52c3.88,12,8.78,39.66-11.11,74.27S140.3,197.37,128,200"/><path d="M128,200c15.37,0,40.77-.18,70-17.64s38.69-39.34,41.72-50.54a7.94,7.94,0,0,0-5.46-9.78,69.59,69.59,0,0,0-30.82-.64"/><path d="M52.56,121.4a69.59,69.59,0,0,0-30.82.64,7.94,7.94,0,0,0-5.46,9.78c3,11.2,12.49,33.07,41.72,50.54S112.63,200,128,200"/></svg>');
-		}
 		&[data-icon='package'] {
 			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"><line x1="128" y1="129.09" x2="128" y2="231.97"/><polyline points="32.7 76.92 128 129.08 223.3 76.92"/><path d="M219.84,182.84l-88,48.18a8,8,0,0,1-7.68,0l-88-48.18a8,8,0,0,1-4.16-7V80.18a8,8,0,0,1,4.16-7l88-48.18a8,8,0,0,1,7.68,0l88,48.18a8,8,0,0,1,4.16,7v95.64A8,8,0,0,1,219.84,182.84Z"/><polyline points="81.56 48.31 176 100 176 152"/></svg>');
+		}
+		&[data-icon='potted-plant'] {
+			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"><path d="M144.28,111.72c-25.08-41.81,8.36-83.61,79.43-79.43C227.89,103.36,186.09,136.8,144.28,111.72Z"/><path d="M98,114c18.24-30.41-6.08-60.81-57.77-57.77C37.17,107.9,67.57,132.22,98,114Z"/><line x1="56" y1="152" x2="200" y2="152"/><path d="M184,152l-14.61,65.74a8,8,0,0,1-7.81,6.26H94.42a8,8,0,0,1-7.81-6.26L72,152"/><line x1="144.28" y1="111.72" x2="104" y2="152"/><line x1="97.98" y1="113.98" x2="120" y2="136"/></svg>');
 		}
 	}
 </style>

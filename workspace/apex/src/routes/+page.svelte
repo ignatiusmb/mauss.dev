@@ -5,9 +5,9 @@
 
 	const { data } = $props();
 	const indexes = [
-		{ name: 'curated', icon: 'books' },
-		{ name: 'posts', icon: 'article' },
-		{ name: 'reviews', icon: 'list-star' },
+		{ name: 'curated', icon: 'bookmarks' },
+		{ name: 'posts', icon: 'feather' },
+		{ name: 'reviews', icon: 'flower-lotus' },
 	] as const;
 </script>
 
@@ -50,6 +50,9 @@
 			text-align: left;
 			font-size: var(--size-h2);
 			font-weight: 500;
+		}
+		span {
+			color: var(--color-text-muted);
 		}
 	}
 

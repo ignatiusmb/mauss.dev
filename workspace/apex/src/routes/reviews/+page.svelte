@@ -63,9 +63,9 @@
 {/if}
 
 <header>
-	<h1>the world through kaleidoscope</h1>
+	<h1>kaleidoscope eyes</h1>
 	<!-- prettier-ignore -->
-	<small>reflections and critiques of the things i've spent time with. learn more about <a href="/help#reviews-how-i-review">my review style</a></small>
+	<small>scattered fractals, rearranged in thought — here's <a href="/help#reviews-how-i-review">how i review</a>.</small>
 </header>
 
 <SearchBar

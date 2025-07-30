@@ -69,10 +69,10 @@
 		div {
 			display: grid;
 			margin: 0;
-			line-height: 2;
+			line-height: 1.8;
 
 			a {
-				padding: 0.25rem 1rem;
+				padding: 0.2rem 1rem 0.1rem;
 				border-radius: var(--rounding-base);
 				text-decoration: none;
 

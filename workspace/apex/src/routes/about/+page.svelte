@@ -7,39 +7,42 @@
 	<header>
 		<WeavedImage src="/assets/profile/mauss.jpg" alt="at the summit of mt. Unzen" />
 
-		<h1>Ignatius Bagus.</h1>
-		<span><em>Software Alchemist</em> — code and prose, perfectly distilled</span>
+		<div>
+			<h1>Ignatius Bagus.</h1>
+			<span>code and prose, distilled</span>
 
-		<!-- prettier-ignore -->
-		<p>i'm an independent software engineer based in Southeast Asia (GMT+7&ndash;8), <a href="https://github.com/ignatiusmb" target="_blank">building in public</a> — <a href="/atelier">mostly open source</a>. i also take on consulting and freelance projects, specifically tailored if you're looking for something custom and/or private. if you need me, you can reach out through one of <a href="#elsewhere">my socials</a>.</p>
-
-		<!-- prettier-ignore -->
-		<p>i tend to build quietly and write to make sense of it all. it's a way for me to process lessons, share discoveries, and explore new ideas. if you're curious, the <a href="/help">help page</a> is the dedicated page to get you started.</p>
+			<!-- prettier-ignore -->
+			<p>i'm Igna — i like to build <a href="/atelier">things</a> (mostly <a href="https://github.com/ignatiusmb" target="_blank">in public</a>) and write freely about what i'm exploring or learning. if you're new here, start with the <a href="/help">help page</a>.</p>
+		</div>
 	</header>
 
-	<h3 id="expertise">
-		<i data-icon="flask"></i>
-		<span>expertise.</span>
+	<h3 id="background">
+		<i data-icon="footprints"></i>
+		<span>background.</span>
 	</h3>
 	<!-- prettier-ignore -->
-	<p>i'm a software engineer by trade, but i like to think of myself more as a <em>software alchemist</em>. i see it as an art — being able to create something out of nothing, or transforming raw and unrefined thoughts (solutions) into something beautiful.</p>
+	<p>i studied Computer Science at the University of Indonesia and finished my bachelor's degree in 2021 — though in practice, it hasn't mattered whether i had one or not. i only started coding when i entered university, and i fell for it fast. the idea of creating something out of <em>nothing</em>, bringing a thought to life through logic and lines of code — it still feels like magic.</p>
 	<!-- prettier-ignore -->
-	<p>my strength lies in restructuring systems and streamlining logic, shaving away the noise until what remains just works. i found that the time i spent there is well worth the payoff: easier debugging, quicker iteration, and codebases i don't dread revisiting.</p>
+	<p>i mostly work with web tech, mainly <a href="https://svelte.dev" target="_blank">Svelte</a> and <a href="https://www.typescriptlang.org" target="_blank">TypeScript</a> (and naturally, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a>). other languages i've explored include <a href="https://en.wikipedia.org/wiki/Assembly_language" target="_blank">Assembly</a>, <a href="https://www.gnu.org/software/bash/" target="_blank">Bash</a>, <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank">C</a>, <a href="https://en.wikipedia.org/wiki/C++" target="_blank">C++</a>, <a href="https://dart.dev" target="_blank">Dart</a> (with <a href="https://flutter.dev" target="_blank">Flutter</a>), <a href="https://godotengine.org" target="_blank">GDScript</a>, <a href="https://www.haskell.org" target="_blank">Haskell</a>, <a href="https://en.wikipedia.org/wiki/Java_%28programming_language%29" target="_blank">Java</a>, <a href="https://www.python.org" target="_blank">Python</a>, <a href="https://en.wikipedia.org/wiki/SQL">SQL</a>, and a few others i've forgotten. regardless of language or stack, i care about solving the right problems — once you've grasped the fundamentals, everything else tends to follow. though if i had a choice, i'd always pick the one i enjoy most.</p>
 	<!-- prettier-ignore -->
-	<p>as a solo dev, i build mostly for the web, working with <a href="https://svelte.dev" target="_blank">Svelte</a> and <a href="https://www.typescriptlang.org" target="_blank">TypeScript</a>. i've also explored a wide spectrum of languages: <a href="https://en.wikipedia.org/wiki/Assembly_language" target="_blank">Assembly</a>, <a href="https://www.gnu.org/software/bash" target="_blank">Bash</a>, <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank">C</a>, <a href="https://en.wikipedia.org/wiki/C++" target="_blank">C++</a>, <a href="https://dart.dev" target="_blank">Dart</a> (<a href="https://flutter.dev" target="_blank">Flutter</a>), <a href="https://godotengine.org" target="_blank">GDScript</a>, <a href="https://www.haskell.org" target="_blank">Haskell</a>, <a href="https://en.wikipedia.org/wiki/Java_%28programming_language%29" target="_blank">Java</a>, <a href="https://www.python.org" target="_blank">Python</a>, and a few others i've probably forgotten. i don't mind the language that much, once you understand the fundamentals, the rest will follow naturally.</p>
+	<p>over time, i've found my strength in refactoring — restructuring systems and streamlining logic until everything fits. most of it happens behind the scenes: future iterations flow faster, debugging gets easier, and revisiting old code no longer feels like a chore.</p>
 	<!-- prettier-ignore -->
-	<p>though i can go full-stack when needed, i usually put more focus on the frontend as i care about the interfaces i spent my time on and the people that are going to use them.</p>
+	<p>i work full-stack out of necessity, but i tend to gravitate toward the frontend. i care about the interfaces i spend time with and the people who use them. i occasionally take on consulting and freelance work — reach out via <a href="#elsewhere">any of these places</a> if you need something tailored.</p>
 
 	<h3 id="now">
 		<i data-icon="calendar-dots"></i>
 		<span>now.</span>
 	</h3>
+	<div class="location">
+		<i data-icon="map-pin" style:color="inherit"></i>
+		<span>Southeast Asia (GMT+7&ndash;8)</span>
+	</div>
 	<ul>
 		<li>building with sveltekit</li>
-		<li>materializing ideas in <a href="/atelier">/atelier</a></li>
+		<li>materializing ideas for <a href="/atelier">/atelier</a></li>
 		<li>crafting collections in <a href="/curated">/curated</a></li>
 		<li>sharing thoughts in <a href="/posts">/posts</a></li>
-		<li>reigniting passion in <a href="/reviews">/reviews</a></li>
+		<li>reigniting passion with <a href="/reviews">/reviews</a></li>
 		<li>parsing markdown in <a href="https://github.com/ignatiusmb/aubade">Aubade</a></li>
 		<li>stacking plates, bulking up</li>
 		<li>diving into linguistics and cultures</li>
@@ -156,7 +159,7 @@
 			<span>private communication</span>
 		</li>
 	</ul>
-	<p style:margin-top="1.5rem">archived</p>
+	<p style:margin-top="1.5rem">archived, the chance i open these again is near-zero</p>
 	<ul style:margin-top="0">
 		<li>
 			<a href="https://www.facebook.com/ignatiusmb" target="_blank">facebook</a>
@@ -202,10 +205,22 @@
 
 <style>
 	header {
+		display: grid;
+		gap: 1rem;
+		grid-template-columns: auto;
+
+		@media (min-width: 600px) {
+			grid-template-columns: auto 1fr;
+		}
+
 		h1 {
+			margin-top: 2rem;
 			margin-bottom: 0.6rem;
 			text-align: left;
 			font-size: var(--size-h2);
+		}
+		span {
+			color: var(--color-text-muted);
 		}
 	}
 
@@ -220,6 +235,18 @@
 		}
 	}
 
+	.location {
+		display: flex;
+		gap: 0.25rem;
+		margin-top: 0.5rem;
+		font-size: var(--size-small);
+
+		i[data-icon] {
+			--size: var(--size-base);
+			color: var(--color-text-muted);
+		}
+	}
+
 	strong + span:last-child:nth-child(2)::before,
 	a + span:last-child:nth-child(2)::before {
 		content: '— ';
@@ -228,6 +255,12 @@
 	i[data-icon] {
 		&[data-icon='calendar-dots'] {
 			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"><rect x="40" y="40" width="176" height="176" rx="8"/><line x1="176" y1="24" x2="176" y2="56"/><line x1="80" y1="24" x2="80" y2="56"/><line x1="40" y1="88" x2="216" y2="88"/><circle cx="128" cy="132" r="12"/><circle cx="172" cy="132" r="12"/><circle cx="84" cy="172" r="12"/><circle cx="128" cy="172" r="12"/><circle cx="172" cy="172" r="12"/></svg>');
+		}
+		&[data-icon='footprints'] {
+			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"><path d="M152,192h56v12a28,28,0,0,1-56,0Z"/><path d="M48,168h56v12a28,28,0,0,1-56,0Z"/><path d="M50.74,136C24.54,104,51.48,24,76,24s51.46,80,25.26,112Z"/><path d="M154.74,160c-26.2-32,.74-112,25.26-112s51.46,80,25.26,112Z"/></svg>');
+		}
+		&[data-icon='map-pin'] {
+			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"><circle cx="128" cy="104" r="32"/><path d="M208,104c0,72-80,128-80,128S48,176,48,104a80,80,0,0,1,160,0Z"/></svg>');
 		}
 		&[data-icon='pulse'] {
 			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><polyline points="24 128 56 128 96 40 160 208 200 128 232 128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>');

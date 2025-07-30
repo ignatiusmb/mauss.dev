@@ -30,11 +30,10 @@
 		width: 12rem;
 		height: 12rem;
 		position: relative;
-		margin: 3rem auto 5rem;
+		margin: 2rem auto;
 
-		@media (min-width: 500px) {
-			float: left;
-			margin: 3rem;
+		@media (min-width: 600px) {
+			margin: 2rem;
 		}
 
 		& :global(img) {
