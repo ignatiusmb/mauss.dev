@@ -6,13 +6,15 @@ tags: [tutorial, cPanel, nodejs, pm2, sapper, hosting]
 thumbnail: https://cdn.pixabay.com/photo/2018/05/16/18/16/cloud-3406627_960_720.jpg
 ---
 
+<section data-info="warning">
+
+Sapper has been deprecated and replaced with SvelteKit, and this article is no longer relevant for SvelteKit applications. to deploy SvelteKit applications in Node.js hosting, see the [`adapter-node`](https://svelte.dev/docs/kit/adapter-node) documentation.
+
+</section>
+
 I don't think I've seen a single post on how to properly set up a Node.js application in a shared or dedicated hosting with cPanel. Especially with what small community Svelte has, I thought I may as well contribute by sharing my experience on setting up a production-ready application bundle.
 
-It's today I'm finally successful on setting up my Sapper application in my hosting provider. It took me around 5 days and it was such a weird bug to begin with. Anyways, this shouldn't be bound to a Sapper app and should work with any Node application that is acting as a server.
-
-<section data-info="note">
-  <p>This tutorial assumes you already have a working application to begin with. If you don't, you can just use the template provided by Sapper at their website -> sapper.svelte.dev</p>
-</section>
+It's today I'm finally successful on setting up my Sapper application in my hosting provider. It took me around 5 days and it was such a weird bug to begin with. Anyway, this shouldn't be bound to a Sapper app and should work with any Node application that is acting as a server.
 
 ## Getting started with cPanel
 

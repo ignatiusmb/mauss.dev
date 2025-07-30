@@ -12,7 +12,7 @@ title: Memes
 
 ![emojis across devices#d#f](https://i.redd.it/x5a4vpdz0wb61.jpg "[[Reddit](https://www.reddit.com/r/TIHI/comments/kz5qv9/thanks_i_hate_macaroni_salad/)] Samsung emoji is deplorable")
 
-![you're always preparing#d#f](https://i.redd.it/kuv15y9htwc61.png "[[Reddit](https://www.reddit.com/r/iiiiiiitttttttttttt/comments/l2r3o0/were_gonna_have_to_go_right_to_ludicrous_speed/)] What are they preparing anyways")
+![you're always preparing#d#f](https://i.redd.it/kuv15y9htwc61.png "[[Reddit](https://www.reddit.com/r/iiiiiiitttttttttttt/comments/l2r3o0/were_gonna_have_to_go_right_to_ludicrous_speed/)] What are they preparing anyway")
 
 ![anime villains and transformations#d#f](https://i.redd.it/g3z2sys2uhd61.jpg "[[Reddit](https://www.reddit.com/r/Animemes/comments/l4pk3o/its_not_mine/)] A realistic take from Attack on Titan")
 

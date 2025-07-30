@@ -30,6 +30,8 @@ These words are frequently used interchangeably, but what's their difference? Th
 
 **[Dev creeped out after he fired up Ubuntu VM on Azure, was immediately approached by Canonical sales rep](https://www.theregister.com/2021/02/11/microsoft_azure_ubuntu_data_sharing/)** — Title says it all, it described the situation exactly. You know the feeling when somebody's watching you? Expect that to be all the time when you're online. There's so much that went wrong here, it's better for you to read and decide for yourself. Here's also a [Reddit thread](https://www.reddit.com/r/programming/comments/lj0iu1/dev_creeped_out_after_he_fired_up_ubuntu_vm_on/) to see what others say.
 
+***
+
 ## stories
 
 ![Clannad Backdrop](https://image.tmdb.org/t/p/w1280/h9nAWM6TF59g39l3fDzqTgW7ap2.jpg "[Clannad & After Story](/reviews/anime/clannad) [[TMDB](https://www.themoviedb.org/tv/24835)]")
@@ -52,6 +54,8 @@ I've mentioned on the previous Harvests that we absolutely need something that m
 
 [Tsurezure Children](/reviews/anime/tsurezure-children) — This is no different than above, but without any supernatural powers, a little touch of wholesome, and some romance. The fact that this doesn't have a second season is a crime. It's an even bigger crime that it only has 12 episodes with only 12 minutes per episode. Jokes aside, this show checks all of my list on a slice-of-life romance comedy with a school setting.
 
+***
+
 ## tracks
 
 ![!YouTube#hb](lxw4Y8qzq4w "[平行線 (Heikousen)](https://music.youtube.com/watch?v=nW_aQ572geU) by Eve × suis from ヨルシカ [[Spotify](spotify:track:6QX5xybvl9Gk750M5Mm4qe)]")
@@ -73,6 +77,8 @@ Another one from Grabbitz! His vocals are just too good to pass on. I'm glad tha
 ![!YouTube#d](Hqz2cDgV_4o "[Goodnight Stranger (feat. 习谱予 Cheryl Xi)](https://music.youtube.com/watch?v=tYSbnYta7lE) by Terry Zhong [[Spotify](spotify:track:4YzMPxxuzVBYHZ5pySnLLL)]")
 
 Well, this was definitely unexpected. I've never thought of the day that Chinese lyrics would be released on Monstercat in their own label, it's catchy and surprisingly soothing too. Well, the last is to be expected as it's released on the Instinct channel.
+
+***
 
 ## clips
 
@@ -97,6 +103,8 @@ A quick, less than 7-minutes, video explaining how mRNA vaccines work and how it
 ![!YouTube#d](O2c1hXl3NWU "Why we can't accept cancel culture")
 
 Cancel culture. How did it get this far. What makes someone think they're decent enough to judge others and act as they're flawless themselves. This is a pretty heavy topic to discuss, and I can't say much as I would be indifferent with "those" people. But, Anna Akana did a great job explaining and discussing this topic in her video. She uses a lot of excellent clips where they discusses what we should actually do, and I love every one of it.
+
+***
 
 ## headlines
 
@@ -123,6 +131,8 @@ see: [TheGuardian](https://www.theguardian.com/commentisfree/2021/feb/19/faceboo
 They truly shot themselves in the foot (see their blog post or Android comment thread) and have given the majority of us a reason to migrate away. The current best alternative (and also my recommendation) is to go with [Bitwarden](https://bitwarden.com/), you can self-host or use it with their server.
 
 see: [r/android](https://www.reddit.com/r/Android/comments/ll5ebu/changes_to_lastpass_free_one_free_device_only/) | [r/selfhosted](https://www.reddit.com/r/selfhosted/comments/ll4htz/lastpass_is_finally_a_nobrainer_to_ditch_bitwarden/) | [LastPass](https://blog.lastpass.com/2021/02/changes-to-lastpass-free/)
+
+***
 
 ## footnotes
 

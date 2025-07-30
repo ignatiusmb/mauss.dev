@@ -24,6 +24,8 @@ Semantic Commit Message was written to remind myself and make it easy for me to 
 
 **[Optional Chaining (?.), Nullish Coalescing (??), and Non-Null Assertion Operators (!.) in TypeScript](https://dev.to/jamenamcinteer/optional-chaining-nullish-coalescing-and-non-null-assertion-operators-in-typescript-5c82)** — This article helped me understand what was the difference between Optional Chaining and Non-Null Assertion Operators. It also helped me understand everything a bit better with the examples this article provided.
 
+***
+
 ## stories
 
 ![Kill la Kill backdrop](https://image.tmdb.org/t/p/w1280/kFJTEDYjm1EuowbYo7qcaJUBFXA.jpg "[Kill la Kill](/reviews/anime/kill-la-kill) [[TMDB](https://www.themoviedb.org/tv/60728)]")
@@ -37,6 +39,8 @@ Semantic Commit Message was written to remind myself and make it easy for me to 
 **[WATATEN!: an Angel Flew Down to Me](/reviews/anime/watashi-ni-tenshi-ga-maiorita)** — Wataten was by far one of the best show I've enjoyed watching every second of it. The review is ready so go take a look for more details on this.
 
 **[5 Centimeters per Second](/reviews/movie/byousoku-5-centimeter)** | **[Your Name.](/reviews/movie/kimi-no-na-wa)** | **[Weathering With Your](/reviews/movie/tenki-no-ko)** — Basically the top 3 of Makoto Shinkai works. I really can't say much about this other than how great it is. The animations are beautiful, worldbuilding are superb, and the soundtracks are outstanding. I love and enjoyed all of those 3 and I can't wait to discover more like this.
+
+***
 
 ## tracks
 
@@ -74,6 +78,8 @@ The original *Butterfly Effect* already has a place in me from the very first ti
 
 I've been listening to a lot of J-Pop lately and almost forgot why I used to love and listen to Monstercat almost everyday. This mix reminds me again and really brings back memories, especially all the crazy good mixes from the yearly contest around this time.
 
+***
+
 ## clips
 
 Have you ever wondered where that random ringing sound comes from? Did you sometimes freak out when it isn't going away, thinking you might go deaf from it? Well, don't worry. Turns out, it occurs to practically everyone in the world and it's not harmful or anything. August's Harvest got you covered with an informative video from TED-Ed explaining this phenomenon.
@@ -95,6 +101,8 @@ You'll think twice before letting your dog (pets) lick you in the face.
 ![!YouTube#d](jmg3Dn3OJQ8 "Fall Guys Montage (3)")
 
 Just a fun compilation of Fall Guys game play, even.. no, especially when you're just watching.
+
+***
 
 ## headlines
 
@@ -119,6 +127,8 @@ MAP or Minor Attracted People/Person, just a modern way of saying pedophile, is 
 see: [r/cringetopia - MAP](https://www.reddit.com/r/Cringetopia/comments/iahhqe/map_minor_attracted_person_people/) | [r/cringetopia - movement](https://www.reddit.com/r/Cringetopia/comments/iaoppj/apparently_theyre_trying_to_make_it_a_movement/)
 
 ![!youtube#d](msI2SxmED4E "Netflix Is Disgusting")
+
+***
 
 ## footnotes
 

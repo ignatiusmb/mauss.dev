@@ -24,6 +24,8 @@ this was the best unexpected news i encountered this month, and they made the PV
 
 i miss this art style so much, not to mention how much the animation has improved since 2011, the adaptation is always so good! you can also hear how much fun the seiyuus had making this. KyoAni absolutely nailed it with these trailers, i can't believe it premieres on 7th July, just one week from now!
 
+***
+
 ## stories
 
 ![finally discovering what you love](./blue-period-trailer.png "[Blue Period](/reviews/anime/blue-period) [[Trailer](https://www.youtube.com/watch?v=IV0-SYn3YuM)]")
@@ -38,6 +40,8 @@ i might've spoiled you more from that image alone than [the review itself](/revi
 
 **[Ranma ½ (2024)](/reviews/anime/ranma-½-2024)** — i wasn't expecting much from Ranma ½, i knew it was a classic remake, but i didn't expect to enjoy it this much. i mean, i did enjoy Urusei Yatsura, so i guess it makes sense in a way.
 
+***
+
 ## pieces
 
 ![cover image by Caravane Au Coucher Du Soleil, Charles Théodore Frère](https://aethermug.com/assets/posts/i-do-not-remember-my-life-and-it-s-fine/516720ldsdl.webp "[I Do Not Remember My Life and It's Fine](https://aethermug.com/posts/i-do-not-remember-my-life-and-it-s-fine)")
@@ -47,6 +51,8 @@ i'm afraid to say how eerily relatable this article is to me, i need some more t
 ### more
 
 **[Thrive in obscurity](https://www.jeetmehta.com/posts/thrive-in-obscurity)** — ha, if you've read this one, i'm pretty sure you can guess why i included it. can't say i haven't done this myself, but it does remind me to be more intentional about it. to do the things that i enjoy, to push myself, and to create what *i* like. maybe the world will notice, maybe it won't. maybe the world will agree, maybe it won't. but at least i had fun doing it, and that's all that really matters in the end.
+
+***
 
 ## tracks
 
@@ -67,6 +73,8 @@ i think it's time to put it to rest. hopefully with this, i can start fresh with
 ![!YouTube#d](L5uV3gmOH9g "[Teardrops](https://music.youtube.com/watch?v=iKhHd9ySXEw) by Bring Me The Horizon")
 
 ![!YouTube#d](L6tHMDaGgho "[LosT](https://music.youtube.com/watch?v=1cGSUgX6JTU) by Bring Me The Horizon")
+
+***
 
 ## clips
 
@@ -99,6 +107,8 @@ i have so much respect for him and his crew, his channel may be centered around 
 ![!YouTube#d](t7eKSJntrNY "The illusion that broke the internet")
 
 ![!YouTube#d](FEEh7tCM5nQ "This Is What a Stroke Does to Your Brain (in Minutes)")
+
+***
 
 ## reflections
 
