@@ -49,25 +49,25 @@ after having access to the uploaded SVG file from `bind:files`, the next step is
 
 ```typescript
 async function png(raw: string, image: number, size: number): Promise<Blob> {
-    const svg = new Blob([raw], { type: 'image/svg+xml' });
-    const url = URL.createObjectURL(svg);
+  const svg = new Blob([raw], { type: 'image/svg+xml' });
+  const url = URL.createObjectURL(svg);
 
-    const canvas = document.createElement('canvas');
-    canvas.width = canvas.height = size;
-    const ctx = canvas.getContext('2d')!;
-    ctx.clearRect(0, 0, size, size);
-    const offset = (size - image) / 2;
+  const canvas = document.createElement('canvas');
+  canvas.width = canvas.height = size;
+  const ctx = canvas.getContext('2d')!;
+  ctx.clearRect(0, 0, size, size);
+  const offset = (size - image) / 2;
 
-    return await new Promise((resolve) => {
-        const img = new Image();
-        img.onload = () => {
-            ctx.drawImage(img, offset, offset, image, image);
-            URL.revokeObjectURL(url);
-            canvas.toBlob((blob) => resolve(blob!), 'image/png');
-        };
-        img.onerror = () => resolve(new Blob());
-        img.src = url;
-    });
+  return await new Promise((resolve) => {
+    const img = new Image();
+    img.onload = () => {
+      ctx.drawImage(img, offset, offset, image, image);
+      URL.revokeObjectURL(url);
+      canvas.toBlob((blob) => resolve(blob!), 'image/png');
+    };
+    img.onerror = () => resolve(new Blob());
+    img.src = url;
+  });
 }
 ```
 
@@ -85,37 +85,37 @@ doing low-level binary encoding is not something i usually do, but i survived un
 
 ```typescript
 async function ico(raw: string, size: number): Promise<Blob> {
-    const blob = await png(raw, size, size);
-    const offset = 6 + 16 * 1; // header + one entry
+  const blob = await png(raw, size, size);
+  const offset = 6 + 16 * 1; // header + one entry
 
-    const buffer = new Uint8Array(await blob.arrayBuffer());
-    const header = new Uint8Array([0x00, 0x00, 0x01, 0x00, 0x01, 0x00]);
-    const entry = new Uint8Array([
-        size,
-        size,
-        0x00,
-        0x00,
-        0x01,
-        0x00,
-        0x20,
-        0x00,
-        // image size
-        (size >> (8 * 0)) & 0xff,
-        (size >> (8 * 1)) & 0xff,
-        (size >> (8 * 2)) & 0xff,
-        (size >> (8 * 3)) & 0xff,
-        // offset
-        (offset >> (8 * 0)) & 0xff,
-        (offset >> (8 * 1)) & 0xff,
-        (offset >> (8 * 2)) & 0xff,
-        (offset >> (8 * 3)) & 0xff,
-    ]);
+  const buffer = new Uint8Array(await blob.arrayBuffer());
+  const header = new Uint8Array([0x00, 0x00, 0x01, 0x00, 0x01, 0x00]);
+  const entry = new Uint8Array([
+    size,
+    size,
+    0x00,
+    0x00,
+    0x01,
+    0x00,
+    0x20,
+    0x00,
+    // image size
+    (size >> (8 * 0)) & 0xff,
+    (size >> (8 * 1)) & 0xff,
+    (size >> (8 * 2)) & 0xff,
+    (size >> (8 * 3)) & 0xff,
+    // offset
+    (offset >> (8 * 0)) & 0xff,
+    (offset >> (8 * 1)) & 0xff,
+    (offset >> (8 * 2)) & 0xff,
+    (offset >> (8 * 3)) & 0xff,
+  ]);
 
-    const bytes = new Uint8Array(header.length + entry.length + buffer.length);
-    bytes.set(header, 0);
-    bytes.set(entry, header.length);
-    bytes.set(buffer, header.length + entry.length);
-    return new Blob([bytes], { type: 'image/x-icon' });
+  const bytes = new Uint8Array(header.length + entry.length + buffer.length);
+  bytes.set(header, 0);
+  bytes.set(entry, header.length);
+  bytes.set(buffer, header.length + entry.length);
+  return new Blob([bytes], { type: 'image/x-icon' });
 }
 ```
 
@@ -127,7 +127,7 @@ notice that both `png()` and `ico()` function returns a (promised) `Blob`, which
 
 ```svelte
 {#each [/* the generated file objects */] as { name, blob }}
-    <a href={URL.createObjectURL(blob)} download={name}>{name}</a>
+  <a href={URL.createObjectURL(blob)} download={name}>{name}</a>
 {/each}
 ```
 

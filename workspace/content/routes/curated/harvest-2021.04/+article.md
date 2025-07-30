@@ -22,6 +22,8 @@ Written on the GitHub blog, you can be sure that it's at the very least well-res
 
 **[The Jellyfin CDN](https://jellyfin.org/posts/mirrorbits-cdn/)** — An interesting article from one of my favorite community, Jellyfin software. Read how one of the core member setup their repository CDN, being open source with members and users all across the globe, there's bound to be some problem with ways on solving them. It's amazing how they managed to handle all of it on their spare time.
 
+***
+
 ## stories
 
 ![DDLC Backdrop#f](https://wallpapercave.com/wp/wp2367709.png "[Doki Doki Literature Club](/reviews/anime/doki-doki-literature-club) [[WallpaperCave](https://wallpapercave.com/doki-doki-literature-club-wallpapers)]")
@@ -37,6 +39,8 @@ An amazing game *no one* should ever play. Yeah, I know I'm contradicting myself
 **[Blend S](/reviews/anime/blend-s)** — Taking a break from all the psychological horror/thriller, this was really a nice getaway to run to. Initially in for the memes, I was pretty invested in the characters and story. Sadly, it's a short season with only 12 episodes, but it means it's a good one to binge-watch when you've got the time.
 
 **[Horimiya](/reviews/anime/horimiya)** — An odd leftover from last winter's, this was just a really good and wholesome show. If you at least read some anime news, you've definitely heard about this one. The rest of this review is perhaps better saved for the full review later, so until then, just watch this, you'll know it when you watch it.
+
+***
 
 ## tracks
 
@@ -57,6 +61,8 @@ Such a good and catchy song, I was wondering that this would fit into an OP/ED o
 ![!YouTube#d](9Y0_CVX1hok "[YORUWA HONOKA (Night is Faint)](https://music.youtube.com/watch?v=lr25hH8zoCI) by Eve")
 
 Premiered on the last day of the month, perhaps a bit biased, but Eve seems to always deliver with their songs. It also has a unique tone to it which grows on you the more and longer you listen to them.
+
+***
 
 ## clips
 
@@ -86,6 +92,8 @@ One of the best talks this month about JavaScript and web technologies, highly r
 
 Bonus video! One of the best collaboration reaction video from PewDiePie and CinnamonToastKen. It was absolutely hilarious and disgusting at the same time, really enjoyable to watch.
 
+***
+
 ## headlines
 
 ### Leaked Mark Zuckerberg Phone Number's Reveals He Is on Signal
@@ -109,6 +117,8 @@ see: [MSN](https://www.msn.com/en-in/news/other/leaked-phone-number-of-mark-zuck
 The newest addition to Google's ad technology inside Chrome called Federated Learning of Cohorts (FLoC) is being rejected by everyone in the community. Of course, it's still in the proposal state, but it's better to reject it early on.
 
 see: [TheVerge](https://www.theverge.com/2021/4/16/22387492/google-floc-ad-tech-privacy-browsers-brave-vivaldi-edge-mozilla-chrome-safari?scrolla=5eb6d68b7fedc32c19ef33b4) - [r/webdev](https://www.reddit.com/r/webdev/comments/muo76b/edge_and_mozilla_reject_floc/) | [Plausible](https://plausible.io/blog/google-floc) - [r/degoogle](https://www.reddit.com/r/degoogle/comments/mrd8zb/how_to_fight_back_against_google_floc/)
+
+***
 
 ## footnotes
 

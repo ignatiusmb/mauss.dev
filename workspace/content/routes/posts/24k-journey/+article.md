@@ -72,7 +72,7 @@ I'd like to list some mantras that I've been repeating to myself here, as a remi
 
 If you've skipped through to this section, I hope I've summarized the key points enough for it to make sense. If you've reached this part of the article and you're still reading, I really hope you've found some value in it, at least enough to see life in a different perspective. If you're someone I know personally and have recently caught up with, I'm glad that we're still able to keep in touch, and I'm grateful for the time we've spent together. If not, then what are we waiting for?!
 
-Anyways, I'm turning 24 today. I feel like I'm at my purest and highest potential, yet I'm still feeling better than I was yesterday, which is definitely a good sign. I want to maintain the belief that I'm the best I can be every day while also living with a growth mindset, convincing myself that I can and should strive for continuous improvement, even if it's just a small step each day. There's definitely still ways to go, and I'm just repeating my mantras at this point, but I believe I've reached my 24K excellence. What about you? How's your 24K journey?
+Anyway, I'm turning 24 today. I feel like I'm at my purest and highest potential, yet I'm still feeling better than I was yesterday, which is definitely a good sign. I want to maintain the belief that I'm the best I can be every day while also living with a growth mindset, convincing myself that I can and should strive for continuous improvement, even if it's just a small step each day. There's definitely still ways to go, and I'm just repeating my mantras at this point, but I believe I've reached my 24K excellence. What about you? How's your 24K journey?
 
 ---
 Reference(s):

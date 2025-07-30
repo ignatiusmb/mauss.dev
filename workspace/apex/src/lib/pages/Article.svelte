@@ -351,10 +351,28 @@
 			}
 		}
 		hr {
+			width: 100%;
 			height: 0.1rem;
-			margin-top: 2rem;
+			position: relative;
+			margin: 2rem 0;
 			border: 0;
-			background-color: var(--color-text);
+			background: radial-gradient(circle, var(--color-text), transparent);
+
+			&::after {
+				content: '';
+				width: var(--size-small);
+				height: var(--size-small);
+				position: absolute;
+				top: 0.05rem; /* half of hr height */
+				left: 50%;
+				border: 0.1rem solid var(--color-text);
+				background: var(--color-base);
+				transform: translate(-50%, -50%) rotate(45deg);
+			}
+
+			+ h2 {
+				margin-top: 0;
+			}
 		}
 		figure,
 		details {
@@ -443,50 +461,42 @@
 			background: var(--color-surface);
 
 			&[data-info='warning'] {
-				border-left-color: oklch(0.6793 0.1734 23 / 40%);
-				background: oklch(0.6793 0.1734 23 / 10%);
-				color: oklch(0.6793 0.1734 23);
+				border-left-color: oklch(0.64 0.18 24 / 60%);
+				background: oklch(0.26 0.1 28 / 15%);
+				color: oklch(0.64 0.18 24);
 
-				var,
 				code {
-					background: oklch(0.6793 0.1734 23);
-					color: white;
+					color: oklch(0.72 0.18 24);
 				}
 			}
 
 			&[data-info='tip'] {
-				border-left-color: oklch(0.7712 0.1737 127 / 40%);
-				background: oklch(0.7712 0.1737 127 / 10%);
-				color: oklch(0.7712 0.1737 127);
+				border-left-color: oklch(0.77 0.17 128 / 60%);
+				background: oklch(0.77 0.17 128 / 10%);
+				color: oklch(0.77 0.17 128);
 
-				var,
 				code {
-					background: oklch(0.7712 0.1737 127);
-					color: white;
+					color: oklch(0.85 0.17 128);
 				}
 			}
 
 			&[data-info='important'] {
-				border-left-color: oklch(0.7828 0.159987 88);
-				background: oklch(0.9499 0.0781 95 / 20%);
-				color: oklch(0.7828 0.159987 88);
+				border-left-color: oklch(0.78 0.16 88);
+				background: oklch(0.69 0.1 96 / 15%);
+				color: oklch(0.78 0.16 88);
 
-				var,
 				code {
-					background: oklch(0.7828 0.159987 88);
-					color: white;
+					color: oklch(0.85 0.16 88);
 				}
 			}
 
 			&[data-info='note'] {
-				border-left-color: oklch(0.6648 0.1322 233 / 40%);
-				background: oklch(0.6648 0.1322 233 / 10%);
-				color: oklch(0.6648 0.1322 233);
+				border-left-color: oklch(0.69 0.14 234 / 60%);
+				background: oklch(0.69 0.14 234 / 15%);
+				color: oklch(0.69 0.14 234);
 
-				var,
 				code {
-					background: oklch(0.6648 0.1322 233);
-					color: white;
+					color: oklch(0.69 0.14 234);
 				}
 			}
 		}

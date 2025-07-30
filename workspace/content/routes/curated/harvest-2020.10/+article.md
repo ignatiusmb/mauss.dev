@@ -22,6 +22,8 @@ This was surprisingly cool and scary at the same time. It's crazy, how are you s
 
 **[Software Developer vs. Engineer: What's the Difference?](https://www.developersforhire.com/software-developer-vs-software-engineer)** — I was recommended to take a look at this article earlier this month, it was quite a long read and researched based on the US standards heavily. In the end, words are just how people see and perceived them, that's how slangs come to be. But, it's still worth to take a look, especially if you're someone conscious about titles since they really break it down quite deep there.
 
+***
+
 ## stories
 
 ![Nichijou banner](https://image.tmdb.org/t/p/w1280/3PQEbMOgQyOESo3XwtlJvZw6uoA.jpg "[Nichijou](/reviews/anime/nichijou) [[TMDB](https://www.themoviedb.org/tv/44684)]")
@@ -37,6 +39,8 @@ I haven't really had much time to finish most shows this month, and I don't usua
 **[Jujutsu Kaisen](/reviews/anime/jujutsu-kaisen)**
 
 **[TONIKAWA: Over the Moon For You](/reviews/anime/tonikaku-kawaii)**
+
+***
 
 ## tracks
 
@@ -58,6 +62,8 @@ Another beautifully animated and amazing MV. Kokoro Yohou or Heart Forecast is a
 
 A collaboration from two of my most favorite artists from Monstercat, Slippy with the heavy drops and amazing vocals from Micah Martin, both brings in another Trap single.
 
+***
+
 ## clips
 
 ![!YouTube#hb](3HckuvdqboU "The Most Toxic Way to Study. It Hurts Your Grades.")
@@ -78,6 +84,8 @@ Actual mind-blowing take on relativity and the speed of light by Veritasium, and
 ![!YouTube#d](0a1r0JaONS4 "The Showdown - Animator vs. Animation Shorts Ep 4")
 
 An epic showdown and ending to the Animator vs. Animation saga, watch the final match between The Chosen One and The Dark Lord in this animated video by Alan Becker.
+
+***
 
 ## headlines
 
@@ -132,6 +140,8 @@ Immediately after this takedown, someone created a new tree in the DMCA reposito
 Not long after, the Streisand effect takes place and GitHub is flooded with new repositories. GitHub now hosts hundreds (thousands without search filters) of new repositories containing the original source code.
 
 see: [r/programming - DMCA Takedown](https://www.reddit.com/r/programming/comments/jgub36/youtubedl_just_received_a_dmca_takedown_from_riaa/) | [github/dmca](https://github.com/github/dmca/blob/master/2020/10/2020-10-23-RIAA.md) | [r/programming - Exploit](https://www.reddit.com/r/programming/comments/jhlhok/someone_replaced_the_github_dmca_repo_with/) | [r/piracy - Streisand Effect](https://www.reddit.com/r/Piracy/comments/jiwzf2/angry_youtubedl_users_flood_github_with_new_repos/) | [BleepingComputer](https://www.bleepingcomputer.com/news/software/angry-youtube-dl-users-flood-github-with-new-repos-after-takedown/) | [TorrentFreak](https://torrentfreak.com/riaas-youtube-dl-takedown-ticks-of-developers-and-githubs-ceo-201027/)
+
+***
 
 ## footnotes
 

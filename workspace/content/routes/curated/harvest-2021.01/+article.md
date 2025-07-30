@@ -30,6 +30,8 @@ Here's another really [good and simple explanation](https://www.reddit.com/r/pri
 
 **[Stealing Your Private YouTube Videos, One Frame at a Time](https://bugs.xdavidhu.me/google/2021/01/11/stealing-your-private-videos-one-frame-at-a-time/)** | **[The Embedded YouTube Player Told Me What You Were Watching (and more)](https://bugs.xdavidhu.me/google/2021/01/18/the-embedded-youtube-player-told-me-what-you-were-watching-and-more/)** | **[How I stole the data in millions of people's Google accounts](https://blog.usejournal.com/how-i-stole-the-data-in-millions-of-peoples-google-accounts-aa1b72dcc075)** — A Google product related articles. Worth the read if you're learning Computer Science or a developer. It's quite technical, but worth it once you get the idea behind it. The first 2 articles are bug hunting reports related to YouTube made by the same person, a fun read on behind the scenes when "attacking" these things.
 
+***
+
 ## stories
 
 ![Demon Slayer Mugen Train](https://image.tmdb.org/t/p/w1280/xoqr4dMbRJnzuhsWDF3XNHQwJ9x.jpg "[Demon Slayer: Infinity Train](/reviews/movie/kimetsu-no-yaiba-movie-mugen-ressha-hen) [[TMDB](https://www.themoviedb.org/movie/635302)]")
@@ -45,6 +47,8 @@ This is a given. You know it's coming. The highlight of January 2021. A great wa
 **[Mind Field: Season 1](https://youtu.be/iqKdEhx-dD4?list=PLZRRxQcaEjA4qyEuYfAMCazlL0vQDkIj2) [[IMDb](https://www.imdb.com/title/tt6439562/)]** — A YouTube Originals series by Vsauce. I've finished the first season last December, and this isn't quite fair to the show because it's such an amazing series, so putting it as an honorable mention doesn't really represent the whole series. But, I've only watched the first one and haven't seen the next seasons, so I'll put it here for this month's Harvest.
 
 **[Joshikausei](https://myanimelist.net/anime/38295)** — A short slice of life series consisting of 12 3-min episodes. With absolutely no dialogue, Joshikausei tells a story about the every day life of 3 high school girls by only using expressions and their actions. It isn't like the classics, say *Tom and Jerry* or *Pink Panther* level, but I still enjoy it nevertheless since it's not something you see often in a form of Anime. There's also a lot of fan service, if you're into that kind of stuff. Aside from that, their comedy amusing enough and the whole series is available on YouTube (dropdown video above) in one-sitting for 35 minutes, so there's not really much to lose.
+
+***
 
 ## tracks
 
@@ -66,6 +70,8 @@ This is (from what I heard) the last release IZ*ONE will produce, they'll be dis
 
 Monstercat has a lot of artists lately and it's quite hard to keep track of all of them, but this is one of those release that sticks to your ear. An Instinct release, this brings back a lot of memories when I first discovered Future Bass.
 
+***
+
 ## clips
 
 ![!YouTube#hb](PKtnafFtfEo "MrBeast's Youtube Rewind 2020")
@@ -85,6 +91,8 @@ I've been watching Mushi-shi lately and I love every single episode of it. Wheth
 ![!YouTube#d](xbGno-3jEJs "Every shoe store be like")
 
 They finally delivers another video and most of them from this video hits too close to home. These skits are humorous and aren't harmful like most "pranks" these days. Most of their other videos are also fun to watch so definitely check them out when you don't have much to do.
+
+***
 
 ## headlines
 
@@ -131,6 +139,8 @@ More of a Today I Learned (TIL) from a personal story by a certain Reddit user. 
 They've had baby chicks and there was an accident involving a truck and a baby chick one time which results to having the baby chick barely alive. The other adult chickens were trying to eat and pull its guts out, so they've stepped in hopes of ending its life in a quicker fashion. But, as they're holding it, the baby chick looks down, sees it's own guts, and starts eating them. "And thats why I don't feel bad feeding my chickens leftover chicken", and I will never look at chickens the same way again after that.
 
 see: [r/TIHI](https://www.reddit.com/r/TIHI/comments/kv3kqr/thanks_i_hate_cannibalistic_chickens/givz78k?context=3)
+
+***
 
 ## footnotes
 

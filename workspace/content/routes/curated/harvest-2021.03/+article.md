@@ -26,6 +26,8 @@ Mainly from the perspective of an introvert, this isn't really "surprising" to s
 
 **[Build a Dialog System Without Selling Your Soul](https://www.reddit.com/r/godot/comments/m3ghec/how_to_build_a_dialog_system_without_selling_your/)** — This isn't the typical article I used to feature here, but I've had my share with game development a couple of months ago and this was well written. My experience with game dev wasn't the best, but reading through this was fun and definitely informative. Especially when you're thinking of going to the game dev rabbit hole, this will definitely help out a lot, specifically for Godot made games.
 
+***
+
 ## stories
 
 ![Jujutsu Kaisen Backdrop#f](https://image.tmdb.org/t/p/w1280/eqM26U3HHfvwEcFoMObQc5NYGoc.jpg "[Jujutsu Kaisen](/reviews/anime/jujutsu-kaisen) [[TMDB](https://www.themoviedb.org/tv/95479)]")
@@ -39,6 +41,8 @@ It was tough between Jujutsu Kaisen and Re:Zero Season 2, but JJK really won me 
 **[Mushoku Tensei](/reviews/anime/mushoku-tensei)** — A refreshing take on the isekai genre, this was a great watch and I can't wait for the next season.
 
 **[Cells at Work! CODE BLACK!](/reviews/anime/hataraku-saibou-black)** — A darker take on the Cells at Work! universe, this was a great watch and a realistic take on the not-so-healthy body.
+
+***
 
 ## tracks
 
@@ -65,6 +69,8 @@ There's not much to say about this. It's Grant. You don't need to listen to know
 
 I'm a sucker for acoustic covers. In addition to being one of my favorite songs, this is a perfect combination for me. Released right before March ends, it was such a pleasant surprise.
 
+***
+
 ## clips
 
 ![!YouTube#hb](ZI0w_pwZY3E "A Message From the Skype CEO")
@@ -90,6 +96,8 @@ Exactly the title, "This is why we can't have nice things"!! Is what I've been f
 ![!YouTube#d](i2qckcs_tmI "The Problem With Life Expectancy")
 
 The answer to my old-age question! I used to wonder this as a kid. What and why does every living things have this "number" where they only "live until then". Can't you really go past that, what happens if you do, and how does one determine this "number". The number being life expectancy, and of course, I forgot all about it until I saw this video.
+
+***
 
 ## headlines
 
@@ -118,6 +126,8 @@ Exactly on the 9th to be precise, [Jellyfin v10.7.0](https://www.reddit.com/r/je
 [DietPi v7](https://dietpi.com/docs/releases/#february-2021-version-70) also got a major upgrade although it's only to smoothen the migration process to newer Debian versions.
 
 Another one and probably my favorite is [SvelteKit](https://kit.svelte.dev/)! It's finally in beta and [the repository](https://github.com/sveltejs/kit) is finally [open to public on the 12th](https://www.reddit.com/r/sveltejs/comments/m337r7/sveltekit_repository_is_now_public_on_github/). I'll be rewriting a lot of my sites and applications as well as starting new ones with this.
+
+***
 
 ## footnotes
 

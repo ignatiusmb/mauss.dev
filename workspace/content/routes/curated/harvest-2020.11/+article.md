@@ -28,6 +28,8 @@ Of course, whenever I encounter anything related to programming like this, I alw
 
 **[Google's long search URL explained](https://www.reddit.com/r/explainlikeimfive/comments/jt41d9/eli5_why_is_the_url_of_google_searches_so_long/gc3g0js?context=3)** — Not really an article, but a really informative reply explaining what and why Google's search URL is so long.
 
+***
+
 ## stories
 
 ![grimgar backdrop](https://image.tmdb.org/t/p/w1280/gdGALiQygd7x4MpazAEvpjB6quS.jpg "[Grimgar: Ashes and Illusions](/reviews/anime/hai-to-gensou-no-grimgar) [[TMDB](https://www.themoviedb.org/tv/65369)]")
@@ -43,6 +45,8 @@ This month is also quite slow but there's still some interesting shows I finishe
 **[KONOSUBA Movie: Legend of Crimson](/reviews/movie/konosuba-legend-of-crimson)** — One of the best animated movie (not like there's a lot of movies to begin with), especially if you follow KonoSuba from the first season and enjoyed it as much as the second season. Totally recommended for you who have watched the show, but totally not recommended if you haven't. Watch the show first before you watch this! Trust me on this.
 
 **[Maquia: When the Promised Flower Blooms](/reviews/movie/maquia-when-the-promised-flower-blooms)** — Not as sad as I imagined, perhaps my expectations were a bit high because of the barrage of recommendations for this movie. But, either way this is still a good movie with a unique story.
+
+***
 
 ## tracks
 
@@ -66,6 +70,8 @@ I think [this meme](https://www.reddit.com/r/Monstercat/comments/jlx7ru/meme_eve
 
 Another worthy mention to MUZZ and Danyka Nadeau latest release, Somewhere Else. Such a great song and animations, it's shocking how far Monstercat releases has improved over the time.
 
+***
+
 ## clips
 
 ![!YouTube#hb](jRvxnpfCDSo "Why do you get a fever when you're sick?")
@@ -85,6 +91,8 @@ A must-watch for you science geek out there! Horseshoe crab is one of those anci
 ![!YouTube#d](cnplG_VLiKw "The 3 BIGGEST Lies About Good Posture (3 Myths Busted!)")
 
 The biggest lies about good posture, debunked by calisthenics experts! Everyone, especially if you spend most of your time sitting, whether that's in front of a computer, or in front of your TV, or really anything else that allows you to stay statically for a long time.
+
+***
 
 ## headlines
 
@@ -129,6 +137,8 @@ see: [r/programming](https://www.reddit.com/r/programming/comments/k3alda/flappy
 SAO Progressive goes all the way back to the start and it follows Asuna's journey on Aincrad. But, unlike most fans expected (including myself), this story will be made as a movie instead of a new series/show as a whole season. Either way, I'm still looking forward to this since Aincrad arc felt super rushed, there's a lot of room for the story to be shown, so having a chance to experience it again is always nice.
 
 see: [ComicBook](https://comicbook.com/anime/news/sword-art-online-progressive-movie-trailer-anime/)
+
+***
 
 ## footnotes
 

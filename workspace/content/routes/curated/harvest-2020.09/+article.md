@@ -32,13 +32,15 @@ In other words, we as developers could contribute to the effort of decreasing gl
 
 **[How CSS Perspective Works](https://css-tricks.com/how-css-perspective-works/)** — A well-written article with good examples for me to learn and understand how it works, enough to implement it on my own. You should definitely check it out, especially if you're a front-end developer. It might not seem important right now, but you never know what ideas might pop up in your mind after you've learned about this, or you might finally figure out how to do that one layout you've been meaning to try since forever.
 
+***
+
 ## stories
 
 ![The God of High School banner#f](https://image.tmdb.org/t/p/w1280/bhPDfwKeRklEfeOgNzbbz0tUggq.jpg "[The God of High School](/reviews/anime/the-god-of-high-school) [[TMDB](https://www.themoviedb.org/tv/99778)]")
 
 The God of High School just aired their final episode for Season 1 on 28th of August and it was amazing. A manhwa adaptation with full-throttle action-packed episodes. I need to compare this to Tower of God, since they're both a webtoon turned anime, and because it was quite a letdown for me. Although the story is where it shines, there's really no action in Tower of God and when there is, it ends in with just a move. It left me unsatisfied even though I still enjoy going through the story.
 
-Meanwhile, The God of High School seems to fill in all the missing pieces Tower of God left me and felt like the complete opposite of it. It's as if this show was made just to flex on their fighting scenes, each punches and kicks feels like it's taken straight from a real martial arts fights, and every fight scene is so well choreographed and beautifully animated. I'm not saying the story is bad, but it might seem too fast for some people's taste. Anyways, it's still an amazing show nonetheless, regardless of the story's pace.
+Meanwhile, The God of High School seems to fill in all the missing pieces Tower of God left me and felt like the complete opposite of it. It's as if this show was made just to flex on their fighting scenes, each punches and kicks feels like it's taken straight from a real martial arts fights, and every fight scene is so well choreographed and beautifully animated. I'm not saying the story is bad, but it might seem too fast for some people's taste. Anyway, it's still an amazing show nonetheless, regardless of the story's pace.
 
 ### more
 
@@ -49,6 +51,8 @@ Other shows that aired their final episode this month too, just in time for the 
 **[Sword Art Online: Alicization](/reviews/anime/sword-art-online-alicization)** — i see improvements in the story and character development.
 
 **[Deca Dence](/reviews/anime/deca-dence)** — a post-apocalyptic world with a twist.
+
+***
 
 ## tracks
 
@@ -69,6 +73,8 @@ Pegboard Nerds & More Plastics returning once again to Monstercat with an amazin
 ![!YouTube#d](jb4ybTQwcdw "[main actor](https://music.youtube.com/watch?v=uBRQjp6jLHo) by Minami [[Spotify](spotify:track:3NNLPqn14eWuAulJxo4eZH)]")
 
 Even after a month, I really can't stop listening to these beautiful songs by Minami. This was the first single and the first video uploaded to YouTube. Its lyrics feels like an actual person expressing themselves at their hardest times, I'm sure some of you would agree.
+
+***
 
 ## clips
 
@@ -95,6 +101,8 @@ What a great video explaining the various database paradigms that's available ri
 
 If you still think everyone is overreacting about the new series from Netflix, watch both videos above. There's clearly something wrong with everyone who allowed this to happen.
 
+***
+
 ## headlines
 
 ### Turn impostor syndrome into an advantage
@@ -116,6 +124,8 @@ see: [The Impostor's Advantage](https://www.zainrizvi.io/blog/the-impostors-adva
 Note the word "Accused". But, doesn't mean that they're not spying on you, even right now.
 
 see: [Bloomberg](https://www.bloomberg.com/news/articles/2020-09-18/facebook-accused-of-watching-instagram-users-through-cameras)
+
+***
 
 ## footnotes
 
