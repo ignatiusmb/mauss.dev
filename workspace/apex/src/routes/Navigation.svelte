@@ -17,9 +17,9 @@
 	</a>
 
 	{@render link('atelier', 'flask')}
-	{@render link('curated', 'books')}
-	{@render link('posts', 'article')}
-	{@render link('reviews', 'list-star')}
+	{@render link('curated', 'bookmarks')}
+	{@render link('posts', 'feather')}
+	{@render link('reviews', 'flower-lotus')}
 
 	<input type="checkbox" id="menu" aria-label="Menu" bind:checked={opened} />
 	<label for="menu" aria-label="Toggle menu">
@@ -29,8 +29,8 @@
 
 	<menu>
 		<li>{@render link('help', 'lifebuoy')}</li>
-		<li data-visible="mobile">{@render link('about', 'id-badge')}</li>
-		<li data-visible="mobile">{@render link('uses', 'bookmark')}</li>
+		<li data-visible="mobile">{@render link('about', 'pen-nib')}</li>
+		<li data-visible="mobile">{@render link('uses', 'suitcase')}</li>
 		<li data-visible="mobile">{@render link('sponsor', 'hand-heart')}</li>
 		<li data-visible="mobile">{@render link('rss.xml', 'rss')}</li>
 	</menu>
@@ -55,8 +55,7 @@
 		display: flex;
 		gap: var(--pad);
 		align-items: center;
-		padding: calc(var(--pad) * 2) calc(var(--pad));
-		padding-left: calc(var(--pad) * 2);
+		padding: calc(var(--pad) * 2);
 
 		background: var(--color-base);
 		color: var(--color-text);

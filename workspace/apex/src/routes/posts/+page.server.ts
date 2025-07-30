@@ -5,15 +5,17 @@ export async function load({ parent, url }) {
 	const { items, metadata } = await parent();
 	const { q = [''], tags = [], sort_by = ['date'] } = qsd(url.search);
 
+	const index = items.map(({ content, ...item }) => item);
+
 	return {
-		index: items,
+		index,
 		query: String(q[0]),
-		results: sift(items, {
+		results: sift(index, {
 			search: String(q[0]),
 			tags: tags.map(String),
 			sort_by: sort_by[0] as keyof typeof by,
 		}),
-		metadata: {
+		filters: {
 			tags: metadata.tags.map((v) => ({ name: v, selected: tags.includes(v) })),
 			sort_by: {
 				required: true,

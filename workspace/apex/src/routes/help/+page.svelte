@@ -17,81 +17,96 @@
 	<Index
 		summary="Help Index"
 		items={[
-			{ id: 'writing', title: 'how i write' },
 			{ id: 'atelier', title: '/atelier' },
 			{ id: 'curated', title: '/curated' },
+			{ id: 'curated-harvest', title: 'harvest', level: 3 },
 			{ id: 'posts', title: '/posts' },
 			{ id: 'reviews', title: '/reviews' },
 			{ id: 'reviews-how-i-review', title: 'how i review', level: 3 },
 			{ id: 'reviews-attributions', title: 'attributions', level: 3 },
 			{ id: 'other-pages', title: 'other pages' },
-			{ id: 'about', title: '/about', level: 3 },
-			{ id: 'uses', title: '/uses', level: 3 },
-			{ id: 'rss', title: '/rss.xml', level: 3 },
-			{ id: 'sponsor', title: '/sponsor', level: 3 },
+			{ id: 'other-pages-help', title: '/help', level: 3 },
+			{ id: 'other-pages-about', title: '/about', level: 3 },
+			{ id: 'other-pages-uses', title: '/uses', level: 3 },
+			{ id: 'other-pages-fine-print', title: '/fine-print', level: 3 },
+			{ id: 'other-pages-sponsor', title: '/sponsor', level: 3 },
+			{ id: 'other-pages-rss', title: '/rss.xml', level: 3 },
 			{ id: 'colophon', title: 'colophon' },
 		]}
 	/>
-
-	<h2 id="writing">
-		<i data-icon="feather"></i>
-		<span>how i write</span>
-	</h2>
-	<!-- prettier-ignore -->
-	<p>if you don't see anything weird — perfect. if you do, i hope you get used to it. writing this way helps me be more honest and express my thoughts more clearly. like chatting with a good friend — we just type whatever's on our mind, no need to dress it up. i case the words where it matters and aids readability. the rest is written as freely as i think it, as i try to make sense of things and articulate myself.</p>
-
-	<section data-info="warning">
-		<!-- prettier-ignore -->
-		<p><em>policies, stances, and other small-but-important details live in the <a href="/fine-print">fine print</a>.</em></p>
-	</section>
 
 	<h2 id="atelier">
 		<i data-icon="flask"></i>
 		<a href="/atelier">/atelier</a>
 	</h2>
 	<!-- prettier-ignore -->
-	<p>the structured map of my digital garden, where ideas are materialized. each entry reflects not just the result, but also the thought process and lessons behind building it.</p>
+	<p>the gallery for my digital garden. it's still sparse at the moment — there are seedlings i'm still tending to behind the scenes; some are just beginning to root, and a few shy ones are waiting for their time to open. for now, these are the ones that have bloomed.</p>
 
 	<h2 id="curated">
-		<i data-icon="books"></i>
+		<i data-icon="bookmarks"></i>
 		<a href="/curated">/curated</a>
 	</h2>
 	<!-- prettier-ignore -->
-	<p>content that holds up, no matter when it's read. things i found meaningful enough to wish i'd seen sooner.</p>
+	<p>this index is where i keep recurring series and entries that aren't bound to the time they were written — pieces that hold up no matter when they're read. marked by lasting relevance, not by urgency, each one is meant to hold meaning long after the moment has passed.</p>
 
-	<h3>
+	<h3 id="curated-harvest">
 		<i data-icon="basket"></i>
-		<span>harvest</span>
+		<a href="/curated?series=the-harvest">harvest</a>
 	</h3>
 	<!-- prettier-ignore -->
-	<p>the harvest series is a snapshot of things that stood out to me each month. it's a way for me to reflect on the past month and record what i've learned and experienced from the passing time.</p>
+	<p>the harvest series is a monthly snapshot of memorable experiences. making this <em>monthly digest</em> at the start of each month helps me reflect on what has passed; to record what i've learned and preserve the moments that stayed with me. it's also a way to share what i found meaningful, in hopes that something here might resonate with you.</p>
+	<ul>
+		<li>
+			<strong>headlines</strong>
+			<!-- prettier-ignore -->
+			<span>personal moments and global happenings; news, milestones, and cultural shifts that stood out and shaped the month.</span>
+		</li>
+		<li>
+			<strong>stories</strong>
+			<!-- prettier-ignore -->
+			<span>the lives and worlds i stepped into; mostly anime and movies, but open to any medium that tells a compelling story.</span>
+		</li>
+		<li>
+			<strong>pieces</strong>
+			<!-- prettier-ignore -->
+			<span>articles, essays, and posts; thoughtful writing that lingered in my head or stirred something within me.</span>
+		</li>
+		<li>
+			<strong>tracks</strong>
+			<!-- prettier-ignore -->
+			<span>music that stayed with me; sounds and songs that guides my mood throughout the month.</span>
+		</li>
+		<li>
+			<strong>clips</strong>
+			<!-- prettier-ignore -->
+			<span>videos worth remembering; spontaneous finds full of insight, craft, or pure delight.</span>
+		</li>
+	</ul>
 
 	<h2 id="posts">
-		<i data-icon="article"></i>
+		<i data-icon="feather"></i>
 		<a href="/posts">/posts</a>
 	</h2>
 	<!-- prettier-ignore -->
-	<p>blog entries for unfiltered moments. sometimes technical, sometimes personal, and often times just wandering.</p>
+	<p>this index is where i gather passing thoughts and small revelations — a journal of the days as they unfold. some entries are personal reflections, others trace my work and technical curiosities. i write to understand, remember, and leave a trail through the thoughts that shaped me.</p>
 
 	<h2 id="reviews">
-		<i data-icon="list-star"></i>
+		<i data-icon="flower-lotus"></i>
 		<a href="/reviews">/reviews</a>
 	</h2>
 	<!-- prettier-ignore -->
-	<p>my favorite index. reviews are where i express myself most freely, this is where i reflect and appreciate the stories and experiences i got.</p>
-	<!-- prettier-ignore -->
-	<p>most entries come with a <strong>/deep-dive</strong> sub-page: a space for nuanced analysis or spotlighting the moments that i want to capture. some are made to start conversation, others just to get the thoughts out.</p>
+	<p>the world through a kaleidoscope — this index collects reflections refracted through a shifting lens, shaped by my own experiences. each piece tries to capture what i saw, felt, and learned. i write not to dictate your view, but to share mine in order to better understand the stories and moments that moved me.</p>
 
 	<h3 id="reviews-how-i-review">
 		<i data-icon="strategy"></i>
 		<span>how i review</span>
 	</h3>
 	<!-- prettier-ignore -->
-	<p>i believe stories are best experienced blind. that's why i avoid summaries, spoilers, or even specifics. the goal is to preserve the surprise and emotional weight, so you (or future me) can meet the story with the same excitement i had. i've always enjoyed stories more when i knew nothing going in.</p>
+	<p>i believe stories are best experienced blind — you'll find no spoilers here, not even summaries or plot breakdowns. i try to preserve the surprise and emotional weight, so you (or future me) can enter each story with the same excitement i did.</p>
 	<!-- prettier-ignore -->
-	<p>for anime, i usually give it three or four episodes before deciding to continue or dropping it — just enough to vibe check it. if you prefer knowing the premise first, i've linked sources like MyAnimeList, <abbr title="The Movie Database">TMDB</abbr>, <abbr title="Internet Movie Database">IMDb</abbr>, and other related links on each review.</p>
+	<p>for anime, i usually give it three or four episodes — just enough for a vibe check before deciding whether to continue or drop it. if you prefer knowing the premise first, i've linked sources like MyAnimeList, <abbr title="The Movie Database">TMDB</abbr>, <abbr title="Internet Movie Database">IMDb</abbr>, and other relevant pages on each review.</p>
 	<!-- prettier-ignore -->
-	<p>if you've gone through the whole thing or don't mind dissecting all the key points, check the <strong>/deep-dive</strong> sub-page. that's where i unpack the story and reflect more freely.</p>
+	<p>if you've already seen it or are curious about what it reveals, most entries include a <strong>/deep-dive</strong> sub-page where i unpack the story and reflect more freely.</p>
 
 	<h3 id="reviews-attributions">
 		<i data-icon="certificate"></i>
@@ -104,59 +119,74 @@
 		style:margin-top="1rem"
 	/>
 	<!-- prettier-ignore -->
-	<p>most images are sourced from <a href="https://www.themoviedb.org" target="_blank">TMDB</a>, used under their <a href="https://www.themoviedb.org/about/logos-attribution" target="_blank">attribution terms</a>. i'm not affiliated — they're just excellent and easy to use. all reviews are mine; if you have concerns, feel free to reach out.</p>
+	<p>most images are sourced from <a href="https://www.themoviedb.org" target="_blank">TMDB</a>, used under their <a href="https://www.themoviedb.org/about/logos-attribution" target="_blank">attribution terms</a>. i'm not affiliated — they're just excellent and convenient. all reviews are my own; if you have concerns, feel free to reach out.</p>
 
 	<h2 id="other-pages">
 		<i data-icon="squares-four"></i>
 		<span>other pages</span>
 	</h2>
-	<p>not the main plots, but corners of the garden that give it shape.</p>
+	<!-- prettier-ignore -->
+	<p>the cozy corners of the site. not the main plots — more like footpaths and trellises that give the garden its form.</p>
 
-	<h3 id="about">
-		<i data-icon="id-badge"></i>
+	<h3 id="other-pages-help">
+		<i data-icon="lifebuoy"></i>
+		<a href="/help">/help</a>
+	</h3>
+	<!-- prettier-ignore -->
+	<p>you're here now — the dedicated guide to what the site offers, how to find your way, and a quiet place for me to remember why it's shaped this way.</p>
+
+	<h3 id="other-pages-about">
+		<i data-icon="pen-nib"></i>
 		<a href="/about">/about</a>
 	</h3>
 	<!-- prettier-ignore -->
-	<p>a minimal intro to who i am, what i do, and where to find me — including some things you probably didn't ask for. the <a href="/about#now">/now</a> section is here too.</p>
+	<p>who i am, what i do, what i'm <a href="/about#now">currently doing</a> (/now), and where to find me in <a href="/about#elsewhere">other corners of the web</a>.</p>
 
-	<h3 id="uses">
-		<i data-icon="bookmark"></i>
+	<h3 id="other-pages-uses">
+		<i data-icon="suitcase"></i>
 		<a href="/uses">/uses</a>
 	</h3>
 	<!-- prettier-ignore -->
 	<p>a snapshot of my setup — <a href="/uses#hardware">hardware</a>, <a href="/uses#apps">apps</a>, and <a href="/uses#wellness">wellness</a> picks that support my day-to-day. also serves as a reference for myself, a benchmark for what works and what lasts.</p>
 
-	<h3 id="rss">
+	<h3 id="other-pages-fine-print">
+		<i data-icon="scroll"></i>
+		<a href="/fine-print">/fine-print</a>
+	</h3>
+	<!-- prettier-ignore -->
+	<p>the formalities — disclaimers, affiliate notes, personal views, and disclosures. not exactly fun, but part of keeping things clear and honest.</p>
+
+	<h3 id="other-pages-sponsor">
+		<i data-icon="hand-heart"></i>
+		<a href="/sponsor">/sponsor</a>
+	</h3>
+	<!-- prettier-ignore -->
+	<p>a redirect to <a href="https://github.com/sponsors/ignatiusmb">GitHub Sponsors</a>. support, whether through funds, feedback, sharing my work, or behind-the-scenes encouragement, means a lot.</p>
+
+	<h3 id="other-pages-rss">
 		<i data-icon="rss"></i>
 		<a href="/rss.xml">/rss.xml</a>
 	</h3>
 	<!-- prettier-ignore -->
 	<p>if you're one of the cool kids with your own curated feeds, there's the rss icon in the footer to subscribe and get updates as soon as they're live.</p>
 
-	<h3 id="sponsor">
-		<i data-icon="hand-heart"></i>
-		<a href="/sponsor">/sponsor</a>
-	</h3>
-	<!-- prettier-ignore -->
-	<p>a redirect to my <a href="https://github.com/sponsors/ignatiusmb">GitHub Sponsors</a> page. support is welcome — financially, or simply by engaging, giving feedback, or sharing my work.</p>
-
 	<h2 id="colophon">
 		<i data-icon="stack"></i>
 		<span>colophon</span>
 	</h2>
 	<!-- prettier-ignore -->
-	<p>credit where it's due. this site is built with open-source tools and carefully chosen pieces.</p>
+	<p>credit where it's due. this site is built with open-source tools and carefully chosen parts.</p>
 	<ul>
 		<li>
 			<strong><a href="https://svelte.dev" target="_blank">sveltekit</a></strong>
 			<span>the framework that makes all of this feel effortless.</span>
 		</li>
 		<!-- re-enable when it's actually used
-	<li>
-		<strong><a href="https://pocketbase.io" target="_blank">pocketbase</a></strong>
-		<span>the minimal, lightweight all-in-one backend.</span>
-	</li>
-	-->
+		<li>
+			<strong><a href="https://pocketbase.io" target="_blank">pocketbase</a></strong>
+			<span>the minimal and lightweight all-in-one backend.</span>
+		</li>
+		-->
 		<li>
 			<strong><a href="https://phosphoricons.com" target="_blank">phosphor</a></strong>
 			<span>clean, beautiful, and versatile open-source icons.</span>
@@ -164,6 +194,20 @@
 		<li>
 			<strong><a href="https://fontsource.org" target="_blank">fontsource</a></strong>
 			<span>self-hosted fonts for performance and privacy.</span>
+			<ul>
+				<li>
+					<strong>
+						<a href="https://fontsource.org/fonts/newsreader" target="_blank">newsreader</a>
+					</strong>
+					<span>a thoughtfully crafted serif for long-form reading.</span>
+				</li>
+				<li>
+					<strong>
+						<a href="https://fontsource.org/fonts/recursive" target="_blank">recursive</a>
+					</strong>
+					<span>a powerful and flexible five-axis variable font.</span>
+				</li>
+			</ul>
 		</li>
 		<li>
 			<strong><a href="https://github.com">github</a></strong>
@@ -205,8 +249,8 @@
 		&[data-icon='certificate'] {
 			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"><line x1="72" y1="136" x2="120" y2="136"/><line x1="72" y1="104" x2="120" y2="104"/><circle cx="196" cy="124" r="44"/><path d="M168,192H40a8,8,0,0,1-8-8V56a8,8,0,0,1,8-8H216a8,8,0,0,1,8,8V90.06"/><polyline points="168 157.94 168 224 196 208 224 224 224 157.94"/></svg>');
 		}
-		&[data-icon='feather'] {
-			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"><line x1="184" y1="72" x2="32" y2="224"/><path d="M146.34,189.66a8,8,0,0,1-5.65,2.34H64V115.31a8,8,0,0,1,2.34-5.65L136.4,40.4a56,56,0,0,1,79.2,79.2Z"/><line x1="112" y1="64.52" x2="112" y2="144"/><line x1="136" y1="120" x2="215.2" y2="120"/></svg>');
+		&[data-icon='scroll'] {
+			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"><path d="M200,176V64a24,24,0,0,0-24-24H40"/><line x1="104" y1="104" x2="168" y2="104"/><line x1="104" y1="136" x2="168" y2="136"/><path d="M24,80s-8-6-8-16a24,24,0,0,1,48,0V192a24,24,0,0,0,48,0c0-10-8-16-8-16H216s8,6,8,16a24,24,0,0,1-24,24H88"/></svg>');
 		}
 		&[data-icon='stack'] {
 			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"><polyline points="32 176 128 232 224 176"/><polyline points="32 128 128 184 224 128"/><polygon points="32 80 128 136 224 80 128 24 32 80"/></svg>');

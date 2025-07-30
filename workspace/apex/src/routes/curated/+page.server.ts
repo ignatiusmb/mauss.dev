@@ -5,14 +5,16 @@ export async function load({ parent, url }) {
 	const { items, metadata } = await parent();
 	const { q = [''], series = [''] } = qsd(url.search);
 
+	const index = items.map(({ branches, content, ...item }) => item);
+
 	return {
-		list: items.map(({ branches, content, ...item }) => item),
+		index,
 		query: String(q[0]),
-		results: sift(items, {
+		results: sift(index, {
 			search: String(q[0]),
 			series: String(series[0]),
 		}),
-		metadata: {
+		filters: {
 			series: {
 				options: Object.fromEntries(metadata.series),
 				selected: metadata.series.find(([v]) => v === series[0]) ? series[0] : '',

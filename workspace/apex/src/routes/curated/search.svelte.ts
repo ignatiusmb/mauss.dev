@@ -5,17 +5,21 @@ export type Query = {
 	series: string;
 };
 
-export type Schema = Omit<Items['/curated'][number], 'branches' | 'content'>;
+export type Item = Omit<Items['/curated'][number], 'branches' | 'content'>;
 
-export function sift(items: Schema[], payload: Query) {
+export function sift(items: Item[], payload: Query) {
 	const value = normalize(payload.search);
 	const results = items.filter((item) => {
+		const filters = [
+			payload.series && payload.series.toLowerCase() !== item.series?.title,
+			//
+		];
 		const flags = [
+			item.date.includes(value),
 			item.slug.includes(value),
 			normalize(item.title).includes(value),
-			payload.series && payload.series === item.series?.title,
 		];
-		return flags.some((f) => f);
+		return filters.every((h) => !h) && flags.some((f) => f);
 	});
 	return results;
 }
