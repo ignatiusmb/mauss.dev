@@ -370,7 +370,7 @@
 				transform: translate(-50%, -50%) rotate(45deg);
 			}
 
-			+ h2 {
+			+ * {
 				margin-top: 0;
 			}
 		}

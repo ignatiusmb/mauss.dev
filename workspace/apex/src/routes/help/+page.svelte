@@ -3,19 +3,23 @@
 	import Article from '$lib/pages/Article.svelte';
 </script>
 
-<Article>
-	<header>
-		<h1>you've made port</h1>
-		<small>always drifting, never adrift</small>
-	</header>
+<header>
+	<h1>safe harbor</h1>
+	<small>calm shores, charted for you.</small>
+</header>
 
+<Article>
 	<!-- prettier-ignore -->
-	<p>welcome, you've stumbled upon a corner of the internet — my digital garden, a kind of virtual abode. it's a living archive, always <em>under construction</em>, slowly growing as i plant new seeds and tend to older ones. over time, it may become a garden worth wandering through.</p>
+	<p><strong>welcome</strong> — you've made port at the harbor of my digital garden, a kind of virtual abode nestled in a quiet corner of the internet. i hope this page can be your guiding compass, should you lose your bearings or wonder where to go next.</p>
+	<!-- prettier-ignore -->
+	<p>the garden is always <em>under construction</em>, slowly taking shape as i plant new seeds and tend old growth. in time, whether wandered by many or none, it may become a garden worth returning to.</p>
+
+	<hr />
 
 	<!-- prettier-ignore -->
 	<p>the index is a <em>collapsible</em> overview of the page and a way to jump between sections or sub-sections. you'll mostly see this in articles with headings, so you can navigate with ease.</p>
 	<Index
-		summary="Help Index"
+		summary="Dockside Chart"
 		items={[
 			{ id: 'atelier', title: '/atelier' },
 			{ id: 'curated', title: '/curated' },
@@ -24,13 +28,13 @@
 			{ id: 'reviews', title: '/reviews' },
 			{ id: 'reviews-how-i-review', title: 'how i review', level: 3 },
 			{ id: 'reviews-attributions', title: 'attributions', level: 3 },
-			{ id: 'other-pages', title: 'other pages' },
-			{ id: 'other-pages-help', title: '/help', level: 3 },
-			{ id: 'other-pages-about', title: '/about', level: 3 },
-			{ id: 'other-pages-uses', title: '/uses', level: 3 },
-			{ id: 'other-pages-fine-print', title: '/fine-print', level: 3 },
-			{ id: 'other-pages-sponsor', title: '/sponsor', level: 3 },
-			{ id: 'other-pages-rss', title: '/rss.xml', level: 3 },
+			{ id: 'other-paths', title: 'other paths' },
+			{ id: 'other-paths-help', title: '/help', level: 3 },
+			{ id: 'other-paths-about', title: '/about', level: 3 },
+			{ id: 'other-paths-uses', title: '/uses', level: 3 },
+			{ id: 'other-paths-fine-print', title: '/fine-print', level: 3 },
+			{ id: 'other-paths-sponsor', title: '/sponsor', level: 3 },
+			{ id: 'other-paths-rss', title: '/rss.xml', level: 3 },
 			{ id: 'colophon', title: 'colophon' },
 		]}
 	/>
@@ -121,61 +125,65 @@
 	<!-- prettier-ignore -->
 	<p>most images are sourced from <a href="https://www.themoviedb.org" target="_blank">TMDB</a>, used under their <a href="https://www.themoviedb.org/about/logos-attribution" target="_blank">attribution terms</a>. i'm not affiliated — they're just excellent and convenient. all reviews are my own; if you have concerns, feel free to reach out.</p>
 
-	<h2 id="other-pages">
+	<hr />
+
+	<h2 id="other-paths">
 		<i data-icon="squares-four"></i>
-		<span>other pages</span>
+		<span>other paths</span>
 	</h2>
 	<!-- prettier-ignore -->
 	<p>the cozy corners of the site. not the main plots — more like footpaths and trellises that give the garden its form.</p>
 
-	<h3 id="other-pages-help">
+	<h3 id="other-paths-help">
 		<i data-icon="lifebuoy"></i>
 		<a href="/help">/help</a>
 	</h3>
 	<!-- prettier-ignore -->
 	<p>you're here now — the dedicated guide to what the site offers, how to find your way, and a quiet place for me to remember why it's shaped this way.</p>
 
-	<h3 id="other-pages-about">
+	<h3 id="other-paths-about">
 		<i data-icon="pen-nib"></i>
 		<a href="/about">/about</a>
 	</h3>
 	<!-- prettier-ignore -->
-	<p>who i am, what i do, what i'm <a href="/about#now">currently doing</a> (/now), and where to find me in <a href="/about#elsewhere">other corners of the web</a>.</p>
+	<p>who i am, what i do, what i'm <a href="/about#now">currently doing</a> (/now), and where to find me in <a href="/about#elsewhere">other corners of the internet</a>.</p>
 
-	<h3 id="other-pages-uses">
+	<h3 id="other-paths-uses">
 		<i data-icon="suitcase"></i>
 		<a href="/uses">/uses</a>
 	</h3>
 	<!-- prettier-ignore -->
-	<p>a snapshot of my setup — <a href="/uses#hardware">hardware</a>, <a href="/uses#apps">apps</a>, and <a href="/uses#wellness">wellness</a> picks that support my day-to-day. also serves as a reference for myself, a benchmark for what works and what lasts.</p>
+	<p>a snapshot of my setup — <a href="/uses#hardware">hardware</a>, <a href="/uses#software">software</a>, and <a href="/uses#wellness">wellness</a> picks that support my day-to-day. also serves as a reference for myself, a benchmark for what works and what lasts.</p>
 
-	<h3 id="other-pages-fine-print">
+	<h3 id="other-paths-fine-print">
 		<i data-icon="scroll"></i>
 		<a href="/fine-print">/fine-print</a>
 	</h3>
 	<!-- prettier-ignore -->
 	<p>the formalities — disclaimers, affiliate notes, personal views, and disclosures. not exactly fun, but part of keeping things clear and honest.</p>
 
-	<h3 id="other-pages-sponsor">
+	<h3 id="other-paths-sponsor">
 		<i data-icon="hand-heart"></i>
 		<a href="/sponsor">/sponsor</a>
 	</h3>
 	<!-- prettier-ignore -->
 	<p>a redirect to <a href="https://github.com/sponsors/ignatiusmb">GitHub Sponsors</a>. support, whether through funds, feedback, sharing my work, or behind-the-scenes encouragement, means a lot.</p>
 
-	<h3 id="other-pages-rss">
+	<h3 id="other-paths-rss">
 		<i data-icon="rss"></i>
 		<a href="/rss.xml">/rss.xml</a>
 	</h3>
 	<!-- prettier-ignore -->
-	<p>if you're one of the cool kids with your own curated feeds, there's the rss icon in the footer to subscribe and get updates as soon as they're live.</p>
+	<p>if you're one of the cool kids with your own curated feeds, you can subscribe via the rss icon — or straight from <code>/rss.xml</code> — and get updates the moment they're live.</p>
+
+	<hr />
 
 	<h2 id="colophon">
 		<i data-icon="stack"></i>
 		<span>colophon</span>
 	</h2>
 	<!-- prettier-ignore -->
-	<p>credit where it's due. this site is built with open-source tools and carefully chosen parts.</p>
+	<p>built with open-source tools and thoughtfully chosen parts.</p>
 	<ul>
 		<li>
 			<strong><a href="https://svelte.dev" target="_blank">sveltekit</a></strong>
@@ -223,7 +231,7 @@
 <style>
 	header {
 		display: grid;
-		gap: 0.3rem;
+		gap: 1rem;
 		text-align: center;
 		text-wrap: balance;
 	}

@@ -58,5 +58,5 @@ await orchestrate('./routes/reviews', ({ breadcrumb: [file, slug, category], pat
 	};
 });
 
-if (!trashed.length) console.log(`\x1b[32m✓\x1b[0m all good!`);
+if (!trashed.length) console.log(`\x1b[32m✓\x1b[0m reviews is all good!`);
 else console.log(`\x1b[33m⚠\x1b[0m ${trashed.length} reviews were modified`);

@@ -61,8 +61,8 @@
 {/if}
 
 <header>
-	<h1>thoughts in motion</h1>
-	<small>journal entries, scattered across time.</small>
+	<h1>scattered reflections</h1>
+	<small>thoughts in motion.</small>
 </header>
 
 <SearchBar
