@@ -2,11 +2,14 @@
 	import Article from '$lib/pages/Article.svelte';
 </script>
 
-<Article>
-	<h1>in use</h1>
-	<!-- prettier-ignore -->
-	<p>inspired by <a href="https://wesbos.com/uses" target="_blank">Wes Bos</a> — a living list of the things i trust and rely on daily.</p>
+<header>
+	<h1>instruments</h1>
+	<small>
+		daily essentials — inspired by <a href="https://wesbos.com/uses" target="_blank">Wes Bos</a>.
+	</small>
+</header>
 
+<Article>
 	<h3 id="hardware">
 		<i data-icon="devices"></i>
 		<span>hardware.</span>
@@ -72,7 +75,7 @@
 		</li>
 	</ul>
 
-	<h3 id="apps">
+	<h3 id="software">
 		<i data-icon="terminal-window"></i>
 		<span>software.</span>
 	</h3>
@@ -141,6 +144,13 @@
 </Article>
 
 <style>
+	header {
+		display: grid;
+		gap: 1rem;
+		text-align: center;
+		text-wrap: balance;
+	}
+
 	h3 {
 		display: flex;
 		align-items: center;

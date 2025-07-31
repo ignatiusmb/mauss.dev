@@ -5,6 +5,7 @@
 
 	import type { Query } from './search.svelte';
 	import type { Commands } from './search.worker';
+	import { date } from 'mauss';
 	import { qsd, qse } from 'mauss/web';
 	import { spawn } from 'syv/worker';
 	import { TIME } from 'syv/options';
@@ -65,7 +66,7 @@
 <header>
 	<h1>kaleidoscope eyes</h1>
 	<!-- prettier-ignore -->
-	<small>scattered fractals, rearranged in thought — here's <a href="/help#reviews-how-i-review">how i review</a>.</small>
+	<small>glimpse through the shifting lens — here's <a href="/help#reviews-how-i-review">how i review</a>.</small>
 </header>
 
 <SearchBar
@@ -105,8 +106,6 @@
 
 	{#each index as post (post.slug)}
 		{@const tmdb = post.poster.source === 'tmdb' && 'https://image.tmdb.org/t/p/w300/'}
-		{@const [year, month] = post.released.split('-').map(Number)}
-		{@const season = ['winter', 'spring', 'summer', 'fall'][Math.floor(month / 3)]}
 
 		<a
 			href="/reviews/{post.slug}"
@@ -125,17 +124,14 @@
 				ratio={3 / 2}
 				styles={{ '--border-radius': 0 }}
 			>
-				<!-- {@const check = new Promise((resolve) => {
-					const img = new window.Image();
-					img.onload = () => resolve(true);
-					img.onerror = () => resolve(false);
-					img.src = post.image.en;
-				})} -->
 				<div class="canvas">
-					<span>{season} {year}</span>
-					<!-- {#await check catch} -->
-					<!-- <span class="title">{post.title}</span> -->
-					<!-- {/await} -->
+					{#if post.category === 'anime'}
+						{@const [year, month] = post.released.split('-').map(Number)}
+						{@const season = ['winter', 'spring', 'summer', 'fall'][Math.floor((month - 1) / 3)]}
+						<span>{season} {year}</span>
+					{:else}
+						<span>{date(post.released).format('MMMM YYYY')}</span>
+					{/if}
 				</div>
 			</Image>
 

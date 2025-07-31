@@ -58,7 +58,7 @@
 
 <header>
 	<h1>timeless pieces</h1>
-	<small>recurring series, untethered from trend or timestamp.</small>
+	<small>impermanence made permanent.</small>
 </header>
 
 <SearchBar

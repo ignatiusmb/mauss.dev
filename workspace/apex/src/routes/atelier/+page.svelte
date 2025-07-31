@@ -33,7 +33,7 @@
 
 <header>
 	<h1>manifestations</h1>
-	<small>a gallery within the digital atelier.</small>
+	<small>the exhibition wing.</small>
 </header>
 
 <div id="layout">
