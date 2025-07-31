@@ -75,7 +75,7 @@
 		</li>
 	</ul>
 
-	<h3 id="apps">
+	<h3 id="software">
 		<i data-icon="terminal-window"></i>
 		<span>software.</span>
 	</h3>
