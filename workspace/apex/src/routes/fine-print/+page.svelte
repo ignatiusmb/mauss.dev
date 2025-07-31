@@ -87,8 +87,8 @@
 	<p>this page outlines how this site operates and where it stands. it's not legalese — just a clear statement of the principles beneath it. i believe in transparency, and if you're spending time here, it's only fair you know the ground it's built on.</p>
 
 	<Index summary="Principles" items={principles.map(({ id, title }) => ({ id, title }))} />
-	{#each principles as { icon, title, content }}
-		<h2>
+	{#each principles as { id, icon, title, content }}
+		<h2 {id}>
 			<i data-icon={icon}></i>
 			<span>{title}</span>
 		</h2>
