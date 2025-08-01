@@ -1,6 +1,6 @@
 ---
 date: 2020
-title: "Superman"
+title: Superman
 tier: "?"
 released: 2025-07-09
 genres: [sci-fi, adventure, action]

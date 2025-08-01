@@ -1,7 +1,7 @@
 ---
 date: 2020
-title: "The Fragrant Flower Blooms with Dignity"
-alias: ["Kaoru Hana wa Rin to Saku"]
+title: The Fragrant Flower Blooms with Dignity
+alias: [Kaoru Hana wa Rin to Saku]
 tier: "?"
 released: 2025-07-06
 genres: [school, drama, romance]

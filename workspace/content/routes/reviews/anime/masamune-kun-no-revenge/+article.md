@@ -1,7 +1,7 @@
 ---
 date: 2020
-title: "Masamune-kun's Revenge"
-alias: ["Masamune-kun no Revenge"]
+title: Masamune-kun's Revenge
+alias: [Masamune-kun no Revenge]
 tier: "?"
 released: 2017-01-05
 genres: [school, harem, comedy, romance]

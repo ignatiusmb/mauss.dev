@@ -1,7 +1,7 @@
 ---
 date: 2020
-title: "The Summer Hikaru Died"
-alias: ["Hikaru ga Shinda Natsu"]
+title: The Summer Hikaru Died
+alias: [Hikaru ga Shinda Natsu]
 tier: "?"
 released: 2025-07-06
 genres: [horror, mystery, supernatural]

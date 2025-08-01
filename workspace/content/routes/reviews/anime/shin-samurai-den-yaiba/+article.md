@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: "Yaiba: Samurai Legend"
-alias: ["Shin Samurai-den Yaiba"]
+alias: [Shin Samurai-den Yaiba]
 tier: "?"
 released: 2025-04-05
 genres: [samurai, action, adventure]
