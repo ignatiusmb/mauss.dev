@@ -86,9 +86,9 @@
 						<strong>
 							{#if type === 'back'}
 								<i data-icon="arrow-circle-left"></i>
-								<span>newer</span>
+								<span>{post.series ? 'previous in series' : 'newer'}</span>
 							{:else}
-								<span>older</span>
+								<span>{post.series ? 'next in series' : 'older'}</span>
 								<i data-icon="arrow-circle-right"></i>
 							{/if}
 						</strong>

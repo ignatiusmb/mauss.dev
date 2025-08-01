@@ -66,8 +66,10 @@
 	value={data.query.replace(/\+/g, ' ')}
 	filter={() => pushState('', { dialog: true })}
 	oninput={async (value) => {
-		const q = value.trim();
-		replaceState(qse({ q }) || page.url.pathname, {});
+		memory.params.q = [value.trim()];
+		const { search: q, ...filters } = params;
+		const url = qse({ q, ...filters });
+		replaceState(url || page.url.pathname, {});
 		const query = { ...params, search: q };
 		memory.matches = await invoke('search', query);
 		index = memory.matches;
@@ -75,6 +77,16 @@
 />
 
 <div id="layout">
+	{#if params.search || params.series.length}
+		{@const total = memory.matches.length}
+		<p class="notice">
+			<span>{total} matches for</span>
+			{#if params.search}<span>"{params.search}"</span>{/if}
+			{#if params.search && params.series}<span>and</span>{/if}
+			<a href="?series={params.series}">{params.series}</a>
+		</p>
+	{/if}
+
 	{#each index as { title, slug } (slug)}
 		<a
 			href="/curated/{slug}"
@@ -83,8 +95,6 @@
 		>
 			{title}
 		</a>
-	{:else}
-		<p style:grid-column="1 / -1" style:text-align="center">There are no matching titles</p>
 	{/each}
 </div>
 
@@ -102,7 +112,18 @@
 		grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
 		transition: var(--transition-base);
 
-		a {
+		.notice {
+			grid-column: 1 / -1;
+			display: flex;
+			gap: 0.25rem;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			font-family: var(--font-sans);
+		}
+
+		> a {
 			min-height: 3rem;
 			width: 100%;
 			display: grid;
