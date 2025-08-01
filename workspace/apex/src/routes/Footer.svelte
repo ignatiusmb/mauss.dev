@@ -50,12 +50,8 @@
 		font-family: var(--font-sans);
 
 		span {
-			width: 2rem;
+			width: 3rem;
 			font-size: calc(var(--size-small) * 1.5);
-
-			@media (min-width: 480px) {
-				width: 4rem;
-			}
 		}
 
 		a {

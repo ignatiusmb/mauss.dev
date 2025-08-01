@@ -137,6 +137,7 @@
 			align-items: center;
 			justify-content: center;
 			text-align: center;
+			font-family: var(--font-sans);
 		}
 
 		> a {

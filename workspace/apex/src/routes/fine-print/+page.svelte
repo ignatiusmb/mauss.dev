@@ -1,79 +1,87 @@
 <script lang="ts">
 	import Index from '$lib/components/Index.svelte';
 	import Article from '$lib/pages/Article.svelte';
-	const principles: Array<{
+	const principles: {
 		icon: string;
 		id: string;
 		title: string;
 		content: string[];
-	}> = [
-		{
-			icon: 'pen-nib',
-			id: 'authorship-intent',
-			title: 'authorship & intent',
-			content: [
-				"everything here is written from a personal lens — shaped by my own thoughts, experiences, and interpretations. unless stated otherwise, it does not represent any group or institution. you're encouraged to read through your own perspective.",
-			],
-		},
-		{
-			icon: 'quotes',
-			id: 'reviews-perspective',
-			title: 'reviews & perspective',
-			content: [
-				"despite the name, reviews aren't ratings or verdicts — just reflections from my own perspective. i don't write to steer your view, only to offer mine. if something in it helps you decide what resonates, that's enough.",
-			],
-		},
+	}[][] = [
+		[
+			{
+				icon: 'pen-nib',
+				id: 'authorship-intent',
+				title: 'authorship & intent',
+				content: [
+					"everything here is written from a personal lens — shaped by my own thoughts, experiences, and interpretations. unless stated otherwise, it does not represent any group or institution. you're encouraged to read through your own perspective.",
+				],
+			},
+			{
+				icon: 'quotes',
+				id: 'reviews-perspective',
+				title: 'reviews & perspective',
+				content: [
+					"despite the name, reviews aren't ratings or verdicts — just reflections from my own perspective. i don't write to steer your view, only to offer mine. if something in it helps you decide what resonates, that's enough.",
+				],
+			},
+		],
 
-		{
-			icon: 'shield-check',
-			id: 'accuracy-limitations',
-			title: 'accuracy & limitations',
-			content: [
-				"i aim for thoughtfulness and factual accuracy, but things may change or become outdated over time. how you interpret or apply what's here is up to you — no guarantees, no liabilities.",
-			],
-		},
-		{
-			icon: 'handshake',
-			id: 'recommendations',
-			title: 'recommendations',
-			content: [
-				"i don't accept compensation or incentives for mentions. if i include something, it's because i use and believe in it. all links and references reflect independent judgment — the editorial voice is mine alone.",
-			],
-		},
+		[
+			{
+				icon: 'shield-check',
+				id: 'accuracy-limitations',
+				title: 'accuracy & limitations',
+				content: [
+					"i aim for thoughtfulness and factual accuracy, but things may change or become outdated over time. how you interpret or apply what's here is up to you — no guarantees, no liabilities.",
+				],
+			},
+			{
+				icon: 'handshake',
+				id: 'recommendations',
+				title: 'recommendations',
+				content: [
+					"i don't accept compensation or incentives for mentions. if i include something, it's because i use and believe in it. all links and references reflect independent judgment — the editorial voice is mine alone.",
+				],
+			},
+		],
 
-		{
-			icon: 'globe',
-			id: 'external-links',
-			title: 'external links',
-			content: [
-				"this site links to external resources i don't control. they're provided for context or exploration — not as endorsements, nor as signs of full agreement with everything found there.",
-			],
-		},
-		{
-			icon: 'copyright',
-			id: 'media-use',
-			title: 'media & fair use',
-			content: [
-				'quotes, screenshots, and media are used under fair use — for commentary, critique, documentation, or reference. all visual and written works belong to their original creators unless noted otherwise.',
-			],
-		},
+		[
+			{
+				icon: 'globe',
+				id: 'external-links',
+				title: 'external links',
+				content: [
+					"this site links to external resources i don't control. they're provided for context or exploration — not as endorsements, nor as signs of full agreement with everything found there.",
+				],
+			},
+			{
+				icon: 'copyright',
+				id: 'media-use',
+				title: 'media & fair use',
+				content: [
+					'quotes, screenshots, and media are used under fair use — for commentary, critique, documentation, or reference. all visual and written works belong to their original creators unless noted otherwise.',
+				],
+			},
+		],
 
-		{
-			icon: 'chats',
-			id: 'discussion-invitation',
-			title: 'discussion welcome',
-			content: [
-				"if you see things differently, i'm open to hearing your take. good conversations often begin in disagreement and lead to insight.",
-			],
-		},
-		{
-			icon: 'cookie',
-			id: 'privacy-principles',
-			title: 'privacy principles',
-			content: [
-				"this site doesn't track you or collect personal data — no ad networks, no third-party analytics, no profiling. anonymous and minimal logs may exist to understand basic usage. only essential first-party cookies are used during authentication.",
-			],
-		},
+		[
+			{
+				icon: 'chats',
+				id: 'discussion-invitation',
+				title: 'discussion welcome',
+				content: [
+					"if you see things differently, i'm open to hearing your take. good conversations often begin in disagreement and lead to insight.",
+				],
+			},
+			{
+				icon: 'cookie',
+				id: 'privacy-principles',
+				title: 'privacy principles',
+				content: [
+					"this site doesn't track you or collect personal data — no ad networks, no third-party analytics, no profiling. anonymous and minimal logs may exist to understand basic usage. only essential first-party cookies are used during authentication.",
+				],
+			},
+		],
 	];
 </script>
 
@@ -86,14 +94,21 @@
 	<!-- prettier-ignore -->
 	<p>this page outlines how this site operates and where it stands. it's not legalese — just a clear statement of the principles beneath it. i believe in transparency, and if you're spending time here, it's only fair you know the ground it's built on.</p>
 
-	<Index summary="Principles" items={principles.map(({ id, title }) => ({ id, title }))} />
-	{#each principles as { id, icon, title, content }}
-		<h2 {id}>
-			<i data-icon={icon}></i>
-			<span>{title}</span>
-		</h2>
-		{#each content as text}
-			<p>{text}</p>
+	<Index
+		summary="Principles"
+		items={principles.flatMap((i) => i.map(({ id, title }) => ({ id, title })))}
+	/>
+	{#each principles as group}
+		<hr />
+
+		{#each group as { icon, id, title, content }}
+			<h2 {id}>
+				<i data-icon={icon}></i>
+				<span>{title}</span>
+			</h2>
+			{#each content as text}
+				<p>{text}</p>
+			{/each}
 		{/each}
 	{/each}
 </Article>
