@@ -33,8 +33,8 @@ importers:
         specifier: ^0.10.3
         version: 0.10.3
       mauss:
-        specifier: ^0.10.6
-        version: 0.10.6
+        specifier: ^0.10.7
+        version: 0.10.7
       prettier:
         specifier: ^3.6.2
         version: 3.6.2
@@ -51,8 +51,8 @@ importers:
         specifier: ^4.3.0
         version: 4.3.0(picomatch@4.0.3)(svelte@5.36.16)(typescript@5.8.3)
       syv:
-        specifier: ^0.0.50
-        version: 0.0.50(svelte@5.36.16)
+        specifier: ^0.0.51
+        version: 0.0.51(svelte@5.36.16)
       typescript:
         specifier: ^5.8.3
         version: 5.8.3
@@ -876,8 +876,8 @@ packages:
     resolution: {integrity: sha512-a54IwgWPaeBCAAsv13YgmALOF1elABB08FxO9i+r4VFk5Vl4pKokRPeX8u5TCgSsPi6ec1otfLjdOpVcgbpshg==}
     hasBin: true
 
-  mauss@0.10.6:
-    resolution: {integrity: sha512-KIHfRm8I2cFuazO5dkejxHvvFbYaa/KUT5Bc1AA5Vz2KOP+lKnQ4C1uVlsTlURx0vI8/hGMw3KzlKYCxHV6+AA==}
+  mauss@0.10.7:
+    resolution: {integrity: sha512-Jzp9XAYqZVUzzABsUoEDoGVIyrAmOcNNUyOuWy3YEaMzcFw8WtiMLWSNx6//9/Wv+aXL3xgIyIPu9mpIO89OoA==}
 
   mdast-util-to-hast@13.2.0:
     resolution: {integrity: sha512-QGYKEuUsYT9ykKBCMOEDLsU5JRObWQusAolFMeko/tYPufNkRffBAQjIE+99jbA87xv6FgmjLtwjh9wBWajwAA==}
@@ -1103,8 +1103,8 @@ packages:
     resolution: {integrity: sha512-C7HnyISfvZEofs7T4p7+bmjrbQlhd6lZfgV2tLYg6Eb3nUFM/Zu9dGlSg+GWbUBU/WPw6zDPOFNZAx9qXsoCkg==}
     engines: {node: '>=18'}
 
-  syv@0.0.50:
-    resolution: {integrity: sha512-s0l0u5T8+ombfQqrdLZcVnl0k9WBavfjruV1D5/GJOFdgbwAWrnRDxHMFoACk+t9lIpa7tefLumxeNOvE2rAGw==}
+  syv@0.0.51:
+    resolution: {integrity: sha512-qBQ3tmIGkQeZUzEQNKJdN2MRUfqpSG0toAxm23oUhmf10J6cbE4IYyAZU/IGMdVVWWTy4BN/FJscoUyX5fVnqw==}
     peerDependencies:
       svelte: ^5.0.0
 
@@ -1912,7 +1912,7 @@ snapshots:
       punycode.js: 2.3.1
       uc.micro: 2.1.0
 
-  mauss@0.10.6: {}
+  mauss@0.10.7: {}
 
   mdast-util-to-hast@13.2.0:
     dependencies:
@@ -2183,7 +2183,7 @@ snapshots:
       magic-string: 0.30.17
       zimmerframe: 1.1.2
 
-  syv@0.0.50(svelte@5.36.16):
+  syv@0.0.51(svelte@5.36.16):
     dependencies:
       svelte: 5.36.16
 

@@ -25,6 +25,7 @@
 		'--background': 'var(--color-base)',
 		'--border-radius': 'var(--rounding-box)',
 		'--padding': '1rem 1.5rem 1.5rem',
+		'font-family': 'var(--font-sans)',
 	}}
 >
 	<header>
