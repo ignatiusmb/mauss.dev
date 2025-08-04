@@ -44,7 +44,7 @@ export async function GET() {
 			? compare.string(x.title, y.title)
 			: date.sort.newest(x.date, y.date),
 	);
-	return new Response(RSS(items), {
+	return new Response(RSS(items.slice(0, 42)), {
 		headers: { 'Content-Type': 'application/xml' },
 	});
 }
