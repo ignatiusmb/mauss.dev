@@ -140,7 +140,7 @@
 		grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
 
 		padding: var(--space);
-		padding-top: 0;
+		padding-top: calc(var(--space) / 3);
 		margin: 0;
 		margin-left: auto;
 		border-bottom: 1px solid var(--color-border);
