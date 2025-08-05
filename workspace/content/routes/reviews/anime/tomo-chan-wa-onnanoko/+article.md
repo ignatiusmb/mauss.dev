@@ -3,7 +3,7 @@ date: 2020
 title: "Tomo-chan Is a Girl!"
 alias: ["Tomo-chan wa Onnanoko!"]
 tier: "?"
-released: 2025-07-06
+released: 2023-01-05
 genres: [school, comedy, romance]
 seen:
   first: "2025-07-19T22:02:00+07:00"
