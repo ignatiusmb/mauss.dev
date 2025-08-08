@@ -52,68 +52,18 @@
 		<i data-icon="pulse"></i>
 		<span>movement.</span>
 	</h3>
-	<p><em>currently active</em></p>
-	<ul style:margin-top="0">
-		<li>
-			<strong>running</strong>
-			<span>the foundation</span>
-		</li>
-		<li>
-			<strong>cycling</strong>
-			<span>would do more if the air was cleaner</span>
-		</li>
-		<li>
-			<strong>swimming</strong>
-			<span>closest thing to zero-gravity</span>
-		</li>
-		<li>
-			<strong>badminton</strong>
-			<span>sharp, fast-paced action</span>
-		</li>
-		<li>
-			<strong>table tennis</strong>
-			<span>perfect for indoor days</span>
-		</li>
-		<li>
-			<strong>tricking x gymnastics</strong>
-			<span>control meets flow</span>
-		</li>
-		<li>
-			<strong>tennis</strong>
-			<span>clean, satisfying hits</span>
-		</li>
-		<li>
-			<strong>bouldering</strong>
-			<span>problem-solving in motion</span>
-		</li>
-		<li>
-			<strong>hiking x trekking</strong>
-			<span>self-reflection through altitude</span>
-		</li>
-	</ul>
-	<p style:margin-top="1.5rem"><em>retired / explored</em></p>
-	<ul style:margin-top="0">
-		<li>
-			<strong>futsal</strong>
-			<span>too cramped</span>
-		</li>
-		<li>
-			<strong>soccer</strong>
-			<span>too much space</span>
-		</li>
-		<li>
-			<strong>basketball</strong>
-			<span>i need my fingers</span>
-		</li>
-		<li>
-			<strong>volleyball</strong>
-			<span>fun to watch</span>
-		</li>
-		<li>
-			<strong>field hockey</strong>
-			<span>too niche</span>
-		</li>
-	</ul>
+	<!-- prettier-ignore -->
+	<p>the human body is anatomically and physiologically adapted for sustained aerobic activity. we're built for endurance, though it's harder than ever to stay active in a world of conveniences. it helps that i like to move. i listen to my body and enjoy the process so movement stays a natural part of my life.</p>
+	<!-- prettier-ignore -->
+	<p><em>the basics</em> — <strong>running</strong> builds the endurance and resilience that carry into <strong>hiking</strong> and <strong>trekking</strong>. <strong>swimming</strong> is equally vital; we should move in water as naturally as we do on land. these essential foundations form the core of my physical capabilities.</p>
+	<!-- prettier-ignore -->
+	<p><em>the specialized pursuits</em> — <strong>bouldering</strong> tests both body and mind through problem-solving on the wall. <strong>calisthenics</strong> builds relative strength and full body control. <strong>parkour</strong> turns the world into a playground. <strong>tricking</strong> and <strong>gymnastics</strong> expand what my body can do.</p>
+	<!-- prettier-ignore -->
+	<p><em>the racket-based sports</em> — <strong>table tennis</strong>, <strong>badminton</strong>, and <strong>tennis</strong>. they sharpen hand&ndash;eye coordination, agility, reflexes, and strategic thinking. they're also a good way to spend time with friends.</p>
+	<!-- prettier-ignore -->
+	<p><em>the assorted leisures</em> — <strong>cycling</strong>, <strong>ice skating</strong>, <strong>rollerblading</strong>, <strong>billiards</strong>, <strong>longboard</strong>, and <strong>caster board</strong>. they're &ldquo;hard&rdquo; to do often, so i enjoy them when mood or opportunity allows.</p>
+	<!-- prettier-ignore -->
+	<p><em>in the past</em> — i dabbled in <strong>futsal</strong>, <strong>soccer</strong>, and <strong>basketball</strong>. none stuck: one felt too cramped, one too spacious, and one left my fingers battered. <strong>volleyball</strong> was fun but too tedious to arrange casually, and i found that i prefer watching it. <strong>field hockey</strong> was an interesting phase, but too niche to pursue.</p>
 
 	<h3 id="elsewhere">
 		<i data-icon="share-network"></i>

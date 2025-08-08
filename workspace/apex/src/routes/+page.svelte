@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Article from '$lib/pages/Article.svelte';
-
 	import { date } from 'mauss';
 
 	const { data } = $props();
@@ -16,7 +15,7 @@
 		<h1>Alkamauss</h1>
 		<span>by <a href="/about">Ignatius Bagus.</a></span>
 	</header>
-
+	<hr />
 	{#each indexes as { icon, name }}
 		<section>
 			<h2>
