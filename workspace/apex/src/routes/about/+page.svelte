@@ -12,7 +12,7 @@
 			<span>code and prose, distilled</span>
 
 			<!-- prettier-ignore -->
-			<p>i'm Igna — i like to build <a href="/atelier">things</a> (mostly <a href="https://github.com/ignatiusmb" target="_blank">in public</a>) and write freely about what i'm exploring or learning. if you're new here, start with the <a href="/help">help page</a>.</p>
+			<p>i'm Igna — i like to build <a href="/atelier">things</a> (mostly <a href="https://github.com/ignatiusmb" target="_blank" rel="noopener noreferrer">in public</a>) and write freely about what i'm exploring or learning. if you're new here, start with the <a href="/help">help page</a>.</p>
 		</div>
 	</header>
 
@@ -21,13 +21,13 @@
 		<span>background.</span>
 	</h3>
 	<!-- prettier-ignore -->
-	<p>i studied Computer Science at the University of Indonesia and finished my bachelor's degree in 2021 — though in practice, it hasn't mattered whether i had one or not. i only started coding when i entered university, and i fell for it fast. the idea of creating something out of <em>nothing</em>, bringing a thought to life through logic and lines of code — it still feels <em>magical</em>.</p>
+	<p>i studied Computer Science at the University of Indonesia and earned my bachelor's degree in 2021 — though in practice, having the degree hasn't mattered much. i only started coding when i entered university, and i fell for it fast. the idea of creating something out of <em>nothing</em>, bringing a thought to life through logic and lines of code — it still feels <em>magical</em>.</p>
 	<!-- prettier-ignore -->
-	<p>i mostly work with web tech, mainly <a href="https://svelte.dev" target="_blank">Svelte</a> and <a href="https://www.typescriptlang.org" target="_blank">TypeScript</a> (and naturally, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a>). other languages i've explored include <a href="https://en.wikipedia.org/wiki/Assembly_language" target="_blank">Assembly</a>, <a href="https://www.gnu.org/software/bash/" target="_blank">Bash</a>, <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank">C</a>, <a href="https://en.wikipedia.org/wiki/C++" target="_blank">C++</a>, <a href="https://dart.dev" target="_blank">Dart</a> (with <a href="https://flutter.dev" target="_blank">Flutter</a>), <a href="https://godotengine.org" target="_blank">GDScript</a>, <a href="https://www.haskell.org" target="_blank">Haskell</a>, <a href="https://en.wikipedia.org/wiki/Java_%28programming_language%29" target="_blank">Java</a>, <a href="https://www.python.org" target="_blank">Python</a>, <a href="https://en.wikipedia.org/wiki/SQL">SQL</a>, and a few others i've forgotten. regardless of language or stack, i care about solving the right problems — once you've grasped the fundamentals, everything else tends to follow. though if i had a choice, i'd always pick the one i enjoy most.</p>
+	<p>i mostly work with web technologies, mainly <a href="https://svelte.dev" target="_blank" rel="noopener noreferrer">Svelte</a> and <a href="https://www.typescriptlang.org" target="_blank" rel="noopener noreferrer">TypeScript</a> (and naturally, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">JavaScript</a>). other languages i've explored include <a href="https://en.wikipedia.org/wiki/Assembly_language" target="_blank" rel="noopener noreferrer">Assembly</a>, <a href="https://www.gnu.org/software/bash/" target="_blank" rel="noopener noreferrer">Bash</a>, <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank" rel="noopener noreferrer">C</a>, <a href="https://en.wikipedia.org/wiki/C++" target="_blank" rel="noopener noreferrer">C++</a>, <a href="https://dart.dev" target="_blank" rel="noopener noreferrer">Dart</a> (with <a href="https://flutter.dev" target="_blank" rel="noopener noreferrer">Flutter</a>), <a href="https://godotengine.org" target="_blank" rel="noopener noreferrer">GDScript</a>, <a href="https://www.haskell.org" target="_blank" rel="noopener noreferrer">Haskell</a>, <a href="https://en.wikipedia.org/wiki/Java_%28programming_language%29" target="_blank" rel="noopener noreferrer">Java</a>, <a href="https://www.python.org" target="_blank" rel="noopener noreferrer">Python</a>, <a href="https://en.wikipedia.org/wiki/SQL" target="_blank" rel="noopener noreferrer">SQL</a>, and a few others i've forgotten. regardless of language or stack, it's all about solving the right problems. once you get the fundamentals, the rest follows naturally. that said, i'll always pick the ones i enjoy working with most, which is exactly what i'm working with now.</p>
 	<!-- prettier-ignore -->
-	<p>over time, i've found my strength in refactoring — restructuring systems and streamlining logic until everything fits. most of it happens behind the scenes: future iterations flow faster, debugging gets easier, and revisiting old code no longer feels like a chore.</p>
+	<p>whether starting fresh or refining existing code, i focus on designing and writing thoughtfully crafted solutions. by prioritizing the longevity of the codebase, i help ensure future iterations run smoother, debugging becomes faster and easier, and revisiting old features doesn't feel as dreadful. most of this work happens behind the scenes, but it pays off down the line — just like any long-term investment.</p>
 	<!-- prettier-ignore -->
-	<p>i work full-stack out of necessity, but i tend to gravitate toward the frontend. i care about the interfaces i spend time with and the people who use them. i occasionally take on consulting and freelance work — reach out via <a href="#elsewhere">any of these places</a> if you need something tailored.</p>
+	<p>i work full-stack out of necessity, but naturally gravitate toward the frontend, where most people interact with an app and experience the impact of my work firsthand. frontend work is too often treated as an afterthought, but i believe it deserves the same level of expertise, since UI and UX are often what make or break a product for the end-user. i occasionally take on consulting and freelance work — reach out <a href="#elsewhere">elsewhere</a> if you need something tailored.</p>
 
 	<h3 id="now">
 		<i data-icon="calendar-dots"></i>
@@ -48,12 +48,27 @@
 		<li>diving into linguistics and cultures</li>
 	</ul>
 
+	<h3 id="elsewhere">
+		<i data-icon="share-network"></i>
+		<span>elsewhere.</span>
+	</h3>
+	<!-- prettier-ignore -->
+	<p>i may not check every platform often, but i'll reply when i can. if you feel like saying hi, email (<a href="mailto:ignatius.mbs@gmail.com">ignatius.mbs@gmail.com</a>) is the most direct route. i spend most of my time writing <em>code and prose</em> on <a href="https://github.com/ignatiusmb" target="_blank" rel="noopener noreferrer">github</a>, though it's hardly a social space, so don't expect lively conversations there.</p>
+	<!-- prettier-ignore -->
+	<p><a href="https://www.instagram.com/ignatiusmb" target="_blank" rel="noopener noreferrer">instagram</a> used to steal most of my time daily — that is, until i borrowed my cousin's trick and deleted the app from my phone. now, i only check it from a private browser window, maybe once a month or less, and it logs me out as soon as i close the tab. making it as inconvenient as possible to keep myself from "accidentally" wasting hours on end. over time, i've come to realize that i don't miss it at all and actually found it liberating.</p>
+	<!-- prettier-ignore -->
+	<p><a href="https://discord.com/users/231822751504138240" target="_blank" rel="noopener noreferrer">discord</a> used to be a regular haunt, back when it was simple and reliable. these days, it feels bloated with features i don't use, cluttering the experience. the patchy notifications and constant updates haven't helped, making it harder to stay engaged.</p>
+	<!-- prettier-ignore -->
+	<p><a href="https://www.youtube.com/@ignatiusmb" target="_blank" rel="noopener noreferrer">youtube</a> is where i listen to music and watch videos every day. i'll occasionally upload something, someday. new finds get added to my <a href="https://open.spotify.com/user/ignatiusmb" target="_blank" rel="noopener noreferrer">spotify</a> playlists for listening on the go, which resets every month.</p>
+	<!-- prettier-ignore -->
+	<p>beyond the linkable platforms above, i also use <strong>whatsapp</strong>, <strong>telegram</strong>, and <strong>signal</strong>. i reserve these mostly for conversations with people i've met in person or known long enough to share my number. if you have my details, you can find me there. some accounts still exist purely for archival purposes: <a href="https://www.facebook.com/ignatiusmb" target="_blank" rel="noopener noreferrer">facebook</a>, <a href="https://gitlab.com/ignatiusmb" target="_blank" rel="noopener noreferrer">gitlab</a>, <a href="https://www.linkedin.com/in/ignatiusmb" target="_blank" rel="noopener noreferrer">linkedin</a>, <a href="https://twitter.com/alchemauss" target="_blank" rel="noopener noreferrer">twitter (x)</a>, and <a href="https://keybase.io/mauss" target="_blank" rel="noopener noreferrer">keybase</a>. i barely ever look at those accounts anymore, so don't count on a reply if you message me there.</p>
+
 	<h3 id="movement">
 		<i data-icon="pulse"></i>
 		<span>movement.</span>
 	</h3>
 	<!-- prettier-ignore -->
-	<p>the human body is anatomically and physiologically adapted for sustained aerobic activity. we're built for endurance, though it's harder than ever to stay active in a world of conveniences. it helps that i like to move. i listen to my body and enjoy the process so movement stays a natural part of my life.</p>
+	<p>the human body is anatomically and physiologically designed for sustained aerobic activity. we're built for endurance, though staying active is harder than ever in a world full of conveniences. fortunately, i enjoy moving. i listen to my body and embrace the process, so movement remains a natural part of my life.</p>
 	<!-- prettier-ignore -->
 	<p><em>the basics</em> — <strong>running</strong> builds the endurance and resilience that carry into <strong>hiking</strong> and <strong>trekking</strong>. <strong>swimming</strong> is equally vital; we should move in water as naturally as we do on land. these essential foundations form the core of my physical capabilities.</p>
 	<!-- prettier-ignore -->
@@ -61,79 +76,9 @@
 	<!-- prettier-ignore -->
 	<p><em>the racket-based sports</em> — <strong>table tennis</strong>, <strong>badminton</strong>, and <strong>tennis</strong>. they sharpen hand&ndash;eye coordination, agility, reflexes, and strategic thinking. they're also a good way to spend time with friends.</p>
 	<!-- prettier-ignore -->
-	<p><em>the assorted leisures</em> — <strong>cycling</strong>, <strong>ice skating</strong>, <strong>rollerblading</strong>, <strong>billiards</strong>, <strong>longboard</strong>, and <strong>caster board</strong>. they're &ldquo;hard&rdquo; to do often, so i enjoy them when mood or opportunity allows.</p>
+	<p><em>the assorted leisures</em> — <strong>cycling</strong>, <strong>ice skating</strong>, <strong>rollerblading</strong>, <strong>billiards</strong>, <strong>longboard</strong>, and <strong>caster board</strong>. they're "hard" to do often, so i enjoy them when mood or opportunity allows.</p>
 	<!-- prettier-ignore -->
-	<p><em>in the past</em> — i dabbled in <strong>futsal</strong>, <strong>soccer</strong>, and <strong>basketball</strong>. none stuck: one felt too cramped, one too spacious, and one left my fingers battered. <strong>volleyball</strong> was fun but too tedious to arrange casually, and i found that i prefer watching it. <strong>field hockey</strong> was an interesting phase, but too niche to pursue.</p>
-
-	<h3 id="elsewhere">
-		<i data-icon="share-network"></i>
-		<span>elsewhere.</span>
-	</h3>
-	<!-- prettier-ignore -->
-	<p>if you feel like saying hi, here are a few places where you might find me. i may not check them all the time, but i'll respond when i can.</p>
-	<ul style:margin-top="0">
-		<li>
-			<a href="mailto:ignatius.mbs@gmail.com">email</a>
-			<span>ignatius.mbs@gmail.com</span>
-		</li>
-		<li>
-			<a href="https://github.com/ignatiusmb" target="_blank">github</a>
-			<span>where i spend most of my time</span>
-		</li>
-		<li>
-			<a href="https://www.instagram.com/ignatiusmb" target="_blank">instagram</a>
-			<span>a black hole of time</span>
-		</li>
-		<li>
-			<a href="https://discord.com/users/231822751504138240" target="_blank">discord</a>
-			<span>patchy notifications</span>
-		</li>
-		<li>
-			<a href="https://www.youtube.com/@ignatiusmb" target="_blank">youtube</a>
-			<span>occasional uploads</span>
-		</li>
-		<li>
-			<a href="https://open.spotify.com/user/ignatiusmb" target="_blank">spotify</a>
-			<span>headphones advised</span>
-		</li>
-		<li>
-			<strong>whatsapp</strong>
-			<span>only for direct contact</span>
-		</li>
-		<li>
-			<strong>telegram</strong>
-			<span>only news channels</span>
-		</li>
-		<li>
-			<strong>signal</strong>
-			<span>private communication</span>
-		</li>
-	</ul>
-	<p style:margin-top="1.5rem">archived, the chance i open these again is near-zero</p>
-	<ul style:margin-top="0">
-		<li>
-			<a href="https://www.facebook.com/ignatiusmb" target="_blank">facebook</a>
-			<span>relic from childhood</span>
-		</li>
-		<li>
-			<a href="https://gitlab.com/ignatiusmb" target="_blank">gitlab</a>
-			<span>university-era keepsake</span>
-		</li>
-		<li>
-			<a href="https://www.linkedin.com/in/ignatiusmb" target="_blank">linkedin</a>
-			<span>i don't like using this</span>
-		</li>
-		<li>
-			<a href="https://twitter.com/alchemauss" target="_blank">twitter (x)</a>
-			<span>i can't even login anymore</span>
-		</li>
-		<li>
-			<a href="https://keybase.io/mauss" target="_blank">keybase</a>
-			<span>gathering dust, idk why i have this</span>
-		</li>
-	</ul>
-	<!-- prettier-ignore -->
-	<p>not everything needs to be loud. these platforms are tools, not identities. some stuck, some didn't—but they've all held fragments of me at some point.</p>
+	<p><em>in the past</em> — i dabbled in <strong>futsal</strong>, <strong>soccer</strong>, and <strong>basketball</strong>, but none of them stuck. <strong>volleyball</strong> was fun but too tedious to arrange casually, and i found that i prefer watching it. <strong>field hockey</strong> was an interesting phase, but too niche to pursue.</p>
 
 	<h3 id="trivia">
 		<i data-icon="sparkle"></i>
@@ -141,15 +86,16 @@
 	</h3>
 	<ul>
 		<li>
-			<a href="https://www.16personalities.com/intj-personality" target="_blank">INTJ</a>
-			<span>or so the test claims, take it as you will</span>
+			<!-- prettier-ignore -->
+			<a href="https://www.16personalities.com/intj-personality" target="_blank" rel="noopener noreferrer">INTJ</a>
+			<span>— allegedly, according to an online test.</span>
 		</li>
 		<li>
 			<strong>scorpio</strong>
-			<span>if that means anything to you</span>
+			<span>— if that sort of thing matters to you.</span>
 		</li>
-		<li>can hold his breath for around 2 minutes</li>
-		<li>swims faster in breaststroke than in front crawl</li>
+		<li>i can hold my breath for roughly two minutes.</li>
+		<li>i swim faster in breaststroke than in front crawl.</li>
 	</ul>
 </Article>
 
@@ -195,11 +141,6 @@
 			--size: var(--size-base);
 			color: var(--color-text-muted);
 		}
-	}
-
-	strong + span:last-child:nth-child(2)::before,
-	a + span:last-child:nth-child(2)::before {
-		content: '— ';
 	}
 
 	i[data-icon] {
