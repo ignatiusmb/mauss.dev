@@ -14,7 +14,7 @@
 			{@const indexed = typeof link !== 'string' ? ` (${v + 1})` : ''}
 
 			{#if v !== 0}<span class="dash">—</span>{/if}
-			<a {href} target="_blank">{key}{indexed}</a>
+			<a {href} target="_blank" rel="noopener noreferrer">{key}{indexed}</a>
 		{/each}
 	{/each}
 	<span>]</span>
