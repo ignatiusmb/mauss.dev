@@ -4,9 +4,8 @@
 
 <header>
 	<h1>instruments</h1>
-	<small>
-		daily essentials — inspired by <a href="https://wesbos.com/uses" target="_blank">Wes Bos</a>.
-	</small>
+	<!-- prettier-ignore -->
+	<small>daily essentials — inspired by <a href="https://wesbos.com/uses" target="_blank" rel="noopener noreferrer">Wes Bos</a>.</small>
 </header>
 
 <Article>
@@ -21,6 +20,7 @@
 				<a
 					href="https://www.asus.com/us/displays-desktops/nucs/nuc-mini-pcs/asus-nuc-14-pro"
 					target="_blank"
+					rel="noopener noreferrer"
 				>
 					ASUS NUC 14 Pro
 				</a>
@@ -29,7 +29,11 @@
 		<li>
 			<strong>Display</strong>
 			<span>
-				<a href="https://www.lg.com/us/monitors/lg-27gl83a-b-gaming-monitor" target="_blank">
+				<a
+					href="https://www.lg.com/us/monitors/lg-27gl83a-b-gaming-monitor"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					LG UltraGear 27GL83A-B 27"
 				</a>
 			</span>
@@ -40,6 +44,7 @@
 				<a
 					href="https://www.keychron.com/products/keychron-k2-wireless-mechanical-keyboard"
 					target="_blank"
+					rel="noopener noreferrer"
 				>
 					Keychron K2 - Brown Switch
 				</a>
@@ -49,7 +54,11 @@
 		<li>
 			<strong>Home Lab</strong>
 			<span>
-				<a href="https://www.geekompc.com/geekom-mini-air12-mini-pc" target="_blank">
+				<a
+					href="https://www.geekompc.com/geekom-mini-air12-mini-pc"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					GEEKOM Mini Air12
 				</a>
 			</span>
@@ -57,7 +66,13 @@
 		<li>
 			<strong>Storage</strong>
 			<span>
-				<a href="https://www.orico.cc/us/product/detail/3617.html" target="_blank">ORICO 4-bay</a>
+				<a
+					href="https://www.orico.cc/us/product/detail/3617.html"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					ORICO 4-bay
+				</a>
 			</span>
 		</li>
 
@@ -83,30 +98,46 @@
 		<li>
 			<strong>Launcher</strong>
 			<span>
-				<a href="https://play.google.com/store/apps/details?id=bitpit.launcher" target="_blank">
+				<a
+					href="https://play.google.com/store/apps/details?id=bitpit.launcher"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					Niagara
 				</a>
 			</span>
 		</li>
 		<li>
 			<strong>Code</strong>
-			<span><a href="https://code.visualstudio.com" target="_blank">VS Code</a></span>
+			<span>
+				<a href="https://code.visualstudio.com" target="_blank" rel="noopener noreferrer">
+					VS Code
+				</a>
+			</span>
 		</li>
 		<li>
 			<strong>Music</strong>
-			<span><a href="https://open.spotify.com" target="_blank">Spotify</a></span>
+			<span>
+				<a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer">Spotify</a>
+			</span>
 		</li>
 		<li>
 			<strong>Vault</strong>
-			<span><a href="https://bitwarden.com" target="_blank">Bitwarden</a></span>
+			<span>
+				<a href="https://bitwarden.com" target="_blank" rel="noopener noreferrer">Bitwarden</a>
+			</span>
 		</li>
 		<li>
 			<strong>Server</strong>
-			<span><a href="https://dietpi.com" target="_blank">DietPi</a></span>
+			<span>
+				<a href="https://dietpi.com" target="_blank" rel="noopener noreferrer">DietPi</a>
+			</span>
 		</li>
 		<li>
 			<strong>3D + Video</strong>
-			<span><a href="https://www.blender.org" target="_blank">Blender</a></span>
+			<span>
+				<a href="https://www.blender.org" target="_blank" rel="noopener noreferrer">Blender</a>
+			</span>
 		</li>
 	</ul>
 

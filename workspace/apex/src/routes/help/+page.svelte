@@ -143,7 +143,7 @@
 		style:margin-top="1rem"
 	/>
 	<!-- prettier-ignore -->
-	<p>most images are sourced from <a href="https://www.themoviedb.org" target="_blank">TMDB</a>, used under their <a href="https://www.themoviedb.org/about/logos-attribution" target="_blank">attribution terms</a>. i'm not affiliated — they're just excellent and convenient. all reviews are my own; if you have concerns, feel free to reach out.</p>
+	<p>most images are sourced from <a href="https://www.themoviedb.org" target="_blank" rel="noopener noreferrer">TMDB</a>, used under their <a href="https://www.themoviedb.org/about/logos-attribution" target="_blank" rel="noopener noreferrer">attribution terms</a>. i'm not affiliated — they're just excellent and convenient. all reviews are my own; if you have concerns, feel free to reach out.</p>
 
 	<hr />
 
@@ -232,43 +232,55 @@
 	<p>built with open-source tools and thoughtfully chosen parts.</p>
 	<ul>
 		<li>
-			<strong><a href="https://svelte.dev" target="_blank">sveltekit</a></strong>
+			<strong>
+				<a href="https://svelte.dev" target="_blank" rel="noopener noreferrer">sveltekit</a>
+			</strong>
 			<span>— the framework that makes all of this feel effortless.</span>
 		</li>
 		<!-- re-enable when it's actually used
 		<li>
-			<strong><a href="https://pocketbase.io" target="_blank">pocketbase</a></strong>
+			<strong><a href="https://pocketbase.io" target="_blank" rel="noopener noreferrer">pocketbase</a></strong>
 			<span>— the minimal and lightweight all-in-one backend.</span>
 		</li>
 		-->
 		<li>
-			<strong><a href="https://phosphoricons.com" target="_blank">phosphor</a></strong>
+			<strong>
+				<a href="https://phosphoricons.com" target="_blank" rel="noopener noreferrer">phosphor</a>
+			</strong>
 			<span>— clean, beautiful, and versatile open-source icons.</span>
 		</li>
 		<li>
-			<strong><a href="https://fontsource.org" target="_blank">fontsource</a></strong>
+			<strong>
+				<a href="https://fontsource.org" target="_blank" rel="noopener noreferrer">fontsource</a>
+			</strong>
 			<span>— self-hosted fonts for performance and privacy.</span>
 			<ul>
 				<li>
 					<strong>
-						<a href="https://fontsource.org/fonts/newsreader" target="_blank">newsreader</a>
+						<!-- prettier-ignore -->
+						<a href="https://fontsource.org/fonts/newsreader" target="_blank" rel="noopener noreferrer">newsreader</a>
 					</strong>
 					<span>— a thoughtfully crafted serif for long-form reading.</span>
 				</li>
 				<li>
 					<strong>
-						<a href="https://fontsource.org/fonts/recursive" target="_blank">recursive</a>
+						<!-- prettier-ignore -->
+						<a href="https://fontsource.org/fonts/recursive" target="_blank" rel="noopener noreferrer">recursive</a>
 					</strong>
 					<span>— a powerful and flexible five-axis variable font.</span>
 				</li>
 			</ul>
 		</li>
 		<li>
-			<strong><a href="https://github.com">github</a></strong>
+			<strong>
+				<a href="https://github.com" target="_blank" rel="noopener noreferrer">github</a>
+			</strong>
 			<span>— where everything i build and share lives, this site included.</span>
 		</li>
 		<li>
-			<strong><a href="https://vercel.com">vercel</a></strong>
+			<strong>
+				<a href="https://vercel.com" target="_blank" rel="noopener noreferrer">vercel</a>
+			</strong>
 			<span>— where this site lives and breathes, fast and reliable.</span>
 		</li>
 	</ul>
