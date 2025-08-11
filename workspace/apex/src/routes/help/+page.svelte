@@ -27,6 +27,7 @@
 			{ id: 'posts', title: '/posts' },
 			{ id: 'reviews', title: '/reviews' },
 			{ id: 'reviews-how-i-review', title: 'how i review', level: 3 },
+			{ id: 'reviews-tiers', title: 'tiers', level: 3 },
 			{ id: 'reviews-attributions', title: 'attributions', level: 3 },
 			{ id: 'other-paths', title: 'other paths' },
 			{ id: 'other-paths-help', title: '/help', level: 3 },
@@ -58,7 +59,7 @@
 		<a href="/curated?series=the-harvest">harvest</a>
 	</h3>
 	<!-- prettier-ignore -->
-	<p>the harvest series is a monthly snapshot of memorable experiences. making this <em>monthly digest</em> at the start of each month helps me reflect on what has passed; to record what i've learned and preserve the moments that stayed with me. it's also a way to share what i found meaningful, in hopes that something here might resonate with you.</p>
+	<p>this series is a monthly snapshot of memorable experiences. making this <em>monthly digest</em> at the start of each month helps me reflect on what has passed; to record what i've learned and preserve the moments that stayed with me. it's also a way to share what i found meaningful, in hopes that something here might resonate with you.</p>
 	<ul>
 		<li>
 			<strong>headlines</strong>
@@ -99,7 +100,7 @@
 		<a href="/reviews">/reviews</a>
 	</h2>
 	<!-- prettier-ignore -->
-	<p>the world through a kaleidoscope — this index collects reflections refracted through a shifting lens, shaped by my own experiences. each piece tries to capture what i saw, felt, and learned. i write not to dictate your view, but to share mine in order to better understand the stories and moments that moved me.</p>
+	<p>this index is where i try to capture my reflections from my own experiences. seeing the world through a kaleidoscope — reflections refracted through a shifting lens. i write not to dictate your view, but to share mine in order to better understand the stories and moments that moved me.</p>
 
 	<h3 id="reviews-how-i-review">
 		<i data-icon="strategy"></i>
@@ -111,6 +112,25 @@
 	<p>for anime, i usually give it three or four episodes — just enough for a vibe check before deciding whether to continue or drop it. if you prefer knowing the premise first, i've linked sources like MyAnimeList, <abbr title="The Movie Database">TMDB</abbr>, <abbr title="Internet Movie Database">IMDb</abbr>, and other relevant pages on each review.</p>
 	<!-- prettier-ignore -->
 	<p>if you've already seen it or are curious about what it reveals, most entries include a <strong>/deep-dive</strong> sub-page where i unpack the story and reflect more freely.</p>
+
+	<h3 id="reviews-tiers">
+		<i data-icon="stairs"></i>
+		<span>tiers</span>
+	</h3>
+	<!-- prettier-ignore -->
+	<p>these are a rough shape of my feelings toward each of them — i think of them as shelves rather than strict rankings. sometimes it's about how <em>visually</em> stunning they were, other times it's how well they captured a feeling or adapted a story. i try to keep it simple, so you can get a quick sense of what stood out to me.</p>
+	<ul>
+		<!-- prettier-ignore -->
+		<li><strong>S-tier</strong> — <em>stellar animation and exceptional adaptation</em>. the ones that make everything else feel dim by comparison. the direction feels impossibly refined. they come closest to my definition of a masterpiece.</li>
+		<!-- prettier-ignore -->
+		<li><strong>A-tier</strong> — <em>highly polished and excellent across the board</em>. impressive, with many standout moments and a lasting impact. they deliver a cohesive, admirable experience. perhaps given more time, care, or stronger source material, they might've reached S-tier.</li>
+		<!-- prettier-ignore -->
+		<li><strong>B-tier</strong> — <em>solid works with occasional highs</em>. reliable, with great ideas or standout moments, but something doesn't quite click. adaptation is often safe or straightforward. the kind of good average many aim for.</li>
+		<!-- prettier-ignore -->
+		<li><strong>C-tier</strong> — <em>watchable but flawed</em>. had potential, but didn't do justice to it. there might be a few good scenes or ideas, but the issues are hard to ignore, and it ultimately feels like a miss. still interesting, sometimes, for what they <em>tried</em> to do.</li>
+		<!-- prettier-ignore -->
+		<li><strong>D-tier</strong> — <em>poor execution, wasted potential</em>. the ones i struggled to finish, or couldn't. even if the core story is good, the execution actively works against it. often messy, incoherent, or just off in ways i couldn't bear. usually a frustrating or forgettable experience.</li>
+	</ul>
 
 	<h3 id="reviews-attributions">
 		<i data-icon="certificate"></i>
@@ -178,6 +198,32 @@
 
 	<hr />
 
+	<h2>
+		<i data-icon="infinity"></i>
+		<span>singularity</span>
+	</h2>
+	<p>
+		hey, <em>dear</em>. how's life been treating you?<br />
+		i hope you're not being too hard on yourself,<br />
+		you've always carried more than you let on.<br />
+		i know it's hard to remember your life,<br />
+		so let this be something that stays.
+	</p>
+	<p>
+		remember everything you've done so far,<br />
+		the hours poured in when no one's watching,<br />
+		the effort it took to keep going behind the scenes,<br />
+		all of it a reflection of how much you gave,<br />
+		and how deeply you've cared for what you love.
+	</p>
+
+	<p>
+		at the very least,<br />
+		remember that i love you.<br />
+		always have, always will.<br />
+		<em>— your lifelong partner</em>
+	</p>
+
 	<h2 id="colophon">
 		<i data-icon="stack"></i>
 		<span>colophon</span>
@@ -187,43 +233,43 @@
 	<ul>
 		<li>
 			<strong><a href="https://svelte.dev" target="_blank">sveltekit</a></strong>
-			<span>the framework that makes all of this feel effortless.</span>
+			<span>— the framework that makes all of this feel effortless.</span>
 		</li>
 		<!-- re-enable when it's actually used
 		<li>
 			<strong><a href="https://pocketbase.io" target="_blank">pocketbase</a></strong>
-			<span>the minimal and lightweight all-in-one backend.</span>
+			<span>— the minimal and lightweight all-in-one backend.</span>
 		</li>
 		-->
 		<li>
 			<strong><a href="https://phosphoricons.com" target="_blank">phosphor</a></strong>
-			<span>clean, beautiful, and versatile open-source icons.</span>
+			<span>— clean, beautiful, and versatile open-source icons.</span>
 		</li>
 		<li>
 			<strong><a href="https://fontsource.org" target="_blank">fontsource</a></strong>
-			<span>self-hosted fonts for performance and privacy.</span>
+			<span>— self-hosted fonts for performance and privacy.</span>
 			<ul>
 				<li>
 					<strong>
 						<a href="https://fontsource.org/fonts/newsreader" target="_blank">newsreader</a>
 					</strong>
-					<span>a thoughtfully crafted serif for long-form reading.</span>
+					<span>— a thoughtfully crafted serif for long-form reading.</span>
 				</li>
 				<li>
 					<strong>
 						<a href="https://fontsource.org/fonts/recursive" target="_blank">recursive</a>
 					</strong>
-					<span>a powerful and flexible five-axis variable font.</span>
+					<span>— a powerful and flexible five-axis variable font.</span>
 				</li>
 			</ul>
 		</li>
 		<li>
 			<strong><a href="https://github.com">github</a></strong>
-			<span>where everything i build and share lives — this site included.</span>
+			<span>— where everything i build and share lives, this site included.</span>
 		</li>
 		<li>
 			<strong><a href="https://vercel.com">vercel</a></strong>
-			<span>where this site lives and breathes, fast and reliable.</span>
+			<span>— where this site lives and breathes, fast and reliable.</span>
 		</li>
 	</ul>
 </Article>
@@ -246,10 +292,6 @@
 		}
 	}
 
-	li > strong + span::before {
-		content: '— ';
-	}
-
 	i[data-icon] {
 		&[data-icon='basket'] {
 			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"><line x1="128" y1="120" x2="128" y2="176"/><polyline points="184 88 128 24 72 88"/><line x1="180.8" y1="120" x2="175.2" y2="176"/><line x1="75.2" y1="120" x2="80.8" y2="176"/><path d="M24,88H232L216.93,201.06A8,8,0,0,1,209,208H47a8,8,0,0,1-7.93-6.94Z"/></svg>');
@@ -257,11 +299,17 @@
 		&[data-icon='certificate'] {
 			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"><line x1="72" y1="136" x2="120" y2="136"/><line x1="72" y1="104" x2="120" y2="104"/><circle cx="196" cy="124" r="44"/><path d="M168,192H40a8,8,0,0,1-8-8V56a8,8,0,0,1,8-8H216a8,8,0,0,1,8,8V90.06"/><polyline points="168 157.94 168 224 196 208 224 224 224 157.94"/></svg>');
 		}
+		&[data-icon='infinity'] {
+			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M106.63,152.13l-8.69,9.81a48,48,0,1,1,0-67.88l60.12,67.88a48,48,0,1,0,0-67.88l-8.69,9.81" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"/></svg>');
+		}
 		&[data-icon='scroll'] {
 			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"><path d="M200,176V64a24,24,0,0,0-24-24H40"/><line x1="104" y1="104" x2="168" y2="104"/><line x1="104" y1="136" x2="168" y2="136"/><path d="M24,80s-8-6-8-16a24,24,0,0,1,48,0V192a24,24,0,0,0,48,0c0-10-8-16-8-16H216s8,6,8,16a24,24,0,0,1-24,24H88"/></svg>');
 		}
 		&[data-icon='stack'] {
 			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"><polyline points="32 176 128 232 224 176"/><polyline points="32 128 128 184 224 128"/><polygon points="32 80 128 136 224 80 128 24 32 80"/></svg>');
+		}
+		&[data-icon='stairs'] {
+			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"><polyline points="48 176 104 176 104 136 152 136 152 96 208 96"/><rect x="48" y="32" width="160" height="192" rx="8"/><line x1="104" y1="176" x2="208" y2="176"/><line x1="152" y1="136" x2="208" y2="136"/></svg>');
 		}
 		&[data-icon='strategy'] {
 			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"><circle cx="76" cy="188" r="28"/><line x1="48" y1="72" x2="88" y2="112"/><line x1="88" y1="72" x2="48" y2="112"/><line x1="184" y1="168" x2="224" y2="208"/><line x1="224" y1="168" x2="184" y2="208"/><polyline points="144 80 144 40 184 40"/><path d="M144,40l16,16c40,40,8,88-24,96"/></svg>');
