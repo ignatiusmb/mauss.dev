@@ -270,23 +270,19 @@
 				}
 			}
 		}
-		/* @TODO: have 2 quote styles */
 		blockquote {
-			line-height: 1.325;
-			text-align: center;
+			padding: 0 calc(var(--size-base) * 0.7);
+			margin: calc(var(--size-base) * 0.64) 0;
+			border-left: var(--rounding-base) solid var(--color-border);
+			font-size: var(--size-base);
 			font-style: italic;
-			font-size: clamp(1.4rem, 3vw, 1.8rem);
-			margin: clamp(0.5rem, 3vw, 1.5rem);
+			color: var(--color-text-muted);
 
 			> :first-child {
 				margin: 0;
 			}
-			p {
-				font-size: inherit;
-				line-height: unset;
-			}
-			li {
-				margin-left: unset;
+			+ p {
+				margin-top: 0;
 			}
 		}
 		img,

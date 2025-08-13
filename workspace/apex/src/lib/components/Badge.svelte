@@ -5,10 +5,7 @@
 		tag: string;
 	}
 	const { tag }: Props = $props();
-	const Contrast = {
-		DARK: 'var(--color-base)',
-		LIGHT: 'oklch(1 0 0)',
-	};
+	const Contrast = { DARK: 'var(--color-base)', LIGHT: 'oklch(1 0 0)' };
 	const table: Record<string, [background: string, color: string]> = {
 		accessibility: ['#4285f4', Contrast.LIGHT],
 		android: ['#56a036', Contrast.LIGHT],
