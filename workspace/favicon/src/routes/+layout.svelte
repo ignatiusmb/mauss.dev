@@ -27,7 +27,7 @@
 
 <div>
 	<header>
-		<h1>a minimal SVG to favicon generator</h1>
+		<h1>SVG to Favicon</h1>
 		<p>
 			<a href="https://github.com/ignatiusmb/mauss.dev/tree/master/workspace/favicon">
 				open-source,
