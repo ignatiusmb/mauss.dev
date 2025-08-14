@@ -106,8 +106,17 @@ export const ROUTES = {
 
 	async '/posts'() {
 		const schema = attempt.wrap(
-			define(({ optional, array, string }) => ({
+			define(({ optional, array, literal, string }) => ({
 				date: string(),
+				theme: optional(
+					literal(
+						'reflection', // personal thoughts or reflections on a topic
+						'essay', // opinionated long-form exploration of a subject
+						'guide', // practical instructions or how-to
+						'moment', // brief observation or thought, short or small insight
+						'archive', // republishing or preserving content for reference
+					),
+				),
 				title: string(),
 				description: optional(string()),
 				tags: array(string()),
