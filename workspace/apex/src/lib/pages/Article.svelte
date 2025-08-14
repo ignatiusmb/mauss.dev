@@ -23,9 +23,9 @@
 		<header>
 			<aside>
 				<time datetime={post.date}>{date(post.date).format('DD MMMM YYYY')}</time>
-				{#if post.estimate}
+				{#if post.theme}
 					<span class="separator">&bull;</span>
-					<span>{post.estimate} min read</span>
+					<span style:text-transform="capitalize">{post.theme}</span>
 				{/if}
 			</aside>
 

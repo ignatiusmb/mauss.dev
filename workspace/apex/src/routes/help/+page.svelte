@@ -24,6 +24,7 @@
 		items={[
 			{ id: 'atelier', title: '/atelier' },
 			{ id: 'curated', title: '/curated' },
+			{ id: 'curated-essence', title: 'essence', level: 3 },
 			{ id: 'curated-harvest', title: 'harvest', level: 3 },
 			{ id: 'posts', title: '/posts' },
 			{ id: 'reviews', title: '/reviews' },
@@ -56,6 +57,13 @@
 	<!-- prettier-ignore -->
 	<p>this index is where i keep recurring series and entries that aren't bound to the time they were written — pieces that hold up no matter when they're read. marked by lasting relevance, not by urgency, each one is meant to hold meaning long after the moment has passed.</p>
 
+	<h3 id="curated-essence">
+		<i data-icon="drop"></i>
+		<a href="/curated?series=the-essence">essence</a>
+	</h3>
+	<!-- prettier-ignore -->
+	<p>a collection of distilled articles on the essence of a topic — clear, concise guides to core concepts, in a nutshell. these are the things i want to keep close. each piece stands on its own, so pick any topic and dive straight in.</p>
+
 	<h3 id="curated-harvest">
 		<i data-icon="basket"></i>
 		<a href="/curated?series=the-harvest">harvest</a>
@@ -63,31 +71,16 @@
 	<!-- prettier-ignore -->
 	<p>this series is a monthly snapshot of memorable experiences. making this <em>monthly digest</em> at the start of each month helps me reflect on what has passed; to record what i've learned and preserve the moments that stayed with me. it's also a way to share what i found meaningful, in hopes that something here might resonate with you.</p>
 	<ul>
-		<li>
-			<strong>headlines</strong>
-			<!-- prettier-ignore -->
-			<span>personal moments and global happenings; news, milestones, and cultural shifts that stood out and shaped the month.</span>
-		</li>
-		<li>
-			<strong>stories</strong>
-			<!-- prettier-ignore -->
-			<span>the lives and worlds i stepped into; mostly anime and movies, but open to any medium that tells a compelling story.</span>
-		</li>
-		<li>
-			<strong>pieces</strong>
-			<!-- prettier-ignore -->
-			<span>articles, essays, and posts; thoughtful writing that lingered in my head or stirred something within me.</span>
-		</li>
-		<li>
-			<strong>tracks</strong>
-			<!-- prettier-ignore -->
-			<span>music that stayed with me; sounds and songs that guides my mood throughout the month.</span>
-		</li>
-		<li>
-			<strong>clips</strong>
-			<!-- prettier-ignore -->
-			<span>videos worth remembering; spontaneous finds full of insight, craft, or pure delight.</span>
-		</li>
+		<!-- prettier-ignore -->
+		<li><strong>headlines</strong> — personal moments and global happenings; news, milestones, and cultural shifts that stood out and shaped the month.</li>
+		<!-- prettier-ignore -->
+		<li><strong>stories</strong> — the lives and worlds i stepped into; mostly anime and movies, but open to any medium that tells a compelling story.</li>
+		<!-- prettier-ignore -->
+		<li><strong>pieces</strong> — articles, essays, and posts; thoughtful writing that lingered in my head or stirred something within me.</li>
+		<!-- prettier-ignore -->
+		<li><strong>tracks</strong> — music that stayed with me; sounds and songs that guides my mood throughout the month.</li>
+		<!-- prettier-ignore -->
+		<li><strong>clips</strong> — videos worth remembering; spontaneous finds full of insight, craft, or pure delight.</li>
 	</ul>
 
 	<h2 id="posts">
@@ -327,6 +320,9 @@
 		}
 		&[data-icon='certificate'] {
 			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"><line x1="72" y1="136" x2="120" y2="136"/><line x1="72" y1="104" x2="120" y2="104"/><circle cx="196" cy="124" r="44"/><path d="M168,192H40a8,8,0,0,1-8-8V56a8,8,0,0,1,8-8H216a8,8,0,0,1,8,8V90.06"/><polyline points="168 157.94 168 224 196 208 224 224 224 157.94"/></svg>');
+		}
+		&[data-icon='drop'] {
+			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"><path d="M208,144c0-72-80-128-80-128S48,72,48,144a80,80,0,0,0,160,0Z"/><path d="M136,192c20-3.37,36.61-20,40-40"/></svg>');
 		}
 		&[data-icon='envelope-simple'] {
 			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"><path d="M32,56H224a0,0,0,0,1,0,0V192a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V56A0,0,0,0,1,32,56Z"/><polyline points="224 56 128 144 32 56"/></svg>');
