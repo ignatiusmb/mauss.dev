@@ -261,58 +261,27 @@
 	<!-- prettier-ignore -->
 	<p>built with open-source tools and thoughtfully chosen parts.</p>
 	<ul>
-		<li>
-			<strong>
-				<a href="https://svelte.dev" target="_blank" rel="noopener noreferrer">sveltekit</a>
-			</strong>
-			<span>— the framework that makes all of this feel effortless.</span>
-		</li>
+		<!-- prettier-ignore -->
+		<li><strong><a href="https://svelte.dev" target="_blank" rel="noopener noreferrer">sveltekit</a></strong> — the framework that makes all of this feel effortless.</li>
 		<!-- re-enable when it's actually used
-		<li>
-			<strong><a href="https://pocketbase.io" target="_blank" rel="noopener noreferrer">pocketbase</a></strong>
-			<span>— the minimal and lightweight all-in-one backend.</span>
-		</li>
+		<li><strong><a href="https://pocketbase.io" target="_blank" rel="noopener noreferrer">pocketbase</a></strong> — the minimal and lightweight all-in-one backend.</li>
 		-->
+		<!-- prettier-ignore -->
+		<li><strong><a href="https://phosphoricons.com" target="_blank" rel="noopener noreferrer">phosphor</a></strong> — clean, beautiful, and versatile open-source icons.</li>
 		<li>
-			<strong>
-				<a href="https://phosphoricons.com" target="_blank" rel="noopener noreferrer">phosphor</a>
-			</strong>
-			<span>— clean, beautiful, and versatile open-source icons.</span>
-		</li>
-		<li>
-			<strong>
-				<a href="https://fontsource.org" target="_blank" rel="noopener noreferrer">fontsource</a>
-			</strong>
-			<span>— self-hosted fonts for performance and privacy.</span>
+			<!-- prettier-ignore -->
+			<span><strong><a href="https://fontsource.org" target="_blank" rel="noopener noreferrer">fontsource</a></strong> — self-hosted fonts for performance and privacy.</span>
 			<ul>
-				<li>
-					<strong>
-						<!-- prettier-ignore -->
-						<a href="https://fontsource.org/fonts/newsreader" target="_blank" rel="noopener noreferrer">newsreader</a>
-					</strong>
-					<span>— a thoughtfully crafted serif for long-form reading.</span>
-				</li>
-				<li>
-					<strong>
-						<!-- prettier-ignore -->
-						<a href="https://fontsource.org/fonts/recursive" target="_blank" rel="noopener noreferrer">recursive</a>
-					</strong>
-					<span>— a powerful and flexible five-axis variable font.</span>
-				</li>
+				<!-- prettier-ignore -->
+				<li><strong><a href="https://fontsource.org/fonts/newsreader" target="_blank" rel="noopener noreferrer">newsreader</a></strong> — a thoughtfully crafted serif for long-form reading.</li>
+				<!-- prettier-ignore -->
+				<li><strong><a href="https://fontsource.org/fonts/recursive" target="_blank" rel="noopener noreferrer">recursive</a></strong> — a powerful and flexible five-axis variable font.</li>
 			</ul>
 		</li>
-		<li>
-			<strong>
-				<a href="https://github.com" target="_blank" rel="noopener noreferrer">github</a>
-			</strong>
-			<span>— where everything i build and share lives, this site included.</span>
-		</li>
-		<li>
-			<strong>
-				<a href="https://vercel.com" target="_blank" rel="noopener noreferrer">vercel</a>
-			</strong>
-			<span>— where this site lives and breathes, fast and reliable.</span>
-		</li>
+		<!-- prettier-ignore -->
+		<li><strong><a href="https://github.com" target="_blank" rel="noopener noreferrer">github</a></strong> — where everything i build and share lives, this site included.</li>
+		<!-- prettier-ignore -->
+		<li><strong><a href="https://vercel.com" target="_blank" rel="noopener noreferrer">vercel</a></strong> — where this site lives and breathes, fast and reliable.</li>
 	</ul>
 </Article>
 
