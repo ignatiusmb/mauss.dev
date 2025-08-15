@@ -102,7 +102,7 @@
 	{#if path}
 		<section data-info>
 			<!-- prettier-ignore -->
-			<p>open-source and open to improvement — <a href="https://github.com/ignatiusmb/mauss.dev/issues">file an issue</a> or <a href="https://github.com/ignatiusmb/mauss.dev/blob/master/workspace/content/routes/{path}">suggest changes</a> via github</p>
+			<p>feedback or fixes welcome — <a href="https://github.com/ignatiusmb/mauss.dev/issues">issues</a> &middot; <a href="https://github.com/ignatiusmb/mauss.dev/blob/master/workspace/content/routes/{path}">edits</a></p>
 		</section>
 	{/if}
 </article>
