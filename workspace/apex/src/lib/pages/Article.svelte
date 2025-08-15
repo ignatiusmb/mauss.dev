@@ -452,6 +452,8 @@
 			width: 100%;
 			margin-top: 1rem;
 			border-collapse: collapse;
+			line-height: 1.3;
+			font-size: calc(var(--size-base) * 0.89);
 
 			thead {
 				background: var(--color-surface);
