@@ -39,7 +39,6 @@
 		matches={memory.matches.length}
 		filters={memory.filters}
 		onclose={() => {
-			// history.back();
 			index = memory.matches;
 			const { search: q, ...filters } = params;
 			const url = qse({ q, ...filters }) || page.url.pathname;
@@ -107,7 +106,9 @@
 
 					<footer>
 						<time datetime={post.date}>{date(post.date).format('DD MMMM YYYY')}</time>
-						<span>{post.estimate} min read</span>
+						{#if post.theme}
+							<span style:text-transform="capitalize">{post.theme}</span>
+						{/if}
 					</footer>
 				</div>
 			</Image>

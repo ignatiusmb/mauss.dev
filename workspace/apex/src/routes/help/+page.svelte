@@ -27,6 +27,7 @@
 			{ id: 'curated-essence', title: 'essence', level: 3 },
 			{ id: 'curated-harvest', title: 'harvest', level: 3 },
 			{ id: 'posts', title: '/posts' },
+			{ id: 'posts-themes', title: 'themes', level: 3 },
 			{ id: 'reviews', title: '/reviews' },
 			{ id: 'reviews-how-i-review', title: 'how i review', level: 3 },
 			{ id: 'reviews-tiers', title: 'tiers', level: 3 },
@@ -78,7 +79,7 @@
 		<!-- prettier-ignore -->
 		<li><strong>pieces</strong> — articles, essays, and posts; thoughtful writing that lingered in my head or stirred something within me.</li>
 		<!-- prettier-ignore -->
-		<li><strong>tracks</strong> — music that stayed with me; sounds and songs that guides my mood throughout the month.</li>
+		<li><strong>tracks</strong> — music that stayed with me; sounds and songs that guide my mood throughout the month.</li>
 		<!-- prettier-ignore -->
 		<li><strong>clips</strong> — videos worth remembering; spontaneous finds full of insight, craft, or pure delight.</li>
 	</ul>
@@ -89,6 +90,25 @@
 	</h2>
 	<!-- prettier-ignore -->
 	<p>this index is where i gather passing thoughts and small revelations — a journal of the days as they unfold. some entries are personal reflections, others trace my work and technical curiosities. i write to understand, remember, and leave a trail through the thoughts that shaped me.</p>
+
+	<h3 id="posts-themes">
+		<i data-icon="swatches"></i>
+		<span>themes</span>
+	</h3>
+	<!-- prettier-ignore -->
+	<p>these are loose trails to help you find the piece you're in the mood for. i keep them broad enough to cover various topics, but specific enough to give you a sense of what to expect.</p>
+	<ul>
+		<!-- prettier-ignore -->
+		<li><strong>reflection</strong> — <em>personal thoughts or reflections</em>. introspective pieces that explore feelings, experiences, and lessons learned. often more emotional and subjective, capturing a moment in time rather than building a polished argument.</li>
+		<!-- prettier-ignore -->
+		<li><strong>essay</strong> — <em>opinionated long-form exploration</em>. well-researched and refined deep dives into a topic, shaped by my own perspective. i aim for accuracy, but i may still get things wrong.</li>
+		<!-- prettier-ignore -->
+		<li><strong>guide</strong> — <em>practical instructions or behind-the-scenes</em>. how-to articles or devlogs of my own workflow and problem-solving. follow along, adapt ideas, and apply what you learn.</li>
+		<!-- prettier-ignore -->
+		<li><strong>moment</strong> — <em>brief observation or thought</em>. sometimes unrefined, short, spontaneous notes or insights. they may grow into something more substantial over time.</li>
+		<!-- prettier-ignore -->
+		<li><strong>archive</strong> — <em>republished or preserved</em>. pieces kept for reference, whether old articles or other material worth keeping. they may be unpolished, but they hold value in their own way.</li>
+	</ul>
 
 	<h2 id="reviews">
 		<i data-icon="flower-lotus"></i>
@@ -344,6 +364,9 @@
 		}
 		&[data-icon='squares-four'] {
 			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"><rect x="48" y="48" width="64" height="64" rx="8"/><rect x="144" y="48" width="64" height="64" rx="8"/><rect x="48" y="144" width="64" height="64" rx="8"/><rect x="144" y="144" width="64" height="64" rx="8"/></svg>');
+		}
+		&[data-icon='swatches'] {
+			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"><circle cx="76" cy="180" r="10"/><path d="M110.84,186.25a35.71,35.71,0,0,1-41.34,29.2h0a36,36,0,0,1-28.95-41.71l25-143.13a8,8,0,0,1,9.19-6.49l54.67,9.73a8,8,0,0,1,6.44,9.26Z"/><path d="M232,156.19V208a8,8,0,0,1-8,8H76"/><path d="M121.42,125.76l80.79-29.28a8,8,0,0,1,10.22,4.75l19.09,52.21a7.93,7.93,0,0,1-4.77,10.17L88.16,213.84A35.07,35.07,0,0,1,76,216"/></svg>');
 		}
 	}
 </style>
