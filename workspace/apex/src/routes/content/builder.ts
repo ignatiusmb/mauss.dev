@@ -115,7 +115,9 @@ export const ROUTES = {
 						'guide', // practical instructions or how-to
 						'moment', // brief observation or thought, short or small insight
 						'archive', // republishing or preserving content for reference
+						'pending', // unassigned or awaiting categorization
 					),
+					'pending',
 				),
 				title: string(),
 				description: optional(string()),

@@ -3,7 +3,7 @@ import { by, sift } from './search.svelte';
 
 export async function load({ parent, url }) {
 	const { items, metadata } = await parent();
-	const { q = [''], tags = [], sort_by = ['date'] } = qsd(url.search);
+	const { q = [''], theme = [], tags = [], sort_by = ['date'] } = qsd(url.search);
 
 	const index = items.map(({ content, ...item }) => item);
 
@@ -12,10 +12,15 @@ export async function load({ parent, url }) {
 		query: String(q[0]),
 		results: sift(index, {
 			search: String(q[0]),
+			theme: String(theme[0]),
 			tags: tags.map(String),
 			sort_by: sort_by[0] as keyof typeof by,
 		}),
 		filters: {
+			// theme: {
+			// 	options: Object.fromEntries(metadata.theme),
+			// 	selected: metadata.theme.find(([v]) => v === theme[0]) ? theme[0] : '',
+			// },
 			tags: metadata.tags.map((v) => ({ name: v, selected: tags.includes(v) })),
 			sort_by: {
 				required: true,

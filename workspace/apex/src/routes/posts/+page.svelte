@@ -25,6 +25,7 @@
 		const { tags, sort_by } = memory.filters;
 		return {
 			search: String(memory.params.q?.[0] || ''),
+			theme: String(memory.params.theme?.[0] || ''),
 			tags: tags.flatMap((g) => (g.selected ? [g.name] : [])),
 			sort_by: sort_by.selected as Query['sort_by'],
 		} satisfies Query;
@@ -106,7 +107,7 @@
 
 					<footer>
 						<time datetime={post.date}>{date(post.date).format('DD MMMM YYYY')}</time>
-						{#if post.theme}
+						{#if post.theme !== 'pending'}
 							<span style:text-transform="capitalize">{post.theme}</span>
 						{/if}
 					</footer>
