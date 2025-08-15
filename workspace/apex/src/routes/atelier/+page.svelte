@@ -197,7 +197,7 @@
 			<li>felt the quiet joy of something that just works — and never thinking about it again</li>
 		</ul>
 		<!-- prettier-ignore -->
-		<p>part of <a href="https://github.com/ignatiusmb/prettier-plugin-suite" target="_blank" rel="noopener noreferrer">ignatiusmb/prettier-plugin-suite</a></p>
+		<p>part of <a href="https://github.com/ignatiusmb/prettier-plugin-suite">ignatiusmb/prettier-plugin-suite</a></p>
 	</Project>
 	<Project
 		link="https://www.npmjs.com/package/@ignatiusmb/styles"

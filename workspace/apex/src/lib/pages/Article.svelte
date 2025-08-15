@@ -102,7 +102,7 @@
 	{#if path}
 		<section data-info>
 			<!-- prettier-ignore -->
-			<p>open-source and open to improvement — <a href="https://github.com/ignatiusmb/mauss.dev/issues" target="_blank" rel="noopener noreferrer">file an issue</a> or <a href="https://github.com/ignatiusmb/mauss.dev/blob/master/workspace/content/routes/{path}" target="_blank" rel="noopener noreferrer">suggest changes</a> via github</p>
+			<p>open-source and open to improvement — <a href="https://github.com/ignatiusmb/mauss.dev/issues">file an issue</a> or <a href="https://github.com/ignatiusmb/mauss.dev/blob/master/workspace/content/routes/{path}">suggest changes</a> via github</p>
 		</section>
 	{/if}
 </article>
@@ -446,6 +446,24 @@
 				img {
 					object-fit: cover;
 				}
+			}
+		}
+		table {
+			width: 100%;
+			margin-top: 1rem;
+			border-collapse: collapse;
+
+			thead {
+				background: var(--color-surface);
+				color: var(--color-text-muted);
+				font-weight: 500;
+			}
+
+			td,
+			th {
+				padding: 0.5rem;
+				border-bottom: 1px solid var(--color-border);
+				text-align: left;
 			}
 		}
 

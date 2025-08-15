@@ -1,177 +1,112 @@
 <script lang="ts">
 	import Article from '$lib/pages/Article.svelte';
+	const instruments: Array<{
+		icon: string;
+		type: string;
+		items: Array<{
+			type: string;
+			name: string;
+			link?: string;
+		}>;
+	}> = [
+		{
+			icon: 'devices',
+			type: 'hardware',
+			items: [
+				{
+					type: 'PC',
+					name: 'ASUS NUC 14 Pro',
+					link: 'https://www.asus.com/us/displays-desktops/nucs/nuc-mini-pcs/asus-nuc-14-pro',
+				},
+				{
+					type: 'Display',
+					name: 'LG UltraGear 27GL83A-B 27"',
+					link: 'https://www.lg.com/us/monitors/lg-27gl83a-b-gaming-monitor',
+				},
+				{
+					type: 'Keyboard',
+					name: 'Keychron K2 - Brown Switch',
+					link: 'https://www.keychron.com/products/keychron-k2-wireless-mechanical-keyboard',
+				},
+				{
+					type: 'Home Lab',
+					name: 'GEEKOM Mini Air12',
+					link: 'https://www.geekompc.com/geekom-mini-air12-mini-pc',
+				},
+				{
+					type: 'Storage',
+					name: 'ORICO 4-bay',
+					link: 'https://www.orico.cc/us/product/detail/3617.html',
+				},
+				{ type: 'Phone', name: 'Galaxy S23+' },
+				{ type: 'Watch', name: 'Venu 2 Plus' },
+				{ type: 'Earbuds', name: 'Galaxy Buds3 Pro' },
+			],
+		},
+		{
+			icon: 'terminal-window',
+			type: 'software',
+			items: [
+				{
+					type: 'Launcher',
+					name: 'Niagara',
+					link: 'https://play.google.com/store/apps/details?id=bitpit.launcher',
+				},
+				{ type: 'Code', name: 'VS Code', link: 'https://code.visualstudio.com' },
+				{ type: 'Music', name: 'Spotify', link: 'https://open.spotify.com' },
+				{ type: 'Vault', name: 'Bitwarden', link: 'https://bitwarden.com' },
+				{ type: 'Server', name: 'DietPi', link: 'https://dietpi.com' },
+				{ type: '3D + Video', name: 'Blender', link: 'https://www.blender.org' },
+			],
+		},
+		{
+			icon: 'drop-half',
+			type: 'wellness',
+			items: [
+				{ type: 'Cleanser', name: 'Bioderma Sensibio' },
+				{ type: 'Moisturizer', name: 'Effaclar Duo+M' },
+				{ type: 'Vitamin D3', name: '10000 IU' },
+				{ type: 'Vitamin K2', name: 'MK7 200 mcg' },
+				{ type: 'Magnesium', name: 'Glycinate 500 mg' },
+				{ type: 'Creatine', name: '5 g' },
+			],
+		},
+	];
 </script>
 
 <header>
 	<h1>instruments</h1>
 	<!-- prettier-ignore -->
-	<small>daily essentials — inspired by <a href="https://wesbos.com/uses" target="_blank" rel="noopener noreferrer">Wes Bos</a>.</small>
+	<small>daily essentials — inspired by <a href="https://wesbos.com/uses">Wes Bos</a>.</small>
 </header>
 
 <Article>
-	<h3 id="hardware">
-		<i data-icon="devices"></i>
-		<span>hardware.</span>
-	</h3>
-	<ul>
-		<li>
-			<strong>PC</strong>
-			<span>
-				<a
-					href="https://www.asus.com/us/displays-desktops/nucs/nuc-mini-pcs/asus-nuc-14-pro"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					ASUS NUC 14 Pro
-				</a>
-			</span>
-		</li>
-		<li>
-			<strong>Display</strong>
-			<span>
-				<a
-					href="https://www.lg.com/us/monitors/lg-27gl83a-b-gaming-monitor"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					LG UltraGear 27GL83A-B 27"
-				</a>
-			</span>
-		</li>
-		<li>
-			<strong>Keyboard</strong>
-			<span>
-				<a
-					href="https://www.keychron.com/products/keychron-k2-wireless-mechanical-keyboard"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Keychron K2 - Brown Switch
-				</a>
-			</span>
-		</li>
-
-		<li>
-			<strong>Home Lab</strong>
-			<span>
-				<a
-					href="https://www.geekompc.com/geekom-mini-air12-mini-pc"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					GEEKOM Mini Air12
-				</a>
-			</span>
-		</li>
-		<li>
-			<strong>Storage</strong>
-			<span>
-				<a
-					href="https://www.orico.cc/us/product/detail/3617.html"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					ORICO 4-bay
-				</a>
-			</span>
-		</li>
-
-		<li>
-			<strong>Phone</strong>
-			<span>Galaxy S23+</span>
-		</li>
-		<li>
-			<strong>Watch</strong>
-			<span>Venu 2 Plus</span>
-		</li>
-		<li>
-			<strong>Earbuds</strong>
-			<span>Galaxy Buds3 Pro</span>
-		</li>
-	</ul>
-
-	<h3 id="software">
-		<i data-icon="terminal-window"></i>
-		<span>software.</span>
-	</h3>
-	<ul>
-		<li>
-			<strong>Launcher</strong>
-			<span>
-				<a
-					href="https://play.google.com/store/apps/details?id=bitpit.launcher"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Niagara
-				</a>
-			</span>
-		</li>
-		<li>
-			<strong>Code</strong>
-			<span>
-				<a href="https://code.visualstudio.com" target="_blank" rel="noopener noreferrer">
-					VS Code
-				</a>
-			</span>
-		</li>
-		<li>
-			<strong>Music</strong>
-			<span>
-				<a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer">Spotify</a>
-			</span>
-		</li>
-		<li>
-			<strong>Vault</strong>
-			<span>
-				<a href="https://bitwarden.com" target="_blank" rel="noopener noreferrer">Bitwarden</a>
-			</span>
-		</li>
-		<li>
-			<strong>Server</strong>
-			<span>
-				<a href="https://dietpi.com" target="_blank" rel="noopener noreferrer">DietPi</a>
-			</span>
-		</li>
-		<li>
-			<strong>3D + Video</strong>
-			<span>
-				<a href="https://www.blender.org" target="_blank" rel="noopener noreferrer">Blender</a>
-			</span>
-		</li>
-	</ul>
-
-	<h3 id="wellness">
-		<i data-icon="drop-half"></i>
-		<span>wellness.</span>
-	</h3>
-	<ul>
-		<li>
-			<strong>Cleanser</strong>
-			<span>Bioderma Sensibio</span>
-		</li>
-		<li>
-			<strong>Moisturizer</strong>
-			<span>Effaclar Duo+M</span>
-		</li>
-
-		<li>
-			<strong>Vitamin D3</strong>
-			<span>10000 IU</span>
-		</li>
-		<li>
-			<strong>Vitamin K2</strong>
-			<span>MK7 200 mcg</span>
-		</li>
-		<li>
-			<strong>Magnesium</strong>
-			<span>Glycinate 500 mg</span>
-		</li>
-		<li>
-			<strong>Creatine</strong>
-			<span>5 g</span>
-		</li>
-	</ul>
+	{#each instruments as { icon, type, items }}
+		<h3 id={type}>
+			<i data-icon={icon}></i>
+			<span>{type}.</span>
+		</h3>
+		<table>
+			<thead>
+				<tr>
+					<th>type</th>
+					<th>name</th>
+				</tr>
+			</thead>
+			<tbody>
+				{#each items as { type, name, link }}
+					<tr>
+						<th scope="col">{type}</th>
+						{#if link}
+							<td><a href={link}>{name}</a></td>
+						{:else}
+							<td>{name}</td>
+						{/if}
+					</tr>
+				{/each}
+			</tbody>
+		</table>
+	{/each}
 </Article>
 
 <style>
@@ -190,8 +125,13 @@
 			margin-left: 0.5rem;
 		}
 	}
-	li strong + span::before {
-		content: '| ';
+
+	table {
+		table-layout: fixed;
+
+		th:first-child {
+			width: 7.8rem;
+		}
 	}
 
 	i[data-icon] {

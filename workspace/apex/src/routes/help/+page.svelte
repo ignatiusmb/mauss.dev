@@ -158,7 +158,7 @@
 		style:margin-top="1rem"
 	/>
 	<!-- prettier-ignore -->
-	<p>most images are sourced from <a href="https://www.themoviedb.org" target="_blank" rel="noopener noreferrer">TMDB</a>, used under their <a href="https://www.themoviedb.org/about/logos-attribution" target="_blank" rel="noopener noreferrer">attribution terms</a>. i'm not affiliated — they're just excellent and convenient. all reviews are my own; if you have concerns, feel free to reach out.</p>
+	<p>most images are sourced from <a href="https://www.themoviedb.org">TMDB</a>, used under their <a href="https://www.themoviedb.org/about/logos-attribution">attribution terms</a>. i'm not affiliated — they're just excellent and convenient. all reviews are my own; if you have concerns, feel free to reach out.</p>
 
 	<hr />
 
@@ -250,9 +250,9 @@
 	</h2>
 	<p>there's no email newsletter here (yet), sorry.</p>
 	<!-- prettier-ignore -->
-	<p>some people swear by them — email clients are powerful these days, with excellent syncing and filtering. there's even an <a href="https://feedmail.org/" target="_blank" rel="noopener noreferrer">RSS-to-email service</a> if you'd rather get updates straight in your inbox. others prefer a clean inbox, keeping email for important messages only. if that's you, <a href="https://kill-the-newsletter.com/" target="_blank" rel="noopener noreferrer">kill-the-newsletter</a> can turn newsletters into feeds you can follow in a reader.</p>
+	<p>some people swear by them — email clients are powerful these days, with excellent syncing and filtering. there's even an <a href="https://feedmail.org/">RSS-to-email service</a> if you'd rather get updates straight in your inbox. others prefer a clean inbox, keeping email for important messages only. if that's you, <a href="https://kill-the-newsletter.com/">kill-the-newsletter</a> can turn newsletters into feeds you can follow in a reader.</p>
 	<!-- prettier-ignore -->
-	<p>i see the appeal of both camps. personally, i lean toward <a href="#other-paths-rss">RSS</a> — it's open, flexible, and feed readers tend to do a better job than email clients in their own way.</p>
+	<p>i see the appeal of both camps. personally, i lean toward <a href="#other-paths-rss">RSS</a> — it's open, flexible, and feed readers tend to do a better job than email clients in their own way, but i'm not militant about 'killing the newsletter' from my inbox.</p>
 
 	<h2 id="colophon">
 		<i data-icon="stack"></i>
@@ -262,26 +262,26 @@
 	<p>built with open-source tools and thoughtfully chosen parts.</p>
 	<ul>
 		<!-- prettier-ignore -->
-		<li><strong><a href="https://svelte.dev" target="_blank" rel="noopener noreferrer">sveltekit</a></strong> — the framework that makes all of this feel effortless.</li>
+		<li><strong><a href="https://svelte.dev">sveltekit</a></strong> — the framework that makes all of this feel effortless.</li>
 		<!-- re-enable when it's actually used
-		<li><strong><a href="https://pocketbase.io" target="_blank" rel="noopener noreferrer">pocketbase</a></strong> — the minimal and lightweight all-in-one backend.</li>
+		<li><strong><a href="https://pocketbase.io">pocketbase</a></strong> — the minimal and lightweight all-in-one backend.</li>
 		-->
 		<!-- prettier-ignore -->
-		<li><strong><a href="https://phosphoricons.com" target="_blank" rel="noopener noreferrer">phosphor</a></strong> — clean, beautiful, and versatile open-source icons.</li>
+		<li><strong><a href="https://phosphoricons.com">phosphor</a></strong> — clean, beautiful, and versatile open-source icons.</li>
 		<li>
 			<!-- prettier-ignore -->
-			<span><strong><a href="https://fontsource.org" target="_blank" rel="noopener noreferrer">fontsource</a></strong> — self-hosted fonts for performance and privacy.</span>
+			<span><strong><a href="https://fontsource.org">fontsource</a></strong> — self-hosted fonts for performance and privacy.</span>
 			<ul>
 				<!-- prettier-ignore -->
-				<li><strong><a href="https://fontsource.org/fonts/newsreader" target="_blank" rel="noopener noreferrer">newsreader</a></strong> — a thoughtfully crafted serif for long-form reading.</li>
+				<li><strong><a href="https://fontsource.org/fonts/newsreader">newsreader</a></strong> — a thoughtfully crafted serif for long-form reading.</li>
 				<!-- prettier-ignore -->
-				<li><strong><a href="https://fontsource.org/fonts/recursive" target="_blank" rel="noopener noreferrer">recursive</a></strong> — a powerful and flexible five-axis variable font.</li>
+				<li><strong><a href="https://fontsource.org/fonts/recursive">recursive</a></strong> — a powerful and flexible five-axis variable font.</li>
 			</ul>
 		</li>
 		<!-- prettier-ignore -->
-		<li><strong><a href="https://github.com" target="_blank" rel="noopener noreferrer">github</a></strong> — where everything i build and share lives, this site included.</li>
+		<li><strong><a href="https://github.com">github</a></strong> — where everything i build and share lives, this site included.</li>
 		<!-- prettier-ignore -->
-		<li><strong><a href="https://vercel.com" target="_blank" rel="noopener noreferrer">vercel</a></strong> — where this site lives and breathes, fast and reliable.</li>
+		<li><strong><a href="https://vercel.com">vercel</a></strong> — where this site lives and breathes, fast and reliable.</li>
 	</ul>
 </Article>
 
