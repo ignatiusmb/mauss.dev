@@ -37,16 +37,14 @@
 		<i data-icon="map-pin" style:color="inherit"></i>
 		<span>Southeast Asia (GMT+7&ndash;8)</span>
 	</div>
-	<ul>
-		<li>building with sveltekit</li>
-		<li>materializing ideas for <a href="/atelier">/atelier</a></li>
-		<li>crafting collections in <a href="/curated">/curated</a></li>
-		<li>sharing thoughts in <a href="/posts">/posts</a></li>
-		<li>reigniting passion with <a href="/reviews">/reviews</a></li>
-		<li>parsing markdown in <a href="https://github.com/ignatiusmb/aubade">Aubade</a></li>
-		<li>stacking plates, bulking up</li>
-		<li>diving into linguistics and cultures</li>
-	</ul>
+	<!-- prettier-ignore -->
+	<p>i'm currently clearing my notes and backlog of to-dos — a never-ending task, but i try to keep it manageable. most of it is a dump of my mind that i'm shaping into personal projects; finished MVPs and ongoing projects can be found in <a href="/atelier">/atelier</a>.</p>
+	<!-- prettier-ignore -->
+	<p>my most daunting task right now is building a spec-compliant markdown parser for <a href="https://github.com/ignatiusmb/aubade">Aubade</a>, which is <em>deceptively simple</em> on the surface. under the hood, it's a nasty beast of a text format to parse cleanly. i probably should've started with something simpler like JSON or YAML, but i'm already halfway through, so i might as well finish it. the goal is to have a solid foundation for future projects and make it easier to write and share content across my sites (could also be sunk cost fallacy at play, but oh well).</p>
+	<!-- prettier-ignore -->
+	<p>introspectively, i'm trying to write more often. i'm working on series and collections for <a href="/curated">/curated</a> while also dumping thoughts into <a href="/posts">/posts</a>. i still love immersing myself in another world through many mediums. it's pretty hard to pour my thoughts and feelings coherently, so there are more drafts in <a href="/reviews">/reviews</a> than published ones, but i try to keep it up.</p>
+	<!-- prettier-ignore -->
+	<p>aside from all that, i'm making time to <a href="#movement">stay active</a> and keep up the bulk. i'm also diving deeper into linguistics and cultures, mostly Japanese right now.</p>
 
 	<h3 id="elsewhere">
 		<i data-icon="share-network"></i>

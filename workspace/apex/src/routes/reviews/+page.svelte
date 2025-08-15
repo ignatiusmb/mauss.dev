@@ -41,7 +41,6 @@
 		matches={memory.matches.length}
 		filters={memory.filters}
 		onclose={() => {
-			// history.back();
 			index = memory.matches;
 			const { search: q, ...filters } = params;
 			const url = qse({ q, ...filters }) || page.url.pathname;

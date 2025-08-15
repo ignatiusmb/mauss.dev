@@ -78,8 +78,8 @@ export const ROUTES = {
 
 					return {
 						slug,
-						...frontmatter,
 						...metadata,
+						table: frontmatter.table,
 						content: marker.render(content),
 						branches: (await Promise.all(branches)).filter((b) => b != null),
 					};
@@ -171,8 +171,8 @@ export const ROUTES = {
 
 					return {
 						slug,
-						...frontmatter,
 						...metadata,
+						table: frontmatter.table,
 						content: marker.render(content),
 					};
 				};
@@ -294,8 +294,8 @@ export const ROUTES = {
 						draft: date(metadata.date).is.before('2020-06-25'),
 						slug: `${category}/${slug}`,
 						category,
-						...frontmatter,
 						...metadata,
+						table: frontmatter.table,
 						composed: date(metadata.date).delta(metadata.seen.first).days,
 						branches: (await Promise.all(branches)).filter((b) => b != null),
 						content: marker.render(content),
