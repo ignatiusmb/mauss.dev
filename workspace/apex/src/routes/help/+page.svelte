@@ -71,18 +71,41 @@
 	</h3>
 	<!-- prettier-ignore -->
 	<p>this series is a monthly snapshot of memorable experiences. making this <em>monthly digest</em> at the start of each month helps me reflect on what has passed; to record what i've learned and preserve the moments that stayed with me. it's also a way to share what i found meaningful, in hopes that something here might resonate with you.</p>
-	<ul>
-		<!-- prettier-ignore -->
-		<li><strong>headlines</strong> — personal moments and global happenings; news, milestones, and cultural shifts that stood out and shaped the month.</li>
-		<!-- prettier-ignore -->
-		<li><strong>stories</strong> — the lives and worlds i stepped into; mostly anime and movies, but open to any medium that tells a compelling story.</li>
-		<!-- prettier-ignore -->
-		<li><strong>pieces</strong> — articles, essays, and posts; thoughtful writing that lingered in my head or stirred something within me.</li>
-		<!-- prettier-ignore -->
-		<li><strong>tracks</strong> — music that stayed with me; sounds and songs that guide my mood throughout the month.</li>
-		<!-- prettier-ignore -->
-		<li><strong>clips</strong> — videos worth remembering; spontaneous finds full of insight, craft, or pure delight.</li>
-	</ul>
+	<table>
+		<thead>
+			<tr>
+				<th>section</th>
+				<th>description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th scope="col">headlines</th>
+				<!-- prettier-ignore -->
+				<td>personal moments and global happenings; news, milestones, and cultural shifts that stood out and shaped the month.</td>
+			</tr>
+			<tr>
+				<th scope="col">stories</th>
+				<!-- prettier-ignore -->
+				<td>the lives and worlds i stepped into; mostly anime and movies, but open to any medium that tells a compelling story.</td>
+			</tr>
+			<tr>
+				<th scope="col">pieces</th>
+				<!-- prettier-ignore -->
+				<td>articles, essays, and posts; thoughtful writing that lingered in my head or stirred something within me.</td>
+			</tr>
+			<tr>
+				<th scope="col">tracks</th>
+				<!-- prettier-ignore -->
+				<td>music that stayed with me; sounds and songs that guide my mood throughout the month.</td>
+			</tr>
+			<tr>
+				<th scope="col">clips</th>
+				<!-- prettier-ignore -->
+				<td>videos worth remembering; spontaneous finds full of insight, craft, or pure delight.</td>
+			</tr>
+		</tbody>
+	</table>
 
 	<h2 id="posts">
 		<i data-icon="feather"></i>
@@ -97,18 +120,46 @@
 	</h3>
 	<!-- prettier-ignore -->
 	<p>these are loose trails to help you find the piece you're in the mood for. i keep them broad enough to cover various topics, but specific enough to give you a sense of what to expect.</p>
-	<ul>
-		<!-- prettier-ignore -->
-		<li><strong>reflection</strong> — <em>personal thoughts or reflections</em>. introspective pieces that explore feelings, experiences, and lessons learned. often more emotional and subjective, capturing a moment in time rather than building a polished argument.</li>
-		<!-- prettier-ignore -->
-		<li><strong>essay</strong> — <em>opinionated long-form exploration</em>. well-researched and refined deep dives into a topic, shaped by my own perspective. i aim for accuracy, but i may still get things wrong.</li>
-		<!-- prettier-ignore -->
-		<li><strong>guide</strong> — <em>practical instructions or behind-the-scenes</em>. how-to articles or devlogs of my own workflow and problem-solving. follow along, adapt ideas, and apply what you learn.</li>
-		<!-- prettier-ignore -->
-		<li><strong>moment</strong> — <em>brief observation or thought</em>. sometimes unrefined, short, spontaneous notes or insights. they may grow into something more substantial over time.</li>
-		<!-- prettier-ignore -->
-		<li><strong>archive</strong> — <em>republished or preserved</em>. pieces kept for reference, whether old articles or other material worth keeping. they may be unpolished, but they hold value in their own way.</li>
-	</ul>
+	<table>
+		<thead>
+			<tr>
+				<th>theme</th>
+				<th>description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th scope="col"><a href="/posts?theme=reflection">reflection</a></th>
+				<!-- prettier-ignore -->
+				<td><strong>personal thoughts or reflections</strong>. introspective pieces that explore feelings, experiences, and lessons learned. often more emotional and subjective, capturing a moment in time rather than building a polished argument.</td>
+			</tr>
+			<tr>
+				<th scope="col"><a href="/posts?theme=essay">essay</a></th>
+				<!-- prettier-ignore -->
+				<td><strong>opinionated long-form exploration</strong>. well-researched and refined deep dives into a topic, shaped by my own perspective. i aim for accuracy, but i may still get things wrong.</td>
+			</tr>
+			<tr>
+				<th scope="col"><a href="/posts?theme=guide">guide</a></th>
+				<!-- prettier-ignore -->
+				<td><strong>practical instructions or behind-the-scenes</strong>. how-to articles or devlogs of my own workflow and problem-solving. follow along, adapt ideas, and apply what you learn.</td>
+			</tr>
+			<tr>
+				<th scope="col"><a href="/posts?theme=moment">moment</a></th>
+				<!-- prettier-ignore -->
+				<td><strong>brief observation or thought</strong>. sometimes unrefined, short, spontaneous notes or insights. they may grow into something more substantial over time.</td>
+			</tr>
+			<tr>
+				<th scope="col"><a href="/posts?theme=archive">archive</a></th>
+				<!-- prettier-ignore -->
+				<td><strong>republished or preserved</strong>. pieces kept for reference, whether old articles or other material worth keeping. they may be unpolished, but they hold value in their own way.</td>
+			</tr>
+			<tr>
+				<th scope="col"><a href="/posts?theme=pending">pending</a></th>
+				<!-- prettier-ignore -->
+				<td><strong>awaiting theme assignment</strong>. temporary placeholder for posts that haven't yet been given a theme. they will eventually be classified under one of the categories above.</td>
+			</tr>
+		</tbody>
+	</table>
 
 	<h2 id="reviews">
 		<i data-icon="flower-lotus"></i>
@@ -134,18 +185,41 @@
 	</h3>
 	<!-- prettier-ignore -->
 	<p>these are a rough shape of my feelings toward each of them — i think of them as shelves rather than strict rankings. sometimes it's about how <em>visually</em> stunning they were, other times it's how well they captured a feeling or adapted a story. i try to keep it simple, so you can get a quick sense of what stood out to me.</p>
-	<ul>
-		<!-- prettier-ignore -->
-		<li><strong>S-tier</strong> — <em>stellar animation and exceptional adaptation</em>. the ones that make everything else feel dim by comparison. the direction feels impossibly refined. they come closest to my definition of a masterpiece.</li>
-		<!-- prettier-ignore -->
-		<li><strong>A-tier</strong> — <em>highly polished and excellent across the board</em>. impressive, with many standout moments and a lasting impact. they deliver a cohesive, admirable experience. perhaps given more time, care, or stronger source material, they might've reached S-tier.</li>
-		<!-- prettier-ignore -->
-		<li><strong>B-tier</strong> — <em>solid works with occasional highs</em>. reliable, with great ideas or standout moments, but something doesn't quite click. adaptation is often safe or straightforward. the kind of good average many aim for.</li>
-		<!-- prettier-ignore -->
-		<li><strong>C-tier</strong> — <em>watchable but flawed</em>. had potential, but didn't do justice to it. there might be a few good scenes or ideas, but the issues are hard to ignore, and it ultimately feels like a miss. still interesting, sometimes, for what they <em>tried</em> to do.</li>
-		<!-- prettier-ignore -->
-		<li><strong>D-tier</strong> — <em>poor execution, wasted potential</em>. the ones i struggled to finish, or couldn't. even if the core story is good, the execution actively works against it. often messy, incoherent, or just off in ways i couldn't bear. usually a frustrating or forgettable experience.</li>
-	</ul>
+	<table>
+		<thead>
+			<tr>
+				<th>tier</th>
+				<th>description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th scope="col"><a href="/reviews?tier=S">S</a></th>
+				<!-- prettier-ignore -->
+				<td><strong>stellar animation and exceptional adaptation</strong>. the ones that make everything else feel dim by comparison. the direction feels impossibly refined. they come closest to my definition of a masterpiece.</td>
+			</tr>
+			<tr>
+				<th scope="col"><a href="/reviews?tier=A">A</a></th>
+				<!-- prettier-ignore -->
+				<td><strong>highly polished and excellent across the board</strong>. impressive, with many standout moments and a lasting impact. they deliver a cohesive, admirable experience. perhaps given more time, care, or stronger source material, they might've reached S-tier.</td>
+			</tr>
+			<tr>
+				<th scope="col"><a href="/reviews?tier=B">B</a></th>
+				<!-- prettier-ignore -->
+				<td><strong>solid works with occasional highs</strong>. reliable, with great ideas or standout moments, but something doesn't quite click. adaptation is often safe or straightforward. the kind of good average many aim for.</td>
+			</tr>
+			<tr>
+				<th scope="col"><a href="/reviews?tier=C">C</a></th>
+				<!-- prettier-ignore -->
+				<td><strong>watchable but flawed</strong>. had potential, but didn't do justice to it. there might be a few good scenes or ideas, but the issues are hard to ignore, and it ultimately feels like a miss. still interesting, sometimes, for what they <em>tried</em> to do.</td>
+			</tr>
+			<tr>
+				<th scope="col"><a href="/reviews?tier=D">D</a></th>
+				<!-- prettier-ignore -->
+				<td><strong>poor execution, wasted potential</strong>. the ones i struggled to finish, or couldn't. even if the core story is good, the execution actively works against it. often messy, incoherent, or just off in ways i couldn't bear. usually a frustrating or forgettable experience.</td>
+			</tr>
+		</tbody>
+	</table>
 
 	<h3 id="reviews-attributions">
 		<i data-icon="certificate"></i>
@@ -158,7 +232,7 @@
 		style:margin-top="1rem"
 	/>
 	<!-- prettier-ignore -->
-	<p>most images are sourced from <a href="https://www.themoviedb.org" target="_blank" rel="noopener noreferrer">TMDB</a>, used under their <a href="https://www.themoviedb.org/about/logos-attribution" target="_blank" rel="noopener noreferrer">attribution terms</a>. i'm not affiliated — they're just excellent and convenient. all reviews are my own; if you have concerns, feel free to reach out.</p>
+	<p>most images are sourced from <a href="https://www.themoviedb.org">TMDB</a>, used under their <a href="https://www.themoviedb.org/about/logos-attribution">attribution terms</a>. i'm not affiliated — they're just excellent and convenient. all reviews are my own; if you have concerns, feel free to reach out.</p>
 
 	<hr />
 
@@ -250,38 +324,37 @@
 	</h2>
 	<p>there's no email newsletter here (yet), sorry.</p>
 	<!-- prettier-ignore -->
-	<p>some people swear by them — email clients are powerful these days, with excellent syncing and filtering. there's even an <a href="https://feedmail.org/" target="_blank" rel="noopener noreferrer">RSS-to-email service</a> if you'd rather get updates straight in your inbox. others prefer a clean inbox, keeping email for important messages only. if that's you, <a href="https://kill-the-newsletter.com/" target="_blank" rel="noopener noreferrer">kill-the-newsletter</a> can turn newsletters into feeds you can follow in a reader.</p>
+	<p>some people swear by them — email clients are powerful these days, with excellent syncing and filtering. there's even an <a href="https://feedmail.org/">RSS-to-email service</a> if you'd rather get updates straight in your inbox. others prefer a clean inbox, keeping email for important messages only. if that's you, <a href="https://kill-the-newsletter.com/">kill-the-newsletter</a> can turn newsletters into feeds you can follow in a reader.</p>
 	<!-- prettier-ignore -->
-	<p>i see the appeal of both camps. personally, i lean toward <a href="#other-paths-rss">RSS</a> — it's open, flexible, and feed readers tend to do a better job than email clients in their own way.</p>
+	<p>i see the appeal of both camps. personally, i lean toward <a href="#other-paths-rss">RSS</a> — it's open, flexible, and feed readers tend to do a better job than email clients in their own way, but i'm not militant about 'killing the newsletter' from my inbox.</p>
 
 	<h2 id="colophon">
 		<i data-icon="stack"></i>
 		<span>colophon</span>
 	</h2>
 	<!-- prettier-ignore -->
-	<p>built with open-source tools and thoughtfully chosen parts.</p>
+	<p>this is the site's technical appendix. it's built with open-source tools and thoughtfully chosen parts; every piece is handpicked or handmade to create a cohesive whole. i'm not a professional designer, but i know what i like and how to make it <em>feel like home</em>. did i mention <a href="https://github.com/ignatiusmb/mauss.dev">the whole thing is open-source</a>?</p>
 	<ul>
 		<!-- prettier-ignore -->
-		<li><strong><a href="https://svelte.dev" target="_blank" rel="noopener noreferrer">sveltekit</a></strong> — the framework that makes all of this feel effortless.</li>
-		<!-- re-enable when it's actually used
-		<li><strong><a href="https://pocketbase.io" target="_blank" rel="noopener noreferrer">pocketbase</a></strong> — the minimal and lightweight all-in-one backend.</li>
-		-->
+		<li><strong><a href="https://svelte.dev">sveltekit</a></strong> — the core framework that makes all of this feel effortless. it doesn't feel like overkill nor underpowered, it scales with my needs and keeps things minimal.</li>
 		<!-- prettier-ignore -->
-		<li><strong><a href="https://phosphoricons.com" target="_blank" rel="noopener noreferrer">phosphor</a></strong> — clean, beautiful, and versatile open-source icons.</li>
+		<li><strong><a href="/atelier#aubade">aubade</a></strong> — the content framework that powers the garden. it's handcrafted to fit my needs, with a focus on simplicity and flexibility.</li>
+		<!-- prettier-ignore -->
+		<li><strong><a href="https://phosphoricons.com">phosphor</a></strong> — clean and beautiful open-source icons, it's got everything i'm looking for and has consistently clean geometry.</li>
 		<li>
 			<!-- prettier-ignore -->
-			<span><strong><a href="https://fontsource.org" target="_blank" rel="noopener noreferrer">fontsource</a></strong> — self-hosted fonts for performance and privacy.</span>
+			<span><strong><a href="https://fontsource.org">fontsource</a></strong> — self-hosted fonts for privacy and performance.</span>
 			<ul>
 				<!-- prettier-ignore -->
-				<li><strong><a href="https://fontsource.org/fonts/newsreader" target="_blank" rel="noopener noreferrer">newsreader</a></strong> — a thoughtfully crafted serif for long-form reading.</li>
+				<li><strong>/<a href="https://fontsource.org/fonts/newsreader">newsreader</a></strong> — the main typeface, a thoughtfully crafted serif.</li>
 				<!-- prettier-ignore -->
-				<li><strong><a href="https://fontsource.org/fonts/recursive" target="_blank" rel="noopener noreferrer">recursive</a></strong> — a powerful and flexible five-axis variable font.</li>
+				<li><strong>/<a href="https://fontsource.org/fonts/recursive">recursive</a></strong> — the supporting sans-serif, a powerful five-axis variable font.</li>
 			</ul>
 		</li>
 		<!-- prettier-ignore -->
-		<li><strong><a href="https://github.com" target="_blank" rel="noopener noreferrer">github</a></strong> — where everything i build and share lives, this site included.</li>
+		<li><strong><a href="https://github.com">github</a></strong> — version control and source hosting for the entire site.</li>
 		<!-- prettier-ignore -->
-		<li><strong><a href="https://vercel.com" target="_blank" rel="noopener noreferrer">vercel</a></strong> — where this site lives and breathes, fast and reliable.</li>
+		<li><strong><a href="https://vercel.com">vercel</a></strong> — deploys from github and hosts the live site.</li>
 	</ul>
 </Article>
 

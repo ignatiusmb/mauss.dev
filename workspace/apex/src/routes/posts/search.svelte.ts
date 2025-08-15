@@ -3,6 +3,7 @@ import { date, drill } from 'mauss';
 
 export type Query = {
 	search: string;
+	theme: string;
 	tags: string[];
 	sort_by: keyof typeof by;
 };
@@ -12,8 +13,9 @@ export type Item = Omit<Items['/posts'][number], 'content'>;
 export function sift(items: Item[], payload: Query) {
 	const value = normalize(payload.search);
 	const results = items.filter((item) => {
-		const filters: any[] = [
-			// payload.category && payload.category !== item.category,
+		const filters = [
+			// @TODO
+			// payload.theme && payload.theme !== item.theme,
 			payload.tags.length && !payload.tags.every((g) => item.tags.includes(g)),
 		];
 		const flags = [
