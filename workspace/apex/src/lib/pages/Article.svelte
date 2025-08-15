@@ -23,7 +23,7 @@
 		<header>
 			<aside>
 				<time datetime={post.date}>{date(post.date).format('DD MMMM YYYY')}</time>
-				{#if post.theme !== 'pending'}
+				{#if post.theme && post.theme !== 'pending'}
 					<span class="separator">&bull;</span>
 					<span style:text-transform="capitalize">{post.theme}</span>
 				{/if}

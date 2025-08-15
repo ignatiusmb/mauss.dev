@@ -107,7 +107,7 @@
 
 					<footer>
 						<time datetime={post.date}>{date(post.date).format('DD MMMM YYYY')}</time>
-						{#if post.theme !== 'pending'}
+						{#if post.theme && post.theme !== 'pending'}
 							<span style:text-transform="capitalize">{post.theme}</span>
 						{/if}
 					</footer>
