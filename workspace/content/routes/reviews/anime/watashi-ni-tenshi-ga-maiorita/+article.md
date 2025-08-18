@@ -49,14 +49,14 @@ soundtracks:
     spotify: 2dPU25vkiOuE6VpKpVnGWC
 ---
 
-**a wholesome slice-of-life with two sisters and their friends living their lives**. i'm a sucker for these kinds of shows, so the verdict might be a bit biased. but for real though, it's like a warm hug or a cozy blanket on a cold rainy day. the humor is just right, gave me the same kind of joy [Nichijou](/reviews/anime/nichijou) did — that rare feeling of genuinely laughing out loud without expecting to.
+**a wholesome slice of life about two sisters and their friends**. i'm a sucker for this kind of show, so i went in biased — but it really does feel like a warm blanket on a rainy day. the humor gives me genuine laughs without trying too hard.
 
-the animation has that warmth and attention to detail you don't notice until you pay a closer attention to the details. i mean, just look at the food! this short preview of episode one almost made me drool and had me craving buttered toast.
+the animation has that kind of warmth and attention to detail you don't notice if you don't look closely for it. food shots especially stand out — that french toast in episode one nearly had me craving it on the spot.
 
 ![!video#f#hb](./french-toast-breakfast.mp4 "when your little sister makes your breakfast")
 
-soundtracks are catchy and seems like it was voiced by the actors themselves, and the voice acting are also great across the board. add all of that with the amazing sound design, it brings the world to life in a way that makes you feel like you're right there with the characters.
+the soundtracks are catchy, sung by the cast themselves. voice acting is solid across the board, and the sound design makes the world feel alive and close.
 
-the big sister might weird you out at first, coz i did. but stick with it for a little bit, you'll eventually understand where her awkwardness comes from, and you'll probably love her as much as i did by the end of it. the little sister is just as endearing, and the side cast rounds it out without dragging the mood down.
+the big sister might throw you off at first, but her awkwardness makes sense the longer you stay with her, and i ended up liking her by the end. the little sister is just as endearing, and the side cast fits in without dragging things down.
 
-these kinds of show are never for everyone — and that's fine. but if you've ever needed a break from the loud, over-the-top stuff and wanted something cozy, this might be the best surprise you didn't know you needed.
+Wataten was a good and cozy anime which gives me a break from loud, over-the-top shows.

@@ -42,10 +42,6 @@ link:
   TMDB: https://www.themoviedb.org/tv/116983
 ---
 
-**this deserved better than the adaptation it got**. being interested in art was the last thing i expected. yeah, yeah, what could an anime about art possibly bring to the table? that was my initial thought too, and i'm so glad Blue Period proved me wrong in the best way possible.
+**this deserved better than the adaptation it got**. ironic, for a story about art, Blue Period's anime adaptation feels rushed and underwhelming.
 
-unfortunately, the adaptation didn't do justice to the manga. there were moments that felt rushed, and the animation quality was inconsistent. but despite that, the story shines through. it's ironic that the animation isn't the best for an art anime, but the narrative and character development are so strong that it still manages to leave a lasting impression.
-
-the only regret i have is not watching this sooner, even though it had been in my watchlist since before it even aired. thankfully, a friend nudged me to bump it to the top. maybe that's a sign to start chipping away at my watchlist, one at a time. who knows, maybe i'll find more hidden gems like this.
-
-i usually save these thoughts for ***the other page***, but i can't help admiring all the art i've come across after watching Blue Period, especially when i thought about the process of creating it. consider this a small note to my future self, let's see if i ever get around to it.
+and yet, the strength of source material cuts through anyway. i didn't expect to care about art, but Blue Period made me see it differently. it sat in my watchlist since before it aired. i only picked it up because a friend pushed me, and i'm glad they did.

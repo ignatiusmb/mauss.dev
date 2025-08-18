@@ -39,12 +39,8 @@ link:
   MyAnimeList: https://myanimelist.net/anime/10165
 ---
 
-**a timeless comedy gold**, made by one of my favorite studios, Kyoto Animation. an anime that the animators had a lot of fun making will never be not fun to watch, and this is no exception, you can feel the love and care that went into every frame.
+**a timeless comedy gold**, made by Kyoto Animation. you can feel the love poured into every frame — when the animators are having fun, the audience does too.
 
-Nichijou, my ordinary life, is anything but ordinary. it's humor was 20 years ahead of its time, a perfect example of comedy that transcends time and culture, creating a unique blend of everything that resonates with people all over the world.
+Nichijou, my ordinary life, is anything but ordinary. its humor was ahead of its time, blending absurdity and relatability in ways that transcends time and resonate across cultures. maybe you've seen clips out of context and thought, "i'm sure it makes more sense in context, right?" ...right???
 
-there's a non-zero chance that you might've seen some out of context clips out there, and thought to yourself "i'm sure it makes more sense in context, right?"... right???
-
-it's really hard for me to find something that helps me relax and cool my mind every now and then, and Nichijou is one of those rare gems i can turn my brain off to and just enjoy from start to finish. even if i'm not laughing out loud every time, or when an episode ends and i'm waiting for the next one to start, i can't remember a time i wasn't grinning or smiling through the whole thing.
-
-please don't take that as a challenge — remember, what matters is that we have fun. not everyone will get the jokes here, but if you do, you'll appreciate it so much more. again, if you don't enjoy it as much as i do, that's too bad, but also totally fine.
+for me, it's one of the rare shows i can return to whenever i need to relax. even if i'm not laughing out loud every moment, i find myself grinning the whole way through. not everyone will connect with the jokes, and that's fine. what matters is that when it clicks, it's pure joy.

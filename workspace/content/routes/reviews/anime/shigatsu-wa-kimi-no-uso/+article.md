@@ -56,8 +56,4 @@ soundtracks:
     spotify: 6a0PMD9AsNoK3XD5Nnheig
 ---
 
-**can't think of April without this**. *Your Lie in April* is a beautifully crafted story with a perfect blend of music, emotion, and character development. the pacing is slow, but it suits the story and wraps up beautifully in one season.
-
-it's visually stunning in all the right scenes, the animation is fluid, and the sound design is fantastic. it's a well-rounded show that checks all the boxes for me to consider it A-tier.
-
-there's a reason this show is so highly rated and loved. go prepare some snacks or tea, and enjoy the story while you can. it's one of those shows that stays with you long after it ends — and the first watch is always the best.
+**can't think of April without this**. Your Lie in April blends music, emotion, and character development into a story that feels whole. the slow pacing suits the story, the visuals land where they need to, the animation feels fluid, and the sound design lifts everything higher. it's a complete package — enough for me to place it firmly in A-tier.

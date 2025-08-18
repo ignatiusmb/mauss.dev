@@ -2,50 +2,39 @@
 title: masterclass in comedy
 ---
 
-imagine you have an unlimited budget, a team of talented individuals, and a passion to do whatever the hell you want. that's Nichijou for you.
+imagine having an unlimited budget, a team of absurdly talented people, and the will to do whatever the hell you want. that's Nichijou.
 
-## the absurdity in the ordinary
+## the absurd in the ordinary
 
-how does a show without plot be executed so brilliantly, is what i keep asking myself every time i try to explain this anime. Nichijou takes the mundane aspects of everyday life and amplifies them to absurd levels. even the most trivial situations can lead to hilariously over-the-top outcomes.
+a show without plot shouldn't work this well, yet Nichijou executes it seamlessly. it takes the most mundane parts of everyday life and amplifies them to absurd levels. even the most trivial situations can lead to hilariously over-the-top outcomes.
 
-### kyoto animation's touch
+## Kyoto Animation's touch
 
-Nichijou is one of the best examples of kyoto animation's mastery in blending animation with heart. the studio's attention to the anime they produces elevates their work to a level that few others can match.
+this is KyoAni at their peak, overanimating even the most mundane and trivial stuff. it's ridiculous, and it's exactly what makes Nichijou unforgettable. i doubt it would've been half as funny without that passion and dedication from the animators.
 
-overanimating everything, even the most mundane or absurd stuff is what makes Nichijou so special. i don't think the anime would've been as impactful (or even funny) if it wasn't for KyoAni's passion and dedication to their craft.
+## the painfully relatable one
 
-### the most painfully relatable character
+Yuuko, of course it's her. i laugh the hardest at her misfortunes, but every laugh stings a little because most of her fails are painfully relatable.
 
-you guessed it, it's Yuuko. i love her, she's a character that many can relate to, including myself. and while i do laughed at her misfortunes the loudest, i also *cried* on the inside because it's just so painfully relatable.
+## layered references
 
-### multicultural references
+the manga's sense of humor already runs deep, and the anime carries it over. from Japanese wordplay that doesn't translate, to odd cultural nods like Yuuko greeting her friends with "selamat pagi" or Mio's mom casually playing [*sepak takraw*](https://en.wikipedia.org/wiki/Sepak_takraw).
 
-let's not forget that the source material itself is amazing on its own, with multiple references to various cultures and traditions, especially south-east asian ones. simple things like Yuuko greets her friends with "selamat pagi" (good morning in indonesian), or that one time Mio's mom played *sepak takraw* 🗿
+## trolling done right
 
-there are also many japanese puns that we really wouldn't get because it doesn't make sense in english, and the cultural references that would fly over our heads if we didn't know about them.
-
-### trolling done right
-
-we also have a couple of characters that really seems like their only purpose is to troll the, which is a fantastic way to make us expect the unexpected. like, every time Mai or Mio's big sister is on screen, we just know that something ridiculous is going to happen.
-
-the trolling is done without malice, it never feels like they're being mean-spirited or cruel. but rather, they're so unpredictable and confuses the characters around them that it makes for some of the funniest moments in the show, with or without context!
+Mai, Mio's sister, and others exist solely to throw everyone off balance. they don't need to be cruel to be funny — being unpredictable is enough. every time they appear, you know the scene will collapse into absurdity, with or without setup.
 
 ## clips
 
-let me causally dump a couple of youtube clips with some of the most iconic moments from the show.
+a few favorites:
 
 ![!YouTube#d](byDglOhxmdA "shrine incident")
-
 ![!YouTube#d](z30Y572EmCk "mio loses it")
-
 ![!YouTube#d](0FU0uqjIfD4 "trouble with dogs")
-
 ![!YouTube#d](tQzEQLuZ4Tk "jam testing")
 
-"your jam was so disgusting, my life flashed before my eyes!" is so good, i love it so much.
+> your jam was so disgusting, my life flashed before my eyes!
 
-## the successor!
+## the successor
 
-unfortunately, Nichijou didn't sell that well and as of this writing, there has not been any news about season 2 or any continuation of the series.
-
-however! what are the odds that i would (finally) review Nichijou, just to find out that [KyoAni has announced City the Animation](/curated/harvest-2025.06#headlines-the-goats-are-back), which is the closest thing we got to Nichijou season 2. based the manga by the same author, Keiichi Arawi, City is set to premiere on the 7th this month!
+Nichijou flopped commercially, so a continuation never happened. but somehow, right as i'm writing this, [KyoAni announced *City the Animation*](/curated/harvest-2025.06#headlines-the-goats-are-back), which is the closest thing we'll get to season two. it's by the same author, Keiichi Arawi, set to premiere on the 7th.
