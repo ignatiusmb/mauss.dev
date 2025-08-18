@@ -40,12 +40,8 @@
 			<i data-icon="lifebuoy"></i>
 			<span>/help</span>
 		</h2>
-		<div>
-			<!-- prettier-ignore -->
-			<p style:margin-top="0">surfing the web is like sailing the sea, and this site is a small island in the vast ocean of the internet. foreign shores can feel intimidating at first — that's where the <a href="/help">safe harbor</a> comes in. think of it as the island's guild hall, the place you step into after docking, where you'll find the <strong>Dockside Chart</strong> to help you get your bearings and see every path laid out. if you ever feel a bit lost, you can always return to the harbor and consult the chart.</p>
-			<!-- prettier-ignore -->
-			<p>this may be the <em>landing</em> page, but much like a real harbor, it's not meant to overwhelm you with everything at once. if you're like me and prefer to orient yourself first, you know where to look. if you'd rather set off right away, the island is open for you to wander and discover at your own pace.</p>
-		</div>
+		<!-- prettier-ignore -->
+		<p style:margin-top="0">surfing the web is like sailing the sea, and this site is my small island in the vast ocean. i know how daunting new shores can feel — that's why i've set a <a href="/help">safe harbor</a> here. think of it as the island's guild hall, where you'll find the <strong>Dockside Chart</strong> to get your bearings and follow the paths already charted for you. if things ever feel unclear, you can always return to the harbor and consult the chart.</p>
 	</section>
 </Article>
 

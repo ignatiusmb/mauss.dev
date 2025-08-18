@@ -36,10 +36,10 @@ link:
   MyAnimeList: https://myanimelist.net/anime/34566
 ---
 
-**a disappointing offspring**. i don't understand why *Boruto* needs to be a weekly anime. the story is a mess, the characters are bland, and the animation quality is consistently inconsistent. it suffers from everything wrong with long-form weekly releases.
+**a disappointing offspring**. Boruto is everything wrong with the weekly anime model. a story stretched thin, characters without weight, and animation that collapses under its own schedule.
 
-a plot built backwards from a vague flash-forward, filler episodes outnumbering canon, rushed out animation quality, and filler arcs with no real sense of direction. the story goes nowhere, characters are shallow, and the visual quality can't even match its own key art. the only passing grace is the music — decent ops/eds, but wasted on this mess.
+the structure is built backwards from a vague flash-forward. filler arcs multiply until they bury the canon. the pacing stalls, then lurches forward, only to stall again. the visual quality rarely matches its own key art, let alone the standards set by its predecessor.
 
-the pacing is all over the place, and i can't even enjoy the core of the story since it looks exactly like the filler episodes that feels rushed and poorly animated. i know i've heard good things about the story itself from the people who followed the manga. so if you're still watching out of loyalty to Naruto, stop. read the manga, or just watch the highlight clips on youtube — you'll get the same experience with 1% of the time investment.
+the manga carries a reputation for being tighter, but the anime smothers it. if you want the story, read. if you only want the spectacle, watch the highlight clips. the rest is time lost.
 
 > [the sequel no one asked for, but still got](https://myanimelist.net/reviews.php?id=269206)

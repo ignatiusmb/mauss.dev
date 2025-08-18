@@ -53,10 +53,6 @@ soundtracks:
     youtube: qVn3_qeIrBA
 ---
 
-**not your typical romance anime**. *Yosuga no Sora* is **not** hentai — seriously, there are plenty of decent ones out there if that's what you're after, but this is definitely not one of them.
+**not your typical romance anime**. Yosuga no Sora was the first anime that made me reflect deeply enough that i wanted to write about it. the *ecchi* tag is there, and i would have preferred if it wasn't. the story could have stood out more with less fanservice, or without it altogether.
 
-this wasn't my first anime, but it was the first that made me reflect so much that i needed to write about it. yes, it's got the *ecchi* tag, though i would've preferred if it didn't have it at all. i think the story would've stood out more if there were less fanservice and sex scenes — or none at all.
-
-if you're into fanservice or loli figures, by all means, enjoy. i'm not here to judge. but if you're here just to get off, grab an actual hentai instead, will you?
-
-if you do give this a shot, i'll see you on ***the other page***.
+beneath that, though, is a narrative that lingers — one that deserves more attention than its reputation suggests. i wrote more in **the deep dive**.

@@ -39,4 +39,4 @@ link:
   MyAnimeList: https://myanimelist.net/anime/41361
 ---
 
-*less can be more*. in a landscape full of bloated, overlong movies, it feels refreshing to watch such a lean and focused film. it managed to hook me early on, and wrapped everything up in just 90 minutes.
+*less can be more*. in a landscape crowded with overlong films, this one feels sharp and deliberate. it hooked me early and tied everything off cleanly in 90 minutes.

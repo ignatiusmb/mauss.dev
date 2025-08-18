@@ -4,50 +4,44 @@ title: the weight of passion
 
 ## depicting the harsh reality
 
-every parent's desire is for their child to succeed in life and *not* end up poor and miserable. most children are pushed into STEM or commerce fields because they are perceived as the most stable and lucrative career paths. but in doing so, these parents often overlook their child's true passion and interests, killing their creativity and dreams in the process.
+every parent wants their child to succeed, to avoid poverty and regret. many push them toward STEM or commerce because they're perceived as the most stable and lucrative career paths, statistically speaking. but in doing so, they often crush whatever passion the child actually has.
 
-Yatora's parents were no different, albeit less direct. his mother keeps reminding him that they don't have the money to put him in a private school. his family's financial situation is a central focus early on and plays a significant role in the way he approaches his future. "doing something fun would just be careless" is what he thought, and he asked himself, "why go to art school?" if there's no guarantee you can make a living out of it.
+Yatora's parents weren't exceptions. his mother reminds him constantly that they can't afford private school. his family's financial situation is a central focus early on and plays a significant role in the way he approaches his future. why gamble on art school when survival isn't even guaranteed?
 
-between disappointing his parents and chasing a newfound passion, Yatora also discovered that art universities are incredibly hard and competitive, not to mention very expensive. however, we learn that the Tokyo University of the Arts (TUA) is both the most affordable and the most competitive option, with the lowest acceptance rate. but he doesn't really have a choice, so he makes his resolve and decides to apply to TUA.
+> doing something fun would just be careless
+
+between letting his parents down and chasing this new passion, Yatora learns quickly that art universities are incredibly hard and competitive, and also very expensive. Tokyo University of the Arts (TUA) is both the most affordable and the hardest option, with the lowest acceptance rate in all of Japan. he knows he has no choice, so he steels himself and aims for it.
 
 ## the invisible progress
 
-talent is often seen as a natural gift — something that comes easily to some people while others have to work hard for it. for people who *do* work hard to achieve their goals, being called talented can be frustrating. it's a word filled with the underlying implication of underestimating the effort required to reach that level of skill.
+talent is often seen as a natural gift — something that comes easily to some people while others have to work hard for it. to those who fight for it, the word feels like an insult. it erases the grind, the nights of frustration, the persistence it actually takes.
 
-in Blue Period, we often see artists like Mori-senpai being called talented, attributing their hard work to talent alone, rather than the time and effort they invested. in all fairness to Yatora, he didn't say it with malice or to undermine her effort. it was said in admiration, as a way to compliment her work. i know because i probably would've said the same thing, blissfully ignorant of the things outside my domain.
+in Blue Period, Mori-senpai is branded talented, as though her work was gifted rather than earned. Yatora says it admiringly, but ignorance doesn't soften the sting. i probably would've said the same once, blind to what effort in art really means.
 
-talent is usually associated with art and creativity, while *genius* is more commonly used in STEM fields. Yatora, being a *genius* delinquent, attributes his intelligence and good grades to hard work. his dismissal of being called a genius isn't much different from Mori-senpai's dismissal of being called talented. neither of them wants their effort to be disregarded as a natural gift.
+there's an irony in Yatora's perspective. in school, he's the *genius* delinquent, praised for his grades. but he insists it's hard work, not genius. his denial mirrors Mori's dismissal of being called talented. neither wants their struggle reduced to something innate such as talent.
 
-Yatora's hypocrisy is caused by his lack of experience and exposure. he mentions that "elective art is the type of class where you'll get a decent grade even if you're bad at it" — he's not used to subjects where there's no clear right or wrong answer. Blue Period does a fantastic job of showing the common perspective of people unfamiliar with art, and how they often see it as something anyone can do without much effort because they are gifted. it's a common misconception many artists face, and i wouldn't have had my eyes opened to it if it weren't for this series.
+his hypocrisy comes from his lack of experience and exposure. he thinks elective art is the kind of class you can pass without trying. Blue Period nails this outsider's view — the assumption that art is *easy* if you're gifted. i wouldn't have understood either, if not for this series.
 
 ### impostor syndrome
 
-Yatora, being the honor student on the outside, struggles with self-doubt and the fear of not being good enough. constantly feeling insecure about his abilities, he works much harder than everyone else and even mentions that he has to "work twice as hard" to prove himself and that he's "too scared to stop working".
+on the outside, Yatora is the honor student. inside, he's riddled with doubt. he says he has to "work twice as hard" just to keep up, that he's "too scared to stop working". impostor syndrome is a common trait among high achievers — the fear that you're faking it, that you don't deserve what you've earned.
 
-often referred to as impostor syndrome, this is a common trait among high achievers. it's the feeling that you don't deserve your success, and that you're just fooling everyone into thinking you're competent.
-
-i couldn't help but reflect on myself multiple times while watching Yatora throughout the series. Blue Period feels like a mirror reflecting my own insecurities and self-doubt, and i saw myself in Yatora's struggles.
+Blue Period captures this perfectly. Yatora's struggle is relatable, even if you don't draw or paint. it's the fear that you don't deserve your success and constantly doubting your abilities. walking on eggshells, afraid of being found out as a fraud.
 
 ## that's embarrassing
 
-"if you're still bothered by what other people will think of you, then you can't die just yet."
+> if you're still bothered by what other people will think of you, then you can't die just yet.
 
-episode 10, minute 10. i didn't expect to get philosophical with Blue Period, but damn — i absolutely contemplated my life and the choices i've made after reading that. oh, and i love that the show ties this moment directly into helping Yatora with his entrance exam too.
+episode 10, minute 10. that line hit me like a truck. the show weaves it right into Yatora's entrance exam, but for me it cracked open a whole box of my own choices and regrets.
 
 ## reflections
 
-i like how it portrays the importance of pursuing one's passion and the struggles that come with it. going against societal expectations and parental pressure is never easy, and the way Yatora goes through it is the realest thing i've seen in a while.
+turns out the mangaka actually graduated from TUA. no wonder it feels so authentic. i learned more about art from this than from any class i've ever taken, and it made me want to try creating for myself.
 
-i mentioned in the main review that everything in and with Blue Period is why i love anime so much. this series is a perfect example of how anime (and the source material, of course) can tell a story that resonates with viewers on a personal level — even if the subject matter is something we might not initially be interested in.
+what i like most is how it shows the cost of pursuing passion. the fight against parents, society, even yourself. Yatora's struggle felt uncomfortably real. Blue Period tells stories that burrow into you. even if you thought you wouldn't care about art, you leave with a new perspective.
 
-a fun fact i stumbled upon while researching this: the mangaka of Blue Period graduated from TUA, which is why the story feels so authentic and relatable. i learned more about art from this series than i ever did in school or anywhere else, and it made me want to explore my own creative side.
+Blue Period made me see the beauty in art and the grind behind creation. i didn't expect it to make me reconsider my life choices too, but it did — and that surprise was a good one.
 
-Blue Period successfully made me appreciate the beauty of art and the creative process behind it. on top of that, rethinking and reflecting on my own life choices wasn't on my bingo card when i started watching this series, but hey — it was a pleasant surprise.
+### next season
 
-## next season, when?
-
-honestly, the first season wraps up quite nicely, and i wouldn't mind if it ended here. that said, it doesn't mean i wouldn't love to see more.
-
-it's been almost 4 years since the first season aired, and as far as my research goes, it's highly unlikely that we'll get a second season. the unfortunate reality for us anime-only viewers is that anime is mostly made to promote the source material — usually manga or light novels. Blue Period being released alongside Komi Can't Communicate doesn't help either. both being netflix series, it seems like Blue Period was overshadowed by the latter's popularity. i hope i'm wrong about this, but i won't hold my breath.
-
-that being said, i did have some critiques about the anime. i'm not sure if it's coincidental or fortunate, but the issues i had were exactly what would've elevated this adaptation — namely, the animation and sound design. this made me think i might actually have the same, or perhaps even better, experience reading the manga. not that i know anything about reading manga, but hey — this might just be the nudge i needed to finally start one.
+the very things that held this adaptation back are also what could've elevated it. it makes me think the manga might offer the same, if not a better, experience. adding to that, its release alongside Komi Can't Communicate didn't help; Blue Period ended up overshadowed, and the attention it needed for a continuation never really came. moreover, if the adaptation continues in the same vein (which, given Netflix's track record, doesn't inspire much hope), i'd rather it stop here. the first season closes things off well enough, i wouldn't mind if it stayed that way.
