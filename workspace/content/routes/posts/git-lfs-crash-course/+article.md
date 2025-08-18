@@ -1,5 +1,6 @@
 ---
 date: "2023-11-30T12:00:00+07:00"
+theme: archive
 title: Git LFS Crash Course
 description: A quick introduction to the basics of Git LFS
 tags: [tech, git, crash-course]

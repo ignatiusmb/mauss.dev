@@ -1,5 +1,6 @@
 ---
 date: "2020-07-30T17:38:25+07:00"
+theme: archive
 title: CORS Crash Course - Client or Server?
 description: A brief yet sufficient explanation for Cross-Origin Resource Sharing (CORS)
 tags: [tutorial, javascript, cors]

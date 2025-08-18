@@ -1,5 +1,6 @@
 ---
 date: "2020-10-13T17:38:25+07:00"
+theme: guide
 title: Semantic Commit Message
 description: A practical guide to writing semantic commits
 tags: [git, workflow]

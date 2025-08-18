@@ -1,5 +1,6 @@
 ---
 date: "2023-06-21T12:00:00+07:00"
+theme: moment
 title: RIP Google Domains - Exploring New Digital Homes for Our Domains
 description: In the wake of Alphabet shutting down Google Domains, many of us are looking for alternatives to move our domains to, especially for our dev domains
 tags: [tech]

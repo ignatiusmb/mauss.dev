@@ -1,5 +1,6 @@
 ---
 date: 2025-07-16
+theme: guide
 title: Crafting a Minimal SVG-to-Favicon Generator
 description: a technical dive into the process of building a self-contained favicon generator
 tags: [devlog, javascript, typescript, svelte]

@@ -1,5 +1,6 @@
 ---
 date: "2020-06-19T17:38:25+07:00"
+theme: archive
 title: Configure Static Site Hosting with your Custom Domain
 description: Quickly setup your custom domain in just a couple of steps
 tags: [tutorial, tech, nameservers]

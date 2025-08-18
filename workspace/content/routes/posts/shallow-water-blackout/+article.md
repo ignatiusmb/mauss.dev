@@ -1,5 +1,6 @@
 ---
 date: "2020-10-02T17:38:25+07:00"
+theme: moment
 title: Shallow Water Blackout
 description: What is it and why is it important for you to know this
 tags: [lpt, emergency]

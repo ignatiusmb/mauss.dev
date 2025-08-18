@@ -1,5 +1,6 @@
 ---
 date: "2020-05-11T17:38:25+07:00"
+theme: archive
 title: Admin Dashboard with Svelte and Firebase
 description: Creating a full-fledged admin dashboard in under 3 hours
 tags: [ppl2020, svelte, firebase, sapper, javascript, audit, lighthouse]
@@ -147,10 +148,7 @@ The only new component I added was `Loader.svelte` to give a more lively app for
 
 ```svelte
 #$ file: Loader.svelte
-<script>
-  // https://github.com/sw-yx/svelte-data-fetching/blob/master/src/Spinner.svelte
-  // courtesy of @sw-yx, modified by @ignatiusmb
-</script>
+<!-- modified from https://github.com/swyxio/svelte-data-fetching/blob/master/src/Spinner.svelte -->
 
 <div>
   <span />

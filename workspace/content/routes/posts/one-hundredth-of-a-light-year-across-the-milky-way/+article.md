@@ -1,5 +1,6 @@
 ---
 date: "2020-10-24T17:38:25+07:00"
+theme: reflection
 title: One-Hundredth of a Light-Year Across the Milky Way
 description: My journey after more than one-hundredth of a light-year across the Milky Way or over 20 revolutions around the sun
 tags: [life]

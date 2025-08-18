@@ -14,8 +14,7 @@ export function sift(items: Item[], payload: Query) {
 	const value = normalize(payload.search);
 	const results = items.filter((item) => {
 		const filters = [
-			// @TODO
-			// payload.theme && payload.theme !== item.theme,
+			payload.theme && payload.theme !== item.theme,
 			payload.tags.length && !payload.tags.every((g) => item.tags.includes(g)),
 		];
 		const flags = [

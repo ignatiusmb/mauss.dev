@@ -1,5 +1,6 @@
 ---
 date: "2023-11-03T18:00:00+07:00"
+theme: guide
 title: "ARIA: aria-label vs. title attribute"
 description: What's the difference, and which one should you use?
 tags: [accessibility, html]

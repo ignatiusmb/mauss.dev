@@ -23,7 +23,7 @@ components are the building blocks of Svelte applications, written into [`.svelt
 
 ### script
 
-the top-level `<script>` tag is where you can write any JavaScript code that powers the component, e.g. import other modules and define reactive states using [runes](https://svelte.dev/docs/svelte/what-are-runes).
+the top-level `<script>` tag is where you can write any JavaScript code that powers the component, e.g. import other modules and define reactive states using [runes](#the-building-blocks-runes).
 
 of course, i don't think i need to mention this, but you need to know JavaScript to write the logic inside the `<script>` tag of a Svelte component.
 
@@ -49,7 +49,7 @@ Svelte automatically scopes styles to the component, so you can write pure CSS w
 
 any valid HTML is a valid markup. Svelte augments the markup using curly braces `{}` syntax to interpolate JavaScript *expressions*. an expression is any valid JavaScript code that evaluates to a value, such as a variable, a function call, or an arithmetic operation.
 
-when you see curly braces `{}` in a Svelte component, you're in Svelte's logic land. these curly braces can start with a hash `#` to denote the start of an `if/each/key/await/snippet` block, or an at `@` symbol to use various tags such as `@html`, `@render`, or `@const`. a Svelte block handles control flow and reactivity in the markup. it starts with a hash `#`, ends with a slash `/`, and optionally additional conditions with a colon `:`.
+when you see curly braces `{}` in the markup of a Svelte component, you're in Svelte's logic land. these curly braces can start with a hash `#` to denote the start of an `if/each/key/await/snippet` block, or an at `@` symbol to use various tags such as `@html`, `@render`, or `@const`. a Svelte block handles control flow and reactivity in the markup. it starts with a hash `#`, ends with a slash `/`, and optionally additional conditions with a colon `:`.
 
 ### runes
 

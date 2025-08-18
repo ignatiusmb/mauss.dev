@@ -1,5 +1,6 @@
 ---
 date: "2020-10-20T17:38:25+07:00"
+theme: moment
 title: RIP Sapper - Svelte Is Moving to Snowpack
 description: It's been a fun ride using Sapper but all good things must come to an end. Svelte is moving to Snowpack and ditching bundlers
 tags: [tech, svelte, sapper, snowpack]

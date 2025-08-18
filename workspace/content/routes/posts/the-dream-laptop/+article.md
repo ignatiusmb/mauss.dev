@@ -1,5 +1,6 @@
 ---
 date: "2024-03-11T18:00:00+07:00"
+theme: essay
 title: The Dream Laptop for Productivity and Portability
 description: My best dream laptop for working while traveling
 tags: [computing, productivity]

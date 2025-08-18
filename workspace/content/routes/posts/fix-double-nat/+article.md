@@ -1,5 +1,6 @@
 ---
 date: "2019-01-15T17:38:25+07:00"
+theme: archive
 title: Fix Double-NAT Problem on Your Network
 tags: [tutorial, networking]
 ---

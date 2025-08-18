@@ -1,5 +1,6 @@
 ---
 date: "2022-02-02T11:48:11+07:00"
+theme: reflection
 title: A Serendipitous Stroke of Events
 description: What a delightful year it has been
 tags: [life]

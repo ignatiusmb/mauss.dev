@@ -1,5 +1,6 @@
 ---
 date: "2020-06-13T17:38:25+07:00"
+theme: archive
 title: Secretlab TITAN Chair First Impression
 description: First impression of Secretlab chair TITAN series
 tags: [daily]

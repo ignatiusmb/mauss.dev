@@ -1,5 +1,6 @@
 ---
 date: "2024-10-24"
+theme: reflection
 title: Quarter-Life Renaissance
 description: October canon event — a quarter-century reflection
 tags: [life, reflection]
