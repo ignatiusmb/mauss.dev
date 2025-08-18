@@ -1,5 +1,6 @@
 ---
 date: "2024-02-29T19:00:00+07:00"
+theme: moment
 title: Open Letter of Admiration to Ado
 description: Thoughts after the Wish concert on the 27th of February in Jakarta
 tags: [music, concert]

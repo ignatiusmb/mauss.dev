@@ -1,5 +1,6 @@
 ---
 date: "2020-06-04T17:38:25+07:00"
+theme: archive
 title: Persona from A Hacker's Perspective
 description: Persona should be the first step to any development plan
 tags: [ppl2020, design]

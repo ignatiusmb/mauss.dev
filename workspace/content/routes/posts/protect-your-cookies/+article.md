@@ -1,5 +1,6 @@
 ---
 date: "2020-10-14T17:38:25+07:00"
+theme: guide
 title: Protect Your Cookies
 description: Learn why you should care about your cookies and how you can protect by securing it
 tags: [tech, cookies, http]

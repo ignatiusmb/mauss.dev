@@ -1,5 +1,6 @@
 ---
 date: "2021-10-24T00:00:00+07:00"
+theme: reflection
 title: Prologue to the Beginning of the End
 description: A start to the beginning of the end
 tags: [life]

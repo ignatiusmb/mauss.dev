@@ -1,5 +1,6 @@
 ---
 date: "2020-07-03T17:38:25+07:00"
+theme: archive
 title: How to Set up Sapper With cPanel
 description: Setup your Node app with cPanel hosting
 tags: [tutorial, cPanel, nodejs, pm2, sapper, hosting]

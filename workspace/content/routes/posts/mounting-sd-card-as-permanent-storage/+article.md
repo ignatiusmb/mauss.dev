@@ -1,5 +1,6 @@
 ---
 date: "2019-01-12T17:38:25+07:00"
+theme: archive
 title: How to Mount your SD Card as Permanent Storage for Additional Space
 tags: [tutorial, windows]
 ---

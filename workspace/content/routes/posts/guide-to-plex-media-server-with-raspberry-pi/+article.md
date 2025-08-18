@@ -1,5 +1,6 @@
 ---
 date: "2018-10-19T17:38:25+07:00"
+theme: archive
 title: Plex Media Server Setup Guide with Raspberry Pi
 tags: [tutorial, raspi]
 ---

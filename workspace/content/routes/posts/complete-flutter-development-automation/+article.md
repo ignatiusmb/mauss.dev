@@ -1,5 +1,6 @@
 ---
 date: "2020-04-30T17:38:25+07:00"
+theme: archive
 title: Complete Flutter Development Automation
 description: Check out how to automate your Flutter development workflow
 tags: [ppl2020, flutter, devops, gitlab]

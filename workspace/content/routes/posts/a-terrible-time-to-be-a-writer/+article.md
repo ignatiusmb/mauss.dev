@@ -1,5 +1,6 @@
 ---
 date: "2025-06-17T21:30:00+07:00"
+theme: moment
 title: A Terrible Time to Be a Writer
 description: an effort to try and write something that feels real and honest
 tags: [writing, tech]

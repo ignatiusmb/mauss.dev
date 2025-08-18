@@ -30,6 +30,7 @@
 		svelte: ['#ff3e00', Contrast.DARK],
 		tutorial: ['#feffa5', '#b30047'],
 		typescript: ['#2775c3', Contrast.LIGHT],
+		windows: ['#357ec7', Contrast.DARK],
 	};
 </script>
 

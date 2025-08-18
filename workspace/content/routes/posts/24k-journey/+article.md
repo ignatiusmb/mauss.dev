@@ -1,5 +1,6 @@
 ---
 date: "2023-10-24"
+theme: reflection
 title: 24K Journey - The Pursuit of a Meaningful Life
 description: The 24th year of both introspection and retrospection, a journey towards a meaningful and fulfilling life encompassing happiness and reason for existence.
 tags: [life, reflection, stoicism]

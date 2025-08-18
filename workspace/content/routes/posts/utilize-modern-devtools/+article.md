@@ -1,5 +1,6 @@
 ---
 date: "2020-08-22T17:38:25+07:00"
+theme: moment
 title: Utilize Modern DevTools
 description: Utilize modern developer tools like formatter and linters to make your life as a developer easier
 tags: [coding, formatter, linter, devtools]
