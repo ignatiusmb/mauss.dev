@@ -6,263 +6,186 @@ description: Create Django app and automatically build and deploy to Heroku
 tags: [tutorial, coding, django, heroku, gitlab]
 ---
 
-Heroku is a cloud platform for a developer to deploy their apps and express their idea and design straight to URL.
-It offers multiple plans, but usually the free tier is more than enough for experimenting or personal use.
+> update: this guide is outdated and archived. Heroku phased out their free tier on the 28th of November, 2022.
 
-## Outline & Focus
+start by creating a [git repository](https://gitlab.com/projects/new) and a [new heroku app](https://dashboard.heroku.com/new-app). inside your GitLab project settings, under CI/CD variables, add three keys: `HEROKU_APIKEY`, `HEROKU_APPNAME`, and `HEROKU_APP_HOST`. these will be used to connect GitLab's pipeline with your Heroku deployment.
 
-- Create a virtual environment in Python
-- Start a Django project
-- Create a Django app and add it to your project
-- Deploy your Django app to Heroku
+initialize and add your remote origin and Heroku remotes:
 
-### PART A &bull; GitLab and Heroku
+```bash
+git init
+git remote add origin https://gitlab.com/username/git-repo-name.git
+heroku git:remote -a heroku-appname
+```
 
-1. create a [new git repository](https://gitlab.com/projects/new) and [new heroku app](https://dashboard.heroku.com/new-app)
-2. go to your GitLab repository CI/CD settings and add these to your variables
+with that ready, add a `.gitlab-ci.yml` file to enable pipelines. you'll also need a simple script for migrations:
 
-    | Variable        | Value          |
-    | --------------- | -------------- |
-    | HEROKU_APIKEY   | [your_apikey]  |
-    | HEROKU_APPNAME  | [your_appname] |
-    | HEROKU_APP_HOST | [your_webapp]  |
+```bash
+#$ file: deployment.sh
+#!/bin/bash
+python manage.py makemigrations
+python manage.py migrate
+```
 
-3. initialize git in your project root directory
+Heroku also requires a `Procfile` in your project's root. this file specifies how your app runs:
 
-    ```bash
-    git init
-    ```
+```
+#$ file: Procfile
+migrate: bash deployment.sh
+web: gunicorn your_project_name.wsgi
+```
 
-4. set remote origin to your GitLab repository
+note that `Procfile` must not have an extension. it explicitly declares process types for Heroku, and without it your deployment won't know what to run. if you need more details, see [heroku's docs on procfile](https://devcenter.heroku.com/articles/procfile). before committing, make sure to grab a proper [Python `.gitignore`](https://github.com/github/gitignore/blob/main/Python.gitignore) to avoid pushing unnecessary files.
 
-    ```bash
-    git remote add origin https://gitlab.com/username/git-repo-name.git
-    ```
+## virtual environment
 
-5. set remote heroku to your Heroku app
+> update: do not use virtualenv anymore. use `uv`, `pipenv`, or `poetry` instead.
 
-    ```bash
-    heroku git:remote -a heroku-appname
-    ```
+using a virtual environment is essential to make sure your global Python installation won't get cluttered with libraries from every project. start by installing Python 3 and ensuring it's available in your `PATH`. install virtualenv with pip:
 
-6. configure your `.gitlab-ci.yml` to activate GitLab pipelines
-7. create a **deployment.sh** file
+```bash
+pip install virtualenv
+```
 
-    ```bash
-    #$ file: deployment.sh
-    #!/bin/bash
-    python manage.py makemigrations
-    python manage.py migrate
-    ```
+on Windows, virtualenvwrapper-win makes environment management easier:
 
-8. create **Procfile** to specify executed commands by Heroku app
+```bash
+pip install virtualenvwrapper-win
+```
 
-    ```
-    #$ file: Procfile
-    migrate: bash deployment.sh
-    web: gunicorn your_project_name.wsgi
-    ```
+to create an environment:
 
-    *Note* - **Procfile** without an extension, is an essential file for your Heroku app and must be placed in the app's root directory to explicitly declare a **process type** from a variety you can choose from. For more information, visit [Heroku's article about Procfile](https://devcenter.heroku.com/articles/procfile)
+```bash
+mkvirtualenv your-env-name
+```
 
-9. get your [**.gitignore** file](https://github.com/github/gitignore/blob/main/Python.gitignore) before you commit anything
+activate it with `workon your-env-name`, or list all environments simply with `workon`. once inside, add a `requirements.txt` file listing your dependencies:
 
-### PART B &bull; Python Virtual Environment
+```
+#$ file: requirements.txt
+Django==2.1.1
+gunicorn==19.7.1
+whitenoise==3.3.0
+dj-database-url==0.4.2
+psycopg2==2.7.5
+requests==2.18.4
+# and so on...
+```
 
-We use Virtual Environment to avoid filling our base Python installation with a bunch of libraries we might use for only one project. Some projects might need different versions of the same libraries too, you couldn't possibly install every version of each dependencies, remember what they're for, and hope to always avoid conflicts, right?
+install everything with:
 
-Another reason to use this is so that other people could recreate the exact environment for your project if you're going to share it, look for bugs, and all sorts of stuff.
+```bash
+pip install -r requirements.txt
+```
 
-1. Install Python (I recommend Python3)
-2. If you've installed Python before, make sure you add it to your PATH
-3. Install virtualenv using pip
+if a library like `psycopg2` fails, remove it temporarily from the file, install the rest, then install that library separately. afterwards, regenerate your requirements file with `pip freeze > requirements.txt`.
 
-    ```bash
-    pip install virtualenv
-    ```
+## Django setup
 
-4. Install virtualenv using pip
+create your django project and app:
 
-    ```bash
-    pip install virtualenvwrapper-win
-    ```
+```bash
+django-admin startproject your_project_name
+django-admin startapp your_app_name
+```
 
-5. create the your virtual environment
+open `project/settings.py` and update it:
 
-    ```bash
-    mkvirtualenv your-env-name
-    ```
+```python
+#$ file: project/settings.py
+import os
+import dj_database_url
 
-    *Note* - To activate your env, use workon your-env-name. To see your envs, use workon
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PRODUCTION = os.environ.get('DATABASE_URL') is not None
 
-6. Create a text file called **requirements** and copy all dependencies in the code block below
+ALLOWED_HOSTS = ['*']
 
-    ```
-    #$ file: requirements.txt
-    astroid==2.0.4
-    autopep8==1.4.2
-    certifi==2018.8.24
-    chardet==3.0.4
-    colorama==0.3.9
-    coverage==4.4.1
-    dj-database-url==0.4.2
-    Django==2.1.1
-    django-environ==0.4.4
-    gunicorn==19.7.1
-    idna==2.6
-    isort==4.2.15
-    lazy-object-proxy==1.3.1
-    mccabe==0.6.1
-    mock==2.0.0
-    pbr==5.1.1
-    psycopg2==2.7.5
-    pycodestyle==2.4.0
-    pylint==2.1.1
-    pytz==2017.2
-    requests==2.18.4
-    six==1.10.0
-    typed-ast==1.1.0
-    urllib3==1.22
-    whitenoise==3.3.0
-    wrapt==1.10.11
-    ```
+INSTALLED_APPS = [
+    ...
+    'your_app_name',
+]
 
-7. Make sure you're working in your virtualenv and install the dependencies from `requirements.txt`
+MIDDLEWARE = [
+    ...
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+]
 
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-    *Tip* - If you get an error saying, for example psycopg2 can't be installed, remove it from the text file, install from the text file again, and install psycopg2 manually with `pip install psycopg2` and then run `pip freeze > requirements.txt` to update the `requirements.txt`
-
-### PART C &bull; Django Project
-
-1. create new project using command
-
-    ```bash
-    django-admin startproject your_project_name
-    ```
-
-2. create new app using command inside your project directory
-
-    ```bash
-    django-admin startapp your_app_name
-    ```
-
-3. Add and modify these lines in your project's settings file
-
-    ```python
-    #$ file: project/settings.py
-    import os
-    import dj_database_url
-
-    # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-
-    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    PRODUCTION = os.environ.get('DATABASE_URL') is not None
-
-    ALLOWED_HOSTS = ['*']
-
-    INSTALLED_APPS = [
-        ...
-        'your_app_name',
-    ]
-
-    MIDDLEWARE = [
-        ...
-        'whitenoise.middleware.WhiteNoiseMiddleware',
-    ]
-
-    TEMPLATES = [
-        {
-            'BACKEND': 'django.template.backends.django.DjangoTemplates',
-            'DIRS': [os.path.join(BASE_DIR, 'templates')],
-            'APP_DIRS': True,
-            'OPTIONS': {
-                'context_processors': [
-                    'django.template.context_processors.debug',
-                    'django.template.context_processors.request',
-                    'django.contrib.auth.context_processors.auth',
-                    'django.contrib.messages.context_processors.messages',
-                ],
-            },
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
         },
-    ]
-    ```
+    },
+]
+```
 
-      - 2 & 8 &rarr; for Production in Heroku
-      - 12 &rarr; registering your app to the project
-      - 17 &rarr; to use the WhiteNoiseMiddleware
-      - 23 &rarr; to set the global template in your root directory
+this configuration allows Heroku deployments to work correctly. if `DATABASE_URL` is present, Heroku's environment will override your database settings:
 
-      ```python
-      #$ file: project/settings.py#92
-      # If Using Heroku Environment, then Use Database Setting on Heroku
-      if PRODUCTION:
-          DATABASES['default'] = dj_database_url.config()
-      ```
+```python
+#$ file: project/settings.py#92
+if PRODUCTION:
+    DATABASES['default'] = dj_database_url.config()
+```
 
-      - Set Database to Heroku's
+you'll also want to configure static files:
 
-      ```python
-      #$ file: project/settings.py#130
-      PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+```python
+#$ file: project/settings.py#130
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-      # Static files (CSS, JavaScript, Images)
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'assets')
+]
 
-      # https://docs.djangoproject.com/en/2.1/howto/static-files/
+STATIC_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-      STATICFILES_DIRS = [
-          os.path.join(BASE_DIR, 'assets')
-      ]
+STATIC_URL = '/static/'
 
-      STATIC_ROOT = os.path.dirname(os.path.abspath(__file__))
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+```
 
-      STATIC_URL = '/static/'
+this ensures CSS, JS, and images are collected and served properly in production.
 
-      STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-      ```
+finally, wire up your app's urls and views:
 
-      - 130 &rarr; Add the project root directory
-      - 135-137 &rarr; Set your static files such as CSS, JS, and images inside the `assets` directory
+```python
+#$ file: project/urls.py
+from django.contrib import admin
+from django.urls import include, path
 
-4. Add the path to your app in your project's urls file
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('app_name.urls')),
+]
+```
 
-    ```python
-    #$ file: project/urls.py
-    from django.contrib import admin
-    from django.urls import include, path
+and inside your app, define urls and views:
 
-    urlpatterns = [
-        path('admin/', admin.site.urls),
-        path('', include('app_name.urls')),
-        ...
-    ]
-    ```
+```python
+#$ file: project/urls.py
+from django.urls import path
+from .views import *
 
-    - 2 &rarr; Import include and path for urlpatterns
-    - 6 &rarr; Direct path to include your app's urls file, which you're going to make
+urlpatterns = [
+    path('', home, name='home'),
+]
+```
 
-    *Note* - We are trying to build a scalable website and that is why we're giving the url to our app's urls file. If we instead give the paths to all of our templates into the main url file, it would get crowded quickly and become hard to maintain
+```python
+#$ file: project/views.py
+from django.shortcuts import render
 
-5. modify these files in your apps
+def home(request):
+    return render(request, 'your_template.html')
+```
 
-    ```python
-    #$ file: project/urls.py
-    from django.urls import path
-    from .views import *
-
-    urlpatterns = [
-        path('', home, name='home'),
-    ]
-    ```
-
-    ```python
-    #$ file: project/views.py
-    from django.shortcuts import render
-
-    def called_name(request):
-        return render(request, 'your_template.html')
-    ```
-
-6. create a `templates` directory inside your app directory and fill it with your html files
+place your templates (`.html` files) inside a `templates` directory within your app, and you're ready to run locally or deploy. from here on, pushing to GitLab will trigger the pipeline, migrations will run, and your Django project will be live on Heroku.

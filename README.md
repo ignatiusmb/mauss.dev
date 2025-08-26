@@ -1,6 +1,6 @@
 # Alkamauss garden <img align="right" src="./workspace/apex/static/favicon.svg" alt="logo" height="40" />
 
-a monorepo for the Alkamauss digital garden — my personal site and some projects on subdomains. the *garden* metaphor is a way of treating the site as something that grows and changes over time, rather than a fixed publication. this is mostly for myself, but kept public so anyone can browse around.
+a monorepo for the Alkamauss digital garden — my personal site and some projects on subdomains. the _garden_ metaphor is a way of treating the site as something that grows and changes over time, rather than a fixed publication. this is mostly for myself, but kept public so anyone can browse around.
 
 | workspace                                | description         | URL                         |
 | ---------------------------------------- | ------------------- | --------------------------- |
