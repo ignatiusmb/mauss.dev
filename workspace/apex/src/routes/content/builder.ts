@@ -1,4 +1,5 @@
-import { traverse } from 'aubade/compass';
+import { marker } from 'aubade/artisan';
+import { orchestrate } from 'aubade/conductor';
 import { chain } from 'aubade/transform';
 // import { exec } from 'node:child_process';
 import { attempt, compare, date, define, drill, sum } from 'mauss';
@@ -27,15 +28,15 @@ export const ROUTES = {
 		);
 
 		const series: Record<string, string> = {};
-		const items = await traverse(
+		const items = await orchestrate(
 			'../content/routes/curated',
 			({ breadcrumb: [file, slug], path }) => {
 				if (file !== '+article.md') return;
 
-				return async ({ buffer, marker, parse, siblings, task }) => {
-					const { body, frontmatter } = parse(buffer.toString('utf-8'));
-					if (!frontmatter || frontmatter.draft) return;
-					const { data: metadata, error } = schema(frontmatter);
+				return async ({ assemble, buffer, siblings, task }) => {
+					const { manifest, meta } = assemble(buffer.toString('utf-8'));
+					if (manifest.draft) return;
+					const { data: metadata, error } = schema(manifest);
 					if (!metadata) {
 						console.log(`workspace/${path.slice(3)}`, (error as any).issues);
 						return;
@@ -46,7 +47,7 @@ export const ROUTES = {
 					}
 
 					const umbrella = `curated/${slug}`;
-					const content = body.replace(/\.\/([^\s)]+)/g, (m, relative) => {
+					const content = meta.body.replace(/\.\/([^\s)]+)/g, (m, relative) => {
 						const asset = siblings.find(({ filename }) => relative === filename);
 						if (!asset || !/\.(jpe?g|png|svg|mp4)$/.test(asset.filename)) return m;
 
@@ -67,19 +68,19 @@ export const ROUTES = {
 
 					const branches = siblings.map(async (branch) => {
 						if (branch.filename[0] !== '+') return;
-						const { body, frontmatter: extras } = parse((await branch.buffer).toString('utf-8'));
+						const { manifest: extras, meta } = assemble((await branch.buffer).toString('utf-8'));
 						if (!extras || extras.draft) return;
 						return {
 							...extras,
 							branch: branch.filename.slice(1, -3),
-							content: marker.render(body),
+							content: marker.render(meta.body),
 						};
 					});
 
 					return {
 						slug,
 						...metadata,
-						table: frontmatter.table,
+						table: meta.table,
 						content: marker.render(content),
 						branches: (await Promise.all(branches)).filter((b) => b != null),
 					};
@@ -127,22 +128,22 @@ export const ROUTES = {
 			})),
 		);
 
-		const items = await traverse(
+		const items = await orchestrate(
 			'../content/routes/posts',
 			({ breadcrumb: [file, slug], path }) => {
 				if (file !== '+article.md') return;
 
-				return async ({ buffer, marker, parse, siblings, task }) => {
-					const { body, frontmatter } = parse(buffer.toString('utf-8'));
-					if (!frontmatter || frontmatter.draft) return;
-					const { data: metadata, error } = schema(frontmatter);
+				return async ({ assemble, buffer, siblings, task }) => {
+					const { manifest, meta } = assemble(buffer.toString('utf-8'));
+					if (manifest.draft) return;
+					const { data: metadata, error } = schema(manifest);
 					if (!metadata) {
 						console.log(`workspace/${path.slice(3)}`, (error as any).issues);
 						return;
 					}
 
 					const umbrella = `posts/${slug}`;
-					const content = body.replace(/\.\/([^\s)]+)/g, (m, relative) => {
+					const content = meta.body.replace(/\.\/([^\s)]+)/g, (m, relative) => {
 						const asset = siblings.find(({ filename }) => relative === filename);
 						if (!asset || !/\.(jpe?g|png|svg|mp4)$/.test(asset.filename)) return m;
 
@@ -174,7 +175,7 @@ export const ROUTES = {
 					return {
 						slug,
 						...metadata,
-						table: frontmatter.table,
+						table: meta.table,
 						content: marker.render(content),
 					};
 				};
@@ -188,12 +189,12 @@ export const ROUTES = {
 	},
 
 	async '/quotes'() {
-		const items = await traverse('../content/routes/quotes', ({ breadcrumb: [file] }) => {
-			return async ({ buffer, parse }) => {
+		const items = await orchestrate('../content/routes/quotes', ({ breadcrumb: [file] }) => {
+			return async ({ assemble, buffer }) => {
 				const content: Array<{ author: string; quote: string; from: string }> = [];
 				const author = file.slice(0, -3).replace(/-/g, ' ');
-				const { body } = parse(buffer.toString('utf-8'));
-				for (const line of body.split(/\r?\n/).filter(exists)) {
+				const { meta } = assemble(buffer.toString('utf-8'));
+				for (const line of meta.body.split(/\r?\n/).filter(exists)) {
 					const [quote, from] = line.split('#!/');
 					content.push({ author, quote, from });
 				}
@@ -247,22 +248,22 @@ export const ROUTES = {
 			})),
 		);
 
-		const items = await traverse(
+		const items = await orchestrate(
 			'../content/routes/reviews',
 			({ breadcrumb: [file, slug, category], path }) => {
 				if (file !== '+article.md') return;
 
-				return async ({ buffer, marker, parse, siblings, task }) => {
-					const { body, frontmatter } = parse(buffer.toString('utf-8'));
-					if (!frontmatter || frontmatter.draft) return;
-					const { data: metadata, error } = schema(frontmatter);
+				return async ({ assemble, buffer, siblings, task }) => {
+					const { manifest, meta } = assemble(buffer.toString('utf-8'));
+					if (manifest.draft) return;
+					const { data: metadata, error } = schema(manifest);
 					if (!metadata) {
 						console.log(`workspace/${path.slice(3)}`, (error as any).issues);
 						return;
 					}
 
 					const umbrella = `reviews/${category}/${slug}`;
-					const content = body.replace(/\.\/([^\s)]+)/g, (m, relative) => {
+					const content = meta.body.replace(/\.\/([^\s)]+)/g, (m, relative) => {
 						const asset = siblings.find(({ filename }) => relative.endsWith(filename));
 						if (!asset || !/\.(jpe?g|png|svg|mp4)$/.test(asset.filename)) return m;
 
@@ -283,12 +284,12 @@ export const ROUTES = {
 					const branches = siblings.map(async (branch) => {
 						if (branch.filename[0] !== '+') return;
 						const payload = (await branch.buffer).toString('utf-8');
-						const { body, frontmatter: extras } = parse(payload);
+						const { manifest: extras, meta } = assemble(payload);
 						if (!extras || extras.draft) return;
 						return {
 							...extras,
 							branch: branch.filename.slice(1, -3),
-							content: marker.render(body),
+							content: marker.render(meta.body),
 						};
 					});
 
@@ -297,7 +298,7 @@ export const ROUTES = {
 						slug: `${category}/${slug}`,
 						category,
 						...metadata,
-						table: frontmatter.table,
+						table: meta.table,
 						composed: date(metadata.date).delta(metadata.seen.first).days,
 						branches: (await Promise.all(branches)).filter((b) => b != null),
 						content: marker.render(content),
@@ -314,7 +315,7 @@ export const ROUTES = {
 	},
 
 	async '/uploads'() {
-		return await traverse<[umbrella: string, files: string[]]>(
+		return await orchestrate<[umbrella: string, files: string[]]>(
 			'../content/routes',
 			({ breadcrumb, depth }) => {
 				if (breadcrumb[0] !== '+article.md') return;
