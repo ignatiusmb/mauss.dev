@@ -177,7 +177,7 @@ function writeHeader(view: DataView, map: Array<['16' | '32', offset: number, va
 	}
 }
 
-function concatU8(collection: Uint8Array[]): Uint8Array {
+function concatU8(collection: Uint8Array[]) {
 	let total = 0;
 	for (const arr of collection) {
 		total += arr.length;
