@@ -11,7 +11,7 @@
 	"packageManager": "pnpm@10.13.1",
 	"prettier": "mauss/prettier.config.js",
 	"devDependencies": {
-		"@fontsource-variable/crimson-pro": "^5.2.6",
+		"@fontsource-variable/brygada-1918": "^5.2.6",
 		"@fontsource-variable/newsreader": "^5.2.8",
 		"@fontsource-variable/recursive": "^5.2.6",
 		"@ignatiusmb/styles": "^0.2.0",

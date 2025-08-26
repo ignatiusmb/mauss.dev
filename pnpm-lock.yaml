@@ -8,7 +8,7 @@ importers:
 
   .:
     devDependencies:
-      '@fontsource-variable/crimson-pro':
+      '@fontsource-variable/brygada-1918':
         specifier: ^5.2.6
         version: 5.2.6
       '@fontsource-variable/newsreader':
@@ -260,8 +260,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fontsource-variable/crimson-pro@5.2.6':
-    resolution: {integrity: sha512-LnicANpjEsOjwr9t/KGpyzkNCaGVbYw8f5GEmCQAp0QML/YnqwQnTmZi5Pa7ZqpCICwwaA7IqtQfBqP0Ac7ZqQ==}
+  '@fontsource-variable/brygada-1918@5.2.6':
+    resolution: {integrity: sha512-DqpdP8k8sY0RXAmzOe1AL7GT36prYuM9Cf/nm7RwEgGfW3NWo7f9gECFnoItM5ZeBVYzTZecruOjCB+Vmk8t0A==}
 
   '@fontsource-variable/newsreader@5.2.8':
     resolution: {integrity: sha512-Ivo7tZPqQZ/erBbjx3mc+PvI0w+TuUhy93zlvIu3dupq2AlSF328sbkAjYyhwE91v8qpiJ88ogQB684hdiPtmw==}
@@ -1330,7 +1330,7 @@ snapshots:
   '@esbuild/win32-x64@0.25.9':
     optional: true
 
-  '@fontsource-variable/crimson-pro@5.2.6': {}
+  '@fontsource-variable/brygada-1918@5.2.6': {}
 
   '@fontsource-variable/newsreader@5.2.8': {}
 

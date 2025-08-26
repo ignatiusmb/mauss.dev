@@ -68,10 +68,11 @@ export const ROUTES = {
 
 					const branches = siblings.map(async (branch) => {
 						if (branch.filename[0] !== '+') return;
-						const { manifest: extras, meta } = assemble((await branch.buffer).toString('utf-8'));
-						if (!extras || extras.draft) return;
+						const { manifest, meta } = assemble((await branch.buffer).toString('utf-8'));
+						if (!manifest || manifest.draft) return;
 						return {
-							...extras,
+							...manifest,
+							table: meta.table,
 							branch: branch.filename.slice(1, -3),
 							content: marker.render(meta.body),
 						};
@@ -284,10 +285,11 @@ export const ROUTES = {
 					const branches = siblings.map(async (branch) => {
 						if (branch.filename[0] !== '+') return;
 						const payload = (await branch.buffer).toString('utf-8');
-						const { manifest: extras, meta } = assemble(payload);
-						if (!extras || extras.draft) return;
+						const { manifest, meta } = assemble(payload);
+						if (!manifest || manifest.draft) return;
 						return {
-							...extras,
+							...manifest,
+							table: meta.table,
 							branch: branch.filename.slice(1, -3),
 							content: marker.render(meta.body),
 						};
