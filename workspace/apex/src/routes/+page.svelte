@@ -87,23 +87,5 @@
 				text-wrap: nowrap;
 			}
 		}
-		> a {
-			display: flex;
-			align-items: center;
-
-			i[data-icon] {
-				height: 1.25rem;
-				width: 1.25rem;
-				margin-left: 0.5rem;
-				transition: transform var(--transition-base) ease-in-out;
-			}
-
-			&:hover i[data-icon] {
-				transform: translateX(0.25rem);
-			}
-			&:focus-visible i[data-icon] {
-				transform: scale(1.1);
-			}
-		}
 	}
 </style>

@@ -5,7 +5,6 @@ import { chain } from 'aubade/transform';
 import { attempt, compare, date, define, drill, sum } from 'mauss';
 import { exists } from 'mauss/guards';
 import sharp from 'sharp';
-import { building } from '$app/environment';
 
 async function updated(path: string): Promise<string> {
 	return await new Promise((resolve) => {
@@ -144,6 +143,7 @@ export const ROUTES = {
 						console.log(`workspace/${path.slice(3)}`, (error as any).issues);
 						return;
 					}
+					const { building } = await import('$app/environment');
 					if (building && !metadata.updated) metadata.updated = await updated(path);
 
 					const umbrella = `posts/${slug}`;
