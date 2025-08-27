@@ -6,10 +6,7 @@ import { dev } from '$app/environment';
 import { getRequestEvent } from '$app/server';
 import { AM_SECRET, PB_INSTANCE } from '$env/static/private';
 
-interface Context {
-	cookie?: string;
-}
-export async function pocketbase({ cookie = '' }: Context = {}) {
+export async function pocketbase() {
 	const { request } = getRequestEvent();
 	const pb = new PocketBase(PB_INSTANCE);
 	pb.beforeSend = function (url, options) {
@@ -24,7 +21,7 @@ export async function pocketbase({ cookie = '' }: Context = {}) {
 		return { url, options };
 	};
 
-	pb.authStore.loadFromCookie(request.headers.get('cookie') || cookie, 'amu');
+	pb.authStore.loadFromCookie(request.headers.get('cookie') || '', 'amu');
 
 	const { data, error } = await attempt(async () => {
 		if (!pb.authStore.isValid) return;
