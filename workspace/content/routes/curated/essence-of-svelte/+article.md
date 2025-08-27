@@ -79,4 +79,4 @@ that was my first reaction when i first came across React. in the chaotic mess o
 
 ![!YouTube](AdNJ3fydeao "Rich Harris - Rethinking reactivity")
 
-> Frameworks are not tools for organizing your code, they are tools for organizing your mind
+> frameworks are not tools for organising your code, they are tools for organising your mind

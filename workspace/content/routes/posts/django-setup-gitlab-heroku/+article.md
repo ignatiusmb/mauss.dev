@@ -1,4 +1,5 @@
 ---
+updated: "2025-08-26T19:00:00+07:00"
 date: "2018-10-15T17:38:25+07:00"
 theme: archive
 title: Django Setup with GitLab and Heroku
