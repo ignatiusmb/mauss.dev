@@ -23,9 +23,7 @@ components are the building blocks of Svelte applications, written into [`.svelt
 
 ### script
 
-the top-level `<script>` tag is where you can write any JavaScript code that powers the component, e.g. import other modules and define reactive states using [runes](#the-building-blocks-runes).
-
-of course, i don't think i need to mention this, but you need to know JavaScript to write the logic inside the `<script>` tag of a Svelte component.
+the top-level `<script>` tag is where you write the JavaScript code that powers the component — for example, importing other modules or defining reactive states using [runes](#the-building-blocks-runes).
 
 ### style
 
@@ -81,4 +79,4 @@ that was my first reaction when i first came across React. in the chaotic mess o
 
 ![!YouTube](AdNJ3fydeao "Rich Harris - Rethinking reactivity")
 
-> Frameworks are not tools for organizing your code, they are tools for organizing your mind
+> frameworks are not tools for organising your code, they are tools for organising your mind

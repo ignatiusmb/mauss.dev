@@ -1,5 +1,5 @@
-import type { Items } from '$content/builder';
-import { date, drill } from 'mauss';
+import type { Schema } from '$content/posts.json/+server';
+import { date } from 'mauss';
 
 export type Query = {
 	search: string;
@@ -8,7 +8,7 @@ export type Query = {
 	sort_by: keyof typeof by;
 };
 
-export type Item = Omit<Items['/posts'][number], 'content'>;
+export type Item = Omit<Schema['items'][number], 'content'>;
 
 export function sift(items: Item[], payload: Query) {
 	const value = normalize(payload.search);
@@ -31,6 +31,12 @@ function normalize(str: string): string {
 	return str.replace(/[(){}[\]<>"']/g, '').toLowerCase();
 }
 
-export const by = {
-	date: drill('date', date.sort.newest),
-} satisfies Record<string, (x: Item, y: Item) => number>;
+type By<T extends string> = { [K in T]: (x: Item, y: Item) => number };
+export const by: By<Schema['metadata']['sort_by'][number][0]> = {
+	date(x, y) {
+		return date.sort.newest(x.date, y.date);
+	},
+	updated(x, y) {
+		return date.sort.newest(x.updated || x.date, y.updated || y.date);
+	},
+};

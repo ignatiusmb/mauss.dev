@@ -28,10 +28,7 @@
 					<time datetime={created}>{date(created).format('DD MMM YYYY')}</time>
 				</article>
 			{/each}
-			<a href="/{name}">
-				<span>see more</span>
-				<i data-icon="arrow-circle-right"></i>
-			</a>
+			<a href="/{name}">&rdca; see more</a>
 		</section>
 	{/each}
 	<hr />
@@ -41,7 +38,7 @@
 			<span>/help</span>
 		</h2>
 		<!-- prettier-ignore -->
-		<p style:margin-top="0">surfing the web is like sailing the sea, and this site is my small island in the vast ocean. i know how daunting new shores can feel — that's why i've set a <a href="/help">safe harbor</a> here. think of it as the island's guild hall, where you'll find the <strong>Dockside Chart</strong> to get your bearings and follow the paths already charted for you. if things ever feel unclear, you can always return to the harbor and consult the chart.</p>
+		<p style:margin-top="0">surfing the web is like sailing the sea, and this site is my small island in the vast ocean. i know how daunting new shores can feel — that's why i've set a <a href="/help">safe harbor</a> here. you'll find the <a href="/help#index">Dockside Chart</a> to get your bearings and follow the paths already charted for you. if things ever feel unclear, you can always return to the harbor and consult the chart.</p>
 	</section>
 </Article>
 
@@ -88,24 +85,6 @@
 
 			time {
 				text-wrap: nowrap;
-			}
-		}
-		> a {
-			display: flex;
-			align-items: center;
-
-			i[data-icon] {
-				height: 1.25rem;
-				width: 1.25rem;
-				margin-left: 0.5rem;
-				transition: transform var(--transition-base) ease-in-out;
-			}
-
-			&:hover i[data-icon] {
-				transform: translateX(0.25rem);
-			}
-			&:focus-visible i[data-icon] {
-				transform: scale(1.1);
 			}
 		}
 	}

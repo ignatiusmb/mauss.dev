@@ -1,9 +1,9 @@
-# [The Digital Atelier](https://mauss.dev)
+# the digital atelier
 
-the digital atelier — a passion project, built on top of [these amazing technologies](https://mauss.dev/help#colophon)
+this workspace contains the source code for [mauss.dev](https://mauss.dev), my personal site and the center of the Alkamauss garden. the site is built on top of [these technologies](https://mauss.dev/help#colophon).
 
 ```bash
-# from the root
+# from the repo root
 pnpm install
 cd workspace/apex
 pnpm dev

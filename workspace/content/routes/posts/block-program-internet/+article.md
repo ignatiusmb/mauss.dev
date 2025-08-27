@@ -1,7 +1,9 @@
 ---
+updated: "2025-08-26T20:15:00+07:00"
 date: "2019-01-19T17:38:25+07:00"
 theme: guide
-title: Block Internet Access to a Certain Program
+title: Block Internet Access for a Program
+description: block any program from accessing the internet in Windows using firewall rules.
 tags: [tutorial, windows]
 ---
 

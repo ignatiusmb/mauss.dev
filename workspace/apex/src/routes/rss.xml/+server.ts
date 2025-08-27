@@ -1,34 +1,34 @@
-import { traverse } from 'aubade/compass';
+import { orchestrate } from 'aubade/conductor';
 import { compare, date } from 'mauss';
 import { RSS } from './builder';
 
-const everything = await traverse(
+const everything = await orchestrate(
 	'../content/routes',
 	({ breadcrumb: [file, ...breadcrumb], parent }) => {
 		if (!file.endsWith('+article.md')) return;
 
-		return async ({ buffer, parse }) => {
-			const { frontmatter } = parse(buffer.toString('utf-8'));
-			if (!frontmatter || frontmatter.draft) return;
-			const { title, description: info } = frontmatter;
+		return async ({ assemble, buffer }) => {
+			const { manifest } = assemble(buffer.toString('utf-8'));
+			if (!Object.keys(manifest).length || manifest.draft) return;
+			const { title, description: info } = manifest;
 
 			switch (true) {
 				case parent.includes('/curated/'): {
 					const slug = `curated/${breadcrumb[0]}`;
 					const description = info || `${title} curated by Alkamauss`;
-					return { slug, title, description, date: frontmatter.date };
+					return { slug, title, description, date: manifest.date };
 				}
 				case parent.includes('/reviews/'): {
-					if (date(frontmatter.date).is.before('2020-06-25')) return;
+					if (date(manifest.date).is.before('2020-06-25')) return;
 					const slug = `reviews/${breadcrumb[1]}/${breadcrumb[0]}`;
 					const name = typeof title === 'string' ? title : title.en;
 					const description = info || `${name} reviewed by Alkamauss`;
-					return { slug, title: name, description, date: frontmatter.date };
+					return { slug, title: name, description, date: manifest.date };
 				}
 				case parent.includes('/posts/'): {
 					const slug = `posts/${breadcrumb[0].replace('.md', '')}`;
 					const description = info || 'A post by Alkamauss';
-					return { slug, title, description, date: frontmatter.date };
+					return { slug, title, description, date: manifest.date };
 				}
 				default:
 					return;

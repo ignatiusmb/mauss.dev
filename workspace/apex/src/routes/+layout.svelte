@@ -43,7 +43,7 @@
 
 <MetaHead
 	domain="https://mauss.dev"
-	title="{page.data.meta?.title || page.status}{page.url.pathname === '/' ? '' : ' • Alkamauss'}"
+	title="{page.data.meta?.title || page.status}{page.url.pathname === '/' ? '' : ' ❃ Alkamauss'}"
 	canonical={page.data.meta?.canonical || '/'}
 	description={page.data.meta?.description}
 	authors={['Ignatius Bagus.']}
@@ -154,12 +154,6 @@
 				mask: no-repeat center / 100%;
 				mask-image: var(--svg);
 
-				&[data-icon='arrow-circle-left'] {
-					--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"><circle cx="128" cy="128" r="96"/><line x1="88" y1="128" x2="168" y2="128"/><polyline points="120 96 88 128 120 160"/></svg>');
-				}
-				&[data-icon='arrow-circle-right'] {
-					--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"><circle cx="128" cy="128" r="96"/><line x1="88" y1="128" x2="168" y2="128"/><polyline points="136 96 168 128 136 160"/></svg>');
-				}
 				&[data-icon='bookmarks'] {
 					--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"><path d="M168,224l-56-40L56,224V72a8,8,0,0,1,8-8h96a8,8,0,0,1,8,8Z"/><path d="M88,64V40a8,8,0,0,1,8-8h96a8,8,0,0,1,8,8V192l-32-22.85"/></svg>');
 				}

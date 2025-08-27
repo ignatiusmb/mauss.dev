@@ -1,21 +1,12 @@
-# The Atelier's Content
+# the atelier's content
 
-each directory represents a route; the `+article.md` file inside holds the page content.
+this workspace holds the markdown sources for [mauss.dev](https://mauss.dev). each directory maps to a route on the site, with a `+article.md` file containing the page content.
 
-writing guidelines:
+## writing guidelines
 
-- follow [Aubade's semantics](https://aubade.mauss.dev/docs/semantics)
-- comply with the [default](https://github.com/markdownlint/markdownlint/blob/main/docs/RULES.md) and [project](.markdownlint.yaml) `markdownlint` rules
-- front matter must include at least a `title` property
-- when adding a `date`, use the [simplified ISO 8601](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format) format in double quotes
-
-use this front matter block if you're writing your own post:
+the content follows [Aubade's structure](https://aubade.mauss.dev/docs/overview#structure) and is linted using the [project rules](./.markdownlint.yaml). front matter must include both `date` and `title` properties. the date should be a [simplified ISO 8601](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format) string wrapped in quotes.
 
 ```yaml
----
-author:
-    name: <your_name>
-    img: /assets/profile/<filename>
-    link: <your_social_link>
----
+date: '2025-08-26T18:00:00+07:00'
+title: <title_here>
 ```

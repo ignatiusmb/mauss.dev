@@ -17,16 +17,16 @@
 
 <footer>
 	<section>
-		<span>&Larr;</span>
+		<span>«</span>
 		{#each items as { href, label, icon }}
 			<a {href} aria-label={label}>
 				<i data-icon={icon}></i>
 			</a>
 		{/each}
-		<span>&Rarr;</span>
+		<span>»</span>
 	</section>
 
-	<p>&copy; {@html range} Ignatius Bagus.</p>
+	<p>© {@html range} Ignatius Bagus.</p>
 </footer>
 
 <style>
@@ -47,10 +47,9 @@
 		align-items: center;
 		justify-content: center;
 		margin: auto;
-		font-family: var(--font-sans);
 
 		span {
-			width: 3rem;
+			width: 2rem;
 			font-size: calc(var(--size-small) * 1.5);
 		}
 

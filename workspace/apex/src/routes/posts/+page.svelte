@@ -102,15 +102,14 @@
 		>
 			<Image ratio={9 / 16} src={post.thumbnail || ''} alt={post.title}>
 				<div class="canvas" class:overlay={post.thumbnail}>
-					<header>{post.title}</header>
-					<small style:line-height="1.5">{post.description || ''}</small>
-
-					<footer>
+					<aside>
 						<time datetime={post.date}>{date(post.date).format('DD MMMM YYYY')}</time>
 						{#if post.theme && post.theme !== 'pending'}
 							<span style:text-transform="capitalize">{post.theme}</span>
 						{/if}
-					</footer>
+					</aside>
+					<header>{post.title}</header>
+					<small style:line-height="1.5">{post.description || ''}</small>
 				</div>
 			</Image>
 		</a>
@@ -166,10 +165,10 @@
 				top: 0;
 
 				display: grid;
-				gap: 2%;
-				grid-template-rows: auto 1fr auto;
+				gap: calc(2% + 0.5rem);
+				grid-template-rows: auto auto 1fr;
 
-				padding: 3% 4%;
+				padding: 2% 4%;
 				border-radius: inherit;
 
 				text-wrap: balance;
@@ -184,7 +183,7 @@
 				}
 			}
 
-			footer {
+			aside {
 				display: grid;
 				gap: 0.5rem;
 				grid-template-columns: auto auto;
@@ -194,7 +193,7 @@
 				font-size: var(--size-small);
 
 				span::before {
-					content: '•';
+					content: '❃';
 					color: var(--color-accent-primary);
 					margin-right: 0.5rem;
 				}

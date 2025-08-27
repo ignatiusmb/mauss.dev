@@ -1,5 +1,5 @@
 <script>
-	import '@fontsource-variable/crimson-pro';
+	import '@fontsource-variable/brygada-1918';
 	import '@ignatiusmb/styles/core.css';
 	import '$apex/app.css';
 	import favicon from './favicon.png';
@@ -77,7 +77,7 @@
 			[full-bleed-padding-end] var(--pad)
 			[full-bleed-end];
 
-		font-family: 'Crimson Pro Variable', serif;
+		font-family: 'Brygada 1918 Variable', serif;
 		transition: var(--transition-base);
 
 		@media screen and (min-width: 549px) {
