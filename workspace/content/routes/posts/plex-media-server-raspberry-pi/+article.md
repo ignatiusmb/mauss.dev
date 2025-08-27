@@ -1,7 +1,9 @@
 ---
+updated: "2025-08-26T19:30:00+07:00"
 date: "2018-10-19T17:38:25+07:00"
 theme: archive
-title: Setup Plex Media Server in Raspberry Pi
+title: Set Up Plex Media Server on Raspberry Pi
+description: set up a Plex media server on Raspberry Pi for home streaming.
 tags: [tutorial, raspi]
 ---
 

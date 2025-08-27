@@ -1,44 +1,37 @@
 ---
+updated: "2025-08-26T20:00:00+07:00"
 date: "2019-01-15T17:38:25+07:00"
-theme: archive
-title: Fix Double-NAT Problem on Your Network
+theme: guide
+title: Fix Double-NAT on Your Network
+description: detect and fix Double-NAT issues that break remote access in apps like Plex, using traceroute, bridge mode, and port forwarding.
 tags: [tutorial, networking]
 ---
 
-## Note
+i ran into a persistent error with Plex that lasted for months before i traced it to a double-NAT issue. if you see the same, here's how to detect and fix it.
 
-As I have experienced my issue before with Plex, I'll be referring my solutions to resolve the Double-NAT problem with `Not available outside your network` error from Plex Media Server
+![not available outside your network](./thumbnail.jpg)
 
-What is the first thing that comes to your mind when you see a red mark and some big red colored text with no green color to see anywhere? You think "something's definitely not right here". It's natural for us to see the red color as a sign of trouble and danger whilst on the contrary, the green color has a more calm and pleasant vibe in it. Well, that is exactly the case right here with my Plex Remote Access for almost 3 months and I've almost given up on it completely until I finally found the mischief behind all the issues and fixed it.
+[NAT](https://en.wikipedia.org/wiki/Network_address_translation) or Network Address Translation is what lets multiple devices share a single internet connection. most home routers use NAT by default. Double-NAT happens when *two* devices in your network are both performing NAT. for example: your ISP modem handles NAT, then your own router also does NAT on top of it. this causes Plex to struggle because connections can't map through cleanly.
 
-[NAT](https://en.wikipedia.org/wiki/Network_address_translation) (Network Address Translation) allows sharing a single internet connection with many computers. This will virtually always be used for home internet connections. Routers/modems that allow multiple computers to be connected, either over ethernet or WiFi, will use NAT to do this sharing.
+---
 
-"Double-NAT" is when you have 2 devices on the network, both handling NAT services in two levels. For example, you might have a router plugged in to your ISP directly and then route a cable to another modem to use in your room, now both the router and the modem are providing NAT services. Double-NAT will interfere with the server attempting to create automatic connections. It can also arise when the Public IP Address assigned to you by your ISP is itself behind a NAT service.
+before messing with your network and ports manually, try enabling **UPnP** (universal plug and play) on your router first. some apps can configure themselves automatically if UPnP is enabled.
 
-## Objective
+![Huawei UPnP#f](./huawei-upnp.png "Huawei UPnP")
 
-- Port forward an application
-- Resolve any Double-NAT problems on any network
+![Cisco UPnP#f](./cisco-upnp.jpg "Cisco UPnP")
 
-<!-- content -->
+---
 
-_Tip_ - Try enabling Universal Plug and Play (UPnP) first before attempting to manually forward your port. This will allow an application to automatically configure a forwarded port on the router. See images below for examples.
+## detecting double-NAT
 
-![Huawei UPnP](./huawei-upnp.png)
-![Cisco UPnP](./cisco-upnp.jpg)
+first, try to count how many modems/routers you have. if only one device, you probably don't have double-NAT and the issue lies elsewhere.
 
-### PART A &bull; Detecting Double-NAT
+if the device connects directly to your ISP, you're fine. however, if your router connects to *another* modem/router, you likely have double-NAT.
 
-#### Method 1 &bull; Knowing Exactly Which Router
+### trace your packets
 
-1. Check how many modems/routers there are in your network
-2. If there's only one &rarr; you most likely don't have a Double-NAT problem (but keep reading if needed)
-3. If you know the modem/router you're connecting to is connected directly to your ISP &rarr; you most likely don't have a Double-NAT problem (but keep reading if needed)
-4. If you know the modem/router you're connecting to is connected to another modem &rarr; read the next part
-
-#### Method 2 &bull; Manually Tracing your Packet
-
-Another way is to manually count the first 2 hops of your packet using the `traceroute` command
+use `traceroute` on Linux/Mac or `tracert` on Windows and look at the first two hops. if both show private IP ranges (e.g. `192.168.x.x`), you're behind double-NAT.
 
 ```shell
 #$ file: Windows
@@ -50,37 +43,29 @@ tracert 8.8.8.8
 traceroute 8.8.8.8
 ```
 
-You are looking for your local IP addresses, as you can see the first 2 address clearly represent a local IP with a 192.168 leading them
-
 ![Tracert](./tracert.jpg)
 
-### PART B &bull; Fixing Double-NAT
+## fixing double-NAT
 
-In Double-NAT situations, one of the devices can often be set to **Bridge Mode** so only one of the devices is providing NAT services. Alternatively, it might be possible to set up a port forward on all NAT devices so that the network requests are correctly sent through.
-
-_Note_ - Try setting the first router you're connected to in Bridge Mode. This might allow you to skip port forwarding all the way.
+the cleanest solution is to set the first device in **bridge mode** so only one device does NAT. if that's not an option, you'll need chained port forwarding: forwarding on both routers until the request reaches your server.
 
 ```shell
 #$ file: Windows
 ipconfig /all
 ```
 
-1. Use the code above to find out your local IP and set it as a static IP to make it easier (you can set a custom IP if you want to)
-2. Plex uses 32400 as their internal port number, but other applications such as Minecraft uses 25565 so know your application well to port forward them
-   _Tip_ - If you're manually forwarding ports your best bet is to stay at the high range as this will reduce the possibility of a port collision with other applications. The higher you go the safer you would be in the long run. Around 40000 to 60000 is respectable.
-3. As you can see in the image below, it is trying to automatically forward the port number 55555 but failed. You'll want to check the box to `Manually specify public port` and input your number. For demonstration purposes, we'll use 43200 for the following external/public port
-   _Important_ - You must enable this setting or else Plex will continue to try and automatically map the port and fail every time
-   ![Plex Retry](./plex-retry.png)
-4. Go to your first router settings which is the first IP when you do a `tracert` and forward your port
-   - Give a name so you can remember why you forward that port
-   - Type in the port you choose previously in `External Port`
-   - Type in the application port in `Internal Port`
-   - Use both `Protocol` (TCP/UDP)
-   - Put the IP you set static previously
-     ![Cisco Port Forward](./cisco-port-forward.jpg)
-5. Go to your second router settings and forward your port
-   _Important_ - Now this is what most other sites don't tell you, you need to type in the `External Port` you forwarded before into the `Internal Port` here. Now you can choose any port number for the external port, but I opted for the same.
-   _Note_ - The port that would be opened to the public internet would be the `External Port` on the second router, you want this port to be the same as the port you manually specify in your app.
-   ![Huawei Port Forward](./huawei-port-forward.jpg)
-6. Go back to Plex and you should see all red turn to green!
-   ![Fully Accessible](./fully-accessible.jpg)
+find your local IP and set it static (so the forwards stay consistent). note your app's port. plex uses `32400`; minecraft uses `25565`; choose appropriately. stick to high ranges (`40000–60000`) if you pick a custom external port, to avoid collisions. in Plex, manually specify the public port (e.g. `43200`).
+
+![Plex Retry](./plex-retry.png)
+
+on your first router (first hop in `tracert`), forward the app's port (`32400`) to the external port you chose (e.g. `43200`). use both TCP/UDP protocols, and point it to your static local IP (e.g. `192.168.1.xxx`).
+
+![Cisco Port Forward](./cisco-port-forward.jpg)
+
+on your second router (second hop in `tracert`), forward the same external port you chose (e.g. `43200`) to the same internal port (`43200`), so it passes through cleanly.
+
+![Huawei Port Forward](./huawei-port-forward.jpg)
+
+check your app again — red should now be green.
+
+![Fully Accessible](./fully-accessible.jpg)

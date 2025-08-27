@@ -1,8 +1,8 @@
 ---
 date: "2018-10-15T17:38:25+07:00"
 theme: archive
-title: Django Quick Setup Guide with GitLab and Heroku
-description: Create Django app and automatically build and deploy to Heroku
+title: Django Setup with GitLab and Heroku
+description: create a Django app with GitLab CI/CD and deploy automatically to Heroku.
 tags: [tutorial, coding, django, heroku, gitlab]
 ---
 

@@ -28,10 +28,7 @@
 					<time datetime={created}>{date(created).format('DD MMM YYYY')}</time>
 				</article>
 			{/each}
-			<a href="/{name}">
-				<span>see more</span>
-				<i data-icon="arrow-circle-right"></i>
-			</a>
+			<a href="/{name}">&rdca; see more</a>
 		</section>
 	{/each}
 	<hr />

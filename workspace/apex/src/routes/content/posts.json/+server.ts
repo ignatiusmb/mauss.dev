@@ -6,6 +6,7 @@ export interface Schema {
 	metadata: {
 		theme: [value: Items['/posts'][number]['theme'], label: string][];
 		tags: string[];
+		sort_by: [value: 'date' | 'updated', label: string][];
 	};
 }
 
@@ -25,6 +26,10 @@ export async function GET() {
 				['pending', 'Pending'],
 			],
 			tags: [...new Set(items.flatMap((p) => p.tags))].filter((t) => t).sort(),
+			sort_by: [
+				['date', 'published'],
+				['updated', 'updated'],
+			],
 		},
 	} satisfies Schema);
 }

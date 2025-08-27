@@ -1,16 +1,17 @@
+import { exec } from 'node:child_process';
 import { marker } from 'aubade/artisan';
 import { orchestrate } from 'aubade/conductor';
 import { chain } from 'aubade/transform';
-// import { exec } from 'node:child_process';
 import { attempt, compare, date, define, drill, sum } from 'mauss';
 import { exists } from 'mauss/guards';
 import sharp from 'sharp';
+import { building } from '$app/environment';
 
-// async function updated(path: string): Promise<string> {
-// 	return await new Promise((resolve) => {
-// 		exec(`git log -1 --format=%ad --date=iso-strict "${path}"`, (_, out) => resolve(out.trim()));
-// 	});
-// }
+async function updated(path: string): Promise<string> {
+	return await new Promise((resolve) => {
+		exec(`git log -1 --format=%ad --date=iso-strict "${path}"`, (_, out) => resolve(out.trim()));
+	});
+}
 
 const ROOT = `${process.cwd()}/static/uploads`;
 export const ROUTES = {
@@ -109,6 +110,7 @@ export const ROUTES = {
 	async '/posts'() {
 		const schema = attempt.wrap(
 			define(({ optional, array, literal, string }) => ({
+				updated: optional(string()),
 				date: string(),
 				theme: optional(
 					literal(
@@ -142,6 +144,7 @@ export const ROUTES = {
 						console.log(`workspace/${path.slice(3)}`, (error as any).issues);
 						return;
 					}
+					if (building && !metadata.updated) metadata.updated = await updated(path);
 
 					const umbrella = `posts/${slug}`;
 					const content = meta.body.replace(/\.\/([^\s)]+)/g, (m, relative) => {

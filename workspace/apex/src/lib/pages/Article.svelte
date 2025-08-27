@@ -24,7 +24,7 @@
 			<aside>
 				<time datetime={post.date}>{date(post.date).format('DD MMMM YYYY')}</time>
 				{#if post.theme && post.theme !== 'pending'}
-					<span class="separator">&bull;</span>
+					<span class="separator">❃</span>
 					<span style:text-transform="capitalize">{post.theme}</span>
 				{/if}
 			</aside>
@@ -65,10 +65,7 @@
 				{#if page.params.branch}
 					{@const idx = page.url.pathname.lastIndexOf('/')}
 					<a href={page.url.pathname.slice(0, idx)} data-branch="index">
-						<strong style:grid-template-columns="auto 1fr">
-							<i data-icon="arrow-circle-left"></i>
-							<span>back to index</span>
-						</strong>
+						<strong>◂ back to index</strong>
 					</a>
 				{/if}
 			{/if}
@@ -83,15 +80,13 @@
 
 				{#snippet sibling(type: 'back' | 'next', slug: string, title: string)}
 					<a href={slug} data-flank={type} style:grid-column={wide}>
-						<strong>
-							{#if type === 'back'}
-								<i data-icon="arrow-circle-left"></i>
-								<span>{post.series ? 'previous in series' : 'newer'}</span>
-							{:else}
-								<span>{post.series ? 'next in series' : 'older'}</span>
-								<i data-icon="arrow-circle-right"></i>
-							{/if}
-						</strong>
+						{#if type === 'back'}
+							<span class="chevron">&lsaquo;</span>
+							<strong>{post.series ? 'previous in series' : 'newer'}</strong>
+						{:else}
+							<span class="chevron" style:grid-column="2">&rsaquo;</span>
+							<strong>{post.series ? 'next in series' : 'older'}</strong>
+						{/if}
 						<span class="underlined">{title}</span>
 					</a>
 				{/snippet}
@@ -171,24 +166,30 @@
 				}
 			}
 
+			&[data-flank] {
+				display: grid;
+				gap: 0.3rem 0.5rem;
+				grid-template-rows: auto auto;
+				align-items: start;
+				align-content: start;
+
+				.chevron {
+					grid-row: 1 / -1;
+					font-size: calc(var(--size-base) * 2);
+				}
+			}
 			&[data-flank='back'] {
+				grid-template-columns: auto 1fr;
 				border-left: var(--rounding-base) solid transparent;
 				border-top-left-radius: var(--rounding-base);
 				border-bottom-left-radius: var(--rounding-base);
-
-				strong {
-					grid-template-columns: auto 1fr;
-				}
 			}
 			&[data-flank='next'] {
+				grid-template-columns: 1fr auto;
 				border-right: var(--rounding-base) solid transparent;
 				border-top-right-radius: var(--rounding-base);
 				border-bottom-right-radius: var(--rounding-base);
 				text-align: right;
-
-				strong {
-					grid-template-columns: 1fr auto;
-				}
 			}
 
 			&:hover,
@@ -361,7 +362,8 @@
 				position: absolute;
 				top: 0.05rem; /* half of hr height */
 				left: 50%;
-				border: 0.1rem solid var(--color-text);
+				border: 0.125rem solid var(--color-text);
+				border-radius: calc(var(--rounding-base) / 3);
 				background: var(--color-base);
 				transform: translate(-50%, -50%) rotate(45deg);
 			}

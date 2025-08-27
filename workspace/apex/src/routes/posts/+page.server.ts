@@ -24,7 +24,7 @@ export async function load({ parent, url }) {
 			tags: metadata.tags.map((v) => ({ name: v, selected: tags.includes(v) })),
 			sort_by: {
 				required: true,
-				options: { date: 'Date' } satisfies Record<keyof typeof by, string>,
+				options: Object.fromEntries(metadata.sort_by),
 				selected: (sort_by[0] as string) in by ? sort_by[0] : 'date',
 			},
 		},
