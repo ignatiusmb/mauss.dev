@@ -1,6 +1,6 @@
 import { redirect } from '@sveltejs/kit';
 import { attempt } from 'mauss';
-import { pocketbase } from '$lib/pb.server';
+import { pocketbase } from '$lib/db.server';
 
 export async function GET({ request, url, cookies }) {
 	const expected = {

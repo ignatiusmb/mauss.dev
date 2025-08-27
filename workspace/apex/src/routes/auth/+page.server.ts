@@ -1,6 +1,6 @@
 import { redirect } from '@sveltejs/kit';
 import { attempt } from 'mauss';
-import { pocketbase } from '$lib/pb.server';
+import { pocketbase } from '$lib/db.server';
 
 export async function load({ request, fetch, url, cookies }) {
 	const { instance } = await pocketbase({ cookie: request.headers.get('cookie') || '' });

@@ -1,4 +1,4 @@
-import type { TypedPocketBase } from '$lib/pb.server';
+import type { TypedPocketBase } from '$lib/db.server';
 
 declare global {
 	namespace App {
