@@ -2,7 +2,7 @@ import { redirect } from '@sveltejs/kit';
 import { attempt } from 'mauss';
 import { pocketbase } from '$lib/db.server';
 
-export async function GET({ request, url, cookies }) {
+export async function GET({ url, cookies }) {
 	const expected = {
 		state: cookies.get('auth_state') || '',
 		verifier: cookies.get('auth_verifier') || '',
@@ -20,7 +20,7 @@ export async function GET({ request, url, cookies }) {
 		redirect(303, '/auth');
 	}
 
-	const { instance } = await pocketbase({ cookie: request.headers.get('cookie') || '' });
+	const { instance } = await pocketbase();
 	const { error } = await attempt(async () => {
 		const users = instance.collection('users');
 		return await users.authWithOAuth2Code(

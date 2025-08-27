@@ -1,13 +1,16 @@
-import { dev } from '$app/environment';
-import { AM_SECRET, PB_INSTANCE } from '$env/static/private';
+import type { RecordService } from 'pocketbase';
 import { createHmac, randomUUID } from 'crypto';
 import { attempt } from 'mauss';
-import PocketBase, { type RecordService } from 'pocketbase';
+import PocketBase from 'pocketbase';
+import { dev } from '$app/environment';
+import { getRequestEvent } from '$app/server';
+import { AM_SECRET, PB_INSTANCE } from '$env/static/private';
 
 interface Context {
 	cookie?: string;
 }
 export async function pocketbase({ cookie = '' }: Context = {}) {
+	const { request } = getRequestEvent();
 	const pb = new PocketBase(PB_INSTANCE);
 	pb.beforeSend = function (url, options) {
 		const uuid = randomUUID();
@@ -21,7 +24,7 @@ export async function pocketbase({ cookie = '' }: Context = {}) {
 		return { url, options };
 	};
 
-	pb.authStore.loadFromCookie(cookie, 'amu');
+	pb.authStore.loadFromCookie(request.headers.get('cookie') || cookie, 'amu');
 
 	const { data, error } = await attempt(async () => {
 		if (!pb.authStore.isValid) return;

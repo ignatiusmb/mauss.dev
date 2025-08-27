@@ -17,11 +17,11 @@
 			<input type="hidden" name="provider" value={name} />
 			<button type="submit">
 				<i data-image={name}></i>
-				<span>Continue with {display}</span>
+				<span>continue with {display}</span>
 			</button>
 		</form>
 	{:else}
-		<p>Please try again later</p>
+		<p>please try again later</p>
 	{/each}
 
 	{#if form?.error}
@@ -60,8 +60,6 @@
 
 			button {
 				display: flex;
-				align-items: center;
-				justify-content: center;
 				padding: 0.625rem 2.5rem;
 				color: var(--color-text);
 				border-radius: inherit;

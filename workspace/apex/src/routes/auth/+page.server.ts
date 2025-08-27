@@ -2,8 +2,8 @@ import { redirect } from '@sveltejs/kit';
 import { attempt } from 'mauss';
 import { pocketbase } from '$lib/db.server';
 
-export async function load({ request, fetch, url, cookies }) {
-	const { instance } = await pocketbase({ cookie: request.headers.get('cookie') || '' });
+export async function load({ fetch, url, cookies }) {
+	const { instance } = await pocketbase();
 	if (instance.authStore.isValid) redirect(303, '/');
 
 	cookies.set('next', url.searchParams.get('next') || '/', { path: '/' });
@@ -22,7 +22,7 @@ export async function load({ request, fetch, url, cookies }) {
 export const actions = {
 	async oauth2({ fetch, request, url, cookies }) {
 		const { provider } = Object.fromEntries(await request.formData());
-		const { instance } = await pocketbase({ cookie: request.headers.get('cookie') || '' });
+		const { instance } = await pocketbase();
 		const { oauth2 } = await instance.collection('users').listAuthMethods({ fetch });
 		const o = oauth2.providers.find((p) => p.name === provider);
 		if (!o) return { error: `${provider} OAuth provider not configured` };
@@ -33,8 +33,8 @@ export const actions = {
 		redirect(302, o.authURL + `${url.origin}/auth/verify`);
 	},
 
-	async purge({ request, cookies }) {
-		const { instance } = await pocketbase({ cookie: request.headers.get('cookie') || '' });
+	async purge({ cookies }) {
+		const { instance } = await pocketbase();
 		instance.authStore.clear();
 		cookies.delete('amu', { path: '/' });
 		redirect(303, '/auth');
