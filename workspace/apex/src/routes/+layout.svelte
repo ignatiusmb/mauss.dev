@@ -87,7 +87,7 @@
 			styles={{
 				'--size': '2rem',
 				'--background': 'var(--color-base)',
-				'--color': 'var(--color-accent-primary)',
+				'--color': 'var(--color-accent-secondary)',
 				'--transition-duration': 'var(--transition-base)',
 			}}
 		/>

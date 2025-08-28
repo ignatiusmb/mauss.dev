@@ -20,17 +20,16 @@
 	--transition-fast: calc(var(--transition-base) / 2);
 	--transition-slow: calc(var(--transition-base) * 2);
 
-	--color-base: oklch(0.1554 0.0042 286);
-	--color-surface: oklch(0.1978 0.0042 286);
-	--color-overlay: oklch(0.2402 0.0042 286);
-	--color-border: oklch(0.2826 0.0084 286);
+	--color-base: oklch(0.144 0.008 275);
+	--color-surface: oklch(0.188 0.008 275);
+	--color-overlay: oklch(0.232 0.008 275);
+	--color-border: oklch(0.276 0.008 275);
 	--color-code-block: #1c1c21;
 
-	--color-text: oklch(0.7886 0.0055 298);
-	--color-text-muted: oklch(0.7089 0.0144 286);
-
-	--color-accent-primary: #c49e45; /* forged-brass-gold */
-	--color-accent-secondary: #6b5ca5; /* arcane-violet */
+	--color-text: oklch(0.787 0.008 275);
+	--color-text-muted: oklch(0.717 0.008 275);
+	--color-accent-primary: oklch(0.424 0.18 275);
+	--color-accent-secondary: oklch(0.717 0.115 85);
 	--color-accent-tertiary: #ce5a57; /* red-rust */
 	--color-form-error: #b24d4d; /* red-oxide */
 	--color-form-highlight: #5fbceb;
@@ -57,14 +56,14 @@ body {
 
 a,
 .underlined {
-	color: oklch(0.9086 0.0055 298);
+	color: oklch(0.906 0.008 275);
 	text-decoration-thickness: 2px;
 	text-decoration-line: underline;
-	text-decoration-color: oklch(0.5999 0 0 / 40%);
+	text-decoration-color: oklch(1 0 0 / 34%);
 }
 a:hover,
 .underlined:hover {
-	text-decoration-color: oklch(0.5999 0 0 / 80%);
+	text-decoration-color: oklch(1 0 0 / 64%);
 }
 
 code {

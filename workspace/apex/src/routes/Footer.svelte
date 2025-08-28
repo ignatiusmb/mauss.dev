@@ -68,7 +68,7 @@
 
 			&:hover > i,
 			&:focus > i {
-				color: var(--color-accent-primary);
+				color: var(--color-accent-secondary);
 				transform: scale(1.5) translateY(-25%);
 			}
 		}
