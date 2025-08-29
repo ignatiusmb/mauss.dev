@@ -42,10 +42,10 @@
 			&:focus {
 				outline-color: var(--color-border);
 			}
-		}
 
-		:global(svg) {
-			width: 100%;
+			> :global(*) {
+				width: 100%;
+			}
 		}
 	}
 

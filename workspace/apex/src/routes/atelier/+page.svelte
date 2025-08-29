@@ -80,20 +80,11 @@
 		bind:open={alkamauss['aubade']}
 	>
 		{#snippet logo()}
-			<svg viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path
-					d="M480 94.641C517.128 73.2051 562.872 73.2051 600 94.641L895.692 265.359C932.82 286.795 955.692 326.41 955.692 369.282V710.718C955.692 753.59 932.82 793.205 895.692 814.641L600 985.359C562.872 1006.79 517.128 1006.79 480 985.359L184.308 814.641C147.18 793.205 124.308 753.59 124.308 710.718V369.282C124.308 326.41 147.18 286.795 184.308 265.359L480 94.641Z"
-					fill="#0070BB"
-				/>
-				<path
-					d="M393.865 377C409.942 349.154 439.654 332 471.808 332L607.885 332C640.038 332 669.75 349.154 685.827 377L753.865 494.846C769.942 522.692 769.942 557 753.865 584.846L685.827 702.692C669.75 730.538 640.038 747.692 607.885 747.692L471.808 747.692C439.654 747.692 409.942 730.538 393.865 702.692L325.827 584.846C309.75 557 309.75 522.692 325.827 494.846L393.865 377Z"
-					fill="white"
-				/>
-			</svg>
+			<img src="https://aubade.mauss.dev/favicon.svg" alt="Aubade logo" />
 		{/snippet}
 
 		<!-- prettier-ignore -->
-		<p><strong>filesystem-based content processor</strong>. shaped by a long-standing need to fully own and preserve my content, <em>aubade</em> treats your filesystem as a database. it recursively processes directories containing at least one markdown file, turning it and its sibling files into structured data.</p>
+		<p><strong>markdown, orchestrated</strong>. Aubade turns your markdown and its sibling assets into structured data, treating the filesystem as a database you fully control and can preserve long-term.</p>
 		<ul>
 			<li>built a recursive file reader that transforms directories into structured JSON</li>
 			<li>wrote a minimal, dependency-free YAML-like parser from scratch</li>

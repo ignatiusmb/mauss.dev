@@ -1,4 +1,4 @@
-import type { RecordService } from 'pocketbase';
+import type { RecordService, SendOptions } from 'pocketbase';
 import { createHmac, randomUUID } from 'crypto';
 import { attempt } from 'mauss';
 import PocketBase from 'pocketbase';
@@ -6,21 +6,22 @@ import { dev } from '$app/environment';
 import { getRequestEvent } from '$app/server';
 import { AM_SECRET, PB_INSTANCE } from '$env/static/private';
 
+function digest(url: string, options: SendOptions) {
+	const uuid = randomUUID();
+	const timestamp = `${Date.now()}`;
+	const hmac = createHmac('sha256', AM_SECRET);
+	options.headers = Object.assign({}, options.headers, {
+		'AM-Client-ID': uuid,
+		'AM-Timestamp': timestamp,
+		'AM-Signature': hmac.update(`${uuid}:${timestamp}`).digest('hex'),
+	});
+	return { url, options };
+}
+
 export async function pocketbase() {
 	const { request } = getRequestEvent();
 	const pb = new PocketBase(PB_INSTANCE);
-	pb.beforeSend = function (url, options) {
-		const uuid = randomUUID();
-		const timestamp = `${Date.now()}`;
-		const hmac = createHmac('sha256', AM_SECRET);
-		options.headers = Object.assign({}, options.headers, {
-			'AM-Client-ID': uuid,
-			'AM-Timestamp': timestamp,
-			'AM-Signature': hmac.update(`${uuid}:${timestamp}`).digest('hex'),
-		});
-		return { url, options };
-	};
-
+	pb.beforeSend = digest;
 	pb.authStore.loadFromCookie(request.headers.get('cookie') || '', 'amu');
 
 	const { data, error } = await attempt(async () => {

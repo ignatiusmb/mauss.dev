@@ -82,27 +82,27 @@
 			<tr>
 				<th scope="col">headlines</th>
 				<!-- prettier-ignore -->
-				<td>personal moments and global happenings; news, milestones, and cultural shifts that stood out and shaped the month.</td>
+				<td>personal moments and global happenings; news, milestones, and cultural shifts that stood out and shaped the month</td>
 			</tr>
 			<tr>
 				<th scope="col">stories</th>
 				<!-- prettier-ignore -->
-				<td>the lives and worlds i stepped into; mostly anime and movies, but open to any medium that tells a compelling story.</td>
+				<td>the lives and worlds i stepped into; mostly anime and movies, but open to any medium that tells a compelling story</td>
 			</tr>
 			<tr>
 				<th scope="col">pieces</th>
 				<!-- prettier-ignore -->
-				<td>articles, essays, and posts; thoughtful writing that lingered in my head or stirred something within me.</td>
+				<td>articles, essays, and posts; thoughtful writing that lingered in my head or stirred something within me</td>
 			</tr>
 			<tr>
 				<th scope="col">tracks</th>
 				<!-- prettier-ignore -->
-				<td>music that stayed with me; sounds and songs that guide my mood throughout the month.</td>
+				<td>music that stayed with me; sounds and songs that guide my mood throughout the month</td>
 			</tr>
 			<tr>
 				<th scope="col">clips</th>
 				<!-- prettier-ignore -->
-				<td>videos worth remembering; spontaneous finds full of insight, craft, or pure delight.</td>
+				<td>videos worth remembering; spontaneous finds full of insight, craft, or pure delight</td>
 			</tr>
 		</tbody>
 	</table>
@@ -131,32 +131,32 @@
 			<tr>
 				<th scope="col"><a href="/posts?theme=reflection">reflection</a></th>
 				<!-- prettier-ignore -->
-				<td><strong>personal thoughts or reflections</strong>. introspective pieces that explore feelings, experiences, and lessons learned. often more emotional and subjective, capturing a moment in time rather than building a polished argument.</td>
+				<td><strong>personal thoughts or reflections</strong>. introspective pieces that explore feelings, experiences, and lessons learned. often more emotional and subjective, capturing a moment in time rather than building a polished argument</td>
 			</tr>
 			<tr>
 				<th scope="col"><a href="/posts?theme=essay">essay</a></th>
 				<!-- prettier-ignore -->
-				<td><strong>opinionated long-form exploration</strong>. well-researched and refined deep dives into a topic, shaped by my own perspective. i aim for accuracy, but i may still get things wrong.</td>
+				<td><strong>opinionated long-form exploration</strong>. well-researched and refined deep dives into a topic, shaped by my own perspective. i aim for accuracy, but i may still get things wrong</td>
 			</tr>
 			<tr>
 				<th scope="col"><a href="/posts?theme=guide">guide</a></th>
 				<!-- prettier-ignore -->
-				<td><strong>practical instructions or behind-the-scenes</strong>. how-to articles or devlogs of my own workflow and problem-solving. follow along, adapt ideas, and apply what you learn.</td>
+				<td><strong>practical instructions or behind-the-scenes</strong>. how-to articles or devlogs of my own workflow and problem-solving. follow along, adapt ideas, and apply what you learn</td>
 			</tr>
 			<tr>
 				<th scope="col"><a href="/posts?theme=moment">moment</a></th>
 				<!-- prettier-ignore -->
-				<td><strong>brief observation or thought</strong>. sometimes unrefined, short, spontaneous notes or insights. they may grow into something more substantial over time.</td>
+				<td><strong>brief observation or thought</strong>. sometimes unrefined, short, spontaneous notes or insights. they may grow into something more substantial over time</td>
 			</tr>
 			<tr>
 				<th scope="col"><a href="/posts?theme=archive">archive</a></th>
 				<!-- prettier-ignore -->
-				<td><strong>republished or preserved</strong>. pieces kept for reference, whether old articles or other material worth keeping. they may be unpolished, but they hold value in their own way.</td>
+				<td><strong>republished or preserved</strong>. pieces kept for reference, whether old articles or other material worth keeping. they may be unpolished, but they hold value in their own way</td>
 			</tr>
 			<tr>
 				<th scope="col"><a href="/posts?theme=pending">pending</a></th>
 				<!-- prettier-ignore -->
-				<td><strong>awaiting theme assignment</strong>. temporary placeholder for posts that haven't yet been given a theme. they will eventually be classified under one of the categories above.</td>
+				<td><strong>awaiting theme assignment</strong>. temporary placeholder for posts that haven't yet been given a theme. they will eventually be classified under one of the categories above</td>
 			</tr>
 		</tbody>
 	</table>
@@ -196,27 +196,27 @@
 			<tr>
 				<th scope="col"><a href="/reviews?tier=S">S</a></th>
 				<!-- prettier-ignore -->
-				<td><strong>stellar animation and exceptional adaptation</strong>. the ones that make everything else feel dim by comparison. the direction feels impossibly refined. they come closest to my definition of a masterpiece.</td>
+				<td><strong>stellar animation and exceptional adaptation</strong>. the ones that make everything else feel dim by comparison. the direction feels impossibly refined. they come closest to my definition of a masterpiece</td>
 			</tr>
 			<tr>
 				<th scope="col"><a href="/reviews?tier=A">A</a></th>
 				<!-- prettier-ignore -->
-				<td><strong>highly polished and excellent across the board</strong>. impressive, with many standout moments and a lasting impact. they deliver a cohesive, admirable experience. perhaps given more time, care, or stronger source material, they might've reached S-tier.</td>
+				<td><strong>highly polished and excellent across the board</strong>. impressive, with many standout moments and a lasting impact. they deliver a cohesive, admirable experience. perhaps given more time, care, or stronger source material, they might've reached S-tier</td>
 			</tr>
 			<tr>
 				<th scope="col"><a href="/reviews?tier=B">B</a></th>
 				<!-- prettier-ignore -->
-				<td><strong>solid works with occasional highs</strong>. reliable, with great ideas or standout moments, but something doesn't quite click. adaptation is often safe or straightforward. the kind of good average many aim for.</td>
+				<td><strong>solid works with occasional highs</strong>. reliable, with great ideas or standout moments, but something doesn't quite click. adaptation is often safe or straightforward. the kind of good average many aim for</td>
 			</tr>
 			<tr>
 				<th scope="col"><a href="/reviews?tier=C">C</a></th>
 				<!-- prettier-ignore -->
-				<td><strong>watchable but flawed</strong>. had potential, but didn't do justice to it. there might be a few good scenes or ideas, but the issues are hard to ignore, and it ultimately feels like a miss. still interesting, sometimes, for what they <em>tried</em> to do.</td>
+				<td><strong>watchable but flawed</strong>. had potential, but didn't do justice to it. there might be a few good scenes or ideas, but the issues are hard to ignore, and it ultimately feels like a miss. still interesting, sometimes, for what they <em>tried</em> to do</td>
 			</tr>
 			<tr>
 				<th scope="col"><a href="/reviews?tier=D">D</a></th>
 				<!-- prettier-ignore -->
-				<td><strong>poor execution, wasted potential</strong>. the ones i struggled to finish, or couldn't. even if the core story is good, the execution actively works against it. often messy, incoherent, or just off in ways i couldn't bear. usually a frustrating or forgettable experience.</td>
+				<td><strong>poor execution, wasted potential</strong>. the ones i struggled to finish, or couldn't. even if the core story is good, the execution actively works against it. often messy, incoherent, or just off in ways i couldn't bear. usually a frustrating or forgettable experience</td>
 			</tr>
 		</tbody>
 	</table>

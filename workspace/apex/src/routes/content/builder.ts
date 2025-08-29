@@ -6,12 +6,6 @@ import { attempt, compare, date, define, drill, sum } from 'mauss';
 import { exists } from 'mauss/guards';
 import sharp from 'sharp';
 
-async function updated(path: string): Promise<string> {
-	return await new Promise((resolve) => {
-		exec(`git log -1 --format=%ad --date=iso-strict "${path}"`, (_, out) => resolve(out.trim()));
-	});
-}
-
 const ROOT = `${process.cwd()}/static/uploads`;
 export const ROUTES = {
 	async '/curated'() {
@@ -356,3 +350,9 @@ export const ROUTES = {
 export type Items = {
 	[key in keyof typeof ROUTES]: Awaited<ReturnType<(typeof ROUTES)[key]>>;
 };
+
+async function updated(path: string): Promise<string> {
+	return await new Promise((resolve) => {
+		exec(`git log -1 --format=%ad --date=iso-strict "${path}"`, (_, out) => resolve(out.trim()));
+	});
+}

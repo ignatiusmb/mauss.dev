@@ -194,7 +194,7 @@
 
 				span::before {
 					content: '❃';
-					color: var(--color-accent-primary);
+					color: var(--color-accent-secondary);
 					margin-right: 0.5rem;
 				}
 			}

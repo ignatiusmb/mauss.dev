@@ -131,7 +131,7 @@
 		}
 
 		:global(.separator) {
-			color: var(--color-accent-primary);
+			color: var(--color-accent-secondary);
 		}
 	}
 
