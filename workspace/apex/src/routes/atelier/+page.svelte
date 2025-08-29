@@ -84,7 +84,7 @@
 		{/snippet}
 
 		<!-- prettier-ignore -->
-		<p><strong>markdown, orchestrated</strong>. shaped by a long-standing need to fully own and preserve my content, <em>aubade</em> treats your filesystem as a database. it recursively processes directories containing at least one markdown file, turning it and its sibling files into structured data.</p>
+		<p><strong>markdown, orchestrated</strong>. Aubade turns your markdown and its sibling assets into structured data, treating the filesystem as a database you fully control and can preserve long-term.</p>
 		<ul>
 			<li>built a recursive file reader that transforms directories into structured JSON</li>
 			<li>wrote a minimal, dependency-free YAML-like parser from scratch</li>
