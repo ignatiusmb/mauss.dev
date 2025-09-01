@@ -98,7 +98,8 @@
 				<span>with some filters</span>
 			{/if}
 			{#if params.sort_by}
-				<span>sorted by {params.sort_by}</span>
+				{@const { options } = memory.filters.sort_by}
+				<span>sorted by {options[params.sort_by]}</span>
 			{/if}
 		</p>
 	{/if}

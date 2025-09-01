@@ -467,6 +467,7 @@
 			th {
 				padding: 0.5rem;
 				border-bottom: 1px solid var(--color-border);
+				vertical-align: top;
 				text-align: left;
 			}
 		}
