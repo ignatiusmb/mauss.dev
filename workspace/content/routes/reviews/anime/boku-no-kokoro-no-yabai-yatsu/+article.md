@@ -2,7 +2,7 @@
 date: 2020
 title: The Dangers in My Heart
 alias: [Boku no Kokoro no Yabai Yatsu]
-tier: "A"
+tier: A
 released: 2023-04-02
 genres: [school, comedy, romance]
 seen:

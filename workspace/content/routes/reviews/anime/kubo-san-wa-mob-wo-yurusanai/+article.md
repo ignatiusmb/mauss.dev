@@ -2,7 +2,7 @@
 date: 2020
 title: Kubo Won't Let Me Be Invisible
 alias: [Kubo-san wa Mob wo Yurusanai]
-tier: "B"
+tier: B
 released: 2023-01-10
 genres: [school, comedy, romance]
 seen:

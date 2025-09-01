@@ -2,7 +2,7 @@
 date: 2020
 title: A Sign of Affection
 alias: [Yubisaki to Renren]
-tier: "B"
+tier: B
 released: 2024-01-06
 genres: [adult cast, romance]
 seen:

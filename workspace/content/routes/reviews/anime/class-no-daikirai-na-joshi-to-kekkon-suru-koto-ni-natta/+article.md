@@ -1,8 +1,8 @@
 ---
 date: 2020
-title: "I'm Getting Married to a Girl I Hate in My Class"
+title: I'm Getting Married to a Girl I Hate in My Class
 alias: [Kurakon, Class no Daikirai na Joshi to Kekkon suru Koto ni Natta.]
-tier: "C"
+tier: C
 released: 2025-01-03
 genres: [school, mystery]
 seen:

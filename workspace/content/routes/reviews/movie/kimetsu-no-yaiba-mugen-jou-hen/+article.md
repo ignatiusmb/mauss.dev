@@ -2,7 +2,7 @@
 date: 2020
 title: "Demon Slayer the Movie: Infinity Castle"
 alias: ["Kimetsu no Yaiba Movie: Mugen Jou-hen"]
-tier: "S"
+tier: S
 released: 2025-07-18
 genres: [anime, action, demons, supernatural, shounen]
 seen:

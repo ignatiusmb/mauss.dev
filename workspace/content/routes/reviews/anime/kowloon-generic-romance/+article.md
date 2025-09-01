@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: Kowloon Generic Romance
-tier: "B"
+tier: B
 released: 2025-04-05
 genres: [adult cast, mystery, romance, sci-fi]
 seen:

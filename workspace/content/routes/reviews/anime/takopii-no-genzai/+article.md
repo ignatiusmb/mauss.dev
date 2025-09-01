@@ -2,7 +2,7 @@
 date: 2020
 title: Takopi's Original Sin
 alias: [Takopii no Genzai]
-tier: "S"
+tier: S
 released: 2025-06-28
 genres: [psychological, drama, sci-fi]
 seen:

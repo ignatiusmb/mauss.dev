@@ -2,7 +2,7 @@
 date: 2020
 title: The Dreaming Boy is a Realist
 alias: [Yumemiru Danshi wa Genjitsushugisha]
-tier: "D"
+tier: D
 released: 2023-07-04
 genres: [school, comedy, romance]
 seen:
