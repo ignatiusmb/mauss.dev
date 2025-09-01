@@ -118,12 +118,6 @@ imprisoned by a fence that exists only in memory. what invisible fences do we st
 
 ## tracks
 
-### Vocal Synthesizers 101
-
-Vocal Synthesizers are software voices. the most famous is **Hatsune Miku**, built from samples of Saki Fujita, and tuned by producers. a beginner’s track might sound mechanical; in the hands of a skilled producer, it can feel alive. that tension—between artificiality and artistry—is the appeal.
-
-### Monitoring feat. Hatsune Miku
-
 ![!YouTube](kbNdx0yqbZE "[Monitoring feat. Hatsune Miku](https://music.youtube.com/watch?v=OjoLYGcbJcI) by DECO*27")
 
 Monitoring Miku! i'm late to the party. `(╥ᴗ╥)`
