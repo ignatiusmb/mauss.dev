@@ -1,6 +1,6 @@
 import { exec } from 'node:child_process';
-import { marker } from 'aubade/artisan';
 import { orchestrate } from 'aubade/conductor';
+import { marker } from 'aubade/legacy';
 import { chain } from 'aubade/transform';
 import { attempt, compare, date, define, drill, sum } from 'mauss';
 import { exists } from 'mauss/guards';
@@ -13,15 +13,14 @@ export const ROUTES = {
 			define(({ optional, literal, string }) => ({
 				date: string(),
 				title: string(),
-				series: optional({
-					title: string(),
+				series: {
+					title: literal('the-essence', 'the-harvest', 'my-notes'),
 					type: literal('linear', 'collection'),
-				}),
+				},
 				description: optional(string()),
 			})),
 		);
 
-		const series: Record<string, string> = {};
 		const items = await orchestrate(
 			'../content/routes/curated',
 			({ breadcrumb: [file, slug], path }) => {
@@ -34,10 +33,6 @@ export const ROUTES = {
 					if (!metadata) {
 						console.log(`workspace/${path.slice(3)}`, (error as any).issues);
 						return;
-					}
-
-					if (metadata.series && !series[metadata.series.title]) {
-						series[metadata.series.title] = metadata.series.type;
 					}
 
 					const umbrella = `curated/${slug}`;
@@ -83,21 +78,23 @@ export const ROUTES = {
 			},
 		);
 
-		type Schema = NonNullable<ReturnType<typeof schema>['data']>;
-		const sort: Record<NonNullable<Schema['series']>['type'], Parameters<typeof items.sort>[0]> = {
-			collection: drill('title', compare.string),
-			linear: drill('date', date.sort.newest),
-		};
-
-		for (const title in series) {
-			const filtered = items.filter((i) => i.series?.title === title);
-			chain(filtered, {
-				sort: sort[series[title] as keyof typeof sort],
-				transform: ({ slug, title }) => ({ slug: `/curated/${slug}`, title }),
-			});
-		}
-
-		return items.sort(drill('date', date.sort.newest));
+		const collections = new Set(
+			items.flatMap((i) => (i.series.type === 'collection' ? [i.series.title] : [])),
+		);
+		return chain(items, {
+			group: (item) => item.series.title,
+			sorter(group) {
+				if (collections.has(group)) {
+					return drill('title', compare.string);
+				}
+				return drill('date', date.sort.newest);
+			},
+			transform: ({ slug, title }) => ({ slug: `/curated/${slug}`, title }),
+			finalize(groups) {
+				const items = Object.values(groups).flat();
+				return items.sort(drill('date', date.sort.newest));
+			},
+		});
 	},
 
 	async '/posts'() {
@@ -181,7 +178,7 @@ export const ROUTES = {
 		);
 
 		return chain(items, {
-			sort: drill('date', date.sort.newest),
+			sorter: () => drill('date', date.sort.newest),
 			transform: ({ slug, title }) => ({ slug: `/posts/${slug}`, title }),
 		});
 	},
@@ -307,7 +304,7 @@ export const ROUTES = {
 		);
 
 		return chain(items, {
-			sort: drill('date', date.sort.newest),
+			sorter: () => drill('date', date.sort.newest),
 			breakpoint: ({ draft }) => draft,
 			transform: ({ slug, title }) => ({ slug: `/reviews/${slug}`, title }),
 		});
