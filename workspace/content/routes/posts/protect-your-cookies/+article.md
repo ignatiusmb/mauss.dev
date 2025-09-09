@@ -24,9 +24,8 @@ Cross-site scripting (XSS) is one the most dangerous vulnerabilities an applicat
 Browsers do provide a way to protect cookies from the most malicious JavaScript, but it's still up to us to utilize those tools as the developers, it's called HttpOnly cookies. This flag tells the browser that this particular cookie should only be accessible by the server, it means no JavaScript executed from the client-side would be able to access this. Of course, this only works with the assumption that it's a modern browser that implements HttpOnly correctly.
 
 ```javascript
-#$ file: Sapper-flavoured Express
 export async function post(req, res) {
-  ...
+  // ...
   res.cookie('token', 'my-token-string', { httpOnly: true }); // Set-Cookie with httpOnly
   res.status(200).json({ success: true, message: 'Login successful' });
 }

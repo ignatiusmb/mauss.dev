@@ -24,8 +24,7 @@ This admin dashboard is a simple web application for admins to simply view and u
 
 For example, one of our components is this `Button.svelte` that scopes the style and encapsulates any logic that happens to just this component.
 
-```svelte
-#$ file: Button.svelte
+```svelte file:Button.svelte
 <span on:click>
   <slot />
 </span>
@@ -47,8 +46,7 @@ For example, one of our components is this `Button.svelte` that scopes the style
 
 Then, we can just import that component and use it wherever we need to. That `on:click` we declare in `Button.svelte` component is used to forward the event so we can call it where we import it, like so
 
-```svelte
-#$ file: App.svelte
+```svelte file:App.svelte
 <script>
   import Button from './Button.svelte';
 </script>
