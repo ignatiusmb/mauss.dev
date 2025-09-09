@@ -38,8 +38,7 @@ git lfs uninstall
 
 Then go to your `.gitattributes` file and remove the lines that were added by Git LFS (if it's everything, then you can safely delete the file)
 
-```diff
-#$ file: .gitattributes
+```diff file:.gitattributes
 # examples this file might have
 *.md linguist-detectable 
 

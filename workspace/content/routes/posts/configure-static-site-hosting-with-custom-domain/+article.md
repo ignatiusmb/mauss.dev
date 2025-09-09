@@ -56,33 +56,9 @@ It turns out it's true with these static site hosting providers, because they op
 
 To prevent that from happening, we'll need to reroute the whole domain to our selected provider, be it Netlify, Vercel, or others similar by adding their name servers as the custom one in our domain registrar settings.
 
-Remember from our previous steps where they gave us their name servers, another easier way is to immediately add your custom domain to their domain management tabs. Use one of the following url for your selected provider.
-
-```
-#$ file: Netlify Domain Management
-https://app.netlify.com/teams/TEAM_NAME/dns
-```
-
-```
-#$ file: Vercel Domain Management
-https://vercel.com/dashboard/domains
-```
+Remember from our previous steps where they gave us their name servers, another easier way is to immediately add your custom domain to their domain management tabs. Netlify's domain management can be found in <https://app.netlify.com/teams/TEAM_NAME/dns> and Vercel's domain management can be found in <https://vercel.com/dashboard/domains>, replace `TEAM_NAME` with your team name in Netlify.
 
 After adding our custom domain, we could simply go to their settings and get the name servers. Netlify usually have 4 to be assigned, and Vercel has 2. It might be different for some of you, but they usually have numbers in it.
-
-```
-#$ file: Netlify Nameservers
-dns1.p05.nsone.net
-dns2.p05.nsone.net
-dns3.p05.nsone.net
-dns4.p05.nsone.net
-```
-
-```
-#$ file: Vercel Nameservers
-ns1.vercel-dns.com
-ns2.vercel-dns.com
-```
 
 They say it might take from 24 hours up to 48 hours to take effect, but it's usually a lot faster than that, probably around 1 hour give or take. After that, you can freely use your custom domain to point your domain or any subdomains to any site or IP address, just like you could previously when it's still with your domain registrar nameservers. But, now you'll have full performance from their CDN and other services.
 

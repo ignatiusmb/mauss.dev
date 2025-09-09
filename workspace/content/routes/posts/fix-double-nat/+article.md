@@ -33,13 +33,11 @@ if the device connects directly to your ISP, you're fine. however, if your route
 
 use `traceroute` on Linux/Mac or `tracert` on Windows and look at the first two hops. if both show private IP ranges (e.g. `192.168.x.x`), you're behind double-NAT.
 
-```shell
-#$ file: Windows
+```shell file:Windows
 tracert 8.8.8.8
 ```
 
-```bash
-#$ file: Linux
+```bash file:Linux
 traceroute 8.8.8.8
 ```
 
@@ -49,8 +47,7 @@ traceroute 8.8.8.8
 
 the cleanest solution is to set the first device in **bridge mode** so only one device does NAT. if that's not an option, you'll need chained port forwarding: forwarding on both routers until the request reaches your server.
 
-```shell
-#$ file: Windows
+```shell file:Windows
 ipconfig /all
 ```
 

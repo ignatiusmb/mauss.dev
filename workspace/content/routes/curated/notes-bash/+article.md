@@ -54,8 +54,7 @@ du -a path/to/start | sort -nr | head -n 10
 
 `cp -al`, use this to create a hard link for the file or everything in the directory to the desired destination. hard linking is crucial for media management so that you won't have a lot of wasted space with duplicates or multiple files with similar data and different file names.
 
-```bash
-#$ file: Copy Method
+```bash file:copying
 # This will create a complete hard linked copy instead of traditional one
 cp -al /path/to/source /path/to/destination
 ```
@@ -68,8 +67,7 @@ cp -al /path/to/source /path/to/destination
 - Search and destroy files and directories with specific prefix/suffix
 - and many more...
 
-```bash
-#$ file: Find Method
+```bash file:searching
 # (find .) <- dot meaning relative from current path
 
 # Find all empty files and directories
@@ -101,8 +99,7 @@ find . -type f -perm 777 -exec chmod -x {} \;
 
 `rename`, it renames multiple files or directories with a specific regex pattern. One of the most useful scripts to have for media management.
 
-```bash
-#$ file: Rename Method
+```bash file:renaming
 # Get the package first if you don't have it yet
 sudo apt install rename
 

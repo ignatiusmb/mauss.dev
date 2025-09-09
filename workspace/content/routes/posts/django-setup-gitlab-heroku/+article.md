@@ -21,8 +21,7 @@ heroku git:remote -a heroku-appname
 
 with that ready, add a `.gitlab-ci.yml` file to enable pipelines. you'll also need a simple script for migrations:
 
-```bash
-#$ file: deployment.sh
+```bash file:deployment.sh
 #!/bin/bash
 python manage.py makemigrations
 python manage.py migrate
@@ -30,8 +29,7 @@ python manage.py migrate
 
 Heroku also requires a `Procfile` in your project's root. this file specifies how your app runs:
 
-```
-#$ file: Procfile
+```text file:Procfile
 migrate: bash deployment.sh
 web: gunicorn your_project_name.wsgi
 ```
@@ -62,8 +60,7 @@ mkvirtualenv your-env-name
 
 activate it with `workon your-env-name`, or list all environments simply with `workon`. once inside, add a `requirements.txt` file listing your dependencies:
 
-```
-#$ file: requirements.txt
+```text file:requirements.txt
 Django==2.1.1
 gunicorn==19.7.1
 whitenoise==3.3.0
@@ -92,8 +89,7 @@ django-admin startapp your_app_name
 
 open `project/settings.py` and update it:
 
-```python
-#$ file: project/settings.py
+```python file:project/settings.py
 import os
 import dj_database_url
 
@@ -131,16 +127,14 @@ TEMPLATES = [
 
 this configuration allows Heroku deployments to work correctly. if `DATABASE_URL` is present, Heroku's environment will override your database settings:
 
-```python
-#$ file: project/settings.py#92
+```python file:project/settings.py ; start:92
 if PRODUCTION:
     DATABASES['default'] = dj_database_url.config()
 ```
 
 you'll also want to configure static files:
 
-```python
-#$ file: project/settings.py#130
+```python file:project/settings.py ; start:130
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 STATICFILES_DIRS = [
@@ -158,8 +152,7 @@ this ensures CSS, JS, and images are collected and served properly in production
 
 finally, wire up your app's urls and views:
 
-```python
-#$ file: project/urls.py
+```python file:project/urls.py
 from django.contrib import admin
 from django.urls import include, path
 
@@ -171,8 +164,7 @@ urlpatterns = [
 
 and inside your app, define urls and views:
 
-```python
-#$ file: project/urls.py
+```python file:project/urls.py
 from django.urls import path
 from .views import *
 
@@ -181,8 +173,7 @@ urlpatterns = [
 ]
 ```
 
-```python
-#$ file: project/views.py
+```python file:project/views.py
 from django.shortcuts import render
 
 def home(request):
