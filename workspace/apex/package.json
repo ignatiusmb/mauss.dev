@@ -13,9 +13,9 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-vercel": "^5.10.2",
-		"@sveltejs/kit": "^2.36.3",
+		"@sveltejs/kit": "^2.37.1",
 		"sharp": "^0.34.3",
-		"svelte": "^5.38.5",
+		"svelte": "^5.38.7",
 		"svelte-check": "^4.3.1"
 	}
 }

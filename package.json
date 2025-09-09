@@ -11,22 +11,22 @@
 	"packageManager": "pnpm@10.13.1",
 	"prettier": "mauss/prettier.config.js",
 	"devDependencies": {
-		"@fontsource-variable/brygada-1918": "^5.2.6",
+		"@fontsource-variable/brygada-1918": "^5.2.7",
 		"@fontsource-variable/newsreader": "^5.2.8",
-		"@fontsource-variable/recursive": "^5.2.6",
+		"@fontsource-variable/recursive": "^5.2.7",
 		"@ignatiusmb/styles": "^0.2.0",
-		"@sveltejs/kit": "^2.36.3",
-		"@sveltejs/vite-plugin-svelte": "^6.1.3",
-		"@types/node": "^24.3.0",
-		"aubade": "^0.10.4",
+		"@sveltejs/kit": "^2.37.1",
+		"@sveltejs/vite-plugin-svelte": "^6.1.4",
+		"@types/node": "^24.3.1",
+		"aubade": "^0.11.0",
 		"mauss": "^0.10.7",
 		"prettier": "^3.6.2",
 		"prettier-plugin-sort-package-json": "^1.1.0",
 		"prettier-plugin-svelte": "^3.4.0",
-		"svelte": "^5.38.5",
+		"svelte": "^5.38.7",
 		"svelte-check": "^4.3.1",
 		"syv": "^0.0.51",
 		"typescript": "^5.9.2",
-		"vite": "^7.1.3"
+		"vite": "^7.1.5"
 	}
 }
