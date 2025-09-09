@@ -121,6 +121,7 @@ export const ROUTES = {
 			})),
 		);
 
+		const { building } = await import('$app/environment');
 		const items = await orchestrate(
 			'../content/routes/posts',
 			({ breadcrumb: [file, slug], path }) => {
@@ -134,8 +135,9 @@ export const ROUTES = {
 						console.log(`workspace/${path.slice(3)}`, (error as any).issues);
 						return;
 					}
-					const { building } = await import('$app/environment');
-					if (building && !metadata.updated) metadata.updated = await updated(path);
+					if (building && !metadata.updated) {
+						metadata.updated = await updated(path);
+					}
 
 					const umbrella = `posts/${slug}`;
 					const content = meta.body.replace(/\.\/([^\s)]+)/g, (m, relative) => {
