@@ -1,52 +1,36 @@
-<script lang="ts">
-	interface Props {
-		animate?: boolean;
+<script>
+	function draw(radius = 96, segments = 20) {
+		const step = (2 * Math.PI) / segments;
+		const offset = -Math.PI / 2;
+		let d = '';
+		for (let i = 0; i <= segments; i++) {
+			const angle = i * step + offset;
+			const x = (Math.cos(angle) * radius).toFixed(2);
+			const y = (Math.sin(angle) * radius).toFixed(2);
+			d += i === 0 ? `M ${x} ${y}` : `L ${x} ${y}`;
+		}
+		return d + ' Z';
 	}
-	const { animate }: Props = $props();
 </script>
 
 <svg
 	aria-label="Alkamauss"
 	xmlns="http://www.w3.org/2000/svg"
 	viewBox="-128 -128 256 256"
-	fill="none"
-	stroke="#c49e45"
-	stroke-width="8"
-	stroke-linecap="round"
-	stroke-linejoin="round"
-	class:animate
+	fill="var(--color-accent-primary)"
+	stroke="var(--color-base)"
+	stroke-width="32"
 >
-	<circle r="92" fill="none" stroke-width="16" />
-	<polygon points="20,12 0,-22 -20,12" fill="#e1e0e4" stroke="#e1e0e4" />
-
-	<g fill="#c49e45">
-		<defs><path id="leaf" d="M 32 0 Q 72 24 14 64 Q 42 4 0 0 Z" /></defs>
-
-		<use href="#leaf" transform="rotate(30) translate(0, -88)" />
-		<use href="#leaf" transform="rotate(150) translate(0, -88)" />
-		<use href="#leaf" transform="rotate(270) translate(0, -88)" />
-	</g>
-
-	<g fill="#e1e0e4" stroke="#e1e0e4" stroke-width="6">
-		<circle r="16" transform="translate(0, -90)" />
-		<circle r="16" transform="rotate(120) translate(0, -90)" />
-		<circle r="16" transform="rotate(-120) translate(0, -90)" />
-	</g>
+	<circle r="96" />
+	<path
+		fill="var(--color-base)"
+		stroke-width="16"
+		d="M 0 -96 A 1 1 0 0 0 96 0 C 96 -54 54 -96 0 -96"
+	/>
+	<path
+		d={draw(24, 5)}
+		fill="var(--color-accent-secondary)"
+		stroke-width="4"
+		transform="translate(30, -30) rotate(45)"
+	/>
 </svg>
-
-<style>
-	svg {
-		&.animate {
-			animation: rotate 42s linear infinite;
-		}
-	}
-
-	@keyframes rotate {
-		from {
-			transform: rotate(0deg);
-		}
-		to {
-			transform: rotate(360deg);
-		}
-	}
-</style>

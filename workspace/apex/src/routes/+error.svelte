@@ -5,12 +5,6 @@
 <article>
 	<h1>{page.status}</h1>
 	<pre>{page.error?.message}</pre>
-
-	{#if page.params.slug}
-		{@const [, parent] = page.url.pathname.split('/')}
-		{@const search = `/${parent}?q=${page.params.slug}`}
-		<p>Try <a href={search}>{search}</a>.</p>
-	{/if}
 </article>
 
 <style>

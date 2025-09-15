@@ -229,7 +229,7 @@ creating over consuming. boredom is the gateway to creativity.
 
 ![!YouTube#d](kkhWpH0SNfM "The BEST BLACKHEAD & Acne Remedy in the World (One-Time Fix)")
 
-![!YouTube#d](-1FU04Hc8qg "This kind of brain wasn’t made for this world...")
+![!YouTube#d](-1FU04Hc8qg "This kind of brain wasn't made for this world...")
 
 ![!YouTube#d](wpWm87SfASQ "What should you do if you accidentally cut off your finger? - Jason Hoellwarth")
 

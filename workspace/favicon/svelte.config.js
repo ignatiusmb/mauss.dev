@@ -11,6 +11,7 @@ const config = {
 
 		alias: {
 			$apex: '../apex/src',
+			$static: '../apex/static',
 		},
 
 		output: {

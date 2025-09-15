@@ -310,7 +310,7 @@
 			scroll-margin-top: 4.8rem;
 
 			@media (min-width: 549px) {
-				scroll-margin-top: 1.5rem;
+				scroll-margin-top: 1.3rem;
 			}
 		}
 		h2 {

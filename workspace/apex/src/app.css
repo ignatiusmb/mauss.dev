@@ -20,16 +20,17 @@
 	--transition-fast: calc(var(--transition-base) / 2);
 	--transition-slow: calc(var(--transition-base) * 2);
 
-	--color-base: oklch(0.144 0.008 275);
-	--color-surface: oklch(0.186 0.016 275);
-	--color-overlay: oklch(0.232 0.016 275);
-	--color-border: oklch(0.276 0.008 275);
-	--color-code-block: #1c1c21;
+	--color-base: oklch(0.12 0.01 275);
+	--color-surface: oklch(0.18 0.02 275);
+	--color-overlay: oklch(0.24 0.03 275);
+	--color-border: oklch(0.32 0.02 275);
+	--color-code-block: oklch(0.2 0.01 275);
 
-	--color-text: oklch(0.787 0.008 275);
-	--color-text-muted: oklch(0.717 0.008 275);
-	--color-accent-primary: oklch(0.424 0.18 275);
-	--color-accent-secondary: oklch(0.717 0.115 85);
+	--color-text: oklch(0.82 0.01 275);
+	--color-text-muted: oklch(0.72 0.01 275);
+
+	--color-accent-primary: oklch(0.424 0.21 275);
+	--color-accent-secondary: oklch(0.72 0.14 75);
 	--color-accent-tertiary: #ce5a57; /* red-rust */
 	--color-form-error: #b24d4d; /* red-oxide */
 	--color-form-highlight: #5fbceb;
