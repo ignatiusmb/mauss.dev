@@ -8,9 +8,9 @@ tags: [writing, coding, productivity]
 
 ## the soul of wit
 
-brevity is clarity bought with time. anyone can write long, but it takes discipline to cut until only the essential remains. it does not mean stripping context until meaning is lost — explanation is often necessary to avoid misunderstanding.
+brevity is clarity bought with time. anyone can write long, but it takes discipline to cut until only the essential remains. it does not mean stripping context so much that meaning is lost — explanation is often necessary to avoid misunderstanding.
 
-the real clutter is meaningless words that take up space, jargon meant to impress rather than inform, and buzzwords or padding piled on to meet quotas or sound profound.
+the real clutter is empty words that take up space, jargon meant to impress rather than inform, and buzzwords or padding piled on to meet quotas or sound profound.
 
 > I would have written a shorter letter, but I did not have the time. \
 > — Blaise Pascal
