@@ -1,6 +1,4 @@
 <script lang="ts">
-	import Logo from '$lib/components/Logo.svelte';
-
 	import { outside } from 'syv/attachment';
 	import { afterNavigate } from '$app/navigation';
 	import { page } from '$app/state';
@@ -13,7 +11,7 @@
 
 <nav {@attach outside(() => (opened = false))}>
 	<a href="/" class="logo" aria-label="Alkamauss">
-		<Logo animate />
+		<img src="/favicon.svg" alt="Alkamauss logo" />
 	</a>
 
 	{@render link('atelier', 'flask')}

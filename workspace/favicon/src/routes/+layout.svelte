@@ -1,8 +1,8 @@
 <script>
+	import favicon from '$static/favicon.svg';
 	import '@fontsource-variable/brygada-1918';
 	import '@ignatiusmb/styles/core.css';
 	import '$apex/app.css';
-	import favicon from './favicon.png';
 
 	import MetaHead from 'syv/core/MetaHead.svelte';
 	import Footer from '$apex/routes/Footer.svelte';

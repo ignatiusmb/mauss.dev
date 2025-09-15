@@ -8,7 +8,7 @@
 		"check:style": "prettier --check .",
 		"check:workspace": "pnpm --filter \"./workspace/*\" check"
 	},
-	"packageManager": "pnpm@10.13.1",
+	"packageManager": "pnpm@10.15.1",
 	"prettier": "mauss/prettier.config.js",
 	"devDependencies": {
 		"@fontsource-variable/brygada-1918": "^5.2.7",

@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Logo from '$lib/components/Logo.svelte';
 	import Project from './Project.svelte';
 
 	const alkamauss = $state({
@@ -51,7 +50,7 @@
 		{@const ongoing = new Date().getFullYear() - 2017}
 
 		{#snippet logo()}
-			<Logo animate />
+			<img src="/favicon.svg" alt="Alkamauss logo" />
 		{/snippet}
 
 		<!-- prettier-ignore -->
@@ -103,7 +102,7 @@
 		bind:open={alkamauss['favicon']}
 	>
 		{#snippet logo()}
-			<Logo />
+			<img src="/favicon.svg" alt="Alkamauss logo" />
 		{/snippet}
 
 		<!-- prettier-ignore -->

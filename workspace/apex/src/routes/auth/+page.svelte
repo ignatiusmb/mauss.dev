@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Logo from '$lib/components/Logo.svelte';
 	import { enhance } from '$app/forms';
 
 	const { data, form } = $props();
@@ -7,7 +6,7 @@
 
 <header>
 	<a href="/">
-		<Logo animate />
+		<img src="/favicon.svg" alt="Alkamauss logo" />
 	</a>
 </header>
 

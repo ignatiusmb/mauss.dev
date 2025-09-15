@@ -13,7 +13,7 @@ work in progress. expect changes, edits, and occasional rewrite.
 
 </section>
 
-[Svelte](https://svelte.dev/) is [a language](https://gist.github.com/Rich-Harris/0f910048478c2a6505d1c32185b61934) for building user interfaces based on HTML, CSS, and JavaScript. its syntax extends and leverages the platform's native features, letting developers write less and achieve more. components defined in `*.svelte` files are compiled into supercharged HTML with scoped CSS and highly optimized JavaScript.
+[Svelte](https://svelte.dev/) is [a language](https://gist.github.com/Rich-Harris/0f910048478c2a6505d1c32185b61934) for building user interfaces based on HTML, CSS, and JavaScript. its syntax extends and leverages the platform's native features, letting developers [write less code](https://svelte.dev/blog/write-less-code) and achieve more. components defined in `*.svelte` files are compiled into supercharged HTML with scoped CSS and highly optimized JavaScript.
 
 [SvelteKit](https://svelte.dev/docs/kit/introduction) is the meta-framework that provides a filesystem-based router, server-side rendering, and a [range of features](https://svelte.dev/docs/kit/introduction#SvelteKit-vs-Svelte) for building full-stack applications with Svelte. it is the recommended way to build a Svelte application — you *can* build without it, but there's rarely a reason to unless you have a highly specific use case.
 

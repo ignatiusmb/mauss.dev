@@ -11,7 +11,7 @@
 	const range = $derived.by(() => {
 		const current = new Date().getFullYear();
 		if (from === current) return from;
-		return `${from}&ndash;${current}`;
+		return from + '–' + current;
 	});
 </script>
 
@@ -26,7 +26,7 @@
 		<span>»</span>
 	</section>
 
-	<p>© {@html range} Ignatius Bagus.</p>
+	<p>© {range} Ignatius Bagus.</p>
 </footer>
 
 <style>

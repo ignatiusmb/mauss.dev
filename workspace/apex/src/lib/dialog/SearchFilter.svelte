@@ -21,7 +21,7 @@
 <Dialog
 	{...props}
 	styles={{
-		'--backdrop-color': 'rgba(0, 0, 0, 0.87)',
+		'--backdrop-color': 'oklch(0 0 0 / 0.42)',
 		'--background': 'var(--color-base)',
 		'--border-radius': 'var(--rounding-box)',
 		'--padding': '1rem 1.5rem 1.5rem',
