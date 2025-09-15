@@ -10,7 +10,7 @@ tags: [writing, coding, productivity]
 
 brevity is clarity bought with time. anyone can write long, but it takes discipline to cut until only the essential remains. it does not mean stripping context until meaning is lost — explanation is often necessary to avoid misunderstanding.
 
-the enemy is not detail, but waste: words that fill silence without meaning, jargon meant to impress rather than inform, buzzwords and padding stuffed in to meet quotas or sound profound.
+the real clutter is meaningless words that take up space, jargon meant to impress rather than inform, and buzzwords or padding piled on to meet quotas or sound profound.
 
 > I would have written a shorter letter, but I did not have the time. \
 > — Blaise Pascal
