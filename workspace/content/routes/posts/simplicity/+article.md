@@ -16,13 +16,13 @@ the final solution always looks obvious after someone else has solved it. we see
 
 simplicity rarely gets credit. it is not the absence of complexity, but the work of taming it. its value lies in solving hard problems with the simplest possible answer, stripping away the nonessential even when each part is valuable on its own.
 
-## complexity as currency
+## complexity bias
 
 when we don't understand something, we assume it must have been difficult to create. a system with many moving parts looks impressive, as if the act of coordinating them proves mastery. if we struggle to use it, we assume its creators must be brilliant.
 
-novelty bias reinforces this illusion. work that invents new parts is commended more than work that adapts or refines what already exists. flexible systems with endless options are praised as advanced, even when a simpler approach would have sufficed.
+this bias is reinforced by novelty. work that invents new parts is commended more than work that adapts or refines what already exists. flexible systems with endless options are praised as advanced, even when a simpler approach would have sufficed.
 
-complexity sells better than simplicity. more layers, more features, more jargon — all of it justifies higher prices and signals "premium". in competitive industries, piling on features is the fastest way to look innovative. it fills résumés with buzzwords and creates the illusion of progress. complexity becomes a status symbol rather than a necessity.
+complexity also sells better than simplicity. more layers, more features, more jargon — all of it justifies higher prices and signals "premium". in competitive industries, piling on features is the fastest way to look innovative. it fills résumés with buzzwords and creates the illusion of progress. complexity becomes a status symbol rather than a necessity.
 
 ## the vicious cycle
 
