@@ -36,7 +36,7 @@ remember, [AI is *not* human.](/curated/harvest-2025.08#headlines-ai-is-not-huma
 
 code is another form of writing. it [scales in complexity](https://blog.codinghorror.com/diseconomies-of-scale-and-lines-of-code/), and the [cost of mistakes](https://www.mayerdan.com/ruby/2012/11/11/bugs-per-line-of-code-ratio) grows *quadratically* with project size. more code means more surface for bugs, and more difficulty in reasoning.
 
-brevity here does not mean cryptic shorthand. code is read more often than it is written — usually by your future self. concise, clear code reduces cognitive load. the best tools and patterns are those that let us [*express more with less*](/curated/essence-of-svelte).
+brevity here does not mean cryptic shorthand. code is read more often than it is written — usually by your future self. concise, clear code reduces cognitive load. the best tools and patterns are those that let us [express *more with less*](/curated/essence-of-svelte).
 
 ## reflections
 
