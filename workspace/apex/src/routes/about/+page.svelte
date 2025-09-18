@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Article from '$lib/pages/Article.svelte';
+	import Piece from '$lib/components/Piece.svelte';
 	import WeavedImage from './WeavedImage.svelte';
 </script>
 
-<Article>
+<Piece>
 	<header>
 		<WeavedImage src="/assets/profile/mauss.jpg" alt="at the summit of mt. Unzen" />
 
@@ -94,7 +94,7 @@
 		<li>i can hold my breath for roughly two minutes.</li>
 		<li>i swim faster in breaststroke than in front crawl.</li>
 	</ul>
-</Article>
+</Piece>
 
 <style>
 	header {

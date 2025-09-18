@@ -126,7 +126,6 @@
 				margin: 0 0.5rem;
 				border-radius: var(--rounding-base);
 				text-align: left;
-				text-transform: capitalize;
 				color: var(--color-text);
 
 				&:last-child {

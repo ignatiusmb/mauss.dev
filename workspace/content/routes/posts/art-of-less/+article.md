@@ -2,6 +2,9 @@
 date: 2025-09-15
 theme: essay
 title: The Art of Less
+series:
+  title: Art of Less
+  chapter: 1
 description: brevity sharpens thought, but it demands patience and discipline.
 tags: [writing, coding, productivity]
 ---

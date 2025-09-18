@@ -2,8 +2,7 @@
 date: 2025-08-14
 title: The Essence of Semantic Versioning
 series:
-  title: the-essence
-  type: collection
+  title: The Essence
 description: a contract in numbers
 ---
 

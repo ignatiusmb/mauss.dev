@@ -22,9 +22,10 @@
 		filters: data.filters,
 	});
 	const params = $derived.by(() => {
-		const { theme, tags, sort_by } = memory.filters;
+		const { series, theme, tags, sort_by } = memory.filters;
 		return {
 			search: String(memory.params.q?.[0] || ''),
+			series: String(series.selected),
 			theme: String(theme.selected),
 			tags: tags.flatMap((g) => (g.selected ? [g.name] : [])),
 			sort_by: sort_by.selected as Query['sort_by'],

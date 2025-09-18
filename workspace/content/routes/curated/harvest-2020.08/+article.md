@@ -2,8 +2,7 @@
 date: 2020-09-01
 title: Harvest • August 2020
 series:
-  title: the-harvest
-  type: linear
+  title: The Harvest
 ---
 
 Hello and welcome to the debut of the Harvest! We're starting things off strong with amazing highlights August has offered followed by a recap of the month.

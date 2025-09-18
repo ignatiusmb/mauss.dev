@@ -29,11 +29,11 @@ export async function GET() {
 			categories: [...new Set(items.map((p) => p.category))].sort(),
 			genres: [...new Set(items.flatMap((p) => p.genres))].sort(),
 			sort_by: [
-				['date', 'published'],
-				['premiere', 'premiered'],
-				['seen', 'last seen'],
-				['tier', 'tier'],
-				['rating', 'rating'],
+				['date', 'Published'],
+				['premiere', 'Premiered'],
+				['seen', 'Last seen'],
+				['tier', 'Tier'],
+				['rating', 'Rating'],
 			],
 		},
 	} satisfies Schema);

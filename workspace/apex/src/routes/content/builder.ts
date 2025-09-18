@@ -1,8 +1,7 @@
-import { exec } from 'node:child_process';
 import { orchestrate } from 'aubade/conductor';
 import { marker } from 'aubade/legacy';
 import { chain } from 'aubade/transform';
-import { attempt, compare, date, define, drill, sum } from 'mauss';
+import { attempt, date, define, drill, sum } from 'mauss';
 import { exists } from 'mauss/guards';
 import sharp from 'sharp';
 
@@ -10,12 +9,12 @@ const ROOT = `${process.cwd()}/static/uploads`;
 export const ROUTES = {
 	async '/curated'() {
 		const schema = attempt.wrap(
-			define(({ optional, literal, string }) => ({
+			define(({ optional, string }) => ({
 				date: string(),
 				title: string(),
 				series: {
-					title: literal('the-essence', 'the-harvest', 'my-notes'),
-					type: literal('linear', 'collection'),
+					title: string(),
+					chapter: optional(string()),
 				},
 				description: optional(string()),
 			})),
@@ -78,23 +77,7 @@ export const ROUTES = {
 			},
 		);
 
-		const collections = new Set(
-			items.flatMap((i) => (i.series.type === 'collection' ? [i.series.title] : [])),
-		);
-		return chain(items, {
-			group: (item) => item.series.title,
-			sorter(group) {
-				if (collections.has(group)) {
-					return drill('title', compare.string);
-				}
-				return drill('date', date.sort.newest);
-			},
-			transform: ({ slug, title }) => ({ slug: `/curated/${slug}`, title }),
-			finalize(groups) {
-				const items = Object.values(groups).flat();
-				return items.sort(drill('date', date.sort.newest));
-			},
-		});
+		return items.sort(drill('date', date.sort.newest));
 	},
 
 	async '/posts'() {
@@ -114,6 +97,10 @@ export const ROUTES = {
 					'pending',
 				),
 				title: string(),
+				series: optional({
+					title: string(),
+					chapter: optional(string()),
+				}),
 				description: optional(string()),
 				tags: array(string()),
 				thumbnail: optional(string()),
@@ -121,7 +108,6 @@ export const ROUTES = {
 			})),
 		);
 
-		const { building } = await import('$app/environment');
 		const items = await orchestrate(
 			'../content/routes/posts',
 			({ breadcrumb: [file, slug], path }) => {
@@ -134,9 +120,6 @@ export const ROUTES = {
 					if (!metadata) {
 						console.log(`workspace/${path.slice(3)}`, (error as any).issues);
 						return;
-					}
-					if (building && !metadata.updated) {
-						metadata.updated = await updated(path);
 					}
 
 					const umbrella = `posts/${slug}`;
@@ -350,8 +333,6 @@ export type Items = {
 	[key in keyof typeof ROUTES]: Awaited<ReturnType<(typeof ROUTES)[key]>>;
 };
 
-async function updated(path: string): Promise<string> {
-	return await new Promise((resolve) => {
-		exec(`git log -1 --format=%ad --date=iso-strict "${path}"`, (_, out) => resolve(out.trim()));
-	});
+export interface SeriesTable {
+	[title: string]: Record<'slug' | 'title' | 'chapter', string>[];
 }

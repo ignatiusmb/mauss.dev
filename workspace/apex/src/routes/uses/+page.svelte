@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Article from '$lib/pages/Article.svelte';
+	import Piece from '$lib/components/Piece.svelte';
 	const instruments: Array<{
 		icon: string;
 		type: string;
@@ -76,11 +76,10 @@
 
 <header>
 	<h1>instruments</h1>
-	<!-- prettier-ignore -->
 	<small>daily essentials — inspired by <a href="https://wesbos.com/uses">Wes Bos</a>.</small>
 </header>
 
-<Article>
+<Piece>
 	{#each instruments as { icon, type, items }}
 		<h3 id={type}>
 			<i data-icon={icon}></i>
@@ -107,7 +106,7 @@
 			</tbody>
 		</table>
 	{/each}
-</Article>
+</Piece>
 
 <style>
 	header {

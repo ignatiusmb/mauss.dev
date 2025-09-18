@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Index from '$lib/components/Index.svelte';
-	import Article from '$lib/pages/Article.svelte';
+	import Piece from '$lib/components/Piece.svelte';
 	import { page } from '$app/state';
 </script>
 
@@ -9,7 +9,7 @@
 	<small>calm shores, charted for you.</small>
 </header>
 
-<Article>
+<Piece>
 	<!-- prettier-ignore -->
 	<p><strong>welcome</strong> — you've made port at the harbor of my digital garden, a kind of virtual abode nestled in a quiet corner of the internet. i hope this page can be your guiding compass, should you lose your bearings or wonder where to go next.</p>
 	<!-- prettier-ignore -->
@@ -356,7 +356,7 @@
 		<!-- prettier-ignore -->
 		<li><strong><a href="https://vercel.com">vercel</a></strong> — deploys from github and hosts the live site.</li>
 	</ul>
-</Article>
+</Piece>
 
 <style>
 	header {

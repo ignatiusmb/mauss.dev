@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Article from '$lib/pages/Article.svelte';
+	import Piece from '$lib/components/Piece.svelte';
 	import { date } from 'mauss';
 
 	const { data } = $props();
@@ -10,7 +10,7 @@
 	] as const;
 </script>
 
-<Article>
+<Piece>
 	<header>
 		<h1>Alkamauss</h1>
 		<span>by <a href="/about">Ignatius Bagus.</a></span>
@@ -40,7 +40,7 @@
 		<!-- prettier-ignore -->
 		<p style:margin-top="0">surfing the web is like sailing the sea, and this site is my small island in the vast ocean. i know how daunting new shores can feel — that's why i've set a <a href="/help">safe harbor</a> here. you'll find the <a href="/help#index">Dockside Chart</a> to get your bearings and follow the paths already charted for you. if things ever feel unclear, you can always return to the harbor and consult the chart.</p>
 	</section>
-</Article>
+</Piece>
 
 <style>
 	header {
