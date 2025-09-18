@@ -47,4 +47,4 @@ simplicity is often mistaken for a lack of effort or for cheapness, when in trut
 
 simplicity is not subtraction for its own sake. it is the deliberate exclusion of everything unnecessary, redundant, or distracting. achieving it demands discipline to resist needless additions and the patience to polish until nothing more can be removed without loss.
 
-simplicity, when done well, is invisible — a mastery that hides its own cost and effort. it is the essence of [The Art of Less](/posts/art-of-less).
+simplicity, when done well, is invisible — a mastery that hides its own cost and effort.
