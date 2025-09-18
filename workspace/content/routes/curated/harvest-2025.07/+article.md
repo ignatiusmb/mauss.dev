@@ -2,8 +2,7 @@
 date: 2025-08-01
 title: Harvest • July 2025
 series:
-  title: the-harvest
-  type: linear
+  title: The Harvest
 ---
 
 there's a lot more here because i consciously thought about *adding it to the Harvest* this time. the headlines are pretty jam-packed too, so let's get started.

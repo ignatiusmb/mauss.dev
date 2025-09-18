@@ -2,8 +2,7 @@
 date: 2025-09-01
 title: Harvest • August 2025
 series:
-  title: the-harvest
-  type: linear
+  title: The Harvest
 ---
 
 ## headlines

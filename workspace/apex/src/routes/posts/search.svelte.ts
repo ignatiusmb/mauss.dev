@@ -3,6 +3,7 @@ import { date } from 'mauss';
 
 export type Query = {
 	search: string;
+	series: string;
 	theme: string;
 	tags: string[];
 	sort_by: keyof typeof by;
@@ -13,7 +14,9 @@ export type Item = Omit<Schema['items'][number], 'content'>;
 export function sift(items: Item[], payload: Query) {
 	const value = normalize(payload.search);
 	const results = items.filter((item) => {
+		const series = item.series?.title.toLowerCase().replace(/ /g, '-');
 		const filters = [
+			payload.series && (!item.series || payload.series !== series),
 			payload.theme && payload.theme !== item.theme,
 			payload.tags.length && !payload.tags.every((g) => item.tags.includes(g)),
 		];

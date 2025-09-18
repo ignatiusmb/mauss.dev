@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Article from '$lib/pages/Article.svelte';
+	import Piece from '$lib/components/Piece.svelte';
 
 	const { data } = $props();
 </script>
 
-<Article path={data.source} post={data.article}>
+<Piece source={data.source} post={data.article}>
 	{@html data.article.content}
-</Article>
+</Piece>

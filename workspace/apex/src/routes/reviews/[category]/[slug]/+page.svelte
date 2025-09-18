@@ -1,12 +1,12 @@
 <script lang="ts">
-	import Article from '$lib/pages/Article.svelte';
+	import Piece from '$lib/components/Piece.svelte';
 	import LinkSpread from './[branch]/LinkSpread.svelte';
 	import Backdrop from './Backdrop.svelte';
 
 	const { data } = $props();
 </script>
 
-<Article path={data.source} post={data.article}>
+<Piece source={data.source} post={data.article}>
 	{#snippet header()}
 		<Backdrop review={data.article} />
 
@@ -21,4 +21,4 @@
 	</section>
 
 	{@html data.article.content}
-</Article>
+</Piece>

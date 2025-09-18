@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Article from '$lib/pages/Article.svelte';
+	import Piece from '$lib/components/Piece.svelte';
 	import Backdrop from '../Backdrop.svelte';
 	import LinkSpread from './LinkSpread.svelte';
 	import { page } from '$app/state';
@@ -7,7 +7,7 @@
 	const { data } = $props();
 </script>
 
-<Article path={data.source} post={data.article}>
+<Piece source={data.source} post={data.article}>
 	{#snippet header()}
 		<Backdrop review={data.article} />
 
@@ -31,7 +31,7 @@
 	{/if}
 
 	{@html data.article.content}
-</Article>
+</Piece>
 
 <style>
 	section {

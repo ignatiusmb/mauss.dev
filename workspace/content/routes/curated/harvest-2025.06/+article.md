@@ -2,8 +2,7 @@
 date: 2025-07-01
 title: Harvest • June 2025
 series:
-  title: the-harvest
-  type: linear
+  title: The Harvest
 ---
 
 i'm so excited that i even brought this series back, albeit rebranded.
