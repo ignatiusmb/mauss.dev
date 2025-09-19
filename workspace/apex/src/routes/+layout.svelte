@@ -49,9 +49,7 @@
 	authors={['Ignatius Bagus.']}
 	og={{
 		site_name: 'Alkamauss',
-		locale: 'en_001',
-		title: page.data.meta?.title || `${page.status}`,
-		description: page.data.meta?.description,
+		url: page.url.pathname,
 		image: page.data.meta?.image || 'https://mauss.dev/og.png',
 	}}
 	alternate={[{ type: 'application/rss+xml', title: 'RSS', href: '/rss.xml' }]}
