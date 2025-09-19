@@ -14,7 +14,6 @@ export async function load({ fetch }) {
 			title: 'Alkamauss • A Digital Atelier',
 			description:
 				'seeing life through a shifting lens in a quiet corner of the web. where everyday moments, distant journeys, and personal echoes turn into stories worth holding.',
-			image: 'https://mauss.dev/og.png',
 		},
 	};
 }
