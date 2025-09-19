@@ -52,7 +52,7 @@
 		locale: 'en_001',
 		title: page.data.meta?.title || `${page.status}`,
 		description: page.data.meta?.description,
-		image: page.data.meta?.og?.image,
+		image: page.data.meta?.image || 'https://mauss.dev/og.png',
 	}}
 	alternate={[{ type: 'application/rss+xml', title: 'RSS', href: '/rss.xml' }]}
 	scripts={{
@@ -62,7 +62,9 @@
 			'data-cf-beacon': '{"token": "402cd91137d14890a1117569bda0ee41"}',
 		},
 	}}
-/>
+>
+	<meta name="twitter:card" content="summary_large_image" />
+</MetaHead>
 
 <div data-sveltekit-reload={updated.current || 'off'}>
 	{#if !page.url.pathname.startsWith('/auth')}

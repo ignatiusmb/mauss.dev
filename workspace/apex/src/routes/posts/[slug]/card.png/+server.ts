@@ -34,7 +34,13 @@ export async function GET({ fetch, params }) {
 		height: 630,
 		headers: {
 			'Content-Type': 'image/png',
-			// 'Cache-Control': 'public, max-age=3600, stale-while-revalidate=86400',
+			'Cache-Control': [
+				'public',
+				'no-transform',
+				'max-age=0',
+				's-maxage=3600',
+				'stale-while-revalidate=86400',
+			].join(', '),
 		},
 	});
 }

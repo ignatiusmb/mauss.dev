@@ -11,12 +11,7 @@ declare global {
 				title: string;
 				canonical: `/${string}`;
 				description?: string;
-				og?: {
-					title: string;
-					url?: string;
-					description?: string;
-					image?: string;
-				};
+				image?: string;
 			};
 		}
 
