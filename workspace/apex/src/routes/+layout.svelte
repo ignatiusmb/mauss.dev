@@ -49,8 +49,10 @@
 	authors={['Ignatius Bagus.']}
 	og={{
 		site_name: 'Alkamauss',
+		locale: 'en_001',
 		title: page.data.meta?.title || `${page.status}`,
 		description: page.data.meta?.description,
+		image: page.data.meta?.og?.image,
 	}}
 	alternate={[{ type: 'application/rss+xml', title: 'RSS', href: '/rss.xml' }]}
 	scripts={{

@@ -14,6 +14,7 @@ export async function load({ parent, params }) {
 			canonical: `/posts/${content.slug}`,
 			title: content.title,
 			description: content.description || '',
+			image: `https://mauss.dev/posts/${content.slug}/card.png`,
 		},
 	};
 }
