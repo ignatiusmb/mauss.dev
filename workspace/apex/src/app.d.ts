@@ -15,7 +15,7 @@ declare global {
 					title: string;
 					url?: string;
 					description?: string;
-					// TODO
+					image?: string;
 				};
 			};
 		}

@@ -5,7 +5,7 @@ title: The Art of Less
 series:
   title: Art of Less
   chapter: 1
-description: brevity sharpens thought, but it demands patience and discipline.
+description: brevity reveals discipline in practice.
 tags: [writing, coding, productivity]
 ---
 
@@ -45,10 +45,10 @@ brevity here does not mean cryptic shorthand. code is read more often than it is
 
 ## living with less
 
-brevity is more than a craft of writing or coding. it is a discipline of life. conciseness is the respect you pay to those who will come after you, including yourself. abundance without intent becomes indistinguishable from clutter. this abundance most often leaves us with less of what actually matters — less attention, less energy, less peace.
+brevity is more than a craft of writing or coding. it is a discipline of life. conciseness is the respect you pay to those who come after you, including yourself. abundance without intent becomes clutter. more often leaves us with less of what truly matters — less attention, less energy, less peace.
 
-our culture rewards volume over depth. quality drowns under quantity. more content, more code, more output, more features, more everything. we become exhausted by decision fatigue, overwhelmed by analysis paralysis, and unfulfilled by endless distraction.
+our culture rewards volume over depth. quality drowns under quantity. more content, more code, more output, more features, more everything. the result is exhaustion from decision fatigue, paralysis from too many choices, and distraction without fulfillment.
 
-to live with less is not absence but choice. we choose what to deprive ourselves of so we can focus on what enriches us. it requires patience to delay gratification, discipline to stay mindful of what we take in and put out, and courage to resist distraction.
+to live with less is not absence but choice. it is deciding what to cut so that what remains can breathe. it demands patience to delay gratification, discipline to stay mindful of what you take in and put out, and courage to resist the pull of distraction.
 
-less is not an end in itself. it is the ground on which something greater can grow. it is saying 'no' to the trivial so you can say 'yes' to the essential. it is the art of making space for what truly matters.
+less is not an end in itself. it is the ground on which something greater can grow. it is the practice of saying 'no' to the trivial so you can say 'yes' to the essential. it is the art of making space for what truly matters.
