@@ -13,7 +13,7 @@ i'm so excited that i even brought this series back, albeit rebranded.
 
 ![Keiichi Arawi x Kyoto Animation returns!](./the-goats-are-back.png "Keiichi Arawi x Kyoto Animation returns!")
 
-WE'VE NEVER BEEN SO BACK, this is the closest we got to [Nichijou](/reviews/anime/nichijou) season 2! it's kind of [my policy](/help#reviews-how-i-review) to avoid getting any exposure to an anime that i haven't watched yet, but it's different when it's something that i know i'm going to watch this no matter what.
+WE'VE NEVER BEEN SO BACK, this is the closest we got to [Nichijou](/reviews/anime/nichijou) season 2! it's kind of [my policy](/help#reviews-style) to avoid getting any exposure to an anime that i haven't watched yet, but it's different when it's something that i know i'm going to watch this no matter what.
 
 ![!YouTube#d](ldLdilBkwVg "『CITY THE ANIMATION』PV第1弾")
 

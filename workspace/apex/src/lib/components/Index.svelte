@@ -1,14 +1,15 @@
 <script lang="ts">
 	interface Props {
 		items: Array<{ id: string; title: string; level?: number }>;
+		open?: boolean;
 		summary?: string;
 	}
-	const { summary = 'Article Index', items }: Props = $props();
+	const { summary = 'Article Index', open = true, items }: Props = $props();
 
 	const balancer = $derived(items.reduce((c, i) => Math.min(c, i.level || 2), 4));
 </script>
 
-<details open id="index">
+<details {open} id="index">
 	<summary>
 		<i data-icon="duotone-caret-right"></i>
 		<span>{summary}</span>

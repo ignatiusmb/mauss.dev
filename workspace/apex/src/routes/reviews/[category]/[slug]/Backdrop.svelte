@@ -9,13 +9,9 @@
 	const prefix = review.backdrop.source === 'tmdb' && 'https://image.tmdb.org/t/p/w780/';
 </script>
 
-<div class="banner">
+<div data-tier={review.tier} class="banner">
 	<img src="{prefix || ''}{review.backdrop.path}" alt="{review.title} backdrop" />
-
-	<small class="rating">
-		<i data-icon="star-half"></i>
-		<span>{review.rating}</span>
-	</small>
+	<a href="/reviews?tier={review.tier}">{review.tier}-Tier</a>
 
 	<!-- TODO: figure out the UI
 	<small class="composed">
@@ -56,22 +52,86 @@
 			object-fit: cover;
 			border-radius: inherit;
 		}
+
+		a {
+			z-index: 1;
+			top: 0.5rem;
+			left: 0.5rem;
+			position: absolute;
+			padding: 0.325rem 0.5rem;
+			border-radius: var(--rounding-base);
+			background: oklch(0 0 0 / 80%);
+			font-family: var(--font-sans);
+			font-size: var(--size-small);
+		}
 	}
 
-	.rating {
-		z-index: 1;
-		top: 0.5rem;
-		left: 0.5rem;
-		position: absolute;
-		display: flex;
-		gap: 0.25rem;
-		align-items: center;
-		padding: 0.25rem 0.5rem 0.25rem 0.25rem;
-		border-radius: var(--rounding-base);
-		background: oklch(0 0 0 / 80%);
-		font-family: var(--font-sans);
-		font-size: var(--size-small);
+	[data-tier] {
+		&[data-tier='S'] {
+			img {
+				overflow: hidden;
+				box-shadow:
+					inset 0 1px 1px oklch(1 0 0 / 0.6),
+					inset 0 -1px 1px oklch(0 0 0 / 0.2),
+					0 0 4px oklch(85% 0.3 80 / 0.8),
+					0 0 8px oklch(85% 0.3 80 / 0.6),
+					0 0 16px oklch(85% 0.3 80 / 0.4),
+					0 0 24px oklch(85% 0.3 80 / 0.3);
+
+				animation: pulse 4s infinite ease-in-out;
+			}
+			a {
+				background: oklch(85% 0.3 80);
+				color: var(--color-base);
+			}
+		}
+		&[data-tier='A'] {
+			img {
+				box-shadow:
+					0 0 6px oklch(72% 0.2 340 / 0.7),
+					0 0 14px oklch(72% 0.2 340 / 0.5);
+			}
+			a {
+				background: oklch(70% 0.23 340);
+				color: var(--color-base);
+			}
+		}
+		&[data-tier='B'] {
+			img {
+				box-shadow:
+					0 0 4px oklch(66% 0.17 255 / 0.3),
+					0 0 8px oklch(66% 0.17 255 / 0.2);
+			}
+			a {
+				background: oklch(66% 0.17 255);
+				color: var(--color-base);
+			}
+		}
+
+		&[data-tier='C'] {
+			img {
+				box-shadow:
+					0 0 3px oklch(55% 0.18 145 / 0.3),
+					0 0 6px oklch(55% 0.18 145 / 0.15);
+			}
+			a {
+				background: oklch(72% 0.24 145);
+				color: var(--color-base);
+			}
+		}
+
+		&[data-tier='D'] {
+			img {
+				box-shadow:
+					0 0 2px oklch(50% 0.08 60 / 0.15),
+					0 0 4px oklch(50% 0.08 60 / 0.08);
+			}
+			a {
+				background: oklch(40% 0.08 60);
+			}
+		}
 	}
+
 	/* .composed {
 		z-index: 1;
 		right: 0;
@@ -83,8 +143,35 @@
 		transition-duration: var(--transition-base);
 	} */
 
-	i[data-icon='star-half'] {
-		--size: var(--size-base);
-		--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"><path d="M224,113.15l5.06-4.36A8.46,8.46,0,0,0,224.27,94L216,93.29"/><polyline points="184.44 168 180.37 150.78 192 140.75"/><line x1="128" y1="189.09" x2="128" y2="24"/><path d="M176,218.61l6.72,4.13a8.4,8.4,0,0,0,12.52-9.17L193.92,208"/><path d="M176,90.07,160.36,88.8,135.74,29.2a8.36,8.36,0,0,0-15.48,0L95.64,88.8,31.73,94a8.46,8.46,0,0,0-4.79,14.83l48.7,42L60.76,213.57a8.4,8.4,0,0,0,12.52,9.17L128,189.09,139.24,196"/></svg>');
+	@keyframes shimmer {
+		0% {
+			transform: translateX(-100%) skewX(30deg);
+		}
+		70%,
+		100% {
+			transform: translateX(200%) skewX(30deg);
+		}
+	}
+	@keyframes pulse {
+		0%,
+		70%,
+		100% {
+			box-shadow:
+				inset 0 1px 1px oklch(1 0 0 / 0.6),
+				inset 0 -1px 1px oklch(0 0 0 / 0.2),
+				0 0 4px oklch(85% 0.3 80 / 0.8),
+				0 0 8px oklch(85% 0.3 80 / 0.6),
+				0 0 16px oklch(85% 0.3 80 / 0.4),
+				0 0 24px oklch(85% 0.3 80 / 0.3);
+		}
+		35% {
+			box-shadow:
+				inset 0 1px 1px oklch(1 0 0 / 0.6),
+				inset 0 -1px 1px oklch(0 0 0 / 0.2),
+				0 0 6px oklch(85% 0.3 80 / 1),
+				0 0 12px oklch(85% 0.3 80 / 0.8),
+				0 0 20px oklch(85% 0.3 80 / 0.6),
+				0 0 30px oklch(85% 0.3 80 / 0.4);
+		}
 	}
 </style>

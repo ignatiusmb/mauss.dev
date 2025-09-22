@@ -6,26 +6,7 @@ released: 2017-04-05
 genres: [action, adventure, super power, martial arts, shounen]
 seen:
   first: 2020-07-12
-rating:
-  narrative:
-    - premise: 8
-    - pacing: 0
-    - resolution: 0
-    - direction: 1
-  characterization:
-    - development: 1
-    - dynamics: 7
-    - seiyuu: 5
-  immersion:
-    - style: 2
-    - animation: 1
-    - soundtrack: 3
-    - ambience: 3
-    - songs: 7
-  personal:
-    - engagement: 0
-    - relatable: 0
-    - impact: 0
+rating: trash
 poster:
   source: tmdb
   path: t1eJhngNgHywjXYAg2iAdSJ3PiL.jpg

@@ -29,16 +29,16 @@
 			{ id: 'posts', title: '/posts' },
 			{ id: 'posts-themes', title: 'themes', level: 3 },
 			{ id: 'reviews', title: '/reviews' },
-			{ id: 'reviews-how-i-review', title: 'how i review', level: 3 },
+			{ id: 'reviews-style', title: 'style', level: 3 },
 			{ id: 'reviews-tiers', title: 'tiers', level: 3 },
 			{ id: 'reviews-attributions', title: 'attributions', level: 3 },
-			{ id: 'other-paths', title: 'other paths' },
-			{ id: 'other-paths-help', title: '/help', level: 3 },
-			{ id: 'other-paths-about', title: '/about', level: 3 },
-			{ id: 'other-paths-uses', title: '/uses', level: 3 },
-			{ id: 'other-paths-fine-print', title: '/fine-print', level: 3 },
-			{ id: 'other-paths-sponsor', title: '/sponsor', level: 3 },
-			{ id: 'other-paths-rss', title: '/rss.xml', level: 3 },
+			{ id: 'others', title: 'other paths' },
+			{ id: 'others-help', title: '/help', level: 3 },
+			{ id: 'others-about', title: '/about', level: 3 },
+			{ id: 'others-uses', title: '/uses', level: 3 },
+			{ id: 'others-fine-print', title: '/fine-print', level: 3 },
+			{ id: 'others-sponsor', title: '/sponsor', level: 3 },
+			{ id: 'others-rss', title: '/rss.xml', level: 3 },
 			{ id: 'newsletter', title: 'newsletter' },
 			{ id: 'colophon', title: 'colophon' },
 		]}
@@ -168,9 +168,9 @@
 	<!-- prettier-ignore -->
 	<p>this index is where i try to capture my reflections from my own experiences. seeing the world through a kaleidoscope — reflections refracted through a shifting lens. i write not to dictate your view, but to share mine in order to better understand the stories and moments that moved me.</p>
 
-	<h3 id="reviews-how-i-review">
-		<i data-icon="strategy"></i>
-		<span>how i review</span>
+	<h3 id="reviews-style">
+		<i data-icon="aperture"></i>
+		<span>style</span>
 	</h3>
 	<!-- prettier-ignore -->
 	<p>i believe stories are best experienced blind — you'll find no spoilers here, not even summaries or plot breakdowns. i try to preserve the surprise and emotional weight, so you (or future me) can enter each story with the same excitement i did.</p>
@@ -236,49 +236,49 @@
 
 	<hr />
 
-	<h2 id="other-paths">
+	<h2 id="others">
 		<i data-icon="squares-four"></i>
 		<span>other paths</span>
 	</h2>
 	<!-- prettier-ignore -->
 	<p>the cozy corners of the site. not the main plots — more like footpaths and trellises that give the garden its form.</p>
 
-	<h3 id="other-paths-help">
+	<h3 id="others-help">
 		<i data-icon="lifebuoy"></i>
 		<a href="/help">/help</a>
 	</h3>
 	<!-- prettier-ignore -->
 	<p>you're here now — the dedicated guide to what the site offers, how to find your way, and a quiet place for me to remember why it's shaped this way.</p>
 
-	<h3 id="other-paths-about">
+	<h3 id="others-about">
 		<i data-icon="pen-nib"></i>
 		<a href="/about">/about</a>
 	</h3>
 	<!-- prettier-ignore -->
 	<p>who i am, what i do, what i'm <a href="/about#now">currently doing</a> (/now), and where to find me in <a href="/about#elsewhere">other corners of the internet</a>.</p>
 
-	<h3 id="other-paths-uses">
+	<h3 id="others-uses">
 		<i data-icon="suitcase"></i>
 		<a href="/uses">/uses</a>
 	</h3>
 	<!-- prettier-ignore -->
 	<p>a snapshot of my setup — <a href="/uses#hardware">hardware</a>, <a href="/uses#software">software</a>, and <a href="/uses#wellness">wellness</a> picks that support my day-to-day. also serves as a reference for myself, a benchmark for what works and what lasts.</p>
 
-	<h3 id="other-paths-fine-print">
+	<h3 id="others-fine-print">
 		<i data-icon="scroll"></i>
 		<a href="/fine-print">/fine-print</a>
 	</h3>
 	<!-- prettier-ignore -->
 	<p>the formalities — disclaimers, affiliate notes, personal views, and disclosures. not exactly fun, but part of keeping things clear and honest.</p>
 
-	<h3 id="other-paths-sponsor">
+	<h3 id="others-sponsor">
 		<i data-icon="hand-heart"></i>
 		<a href="/sponsor">/sponsor</a>
 	</h3>
 	<!-- prettier-ignore -->
 	<p>a redirect to <a href="https://github.com/sponsors/ignatiusmb">GitHub Sponsors</a>. support, whether through funds, feedback, sharing my work, or behind-the-scenes encouragement, means a lot.</p>
 
-	<h3 id="other-paths-rss">
+	<h3 id="others-rss">
 		<i data-icon="rss"></i>
 		<a href="/rss.xml">/rss.xml</a>
 	</h3>
@@ -326,7 +326,7 @@
 	<!-- prettier-ignore -->
 	<p>some people swear by them — email clients are powerful these days, with excellent syncing and filtering. there's even an <a href="https://feedmail.org/">RSS-to-email service</a> if you'd rather get updates straight in your inbox. others prefer a clean inbox, keeping email for important messages only. if that's you, <a href="https://kill-the-newsletter.com/">kill-the-newsletter</a> can turn newsletters into feeds you can follow in a reader.</p>
 	<!-- prettier-ignore -->
-	<p>i see the appeal of both camps. personally, i lean toward <a href="#other-paths-rss">RSS</a> — it's open, flexible, and feed readers tend to do a better job than email clients in their own way, but i'm not militant about 'killing the newsletter' from my inbox.</p>
+	<p>i see the appeal of both camps. personally, i lean toward <a href="#others-rss">RSS</a> — it's open, flexible, and feed readers tend to do a better job than email clients in their own way, but i'm not militant about 'killing the newsletter' from my inbox.</p>
 
 	<h2 id="colophon">
 		<i data-icon="stack"></i>
@@ -377,6 +377,9 @@
 	}
 
 	i[data-icon] {
+		&[data-icon='aperture'] {
+			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"><circle cx="128" cy="128" r="96" fill="none"/><line x1="128" y1="32" x2="164.68" y2="134.7" fill="none"/><line x1="44.86" y1="80" x2="152.14" y2="99.58" fill="none"/><line x1="44.86" y1="176" x2="115.46" y2="92.89" fill="none"/><line x1="128" y1="224" x2="91.32" y2="121.3" fill="none"/><line x1="211.14" y1="176" x2="103.86" y2="156.42" fill="none"/><line x1="211.14" y1="80" x2="140.54" y2="163.11" fill="none"/></svg>');
+		}
 		&[data-icon='basket'] {
 			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"><line x1="128" y1="120" x2="128" y2="176"/><polyline points="184 88 128 24 72 88"/><line x1="180.8" y1="120" x2="175.2" y2="176"/><line x1="75.2" y1="120" x2="80.8" y2="176"/><path d="M24,88H232L216.93,201.06A8,8,0,0,1,209,208H47a8,8,0,0,1-7.93-6.94Z"/></svg>');
 		}
@@ -400,9 +403,6 @@
 		}
 		&[data-icon='stairs'] {
 			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"><polyline points="48 176 104 176 104 136 152 136 152 96 208 96"/><rect x="48" y="32" width="160" height="192" rx="8"/><line x1="104" y1="176" x2="208" y2="176"/><line x1="152" y1="136" x2="208" y2="136"/></svg>');
-		}
-		&[data-icon='strategy'] {
-			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"><circle cx="76" cy="188" r="28"/><line x1="48" y1="72" x2="88" y2="112"/><line x1="88" y1="72" x2="48" y2="112"/><line x1="184" y1="168" x2="224" y2="208"/><line x1="224" y1="168" x2="184" y2="208"/><polyline points="144 80 144 40 184 40"/><path d="M144,40l16,16c40,40,8,88-24,96"/></svg>');
 		}
 		&[data-icon='squares-four'] {
 			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"><rect x="48" y="48" width="64" height="64" rx="8"/><rect x="144" y="48" width="64" height="64" rx="8"/><rect x="48" y="144" width="64" height="64" rx="8"/><rect x="144" y="144" width="64" height="64" rx="8"/></svg>');

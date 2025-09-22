@@ -1,7 +1,7 @@
 import { orchestrate } from 'aubade/conductor';
 import { marker } from 'aubade/legacy';
 import { chain } from 'aubade/transform';
-import { attempt, date, define, drill, sum } from 'mauss';
+import { attempt, date, define, drill } from 'mauss';
 import { exists } from 'mauss/guards';
 import sharp from 'sharp';
 
@@ -9,7 +9,7 @@ const ROOT = `${process.cwd()}/static/uploads`;
 export const ROUTES = {
 	async '/curated'() {
 		const schema = attempt.wrap(
-			define(({ optional, string }) => ({
+			define(({ optional, string, boolean }) => ({
 				date: string(),
 				title: string(),
 				series: {
@@ -17,6 +17,10 @@ export const ROUTES = {
 					chapter: optional(string()),
 				},
 				description: optional(string()),
+
+				meta: optional({
+					index: optional(boolean()),
+				}),
 			})),
 		);
 
@@ -186,7 +190,7 @@ export const ROUTES = {
 
 	async '/reviews'() {
 		const schema = attempt.wrap(
-			define(({ optional, array, record, literal, string, number }) => ({
+			define(({ optional, array, record, literal, string }) => ({
 				date: string(),
 				title: string(),
 				alias: optional(array(string()), []),
@@ -209,18 +213,7 @@ export const ROUTES = {
 				),
 				genres: array(string()),
 				seen: { first: string(), last: optional(string()) },
-				rating: optional(
-					record(
-						array(
-							record(number(), (pts) => sum(Object.values(pts))),
-							(score) => sum(score) / score.length,
-						),
-						(rubric) => {
-							const ratings = Object.values(rubric);
-							return (sum(ratings) / ratings.length).toFixed(2);
-						},
-					),
-				),
+				rating: optional(literal('peak', 'solid', 'mid', 'weak', 'trash')),
 
 				poster: { source: literal('url', 'tmdb'), path: string() },
 				backdrop: { source: literal('url', 'tmdb'), path: string() },

@@ -42,13 +42,13 @@
 		</header>
 
 		{#if post.table.length}
-			<Index items={post.table} />
+			<Index items={post.table} open={post.meta?.index} />
 		{/if}
 	{/if}
 
 	{@render children()}
 
-	{#if collection && post?.series}
+	{#if collection && post?.series && collection[post.series.title].length > 1}
 		<SeriesList slug={post.slug} series={post.series} {collection} />
 	{/if}
 

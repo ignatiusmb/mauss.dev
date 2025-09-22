@@ -7,28 +7,7 @@ released: 2014-10-10
 genres: [drama, music, romance, school, slice of life]
 seen:
   first: 2020-08-14
-rating:
-  narrative:
-    - premise: 8
-    - pacing: 10
-    - resolution: 10
-    - direction: 9
-  characterization:
-    - development: 8
-    - dynamics: 7
-    - seiyuu: 9
-  presentation:
-    - style: 9
-    - animation: 8
-    - visuals: 10
-  audio:
-    - ambience: 10
-    - songs: 10
-    - soundtrack: 10
-  personal:
-    - engagement: 10
-    - relatable: 7
-    - impact: 9
+rating: solid
 poster:
   source: tmdb
   path: nksFLYTydth9OYVpMuMbtOBkvMO.jpg

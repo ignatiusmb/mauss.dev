@@ -2,16 +2,16 @@
 date: 2020
 title: My Dress-Up Darling
 alias: [Sono Bisque Doll wa Koi wo Suru]
-tier: "?"
+tier: A
 released: 2022-01-09
 completed: 12/12
 genres: [romance, slice of life]
 seen:
   first: "2022-02-16T21:36:16"
-  last: "2022-03-27T09:04:10"
+  last: "2025-09-21T22:46:00+07:00"
 poster:
   source: tmdb
-  path: w09TpdruCEhZcIPGDMhM6sGDhg7.jpg
+  path: uiAYHj5cv2M3ru2K0FsB2sxfsle.jpg
 backdrop:
   source: tmdb
   path: jyCeRldLBa2ofS8BFztVpxl6qaN.jpg

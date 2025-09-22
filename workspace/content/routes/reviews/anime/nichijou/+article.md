@@ -7,28 +7,7 @@ released: 2011-04-03
 genres: [comedy, slapstick, slice of life, school, shounen]
 seen:
   first: 2020-08-09
-rating:
-  narrative:
-    - premise: 10
-    - pacing: 9
-    - resolution: 9
-    - direction: 9
-  characterization:
-    - development: 8
-    - dynamics: 10
-    - seiyuu: 10
-  presentation:
-    - style: 10
-    - animation: 10
-    - visuals: 10
-  audio:
-    - ambience: 10
-    - songs: 10
-    - soundtrack: 10
-  personal:
-    - engagement: 10
-    - relatable: 10
-    - impact: 10
+rating: solid
 poster:
   source: tmdb
   path: qmi1VpOvPFRHg02fbLuc3pVrMbt.jpg

@@ -7,28 +7,7 @@ released: 2018-10-04
 genres: [comedy, romance, school, mystery, supernatural]
 seen:
   first: 2020-07-23
-rating:
-  narrative:
-    - premise: 10
-    - pacing: 8
-    - resolution: 10
-    - direction: 9
-  characterization:
-    - development: 10
-    - dynamics: 9
-    - seiyuu: 10
-  presentation:
-    - style: 10
-    - animation: 10
-    - visuals: 10
-  audio:
-    - ambience: 10
-    - songs: 10
-    - soundtrack: 10
-  personal:
-    - engagement: 9
-    - relatable: 7
-    - impact: 8
+rating: solid
 poster:
   source: tmdb
   path: cU4jHfo1Q9AEPnFqFqtuSA74gdi.jpg

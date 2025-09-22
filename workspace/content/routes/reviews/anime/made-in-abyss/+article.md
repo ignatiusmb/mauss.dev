@@ -1,34 +1,14 @@
 ---
 date: 2020
 title: Made in Abyss
-tier: "?"
+tier: A
 released: 2017-07-07
 completed: 25/25
 genres: [adventure, fantasy, mystery]
 seen:
   first: "2023-01-24T21:09:00+07:00"
   last: "2023-02-11T00:47:00+07:00"
-rating:
-  narrative:
-    - premise: 10
-    - pacing: 8
-    - direction: 10
-  characterization:
-    - development: 10
-    - dynamics: 10
-    - seiyuu: 10
-  presentation:
-    - style: 10
-    - animation: 10
-    - visuals: 10
-  audio:
-    - ambience: 10
-    - songs: 10
-    - soundtrack: 10
-  personal:
-    - engagement: 10
-    - relatable: 7
-    - impact: 9
+rating: peak
 poster:
   source: tmdb
   path: jLkCeh5xNCuQPHIbTfuLgSqt2OQ.jpg

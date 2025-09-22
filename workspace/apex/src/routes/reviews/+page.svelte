@@ -65,7 +65,7 @@
 <header>
 	<h1>kaleidoscope eyes</h1>
 	<!-- prettier-ignore -->
-	<small>glimpse through the shifting lens — here's <a href="/help#reviews-how-i-review">how i review</a>.</small>
+	<small>glimpse through the shifting lens — see my <a href="/help#reviews-style">review style</a>.</small>
 </header>
 
 <SearchBar
@@ -227,7 +227,6 @@
 				padding: 0.2rem;
 				border-bottom-right-radius: inherit;
 				border-bottom-left-radius: inherit;
-				text-transform: capitalize;
 
 				> span {
 					padding: 0.3rem;
@@ -306,17 +305,17 @@
 		}
 
 		&[data-tier='C'] {
-			border-color: oklch(67% 0.16 58);
+			border-color: oklch(55% 0.18 145);
 			box-shadow:
-				0 0 4px oklch(67% 0.16 58 / 0.3),
-				0 0 8px oklch(67% 0.16 58 / 0.15);
+				0 0 3px oklch(55% 0.18 145 / 0.3),
+				0 0 6px oklch(55% 0.18 145 / 0.15);
 		}
 
 		&[data-tier='D'] {
-			border-color: oklch(56% 0.06 90);
+			border-color: oklch(50% 0.08 60);
 			box-shadow:
-				0 0 2px oklch(56% 0.06 90 / 0.1),
-				0 0 3px oklch(56% 0.06 90 / 0.05);
+				0 0 2px oklch(50% 0.08 60 / 0.15),
+				0 0 4px oklch(50% 0.08 60 / 0.08);
 		}
 
 		&[data-tier='?'] {

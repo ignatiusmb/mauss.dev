@@ -6,28 +6,7 @@ released: 2014-04-11
 genres: [sports, drama, seinen]
 seen:
   first: 2020-07-19
-rating:
-  narrative:
-    - premise: 10
-    - pacing: 10
-    - resolution: 10
-    - direction: 10
-  characterization:
-    - development: 10
-    - dynamics: 10
-    - seiyuu: 10
-  presentation:
-    - style: 9
-    - animation: 8
-    - visuals: 9
-  audio:
-    - ambience: 10
-    - songs: 10
-    - soundtrack: 10
-  personal:
-    - engagement: 10
-    - relatable: 10
-    - impact: 10
+rating: solid
 poster:
   source: tmdb
   path: frgVn3ww547TVQH8vS2bWKZnEBu.jpg

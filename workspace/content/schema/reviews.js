@@ -2,7 +2,7 @@ import { orchestrate } from 'aubade/conductor';
 import { stringify } from 'aubade/manifest';
 import { attempt, define } from 'mauss';
 
-export const schema = define(({ optional, array, record, literal, string, number }) => ({
+export const schema = define(({ optional, array, record, literal, string }) => ({
 	date: string(),
 	title: string(),
 	alias: optional(array(string())),
@@ -13,7 +13,7 @@ export const schema = define(({ optional, array, record, literal, string, number
 	completed: optional(string()),
 	genres: array(string()),
 	seen: { first: string(), last: optional(string()) },
-	rating: optional(record(array(record(number())))),
+	rating: optional(string()),
 
 	poster: { source: literal('url', 'tmdb'), path: string() },
 	backdrop: { source: literal('url', 'tmdb'), path: string() },
