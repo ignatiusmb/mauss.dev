@@ -45,21 +45,22 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		padding: 0 3rem;
 		border: 0.4rem solid #30323d;
 		border-radius: 1rem;
-
 		text-align: center;
-		text-wrap: balance;
 	}
 
 	h1 {
 		margin-top: auto;
 		font-size: 6rem;
+		text-wrap: balance;
 	}
 
 	p {
 		margin: 0.5rem 0 auto 0;
 		font-size: 2rem;
+		text-wrap: balance;
 	}
 
 	footer {

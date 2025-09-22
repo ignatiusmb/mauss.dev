@@ -8,6 +8,7 @@ genres: [comedy, romance, sci-fi]
 seen:
   first: "2025-09-04T00:20:00+07:00"
   last: "2025-09-04T23:03:00+07:00"
+rating: peak
 poster:
   source: tmdb
   path: ttaknfJP0qjg7kMKwH0w29fcE6d.jpg

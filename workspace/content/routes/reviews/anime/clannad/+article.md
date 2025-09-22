@@ -9,6 +9,7 @@ genres: [comedy, drama, romance, school, slice of life, supernatural]
 seen:
   first: 2021-02-12
   last: 2021-06-14
+rating: peak
 poster:
   source: tmdb
   path: bmugfsOLi5Q01nTsFkNwO0V4xgg.jpg

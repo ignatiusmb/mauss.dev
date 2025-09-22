@@ -7,6 +7,7 @@ released: 2011-01-07
 genres: [psychological, magic, drama, thriller]
 seen:
   first: 2021-04-28
+rating: peak
 poster:
   source: tmdb
   path: 48GLvRh3lgh5gjl0uVen60bslRM.jpg

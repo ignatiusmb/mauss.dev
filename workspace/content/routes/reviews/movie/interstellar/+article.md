@@ -6,6 +6,7 @@ released: 2014-11-06
 genres: [adventure, drama, sci-fi]
 seen:
   first: 2014-11-06
+rating: peak
 poster:
   source: tmdb
   path: hbGNJb88HjoQurnRYYWg45YBFtz.jpg

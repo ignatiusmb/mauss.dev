@@ -8,7 +8,7 @@ genres: [music, comedy, school]
 seen:
   first: "2022-10-18T17:37:00+07:00"
   last: "2022-12-25T02:24:00+07:00"
-rating: solid
+rating: peak
 poster:
   source: tmdb
   path: se9xLGHlSqQwVgEzLw326CJjaRm.jpg

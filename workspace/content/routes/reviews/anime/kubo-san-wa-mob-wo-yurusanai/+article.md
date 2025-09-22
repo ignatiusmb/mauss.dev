@@ -8,6 +8,7 @@ genres: [school, comedy, romance]
 seen:
   first: "2025-08-09T15:40:00+07:00"
   last: "2025-08-10T01:06:00+07:00"
+rating: mid
 poster:
   source: tmdb
   path: 2fn3RZYcbmxqsyQ7Mys2nRIyZUI.jpg

@@ -7,6 +7,7 @@ released: 2023-09-29
 genres: [adventure, drama, fantasy]
 seen:
   first: 2023-09-29
+rating: peak
 poster:
   source: tmdb
   path: dqZENchTd7lp5zht7BdlqM7RBhD.jpg

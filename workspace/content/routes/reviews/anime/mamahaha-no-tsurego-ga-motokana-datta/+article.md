@@ -8,6 +8,7 @@ genres: [comedy, romance]
 seen:
   first: "2025-09-03T00:15:00+07:00"
   last: "2025-09-07T22:22:00+07:00"
+rating: weak
 poster:
   source: tmdb
   path: eQMIfN5L2eIwOeFep6Dt6H7X4kg.jpg

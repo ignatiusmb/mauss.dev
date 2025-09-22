@@ -8,6 +8,7 @@ genres: [isekai, fantasy]
 seen:
   first: "2025-07-21T23:03:00+07:00"
   last: "2025-09-03T00:12:00+07:00"
+rating: trash
 poster:
   source: tmdb
   path: az0jQSgRLezKw5uHaEjPH20NexD.jpg

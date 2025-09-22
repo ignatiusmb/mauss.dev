@@ -7,6 +7,7 @@ genres: [drama, suspense]
 seen:
   first: "2025-09-05T00:13:00+07:00"
   last: "2025-09-06T01:45:00+07:00"
+rating: solid
 poster:
   source: tmdb
   path: e9waTrWlTq1XzoAXO4DuEPMdvM6.jpg

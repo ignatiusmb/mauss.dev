@@ -8,6 +8,7 @@ genres: [vampire, romance, supernatural]
 seen:
   first: 2025-06-19
   last: "2025-09-21T00:52:00+07:00"
+rating: solid
 poster:
   source: tmdb
   path: rDhwDG2ii8c3nCcfUNp6mogGQ93.jpg

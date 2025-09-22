@@ -9,6 +9,7 @@ genres: [romance, slice of life]
 seen:
   first: "2022-02-16T21:36:16"
   last: "2025-09-21T22:46:00+07:00"
+rating: solid
 poster:
   source: tmdb
   path: uiAYHj5cv2M3ru2K0FsB2sxfsle.jpg

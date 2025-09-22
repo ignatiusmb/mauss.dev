@@ -8,6 +8,7 @@ genres: [school, harem, comedy, romance]
 seen:
   first: "2025-07-21T23:27:00+07:00"
   last: "2025-07-23T00:58:00+07:00"
+rating: weak
 poster:
   source: tmdb
   path: 50jjmuwSwMxlXAP1jQ48kr1xrcN.jpg

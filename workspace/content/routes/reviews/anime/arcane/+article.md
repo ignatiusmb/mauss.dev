@@ -1,13 +1,14 @@
 ---
 date: 2020
 title: Arcane
-tier: "?"
+tier: S
 released: 2021-11-06
 completed: 9/9
 genres: [animation, action, adventure, drama, sci-fi, steampunk]
 seen:
   first: "2022-09-03T17:01:00+07:00"
   last: "2022-09-03T23:09:00+07:00"
+rating: peak
 poster:
   source: tmdb
   path: 3YBpdwJwLecxGDguVITeDBP0kTd.jpg

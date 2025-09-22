@@ -60,7 +60,6 @@
 	{#key files}
 		{@const hover = (count: number) => (event: Event) => {
 			event.preventDefault();
-			console.log({ dragging });
 			dragging += count;
 		}}
 

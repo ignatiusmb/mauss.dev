@@ -9,6 +9,7 @@ genres: [action, demons, historical, shounen, supernatural]
 seen:
   first: 2020-04-20
   last: "2023-06-19T13:53:00+07:00"
+rating: solid
 poster:
   source: tmdb
   path: wrCVHdkBlBWdJUZPvnJWcBRuhSY.jpg

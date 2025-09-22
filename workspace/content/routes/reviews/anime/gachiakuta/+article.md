@@ -1,11 +1,12 @@
 ---
 date: 2020
 title: Gachiakuta
-tier: "?"
+tier: S
 released: 2025-07-06
 genres: [action, fantasy]
 seen:
   first: "2025-07-07T10:52:00+07:00"
+rating: peak
 poster:
   source: tmdb
   path: oU2SBv5VQCdOHfw3Aw8B0UeAsim.jpg

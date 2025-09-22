@@ -7,6 +7,7 @@ genres: [adventure, sci-fi, shounen]
 seen:
   first: 2021-05-23
   last: "2025-09-19T01:00:00+07:00"
+rating: peak
 poster:
   source: tmdb
   path: dLlnzbDCblBXcJqFLXyvN43NIwp.jpg

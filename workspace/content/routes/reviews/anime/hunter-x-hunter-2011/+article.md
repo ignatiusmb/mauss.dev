@@ -8,6 +8,7 @@ genres: [action, adventure, fantasy, shounen, super power]
 seen:
   first: 2021-03-14
   last: "2022-11-18T00:09:00+07:00"
+rating: peak
 poster:
   source: tmdb
   path: tolQj5yffSxkEGXusPwNcvYrbph.jpg

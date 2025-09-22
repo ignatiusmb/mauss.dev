@@ -7,6 +7,7 @@ released: 2023-07-04
 genres: [comedy, romance]
 seen:
   first: "2025-09-03T22:41:00+07:00"
+rating: solid
 poster:
   source: tmdb
   path: t1BpdK2Vgr3AvUWkUKclDODFkI5.jpg
