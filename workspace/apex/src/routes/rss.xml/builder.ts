@@ -19,9 +19,8 @@ function escape(literals: TemplateStringsArray, ...inputs: Array<string | string
 }
 
 export const channel = {
-	title: 'Alkamauss — A Digital Atelier',
-	description:
-		'seeing life through a shifting lens in a quiet corner of the web. where everyday moments, distant journeys, and personal echoes turn into stories worth holding.',
+	title: 'Alkamauss • a digital atelier',
+	description: 'seeing life through a shifting lens in a quiet corner of the web.',
 };
 
 export function RSS(
@@ -37,14 +36,14 @@ export function RSS(
 	<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<atom:link href="https://mauss.dev/rss.xml" rel="self" type="application/rss+xml" />
-		<title>Alkamauss — A Digital Atelier</title>
+		<title>${channel.title}</title>
 		<link>https://mauss.dev</link>
 		<description>${channel.description}</description>
 		<lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
 		<language>en</language>
 		<image>
 			<url>https://mauss.dev/assets/rss-image.png</url>
-			<title>Alkamauss — A Digital Atelier</title>
+			<title>${channel.title}</title>
 			<link>https://mauss.dev</link>
 		</image>
 		${items.map(

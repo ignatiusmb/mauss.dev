@@ -1,0 +1,33 @@
+import type { ComponentProps } from 'svelte';
+import Card from '$lib/server/Card.svelte';
+import { ImageResponse } from '@vercel/og';
+import { html as reactify } from 'satori-html';
+import { render } from 'svelte/server';
+import { read } from '$app/server';
+
+import Newsreader from '$lib/fonts/Newsreader.ttf?url';
+import NotoSymbols from '$lib/fonts/NotoSymbols2.ttf?url';
+const fonts = [
+	{ data: await read(Newsreader).arrayBuffer(), name: 'Newsreader' },
+	{ data: await read(NotoSymbols).arrayBuffer(), name: 'NotoSymbols' },
+];
+
+export function CardImage(props: ComponentProps<typeof Card>) {
+	const { head, body } = render(Card, { props });
+	const element = reactify(`<head>${head}</head>${body}`);
+	return new ImageResponse(element, {
+		fonts,
+		width: 1200,
+		height: 630,
+		headers: {
+			'Content-Type': 'image/png',
+			'Cache-Control': [
+				'public',
+				'no-transform',
+				'max-age=0',
+				's-maxage=3600',
+				'stale-while-revalidate=86400',
+			].join(', '),
+		},
+	});
+}

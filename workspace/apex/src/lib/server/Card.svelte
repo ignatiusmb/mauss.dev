@@ -7,21 +7,21 @@
 		date?: string;
 		footer?: string;
 	}
-	let { title, blurb, date, footer }: Props = $props();
+	const { title, blurb, date, footer = '« mauss.dev »' }: Props = $props();
 </script>
 
 <div>
 	<section>
 		<h1>{title}</h1>
 		<p>{blurb}</p>
-		{#if footer}
-			<footer>{footer}</footer>
-		{:else if date}
+		{#if date}
 			<footer>
 				<span>Alkamauss</span>
 				<span style:color="#d79628">❃</span>
 				<span>{date}</span>
 			</footer>
+		{:else if footer}
+			<footer>{footer}</footer>
 		{/if}
 	</section>
 </div>
