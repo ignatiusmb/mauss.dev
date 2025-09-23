@@ -1,10 +1,10 @@
-import type { Schema } from '$content/posts.json/+server';
+import type { Schema } from '$content/curated.json/+server';
 import { error } from '@sveltejs/kit';
 import { date } from 'mauss';
 import { CardImage } from '$lib/server/og';
 
 export async function GET({ fetch, params }) {
-	const { items }: Schema = await fetch('/content/posts.json').then((r) => r.json());
+	const { items }: Schema = await fetch('/content/curated.json').then((r) => r.json());
 	const post = items.find((item) => item.slug === params.slug);
 	if (!post) error(404);
 

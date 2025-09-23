@@ -1,4 +1,5 @@
 import type { Items } from '$content/builder';
+import { channel } from './rss.xml/builder';
 
 export const prerender = true;
 export async function load({ fetch }) {
@@ -11,9 +12,8 @@ export async function load({ fetch }) {
 		posts: (p as Items['/posts']).slice(0, 4),
 		reviews: (r as Items['/reviews']).slice(0, 4),
 		meta: {
-			title: 'Alkamauss • A Digital Atelier',
-			description:
-				'seeing life through a shifting lens in a quiet corner of the web. where everyday moments, distant journeys, and personal echoes turn into stories worth holding.',
+			title: channel.title,
+			description: channel.description,
 		},
 	};
 }

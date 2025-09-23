@@ -105,7 +105,7 @@ export const ROUTES = {
 					title: string(),
 					chapter: optional(string()),
 				}),
-				description: optional(string()),
+				description: string(),
 				tags: array(string()),
 				thumbnail: optional(string()),
 				image: optional(string()),
