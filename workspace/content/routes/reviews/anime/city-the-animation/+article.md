@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: City The Animation
-tier: "?"
+tier: S
 released: 2025-07-07
 genres: [comedy]
 seen:

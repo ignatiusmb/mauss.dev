@@ -6,6 +6,7 @@ released: 2023-07-19
 genres: [drama, history]
 seen:
   first: "2025-07-05T15:15:00+07:00"
+rating: solid
 poster:
   source: tmdb
   path: 8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg

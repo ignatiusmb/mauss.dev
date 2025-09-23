@@ -8,6 +8,7 @@ genres: [school, mystery]
 seen:
   first: "2025-08-03T23:40:00+07:00"
   last: "2025-08-05T22:00:00+07:00"
+rating: weak
 poster:
   source: tmdb
   path: k0Yb8KjspVjNlmvHNgqRRbhZ6LA.jpg

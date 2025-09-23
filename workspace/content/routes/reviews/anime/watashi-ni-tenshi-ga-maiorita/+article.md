@@ -7,27 +7,7 @@ released: 2019-01-08
 genres: [comedy, slice of life, shoujo ai]
 seen:
   first: 2020-08-23
-rating:
-  narrative:
-    - premise: 8
-    - pacing: 10
-    - direction: 9
-  characterization:
-    - development: 9
-    - dynamics: 8
-    - seiyuu: 9
-  presentation:
-    - style: 9
-    - animation: 10
-    - visuals: 9
-  audio:
-    - ambience: 10
-    - songs: 10
-    - soundtrack: 10
-  personal:
-    - engagement: 10
-    - relatable: 7
-    - impact: 8
+rating: solid
 poster:
   source: tmdb
   path: gfmBwdDmUowytNOULstzLYPQl5X.jpg

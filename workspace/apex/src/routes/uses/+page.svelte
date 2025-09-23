@@ -29,6 +29,14 @@
 					link: 'https://www.keychron.com/products/keychron-k2-wireless-mechanical-keyboard',
 				},
 				{
+					type: 'Audio I/O',
+					name: 'Focusrite Scarlett Solo 4th Gen',
+					link: 'https://focusrite.com/products/scarlett-solo',
+				},
+				{ type: 'Phone', name: 'Galaxy S23+' },
+				{ type: 'Watch', name: 'Venu 2 Plus' },
+				{ type: 'Earbuds', name: 'Galaxy Buds3 Pro' },
+				{
 					type: 'Home Lab',
 					name: 'GEEKOM Mini Air12',
 					link: 'https://www.geekompc.com/geekom-mini-air12-mini-pc',
@@ -38,9 +46,6 @@
 					name: 'ORICO 4-bay',
 					link: 'https://www.orico.cc/us/product/detail/3617.html',
 				},
-				{ type: 'Phone', name: 'Galaxy S23+' },
-				{ type: 'Watch', name: 'Venu 2 Plus' },
-				{ type: 'Earbuds', name: 'Galaxy Buds3 Pro' },
 			],
 		},
 		{

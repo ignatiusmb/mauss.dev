@@ -8,6 +8,7 @@ genres: [psychological, drama, sci-fi]
 seen:
   first: "2025-07-09T20:20:00+07:00"
   last: "2025-08-02T00:47:00+07:00"
+rating: peak
 poster:
   source: tmdb
   path: xPXDVhVKt0XM34ihoUVMHtLYTw8.jpg

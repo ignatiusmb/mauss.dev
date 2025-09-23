@@ -7,28 +7,7 @@ released: 2016-08-26
 genres: [anime, romance, supernatural, drama, school]
 seen:
   first: 2020-08-29
-rating:
-  narrative:
-    - premise: 10
-    - pacing: 8
-    - resolution: 7
-    - direction: 10
-  characterization:
-    - development: 10
-    - dynamics: 9
-    - seiyuu: 10
-  presentation:
-    - style: 10
-    - animation: 10
-    - visuals: 10
-  audio:
-    - ambience: 10
-    - songs: 10
-    - soundtrack: 10
-  personal:
-    - engagement: 10
-    - relatable: 6
-    - impact: 8
+rating: peak
 poster:
   source: tmdb
   path: f7UABkINaQCWMHUOkq1XdB7SFOS.jpg

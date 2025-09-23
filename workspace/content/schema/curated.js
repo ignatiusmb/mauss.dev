@@ -2,14 +2,17 @@ import { orchestrate } from 'aubade/conductor';
 import { stringify } from 'aubade/manifest';
 import { attempt, define } from 'mauss';
 
-export const schema = define(({ optional, literal, string }) => ({
+export const schema = define(({ optional, literal, string, boolean }) => ({
 	date: string(),
 	title: string(),
 	series: optional({
-		title: literal('The Essence', 'The Harvest', 'My Notes'),
-		type: literal('linear', 'collection'),
+		title: literal('Highlights', 'The Essence', 'The Harvest', 'My Notes'),
+		chapter: optional(string()),
 	}),
 	description: optional(string()),
+	meta: optional({
+		index: optional(boolean()),
+	}),
 }));
 
 /** @type {string[]} */

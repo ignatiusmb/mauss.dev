@@ -7,6 +7,7 @@ genres: [adult cast, mystery, romance, sci-fi]
 seen:
   first: "2025-08-10T02:12:00+07:00"
   last: "2025-08-19T22:05:00+07:00"
+rating: solid
 poster:
   source: tmdb
   path: j13aUJ1WfCtYCldCC6weTUcBvNc.jpg

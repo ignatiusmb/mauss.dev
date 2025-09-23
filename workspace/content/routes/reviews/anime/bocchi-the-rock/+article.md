@@ -8,28 +8,7 @@ genres: [music, comedy, school]
 seen:
   first: "2022-10-18T17:37:00+07:00"
   last: "2022-12-25T02:24:00+07:00"
-rating:
-  narrative:
-    - premise: 10
-    - pacing: 10
-    - resolution: 10
-    - direction: 10
-  characterization:
-    - development: 10
-    - dynamics: 10
-    - seiyuu: 10
-  presentation:
-    - style: 10
-    - animation: 10
-    - visuals: 10
-  audio:
-    - ambience: 10
-    - songs: 10
-    - soundtrack: 10
-  personal:
-    - engagement: 10
-    - relatable: 10
-    - impact: 9
+rating: peak
 poster:
   source: tmdb
   path: se9xLGHlSqQwVgEzLw326CJjaRm.jpg

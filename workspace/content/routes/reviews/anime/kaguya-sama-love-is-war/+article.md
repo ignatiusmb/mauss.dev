@@ -9,27 +9,7 @@ genres: [comedy, romance, school, seinen]
 seen:
   first: 2020-07-21
   last: "2022-07-10T23:30:00"
-rating:
-  narrative:
-    - premise: 10
-    - pacing: 10
-    - direction: 10
-  characterization:
-    - development: 10
-    - dynamics: 10
-    - seiyuu: 10
-  presentation:
-    - style: 10
-    - animation: 8
-    - visuals: 9
-  audio:
-    - ambience: 10
-    - songs: 10
-    - soundtrack: 10
-  personal:
-    - engagement: 10
-    - relatable: 8
-    - impact: 8
+rating: solid
 poster:
   source: tmdb
   path: dA93MnalfNLHMMlDcTCfX4QJb5Q.jpg

@@ -8,6 +8,7 @@ genres: [adult cast, romance]
 seen:
   first: "2025-08-05T23:48:00+07:00"
   last: "2025-08-08T01:20:00+07:00"
+rating: solid
 poster:
   source: tmdb
   path: ntgph4kCtxzDsVQIK2gJfrG3PyM.jpg

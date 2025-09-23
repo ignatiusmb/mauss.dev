@@ -7,28 +7,7 @@ released: 2019-07-19
 genres: [anime, slice of life, supernatural, drama, fantasy, adventure, romance]
 seen:
   first: 2020-08-30
-rating:
-  narrative:
-    - premise: 7
-    - pacing: 8
-    - resolution: 7
-    - direction: 9
-  characterization:
-    - development: 8
-    - dynamics: 9
-    - seiyuu: 10
-  presentation:
-    - style: 10
-    - animation: 10
-    - visuals: 10
-  audio:
-    - ambience: 10
-    - songs: 10
-    - soundtrack: 10
-  personal:
-    - engagement: 10
-    - relatable: 7
-    - impact: 9
+rating: solid
 poster:
   source: tmdb
   path: qgrk7r1fV4IjuoeiGS5HOhXNdLJ.jpg

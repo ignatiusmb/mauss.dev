@@ -45,13 +45,10 @@ export const by: By<Schema['metadata']['sort_by'][number][0]> = {
 		return date.sort.newest(x.released, y.released);
 	},
 	rating(x, y) {
-		const xr = Number.isNaN(Number(x.rating)) ? +!!x.rating : Number(x.rating);
-		const yr = Number.isNaN(Number(y.rating)) ? +!!y.rating : Number(y.rating);
-		if (xr !== yr) return yr - xr;
-		if (xr === 0 || yr === 0) {
-			return arrange(['S', 'A', 'B', 'C', 'D', '?'])(x.tier, y.tier);
-		}
-		return fallback(x, y);
+		if (x.rating == null) return 1;
+		if (y.rating == null) return -1;
+		if (x.rating === y.rating && x.tier !== y.tier) return by.tier(x, y);
+		return arrange(['peak', 'solid', 'mid', 'weak', 'trash'])(x.rating, y.rating);
 	},
 	seen(x, y) {
 		const xd = [x.seen.last, x.seen.first].filter((d) => d != null);

@@ -8,28 +8,7 @@ genres: [school]
 seen:
   first: 2025-06-12
   last: 2025-06-18
-rating:
-  narrative:
-    - premise: 10
-    - pacing: 9
-    - resolution: 10
-    - direction: 10
-  characterization:
-    - development: 10
-    - dynamics: 10
-    - seiyuu: 10
-  presentation:
-    - style: 7
-    - animation: 6
-    - visuals: 7
-  audio:
-    - ambience: 8
-    - songs: 7
-    - soundtrack: 7
-  personal:
-    - engagement: 10
-    - relatable: 10
-    - impact: 10
+rating: peak
 poster:
   source: tmdb
   path: cyCMX96AoqT9igMbE0a6njreAEd.jpg

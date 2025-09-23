@@ -8,28 +8,7 @@ genres: [action, comedy, supernatural]
 seen:
   first: 2020-07-14
   last: "2022-12-22T02:24:00+07:00"
-rating:
-  narrative:
-    - premise: 10
-    - pacing: 10
-    - resolution: 10
-    - direction: 10
-  characterization:
-    - development: 10
-    - dynamics: 10
-    - seiyuu: 10
-  presentation:
-    - style: 9
-    - animation: 10
-    - visuals: 9
-  audio:
-    - ambience: 10
-    - songs: 10
-    - soundtrack: 10
-  personal:
-    - engagement: 10
-    - relatable: 10
-    - impact: 10
+rating: peak
 poster:
   source: tmdb
   path: zkL0htm5fwnYPlTndmvNZpyejTT.jpg

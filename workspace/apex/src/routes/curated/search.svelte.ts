@@ -10,8 +10,9 @@ export type Item = Omit<Items['/curated'][number], 'branches' | 'content'>;
 export function sift(items: Item[], payload: Query) {
 	const value = normalize(payload.search);
 	const results = items.filter((item) => {
+		const serialized = item.series.title.toLowerCase().replace(/ /g, '-');
 		const filters = [
-			payload.series && payload.series.toLowerCase() !== item.series?.title,
+			payload.series && payload.series.toLowerCase() !== serialized,
 			//
 		];
 		const flags = [

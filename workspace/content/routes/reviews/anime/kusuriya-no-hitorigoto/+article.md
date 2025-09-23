@@ -7,6 +7,7 @@ released: 2023-10-22
 genres: [drama, mystery]
 seen:
   first: 2024-03-18
+rating: solid
 poster:
   source: tmdb
   path: e3ojpANrFnmJCyeBNTinYwyBCIN.jpg

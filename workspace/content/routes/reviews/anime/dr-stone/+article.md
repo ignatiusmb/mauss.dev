@@ -1,11 +1,13 @@
 ---
 date: 2020
 title: Dr. Stone
-tier: "?"
+tier: A
 released: 2019-07-05
 genres: [adventure, sci-fi, shounen]
 seen:
   first: 2021-05-23
+  last: "2025-09-19T01:00:00+07:00"
+rating: peak
 poster:
   source: tmdb
   path: dLlnzbDCblBXcJqFLXyvN43NIwp.jpg
@@ -14,4 +16,5 @@ backdrop:
   path: lN13BPAEnc5iXmoxxBQHOZ1ScfZ.jpg
 link:
   MyAnimeList: https://myanimelist.net/anime/38691
+  TMDB: https://www.themoviedb.org/tv/86031
 ---
