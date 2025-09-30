@@ -17,4 +17,4 @@ link:
   Steam: https://store.steampowered.com/app/1082430/Before_Your_Eyes/
 ---
 
-![Backdrop#f#fb](https://pbs.twimg.com/media/E06AnqeXoAEbVwE.jpg "Source: Twitter")
+![Backdrop](https://pbs.twimg.com/media/E06AnqeXoAEbVwE.jpg "Source: Twitter")

@@ -19,4 +19,4 @@ link:
   TMDB: https://www.themoviedb.org/tv/65332
 ---
 
-![Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/lvBdVlkEqzq6rCu0VQo3UFpdvxP.jpg "Source: TMDB")
+![Backdrop](https://image.tmdb.org/t/p/w1280/lvBdVlkEqzq6rCu0VQo3UFpdvxP.jpg "Source: TMDB")

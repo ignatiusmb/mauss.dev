@@ -17,4 +17,4 @@ link:
   MyAnimeList: https://myanimelist.net/anime/41389
 ---
 
-![TONIKAWA backdrop#f#fb](https://image.tmdb.org/t/p/w1280/rnf2BDKeF1sxPEPhAcdvL0auuxr.jpg "Source: TMDB")
+![TONIKAWA backdrop](https://image.tmdb.org/t/p/w1280/rnf2BDKeF1sxPEPhAcdvL0auuxr.jpg "Source: TMDB")

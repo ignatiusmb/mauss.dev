@@ -62,7 +62,7 @@ There's of course other components that have more logic than just a plain button
 
 ## Application migration
 
-[![Sapper logo](https://sapper.svelte.dev/sapper-logo-horizontal.svg)](https://sapper.svelte.dev/)
+![Sapper logo](https://sapper.svelte.dev/sapper-logo-horizontal.svg)
 
 Let's take a look at our previous project structure with Sapper.
 
@@ -72,8 +72,7 @@ It's quite bloated in my opinion, with repeated files in `routes` directory, it'
 
 Our components are no different, but all of those files serve as the foundations of our application structure. It may look like a lot of files, but it allows us to reduce our LOC (especially duplicated ones) significantly. So we'll ignore it from our comparison.
 
-```
-#$ file: SSR Project Structure
+```text file:SSR Project Structure
 src
 ├── components
 │   ├── BackButton.svelte
@@ -105,7 +104,7 @@ src
 
 ---
 
-[![Svelte logo](https://svelte.dev/svelte-logo-horizontal.svg)](https://svelte.dev/)
+![Svelte logo](https://svelte.dev/svelte-logo-horizontal.svg)
 
 Now here's the current project structure after our migration to Svelte.
 
@@ -115,8 +114,7 @@ Quite the trim isn't it? We've successfully removed many unnecessary files and e
 
 Choosing to host a server or use a static site is still much of a debate right now, although the majority of developers seems to prefer static site now since it provides a lot more benefits. Keep in mind, it doesn't backend servers are completely obsolete now, but we just don't need it for this project.
 
-```
-#$ file: SPA Project Structure
+```text file:SPA Project Structure
 src
 ├── components
 │   ├── BackButton.svelte
@@ -144,10 +142,7 @@ Because our components are self-contained too, I've literally copy and pasted th
 
 The only new component I added was `Loader.svelte` to give a more lively app for the user to see while the app is loading. You can see it for yourself or even use this for your own app. Just copy the code below and paste it to the [Svelte REPL](https://svelte.dev/repl)
 
-```svelte
-#$ file: Loader.svelte
-<!-- modified from https://github.com/swyxio/svelte-data-fetching/blob/master/src/Spinner.svelte -->
-
+```svelte file:Loader.svelte
 <div>
   <span />
   <span />
@@ -198,8 +193,7 @@ In short, we had a hard time developing and our users are going to have a hard t
 
 For some reason, Firebase can't be bundled together with the others and as such requires us to put it in through the `<script>` tags in its `template.html` file to be loaded through a CDN. We then created a function to check to if `firestore` is loaded yet.
 
-```javascript
-#$ file: client.js
+```javascript file:client.js
 import * as sapper from '@sapper/app';
 import { firebaseConfig } from './firebaseConfig';
 
@@ -214,8 +208,7 @@ sapper.start({
 
 `client.js` is Sapper's file of saying anything in this file will be loaded on the client-side. We're initializing firebase here and appending the auth and firestore function to the global `window` object.
 
-```javascript
-#$ file: firebase.js
+```javascript file:firebase.js
 import { firebaseConfig } from './firebaseConfig';
 
 export async function firestore() {
@@ -233,8 +226,7 @@ By using Sapper, we're relying on its backend server to render the page for the 
 
 Because Sapper's SSR uses node engine from the `<script context="module">` and doesn't have access to the global `window` object, we're going to use the `firebase.js` to check which Firebase instance we're going to use. That's a special script tag that is executed before the page is mounted, Sapper makes use of this to preload its data so it takes the weight for the server to handle.
 
-```svelte
-#$ file: kasus/index.svelte
+```svelte file:kasus/index.svelte
 <script context="module">
   import { firestore } from '../../firebase';
   export async function preload(page, session) {
@@ -262,8 +254,7 @@ Because Sapper's SSR uses node engine from the `<script context="module">` and d
 
 Because we're importing Firebase every time the route changes, it puts unnecessary load and time just to check and load Firebase again. Our main problem comes with the layout
 
-```svelte
-#$ file: _layout.svelte
+```svelte file:_layout.svelte
 <script>
   export let segment;
   import Sidebar from '../components/Sidebar.svelte';
@@ -342,8 +333,7 @@ Looking at the opportunities, diagnostics, and passed audits, our SPA app perfor
 
 Just Svelte itself is so simple and easy to use. It provides quick application development workflow and its results are so good. Here's how we integrate Firebase with Svelte and we'll be using a package called `sveltefire`
 
-```svelte
-#$ file: App.svelte
+```svelte file:App.svelte
 <script>
   import { FirebaseApp, User, Doc, Collection } from 'sveltefire';
   import firebase from 'firebase/app';
@@ -372,8 +362,7 @@ Just Svelte itself is so simple and easy to use. It provides quick application d
 
 Inside the `<FirebaseApp>` tag, we'll handle everything including our sign-in handling and signed in user data.
 
-```svelte
-#$ file: App.svelte
+```svelte file:App.svelte
 <script>
   import Login from './components/Login.svelte';
 
@@ -421,8 +410,7 @@ Inside the `<FirebaseApp>` tag, we'll handle everything including our sign-in ha
 
 When the user is logged in, it enters the `<main>` tag and they're given a `<Sidebar>` with `auth` prop from `<User>` for signing out and `admin` data from `<Doc>` to get the `currentUser` email and data such as role and authorities.
 
-```javascript
-#$ file: store.js
+```javascript file:store.js
 import { writable } from 'svelte/store';
 
 export const tab = writable('kasus');
@@ -432,8 +420,7 @@ export const assign = writable(null);
 
 `store.js` just contains writable stores for all svelte files to use. It's basically a global state container to pass data without passing props up and down through the tree.
 
-```svelte
-#$ file: Login.svelte
+```svelte file:Login.svelte
 <script>
   export let error;
 
@@ -470,8 +457,7 @@ export const assign = writable(null);
 
 ![Admin Dashboard Advokat Page](./admin-advokat.png)
 
-```svelte
-#$ file: App.svelte
+```svelte file:App.svelte
 <script>
   import { tab, action, assign } from './store';
 </script>
@@ -517,8 +503,7 @@ Using and managing svelte store is quite tricky to do manually, so we'll be usin
 
 Here's one of the pages with actions and sub-action (assign), one of the tricky ones for me
 
-```svelte
-#$ file: App.svelte
+```svelte file:App.svelte
 <script>
   import { tab, action, assign } from './store';
 
@@ -591,8 +576,7 @@ We also check if the advocate `isVerified`, does not have the same `id` as the `
 
 `<PromptUser>` is a modal that receives a `show` prop and `on:click` event.
 
-```svelte
-#$ file: PromptUser.svelte
+```svelte file:PromptUser.svelte
 <script>
   export let show;
   import { fly } from 'svelte/transition';

@@ -20,4 +20,4 @@ link:
   TMDB: https://www.themoviedb.org/tv/46298
 ---
 
-![Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/rAQy7uX1SVJAKMN02i6OtlrRsDY.jpg "Source: TMDB")
+![Backdrop](https://image.tmdb.org/t/p/w1280/rAQy7uX1SVJAKMN02i6OtlrRsDY.jpg "Source: TMDB")

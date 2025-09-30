@@ -8,7 +8,7 @@ tags: [writing, tech]
 
 blessed by the algorithm, i stumbled upon a gem this morning. as frustrating as it may be, i have to admit that the differences between AI and human writing are very apparent after watching it, just like Evan said in the video.
 
-![!YouTube](9Ch4a6ffPZY "I Can Spot AI Writing Instantly — Here's How You Can Too")
+@youtube{id=9Ch4a6ffPZY caption="I Can Spot AI Writing Instantly — Here's How You Can Too"}
 
 > [This video was more than informative — it was a journey, a transformation, a metaphorical yoga retreat for the mind.](https://www.youtube.com/watch?v=9Ch4a6ffPZY&lc=UgwVN1wRP3ubBDgb3IZ4AaABAg)
 

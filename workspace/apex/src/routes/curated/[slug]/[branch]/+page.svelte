@@ -4,6 +4,6 @@
 	const { data } = $props();
 </script>
 
-<Piece source={data.source} post={data.article}>
+<Piece source={data.source} post={data.article} collection={data.collection}>
 	{@html data.article.content}
 </Piece>

@@ -12,7 +12,7 @@ title: Calendar
 
 ## 03
 
-![!Video#d#f](https://thumbs.gfycat.com/CreepyBasicHairstreak-mobile.mp4 "[[Reddit](https://www.reddit.com/r/WatchandLearn/comments/jml4ry/sperm_attacked_by_womans_immune_system/)] How a woman's immune system works")
+@video{src=[https://thumbs.gfycat.com/CreepyBasicHairstreak-mobile.mp4] caption="[[Reddit](https://www.reddit.com/r/WatchandLearn/comments/jml4ry/sperm_attacked_by_womans_immune_system/)] How a woman's immune system works"}
 
 ## 06
 
@@ -42,7 +42,7 @@ title: Calendar
 
 ## 13
 
-![you're worth something now#d#f](https://preview.redd.it/uc8slqplyzy51.jpg?width=640&crop=smart&auto=webp&s=ff3e82e525138258c55fecb721f1df318e3664e1 "[[Reddit](https://www.reddit.com/r/wholesomememes/comments/jtfrg6/watch_yourself_grow/)] Watch yourself grow")
+![you're worth something now](https://preview.redd.it/uc8slqplyzy51.jpg?width=640&crop=smart&auto=webp&s=ff3e82e525138258c55fecb721f1df318e3664e1 "[[Reddit](https://www.reddit.com/r/wholesomememes/comments/jtfrg6/watch_yourself_grow/)] Watch yourself grow")
 
 ## 14
 
@@ -50,13 +50,13 @@ title: Calendar
 
 [[Reddit](https://www.reddit.com/r/DataHoarder/comments/jttcsk/unus_annus_is_archived/) | [Archive](https://archive.org/details/unus-annus)] Unus Annus is archived!
 
-![memento mori#d#f](https://i.redd.it/7bm5hx81t7z51.png "[[Reddit](https://www.reddit.com/r/memes/comments/ju2nez/what_who_uh/)] (meme) After Unus Annus is killed")
+![memento mori](https://i.redd.it/7bm5hx81t7z51.png "[[Reddit](https://www.reddit.com/r/memes/comments/ju2nez/what_who_uh/)] (meme) After Unus Annus is killed")
 
 ## 16
 
 [[Reddit](https://www.reddit.com/r/programming/comments/jv7kls/youtubedls_repository_has_been_restored/) | [GitHub](https://github.com/ytdl-org/youtube-dl) | [Reversal EFF Letter](https://github.com/github/dmca/blob/master/2020/11/2020-11-16-RIAA-reversal-effletter.pdf)] YouTube-dl's repository has been restored.
 
-![hard part is proving it#d#f](https://preview.redd.it/gu7z6zinxiz51.jpg?width=960&crop=smart&auto=webp&s=2603df8be7fc978f26e2d51b1a342c518b1504fe "[[Reddit](https://www.reddit.com/r/clevercomebacks/comments/juzxh4/what_can_be_asserted_without_evidence_can_also_be/)] "What can be asserted without evidence can also be dismissed without evidence" - Chris Hitchens")
+![hard part is proving it](<https://preview.redd.it/gu7z6zinxiz51.jpg?width=960&crop=smart&auto=webp&s=2603df8be7fc978f26e2d51b1a342c518b1504fe> "[[Reddit](https://www.reddit.com/r/clevercomebacks/comments/juzxh4/what_can_be_asserted_without_evidence_can_also_be/)] "What can be asserted without evidence can also be dismissed without evidence" - Chris Hitchens")
 
 ## 17
 
@@ -76,7 +76,7 @@ title: Calendar
 
 ## 23
 
-![the three musketeers#d#f](https://preview.redd.it/edbn1yivww061.jpg?width=960&crop=smart&auto=webp&s=78b3b4dd48df8dbc0f9efa8201f1dc6eb27c0729 "[[Reddit](https://www.reddit.com/r/anime/comments/jzaaeo/new_my_hero_movie_is_in_production/)] New My Hero Movie in production!")
+![the three musketeers](https://preview.redd.it/edbn1yivww061.jpg?width=960&crop=smart&auto=webp&s=78b3b4dd48df8dbc0f9efa8201f1dc6eb27c0729 "[[Reddit](https://www.reddit.com/r/anime/comments/jzaaeo/new_my_hero_movie_is_in_production/)] New My Hero Movie in production!")
 
 ## 24
 

@@ -17,4 +17,4 @@ link:
   Steam: https://store.steampowered.com/app/848450/Subnautica_Below_Zero/
 ---
 
-![Backdrop#f#fb](https://wallpapercave.com/wp/wp3753691.jpg "Source: Twitter")
+![Backdrop](https://wallpapercave.com/wp/wp3753691.jpg "Source: Twitter")

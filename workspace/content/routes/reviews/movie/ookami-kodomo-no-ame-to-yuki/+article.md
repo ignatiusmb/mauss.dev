@@ -17,6 +17,6 @@ link:
   MyAnimeList: https://myanimelist.net/anime/12355
 ---
 
-![Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/78EAqp0sdvtaRryS9QtBQxiQBes.jpg "Source: TMDB")
+![Backdrop](https://image.tmdb.org/t/p/w1280/78EAqp0sdvtaRryS9QtBQxiQBes.jpg "Source: TMDB")
 
 - <https://www.reddit.com/r/Animesuggest/comments/lpqvrg/please_consider_watching_the_anime_film_wolf/>

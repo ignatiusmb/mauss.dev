@@ -17,4 +17,4 @@ link:
   watch: https://www.youtube.com/watch?v=g_M9yDqMBoI
 ---
 
-![Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/2CWh6yHfu2HIiQ72zsJ98MYZQYl.jpg "Source: TMDB")
+![Backdrop](https://image.tmdb.org/t/p/w1280/2CWh6yHfu2HIiQ72zsJ98MYZQYl.jpg "Source: TMDB")

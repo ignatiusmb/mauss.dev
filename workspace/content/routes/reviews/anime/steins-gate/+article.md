@@ -19,4 +19,4 @@ link:
   TMDB: https://www.themoviedb.org/tv/42509
 ---
 
-![Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/36Ech63X2KU8JUXIBAo167kIC2k.jpg "Source: TMDB")
+![Backdrop](https://image.tmdb.org/t/p/w1280/36Ech63X2KU8JUXIBAo167kIC2k.jpg "Source: TMDB")

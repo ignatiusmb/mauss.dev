@@ -15,17 +15,20 @@ This was surprisingly cool and scary at the same time. It's crazy, how are you s
 
 ### more
 
-**[The Widening Responsibility for Front-End Developers](https://css-tricks.com/the-widening-responsibility-for-front-end-developers/)** — Another great read from Chris Coyier for an evolution of last month's article of the month. For all of you who's going to jump in the web development rabbit hole, especially as a front-end developer, please read this first and understand it thoroughly. Technology is always evolving, but Front-end growth is too rapid and they will leave you behind if you can't keep up. Do you have what it takes to follow it through? If so, then *Godspeed to you*
+**[The Widening Responsibility for Front-End Developers](https://css-tricks.com/the-widening-responsibility-for-front-end-developers/)** \
+Another great read from Chris Coyier for an evolution of last month's article of the month. For all of you who's going to jump in the web development rabbit hole, especially as a front-end developer, please read this first and understand it thoroughly. Technology is always evolving, but Front-end growth is too rapid and they will leave you behind if you can't keep up. Do you have what it takes to follow it through? If so, then *Godspeed to you*
 
-**[Everything you ever wanted to know about building a secure password reset feature](https://www.troyhunt.com/everything-you-ever-wanted-to-know/)** — An amazing article written from 2012 which is still relevant today. I can't say much about this since it already explains most of my worries from applications out there in the article. It has a [TL;DR version in a diagram form](https://www.troyhunt.com/content/images/2016/02/21782177Password-Reset5.png) too.
+**[Everything you ever wanted to know about building a secure password reset feature](https://www.troyhunt.com/everything-you-ever-wanted-to-know/)** \
+An amazing article written from 2012 which is still relevant today. I can't say much about this since it already explains most of my worries from applications out there in the article. It has a [TL;DR version in a diagram form](https://www.troyhunt.com/content/images/2016/02/21782177Password-Reset5.png) too.
 
-**[Software Developer vs. Engineer: What's the Difference?](https://www.developersforhire.com/software-developer-vs-software-engineer)** — I was recommended to take a look at this article earlier this month, it was quite a long read and researched based on the US standards heavily. In the end, words are just how people see and perceived them, that's how slangs come to be. But, it's still worth to take a look, especially if you're someone conscious about titles since they really break it down quite deep there.
+**[Software Developer vs. Engineer: What's the Difference?](https://www.developersforhire.com/software-developer-vs-software-engineer)** \
+I was recommended to take a look at this article earlier this month, it was quite a long read and researched based on the US standards heavily. In the end, words are just how people see and perceived them, that's how slangs come to be. But, it's still worth to take a look, especially if you're someone conscious about titles since they really break it down quite deep there.
 
 ***
 
 ## stories
 
-![Nichijou banner](https://image.tmdb.org/t/p/w1280/3PQEbMOgQyOESo3XwtlJvZw6uoA.jpg "[Nichijou](/reviews/anime/nichijou) [[TMDB](https://www.themoviedb.org/tv/44684)]")
+![Nichijou banner](https://image.tmdb.org/t/p/w1280/3PQEbMOgQyOESo3XwtlJvZw6uoA.jpg "[Nichijou](/reviews/anime/nichijou) via [TMDB](https://www.themoviedb.org/tv/44684)")
 
 This month has been quite stressful and I've just realized how comforting and encouraging a good laugh really is, and Nichijou has accompanied me and never fails to make me laugh or smile every time I watched it again. In fact, for some of their clips, it gets even funnier. You may need to think hard for some of the jokes, but it's really funny once you get it.
 
@@ -43,21 +46,21 @@ I haven't really had much time to finish most shows this month, and I don't usua
 
 ## tracks
 
-![!YouTube#hb](sAuEeM_6zpk "[「あの夢をなぞって・Tracing that Dream」](https://music.youtube.com/watch?v=9NPv4q57on8) by YOASOBI [[Spotify](spotify:track:4BE1OloRc9xwjyqA4wFFuN)]")
+@youtube{id=sAuEeM_6zpk caption="[「あの夢をなぞって・Tracing that Dream」](https://music.youtube.com/watch?v=9NPv4q57on8) by YOASOBI [[Spotify](spotify:track:4BE1OloRc9xwjyqA4wFFuN)]"}
 
 Such an amazing song and MV. I've been listening to this from the start of the month and I'm still addicted to it. If you listen and watch closely, you can really feel the fireworks at `3:02`.
 
 ### more
 
-![!YouTube#d](h1Ebp1_f6Q0 "[群青 (Ultramarine)](https://music.youtube.com/watch?v=dGZqpVCJP3k) by YOASOBI [[Spotify](spotify:track:0T4AitQuq8IJhWBWuZwkFA)]")
+@youtube{disclosure id=h1Ebp1_f6Q0 caption="[群青 (Ultramarine)](https://music.youtube.com/watch?v=dGZqpVCJP3k) by YOASOBI [[Spotify](spotify:track:0T4AitQuq8IJhWBWuZwkFA)]"}
 
 YOASOBI's new song 'Ultramarine' was a tribute to 'Blue Period' and [claims it was inspired by Tsubasa Yamaguchi's manga series](https://www.otaquest.com/yoasobi-blue-period-ultramarine/). Some say that [this song hits different after they read Blue Period](https://www.youtube.com/watch?v=h1Ebp1_f6Q0&lc=UgxkXBIYHHdbHr2Ycul4AaABAg), but I'm already enjoying this even without reading the relevant manga.
 
-![!YouTube#d](dJf4wCdLU18 "[Heart Forecast](https://music.youtube.com/watch?v=hia-Q570uZA) by Eve [[Spotify](spotify:track:4KcTqk3YtbJNVhvbhBDVw2)]")
+@youtube{disclosure id=dJf4wCdLU18 caption="[Heart Forecast](https://music.youtube.com/watch?v=hia-Q570uZA) by Eve [[Spotify](spotify:track:4KcTqk3YtbJNVhvbhBDVw2)]"}
 
 Another beautifully animated and amazing MV. Kokoro Yohou or Heart Forecast is a new single by Eve this year. It's lyrics and melodies are just on point, catchy, and speaks to you personally.
 
-![!YouTube#d](S5W6Nv596Qc "[Fatal](https://music.youtube.com/watch?v=C2BDdiVtfts) by Slippy & Micah Martin [[Spotify](spotify:track:49OUtJLneAG5nOAISHOxqC)]")
+@youtube{disclosure id=S5W6Nv596Qc caption="[Fatal](https://music.youtube.com/watch?v=C2BDdiVtfts) by Slippy & Micah Martin [[Spotify](spotify:track:49OUtJLneAG5nOAISHOxqC)]"}
 
 A collaboration from two of my most favorite artists from Monstercat, Slippy with the heavy drops and amazing vocals from Micah Martin, both brings in another Trap single.
 
@@ -65,22 +68,22 @@ A collaboration from two of my most favorite artists from Monstercat, Slippy wit
 
 ## clips
 
-![!YouTube#hb](3HckuvdqboU "The Most Toxic Way to Study. It Hurts Your Grades.")
+@youtube{id=3HckuvdqboU caption="The Most Toxic Way to Study. It Hurts Your Grades."}
 
 A video not just for students, but everyone out there who thought lightly about their health and well-being by thinking it's ok to not sleep once in a while. Not that I can speak for myself, but I'm at least proactively trying to schedule myself better so I can rest regularly.
 
 ### more
 
-![!YouTube#d](s6TXDFp1EcM "Which type of milk is best for you?")
+@youtube{disclosure id=s6TXDFp1EcM caption="Which type of milk is best for you?"}
 
 Find out which type of milk is the best for you. Spoiler alert, any of them is just as beneficial to you as any other. Find out more by watching the video.
 
-![!YouTube#d](XRr1kaXKBsU "Why Gravity is NOT a Force")
-![!YouTube#d](pTn6Ewhb27k "Why no one has measured the speed of light")
+@youtube{disclosure id=XRr1kaXKBsU caption="Why Gravity is NOT a Force"}
+@youtube{disclosure id=pTn6Ewhb27k caption="Why no one has measured the speed of light"}
 
 Actual mind-blowing take on relativity and the speed of light by Veritasium, and another bonus video about Gravity and why it's not actually a force.
 
-![!YouTube#d](0a1r0JaONS4 "The Showdown - Animator vs. Animation Shorts Ep 4")
+@youtube{disclosure id=0a1r0JaONS4 caption="The Showdown - Animator vs. Animation Shorts Ep 4"}
 
 An epic showdown and ending to the Animator vs. Animation saga, watch the final match between The Chosen One and The Dark Lord in this animated video by Alan Becker.
 

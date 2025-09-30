@@ -17,4 +17,4 @@ link:
   MyAnimeList: https://myanimelist.net/anime/35839
 ---
 
-![Yorimoi Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/bTIbUZVoKnlMt2IrZQv2ODPVs0N.jpg "Source: TMDB")
+![Yorimoi Backdrop](https://image.tmdb.org/t/p/w1280/bTIbUZVoKnlMt2IrZQv2ODPVs0N.jpg "Source: TMDB")

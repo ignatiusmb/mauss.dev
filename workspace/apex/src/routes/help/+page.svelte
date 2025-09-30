@@ -336,25 +336,25 @@
 	<p>this is the site's technical appendix. it's built with open-source tools and thoughtfully chosen parts; every piece is handpicked or handmade to create a cohesive whole. i'm not a professional designer, but i know what i like and how to make it <em>feel like home</em>. did i mention <a href="https://github.com/ignatiusmb/mauss.dev">the whole thing is open-source</a>?</p>
 	<ul>
 		<!-- prettier-ignore -->
-		<li><strong><a href="https://svelte.dev">sveltekit</a></strong> — the core framework that makes all of this feel effortless. it doesn't feel like overkill nor underpowered, it scales with my needs and keeps things minimal.</li>
+		<li><strong><a href="https://svelte.dev">sveltekit</a></strong><br>the core framework that makes all of this feel effortless. it doesn't feel like overkill nor underpowered, it scales with my needs and keeps things minimal.</li>
 		<!-- prettier-ignore -->
-		<li><strong><a href="/atelier#aubade">aubade</a></strong> — the content framework that powers the garden. it's handcrafted to fit my needs, with a focus on simplicity and flexibility.</li>
+		<li><strong><a href="/atelier#aubade">aubade</a></strong><br>the content framework that powers the garden. it's handcrafted to fit my needs, with a focus on simplicity and flexibility.</li>
 		<!-- prettier-ignore -->
-		<li><strong><a href="https://phosphoricons.com">phosphor</a></strong> — clean and beautiful open-source icons, it's got everything i'm looking for and has consistently clean geometry.</li>
+		<li><strong><a href="https://phosphoricons.com">phosphor</a></strong><br>clean and beautiful open-source icons, it's got everything i'm looking for and has consistently clean geometry.</li>
 		<li>
 			<!-- prettier-ignore -->
-			<span><strong><a href="https://fontsource.org">fontsource</a></strong> — self-hosted fonts for privacy and performance.</span>
+			<span><strong><a href="https://fontsource.org">fontsource</a></strong><br>self-hosted fonts for privacy and performance.</span>
 			<ul>
 				<!-- prettier-ignore -->
-				<li><strong>/<a href="https://fontsource.org/fonts/newsreader">newsreader</a></strong> — the main typeface, a thoughtfully crafted serif.</li>
+				<li><strong>/<a href="https://fontsource.org/fonts/newsreader">newsreader</a></strong><br>the main typeface, a thoughtfully crafted serif.</li>
 				<!-- prettier-ignore -->
-				<li><strong>/<a href="https://fontsource.org/fonts/recursive">recursive</a></strong> — the supporting sans-serif, a powerful five-axis variable font.</li>
+				<li><strong>/<a href="https://fontsource.org/fonts/recursive">recursive</a></strong><br>the supporting sans-serif, a powerful five-axis variable font.</li>
 			</ul>
 		</li>
 		<!-- prettier-ignore -->
-		<li><strong><a href="https://github.com">github</a></strong> — version control and source hosting for the entire site.</li>
+		<li><strong><a href="https://github.com">github</a></strong><br>version control and source hosting for the entire site.</li>
 		<!-- prettier-ignore -->
-		<li><strong><a href="https://vercel.com">vercel</a></strong> — deploys from github and hosts the live site.</li>
+		<li><strong><a href="https://vercel.com">vercel</a></strong><br>deploys from github and hosts the live site.</li>
 	</ul>
 </Piece>
 

@@ -6,7 +6,10 @@ description: What is it and why is it important for you to know this
 tags: [lpt, emergency]
 ---
 
-![!Video#f](https://v.redd.it/0rp9ccwgl8951/DASH_240 "[[Reddit](https://www.reddit.com/r/MovieDetails/comments/hm7gov/mission_impossible_fallout_2018_lane/)] Mission Impossible: Fallout (2018)")
+@video{
+  src=[https://v.redd.it/0rp9ccwgl8951/DASH_240]
+  caption="Mission Impossible: Fallout (2018) | [r/MovieDetails](https://www.reddit.com/r/MovieDetails/comments/hm7gov/mission_impossible_fallout_2018_lane/)"
+}
 
 That was a scene from Mission Impossible: Fallout in 2018, "Lane hyperventilates before being submerged, giving more oxygen to the blood/brain than a single deep breath, allowing him to stay conscious longer". As fake or true as that sounds, it's correct to a certain degree.
 
@@ -16,24 +19,18 @@ That technique Lane used is called "Shallow Water Blackout", and [you MUST NEVER
 
 ## What is shallow water blackout
 
-![what is shallow water blackout](https://campusrecmag.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-09-at-1.31.22-PM-620x400.png "Source: [Campus Rec](https://campusrecmag.com/shallow-water-blackout-can-prevent/)")
+![what is shallow water blackout](https://campusrecmag.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-09-at-1.31.22-PM-1140x570.jpg "via [Campus Rec](https://campusrecmag.com/shallow-water-blackout-can-prevent/)")
 
 It is more so an occurrence rather than a technique as stated in the previous section, an underwater "faint" due to a lack of oxygen to the brain; or, more formally:
 
-"Shallow Water Blackout results from hypoxia (low oxygen) to the brain. What triggers one to breathe in elevation of carbon dioxide (CO2), not low oxygen (O2). One basically 'blacks out' or faints in the water. For some, their lungs will take on water leading to drowning while others simply suffocate or die of other causes brought on by the breath-holding. Death can be a result of the prolonged breath-holding, even if not from so called "Shallow Water Blackout." Breath-holding may stimulate genetic triggers leading to various causes of death."
+> Shallow Water Blackout results from hypoxia (low oxygen) to the brain. What triggers one to breathe in elevation of carbon dioxide (CO2), not low oxygen (O2). One basically 'blacks out' or faints in the water. For some, their lungs will take on water leading to drowning while others simply suffocate or die of other causes brought on by the breath-holding. Death can be a result of the prolonged breath-holding, even if not from so called "Shallow Water Blackout." Breath-holding may stimulate genetic triggers leading to various causes of death.
 
 ## How it happens and how to avoid it
 
-![how shallow water blackout happens](http://campusrecmag.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-09-at-1.42.40-PM.png "Source: [Campus Rec](https://campusrecmag.com/shallow-water-blackout-can-prevent/)")
+![how shallow water blackout happens](http://campusrecmag.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-09-at-1.42.40-PM.png "via [Campus Rec](https://campusrecmag.com/shallow-water-blackout-can-prevent/)")
 
 It's referred to as a "silent killer", and occurs in only two minutes, opposed to regular drowning, which takes six to eight minutes. That's because your body has no control at all when you're hyperventilating, you won't even notice that you're lacking oxygen and you'll faint and drown even though you feel fine at that time.
 
-![how to avoid shallow water blackout#f](http://campusrecmag.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-09-at-1.42.46-PM.png "Source: [Campus Rec](https://campusrecmag.com/shallow-water-blackout-can-prevent/) from shallowblackoutprevention.org")
+![how to avoid shallow water blackout](http://campusrecmag.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-09-at-1.42.46-PM.png "via [Campus Rec](https://campusrecmag.com/shallow-water-blackout-can-prevent/)")
 
 Once again, NEVER do this for fun, whether it's a competition or just playing with your friends and family. You have no control and will most certainly faint.
-
-***
-Reference(s):
-
-- <https://www.reddit.com/r/MovieDetails/comments/hm7gov/mission_impossible_fallout_2018_lane/>
-- <https://campusrecmag.com/shallow-water-blackout-can-prevent/>

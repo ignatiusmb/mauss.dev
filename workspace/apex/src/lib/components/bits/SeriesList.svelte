@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { IntersectUnion, Overwrite } from 'mauss/typings';
 	import type { Items, SeriesTable } from '$content/builder';
+	import { page } from '$app/state';
 	type Base = Items['/curated' | '/posts' | '/reviews'][number];
 	type Article = Overwrite<IntersectUnion<Base>, { branches?: string[] }>;
 
@@ -11,6 +12,7 @@
 	}
 	const { slug, series, collection }: Props = $props();
 
+	const root = $derived(page.url.pathname.split('/')[1]);
 	const items = $derived(collection[series.title]);
 	const index = $derived(items.findIndex((item) => item.slug === slug));
 	const window = $derived.by(() => {
@@ -45,7 +47,7 @@
 			<span>▴ {window.head} more {window.head === 1 ? 'entry' : 'entries'}</span>
 		{/if}
 		{#each window.items as { slug: link, title, chapter }}
-			<a href={link} class:current={slug === link}>
+			<a href="/{root}/{link}" class:current={slug === link}>
 				{#if chapter}
 					<span>Chapter {chapter}</span>
 					<span class="separator">❃</span>

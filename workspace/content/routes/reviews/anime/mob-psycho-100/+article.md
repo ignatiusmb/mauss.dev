@@ -22,6 +22,6 @@ link:
 
 Started S3 on 2022-10-06T23:58:00+07:00
 
-![!YouTube#hb](psQY-6KjyIA "Mob Psycho 100 II OP Breakdown")
+@youtube{id=psQY-6KjyIA caption="Mob Psycho 100 II OP Breakdown"}
 
-![!YouTube#hb](k-DyIWF0h-8 "Mob Psycho 100 - Favorite Anime")
+@youtube{id=k-DyIWF0h-8 caption="Mob Psycho 100 - Favorite Anime"}

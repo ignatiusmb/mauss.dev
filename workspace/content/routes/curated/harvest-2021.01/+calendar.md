@@ -30,8 +30,6 @@ title: Calendar
 
 [[Reddit](https://www.reddit.com/r/Minecraft/comments/l0oqnn/i_spent_over_120_hours_synchronizing_a_c418_remix/)] Synchronized Minecraft blocks with C418 remix
 
-![winter 2021 anime achievements#d#f](https://preview.redd.it/mrbh50lskdc61.png?width=960&crop=smart&auto=webp&s=579d241ea8869f51b59e66aeccc63c89498a9ad8 "[[Reddit](https://www.reddit.com/r/anime/comments/l0wj81/noteworthy_achievements_of_winter_2021_anime/)] Noteworthy Achievements of Winter 2021 Anime")
-
 ## 25
 
 [[Reddit](https://www.reddit.com/r/anime/comments/l4i7ba/what_makes_a_person_an_adult_jujutsu_kaisen/)] What makes a person an adult?
@@ -44,4 +42,4 @@ title: Calendar
 
 [[Reddit](https://www.reddit.com/r/ProgrammerHumor/comments/l8a33h/i_am_a_programmer_now/)] (meme) aneurysm for lead devs
 
-![how time is valued#d#f](https://preview.redd.it/i6ng3wtiace61.jpg?width=640&crop=smart&auto=webp&s=36f66ba13d680631479ec0ecbc77126a6ecdac5f "[[Reddit](https://www.reddit.com/r/ChoosingBeggars/comments/l84tg3/for_the_choosing_beggars_in_your_lives/)] For the choosing beggars in your lives")
+![how time is valued](https://preview.redd.it/i6ng3wtiace61.jpg?width=640&crop=smart&auto=webp&s=36f66ba13d680631479ec0ecbc77126a6ecdac5f "[[Reddit](https://www.reddit.com/r/ChoosingBeggars/comments/l84tg3/for_the_choosing_beggars_in_your_lives/)] For the choosing beggars in your lives")

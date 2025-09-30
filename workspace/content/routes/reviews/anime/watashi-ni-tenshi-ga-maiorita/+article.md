@@ -33,7 +33,7 @@ soundtracks:
 
 the animation has that kind of warmth and attention to detail you don't notice if you don't look closely for it. food shots especially stand out — that french toast in episode one nearly had me craving it on the spot.
 
-![!video#f#hb](./french-toast-breakfast.mp4 "when your little sister makes your breakfast")
+@video{src=french-toast-breakfast.mp4 caption="when your little sister makes your breakfast"}
 
 the soundtracks are catchy, sung by the cast themselves. voice acting is solid across the board, and the sound design makes the world feel alive and close.
 

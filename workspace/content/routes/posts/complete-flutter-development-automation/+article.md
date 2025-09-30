@@ -6,7 +6,7 @@ description: Check out how to automate your Flutter development workflow
 tags: [ppl2020, flutter, devops, gitlab]
 ---
 
-![Flutter Logo](https://upload.wikimedia.org/wikipedia/commons/1/17/Google-flutter-logo.png)
+![Flutter Logo](https://storage.googleapis.com/cms-storage-bucket/lockup_flutter_horizontal_wht.67187dff9313e2831a8c.svg)
 
 I'm sure most of you developers have at least seen this logo before, or are even currently using it right now. It's the newest cool kid in the block of course! Well, it's not really that new anymore but it's still relatively young and in par with the current next-gens like NativeScript, React Native, and Progressive Web Apps. Compared to our old-school veterans like plain Java Android, Swift, and Kotlin perhaps? They are the successors to our modern world.
 
@@ -44,7 +44,7 @@ Either that, or the startup you're aiming for is using one technology (usually j
 
 I really can't think of any other reasons why we shouldn't start using Flutter to develop any **future** mobile apps. It is, in fact, the fastest and hottest rising stack in the current mobile development world.
 
-[![Flutter trend comparison](./flutter-trend.svg)](https://insights.stackoverflow.com/trends?tags=flutter%2Creact-native%2Cionic-framework%2Ckotlin%2Cswift%2Cxamarin.android)
+![Flutter trend comparison](./flutter-trend.svg)
 
 If you're still not convinced yet... excluding Swift, which is slowly going down on the trend, Flutter is the highest on the chart! It is on its way to beat native languages like Swift, Java, and Kotlin.
 
@@ -54,13 +54,7 @@ Please keep in mind that this will only apply if you are actually developing new
 
 This is what I'll be basing on for this post. Advokasimu, which is the app my team and I are currently working for this 2020 course of PPL. We have been researching for a lot of time before we started and we found our best engine for this project.
 
-Remember what I said before about having a pattern building up here. Well, here's another Google's child, which is Firebase.
-
-![Firebase logo](https://upload.wikimedia.org/wikipedia/commons/3/37/Firebase_Logo.svg)
-
-Firebase is the best engine for Flutter, it feels like it's specially built for it. Well, I guess it is since both are made by Google. But! There are other reasons of course.
-
-I'll start of by saying there's no reason for you to not use Firebase with Flutter, except if you're concerned with using Google products, in which case picking Flutter should also be in your concern too.
+That engine is Firebase, which feels like it was made for Flutter. I'll start of by saying there's no reason for you to not use Firebase with Flutter, except if you're concerned with using Google products, in which case picking Flutter should also be in your concern too.
 
 Sadly, Firebase can't be self-hosted, but then again, the benefits that comes with it is spectacular. It is scalable too in a sense that, when you need more performance, bandwidth, storage, or anything in that matter, you can just pay for it. Just think of it as a substitute to the electricity cost and other things to set up and run your own server in exchange for time, energy, and convenience.
 
@@ -68,19 +62,19 @@ Of course, we'll be going through what's best for this project since it is a tim
 
 1. Zero-config development
 
-    One of the biggest bottleneck of developing an application is focusing on infrastructure management, and when your constrain is time, this is something that you shouldn't think too much about.
+   One of the biggest bottleneck of developing an application is focusing on infrastructure management, and when your constrain is time, this is something that you shouldn't think too much about.
 
-    Firebase provides a lot of functionalities straight out-of-the-box. Just a couple of clicks to set up a project, download its pre-made config file, and you're set to go! Everything is handled by Firebase and you can start developing instantly.
+   Firebase provides a lot of functionalities straight out-of-the-box. Just a couple of clicks to set up a project, download its pre-made config file, and you're set to go! Everything is handled by Firebase and you can start developing instantly.
 
 2. Multiple available functionalities
 
-    There are dozens of functionalities to choose from. It has serverless architecture to create scalable apps, real-time and production-ready databases, simple authentication, cloud storage, unlimited app analytics, etc.
+   There are dozens of functionalities to choose from. It has serverless architecture to create scalable apps, real-time and production-ready databases, simple authentication, cloud storage, unlimited app analytics, etc.
 
-    All of which you need to set up manually in other DBMS, or just a pain to use. Which is not the case here with Firebase.
+   All of which you need to set up manually in other DBMS, or just a pain to use. Which is not the case here with Firebase.
 
 3. Excellent APIs
 
-    Straight-forward, plain and simple APIs to use that integrates perfectly with Flutter's data fetching and handling.
+   Straight-forward, plain and simple APIs to use that integrates perfectly with Flutter's data fetching and handling.
 
 ## Container-based CI/CD
 
@@ -294,11 +288,3 @@ deploy:production:
 - `12-14` - We'll distribute the app by releasing it through App Center, the generated file is located at the build/app/outputs/apk/release directory, and the app and group is according to your own App Center configuration.
 
 That's it! We have now completed our setup to fully automate flutter development using GitLab's devops specifically. All you have to is just start writing some code. Cheers!
-
----
-Reference(s):
-
-- <https://flutter.dev/>
-- <https://firebase.google.com/>
-- Weeks of research
-- Prior experience

@@ -6,9 +6,9 @@ description: Is TDD really worth the time to invest for a maintainable and clean
 tags: [ppl2020, tdd]
 ---
 
-[![TDD Global Life Cycle](https://upload.wikimedia.org/wikipedia/commons/0/0b/TDD_Global_Lifecycle.png)](https://en.wikipedia.org/wiki/File:TDD_Global_Lifecycle.png)
+![TDD Global Life Cycle](https://upload.wikimedia.org/wikipedia/commons/0/0b/TDD_Global_Lifecycle.png "by Xavier Pigeon via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:TDD_Global_Lifecycle.png)")
 
-> Double-Edged Sword: [something that has or can have both favorable and unfavorable consequences](https://www.merriam-webster.com/dictionary/double-edged%20sword)
+> Double-Edged Sword: [something that has or can have both favorable and unfavorable consequences](<https://www.merriam-webster.com/dictionary/double-edged sword>)
 
 Test-driven development (TDD), undoubtedly one of the most powerful way to keep any codebase **clean**, **sustainable**, and **maintainable**, especially in the long run. Unlike programming paradigms, this process or practice can be implemented in any project. Of course, with great benefits comes at a great cost, and it is certainly not a silver bullet nor a one-size fits all type. **Just because it can be used in any project, does it mean you should?**
 
@@ -111,8 +111,6 @@ Sprint reviews is a somewhat nerve-racking agenda for us every time it comes up,
 
 Lastly, sprint retrospectives. We're not too diligent on doing this exactly after each sprint reviews because our scrum master is busy attending another team's sprint review. So, we held our sprint planning on our own first and wait for 1 or 2 days for the sprint retrospective with our scrum master. My team and I really doesn't have any problem with each other, thankfully, since we always passed all the previous sprint reviews successfully. Even though it took us many sleepless nights and hours, it always seemed enough to finish. That's why we have a lot more good things to discuss rather than the bad ones.
 
-![The fact that you procrastinate and still get shit done is the reason why you procrastinate](https://lh3.googleusercontent.com/kRYCXVYZFiyHcwPIORG9NHowpS7BduARqA-bnqdyQ1Uz5JKupindGjzocKyvnDcxKDRCTr645VZCnY94ajPedrW9Y9C7un7zXuHX1PC4J66rZ-OzUsQutUOVuOGkLF91NzCUCG9jdQ_OQ0vzpFQUBhfvdLH4dRYKq1UI7hRkxRq4cjrML_CA9w06auLhiL1UYb4mKgZtmLp39dHfjXnwxFhdgGB83ZGwOWdCat4TNDXbzVi9rrN2nmRWjpkvWTIG5gLLUvUpAHZi-bF1_3c1-i_nP7N8rX7wGxrb-p-uMaJKbzXqj3ch_qgZj_L-PCMjP0pxzgN0oNqOebXiXLxjBDY8H1jDtOTNFfSqo9wHlp8CAZIB0IZ3_WoTZWo1SWTnhQlGQvMfUoB3H-x2YifulcIPCFj-jOKxiDNO6SGHjwfsRuKN88k4KcoVgRx7L8kYj_zCsgArW4HnGKL-YYA_Ih3JsDGUMtsLUIFix-mtW_L3e83GhY8bRbdkQbcnzQcgBKJC7ektyRyP-C15Dj3bNG2JtYmTY3JESGW8xKQTSExRP2fb8ilQxY7CmL4Ry0wiRPw07hhDq8xXvhiTxjL0DTckYeTQdWIOPOPz-0snzwj3U7sRVS5SSszcTnebsc9LubxmZ-iwbCYSJkN9imNhUwYHFE1LONofl4FlJzpHX3Givo9ktXK_ehnBP4OUzO8aNjP7iBHqjJIxH88TiE4wbxFd0X30WhSX3tzcQ5YA06AAi8BAwkz3VD0u=w600-h778-no)
-
 Our scrum master does a really great job of reminding us and keeping the team together. It is somewhat crucial to have a person that's not actively developing to oversee the development team, because there are times when we ran into something huge blocking our progress for an extensive amount of time and that is where scrum masters are needed the most.
 
 ## Time-driven development
@@ -155,10 +153,8 @@ Reference(s):
 - <https://itnext.io/test-driven-development-in-flutter-e7fe7921ea92>
 - <http://www.butunclebob.com/ArticleS.UncleBob.TheThreeRulesOfTdd>
 - <https://www.agilealliance.org/glossary/tdd/>
-- <https://towardsdatascience.com/object-oriented-programming-and-the-magic-of-test-driven-development-d377acae85fa>
 - <https://www.madetech.com/blog/9-benefits-of-test-driven-development>
 - <https://en.wikipedia.org/wiki/Agile_software_development>
 - <https://www.agilealliance.org/agile101/>
 - <https://agilemanifesto.org/iso/en/manifesto.html>
-- <https://www.tutorialspoint.com/scrum/scrum_events.htm>
 - <https://mauss.dev/posts/complete-flutter-development-automation/>

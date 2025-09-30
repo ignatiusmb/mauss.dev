@@ -50,7 +50,7 @@ when you see curly braces `{}` in the markup of a Svelte component, you're in Sv
 
 ### runes
 
-Svelte's reactivity is based on the concept of [runes](https://svelte.dev/docs/svelte/what-are-runes). a rune is a *keyword* — like the dynamic `import()` — which is prefixed by a dollar sign `$` and look like function calls. they are part of the language and acts as compiler directives to tell Svelte how to handle the code. as such, you can use them in `.svelte` and even `.svelte.js` / `.svelte.ts` files.
+Svelte's reactivity is based on the concept of [runes](https://svelte.dev/docs/svelte/what-are-runes). a rune is a *keyword* — like the [dynamic `import()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import) — which is prefixed by a dollar sign `$` and look like function calls. they are part of the language and acts as compiler directives to tell Svelte how to handle the code. as such, you can use them in `.svelte` and even `.svelte.js` / `.svelte.ts` files.
 
 to create a reactive variable, declare it as `let count = $state(0)`. to derive a value from a reactive variable, declare it as `let doubled = $derived(count * 2)`. any changes to `count` will automatically be reflected in the markup, and `doubled` will always be updated accordingly.
 
@@ -76,6 +76,6 @@ when possible, always prefer Svelte's string interpolation over JavaScript's tem
 
 that was my first reaction when i first came across React. in the chaotic mess of the web ecosystem, Svelte stands out and truly feels like a breath of fresh air. i'll leave you with a talk and the quote that changed my whole perspective at the time, which is also [the turning point for Svelte](https://svelte.dev/blog/svelte-3-rethinking-reactivity) as a language.
 
-![!YouTube](AdNJ3fydeao "Rich Harris - Rethinking reactivity")
+@youtube{id=AdNJ3fydeao caption="Rich Harris - Rethinking reactivity"}
 
 > frameworks are not tools for organising your code, they are tools for organising your mind
