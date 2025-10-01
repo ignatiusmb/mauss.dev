@@ -1,5 +1,5 @@
 ---
-date: 2025-09-26
+date: 2025-09-30
 title: Anime Resonance
 series:
   title: Highlights
