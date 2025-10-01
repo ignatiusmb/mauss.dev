@@ -28,11 +28,10 @@ Mai, Mio's sister, and others exist solely to throw everyone off balance. they d
 
 a few favorites:
 
-![!YouTube#d](byDglOhxmdA "shrine incident")
-![!YouTube#d](z30Y572EmCk "mio loses it")
-![!YouTube#d](0FU0uqjIfD4 "trouble with dogs")
-![!YouTube#d](tQzEQLuZ4Tk "jam testing")
-
+@youtube{disclosure id=byDglOhxmdA caption="shrine incident"}
+@youtube{disclosure id=z30Y572EmCk caption="mio loses it"}
+@youtube{disclosure id=0FU0uqjIfD4 caption="trouble with dogs"}
+@youtube{disclosure id=tQzEQLuZ4Tk caption="jam testing"}
 > your jam was so disgusting, my life flashed before my eyes!
 
 ## the successor

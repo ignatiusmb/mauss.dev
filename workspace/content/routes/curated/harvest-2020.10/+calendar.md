@@ -6,21 +6,21 @@ title: Calendar
 
 [[Reddit](https://www.reddit.com/r/YouShouldKnow/comments/j35bv0/ysk_that_if_you_are_out_of_shape_and_embarrassed/)] YSK: The Spotlight Effect
 
-![Yuru Camp Season 2 new visual#d#f](https://external-preview.redd.it/EGe4OYjexWZW8d80SN_E_PLCVnkGQpJ1pfhiCqPWT-I.jpg?auto=webp&s=e09efd585b3379f8c02bbaf9c8fb1864595d3fc8 "[[Reddit](https://www.reddit.com/r/anime/comments/j30kcn/yuru_camp_season_2_new_visual/) | [Preview](https://external-preview.redd.it/EGe4OYjexWZW8d80SN_E_PLCVnkGQpJ1pfhiCqPWT-I.jpg?auto=webp&s=e09efd585b3379f8c02bbaf9c8fb1864595d3fc8)] Yuru Camp Season 2 new visual")
+![Yuru Camp Season 2 new visual](https://external-preview.redd.it/EGe4OYjexWZW8d80SN_E_PLCVnkGQpJ1pfhiCqPWT-I.jpg?auto=webp&s=e09efd585b3379f8c02bbaf9c8fb1864595d3fc8 "[[Reddit](https://www.reddit.com/r/anime/comments/j30kcn/yuru_camp_season_2_new_visual/) | [Preview](https://external-preview.redd.it/EGe4OYjexWZW8d80SN_E_PLCVnkGQpJ1pfhiCqPWT-I.jpg?auto=webp&s=e09efd585b3379f8c02bbaf9c8fb1864595d3fc8)] Yuru Camp Season 2 new visual")
 
 ## 02
 
 [[Reddit](https://www.reddit.com/r/LifeProTips/comments/j47i4o/lpt_if_youre_ever_not_sure_what_to_do_clean_when/)] Life pro tip: If you're ever not sure what to do, clean. When you figure it what you should be doing, you'll have a clear work space
 
-![top 10 anime of summer 2020 according to fan-voted results#d#f](https://i.redd.it/di4qjux0joq51.jpg "[[Reddit](https://www.reddit.com/r/anime/comments/j3tzbg/top_10_anime_of_the_season_summer_2020_anime/) | [Preview](https://i.redd.it/di4qjux0joq51.jpg)] Top 10 Anime of the Season Summer 2020 (Anime Corner)")
+![top 10 anime of summer 2020 according to fan-voted results](https://i.redd.it/di4qjux0joq51.jpg "[[Reddit](https://www.reddit.com/r/anime/comments/j3tzbg/top_10_anime_of_the_season_summer_2020_anime/) | [Preview](https://i.redd.it/di4qjux0joq51.jpg)] Top 10 Anime of the Season Summer 2020 (Anime Corner)")
 
 ## 03
 
-![My Hero Academia Season 5 new visual#d#f](https://pbs.twimg.com/media/EjZI7Y6U4AAMfNo.jpg?name=large "[[Reddit](https://www.reddit.com/r/anime/comments/j4cn68/my_hero_academia_season_5_new_visual/) | [Preview](https://pbs.twimg.com/media/EjZI7Y6U4AAMfNo.jpg?name=large)] My Hero Academia Season 5 new visual")
+![My Hero Academia Season 5 new visual](https://pbs.twimg.com/media/EjZI7Y6U4AAMfNo.jpg?name=large "[[Reddit](https://www.reddit.com/r/anime/comments/j4cn68/my_hero_academia_season_5_new_visual/) | [Preview](https://pbs.twimg.com/media/EjZI7Y6U4AAMfNo.jpg?name=large)] My Hero Academia Season 5 new visual")
 
-![The Romantic Comedy Where The Childhood Friend Won't Lose#d#f](https://i.redd.it/rg044nadwuq51.jpg "[[Reddit](https://www.reddit.com/r/anime/comments/j4digr/the_romantic_comedy_where_the_childhood_friend/) | [Preview](https://i.redd.it/rg044nadwuq51.jpg)] \"The Romantic Comedy Where The Childhood Friend Won't Lose!\" Anime announced")
+![The Romantic Comedy Where The Childhood Friend Won't Lose](https://i.redd.it/rg044nadwuq51.jpg "[[Reddit](https://www.reddit.com/r/anime/comments/j4digr/the_romantic_comedy_where_the_childhood_friend/) | [Preview](https://i.redd.it/rg044nadwuq51.jpg)] \"The Romantic Comedy Where The Childhood Friend Won't Lose!\" Anime announced")
 
-![!Video#d#f](https://v.redd.it/n6ypbq4tuuq51/DASH_720.mp4 "[[Reddit](https://www.reddit.com/r/Minecraft/comments/j4dfp7/made_a_timeline_of_2020_hope_you_like_it_part_5/)] A timeline of 2020 made in Minecraft")
+@video{src=[https://v.redd.it/n6ypbq4tuuq51/DASH_720.mp4] caption="[[Reddit](https://www.reddit.com/r/Minecraft/comments/j4dfp7/made_a_timeline_of_2020_hope_you_like_it_part_5/)] A timeline of 2020 made in Minecraft"}
 
 ## 06
 
@@ -34,7 +34,7 @@ title: Calendar
 
 [[GitHub](https://github.com/IAmStoxe/wirehole) | [Reddit](https://www.reddit.com/r/pihole/comments/j8ovog/wirehole_vpn_ad_blocking_dns_caching_privacy/)] WireHole – VPN, ad blocking, DNS caching, privacy
 
-![!Video#d#f](https://i.imgur.com/P95qkgo.mp4 "[[Reddit](https://www.reddit.com/r/oddlysatisfying/comments/j8uu1f/how_to_make_a_fray_knot/) | [Imgur](https://i.imgur.com/P95qkgo.gifv)] How to make a fray knot")
+@video{src=[https://i.imgur.com/P95qkgo.mp4] caption="[[Reddit](https://www.reddit.com/r/oddlysatisfying/comments/j8uu1f/how_to_make_a_fray_knot/) | [Imgur](https://i.imgur.com/P95qkgo.gifv)] How to make a fray knot"}
 
 ## 13
 
@@ -54,11 +54,11 @@ title: Calendar
 
 ## 15
 
-![cardinal bird#d#f](https://i.redd.it/hjoborypr6t51.jpg "[[Reddit](https://www.reddit.com/r/wholesomememes/comments/jbgubj/never_lower_your_standards_go_somewhere_you_are/)] Never lower your standards. Go somewhere you are appreciated")
+![cardinal bird](https://i.redd.it/hjoborypr6t51.jpg "[[Reddit](https://www.reddit.com/r/wholesomememes/comments/jbgubj/never_lower_your_standards_go_somewhere_you_are/)] Never lower your standards. Go somewhere you are appreciated")
 
 ## 16
 
-![demon slayer gang going to the theater#d#f](https://i.imgur.com/rtWeX7h.jpg "[[Reddit](https://www.reddit.com/r/DemonSlayerAnime/comments/jbqd9r/the_gang_all_going_to_see_the_movie_at_the_theater/) | [Preview](https://external-preview.redd.it/pjDheF-3qJXOcGkJE9E3lnrSTwaLsuCvZ080ergtegQ.jpg?width=640&crop=smart&auto=webp&s=252672b7d8610a11818e42018a261b7ba7d6d8b2)] Demon Slayer's gang going to the theater")
+![demon slayer gang going to the theater](https://i.imgur.com/rtWeX7h.jpg "[[Reddit](https://www.reddit.com/r/DemonSlayerAnime/comments/jbqd9r/the_gang_all_going_to_see_the_movie_at_the_theater/) | [Preview](https://external-preview.redd.it/pjDheF-3qJXOcGkJE9E3lnrSTwaLsuCvZ080ergtegQ.jpg?width=640&crop=smart&auto=webp&s=252672b7d8610a11818e42018a261b7ba7d6d8b2)] Demon Slayer's gang going to the theater")
 
 ## 17
 
@@ -88,14 +88,14 @@ title: Calendar
 
 ## 25
 
-![it may not seem like a lot#d#f](https://preview.redd.it/myou8gjw04v51.png?width=960&crop=smart&auto=webp&s=b38fa7a603db4820c7681663b381b49c6c5a7ee7 "[[Reddit](https://www.reddit.com/r/wholesomememes/comments/jhh0pp/your_best_is_good_enough/)] Your best will always be good enough")
+![it may not seem like a lot](https://preview.redd.it/myou8gjw04v51.png?width=960&crop=smart&auto=webp&s=b38fa7a603db4820c7681663b381b49c6c5a7ee7 "[[Reddit](https://www.reddit.com/r/wholesomememes/comments/jhh0pp/your_best_is_good_enough/)] Your best will always be good enough")
 
-![Kaguya-sama season 3 visual banner#d#f](https://preview.redd.it/7np2w8ngh7v51.png?width=960&crop=smart&auto=webp&s=b8b7de9e8ee5125b05a14481217323bf16f52aba "[[Reddit](https://www.reddit.com/r/anime/comments/jhqdgv/kaguyasama_love_is_war_season_3_announced/)] Kaguya-sama: Love Is War - Season 3 announced")
+![Kaguya-sama season 3 visual banner](https://preview.redd.it/7np2w8ngh7v51.png?width=960&crop=smart&auto=webp&s=b8b7de9e8ee5125b05a14481217323bf16f52aba "[[Reddit](https://www.reddit.com/r/anime/comments/jhqdgv/kaguyasama_love_is_war_season_3_announced/)] Kaguya-sama: Love Is War - Season 3 announced")
 
 ## 28
 
-![cheetah touched by a photographer#d#f](https://preview.redd.it/om3c29bv7sv51.jpg?width=640&crop=smart&auto=webp&s=52daba5eaf5abfb5800a4046e2be6799a55135fa "[[Reddit](https://www.reddit.com/r/nextfuckinglevel/comments/jjix8u/when_the_photographer_touched_the_cheetah/)] When someone you trust finally touches you and you realize you've been starved for physical affection all your life")
+![cheetah touched by a photographer](https://preview.redd.it/om3c29bv7sv51.jpg?width=640&crop=smart&auto=webp&s=52daba5eaf5abfb5800a4046e2be6799a55135fa "[[Reddit](https://www.reddit.com/r/nextfuckinglevel/comments/jjix8u/when_the_photographer_touched_the_cheetah/)] When someone you trust finally touches you and you realize you've been starved for physical affection all your life")
 
 ## 29
 
-![Yuru Camp Season 2 another new visuals#d#f](https://external-preview.redd.it/yuyi0wlG_1bLEW1ynUIl6_ztxWEh_YxSGP8ZOQfnoQA.jpg?width=960&crop=smart&auto=webp&s=0bebf3b0350f9ae09565c05fbdd7569814f40fbd "[[Reddit](https://www.reddit.com/r/anime/comments/jk6o4i/yuru_camp_season_2_new_visuals/) | [Preview](https://external-preview.redd.it/yuyi0wlG_1bLEW1ynUIl6_ztxWEh_YxSGP8ZOQfnoQA.jpg?width=960&crop=smart&auto=webp&s=0bebf3b0350f9ae09565c05fbdd7569814f40fbd)] Yuru Camp Season 2 new visuals")
+![Yuru Camp Season 2 another new visuals](https://external-preview.redd.it/yuyi0wlG_1bLEW1ynUIl6_ztxWEh_YxSGP8ZOQfnoQA.jpg?width=960&crop=smart&auto=webp&s=0bebf3b0350f9ae09565c05fbdd7569814f40fbd "[[Reddit](https://www.reddit.com/r/anime/comments/jk6o4i/yuru_camp_season_2_new_visuals/) | [Preview](https://external-preview.redd.it/yuyi0wlG_1bLEW1ynUIl6_ztxWEh_YxSGP8ZOQfnoQA.jpg?width=960&crop=smart&auto=webp&s=0bebf3b0350f9ae09565c05fbdd7569814f40fbd)] Yuru Camp Season 2 new visuals")

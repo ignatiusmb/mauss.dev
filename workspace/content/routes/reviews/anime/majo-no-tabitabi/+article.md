@@ -17,4 +17,4 @@ link:
   MyAnimeList: https://myanimelist.net/anime/40571
 ---
 
-![The Journey of Elaina Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/kZE2LlQ0HKubeLEOI9ukhqRXGx2.jpg "Source: TMDB")
+![The Journey of Elaina Backdrop](https://image.tmdb.org/t/p/w1280/kZE2LlQ0HKubeLEOI9ukhqRXGx2.jpg "Source: TMDB")

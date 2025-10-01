@@ -8,9 +8,7 @@ thumbnail: https://cdn.pixabay.com/photo/2018/05/16/18/16/cloud-3406627_960_720.
 ---
 
 <section data-info="warning">
-
 Sapper has been deprecated and replaced with SvelteKit, and this article is no longer relevant for SvelteKit applications. to deploy SvelteKit applications in Node.js hosting, see the [`adapter-node`](https://svelte.dev/docs/kit/adapter-node) documentation.
-
 </section>
 
 I don't think I've seen a single post on how to properly set up a Node.js application in a shared or dedicated hosting with cPanel. Especially with what small community Svelte has, I thought I may as well contribute by sharing my experience on setting up a production-ready application bundle.

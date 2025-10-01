@@ -11,7 +11,7 @@ Hello and welcome back to the Harvest! As always, feel free to skip ahead to you
 
 Sorry, I've bamboozled you who've read the article highlights in previous Harvests, thinking it was an article only to find out it was a blog post. I present to you, for real this time, the article of this month.
 
-![traits table#f](https://journals.plos.org/plosone/article/figure/image?size=large&id=info:doi/10.1371/journal.pone.0248895.t003 "[Personality trait predictors of adjustment during the COVID pandemic among college students](https://doi.org/10.1371/journal.pone.0248895)")
+![traits table](https://journals.plos.org/plosone/article/figure/image?size=large&id=info:doi/10.1371/journal.pone.0248895.t003 "[Personality trait predictors of adjustment during the COVID pandemic among college students](https://doi.org/10.1371/journal.pone.0248895)")
 
 A recent study of students at a certain university in the US found that more extroverted people suffered mood declines while more introverted people actually saw mood improvements during this pandemic. But, it also found that extroversion had the opposite effect on stress level where it was reduced in extroverts but increased for introverts.
 
@@ -21,31 +21,36 @@ Mainly from the perspective of an introvert, this isn't really "surprising" to s
 
 ### more
 
-**[Why Does JPEG Look So Weird?](https://seedubjay.com/blog/jpeg-visualisation/)** — One of the best explanation and visualization of JPEG out there. What really is JPEG and why can it be both amazing and awful sometimes. Read through this to really understand JPEG. In conclusion, JPEG is unique because it looks different to every other person, the end result can't really be scored objectively as we all see pictures differently, so it will be subjective.
+**[Why Does JPEG Look So Weird?](https://seedubjay.com/blog/jpeg-visualisation/)** \
+One of the best explanation and visualization of JPEG out there. What really is JPEG and why can it be both amazing and awful sometimes. Read through this to really understand JPEG. In conclusion, JPEG is unique because it looks different to every other person, the end result can't really be scored objectively as we all see pictures differently, so it will be subjective.
 
-**[Build a Dialog System Without Selling Your Soul](https://www.reddit.com/r/godot/comments/m3ghec/how_to_build_a_dialog_system_without_selling_your/)** — This isn't the typical article I used to feature here, but I've had my share with game development a couple of months ago and this was well written. My experience with game dev wasn't the best, but reading through this was fun and definitely informative. Especially when you're thinking of going to the game dev rabbit hole, this will definitely help out a lot, specifically for Godot made games.
+**[Build a Dialog System Without Selling Your Soul](https://www.reddit.com/r/godot/comments/m3ghec/how_to_build_a_dialog_system_without_selling_your/)** \
+This isn't the typical article I used to feature here, but I've had my share with game development a couple of months ago and this was well written. My experience with game dev wasn't the best, but reading through this was fun and definitely informative. Especially when you're thinking of going to the game dev rabbit hole, this will definitely help out a lot, specifically for Godot made games.
 
 ***
 
 ## stories
 
-![Jujutsu Kaisen Backdrop#f](https://image.tmdb.org/t/p/w1280/eqM26U3HHfvwEcFoMObQc5NYGoc.jpg "[Jujutsu Kaisen](/reviews/anime/jujutsu-kaisen) [[TMDB](https://www.themoviedb.org/tv/95479)]")
+![Jujutsu Kaisen Backdrop](https://image.tmdb.org/t/p/w1280/eqM26U3HHfvwEcFoMObQc5NYGoc.jpg "[Jujutsu Kaisen](/reviews/anime/jujutsu-kaisen) via [TMDB](https://www.themoviedb.org/tv/95479)")
 
 It was tough between Jujutsu Kaisen and Re:Zero Season 2, but JJK really won me with their continuous action scenes every 3 to 4 episodes. It's indeed action-heavy and it was a real pleasure to watch every episode of it.
 
 ### more
 
-**[Re:Zero Season 2](/reviews/anime/re-zero-starting-life-in-another-world)** — Don't sleep on this one, it would've definitely be my content highlight if only it didn't end in the same month as Jujutsu Kaisen.
+**[Re:Zero Season 2](/reviews/anime/re-zero-starting-life-in-another-world)** \
+Don't sleep on this one, it would've definitely be my content highlight if only it didn't end in the same month as Jujutsu Kaisen.
 
-**[Mushoku Tensei](/reviews/anime/mushoku-tensei)** — A refreshing take on the isekai genre, this was a great watch and I can't wait for the next season.
+**[Mushoku Tensei](/reviews/anime/mushoku-tensei)** \
+A refreshing take on the isekai genre, this was a great watch and I can't wait for the next season.
 
-**[Cells at Work! CODE BLACK!](/reviews/anime/hataraku-saibou-black)** — A darker take on the Cells at Work! universe, this was a great watch and a realistic take on the not-so-healthy body.
+**[Cells at Work! CODE BLACK!](/reviews/anime/hataraku-saibou-black)** \
+A darker take on the Cells at Work! universe, this was a great watch and a realistic take on the not-so-healthy body.
 
 ***
 
 ## tracks
 
-![!YouTube#hb](BYP7zHceSiU?start=26 "[Over the Edge](https://music.youtube.com/watch?v=3mL4B4emkuM) by Tristam")
+@youtube{id="BYP7zHceSiU?start=19" caption="[Over the Edge](https://music.youtube.com/watch?v=3mL4B4emkuM) by Tristam"}
 
 At first, it felt like just another beautiful song I've heard from Tristam. But, as the lyrics sank into me, I realized there's more behind this particular song. As someone who've followed and listened since around 2015 (can't believe it's been 6 yrs since then), this year releases hits different.
 
@@ -56,15 +61,15 @@ I'm beyond grateful that I can't relate to this well enough as I've not lost som
 
 ### more
 
-![!YouTube#d](ZNFKZI7L9xE "[「三原色」ahamo Special Movie](https://music.youtube.com/watch?v=07SWfNXgKGo) by YOASOBI")
+@youtube{disclosure id=ZNFKZI7L9xE caption="[「三原色」ahamo Special Movie](https://music.youtube.com/watch?v=07SWfNXgKGo) by YOASOBI"}
 
 This was surprising as I thought it was only some kind of teaser for an upcoming project with only two and a half minute runtime. But, fortunately it wasn't, and it was (as expected) good just like their previous releases. I'm hoping that they would cover a lot more anime OP/ED in the future, just like they did with season 2 of Beastars (if you didn't know about it).
 
-![!YouTube#d](iFkPgNLa5LQ "[Won't Give Up](https://music.youtube.com/watch?v=643igntgKY8) by Grant")
+@youtube{disclosure id=iFkPgNLa5LQ caption="[Won't Give Up](https://music.youtube.com/watch?v=643igntgKY8) by Grant"}
 
 There's not much to say about this. It's Grant. You don't need to listen to know that's it's good. That was a hyperbolic statement in case you're still wondering. But, if you've haven't heard of Grant, now's a good time. I'm sure most of you would agree that his songs are just beautiful.
 
-![!YouTube#d](abscL9XloGk "[Million Days (Acoustic) feat. Hoang & Claire Ridgely](https://music.youtube.com/watch?v=w2sXB57cOuA) by Sabai")
+@youtube{disclosure id=abscL9XloGk caption="[Million Days (Acoustic) feat. Hoang & Claire Ridgely](https://music.youtube.com/watch?v=w2sXB57cOuA) by Sabai"}
 
 I'm a sucker for acoustic covers. In addition to being one of my favorite songs, this is a perfect combination for me. Released right before March ends, it was such a pleasant surprise.
 
@@ -72,7 +77,7 @@ I'm a sucker for acoustic covers. In addition to being one of my favorite songs,
 
 ## clips
 
-![!YouTube#hb](ZI0w_pwZY3E "A Message From the Skype CEO")
+@youtube{id=ZI0w_pwZY3E caption="A Message From the Skype CEO"}
 
 A bit of a different highlight this time! A skit from CollegeHumor (CH), this was by far the funniest thing I've seen this month and I dare you to find me another one that's even funnier than this. I think I've watched this more than 5 times already and I still laughed as hard as I did when I first watched it.
 
@@ -84,15 +89,15 @@ I mean, seriously though, we had it in our mouth, everyone knew what Skype was (
 
 There are so many good and awesome videos this month, I can't put them all here! These are my best picks for this month, but I highly suggest you to look at the playlist (link above) and watch more than just these ones.
 
-![!YouTube#d](MmpXf0nFCII "How to beat Skyrim without Walking")
+@youtube{disclosure id=MmpXf0nFCII caption="How to beat Skyrim without Walking"}
 
 This was brought to me by YouTube recommendation. It was also the first video that I watch (in some time) with a normal playback speed, and it made me love Skyrim all over again to the point that I wanted to play it again. The edits and sound effects are top of the class for YT video, I can't even express how happy I was to stumble upon this channel. I ended up watching their older videos, but this was by far the best (and most recent) one, I can't even imagine the effort put into making this.
 
-![!YouTube#d](j5v8D-alAKE "This is why we can't have nice things")
+@youtube{disclosure id=j5v8D-alAKE caption="This is why we can't have nice things"}
 
 Exactly the title, "This is why we can't have nice things"!! Is what I've been feeling lately for the past couple of months. This is exactly the answer I needed to hear. I won't say more than this, go ahead watch this, and decide for yourself what you think of it.
 
-![!YouTube#d](i2qckcs_tmI "The Problem With Life Expectancy")
+@youtube{disclosure id=i2qckcs_tmI caption="The Problem With Life Expectancy"}
 
 The answer to my old-age question! I used to wonder this as a kid. What and why does every living things have this "number" where they only "live until then". Can't you really go past that, what happens if you do, and how does one determine this "number". The number being life expectancy, and of course, I forgot all about it until I saw this video.
 
@@ -106,7 +111,7 @@ This was too special to just be put in the video section, but it's finally here.
 
 If you haven't got it, please be patient and don't let your 1 year of waiting inside your home go to waste by going out prematurely. If you got it already, please be considerate and understand that not all of us has got it, don't go out either and risk bringing home the virus. You might not get sick, but you might still caught it and spread it to those around you.
 
-![!YouTube#d](K3odScka55A "Why you can't compare Covid-19 vaccines")
+@youtube{disclosure id=K3odScka55A caption="Why you can't compare Covid-19 vaccines"}
 
 This was it. This is what convinced me that, although not all vaccines are created equally, there's no "bad" ones or one that is worse than the other. Their so called "efficacy rate" with numbers near 99% thrown in there for their promotion isn't really a big deal. Yes, they do matter, at least to make sure that it's a legitimate vaccine, but it doesn't mean that one which has 68% of that number is inferior to the other which has a higher number in any way.
 

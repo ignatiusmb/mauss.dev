@@ -6,7 +6,7 @@ description: Do you really need a CSS framework? Here's why I think I don't
 tags: [coding, css, framework]
 ---
 
-I'm not here to argue or shame anyone, this is just my thoughts and what I see from my experiences. If there's anything you think is missing or feel should be here, please understand that it was specifically done to spite you personally<sub>/s</sub>
+I'm not here to argue or shame anyone, this is just my thoughts and what I see from my experiences. If there's anything you think is missing or feel should be here, please understand that it was specifically done to spite you personally `/s`
 
 There's a lot of definitions on what is actually *wasteful* means, here's what Google says on their translator
 

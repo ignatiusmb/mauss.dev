@@ -18,4 +18,4 @@ link:
   MyAnimeList: https://myanimelist.net/anime/41457
 ---
 
-![Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/8N2sxXuztrFbOeHh01M9HuUWeNw.jpg "Source: TMDB")
+![Backdrop](https://image.tmdb.org/t/p/w1280/8N2sxXuztrFbOeHh01M9HuUWeNw.jpg "Source: TMDB")

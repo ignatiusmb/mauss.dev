@@ -1,8 +1,9 @@
+import type { Options } from 'aubade/artisan';
+import { typography } from 'aubade/artisan';
 import { orchestrate } from 'aubade/conductor';
-import { marker } from 'aubade/legacy';
+import { codeblock } from 'aubade/palette';
 import { chain } from 'aubade/transform';
-import { attempt, date, define, drill } from 'mauss';
-import { exists } from 'mauss/guards';
+import { attempt, date, define } from 'mauss';
 import sharp from 'sharp';
 
 const ROOT = `${process.cwd()}/static/uploads`;
@@ -11,12 +12,12 @@ export const ROUTES = {
 		const schema = attempt.wrap(
 			define(({ optional, string, boolean }) => ({
 				date: string(),
-				title: string(),
+				title: string(typography),
 				series: {
-					title: string(),
+					title: string(typography),
 					chapter: optional(string()),
 				},
-				description: optional(string()),
+				description: optional(string(typography)),
 
 				meta: optional({
 					index: optional(boolean()),
@@ -30,7 +31,7 @@ export const ROUTES = {
 				if (file !== '+article.md') return;
 
 				return async ({ assemble, buffer, siblings, task }) => {
-					const { manifest, meta } = assemble(buffer.toString('utf-8'));
+					const { doc, manifest, meta } = assemble(buffer.toString('utf-8'));
 					if (manifest.draft) return;
 					const { data: metadata, error } = schema(manifest);
 					if (!metadata) {
@@ -38,50 +39,71 @@ export const ROUTES = {
 						return;
 					}
 
-					const umbrella = `curated/${slug}`;
-					const content = meta.body.replace(/\.\/([^\s)]+)/g, (m, relative) => {
-						const asset = siblings.find(({ filename }) => relative === filename);
-						if (!asset || !/\.(jpe?g|png|svg|mp4)$/.test(asset.filename)) return m;
+					function materialize(source: string): string {
+						const asset = siblings.find(({ filename }) => source.endsWith(filename));
+						if (!asset || !/\.(jpe?g|png|svg|mp4)$/.test(asset.filename)) return source;
 
-						const output = /\.(mp4)$/.test(asset.filename)
+						const umbrella = `curated/${slug}`;
+						const output = /\.(svg|mp4)$/.test(asset.filename)
 							? asset.filename
 							: asset.filename.replace(/\.[^/.]+$/, '.webp');
-
 						task(async ({ fs }) => {
 							await fs.mkdir(`${ROOT}/${umbrella}`, { recursive: true });
 							const payload = await asset.buffer;
 							const filename = `${ROOT}/${umbrella}/${output}`;
-							if (output.endsWith('.mp4')) return fs.writeFile(filename, payload);
+							if (['.svg', '.mp4'].some((ext) => output.endsWith(ext))) {
+								return fs.writeFile(filename, payload);
+							}
 							return void sharp(payload).webp().toFile(filename);
 						});
-
 						return `/uploads/${umbrella}/${output}`;
-					});
+					}
+
+					const visitors: Options['transform'] = {
+						'aubade:directive'(token) {
+							if (token.meta.type !== 'video') return token;
+							const { src } = token.meta.data;
+							token.meta.data.src = materialize(src);
+							return token;
+						},
+						'block:image'(token) {
+							const { src } = token.attr;
+							token.attr.src = materialize(src);
+							return token;
+						},
+						'inline:image'(token) {
+							const { src } = token.attr;
+							token.attr.src = materialize(src);
+							return token;
+						},
+					};
 
 					const branches = siblings.map(async (branch) => {
 						if (branch.filename[0] !== '+') return;
-						const { manifest, meta } = assemble((await branch.buffer).toString('utf-8'));
+						const { doc, manifest, meta } = assemble((await branch.buffer).toString('utf-8'));
 						if (!manifest || manifest.draft) return;
+						doc.tokens = doc.visit(visitors);
 						return {
 							...manifest,
 							table: meta.table,
 							branch: branch.filename.slice(1, -3),
-							content: marker.render(meta.body),
+							content: doc.html({ 'block:code': codeblock }),
 						};
 					});
 
+					doc.tokens = doc.visit(visitors);
 					return {
 						slug,
 						...metadata,
 						table: meta.table,
-						content: marker.render(content),
+						content: doc.html({ 'block:code': codeblock }),
 						branches: (await Promise.all(branches)).filter((b) => b != null),
 					};
 				};
 			},
 		);
 
-		return items.sort(drill('date', date.sort.newest));
+		return items.sort((x, y) => date.sort.newest(x.date, y.date));
 	},
 
 	async '/posts'() {
@@ -100,12 +122,12 @@ export const ROUTES = {
 					),
 					'pending',
 				),
-				title: string(),
+				title: string(typography),
 				series: optional({
-					title: string(),
+					title: string(typography),
 					chapter: optional(string()),
 				}),
-				description: string(),
+				description: string(typography),
 				tags: array(string()),
 				thumbnail: optional(string()),
 				image: optional(string()),
@@ -118,7 +140,7 @@ export const ROUTES = {
 				if (file !== '+article.md') return;
 
 				return async ({ assemble, buffer, siblings, task }) => {
-					const { manifest, meta } = assemble(buffer.toString('utf-8'));
+					const { doc, manifest, meta } = assemble(buffer.toString('utf-8'));
 					if (manifest.draft) return;
 					const { data: metadata, error } = schema(manifest);
 					if (!metadata) {
@@ -126,48 +148,60 @@ export const ROUTES = {
 						return;
 					}
 
-					const umbrella = `posts/${slug}`;
-					const content = meta.body.replace(/\.\/([^\s)]+)/g, (m, relative) => {
-						const asset = siblings.find(({ filename }) => relative === filename);
-						if (!asset || !/\.(jpe?g|png|svg|mp4)$/.test(asset.filename)) return m;
+					function materialize(source: string): string {
+						const asset = siblings.find(({ filename }) => source.endsWith(filename));
+						if (!asset || !/\.(jpe?g|png|svg|mp4)$/.test(asset.filename)) return source;
 
-						const output = /\.(mp4)$/.test(asset.filename)
+						const umbrella = `posts/${slug}`;
+						const output = /\.(svg|mp4)$/.test(asset.filename)
 							? asset.filename
 							: asset.filename.replace(/\.[^/.]+$/, '.webp');
 						task(async ({ fs }) => {
 							await fs.mkdir(`${ROOT}/${umbrella}`, { recursive: true });
 							const payload = await asset.buffer;
 							const filename = `${ROOT}/${umbrella}/${output}`;
-							if (output.endsWith('.mp4')) return fs.writeFile(filename, payload);
+							if (['.svg', '.mp4'].some((ext) => output.endsWith(ext))) {
+								return fs.writeFile(filename, payload);
+							}
 							return void sharp(payload).webp().toFile(filename);
 						});
-
 						return `/uploads/${umbrella}/${output}`;
-					});
-
-					const thumbnail = siblings.find(({ filename }) => filename.startsWith('thumbnail.'));
-					if (thumbnail) {
-						const output = thumbnail.filename.replace(/\.[^/.]+$/, '.webp');
-						task(async ({ fs }) => {
-							await fs.mkdir(`${ROOT}/${umbrella}`, { recursive: true });
-							const webp = sharp(await thumbnail.buffer).webp();
-							return void webp.toFile(`${ROOT}/${umbrella}/${output}`);
-						});
-						metadata.thumbnail = `/uploads/${umbrella}/${output}`;
 					}
+
+					const thumbnail = siblings.find((s) => s.filename.startsWith('thumbnail.'));
+					if (thumbnail) metadata.thumbnail = materialize(thumbnail.filename);
+
+					doc.tokens = doc.visit({
+						'aubade:directive'(token) {
+							if (token.meta.type !== 'video') return token;
+							const { src } = token.meta.data;
+							token.meta.data.src = materialize(src);
+							return token;
+						},
+						'block:image'(token) {
+							const { src } = token.attr;
+							token.attr.src = materialize(src);
+							return token;
+						},
+						'inline:image'(token) {
+							const { src } = token.attr;
+							token.attr.src = materialize(src);
+							return token;
+						},
+					});
 
 					return {
 						slug,
 						...metadata,
 						table: meta.table,
-						content: marker.render(content),
+						content: doc.html({ 'block:code': codeblock }),
 					};
 				};
 			},
 		);
 
 		return chain(items, {
-			sorter: () => drill('date', date.sort.newest),
+			sorter: () => (x, y) => date.sort.newest(x.date, y.date),
 			transform: ({ slug, title }) => ({ slug: `/posts/${slug}`, title }),
 		});
 	},
@@ -178,7 +212,7 @@ export const ROUTES = {
 				const content: Array<{ author: string; quote: string; from: string }> = [];
 				const author = file.slice(0, -3).replace(/-/g, ' ');
 				const { meta } = assemble(buffer.toString('utf-8'));
-				for (const line of meta.body.split(/\r?\n/).filter(exists)) {
+				for (const line of meta.body.split(/\r?\n/).filter(Boolean)) {
 					const [quote, from] = line.split('#!/');
 					content.push({ author, quote, from });
 				}
@@ -192,7 +226,7 @@ export const ROUTES = {
 		const schema = attempt.wrap(
 			define(({ optional, array, record, literal, string }) => ({
 				date: string(),
-				title: string(),
+				title: string(typography),
 				alias: optional(array(string()), []),
 
 				tier: literal('S', 'A', 'B', 'C', 'D', '?'),
@@ -227,7 +261,7 @@ export const ROUTES = {
 				if (file !== '+article.md') return;
 
 				return async ({ assemble, buffer, siblings, task }) => {
-					const { manifest, meta } = assemble(buffer.toString('utf-8'));
+					const { doc, manifest, meta } = assemble(buffer.toString('utf-8'));
 					if (manifest.draft) return;
 					const { data: metadata, error } = schema(manifest);
 					if (!metadata) {
@@ -235,38 +269,60 @@ export const ROUTES = {
 						return;
 					}
 
-					const umbrella = `reviews/${category}/${slug}`;
-					const content = meta.body.replace(/\.\/([^\s)]+)/g, (m, relative) => {
-						const asset = siblings.find(({ filename }) => relative.endsWith(filename));
-						if (!asset || !/\.(jpe?g|png|svg|mp4)$/.test(asset.filename)) return m;
+					function materialize(source: string): string {
+						const asset = siblings.find(({ filename }) => source.endsWith(filename));
+						if (!asset || !/\.(jpe?g|png|svg|mp4)$/.test(asset.filename)) return source;
 
-						const output = /\.(mp4)$/.test(asset.filename)
+						const umbrella = `reviews/${category}/${slug}`;
+						const output = /\.(svg|mp4)$/.test(asset.filename)
 							? asset.filename
 							: asset.filename.replace(/\.[^/.]+$/, '.webp');
 						task(async ({ fs }) => {
 							await fs.mkdir(`${ROOT}/${umbrella}`, { recursive: true });
 							const payload = await asset.buffer;
 							const filename = `${ROOT}/${umbrella}/${output}`;
-							if (output.endsWith('.mp4')) return fs.writeFile(filename, payload);
+							if (['.svg', '.mp4'].some((ext) => output.endsWith(ext))) {
+								return fs.writeFile(filename, payload);
+							}
 							return void sharp(payload).webp().toFile(filename);
 						});
-
 						return `/uploads/${umbrella}/${output}`;
-					});
+					}
+
+					const visitors: Options['transform'] = {
+						'aubade:directive'(token) {
+							if (token.meta.type !== 'video') return token;
+							const { src } = token.meta.data;
+							token.meta.data.src = materialize(src);
+							return token;
+						},
+						'block:image'(token) {
+							const { src } = token.attr;
+							token.attr.src = materialize(src);
+							return token;
+						},
+						'inline:image'(token) {
+							const { src } = token.attr;
+							token.attr.src = materialize(src);
+							return token;
+						},
+					};
 
 					const branches = siblings.map(async (branch) => {
 						if (branch.filename[0] !== '+') return;
 						const payload = (await branch.buffer).toString('utf-8');
-						const { manifest, meta } = assemble(payload);
+						const { doc, manifest, meta } = assemble(payload);
 						if (!manifest || manifest.draft) return;
+						doc.tokens = doc.visit(visitors);
 						return {
 							...manifest,
 							table: meta.table,
 							branch: branch.filename.slice(1, -3),
-							content: marker.render(meta.body),
+							content: doc.html({ 'block:code': codeblock }),
 						};
 					});
 
+					doc.tokens = doc.visit(visitors);
 					return {
 						draft: date(metadata.date).is.before('2020-06-25'),
 						slug: `${category}/${slug}`,
@@ -275,14 +331,14 @@ export const ROUTES = {
 						table: meta.table,
 						composed: date(metadata.date).delta(metadata.seen.first).days,
 						branches: (await Promise.all(branches)).filter((b) => b != null),
-						content: marker.render(content),
+						content: doc.html({ 'block:code': codeblock }),
 					};
 				};
 			},
 		);
 
 		return chain(items, {
-			sorter: () => drill('date', date.sort.newest),
+			sorter: () => (x, y) => date.sort.newest(x.date, y.date),
 			breakpoint: ({ draft }) => draft,
 			transform: ({ slug, title }) => ({ slug: `/reviews/${slug}`, title }),
 		});
@@ -296,20 +352,20 @@ export const ROUTES = {
 				const paths = breadcrumb.slice(1, depth + 1).reverse();
 				return async ({ siblings, task }) => {
 					if (siblings.length === 0) return;
-					const umbrella = paths.join('/');
+					const umbrella = `${ROOT}/${paths.join('/')}`;
 					const uploaded = siblings.flatMap((asset) => {
 						if (!/\.(jpe?g|png|svg|mp4)$/.test(asset.filename)) return [];
-						const output = /\.(mp4)$/.test(asset.filename)
+						const output = /\.(svg|mp4)$/.test(asset.filename)
 							? asset.filename
 							: asset.filename.replace(/\.[^/.]+$/, '.webp');
 						task(async ({ fs }) => {
-							await fs.mkdir(`${ROOT}/${umbrella}`, { recursive: true });
+							await fs.mkdir(umbrella, { recursive: true });
 							const payload = await asset.buffer;
-							if (output.endsWith('.mp4')) {
-								return fs.writeFile(`${ROOT}/${umbrella}/${asset.filename}`, payload);
+							if (['.svg', '.mp4'].some((ext) => output.endsWith(ext))) {
+								return fs.writeFile(`${umbrella}/${output}`, payload);
 							}
 							const webp = sharp(payload).webp();
-							return void webp.toFile(`${ROOT}/${umbrella}/${output}`);
+							return void webp.toFile(`${umbrella}/${output}`);
 						});
 						return output;
 					});

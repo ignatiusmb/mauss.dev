@@ -4,7 +4,7 @@ title: Calendar
 
 ## 02
 
-![top winter anime opening songs#d#f](https://preview.redd.it/2q9nfdrxklq61.jpg?width=640&crop=smart&auto=webp&s=a1e80273fedc1c09742d820e6d139e07d9bb804c "[[Reddit](https://www.reddit.com/r/anime/comments/mi0jnc/top_10_moststreamed_full_openings_of_winter_2021/)] Top 10 most-streamed full openings of Winter 2021 on Spotify")
+![top winter anime opening songs](https://preview.redd.it/2q9nfdrxklq61.jpg?width=640&crop=smart&auto=webp&s=a1e80273fedc1c09742d820e6d139e07d9bb804c "[[Reddit](https://www.reddit.com/r/anime/comments/mi0jnc/top_10_moststreamed_full_openings_of_winter_2021/)] Top 10 most-streamed full openings of Winter 2021 on Spotify")
 
 [[Reddit](https://www.reddit.com/r/LifeProTips/comments/miiyun/lpt_learning_how_to_manage_failure_is_the_biggest/)] Learning how to manage failure is the biggest skill you can have. You can't learn if you don't try, you can't try if you are afraid to fail and you can't be good at something if you have not failed multiple times. If you are someone who boasts about not failing ever, you are not trying enough.
 
@@ -26,13 +26,13 @@ title: Calendar
 
 ## 12
 
-![yoru no kuni ONA key visual#d#f](https://preview.redd.it/4k89i2hcnqs61.jpg?width=640&crop=smart&auto=webp&s=f58ca8756abd0a94214cb7ee36afa7926981ab6f "[[Reddit](https://www.reddit.com/r/anime/comments/mpd1wz/night_world_ona_key_visual/)] \"Night World\" ONA key visual")
+![yoru no kuni ONA key visual](https://preview.redd.it/4k89i2hcnqs61.jpg?width=640&crop=smart&auto=webp&s=f58ca8756abd0a94214cb7ee36afa7926981ab6f "[[Reddit](https://www.reddit.com/r/anime/comments/mpd1wz/night_world_ona_key_visual/)] \"Night World\" ONA key visual")
 
 ## 13
 
 [[Reddit](https://www.reddit.com/r/WTF/comments/mpjc6w/not_just_pasta_for_dinner/)] Weevil infestation
 
-![bare through it#d#f](https://preview.redd.it/z3lfettrxrs61.jpg?width=640&crop=smart&auto=webp&s=db6998889204f930d24288f38b57ad6c81756623 "[[Reddit](https://www.reddit.com/r/wholesomememes/comments/mpi8ty/how_to_be_a_good_father/)] How to be a good father")
+![bare through it](https://preview.redd.it/z3lfettrxrs61.jpg?width=640&crop=smart&auto=webp&s=db6998889204f930d24288f38b57ad6c81756623 "[[Reddit](https://www.reddit.com/r/wholesomememes/comments/mpi8ty/how_to_be_a_good_father/)] How to be a good father")
 
 ## 14
 
@@ -74,11 +74,11 @@ title: Calendar
 
 [[Reddit](https://www.reddit.com/r/nextfuckinglevel/comments/my670t/japanese_fish_is_100_amazing_bbc_world/)] (clip) Amazing sand-work by Japanese fish
 
-![madoka magica movie 4 visual#d#f](https://preview.redd.it/obndyo5xiav61.jpg?width=640&crop=smart&auto=webp&s=554cfa768826b1c4dcbc7011e5c3b2c0711c96f1 "[[Reddit](https://www.reddit.com/r/anime/comments/my4z7g/mahou_shoujo_madokamagica_movie_4_visual/)] \"Mahou Shoujo Madoka★Magica\" Movie 4 Visual")
+![madoka magica movie 4 visual](https://preview.redd.it/obndyo5xiav61.jpg?width=640&crop=smart&auto=webp&s=554cfa768826b1c4dcbc7011e5c3b2c0711c96f1 "[[Reddit](https://www.reddit.com/r/anime/comments/my4z7g/mahou_shoujo_madokamagica_movie_4_visual/)] \"Mahou Shoujo Madoka★Magica\" Movie 4 Visual")
 
 ## 26
 
-![higurashi watch order chart#d#f](https://i.redd.it/f7q5tdxcigv61.png "[[Reddit](https://www.reddit.com/r/anime/comments/myqrjr/i_made_a_higurashi_anime_watch_order_guide/)] Simple Higurashi watch order")
+![higurashi watch order chart](https://i.redd.it/f7q5tdxcigv61.png "[[Reddit](https://www.reddit.com/r/anime/comments/myqrjr/i_made_a_higurashi_anime_watch_order_guide/)] Simple Higurashi watch order")
 
 ## 27
 
@@ -94,4 +94,4 @@ title: Calendar
 
 ## 30
 
-![keyboard size guide#d#f](https://external-preview.redd.it/nmMddUsuLF_NYcheCVPAahC3TZjj6lLQLVjTeBHiHkM.png?auto=webp&s=30e1578b5401618cd85e58f02c3a64b1fa0eb5f5 "[[Reddit](https://www.reddit.com/r/MechanicalKeyboards/comments/n1sq5k/keyboard_size_guide/)] Keyboard Size Guide")
+![keyboard size guide](https://external-preview.redd.it/nmMddUsuLF_NYcheCVPAahC3TZjj6lLQLVjTeBHiHkM.png?auto=webp&s=30e1578b5401618cd85e58f02c3a64b1fa0eb5f5 "[[Reddit](https://www.reddit.com/r/MechanicalKeyboards/comments/n1sq5k/keyboard_size_guide/)] Keyboard Size Guide")

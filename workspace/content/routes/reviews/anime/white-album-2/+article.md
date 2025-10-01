@@ -21,7 +21,7 @@ link:
 
 > Heaviest heartbreak in anime history
 
-![Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/8zpgSUqiYbMP3UPMKBnNbiB32c5.jpg "Source: TMDB")
+![Backdrop](https://image.tmdb.org/t/p/w1280/8zpgSUqiYbMP3UPMKBnNbiB32c5.jpg "Source: TMDB")
 
 - <https://wa2analysis.com/>
 - <http://wrongeverytime.com/2014/01/13/white-album-2-and-the-futility-of-everything/>

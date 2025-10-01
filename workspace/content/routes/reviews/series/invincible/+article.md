@@ -17,4 +17,4 @@ link:
   IMDb: https://www.imdb.com/title/tt6741278/
 ---
 
-![Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/6UH52Fmau8RPsMAbQbjwN3wJSCj.jpg "Source: TMDB")
+![Backdrop](https://image.tmdb.org/t/p/w1280/6UH52Fmau8RPsMAbQbjwN3wJSCj.jpg "Source: TMDB")

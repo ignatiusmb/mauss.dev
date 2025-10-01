@@ -17,4 +17,4 @@ link:
   MyAnimeList: https://myanimelist.net/anime/2001
 ---
 
-![Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/hpWt972OjP3veaGYS1Qn8Z87MLO.jpg "Source: TMDB")
+![Backdrop](https://image.tmdb.org/t/p/w1280/hpWt972OjP3veaGYS1Qn8Z87MLO.jpg "Source: TMDB")

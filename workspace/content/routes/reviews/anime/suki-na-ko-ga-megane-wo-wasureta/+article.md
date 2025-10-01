@@ -7,6 +7,7 @@ released: 2023-07-04
 genres: [comedy, romance]
 seen:
   first: "2025-09-03T22:41:00+07:00"
+  last: "2025-09-27T17:49:00+07:00"
 rating: solid
 poster:
   source: tmdb
@@ -18,3 +19,5 @@ link:
   MyAnimeList: https://myanimelist.net/anime/54234
   TMDB: https://www.themoviedb.org/tv/218263
 ---
+
+from an underappreciated studio comes a hidden gem

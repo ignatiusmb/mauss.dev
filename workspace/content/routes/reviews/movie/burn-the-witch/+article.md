@@ -16,4 +16,4 @@ link:
   MyAnimeList: https://myanimelist.net/anime/41468
 ---
 
-![Burn the Witch Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/bH8uop5QkOoooDDRf3axSmtpsyw.jpg "Source: TMDB")
+![Burn the Witch Backdrop](https://image.tmdb.org/t/p/w1280/bH8uop5QkOoooDDRf3axSmtpsyw.jpg "Source: TMDB")

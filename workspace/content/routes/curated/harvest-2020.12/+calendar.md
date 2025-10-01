@@ -42,14 +42,14 @@ title: Calendar
 
 [[Evil Martians](https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs)] How to Favicon in 2021
 
-![winter 2021 calendar#d#f](https://preview.redd.it/qgei52mx4t661.png?width=640&crop=smart&auto=webp&s=5c9285d3c92abbe5e68bf86b739de0ecf77b0fe2 "[[Reddit](https://www.reddit.com/r/anime/comments/kiepeg/winter_2021_anime_release_calendar/)] Winter 2021 Anime Release Calendar")
+![winter 2021 calendar](https://preview.redd.it/qgei52mx4t661.png?width=640&crop=smart&auto=webp&s=5c9285d3c92abbe5e68bf86b739de0ecf77b0fe2 "[[Reddit](https://www.reddit.com/r/anime/comments/kiepeg/winter_2021_anime_release_calendar/)] Winter 2021 Anime Release Calendar")
 
 ## 26
 
-![testing other people loyalty#d#f](https://i.redd.it/trt93n825h761.png "[[Reddit](https://www.reddit.com/r/facepalm/comments/kkdy9f/real_friends_would_understand_why_they_havent/)] Don't be narcissistic, real friends will understand why")
+![testing other people loyalty](https://i.redd.it/trt93n825h761.png "[[Reddit](https://www.reddit.com/r/facepalm/comments/kkdy9f/real_friends_would_understand_why_they_havent/)] Don't be narcissistic, real friends will understand why")
 
 ## 28
 
 [[Reddit](https://www.reddit.com/r/anime/comments/klhrll/demon_slayer_the_movie_mugen_train_has_grossed/) | [Twitter](https://twitter.com/kimetsu_off/status/1343391222690238465)] Demon Slayer The Movie: Mugen Train has grossed over 32.4 billion yen, officially surpassing Spirited Away to become the highest-grossing film of all time in Japan
 
-![32cm wide door#d#f](https://external-preview.redd.it/rddv40l9FklLn1Uh_MhydXnm_NgWGHXv1MhLMtwyosw.png?auto=webp&s=344e054c486302688125e6583bcbe5bbe1c33312 "[[Reddit](https://www.reddit.com/r/interestingasfuck/comments/klbgqc/antigluttony_door_in_the_alcoba%C3%A7a_monastery/)] Anti-gluttony door")
+![32cm wide door](https://external-preview.redd.it/rddv40l9FklLn1Uh_MhydXnm_NgWGHXv1MhLMtwyosw.png?auto=webp&s=344e054c486302688125e6583bcbe5bbe1c33312 "[[Reddit](https://www.reddit.com/r/interestingasfuck/comments/klbgqc/antigluttony_door_in_the_alcoba%C3%A7a_monastery/)] Anti-gluttony door")

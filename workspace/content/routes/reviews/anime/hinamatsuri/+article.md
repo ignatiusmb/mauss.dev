@@ -19,4 +19,4 @@ link:
   TMDB: https://www.themoviedb.org/tv/76758
 ---
 
-![Hinamatsuri Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/phrFU1DPna3u8WkbKZi9UH7sQd9.jpg "Source: TMDB")
+![Hinamatsuri Backdrop](https://image.tmdb.org/t/p/w1280/phrFU1DPna3u8WkbKZi9UH7sQd9.jpg "Source: TMDB")

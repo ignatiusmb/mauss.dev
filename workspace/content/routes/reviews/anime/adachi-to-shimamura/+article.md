@@ -17,4 +17,4 @@ link:
   MyAnimeList: https://myanimelist.net/anime/39790
 ---
 
-![Adashima Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/zOfOs7a9Kal6TVvgf8UdtdozckE.jpg "Source: TMDB")
+![Adashima Backdrop](https://image.tmdb.org/t/p/w1280/zOfOs7a9Kal6TVvgf8UdtdozckE.jpg "Source: TMDB")

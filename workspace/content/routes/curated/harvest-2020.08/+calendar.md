@@ -8,7 +8,7 @@ title: Calendar
 
 ## 02
 
-![Kimetsu no Yaiba the Movie: Mugen Train new key visual#d#f](https://pbs.twimg.com/media/EeanPTfUMAEjSKu.jpg?name=large "[[Reddit](https://www.reddit.com/r/anime/comments/i2bgwl/kimetsu_no_yaiba_the_movie_mugen_train_new_key/) | [Preview](https://pbs.twimg.com/media/EeanPTfUMAEjSKu.jpg?name=large)] *Kimetsu no Yaiba the Movie: Mugen Train* new key visual")
+![Kimetsu no Yaiba the Movie: Mugen Train new key visual](https://pbs.twimg.com/media/EeanPTfUMAEjSKu.jpg?name=large "[[Reddit](https://www.reddit.com/r/anime/comments/i2bgwl/kimetsu_no_yaiba_the_movie_mugen_train_new_key/) | [Preview](https://pbs.twimg.com/media/EeanPTfUMAEjSKu.jpg?name=large)] *Kimetsu no Yaiba the Movie: Mugen Train* new key visual")
 
 [[Reddit](https://www.reddit.com/r/YouShouldKnow/comments/i29ljf/ysk_that_you_are_not_a_professionally_trained/)] YSK that you are not a professionally trained therapist and that the burden of helping someone who is suicidal is not on you.
 
@@ -54,7 +54,7 @@ title: Calendar
 
 ## 13
 
-![There is no age timeline in achieving things, so work at your own pace#d#f](https://i.redd.it/skgyh71fyng51.jpg "[[Reddit](https://www.reddit.com/r/wholesomememes/comments/i8pook/there_is_no_age_timeline_in_achieving_things_so/)] There is no age timeline in achieving things, so work at your own pace")
+![There is no age timeline in achieving things, so work at your own pace](https://i.redd.it/skgyh71fyng51.jpg "[[Reddit](https://www.reddit.com/r/wholesomememes/comments/i8pook/there_is_no_age_timeline_in_achieving_things_so/)] There is no age timeline in achieving things, so work at your own pace")
 
 ## 14
 
@@ -78,7 +78,7 @@ title: Calendar
 
 [[Reddit](https://www.reddit.com/r/coolguides/comments/iazqy5/a_guide_for_creativity/)] Cool guide on how to finish (almost) anything
 
-![A guide for creativity#d#f](https://preview.redd.it/9kjrmx1ecfh51.jpg?width=640&crop=smart&auto=webp&s=200c83e2dcc1ec5f6401213025845608a615db9d "[[Reddit](https://www.reddit.com/r/coolguides/comments/iazqy5/a_guide_for_creativity/)] A guide for creativity")
+![A guide for creativity](https://preview.redd.it/9kjrmx1ecfh51.jpg?width=640&crop=smart&auto=webp&s=200c83e2dcc1ec5f6401213025845608a615db9d "[[Reddit](https://www.reddit.com/r/coolguides/comments/iazqy5/a_guide_for_creativity/)] A guide for creativity")
 
 [[Reddit](https://www.reddit.com/r/lifehacks/comments/ibcyc5/i_thought_that_this_would_be_valuable_information/)] Confront your sexual harassers
 
@@ -92,7 +92,7 @@ title: Calendar
 
 [[Reddit](https://www.reddit.com/r/Damnthatsinteresting/comments/ifcubo/worlds_tallest_people/)] World's tallest people
 
-![The Rom-Com-Dram Grid#d#f](https://i.redd.it/23hs73qb2yi51.png "[[Reddit](https://www.reddit.com/r/anime/comments/ifo1vt/the_romcomdram_grid_64_romance_anime_roughly/) | [Preview](https://i.redd.it/23hs73qb2yi51.png)] The Rom-Com-Dram Grid: 64 romance anime roughly sorted")
+![The Rom-Com-Dram Grid](https://i.redd.it/23hs73qb2yi51.png "[[Reddit](https://www.reddit.com/r/anime/comments/ifo1vt/the_romcomdram_grid_64_romance_anime_roughly/) | [Preview](https://i.redd.it/23hs73qb2yi51.png)] The Rom-Com-Dram Grid: 64 romance anime roughly sorted")
 
 ## 26
 

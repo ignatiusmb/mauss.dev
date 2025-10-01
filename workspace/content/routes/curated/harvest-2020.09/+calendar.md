@@ -8,11 +8,11 @@ title: Calendar
 
 ## 02
 
-![!YouTube#d](lG7OmThrq5g "Why bird nests aren't covered in poop")
+@youtube{disclosure id=lG7OmThrq5g caption="Why bird nests aren't covered in poop"}
 
 ## 03
 
-![!YouTube#d](Y5_37k9HdJw "The secret history of dirt")
+@youtube{disclosure id=Y5_37k9HdJw caption="The secret history of dirt"}
 
 [[Reddit](https://www.reddit.com/r/jellyfin/comments/ilb2l0/dietpi_officially_supports_jellyfin_as_one_of_its/)] Dietpi officially supports Jellyfin as one of its optimized softwares 🎉
 
@@ -22,11 +22,11 @@ title: Calendar
 
 ## 05
 
-![!YouTube#d](gYbTBxPbYN4 "Wataten☆5's new song [preview is out](https://www.reddit.com/r/Watashi_ni_Tenshi/comments/imnuev/wataten5s_new_song_preview_is_out/)")
+@youtube{id=gYbTBxPbYN4 caption="Wataten☆5\'s new song [preview is out](https://www.reddit.com/r/Watashi_ni_Tenshi/comments/imnuev/wataten5s_new_song_preview_is_out/)"}
 
 [[Reddit](https://www.reddit.com/r/LifeProTips/comments/inom0h/lpt_always_explain_why_a_procedure_exists_so_the/)] Always explain WHY a procedure exists, so the person you're teaching doesn't blindly follow it without thinking.
 
-![Dr. Stone: Stone Wars new visual#d#f](https://img1.ak.crunchyroll.com/i/spire2/4f3c449f6e416dfead343309d39a0d9c1599176100_main.png "[[Reddit](https://www.reddit.com/r/anime/comments/imkxwd/dr_stone_stone_wars_new_visual/) | [Preview](https://img1.ak.crunchyroll.com/i/spire2/4f3c449f6e416dfead343309d39a0d9c1599176100_main.png)] Dr. Stone: Stone Wars new visual")
+![Dr. Stone: Stone Wars new visual](https://img1.ak.crunchyroll.com/i/spire2/4f3c449f6e416dfead343309d39a0d9c1599176100_main.png "[[Reddit](https://www.reddit.com/r/anime/comments/imkxwd/dr_stone_stone_wars_new_visual/) | [Preview](https://img1.ak.crunchyroll.com/i/spire2/4f3c449f6e416dfead343309d39a0d9c1599176100_main.png)] Dr. Stone: Stone Wars new visual")
 
 ## 07
 
@@ -55,11 +55,11 @@ Social
 
 [[Article](https://frontend.horse/articles/buttons-that-spark-joy/)] Buttons that Spark Joy
 
-![!Video#d#f](https://external-preview.redd.it/wnvYJKhZVCOyDW89ZmntDI6QakKnSKszxZnK9HBfsr4.gif?format=mp4&s=aefdfdf1afa1529fa7d8f4e3523814679301ac4b "[Reddit Top Talent!](https://www.reddit.com/r/toptalent/comments/is4334/lightning_goaltender_andrei_vasilevskiy_looks/) Lightning Goaltender Andrei Vasilevskiy looks between his opponent's legs to locate puck and make behind the back glove save")
+@video{src="[https://external-preview.redd.it/wnvYJKhZVCOyDW89ZmntDI6QakKnSKszxZnK9HBfsr4.gif?format=mp4&s=aefdfdf1afa1529fa7d8f4e3523814679301ac4b]" caption="[Reddit Top Talent!](https://www.reddit.com/r/toptalent/comments/is4334/lightning_goaltender_andrei_vasilevskiy_looks/) Lightning Goaltender Andrei Vasilevskiy looks between his opponent's legs to locate puck and make behind the back glove save"}
 
 ## 15
 
-![eldredge tie and trinity knot#d#f](https://i.redd.it/ui7iqerys9n51.jpg "[[Reddit](https://www.reddit.com/r/nextfuckinglevel/comments/it4mm8/wore_the_trinity_at_a_wedding_and_got_crazy/)] How to do an Eldredge Tie and Trinity Knot")
+![eldredge tie and trinity knot](https://i.redd.it/ui7iqerys9n51.jpg "[[Reddit](https://www.reddit.com/r/nextfuckinglevel/comments/it4mm8/wore_the_trinity_at_a_wedding_and_got_crazy/)] How to do an Eldredge Tie and Trinity Knot")
 
 ## 17
 
@@ -67,7 +67,7 @@ Social
 
 [[CodePen](https://codepen.io/ricardoolivaalonso/pen/yLOpNdZ)] 3D Modern House in pure CSS
 
-![update on Python 4#d#f](https://i.redd.it/ayxwpuasjjn51.png "[[Reddit](https://www.reddit.com/r/Python/comments/itzn13/an_update_on_python_4/)] Python 4 FAQ")
+![update on Python 4](https://i.redd.it/ayxwpuasjjn51.png "[[Reddit](https://www.reddit.com/r/Python/comments/itzn13/an_update_on_python_4/)] Python 4 FAQ")
 
 ## 18
 
@@ -87,7 +87,7 @@ Social
 
 [[GitHub](https://github.com/dwmkerr/hacker-laws#kernighans-law)] Kernighan's Law - Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.
 
-![fall 2020 anime calender#d#f](https://i.redd.it/5n0tkv8jgeo51.png "[[Reddit](https://www.reddit.com/r/anime/comments/iwqe2o/fall_2020_anime_calendar/) | [Preview](https://i.redd.it/5n0tkv8jgeo51.png)] Fall 2020 Anime Calender")
+![fall 2020 anime calender](https://i.redd.it/5n0tkv8jgeo51.png "[[Reddit](https://www.reddit.com/r/anime/comments/iwqe2o/fall_2020_anime_calendar/) | [Preview](https://i.redd.it/5n0tkv8jgeo51.png)] Fall 2020 Anime Calender")
 
 ## 23
 

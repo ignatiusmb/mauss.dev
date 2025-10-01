@@ -97,12 +97,7 @@ Almost every framework loads the user on every incoming request, so even for sit
 Ref: <https://scotch.io/bar-talk/why-jwts-suck-as-session-tokens#toc-why-do-jwts-suck->
 
 ***
-Reference(s):
+additional references:
 
 - <https://blog.logrocket.com/jwt-authentication-best-practices/>
-- <https://scotch.io/bar-talk/why-jwts-suck-as-session-tokens>
-- <http://cryto.net/~joepie91/blog/2016/06/13/stop-using-jwt-for-sessions/>
-- <http://cryto.net/%7Ejoepie91/blog/2016/06/19/stop-using-jwt-for-sessions-part-2-why-your-solution-doesnt-work/>
-- <http://self-issued.info/docs/draft-ietf-jose-json-web-encryption.html>
-- <https://stackoverflow.com/questions/37582444/jwt-vs-cookies-for-token-based-authentication>
-- <https://security.stackexchange.com/questions/180357/store-auth-token-in-cookie-or-header>
+- <https://self-issued.info/docs/draft-ietf-jose-json-web-encryption.html>

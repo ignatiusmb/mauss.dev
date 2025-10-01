@@ -16,76 +16,7 @@ Yosuga no Sora adapts the branching format of its adult visual novel. released a
 
 at first it feels like a glitch — episode 5 especially. once i understand the format, it becomes more interesting, even if not all arcs are equally strong. i didn't know it was based on a visual novel when i first watched it, so the branching narrative surprised me. i liked the way it played out like multiple save points, but i also felt it wasted potential. a linear story might have landed harder.
 
-<details open>
-  <summary>story flowchart</summary>
-  <div style="display: grid; grid-template-columns: repeat(7, 1fr); grid-template-rows: repeat(10, 1fr); text-align: center; --nb: 3px solid var(--color-text); --line: 0.25px solid var(--color-text);">
-    <span style="grid-area:1/4/2/5; padding: 0.2rem 0; border: var(--nb); border-radius: var(--rounding-base);">1</span>
-    <span style="grid-area:2/3/3/4;position:relative;">
-      <span style="width:100%;position:absolute;top:50%;left:0;border:var(--line);"></span>
-    </span>
-    <span style="grid-area:2/4/3/5;position:relative;">
-      <span style="height:50%;position:absolute;border:var(--line);"></span>
-      <span style="width:100%;position:absolute;top:50%;left:0;border:var(--line);"></span>
-    </span>
-    <span style="grid-area:2/5/3/6;position:relative;">
-      <span style="width:100%;position:absolute;top:50%;left:0;border:var(--line);"></span>
-    </span>
-    <span style="grid-area:2/2/3/3; padding: 0.2rem 0; border: var(--nb); border-radius: var(--rounding-base);">2</span>
-    <span style="grid-area:3/1/4/2;position:relative;">
-      <span style="height:50%;position:absolute;bottom:0;border:var(--line);"></span>
-      <span style="width:50%;position:absolute;top:50%;right:0;border:var(--line);"></span>
-    </span>
-    <span style="grid-area:3/2/4/3;position:relative;">
-      <span style="height:50%;position:absolute;border:var(--line);"></span>
-      <span style="width:100%;position:absolute;top:50%;left:0;border:var(--line);"></span>
-    </span>
-    <span style="grid-area:3/3/4/4;position:relative;">
-      <span style="width:50%;position:absolute;top:50%;left:0;border:var(--line);"></span>
-      <span style="height:50%;position:absolute;bottom:0;border:var(--line);"></span>
-    </span>
-    <span style="grid-area:2/6/3/7; padding: 0.2rem 0; border: var(--nb); border-radius: var(--rounding-base);">7</span>
-    <span style="grid-area:3/5/4/6;position:relative;">
-      <span style="height:50%;position:absolute;bottom:0;border:var(--line);"></span>
-      <span style="width:50%;position:absolute;top:50%;right:0;border:var(--line);"></span>
-    </span>
-    <span style="grid-area:3/6/4/7;position:relative;">
-      <span style="height:50%;position:absolute;border:var(--line);"></span>
-      <span style="width:100%;position:absolute;top:50%;left:0;border:var(--line);"></span>
-    </span>
-    <span style="grid-area:3/7/4/8;position:relative;">
-      <span style="width:50%;position:absolute;top:50%;left:0;border:var(--line);"></span>
-      <span style="height:50%;position:absolute;bottom:0;border:var(--line);"></span>
-    </span>
-    <span style="grid-area:4/1/5/2; padding: 0.2rem 0; border: var(--nb); border-radius: var(--rounding-base);">3</span>
-    <span style="grid-area:5/1/5/2;position:relative;">
-      <span style="height:100%;position:absolute;border:var(--line);"></span>
-    </span>
-    <span style="grid-area:6/1/7/2; padding: 0.2rem 0; border: var(--nb); border-radius: var(--rounding-base);">4</span>
-    <span style="grid-area:4/3/5/4; padding: 0.2rem 0; border: var(--nb); border-radius: var(--rounding-base);">5</span>
-    <span style="grid-area:5/3/5/4;position:relative;">
-      <span style="height:100%;position:absolute;border:var(--line);"></span>
-    </span>
-    <span style="grid-area:6/3/7/4; padding: 0.2rem 0; border: var(--nb); border-radius: var(--rounding-base);">6</span>
-    <span style="grid-area:4/5/5/6; padding: 0.2rem 0; border: var(--nb); border-radius: var(--rounding-base);">8</span>
-    <span style="grid-area:5/5/5/6;position:relative;">
-      <span style="height:100%;position:absolute;border:var(--line);"></span>
-    </span>
-    <span style="grid-area:6/5/7/6; padding: 0.2rem 0; border: var(--nb); border-radius: var(--rounding-base);">9</span>
-    <span style="grid-area:4/7/5/8; padding: 0.2rem 0; border: var(--nb); border-radius: var(--rounding-base);">10</span>
-    <span style="grid-area:5/7/5/8;position:relative;">
-      <span style="height:100%;position:absolute;border:var(--line);"></span>
-    </span>
-    <span style="grid-area:6/7/7/8; padding: 0.2rem 0; border: var(--nb); border-radius: var(--rounding-base);">11</span>
-    <span style="grid-area:7/7/7/8;position:relative;">
-      <span style="height:100%;position:absolute;border:var(--line);"></span>
-    </span>
-    <span style="grid-area:8/7/9/8; padding: 0.2rem 0; border: var(--nb); border-radius: var(--rounding-base);">12</span>
-    <span style="grid-area:10/1/11/2; padding: 0.2rem 0; border: var(--nb); border-radius: var(--rounding-base);">K</span>
-    <span style="grid-area:10/3/11/4; padding: 0.2rem 0; border: var(--nb); border-radius: var(--rounding-base);">A</span>
-    <span style="grid-area:10/5/11/6; padding: 0.2rem 0; border: var(--nb); border-radius: var(--rounding-base);">N</span>
-    <span style="grid-area:10/7/11/8; padding: 0.2rem 0; border: var(--nb); border-radius: var(--rounding-base);">S</span>
-  </div>
-</details>
+![story flowchart](./flowchart.svg)
 
 ## the Kasugano twins
 

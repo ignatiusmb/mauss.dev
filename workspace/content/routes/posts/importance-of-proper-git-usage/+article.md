@@ -6,7 +6,7 @@ description: A good commit can come a long way in the future and it can signific
 tags: [ppl2020, git, proper]
 ---
 
-[![Commit messages steadily declining in quality](https://imgs.xkcd.com/comics/git_commit.png)](https://xkcd.com/1296/)
+![Commit messages steadily declining in quality](https://imgs.xkcd.com/comics/git_commit.png "[xkcd: Git Commit](https://xkcd.com/1296/)")
 
 This is probably by far my favorite picture that describes git commit messages in a nutshell. It sums up most of our experience using and seeing git commits by ourselves or with our team.
 
@@ -34,7 +34,7 @@ Of course, other than to help us remember what we wrote, it also helps other dev
 
 Perhaps the explanation beforehand was a little bit too vague, here's a solid and concrete example of what I meant. I present to you in my honest opinion by far the best commit message
 
-[![Best git commit message](./best-git-commit.png)](https://github.com/alphagov/govuk-puppet/commit/63b36f93bf75a848e2125008aa1e880c5861cf46)
+![Best git commit message](./best-git-commit.png "[github:alphagov/govuk-puppet](https://github.com/alphagov/govuk-puppet/commit/63b36f93bf75a848e2125008aa1e880c5861cf46)")
 
 This commit message could have been easily written as `fix bug`, `add whitespace`, or `change comments`. Instead, [Dan Carley](https://github.com/dcarley), author of this commit, took his time to explain and document his commit for the benefit of the people working with him.
 
@@ -42,45 +42,45 @@ This commit message could have been easily written as `fix bug`, `add whitespace
 
 - It explains the reason behind the change with explanation of **what** and **why** it changed
 
-```
-I introduced some tests in a feature branch to match the contents of
-`/etc/nginx/router_routes.conf`. They worked fine when run with `bundle exec
-rake spec` or `bundle exec rspec modules/router/spec`. But when run as
-`bundle exec rake` each should block failed with:
+  ```
+  I introduced some tests in a feature branch to match the contents of
+  `/etc/nginx/router_routes.conf`. They worked fine when run with `bundle exec
+  rake spec` or `bundle exec rspec modules/router/spec`. But when run as
+  `bundle exec rake` each should block failed with:
 
-    ArgumentError:
-      invalid byte sequence in US-ASCII
-```
+      ArgumentError:
+        invalid byte sequence in US-ASCII
+  ```
 
 - It is searchable by the error using `git log` and explains how it happens
 
-```
-    ArgumentError:
-      invalid byte sequence in US-ASCII
-```
+  ```
+      ArgumentError:
+        invalid byte sequence in US-ASCII
+  ```
 
-```
-That particular template appears to be the only file in our codebase with an
-identified encoding of `utf-8`. All others are `us-ascii`:
-    ...
-Attempting to convert that file back to US-ASCII identified the offending
-character as something that looked like a whitespace:
-    ...
-```
+  ```
+  That particular template appears to be the only file in our codebase with an
+  identified encoding of `utf-8`. All others are `us-ascii`:
+      ...
+  Attempting to convert that file back to US-ASCII identified the offending
+  character as something that looked like a whitespace:
+      ...
+  ```
 
 - It tells you its story
 
-```
-I eventually found that removing the `.with_content(//)` matchers made the
-errors go away. That there weren't any weird characters in the spec file. And
-that it could be reproduced by requiring Puppet in the same interpreter
-```
+  ```
+  I eventually found that removing the `.with_content(//)` matchers made the
+  errors go away. That there weren't any weird characters in the spec file. And
+  that it could be reproduced by requiring Puppet in the same interpreter
+  ```
 
-It goes into detail about what the problem is, the process of debugging and fixing it, and the last line reminds us that there's another human being behind every commit. We can feel Dan's frustration and his satisfaction after finally solving it.
+  It goes into detail about what the problem is, the process of debugging and fixing it, and the last line reminds us that there's another human being behind every commit. We can feel Dan's frustration and his satisfaction after finally solving it.
 
-```
-Now the tests work! One hour of my life I won't get back..
-```
+  ```
+  Now the tests work! One hour of my life I won't get back..
+  ```
 
 ### Commit messages matter
 

@@ -4,7 +4,7 @@
 	import SearchFilter from '$lib/dialog/SearchFilter.svelte';
 
 	import type { Query } from './search.svelte';
-	import type { Commands } from './search.worker';
+	import type { Commands } from './search.agent';
 	import { date } from 'mauss';
 	import { qsd, qse } from 'mauss/web';
 	import { spawn } from 'syv/worker';
@@ -13,7 +13,7 @@
 	import { scale } from 'svelte/transition';
 	import { replaceState } from '$app/navigation';
 	import { page } from '$app/state';
-	import worker from './search.worker?worker&url';
+	import worker from './search.agent?worker&url';
 
 	const { data } = $props();
 	const memory = $state({

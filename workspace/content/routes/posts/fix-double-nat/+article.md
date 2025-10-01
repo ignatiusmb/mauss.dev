@@ -17,9 +17,9 @@ i ran into a persistent error with Plex that lasted for months before i traced i
 
 before messing with your network and ports manually, try enabling **UPnP** (universal plug and play) on your router first. some apps can configure themselves automatically if UPnP is enabled.
 
-![Huawei UPnP#f](./huawei-upnp.png "Huawei UPnP")
+![Huawei UPnP](./huawei-upnp.png "Huawei UPnP")
 
-![Cisco UPnP#f](./cisco-upnp.jpg "Cisco UPnP")
+![Cisco UPnP](./cisco-upnp.jpg "Cisco UPnP")
 
 ---
 

@@ -19,4 +19,4 @@ link:
   TMDB: https://www.themoviedb.org/movie/378064
 ---
 
-![Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/5lAMQMWpXMsirvtLLvW7cJgEPkU.jpg "Source: TMDB")
+![Backdrop](https://image.tmdb.org/t/p/w1280/5lAMQMWpXMsirvtLLvW7cJgEPkU.jpg "Source: TMDB")

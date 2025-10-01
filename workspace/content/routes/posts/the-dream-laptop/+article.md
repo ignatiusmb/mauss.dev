@@ -24,7 +24,7 @@ That was until the [Lenovo Yoga Book 9i](https://www.laptopmag.com/reviews/lenov
 
 If I were to get a new laptop, I would want a 16-inch screen as my backpack is already equipped to carry one and I don't care about the weight because I'll mostly spend my time working with it on a table, not carrying it. At CES 2024, ASUS announced the [14-inch ZenBook Duo](https://www.pcmag.com/news/ces-2024-hands-on-asus-zenbook-duo-gains-twin-oled-screens-intel-core-ultra) which is a full dual-screen laptop that comes with an integrated stand and a detachable keyboard-trackpad combo that can be stored within when the laptop is folded.
 
-[![ASUS ZenBook Duo (2024 UX8406)](https://dlcdnwebimgs.asus.com/gain/65862a86-166c-4aa5-82e5-7b353b514eab/w1280 "ZenBook Duo from ASUS Official Website")](https://www.asus.com/us/laptops/for-home/zenbook/asus-zenbook-duo-2024-ux8406/)
+![ASUS ZenBook Duo (2024 UX8406)](https://dlcdnwebimgs.asus.com/gain/65862a86-166c-4aa5-82e5-7b353b514eab/w1280 "ASUS ZenBook Duo (2024 UX8406) from [ASUS](https://www.asus.com/us/laptops/for-home/zenbook/asus-zenbook-duo-2024-ux8406/)")
 
 It truly seems like the perfect portable workstation that I've been looking for, but I haven't had the best experience with the battery longevity of x86-based laptops. With it being another Intel-based laptop and the fact that these problems hasn't really changed since forever, it's fair to say that I'm worried if it's really worth the price and if it would be able to last for years to come.
 
@@ -32,7 +32,7 @@ It truly seems like the perfect portable workstation that I've been looking for,
 
 Near the end of 2020, Apple released their first ARM-based laptop powered by their new M1 chip. We were skeptical back then and software support was basically non-existent. Little did we know, that was the beginning of a major breakthrough which takes the word "portable computers" to a whole new level. The MacBooks with their Apple Silicon chips are now way ahead of the game in terms of *everything*, it's not even a competition anymore.
 
-[![MacBook Air M3 (2024)](https://www.apple.com/newsroom/images/2024/03/apple-unveils-the-new-13-and-15-inch-macbook-air-with-the-powerful-m3-chip/article/Apple-MacBook-Air-2-up-hero-240304_big.jpg.large.jpg "MacBook Air M3 from Apple Newsroom")](https://www.apple.com/newsroom/2024/03/apple-unveils-the-new-13-and-15-inch-macbook-air-with-the-powerful-m3-chip/)
+![MacBook Air M3 (2024)](https://www.apple.com/newsroom/images/2024/03/apple-unveils-the-new-13-and-15-inch-macbook-air-with-the-powerful-m3-chip/article/Apple-MacBook-Air-2-up-hero-240304_big.jpg.large.jpg "MacBook Air M3 (2024) from [Apple Newsroom](https://www.apple.com/newsroom/2024/03/apple-unveils-the-new-13-and-15-inch-macbook-air-with-the-powerful-m3-chip/)")
 
 With the MacBook series being recommended everywhere and the newly released MacBook Air M3, there's essentially no reason for anyone in any field to buy anything other than a MacBook — obligatory, other than the people who needs to work or use Windows-only software, games, and such. They're still stuck with these "old-gen" laptops with barely-usable battery life, which includes me.
 
@@ -40,7 +40,7 @@ With the MacBook series being recommended everywhere and the newly released MacB
 
 While Apple is busy dominating the market, it makes me wonder if non-Apple silicon laptops would ever catch up. That was until Qualcomm made an announcement for the [Snapdragon X Elite](https://www.qualcomm.com/news/releases/2023/10/qualcomm-unleashes-snapdragon-x-elite--the-ai-super-charged-plat), the chip that might take the rest of the market into the same standing ground as Apple Silicon laptops. It boasts a 10x performance increase in AI tests compared to the (also newly released) Intel chips with NPU.
 
-[![Snapdragon X Elite Infographic](https://s7d1.scene7.com/is/image/dmqualcommprod/SnapdragonXEliteSummary?$QC_Responsive$&fmt=png-alpha&wid=814 "Snapdragon X Elite from Qualcomm Official Website")](https://www.qualcomm.com/news/releases/2023/10/qualcomm-unleashes-snapdragon-x-elite--the-ai-super-charged-plat)
+![Snapdragon X Elite Infographic](https://s7d1.scene7.com/is/image/dmqualcommprod/SnapdragonXEliteSummary?$QC_Responsive$&fmt=png-alpha&wid=814 "Snapdragon X Elite from [Qualcomm](https://www.qualcomm.com/news/releases/2023/10/qualcomm-unleashes-snapdragon-x-elite--the-ai-super-charged-plat)")
 
 Honestly, I don't care too much about the performance increase, the current chips are already more than enough for most of the things that I do. It could perform 10x better than Apple's M3 chip for all I care, I wouldn't still buy it if it doesn't last as long as Apple Silicon. If it can perform reliably and consistently without needing to be plugged in after only a couple of hours, I'd be more than happy to buy one.
 
@@ -52,11 +52,8 @@ I'm pretty sure this dream laptop of mine will come someday. Until then, I'm hap
 
 ---
 
-Reference(s):
+additional references:
 
 - <https://www.theverge.com/23794761/lenovo-yoga-book-9i-review>
-- <https://www.laptopmag.com/reviews/lenovo-yoga-book-9i-review-a-near-perfect-productivity-laptop>
-- <https://www.apple.com/newsroom/2024/03/apple-unveils-the-new-13-and-15-inch-macbook-air-with-the-powerful-m3-chip/>
 - <https://news.ycombinator.com/item?id=39589924>
-- <https://www.qualcomm.com/news/releases/2023/10/qualcomm-unleashes-snapdragon-x-elite--the-ai-super-charged-plat>
 - <https://www.tomshardware.com/pc-components/cpus/arm-powered-snapdragon-x-elite-laptop-shown-outperforming-intel-core-ultra-by-up-to-10x-in-ai-tests-qualcomm-fires-early-npu-shots-at-intel>

@@ -20,4 +20,4 @@ link:
   TMDB: https://www.themoviedb.org/tv/26867
 ---
 
-![Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/8ysRHGV3URjOJT7u7NkZiFjvObk.jpg "Source: TMDB")
+![Backdrop](https://image.tmdb.org/t/p/w1280/8ysRHGV3URjOJT7u7NkZiFjvObk.jpg "Source: TMDB")

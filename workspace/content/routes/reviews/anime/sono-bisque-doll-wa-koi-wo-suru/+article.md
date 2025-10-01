@@ -21,4 +21,4 @@ link:
   TMDB: https://www.themoviedb.org/tv/123249
 ---
 
-![Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/2iYfq4Q4IXSmWXU8A4B3Py29jiB.jpg "Source: TMDB")
+![Backdrop](https://image.tmdb.org/t/p/w1280/2iYfq4Q4IXSmWXU8A4B3Py29jiB.jpg "Source: TMDB")

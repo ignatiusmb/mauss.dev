@@ -19,7 +19,7 @@ link:
 
 > [The best movie that you'll only watch once.](https://www.reddit.com/r/AskReddit/comments/j3jjom/what_movie_fucked_you_straight_in_your_feelings/g7cm9qe?context=3)
 
-![Grave of the Fireflies Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/x5SRTwGtATzvFjRZXJxmitfqH4y.jpg "Source: TMDB")
+![Grave of the Fireflies Backdrop](https://image.tmdb.org/t/p/w1280/x5SRTwGtATzvFjRZXJxmitfqH4y.jpg "Source: TMDB")
 
 ## Verdict
 

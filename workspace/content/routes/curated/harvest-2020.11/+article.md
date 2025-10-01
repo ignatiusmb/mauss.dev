@@ -19,19 +19,23 @@ Of course, whenever I encounter anything related to programming like this, I alw
 
 ### more
 
-**[Lots of Ways to Use Math.random() in JavaScript](https://css-tricks.com/lots-of-ways-to-use-math-random-in-javascript/)** — An amazing and well-written article showcasing the different uses from a simple `Math.random()` API. From animations to computer-generated music, and even generative art. Go check it out!
+**[Lots of Ways to Use Math.random() in JavaScript](https://css-tricks.com/lots-of-ways-to-use-math-random-in-javascript/)** \
+An amazing and well-written article showcasing the different uses from a simple `Math.random()` API. From animations to computer-generated music, and even generative art. Go check it out!
 
-**[Google's ReCAPTCHA Privacy Nightmare](https://hfet.org/google-recaptcha-privacy-nightmare/)** — You're forced to agree to Google's Privacy Policy on sites that uses ReCAPTCHA. Yes, by clicking on those "I'm not a robot" checkboxes, it also means you agree to their terms. Read more on the article for a thorough explanation and alternatives.
+**[Google's ReCAPTCHA Privacy Nightmare](https://hfet.org/google-recaptcha-privacy-nightmare/)** \
+You're forced to agree to Google's Privacy Policy on sites that uses ReCAPTCHA. Yes, by clicking on those "I'm not a robot" checkboxes, it also means you agree to their terms. Read more on the article for a thorough explanation and alternatives.
 
-**[Why Your Mate Think Anime is Gore ...](https://www.reddit.com/r/anime/comments/jm7w66/this_is_why_your_mates_think_anime_is_gore_filled/)** — A well researched and written essay of why Anime has such bad reputation in certain places. Included with all the sources, if you know anyone who thinks about Anime this way, you could ask them to try have an open-mind and read this essay. Even if you don't, you should at least know the history if you're in the Anime community.
+**[Why Your Mate Think Anime is Gore ...](https://www.reddit.com/r/anime/comments/jm7w66/this_is_why_your_mates_think_anime_is_gore_filled/)** \
+A well researched and written essay of why Anime has such bad reputation in certain places. Included with all the sources, if you know anyone who thinks about Anime this way, you could ask them to try have an open-mind and read this essay. Even if you don't, you should at least know the history if you're in the Anime community.
 
-**[Google's long search URL explained](https://www.reddit.com/r/explainlikeimfive/comments/jt41d9/eli5_why_is_the_url_of_google_searches_so_long/gc3g0js?context=3)** — Not really an article, but a really informative reply explaining what and why Google's search URL is so long.
+**[Google's long search URL explained](https://www.reddit.com/r/explainlikeimfive/comments/jt41d9/eli5_why_is_the_url_of_google_searches_so_long/gc3g0js?context=3)** \
+Not really an article, but a really informative reply explaining what and why Google's search URL is so long.
 
 ***
 
 ## stories
 
-![grimgar backdrop](https://image.tmdb.org/t/p/w1280/gdGALiQygd7x4MpazAEvpjB6quS.jpg "[Grimgar: Ashes and Illusions](/reviews/anime/hai-to-gensou-no-grimgar) [[TMDB](https://www.themoviedb.org/tv/65369)]")
+![grimgar backdrop](https://image.tmdb.org/t/p/w1280/gdGALiQygd7x4MpazAEvpjB6quS.jpg "[Grimgar: Ashes and Illusions](/reviews/anime/hai-to-gensou-no-grimgar) via [TMDB](https://www.themoviedb.org/tv/65369)")
 
 Probably the best Isekai Drama that will ever exist (*ahem* prove me wrong). It's truly sad that this might not ever get a second season. Yes, sorry to spoil the fun early but you deserve to know this before you get too attached to Grimgar like myself. Feel free to explore why that's the case here, but either way, this is a truly good show to watch and follow.
 
@@ -39,17 +43,20 @@ Probably the best Isekai Drama that will ever exist (*ahem* prove me wrong). It'
 
 This month is also quite slow but there's still some interesting shows I finished just in time before December starts. Here's some of my recommendations.
 
-**[Daily Lives of High School Boys](/reviews/anime/danshi-koukousei-no-nichijou)** — A contestant to last month's content, Nichijou. Their absurd humour rivals each other and really just a fun show to watch that will certainly make you laugh. It's comedy is just direct and plain funny without having to think too hard like Nichijou.
+**[Daily Lives of High School Boys](/reviews/anime/danshi-koukousei-no-nichijou)** \
+A contestant to last month's content, Nichijou. Their absurd humour rivals each other and really just a fun show to watch that will certainly make you laugh. It's comedy is just direct and plain funny without having to think too hard like Nichijou.
 
-**[KONOSUBA Movie: Legend of Crimson](/reviews/movie/konosuba-legend-of-crimson)** — One of the best animated movie (not like there's a lot of movies to begin with), especially if you follow KonoSuba from the first season and enjoyed it as much as the second season. Totally recommended for you who have watched the show, but totally not recommended if you haven't. Watch the show first before you watch this! Trust me on this.
+**[KONOSUBA Movie: Legend of Crimson](/reviews/movie/konosuba-legend-of-crimson)** \
+One of the best animated movie (not like there's a lot of movies to begin with), especially if you follow KonoSuba from the first season and enjoyed it as much as the second season. Totally recommended for you who have watched the show, but totally not recommended if you haven't. Watch the show first before you watch this! Trust me on this.
 
-**[Maquia: When the Promised Flower Blooms](/reviews/movie/maquia-when-the-promised-flower-blooms)** — Not as sad as I imagined, perhaps my expectations were a bit high because of the barrage of recommendations for this movie. But, either way this is still a good movie with a unique story.
+**[Maquia: When the Promised Flower Blooms](/reviews/movie/maquia-when-the-promised-flower-blooms)** \
+Not as sad as I imagined, perhaps my expectations were a bit high because of the barrage of recommendations for this movie. But, either way this is still a good movie with a unique story.
 
 ***
 
 ## tracks
 
-![!YouTube#hb](qU-181e-hSw "[Scared](https://music.youtube.com/watch?v=cRu_JhKPVdI) by Stonebank [[Spotify](spotify:track:7DTk1207Efq0HBUEYmbcTB)]")
+@youtube{id=qU-181e-hSw caption="[Scared](https://music.youtube.com/watch?v=cRu_JhKPVdI) by Stonebank [[Spotify](spotify:track:7DTk1207Efq0HBUEYmbcTB)]"}
 
 Another awesome release from Stonebank (a.k.a. StoneDank because the releases are always Dank). Not to mention the genre is Drum and Bass (DnB), one of my favorites in the EDM scope.
 
@@ -57,15 +64,15 @@ There's also a lot of amazing mixes released this month, be sure to check them o
 
 ### more
 
-![!YouTube#d](IVQkcd706-4 "[My Decree (feat. Micah Martin)](https://music.youtube.com/watch?v=zx4kHyX35c0) by EBEN [[Spotify](spotify:track:1St4foaXsAX3vvkXXRA0l2)]")
+@youtube{disclosure id=IVQkcd706-4 caption="[My Decree (feat. Micah Martin)](https://music.youtube.com/watch?v=zx4kHyX35c0) by EBEN [[Spotify](spotify:track:1St4foaXsAX3vvkXXRA0l2)]"}
 
 Awesome song with amazing vocals by Micah Martin. With psyched up Mob as the background, it gives off such vibes that gets you all pumped up.
 
-![!YouTube#d](y0P4znsQVYI "Violence by Tristam [[Spotify](spotify:track:2raUfi0wM6gDa3RDKNQySD)]")
+@youtube{disclosure id=y0P4znsQVYI caption="Violence by Tristam [[Spotify](spotify:track:2raUfi0wM6gDa3RDKNQySD)]"}
 
 I think [this meme](https://www.reddit.com/r/Monstercat/comments/jlx7ru/meme_everyone_hearing_violence_for_the_first_time/) from the community describes everyone who knew about Tristam well. It was such a great feeling when I first saw it, and it's also a great release.
 
-![!YouTube#d](TYxzSjAABng "[Somewhere Else (feat. Danyka Nadeau)](https://music.youtube.com/watch?v=qc6E8TZd7Ic) by MUZZ [[Spotify](spotify:track:10r998Pph8xlvZ9eUKz4mD)]")
+@youtube{disclosure id=TYxzSjAABng caption="[Somewhere Else (feat. Danyka Nadeau)](https://music.youtube.com/watch?v=qc6E8TZd7Ic) by MUZZ [[Spotify](spotify:track:10r998Pph8xlvZ9eUKz4mD)]"}
 
 Another worthy mention to MUZZ and Danyka Nadeau latest release, Somewhere Else. Such a great song and animations, it's shocking how far Monstercat releases has improved over the time.
 
@@ -73,21 +80,21 @@ Another worthy mention to MUZZ and Danyka Nadeau latest release, Somewhere Else.
 
 ## clips
 
-![!YouTube#hb](jRvxnpfCDSo "Why do you get a fever when you're sick?")
+@youtube{id=jRvxnpfCDSo caption="Why do you get a fever when you're sick?"}
 
 This is one of those videos everyone must watch no matter what their background is. Everyone can and will get sick someday, and you need to understand why and how it happens. This video explains it perfectly in around 5 minutes.
 
 ### more
 
-![!YouTube#d](thOifuHs6eY "Hexagons are the Bestagons")
+@youtube{disclosure id=thOifuHs6eY caption="Hexagons are the Bestagons"}
 
 Why hexagons are the best shapes that are proven multiple times by nature over thousands of years. Now, after you've watched this video and someone asks you what your favorite shape is, you can confidently say that it's 'hexagon'.
 
-![!YouTube#d](oXVnuG3zO_0 "Why Horseshoe Crab Blood Is So Valuable")
+@youtube{disclosure id=oXVnuG3zO_0 caption="Why Horseshoe Crab Blood Is So Valuable"}
 
 A must-watch for you science geek out there! Horseshoe crab is one of those ancient animals that you might only hear on fairy tales and legends. But, they're actually real (lol) and their blood is like magic potions for us humans.
 
-![!YouTube#d](cnplG_VLiKw "The 3 BIGGEST Lies About Good Posture (3 Myths Busted!)")
+@youtube{disclosure id=cnplG_VLiKw caption="The 3 BIGGEST Lies About Good Posture (3 Myths Busted!)"}
 
 The biggest lies about good posture, debunked by calisthenics experts! Everyone, especially if you spend most of your time sitting, whether that's in front of a computer, or in front of your TV, or really anything else that allows you to stay statically for a long time.
 

@@ -19,4 +19,4 @@ link:
   TMDB: https://www.themoviedb.org/movie/900667
 ---
 
-![Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/Ach0puWzxuO2imh1yWEUK7CGsx.jpg "Source: TMDB")
+![Backdrop](https://image.tmdb.org/t/p/w1280/Ach0puWzxuO2imh1yWEUK7CGsx.jpg "Source: TMDB")

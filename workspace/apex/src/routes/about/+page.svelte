@@ -68,15 +68,15 @@
 	<!-- prettier-ignore -->
 	<p>the human body is anatomically and physiologically designed for sustained aerobic activity. we're built for endurance, though staying active is harder than ever in a world full of conveniences. fortunately, i enjoy moving. i listen to my body and embrace the process, so movement remains a natural part of my life.</p>
 	<!-- prettier-ignore -->
-	<p><em>the basics</em> — <strong>running</strong> builds the endurance and resilience that carry into <strong>hiking</strong> and <strong>trekking</strong>. <strong>swimming</strong> is equally vital; we should move in water as naturally as we do on land. these essential foundations form the core of my physical capabilities.</p>
+	<p><em>the basics</em><br><strong>running</strong> builds the endurance and resilience that carry into <strong>hiking</strong> and <strong>trekking</strong>. <strong>swimming</strong> is equally vital; we should move in water as naturally as we do on land. these essential foundations form the core of my physical capabilities.</p>
 	<!-- prettier-ignore -->
-	<p><em>the specialized pursuits</em> — <strong>bouldering</strong> tests both body and mind through problem-solving on the wall. <strong>calisthenics</strong> builds relative strength and full body control. <strong>parkour</strong> turns the world into a playground. <strong>tricking</strong> and <strong>gymnastics</strong> expand what my body can do.</p>
+	<p><em>the specialized pursuits</em><br><strong>bouldering</strong> tests both body and mind through problem-solving on the wall. <strong>calisthenics</strong> builds relative strength and full body control. <strong>parkour</strong> turns the world into a playground. <strong>tricking</strong> and <strong>gymnastics</strong> expand what my body can do.</p>
 	<!-- prettier-ignore -->
-	<p><em>the racket-based sports</em> — <strong>table tennis</strong>, <strong>badminton</strong>, and <strong>tennis</strong>. they sharpen hand&ndash;eye coordination, agility, reflexes, and strategic thinking. they're also a good way to spend time with friends.</p>
+	<p><em>the racket-based sports</em><br><strong>table tennis</strong>, <strong>badminton</strong>, and <strong>tennis</strong>. they sharpen hand&ndash;eye coordination, agility, reflexes, and strategic thinking. they're also a good way to spend time with friends.</p>
 	<!-- prettier-ignore -->
-	<p><em>the assorted leisures</em> — <strong>cycling</strong>, <strong>ice skating</strong>, <strong>rollerblading</strong>, <strong>billiards</strong>, <strong>longboard</strong>, and <strong>caster board</strong>. they're "hard" to do often, so i enjoy them when mood or opportunity allows.</p>
+	<p><em>the assorted leisures</em><br><strong>cycling</strong>, <strong>ice skating</strong>, <strong>rollerblading</strong>, <strong>billiards</strong>, <strong>longboard</strong>, and <strong>caster board</strong>. they're "hard" to do often, so i enjoy them when mood or opportunity allows.</p>
 	<!-- prettier-ignore -->
-	<p><em>in the past</em> — i dabbled in <strong>futsal</strong>, <strong>soccer</strong>, and <strong>basketball</strong>, but none of them stuck. <strong>volleyball</strong> was fun but too tedious to arrange casually, and i found that i prefer watching it. <strong>field hockey</strong> was an interesting phase, but too niche to pursue.</p>
+	<p><em>in the past</em><br>i dabbled in <strong>futsal</strong>, <strong>soccer</strong>, and <strong>basketball</strong>, but none of them stuck. <strong>volleyball</strong> was fun but too tedious to arrange casually, and i found that i prefer watching it. <strong>field hockey</strong> was an interesting phase, but too niche to pursue.</p>
 
 	<h3 id="trivia">
 		<i data-icon="sparkle"></i>

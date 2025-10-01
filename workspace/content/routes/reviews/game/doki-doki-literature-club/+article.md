@@ -18,4 +18,4 @@ link:
   Steam: https://store.steampowered.com/app/698780/Doki_Doki_Literature_Club/
 ---
 
-![Backdrop#f#fb](https://wallpapercave.com/wp/wp2367709.png "Source: WallpaperCave")
+![Backdrop](https://wallpapercave.com/wp/wp2367709.png "Source: WallpaperCave")

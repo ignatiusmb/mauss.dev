@@ -19,4 +19,4 @@ link:
   TMDB: https://www.themoviedb.org/tv/61901
 ---
 
-![Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/3zyN1QL3xPcaitg3DXMAtSnq64y.jpg "Source: TMDB")
+![Backdrop](https://image.tmdb.org/t/p/w1280/3zyN1QL3xPcaitg3DXMAtSnq64y.jpg "Source: TMDB")

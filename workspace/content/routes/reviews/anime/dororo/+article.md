@@ -19,4 +19,4 @@ link:
   TMDB: https://www.themoviedb.org/tv/83100
 ---
 
-![Backdrop#f#fb](https://image.tmdb.org/t/p/w1280/AwB9OpmzC4sxkbu52Dzv9A7CfdG.jpg "Source: TMDB")
+![Backdrop](https://image.tmdb.org/t/p/w1280/AwB9OpmzC4sxkbu52Dzv9A7CfdG.jpg "Source: TMDB")

@@ -152,7 +152,7 @@ as a bonus convenience, i decided to try out the [`bundleStrategy: 'inline'`](ht
 
 with the new `bundleStrategy` option, SvelteKit also has a *new* way of creating SPAs, which is to set the `router.type` to `'hash'` in the `svelte.config.js` file. it disables SSR and prerendering, fully relying on client-side rendering (CSR). we're also inlining everything, which will generate a fully self-contained HTML file that can be opened in any browser, directly with the `file:` protocol without needing a server.
 
-the final HTML file is about `314 KB` in size, including the fonts. what surprises me was that using non-variable fonts resulted in a larger file size around `370 KB`, even though i made sure to only include one weight and style for each font. without fonts, the file size drops to about `97,5 KB`, which could be reduced further by removing icons and other stylistic elements. but then again, what's the point of a GUI if the UI is lacking?
+the final HTML file is about `132 KB` in size, including the fonts. what surprises me was that using non-variable fonts resulted in a larger file size.
 
 ## it's live!
 
