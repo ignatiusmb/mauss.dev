@@ -18,3 +18,5 @@ link:
   MyAnimeList: https://myanimelist.net/anime/38691
   TMDB: https://www.themoviedb.org/tv/86031
 ---
+
+@youtube{disclosure id=MFXsQ0PCfM0 caption="スイカダイジェストムービー『One Small Step of Suika』"}

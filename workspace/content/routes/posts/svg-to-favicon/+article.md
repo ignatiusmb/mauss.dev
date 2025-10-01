@@ -78,7 +78,7 @@ the bulk of the work is done by the detached `canvas` element and calling `canva
 
 all that's left is to generate the `favicon.ico` file. but, what is an `.ico` file anyway? can't i just change the extension from `.png` to `.ico`? haha, if only it was that easy. file extensions are just a convention, which is different from the actual file format.
 
-i remember back in the day, Wikipedia wasn't considered a reliable source and i had to find "proper" articles to cite. today, i can confidently read the [ICO file format](https://en.wikipedia.org/wiki/ICO_(file_format)) and learn that it's basically a container for multiple images, which can contain both PNG and BMP images, and is most commonly associated with Windows icons because.. well, it was developed by Microsoft.
+i remember back in the day, Wikipedia wasn't considered a reliable source and i had to find "proper" articles to cite. today, i can confidently read the [ICO file format](https://en.wikipedia.org/wiki/ICO_(file_format)) and learn that it's basically a container for multiple images, which can contain both PNG and BMP images, and is most commonly associated with Windows icons because... well, it was developed by Microsoft.
 
 using the `.ico` file created with GIMP as the control, it converts the image to BMP and wraps it in the ICO container. while we *usually* want a BMP image in the container for Windows icons, almost all browsers support PNG in ICO these days. PNG also takes up less space, i can reuse the `png()` function, and quality won't matter that much when the image is crammed into a `32x32` box. the only downside is that the resulting ICO will not have a preview image in Windows Explorer, but when will i ever work with `.ico` files again outside of favicons? `¯\_(ツ)_/¯`
 
@@ -134,7 +134,7 @@ notice that both `png()` and `ico()` function returns a (promised) `Blob`, which
 
 the `{#each}` block is just Svelte's syntax for iterating over an array. what matters is that the `href` is set to the string returned by `URL.createObjectURL(blob)`, which creates a temporary URL that points to the `Blob` data, and the `download` attribute is set to the desired filename which also allows the user to download the file when they click the link.
 
-### that's it.. right?
+### that's it... right?
 
 *technically*, it's done. the project is feature-complete, it's usable, and it meets all the MVP checkboxes i set for myself at the beginning. i should be done, i should've stopped here and moved on. but *i didn't*. `ಠ_ಠ`
 

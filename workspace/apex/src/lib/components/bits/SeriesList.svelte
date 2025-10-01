@@ -49,7 +49,7 @@
 		{#each window.items as { slug: link, title, chapter }}
 			<a href="/{root}/{link}" class:current={slug === link}>
 				{#if chapter}
-					<span>Chapter {chapter}</span>
+					<span>{chapter}</span>
 					<span class="separator">❃</span>
 				{/if}
 				<span>{title}</span>
