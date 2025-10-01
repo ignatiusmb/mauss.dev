@@ -8,12 +8,16 @@
 		footer?: string;
 	}
 	const { title, blurb, date, footer = '« mauss.dev »' }: Props = $props();
+
+	function balance(text: string) {
+		return text.split(' ').length > 1;
+	}
 </script>
 
 <div>
 	<section>
-		<h1>{title}</h1>
-		<p>{blurb}</p>
+		<h1 class:balance={balance(title)}>{title}</h1>
+		<p class:balance={balance(blurb)}>{blurb}</p>
 		{#if date}
 			<footer>
 				<span>Alkamauss</span>
@@ -54,13 +58,12 @@
 	h1 {
 		margin-top: auto;
 		font-size: 6rem;
-		text-wrap: balance;
 	}
 
 	p {
 		margin: 0.5rem 0 auto 0;
+		line-height: 1.25;
 		font-size: 2rem;
-		text-wrap: balance;
 	}
 
 	footer {
@@ -74,5 +77,9 @@
 		color: #c2c4cb;
 		font-size: 1.8rem;
 		transform: translateY(50%);
+	}
+
+	.balance {
+		text-wrap: balance;
 	}
 </style>
