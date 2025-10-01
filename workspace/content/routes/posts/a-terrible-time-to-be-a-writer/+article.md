@@ -38,7 +38,7 @@ commas are nice, i use them a lot. they're very easy to type in any keyboards, a
 
 that was a reference to [Jujutsu Kaisen](/reviews/anime/jujutsu-kaisen). jokes aside, now that i've watched the video though, i can't help but wonder if i should just stop using them altogether. em dashes and rule of threes in particular are the two things i like the most just because of how nicely they tie the sentence together. but, because people followed them in writing, and now that AI is trained on them as well, it's considered a red flag.
 
-there *is*.. one very obvious red flag mentioned in the video that you might've realized by now. it isn't just the use of punctuation marks, the parallel sentence structures, or the rule of threes — it's the combination and context of all of them together. (see what i did there?)
+there *is*... one very obvious red flag mentioned in the video that you might've realized by now. it isn't just the use of punctuation marks, the parallel sentence structures, or the rule of threes — it's the combination and context of all of them together. (see what i did there?)
 
 ## trust your gut
 

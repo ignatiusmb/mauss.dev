@@ -7,6 +7,7 @@ released: 2025-07-18
 genres: [anime, action, demons, supernatural, shounen]
 seen:
   first: "2025-08-16T15:20:00+07:00"
+rating: solid
 poster:
   source: tmdb
   path: aFRDH3P7TX61FVGpaLhKr6QiOC1.jpg

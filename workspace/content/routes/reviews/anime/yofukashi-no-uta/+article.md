@@ -19,3 +19,5 @@ link:
   MyAnimeList: https://myanimelist.net/anime/50346
   TMDB: https://www.themoviedb.org/tv/138357
 ---
+
+the wandering mind always ends up discontent with your current life - S2E11T06:36

@@ -79,7 +79,7 @@ This commit message could have been easily written as `fix bug`, `add whitespace
   It goes into detail about what the problem is, the process of debugging and fixing it, and the last line reminds us that there's another human being behind every commit. We can feel Dan's frustration and his satisfaction after finally solving it.
 
   ```
-  Now the tests work! One hour of my life I won't get back..
+  Now the tests work! One hour of my life I won't get back...
   ```
 
 ### Commit messages matter

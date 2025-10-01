@@ -20,3 +20,5 @@ link:
 ---
 
 ![Backdrop](https://image.tmdb.org/t/p/w1280/5lAMQMWpXMsirvtLLvW7cJgEPkU.jpg "Source: TMDB")
+
+@youtube{disclosure id=vbUqTGZTe8s caption="Why We Can't Stop Hating Ourselves (A Silent Voice)"}
