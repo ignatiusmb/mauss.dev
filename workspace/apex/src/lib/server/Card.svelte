@@ -8,16 +8,13 @@
 		footer?: string;
 	}
 	const { title, blurb, date, footer = '« mauss.dev »' }: Props = $props();
-
-	function balance(text: string) {
-		return text.split(' ').length > 1;
-	}
+	const count = (text: string) => text.split(' ').length;
 </script>
 
 <div>
 	<section>
-		<h1 class:balance={balance(title)}>{title}</h1>
-		<p class:balance={balance(blurb)}>{blurb}</p>
+		<h1 class:balance={count(title) > 1}>{title}</h1>
+		<p class:balance={count(blurb) > 1}>{blurb}</p>
 		{#if date}
 			<footer>
 				<span>Alkamauss</span>

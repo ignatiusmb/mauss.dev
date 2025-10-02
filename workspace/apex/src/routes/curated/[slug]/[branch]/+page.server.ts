@@ -16,6 +16,8 @@ export async function load({ parent, params }) {
 		meta: {
 			canonical: `/curated/${article.slug}/${params.branch}`,
 			title: article.title,
+			description: article.description || '',
+			image: `https://mauss.dev/curated/${article.slug}/card.png`,
 		},
 	};
 }
