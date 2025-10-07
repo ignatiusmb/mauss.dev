@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Project from './Project.svelte';
+	import { write } from '$lib/prose';
 
 	const alkamauss = $state({
 		atelier: true,
@@ -53,23 +54,16 @@
 			<img src="/favicon.svg" alt="Alkamauss logo" />
 		{/snippet}
 
-		<!-- prettier-ignore -->
-		<p><strong>the digital atelier — where it all starts</strong>. a personal workspace and reference, the ideas that grew with my needs, the dumps from my mind, the curated content i wished i had, the list of things that i care about, everything i cherished in one place. a living archive.</p>
-		<ul>
-			<!-- prettier-ignore -->
-			<li>kept the <a href="https://github.com/ignatiusmb/mauss.dev">codebase</a> lean and current for around <em>{ongoing} years</em> now</li>
-			<li>developed a personal design system, with responsive and native css workflows</li>
-			<li>hand-crafted svg logos and favicons, every path and shape written from scratch</li>
-			<!-- @TODO: see /help#colophon -->
-			<!-- prettier-ignore -->
-			<!-- <li>integrated <a href="https://svelte.dev">sveltekit</a> with <a href="https://pocketbase.io">pocketbase</a> for full-stack, server-side workflows</li> -->
-			<li>experimented with git submodules — not the way to go</li>
-			<li>maintained a monorepo with clean internal tooling and streamlined workflows</li>
-			<!-- prettier-ignore -->
-			<li>evolved best practices for javascript and ts — later distilled into <a href="#mauss">mauss</a></li>
-			<!-- prettier-ignore -->
-			<li>evolved best practices for svelte and kit — later distilled into <a href="#syv">syv</a></li>
-		</ul>
+		{@html write(
+			'**the digital atelier — where it all starts**. a personal workspace and reference, the ideas that grew with my needs, the dumps from my mind, the curated content i wished i had, the list of things that i care about, everything i cherished in one place. a living archive.',
+			`- kept the [codebase](https://github.com/ignatiusmb/mauss.dev) lean and current for around **${ongoing} years** now`,
+			'- developed a personal design system, with responsive and native css workflows',
+			'- hand-crafted svg logos and favicons, every path and shape written from scratch',
+			'- experimented with git submodules — not the way to go',
+			'- maintained a monorepo with clean internal tooling and streamlined workflows',
+			'- evolved best practices for JS and TS — later distilled into [mauss](#mauss)',
+			'- evolved best practices for Svelte and Kit — later distilled into [syv](#syv)',
+		)}
 	</Project>
 
 	<Project
@@ -82,17 +76,16 @@
 			<img src="https://aubade.mauss.dev/favicon.svg" alt="Aubade logo" />
 		{/snippet}
 
-		<!-- prettier-ignore -->
-		<p><strong>markdown, orchestrated</strong>. Aubade turns your markdown and its sibling assets into structured data, treating the filesystem as a database you fully control and can preserve long-term.</p>
-		<ul>
-			<li>built a recursive file reader that transforms directories into structured JSON</li>
-			<li>wrote a minimal, dependency-free YAML-like parser from scratch</li>
-			<li>implemented safe, static metadata injection directly into markdown content</li>
-			<li>designed a table of contents generator with nested, stable heading anchors</li>
-			<li>wrote a transformer that links sibling entries in a sorted list</li>
-			<li>explored static code highlighting with zero runtime cost</li>
-			<li>no-build native JS with JSDoc is nice, but writing TS with strict inference is better</li>
-		</ul>
+		{@html write(
+			'**markdown, orchestrated**. Aubade turns your markdown and its sibling assets into structured data, treating the filesystem as a database you fully control and can preserve long-term.',
+			'- built a recursive file reader that transforms directories into structured JSON',
+			'- wrote a minimal, dependency-free YAML-like parser from scratch',
+			'- implemented safe, static metadata injection directly into markdown content',
+			'- designed a table of contents generator with nested, stable heading anchors',
+			'- wrote a transformer that links sibling entries in a sorted list',
+			'- explored static code highlighting with zero runtime cost',
+			'- no-build native JS with JSDoc is nice, but writing TS with strict inference is better',
+		)}
 	</Project>
 
 	<Project
@@ -105,17 +98,14 @@
 			<img src="/favicon.svg" alt="Alkamauss logo" />
 		{/snippet}
 
-		<!-- prettier-ignore -->
-		<p><strong>minimal SVG to favicon generator</strong>. generates a complete favicon set from a single SVG, <a href="/posts/svg-to-favicon">read more</a>.</p>
-		<ul>
-			<li>explored SVG-to-raster conversion using canvas</li>
-			<li>wrote a pure JavaScript ICO encoder that embeds a PNG file</li>
-			<li>built a minimal interface for uploading and downloading assets</li>
-			<li>wrote a pure JavaScript ZIP archiver to bundle the generated files</li>
-			<li>
-				explored SvelteKit's <code>bundleStrategy: 'inline'</code> for a self-contained HTML file
-			</li>
-		</ul>
+		{@html write(
+			'**minimal SVG to favicon generator**. generates a complete favicon set from a single SVG, [read more](/posts/svg-to-favicon).',
+			'- explored SVG-to-raster conversion using canvas',
+			'- wrote a pure JavaScript ICO encoder that embeds a PNG file',
+			'- built a minimal interface for uploading and downloading assets',
+			'- wrote a pure JavaScript ZIP archiver to bundle the generated files',
+			"- explored SvelteKit's `bundleStrategy: 'inline'` for a self-contained HTML file",
+		)}
 	</Project>
 
 	<h3>
@@ -138,16 +128,15 @@
 			<i data-image="npm"></i>
 		{/snippet}
 
-		<!-- prettier-ignore -->
-		<p><strong>practical functions and reusable configurations</strong>. lightweight utilities for modern JavaScript and TypeScript with zero dependencies, designed for clarity and composability with minimal runtime footprint.</p>
-		<ul>
-			<li>finally cracked shared config: one install, one link, and it's good to go</li>
-			<li>learned how to design functional utilities that stay pure and composable</li>
-			<li>figured out clean patterns for making utilities SSR-safe by default</li>
-			<li>explored tree-shakeability and how to enforce it through structure</li>
-			<li>organized modules by concern, not by type — clarity over convention</li>
-			<li>refined my taste for naming, defaults, and safe fallback behaviors</li>
-		</ul>
+		{@html write(
+			'**practical functions and reusable configurations**. lightweight utilities for modern JavaScript and TypeScript with zero dependencies, designed for clarity and composability with minimal runtime footprint.',
+			"- finally cracked shared config: one install, one link, and it's good to go",
+			'- learned how to design functional utilities that stay pure and composable',
+			'- figured out clean patterns for making utilities SSR-safe by default',
+			'- explored tree-shaking compat and how to enforce it through structure',
+			'- organized modules by concern, not by type — clarity over convention',
+			'- refined my taste for naming, defaults, and safe fallback behaviors',
+		)}
 	</Project>
 	<Project
 		link="https://www.npmjs.com/package/syv"
@@ -159,15 +148,14 @@
 			<i data-image="npm"></i>
 		{/snippet}
 
-		<!-- prettier-ignore -->
-		<p><strong>practical svelte components and utilities</strong>. lightweight, idiomatic building blocks with thoughtful APIs: not just reusable, but adaptable. each piece shaped by real needs and refined until it disappears into the flow of the app.</p>
-		<ul>
-			<li>designed intuitive submodules to keep the scope focused and scalable</li>
-			<li>prioritized SSR-first and progressive enhancement from the start</li>
-			<li>learned how to build components that feel native to Svelte, not bolted on</li>
-			<li>built single-purpose drop-ins that quietly do everything they should</li>
-			<li>shaped APIs to balance clean abstraction with hands-on control</li>
-		</ul>
+		{@html write(
+			'**practical Svelte components and utilities**. lightweight, idiomatic building blocks with thoughtful APIs: not just reusable, but adaptable. each piece shaped by real needs and refined until it disappears into the flow of the app.',
+			'- designed intuitive submodules to keep the scope focused and scalable',
+			'- prioritized SSR-first and progressive enhancement from the start',
+			'- learned how to build components that feel native to Svelte, not bolted on',
+			'- built single-purpose drop-ins that quietly do everything they should',
+			'- shaped APIs to balance clean abstraction with hands-on control',
+		)}
 	</Project>
 	<Project
 		link="https://www.npmjs.com/package/prettier-plugin-sort-package-json"
@@ -179,15 +167,14 @@
 			<i data-image="npm"></i>
 		{/snippet}
 
-		<!-- prettier-ignore -->
-		<p><strong>opinionated formatting powered by Prettier</strong>. made to keep <code>package.json</code> files clean and consistent, it sorts top-level keys in the order that i think makes sense, and exposes a parser for package-like files with different names.</p>
-		<ul>
-			<li>learned how Prettier's plugin system works under the hood</li>
-			<li>figured out how to support custom files without muddying user config</li>
-			<li>felt the quiet joy of something that just works — and never thinking about it again</li>
-		</ul>
-		<!-- prettier-ignore -->
-		<p>part of <a href="https://github.com/ignatiusmb/prettier-plugin-suite">ignatiusmb/prettier-plugin-suite</a></p>
+		{@html write(
+			'**opinionated formatting powered by Prettier**. made to keep `package.json` files clean and consistent, it sorts top-level keys in the order that i think makes sense, and exposes a parser for package-like files with different names.',
+			"- learned how Prettier's plugin system works under the hood",
+			'- figured out how to support custom files without muddying user config',
+			'- felt the joy of something that just works, never needing to think about it again',
+			'',
+			'part of [ignatiusmb/prettier-plugin-suite](https://github.com/ignatiusmb/prettier-plugin-suite)',
+		)}
 	</Project>
 	<Project
 		link="https://www.npmjs.com/package/@ignatiusmb/styles"
@@ -199,12 +186,11 @@
 			<i data-image="npm"></i>
 		{/snippet}
 
-		<!-- prettier-ignore -->
-		<p><strong>my base stylesheet — a minimal, opinionated layer of typographic and layout defaults</strong>. a tiny css file that i reach for in every project for a clean and consistent styling. it's my reset and my design sense in single file.</p>
-		<ul>
-			<li>refined my baseline styles into something i could reuse everywhere</li>
-			<li>learned how little css you actually need to feel at home in a new project</li>
-		</ul>
+		{@html write(
+			"**a minimal, opinionated layer of typographic and layout defaults**. a tiny CSS file that i reach for in nearly every project for a clean and consistent styling. it's my reset and design sense in a single file.",
+			'- refined my baseline styles into something i could reuse everywhere',
+			'- learned how little css you actually need to feel at home in a new project',
+		)}
 	</Project>
 
 	<h3>
@@ -227,11 +213,10 @@
 			<i data-image="github"></i>
 		{/snippet}
 
-		<!-- prettier-ignore -->
-		<p><strong>a personal starter template — download, unzip, and start building</strong>. it's the setup i reach for every time. it's got everything i need, and nothing i don't.</p>
-		<ul>
-			<li>trimmed setup scripts, config files, and folder structure down to the essentials</li>
-		</ul>
+		{@html write(
+			"**a personal starter template — download, unzip, and start building**. it's the setup i reach for every time. it's got everything i need, and nothing i don't.",
+			'- trimmed setup scripts, config files, and folder structure down to the essentials',
+		)}
 	</Project>
 </div>
 
@@ -243,7 +228,7 @@
 		text-wrap: balance;
 	}
 
-	#layout {
+	#layout :global {
 		max-width: 80ch;
 		width: 100%;
 		display: grid;
@@ -283,6 +268,7 @@
 
 		ul {
 			padding-left: 1.25rem;
+			margin: 0;
 		}
 	}
 

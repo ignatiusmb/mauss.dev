@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Piece from '$lib/components/Piece.svelte';
 	import { date } from 'mauss';
+	import { write } from '$lib/prose';
 
 	const { data } = $props();
 	const indexes = [
@@ -37,8 +38,9 @@
 			<i data-icon="lifebuoy"></i>
 			<span>/help</span>
 		</h2>
-		<!-- prettier-ignore -->
-		<p style:margin-top="0">surfing the web is like sailing the sea, and this site is my small island in the vast ocean. i know how daunting new shores can feel — that's why i've set a <a href="/help">safe harbor</a> here. you'll find the <a href="/help#index">Dockside Chart</a> to get your bearings and follow the paths already charted for you. if things ever feel unclear, you can always return to the harbor and consult the chart.</p>
+		{@html write(
+			"surfing the web is like sailing the sea, and this site is my small island in the vast ocean. i know how daunting new shores can feel — that's why i've set a [safe harbor](/help) here. you'll find the [Dockside Chart](/help#index) to get your bearings and follow the paths already charted for you. if things ever feel unclear, you can always return to the harbor and consult the chart.",
+		)}
 	</section>
 </Piece>
 
