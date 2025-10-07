@@ -133,7 +133,7 @@
 			"- finally cracked shared config: one install, one link, and it's good to go",
 			'- learned how to design functional utilities that stay pure and composable',
 			'- figured out clean patterns for making utilities SSR-safe by default',
-			'- explored tree-shakeability and how to enforce it through structure',
+			'- explored tree-shaking compat and how to enforce it through structure',
 			'- organized modules by concern, not by type — clarity over convention',
 			'- refined my taste for naming, defaults, and safe fallback behaviors',
 		)}
@@ -168,7 +168,7 @@
 		{/snippet}
 
 		{@html write(
-			'**opinioned formatting powered by Prettier**. made to keep `package.json` files clean and consistent, it sorts top-level keys in the order that i think makes sense, and exposes a parser for package-like files with different names.',
+			'**opinionated formatting powered by Prettier**. made to keep `package.json` files clean and consistent, it sorts top-level keys in the order that i think makes sense, and exposes a parser for package-like files with different names.',
 			"- learned how Prettier's plugin system works under the hood",
 			'- figured out how to support custom files without muddying user config',
 			'- felt the joy of something that just works, never needing to think about it again',
