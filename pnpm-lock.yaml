@@ -30,8 +30,8 @@ importers:
         specifier: ^24.3.1
         version: 24.3.1
       aubade:
-        specifier: ^0.11.3
-        version: 0.11.3
+        specifier: ^0.11.4
+        version: 0.11.4
       mauss:
         specifier: ^0.10.7
         version: 0.10.7
@@ -709,8 +709,8 @@ packages:
   async-sema@3.1.1:
     resolution: {integrity: sha512-tLRNUXati5MFePdAk8dw7Qt7DpxPB60ofAgn8WRhW6a2rcimZnYBP9oxHiv0OHy+Wz7kPMG+t4LGdt31+4EmGg==}
 
-  aubade@0.11.3:
-    resolution: {integrity: sha512-QL+C6MtGuO5qTzlRYU4Py12EUDVEj/Xgk5nXJ/bkbssaSXEUcWXVq3MU0/bE8RDudh1rYqmX/hKTzNoHHpDD8g==}
+  aubade@0.11.4:
+    resolution: {integrity: sha512-s8uBnEmKJuUreXe25IyqLY+eb2rzJUmneVVy2aazdaO2SNScMuP0nGb2f65hUHDxpfi3TSjmTgSWOQf2bGqxxQ==}
     engines: {node: '>=16.13'}
 
   axobject-query@4.1.0:
@@ -1820,7 +1820,7 @@ snapshots:
 
   async-sema@3.1.1: {}
 
-  aubade@0.11.3:
+  aubade@0.11.4:
     dependencies:
       '@types/markdown-it': 14.1.2
       markdown-it: 14.1.0

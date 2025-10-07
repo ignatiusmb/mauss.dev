@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Index from '$lib/components/Index.svelte';
 	import Piece from '$lib/components/Piece.svelte';
+	import { write } from '$lib/prose';
 	const principles: {
 		icon: string;
 		id: string;
@@ -91,8 +92,9 @@
 </header>
 
 <Piece>
-	<!-- prettier-ignore -->
-	<p>this page outlines how this site operates and where it stands. it's not legalese — just a clear statement of the principles beneath it. i believe in transparency, and if you're spending time here, it's only fair you know the ground it's built on.</p>
+	{@html write(
+		"this page outlines how this site operates and where it stands. it's not legalese — just a clear statement of the principles beneath it. i believe in transparency, and if you're spending time here, it's only fair you know the ground it's built on.",
+	)}
 
 	<Index
 		summary="Principles"
@@ -107,7 +109,7 @@
 				<span>{title}</span>
 			</h2>
 			{#each content as text}
-				<p>{text}</p>
+				{@html write(text)}
 			{/each}
 		{/each}
 	{/each}

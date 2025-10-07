@@ -3,6 +3,7 @@
 	import Backdrop from '../Backdrop.svelte';
 	import LinkSpread from './LinkSpread.svelte';
 	import { page } from '$app/state';
+	import { write } from '$lib/prose';
 
 	const { data } = $props();
 </script>
@@ -20,8 +21,9 @@
 		{@const idx = page.url.pathname.lastIndexOf('/')}
 
 		<section data-info="warning" style:margin-bottom="1rem">
-			<!-- prettier-ignore -->
-			<p><em><strong>spoiler warning!</strong> this is a deeper look into the story and everything the {page.params.category} has to offer. if you haven't finished it yet and came here by accident, you might want to go back and finish the story first.</em></p>
+			{@html write(
+				`***spoiler warning!** this is a deeper look into the story and everything the ${page.params.category} has to offer. if you haven't finished it yet and came here by accident, you might want to go back and finish the story first.*`,
+			)}
 
 			<a href={page.url.pathname.slice(0, idx)}>
 				<i data-icon="hand-pointing"></i>

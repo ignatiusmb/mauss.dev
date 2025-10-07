@@ -2,6 +2,7 @@
 	import Index from '$lib/components/Index.svelte';
 	import Piece from '$lib/components/Piece.svelte';
 	import { page } from '$app/state';
+	import { write } from '$lib/prose';
 </script>
 
 <header>
@@ -10,15 +11,14 @@
 </header>
 
 <Piece>
-	<!-- prettier-ignore -->
-	<p><strong>welcome</strong> — you've made port at the harbor of my digital garden, a kind of virtual abode nestled in a quiet corner of the internet. i hope this page can be your guiding compass, should you lose your bearings or wonder where to go next.</p>
-	<!-- prettier-ignore -->
-	<p>the garden is always <em>under construction</em>, slowly taking shape as i plant new seeds and tend old growth. in time, whether wandered by many or none, it may become a garden worth returning to.</p>
+	{@html write(
+		"**welcome** — you've made port at the harbor of my digital garden, a kind of virtual abode nestled in a quiet corner of the internet. i hope this page can be your guiding compass, should you lose your bearings or wonder where to go next.",
+		'',
+		'the garden is always *under construction*, slowly taking shape as i plant new seeds and tend old growth. in time, whether wandered by many or none, it may become a garden worth returning to.',
+		'***',
+		"the index is a *collapsible* overview of the page and a way to jump between sections or sub-sections. you'll mostly see this in articles with headings, so you can navigate with ease.",
+	)}
 
-	<hr />
-
-	<!-- prettier-ignore -->
-	<p>the index is a <em>collapsible</em> overview of the page and a way to jump between sections or sub-sections. you'll mostly see this in articles with headings, so you can navigate with ease.</p>
 	<Index
 		summary="Dockside Chart"
 		items={[
@@ -48,178 +48,101 @@
 		<i data-icon="flask"></i>
 		<a href="/atelier">/atelier</a>
 	</h2>
-	<!-- prettier-ignore -->
-	<p>the gallery for my digital garden. it's still sparse at the moment — there are seedlings i'm still tending to behind the scenes; some are just beginning to root, and a few shy ones are waiting for their time to open. for now, these are the ones that have bloomed.</p>
+	{@html write(
+		"the gallery for my digital garden. it's still sparse at the moment — there are seedlings i'm still tending to behind the scenes; some are just beginning to root, and a few shy ones are waiting for their time to open. for now, these are the ones that have bloomed.",
+	)}
 
 	<h2 id="curated">
 		<i data-icon="bookmarks"></i>
 		<a href="/curated">/curated</a>
 	</h2>
-	<!-- prettier-ignore -->
-	<p>this index is where i keep recurring series and entries that aren't bound to the time they were written — pieces that hold up no matter when they're read. marked by lasting relevance, not by urgency, each one is meant to hold meaning long after the moment has passed.</p>
+	{@html write(
+		"this index is where i keep recurring series and entries that aren't bound to the time they were written — pieces that hold up no matter when they're read. marked by lasting relevance, not by urgency, each one is meant to hold meaning long after the moment has passed.",
+	)}
 
 	<h3 id="curated-essence">
 		<i data-icon="drop"></i>
 		<a href="/curated?series=the-essence">essence</a>
 	</h3>
-	<!-- prettier-ignore -->
-	<p>a collection of distilled articles on the essence of a topic — clear, concise guides to core concepts, in a nutshell. these are the things i want to keep close. each piece stands on its own, so pick any topic and dive straight in.</p>
+	{@html write(
+		'a collection of distilled articles on the essence of a topic — clear, concise guides to core concepts, in a nutshell. these are the things i want to keep close. each piece stands on its own, so pick any topic and dive straight in.',
+	)}
 
 	<h3 id="curated-harvest">
 		<i data-icon="basket"></i>
 		<a href="/curated?series=the-harvest">harvest</a>
 	</h3>
-	<!-- prettier-ignore -->
-	<p>this series is a monthly snapshot of memorable experiences. making this <em>monthly digest</em> at the start of each month helps me reflect on what has passed; to record what i've learned and preserve the moments that stayed with me. it's also a way to share what i found meaningful, in hopes that something here might resonate with you.</p>
-	<table>
-		<thead>
-			<tr>
-				<th>section</th>
-				<th>description</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<th scope="col">headlines</th>
-				<!-- prettier-ignore -->
-				<td>personal moments and global happenings; news, milestones, and cultural shifts that stood out and shaped the month</td>
-			</tr>
-			<tr>
-				<th scope="col">stories</th>
-				<!-- prettier-ignore -->
-				<td>the lives and worlds i stepped into; mostly anime and movies, but open to any medium that tells a compelling story</td>
-			</tr>
-			<tr>
-				<th scope="col">pieces</th>
-				<!-- prettier-ignore -->
-				<td>articles, essays, and posts; thoughtful writing that lingered in my head or stirred something within me</td>
-			</tr>
-			<tr>
-				<th scope="col">tracks</th>
-				<!-- prettier-ignore -->
-				<td>music that stayed with me; sounds and songs that guide my mood throughout the month</td>
-			</tr>
-			<tr>
-				<th scope="col">clips</th>
-				<!-- prettier-ignore -->
-				<td>videos worth remembering; spontaneous finds full of insight, craft, or pure delight</td>
-			</tr>
-		</tbody>
-	</table>
+	{@html write(
+		"this series is a monthly snapshot of memorable experiences. making this *monthly digest* at the start of each month helps me reflect on what has passed; to record what i've learned and preserve the moments that stayed with me. it's also a way to share what i found meaningful, in hopes that something here might resonate with you.",
+		'',
+		'| section | description |',
+		'| ------- | ----------- |',
+		'| **headlines** | personal moments and global happenings; news, milestones, and cultural shifts that stood out and shaped the month |',
+		'| **stories** | the lives and worlds i stepped into; mostly anime and movies, but open to any medium that tells a compelling story |',
+		'| **pieces** | articles, essays, and posts; thoughtful writing that lingered in my head or stirred something within me |',
+		'| **tracks** | music that stayed with me; sounds and songs that guide my mood throughout the month |',
+		'| **clips** | videos worth remembering; spontaneous finds full of insight, craft, or pure delight |',
+	)}
 
 	<h2 id="posts">
 		<i data-icon="feather"></i>
 		<a href="/posts">/posts</a>
 	</h2>
-	<!-- prettier-ignore -->
-	<p>this index is where i gather passing thoughts and small revelations — a journal of the days as they unfold. some entries are personal reflections, others trace my work and technical curiosities. i write to understand, remember, and leave a trail through the thoughts that shaped me.</p>
+	{@html write(
+		'this index is where i gather passing thoughts and small revelations — a journal of the days as they unfold. some entries are personal reflections, others trace my work and technical curiosities. i write to understand, remember, and leave a trail through the thoughts that shaped me.',
+	)}
 
 	<h3 id="posts-themes">
 		<i data-icon="swatches"></i>
 		<span>themes</span>
 	</h3>
-	<!-- prettier-ignore -->
-	<p>these are loose trails to help you find the piece you're in the mood for. i keep them broad enough to cover various topics, but specific enough to give you a sense of what to expect.</p>
-	<table>
-		<thead>
-			<tr>
-				<th>theme</th>
-				<th>description</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<th scope="col"><a href="/posts?theme=reflection">reflection</a></th>
-				<!-- prettier-ignore -->
-				<td><strong>personal thoughts or reflections</strong>. introspective pieces that explore feelings, experiences, and lessons learned. often more emotional and subjective, capturing a moment in time rather than building a polished argument</td>
-			</tr>
-			<tr>
-				<th scope="col"><a href="/posts?theme=essay">essay</a></th>
-				<!-- prettier-ignore -->
-				<td><strong>opinionated long-form exploration</strong>. well-researched and refined deep dives into a topic, shaped by my own perspective. i aim for accuracy, but i may still get things wrong</td>
-			</tr>
-			<tr>
-				<th scope="col"><a href="/posts?theme=guide">guide</a></th>
-				<!-- prettier-ignore -->
-				<td><strong>practical instructions or behind-the-scenes</strong>. how-to articles or devlogs of my own workflow and problem-solving. follow along, adapt ideas, and apply what you learn</td>
-			</tr>
-			<tr>
-				<th scope="col"><a href="/posts?theme=moment">moment</a></th>
-				<!-- prettier-ignore -->
-				<td><strong>brief observation or thought</strong>. sometimes unrefined, short, spontaneous notes or insights. they may grow into something more substantial over time</td>
-			</tr>
-			<tr>
-				<th scope="col"><a href="/posts?theme=archive">archive</a></th>
-				<!-- prettier-ignore -->
-				<td><strong>republished or preserved</strong>. pieces kept for reference, whether old articles or other material worth keeping. they may be unpolished, but they hold value in their own way</td>
-			</tr>
-			<tr>
-				<th scope="col"><a href="/posts?theme=pending">pending</a></th>
-				<!-- prettier-ignore -->
-				<td><strong>awaiting theme assignment</strong>. temporary placeholder for posts that haven't yet been given a theme. they will eventually be classified under one of the categories above</td>
-			</tr>
-		</tbody>
-	</table>
+	{@html write(
+		"these are loose trails to help you find the piece you're in the mood for. i keep them broad enough to cover various topics, but specific enough to give you a sense of what to expect.",
+		'',
+		'| theme | description |',
+		'| ----- | ----------- |',
+		'| [reflection](/posts?theme=reflection) | **personal thoughts or reflections**. introspective pieces that explore feelings, experiences, and lessons learned. often more emotional and subjective, capturing a moment in time rather than building a polished argument |',
+		'| [essay](/posts?theme=essay) | **opinionated long-form exploration**. well-researched and refined deep dives into a topic, shaped by my own perspective. i aim for accuracy, but i may still get things wrong |',
+		'| [guide](/posts?theme=guide) | **practical instructions or behind-the-scenes**. how-to articles or devlogs of my own workflow and problem-solving. follow along, adapt ideas, and apply what you learn |',
+		'| [moment](/posts?theme=moment) | **brief observation or thought**. sometimes unrefined, short, spontaneous notes or insights. they may grow into something more substantial over time |',
+		'| [archive](/posts?theme=archive) | **republished or preserved**. pieces kept for reference, whether old articles or other material worth keeping. they may be unpolished, but they hold value in their own way |',
+	)}
 
 	<h2 id="reviews">
 		<i data-icon="flower-lotus"></i>
 		<a href="/reviews">/reviews</a>
 	</h2>
-	<!-- prettier-ignore -->
-	<p>this index is where i try to capture my reflections from my own experiences. seeing the world through a kaleidoscope — reflections refracted through a shifting lens. i write not to dictate your view, but to share mine in order to better understand the stories and moments that moved me.</p>
+	{@html write(
+		'this index is where i try to capture my reflections from my own experiences. seeing the world through a kaleidoscope — reflections refracted through a shifting lens. i write not to dictate your view, but to share mine in order to better understand the stories and moments that moved me.',
+	)}
 
 	<h3 id="reviews-style">
 		<i data-icon="aperture"></i>
 		<span>style</span>
 	</h3>
-	<!-- prettier-ignore -->
-	<p>i believe stories are best experienced blind — you'll find no spoilers here, not even summaries or plot breakdowns. i try to preserve the surprise and emotional weight, so you (or future me) can enter each story with the same excitement i did.</p>
-	<!-- prettier-ignore -->
-	<p>for anime, i usually give it three or four episodes — just enough for a vibe check before deciding whether to continue or drop it. if you prefer knowing the premise first, i've linked sources like MyAnimeList, <abbr title="The Movie Database">TMDB</abbr>, <abbr title="Internet Movie Database">IMDb</abbr>, and other relevant pages on each review.</p>
-	<!-- prettier-ignore -->
-	<p>if you've already seen it or are curious about what it reveals, most entries include a <strong>/deep-dive</strong> sub-page where i unpack the story and reflect more freely.</p>
+	{@html write(
+		"i believe stories are best experienced blind — you'll find no spoilers here, not even summaries or plot breakdowns. i try to preserve the surprise and emotional weight, so you (or future me) can enter each story with the same excitement i did.",
+		'',
+		"for anime, i usually give it three or four episodes — just enough for a vibe check before deciding whether to continue or drop it. if you prefer knowing the premise first, i've linked sources like MyAnimeList, TMDB, IMDb, and other relevant pages on each review.",
+		'',
+		"if you've already seen it or are curious about what it reveals, most entries include a **/deep-dive** sub-page where i unpack the story and reflect more freely.",
+	)}
 
 	<h3 id="reviews-tiers">
 		<i data-icon="stairs"></i>
 		<span>tiers</span>
 	</h3>
-	<!-- prettier-ignore -->
-	<p>these are a rough shape of my feelings toward each of them — i think of them as shelves rather than strict rankings. sometimes it's about how <em>visually</em> stunning they were, other times it's how well they captured a feeling or adapted a story. i try to keep it simple, so you can get a quick sense of what stood out to me.</p>
-	<table>
-		<thead>
-			<tr>
-				<th>tier</th>
-				<th>description</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<th scope="col"><a href="/reviews?tier=S">S</a></th>
-				<!-- prettier-ignore -->
-				<td><strong>stellar animation and exceptional adaptation</strong>. the ones that make everything else feel dim by comparison. the direction feels impossibly refined. they come closest to my definition of a masterpiece</td>
-			</tr>
-			<tr>
-				<th scope="col"><a href="/reviews?tier=A">A</a></th>
-				<!-- prettier-ignore -->
-				<td><strong>highly polished and excellent across the board</strong>. impressive, with many standout moments and a lasting impact. they deliver a cohesive, admirable experience. perhaps given more time, care, or stronger source material, they might've reached S-tier</td>
-			</tr>
-			<tr>
-				<th scope="col"><a href="/reviews?tier=B">B</a></th>
-				<!-- prettier-ignore -->
-				<td><strong>solid works with occasional highs</strong>. reliable, with great ideas or standout moments, but something doesn't quite click. adaptation is often safe or straightforward. the kind of good average many aim for</td>
-			</tr>
-			<tr>
-				<th scope="col"><a href="/reviews?tier=C">C</a></th>
-				<!-- prettier-ignore -->
-				<td><strong>watchable but flawed</strong>. had potential, but didn't do justice to it. there might be a few good scenes or ideas, but the issues are hard to ignore, and it ultimately feels like a miss. still interesting, sometimes, for what they <em>tried</em> to do</td>
-			</tr>
-			<tr>
-				<th scope="col"><a href="/reviews?tier=D">D</a></th>
-				<!-- prettier-ignore -->
-				<td><strong>poor execution, wasted potential</strong>. the ones i struggled to finish, or couldn't. even if the core story is good, the execution actively works against it. often messy, incoherent, or just off in ways i couldn't bear. usually a frustrating or forgettable experience</td>
-			</tr>
-		</tbody>
-	</table>
+	{@html write(
+		"these are a rough shape of my feelings toward each of them — i think of them as shelves rather than strict rankings. sometimes it's about how *visually* stunning they were, other times it's how well they captured a feeling or adapted a story. i try to keep it simple, so you can get a quick sense of what stood out to me.",
+		'',
+		'| tier | description |',
+		'| ---- | ----------- |',
+		'| [*S](/reviews?tier=S) | **stellar animation and exceptional adaptation**. the ones that make everything else feel dim by comparison. the direction feels impossibly refined. they come closest to my definition of a masterpiece |',
+		"| [*A](/reviews?tier=A) | **highly polished and excellent across the board**. impressive, with many standout moments and a lasting impact. they deliver a cohesive, admirable experience. perhaps given more time, care, or stronger source material, they might've reached S-tier |",
+		"| [*B](/reviews?tier=B) | **solid works with occasional highs**. reliable, with great ideas or standout moments, but something doesn't quite click. adaptation is often safe or straightforward. the kind of good average many aim for |",
+		"| [*C](/reviews?tier=C) | **watchable but flawed**. had potential, but didn't do justice to it. there might be a few good scenes or ideas, but the issues are hard to ignore, and it ultimately feels like a miss. still interesting, sometimes, for what they *tried* to do |",
+		"| [*D](/reviews?tier=D) | **poor execution, wasted potential**. the ones i struggled to finish, or couldn't. even if the core story is good, the execution actively works against it. often messy, incoherent, or just off in ways i couldn't bear. usually a frustrating or forgettable experience |",
+	)}
 
 	<h3 id="reviews-attributions">
 		<i data-icon="certificate"></i>
@@ -231,8 +154,9 @@
 		style:border-radius="0"
 		style:margin-top="1rem"
 	/>
-	<!-- prettier-ignore -->
-	<p>most images are sourced from <a href="https://www.themoviedb.org">TMDB</a>, used under their <a href="https://www.themoviedb.org/about/logos-attribution">attribution terms</a>. i'm not affiliated — they're just excellent and convenient. all reviews are my own; if you have concerns, feel free to reach out.</p>
+	{@html write(
+		"most images are sourced from [TMDB](https://www.themoviedb.org), used under their [attribution terms](https://www.themoviedb.org/about/logos-attribution). i'm not affiliated — they're just excellent and convenient. all reviews are my own; if you have concerns, feel free to reach out.",
+	)}
 
 	<hr />
 
@@ -240,50 +164,57 @@
 		<i data-icon="squares-four"></i>
 		<span>other paths</span>
 	</h2>
-	<!-- prettier-ignore -->
-	<p>the cozy corners of the site. not the main plots — more like footpaths and trellises that give the garden its form.</p>
+	{@html write(
+		'the cozy corners of the site. not the main plots — more like footpaths and trellises that give the garden its form.',
+	)}
 
 	<h3 id="others-help">
 		<i data-icon="lifebuoy"></i>
 		<a href="/help">/help</a>
 	</h3>
-	<!-- prettier-ignore -->
-	<p>you're here now — the dedicated guide to what the site offers, how to find your way, and a quiet place for me to remember why it's shaped this way.</p>
+	{@html write(
+		"you're here now — the dedicated guide to what the site offers, how to find your way, and a quiet place for me to remember why it's shaped this way.",
+	)}
 
 	<h3 id="others-about">
 		<i data-icon="pen-nib"></i>
 		<a href="/about">/about</a>
 	</h3>
-	<!-- prettier-ignore -->
-	<p>who i am, what i do, what i'm <a href="/about#now">currently doing</a> (/now), and where to find me in <a href="/about#elsewhere">other corners of the internet</a>.</p>
+	{@html write(
+		"who i am, what i do, what i'm [currently doing](/about#now) (/now), and where to find me in [other corners of the internet](/about#elsewhere).",
+	)}
 
 	<h3 id="others-uses">
 		<i data-icon="suitcase"></i>
 		<a href="/uses">/uses</a>
 	</h3>
-	<!-- prettier-ignore -->
-	<p>a snapshot of my setup — <a href="/uses#hardware">hardware</a>, <a href="/uses#software">software</a>, and <a href="/uses#wellness">wellness</a> picks that support my day-to-day. also serves as a reference for myself, a benchmark for what works and what lasts.</p>
+	{@html write(
+		'a snapshot of my setup — [hardware](/uses#hardware), [software](/uses#software), and [wellness](/uses#wellness) picks that support my day-to-day. also serves as a reference for myself, a benchmark for what works and what lasts.',
+	)}
 
 	<h3 id="others-fine-print">
 		<i data-icon="scroll"></i>
 		<a href="/fine-print">/fine-print</a>
 	</h3>
-	<!-- prettier-ignore -->
-	<p>the formalities — disclaimers, affiliate notes, personal views, and disclosures. not exactly fun, but part of keeping things clear and honest.</p>
+	{@html write(
+		'the formalities — disclaimers, affiliate notes, personal views, and disclosures. not exactly fun, but part of keeping things clear and honest.',
+	)}
 
 	<h3 id="others-sponsor">
 		<i data-icon="hand-heart"></i>
 		<a href="/sponsor">/sponsor</a>
 	</h3>
-	<!-- prettier-ignore -->
-	<p>a redirect to <a href="https://github.com/sponsors/ignatiusmb">GitHub Sponsors</a>. support, whether through funds, feedback, sharing my work, or behind-the-scenes encouragement, means a lot.</p>
+	{@html write(
+		'a redirect to [GitHub Sponsors](https://github.com/sponsors/ignatiusmb). support, whether through funds, feedback, sharing my work, or behind-the-scenes encouragement, means a lot.',
+	)}
 
 	<h3 id="others-rss">
 		<i data-icon="rss"></i>
 		<a href="/rss.xml">/rss.xml</a>
 	</h3>
-	<!-- prettier-ignore -->
-	<p>if you're one of the cool kids with your own curated feeds, you can subscribe via the rss icon — or straight from <code>/rss.xml</code> — and get updates the moment they're live.</p>
+	{@html write(
+		"if you're one of the cool kids with your own curated feeds, you can subscribe via the rss icon — or straight from `/rss.xml` — and get updates the moment they're live.",
+	)}
 
 	<hr />
 
@@ -295,26 +226,24 @@
 		<summary>hey, <em>dear</em>.</summary>
 
 		<div style:padding="0" style:margin="0 0.5rem">
-			<p>
-				how's life been treating you?<br />
-				i hope you're not being too hard on yourself,<br />
-				you've always carried more than you let on.<br />
-				i know it's hard to remember your life,<br />
-				so let this be something that stays.
-			</p>
-			<p>
-				remember everything you've done so far,<br />
-				the hours poured in when no one's watching,<br />
-				the effort it took to keep going behind the scenes,<br />
-				all of it a reflection of how much you gave,<br />
-				and how deeply you've cared for what you love.
-			</p>
-			<p>
-				at the very least,<br />
-				remember that i love you.<br />
-				always have, always will.<br />
-				<em>— your lifelong partner</em>
-			</p>
+			{@html write(
+				"how's life been treating you? \\",
+				"i hope you're not being too hard on yourself, \\",
+				"you've always carried more than you let on. \\",
+				"i know it's hard to remember your life, \\",
+				'so let this be something that stays.',
+				'',
+				"remember everything you've done so far, \\",
+				"the hours poured in when no one's watching, \\",
+				'the effort it took to keep going behind the scenes, \\',
+				'all of it a reflection of how much you gave, \\',
+				"and how deeply you've cared for what you love.",
+				'',
+				'at the very least, \\',
+				'remember that i love you. \\',
+				'always have, always will. \\',
+				'— *your lifelong partner*',
+			)}
 		</div>
 	</details>
 
@@ -322,40 +251,34 @@
 		<i data-icon="envelope-simple"></i>
 		<span>newsletter</span>
 	</h2>
-	<p>there's no email newsletter here (yet), sorry.</p>
-	<!-- prettier-ignore -->
-	<p>some people swear by them — email clients are powerful these days, with excellent syncing and filtering. there's even an <a href="https://feedmail.org/">RSS-to-email service</a> if you'd rather get updates straight in your inbox. others prefer a clean inbox, keeping email for important messages only. if that's you, <a href="https://kill-the-newsletter.com/">kill-the-newsletter</a> can turn newsletters into feeds you can follow in a reader.</p>
-	<!-- prettier-ignore -->
-	<p>i see the appeal of both camps. personally, i lean toward <a href="#others-rss">RSS</a> — it's open, flexible, and feed readers tend to do a better job than email clients in their own way, but i'm not militant about 'killing the newsletter' from my inbox.</p>
+	{@html write(
+		"there's no email newsletter here (yet), sorry.",
+		'',
+		"some people swear by them — email clients are powerful these days, with excellent syncing and filtering. there's even an [RSS-to-email service](https://feedmail.org/) if you'd rather get updates straight in your inbox. others prefer a clean inbox, keeping email for important messages only. if that's you, [kill-the-newsletter](https://kill-the-newsletter.com/) can turn newsletters into feeds you can follow in a reader.",
+		'',
+		"i see the appeal of both camps. personally, i lean toward [RSS](#others-rss) — it's open, flexible, and feed readers tend to do a better job than email clients in their own way, but i'm not militant about 'killing the newsletter' from my inbox.",
+	)}
 
 	<h2 id="colophon">
 		<i data-icon="stack"></i>
 		<span>colophon</span>
 	</h2>
-	<!-- prettier-ignore -->
-	<p>this is the site's technical appendix. it's built with open-source tools and thoughtfully chosen parts; every piece is handpicked or handmade to create a cohesive whole. i'm not a professional designer, but i know what i like and how to make it <em>feel like home</em>. did i mention <a href="https://github.com/ignatiusmb/mauss.dev">the whole thing is open-source</a>?</p>
-	<ul>
-		<!-- prettier-ignore -->
-		<li><strong><a href="https://svelte.dev">sveltekit</a></strong><br>the core framework that makes all of this feel effortless. it doesn't feel like overkill nor underpowered, it scales with my needs and keeps things minimal.</li>
-		<!-- prettier-ignore -->
-		<li><strong><a href="/atelier#aubade">aubade</a></strong><br>the content framework that powers the garden. it's handcrafted to fit my needs, with a focus on simplicity and flexibility.</li>
-		<!-- prettier-ignore -->
-		<li><strong><a href="https://phosphoricons.com">phosphor</a></strong><br>clean and beautiful open-source icons, it's got everything i'm looking for and has consistently clean geometry.</li>
-		<li>
-			<!-- prettier-ignore -->
-			<span><strong><a href="https://fontsource.org">fontsource</a></strong><br>self-hosted fonts for privacy and performance.</span>
-			<ul>
-				<!-- prettier-ignore -->
-				<li><strong>/<a href="https://fontsource.org/fonts/newsreader">newsreader</a></strong><br>the main typeface, a thoughtfully crafted serif.</li>
-				<!-- prettier-ignore -->
-				<li><strong>/<a href="https://fontsource.org/fonts/recursive">recursive</a></strong><br>the supporting sans-serif, a powerful five-axis variable font.</li>
-			</ul>
-		</li>
-		<!-- prettier-ignore -->
-		<li><strong><a href="https://github.com">github</a></strong><br>version control and source hosting for the entire site.</li>
-		<!-- prettier-ignore -->
-		<li><strong><a href="https://vercel.com">vercel</a></strong><br>deploys from github and hosts the live site.</li>
-	</ul>
+	{@html write(
+		"this is the site's technical appendix. it's built with open-source tools and thoughtfully chosen parts; every piece is handpicked or handmade to create a cohesive whole. i'm not a professional designer, but i know what i like and how to make it *feel like home*. did i mention [the whole thing is open-source](https://github.com/ignatiusmb/mauss.dev)?",
+		'',
+		'- **[sveltekit](https://svelte.dev)** \\',
+		"  the core framework that makes all of this feel effortless. it doesn't feel like overkill nor underpowered, it scales with my needs and keeps things minimal.",
+		'- **[aubade](/atelier#aubade)** \\',
+		"  the content framework that powers the garden. it's handcrafted to fit my needs, with a focus on simplicity and flexibility.",
+		'- **[phosphor](https://phosphoricons.com)** \\',
+		"  clean and beautiful open-source icons, it's got everything i'm looking for and has consistently clean geometry.",
+		'- **[fontsource](https://fontsource.org)** \\',
+		'  self-hosted fonts for privacy and performance.',
+		'  - **/[newsreader](https://fontsource.org/fonts/newsreader)** \\',
+		'    the main typeface, a thoughtfully crafted serif.',
+		'  - **/[recursive](https://fontsource.org/fonts/recursive)** \\',
+		'    the supporting sans-serif, a powerful five-axis variable font.',
+	)}
 </Piece>
 
 <style>
