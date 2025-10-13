@@ -262,7 +262,7 @@
 				font-size: var(--size-small);
 			}
 		}
-		details {
+		details:not(#index) {
 			margin: 1rem 0 0;
 			border-radius: var(--rounding-base);
 			background: var(--color-surface);
@@ -283,7 +283,7 @@
 				margin-bottom: 0.1rem;
 			}
 
-			> :not(summary) {
+			> :not(summary):not([data-aubade='youtube']) {
 				padding: 0.5rem 0.5rem 0.2rem;
 			}
 		}
