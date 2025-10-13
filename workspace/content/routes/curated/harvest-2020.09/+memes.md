@@ -38,7 +38,7 @@ title: Memes
 
 ![every software engineer has experience this](https://i.redd.it/dy6l5b4piwp51.jpg "[[Reddit](https://www.reddit.com/r/mildlyinfuriating/comments/j1dc3q/every_software_engineer_has_experience_this/)] every software engineer has experience this")
 
-@video{disclosure src=[https://i.imgur.com/cVnLrtq.mp4] caption="[Reddit](https://www.reddit.com/r/dankmemes/comments/j1rcog/2100_real_quick/) 2-100 real quick"}
+@video{src=[https://i.imgur.com/cVnLrtq.mp4] caption="[Reddit](https://www.reddit.com/r/dankmemes/comments/j1rcog/2100_real_quick/) 2-100 real quick"}
 
 ![js frameworks](https://i.redd.it/bxy89v8333q51.png "[[Reddit](https://www.reddit.com/r/ProgrammerHumor/comments/j1ylvg/javascript_framework/)] js frameworks")
 

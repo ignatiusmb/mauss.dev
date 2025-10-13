@@ -283,7 +283,7 @@
 				margin-bottom: 0.1rem;
 			}
 
-			> :not(summary) {
+			> :not(summary):not([data-aubade='youtube']) {
 				padding: 0.5rem 0.5rem 0.2rem;
 			}
 		}
