@@ -23,9 +23,8 @@
 </details>
 
 <style>
-	/* add # to increase specificity */
-	details#index {
-		margin-bottom: 1rem;
+	details {
+		margin: 1rem 0;
 		border-radius: var(--rounding-box);
 		background: var(--color-surface);
 		font-size: var(--size-base);
@@ -69,6 +68,7 @@
 
 		div {
 			display: grid;
+			padding: 0.25rem;
 			margin: 0;
 			line-height: 1.8;
 

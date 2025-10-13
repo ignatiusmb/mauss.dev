@@ -39,6 +39,7 @@
 			{ id: 'others-fine-print', title: '/fine-print', level: 3 },
 			{ id: 'others-sponsor', title: '/sponsor', level: 3 },
 			{ id: 'others-rss', title: '/rss.xml', level: 3 },
+			{ id: 'feedback', title: 'feedback' },
 			{ id: 'newsletter', title: 'newsletter' },
 			{ id: 'colophon', title: 'colophon' },
 		]}
@@ -247,12 +248,22 @@
 		</div>
 	</details>
 
+	<h2 id="feedback">
+		<i data-icon="chat-text"></i>
+		<span>feedback</span>
+	</h2>
+	{@html write(
+		"i appreciate kind words and insightful feedback. however, this blog is an extension of my own thoughts and personality, and having other people's words appear here feels a little off to me. traditional comment sections also require moderation and upkeep that i can't reasonably commit to.",
+		'',
+		"for those reasons, there's no comment section on this site. still, if something resonates with you, stirs a thought you'd like to share, or you simply enjoy my writing, please send me an email from the [about page](/about#elsewhere) — i'd love to hear from you.",
+	)}
+
 	<h2 id="newsletter">
 		<i data-icon="envelope-simple"></i>
 		<span>newsletter</span>
 	</h2>
 	{@html write(
-		"there's no email newsletter here (yet), sorry.",
+		"there's no email newsletter here (yet?), sorry.",
 		'',
 		"some people swear by them — email clients are powerful these days, with excellent syncing and filtering. there's even an [RSS-to-email service](https://feedmail.org/) if you'd rather get updates straight in your inbox. others prefer a clean inbox, keeping email for important messages only. if that's you, [kill-the-newsletter](https://kill-the-newsletter.com/) can turn newsletters into feeds you can follow in a reader.",
 		'',
@@ -308,6 +319,9 @@
 		}
 		&[data-icon='certificate'] {
 			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"><line x1="72" y1="136" x2="120" y2="136"/><line x1="72" y1="104" x2="120" y2="104"/><circle cx="196" cy="124" r="44"/><path d="M168,192H40a8,8,0,0,1-8-8V56a8,8,0,0,1,8-8H216a8,8,0,0,1,8,8V90.06"/><polyline points="168 157.94 168 224 196 208 224 224 224 157.94"/></svg>');
+		}
+		&[data-icon='chat-text'] {
+			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"><path d="M45.15,230.11A8,8,0,0,1,32,224V64a8,8,0,0,1,8-8H216a8,8,0,0,1,8,8V192a8,8,0,0,1-8,8H80Z"/><line x1="96" y1="112" x2="160" y2="112"/><line x1="96" y1="144" x2="160" y2="144"/></svg>');
 		}
 		&[data-icon='drop'] {
 			--svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"><path d="M208,144c0-72-80-128-80-128S48,72,48,144a80,80,0,0,0,160,0Z"/><path d="M136,192c20-3.37,36.61-20,40-40"/></svg>');

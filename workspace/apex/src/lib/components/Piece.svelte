@@ -262,7 +262,7 @@
 				font-size: var(--size-small);
 			}
 		}
-		details {
+		details:not(#index) {
 			margin: 1rem 0 0;
 			border-radius: var(--rounding-base);
 			background: var(--color-surface);

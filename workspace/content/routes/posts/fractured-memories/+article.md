@@ -1,8 +1,8 @@
 ---
 date: 2025-10-10
 theme: reflection
-title: A Life Remembered by Others
-description: trying to remember a life that doesn't feel like mine
+title: An Outsider Inside Myself
+description: the strange feeling of being in my own life as if it belonged to someone else.
 tags: [memory, introspection]
 ---
 
@@ -14,21 +14,21 @@ recalling memories captured in photos or videos is easy, but my experience seems
 
 however, when i see myself from a third-person perspective, i become the outsider looking in — as if watching a film of someone else's life, only that someone is me. the camera's perspective overwrites my own, embedding itself more strongly than my actual memory.
 
-the events of my past feel detached, as though they belong to another person entirely. i can piece them together through in sequence with information such as the places i've lived or the schools i've attended, but the actual experience of those times is lost to me. they're stored as mere facts, stripped of the feeling that they're the things i've lived through.
+the events of my past feel detached, as though they belong to another person entirely. i can piece them together in sequence with information such as the places i've lived or the schools i've attended, but the actual experience of those times is lost to me. they're stored as mere facts, stripped of the feeling that they're the things i've lived through.
 
 ## memories
 
-one of my most dreaded questions is "tell me the one time [...] happened", because i will most certainly not remember. at some point, i stopped trying to hold someone accountable, since i know i won't remember the details of the last time it happened, and taking notes about "the small things" each time it happens would be petty and obsessive.
+one of my most dreaded questions is "tell me the one time [...] happened", because i will most certainly not remember. at some point, i stopped trying to hold someone accountable, since i know i won't remember the last time it happened, and keeping notes each time would feel petty.
 
-self-assessments and reflections are nearly impossible without a prompt, which makes "selling myself" in interviews or performance reviews a nightmare. what unsettles me most isn't being perceived as unaware, but the slight chance that i might not have a sense of achievement for *anything* in the first place — that i don't even register these supposed achievements as meaningful when they happen.
+self-assessments and reflections are nearly impossible without a prompt, which makes "selling myself" in interviews or performance reviews a nightmare. what unsettles me most isn't being perceived as unaware, but the possibility that i might not have a sense of achievement altogether — that i don't even register these supposed achievements as meaningful when they happen.
 
-this applies to other things too, such as music or faces. give me a clip of a song or a photo of a person, and the associated memories flood back instantly. without such cues, my mind goes blank. even names vanish right after i hear them — literally an "in one ear and out the other" situation. the only exceptions are those i've written down myself; once i record their full name in my contacts, it's now linked with the face in my mind.
+this applies to other things too, such as music or faces. give me a clip of a song or a photo of a person, and the memories rush back all at once. without such cues, my mind goes blank. even names vanish right after i hear them — literally an "in one ear and out the other" situation. the only exceptions are those i've written down myself; once i record their full name in my contacts, it's now linked with the face in my mind.
 
 ## visualization
 
-recalling spatial memories is a non-issue. i have no trouble remembering the places i've been to, and the layout of those places clearly in mind. i can map out the whole area and imagine where my parking spot in a mall is. in familiar spaces, i can "walk" through them mentally, retracing my steps and visualizing the surrounding details as i go.
+recalling spatial memories is a non-issue. i have no trouble remembering the places i've been to, and the layout of those places clearly in mind. i can map out the whole area and recall where i parked in a mall. in familiar spaces, i can "walk" through them mentally, retracing my steps and visualizing the surrounding details as i go.
 
-learning about the [mind palace](https://en.wikipedia.org/wiki/Method_of_loci) technique was a revelation. i can construct an infinite mental space and figuratively "place" memories in specific locations to help recall them later. it's not quite at the level of photographic-memory, but it makes remembering things way easier.
+discovering the [mind palace](https://en.wikipedia.org/wiki/Method_of_loci) technique felt like i had my third eye opened. i can construct an infinite mental space and figuratively "place" memories in specific locations to help recall them later. it's not quite at the level of photographic-memory, but it makes remembering things way easier.
 
 ## relationship
 
@@ -46,9 +46,9 @@ somewhere along the way, i learned about aphantasia — the inability to visuali
 
 most tests for aphantasia involve imagining an apple and describing how vividly you can see it. i can't say i *see* an apple, but i can certainly *imagine* one. after seeing the image above, the apples in my mind are exactly those — complete with the people's heads. the details i recall are always those i've seen somewhere before.
 
-still, i don't know if that counts as "seeing" an image in my mind. when i close my eyes, there's only darkness. i can imagine an apple, but it feels more like viewing a picture on a screen in front of me, like a screenshot. yet i can alter everything about it, from its color to its shape, and even the environment around it.
+still, i don't know if that counts as "seeing" an image in my mind. when i close my eyes, there's only darkness. i can imagine an apple, but it feels more like viewing a picture on a screen in front of me, like a screenshot. yet i can alter everything about it — from its color to its shape, and even the environment around it.
 
-perhaps i'm overthinking it. by the way i describe things, i might even lean toward hyperphantasia, especially after reading about the [comorbidity of hyperphantasia](https://en.wikipedia.org/wiki/Hyperphantasia#Co-morbidity). i'm also not lacking an inner dialogue; i can "hear" and converse with myself without uttering a word.
+perhaps i'm overthinking it. from the way i describe things, i might even lean toward hyperphantasia, especially after reading about the [comorbidity of hyperphantasia](https://en.wikipedia.org/wiki/Hyperphantasia#Co-morbidity). i'm also not lacking an inner dialogue; i can "hear" and converse with myself without uttering a word.
 
 ## acceptance
 
@@ -58,4 +58,4 @@ i'd be curious to know what a professional diagnosis might reveal. until then, w
 
 i've also learned to keep my physical and digital spaces *clean* and organized. emphasis on clean — neatly stored clutter is still clutter, and it will haunt my mind. the "out of sight, out of mind" mantra doesn't seem to work with me.
 
-> this article is a reflection of [I Do Not Remember My Life and It's Fine](https://aethermug.com/posts/i-do-not-remember-my-life-and-it-s-fine) from Aether Mug, which i found deeply relatable except for the [aphantasia](#aphantasia) part. it also fulfills a promise i made in [June 2025 Harvest](/curated/harvest-2025.06#pieces).
+> inspired by [I Do Not Remember My Life and It's Fine](https://aethermug.com/posts/i-do-not-remember-my-life-and-it-s-fine), which i found deeply relatable except for the [aphantasia](#aphantasia) part. i first mentioned it in [June 2025 Harvest](/curated/harvest-2025.06#pieces).
