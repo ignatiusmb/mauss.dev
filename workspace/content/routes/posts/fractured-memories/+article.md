@@ -48,7 +48,7 @@ most tests for aphantasia involve imagining an apple and describing how vividly 
 
 still, i don't know if that counts as "seeing" an image in my mind. when i close my eyes, there's only darkness. i can imagine an apple, but it feels more like viewing a picture on a screen in front of me, like a screenshot. yet i can alter everything about it — from its color to its shape, and even the environment around it.
 
-perhaps i'm overthinking it. from the way i describe things, i might even lean toward hyperphantasia, especially after reading about the [comorbidity of hyperphantasia](https://en.wikipedia.org/wiki/Hyperphantasia#Co-morbidity). i'm also not lacking an inner dialogue; i can "hear" and converse with myself without uttering a word.
+perhaps i'm overthinking it. from the way i describe things, i might even lean toward hyperphantasia, especially after reading about the [comorbidity of hyperphantasia](https://en.wikipedia.org/wiki/Hyperphantasia#Co-morbidity). i'm not lacking an inner dialogue either; i can "hear" and converse with myself, play and singalong to songs in my head, and also imagine entire scenarios and conversations.
 
 ## acceptance
 
