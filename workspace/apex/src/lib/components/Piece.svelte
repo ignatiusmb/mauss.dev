@@ -26,11 +26,16 @@
 	{#if post}
 		<header>
 			<aside>
-				<time datetime={post.date}>{date(post.date).format('DD MMMM YYYY')}</time>
-				{#if post.theme && post.theme !== 'pending'}
-					<span class="separator">❃</span>
-					<span style:text-transform="capitalize">{post.theme}</span>
+				{#if post.theme}
+					<span>a{post.theme === 'essay' ? 'n' : ''} {post.theme}</span>
+					{#if post.theme !== 'essay' && post.theme !== 'reflection'}
+						<time datetime={post.date}>{date(post.date).format('DD MMMM YYYY')}</time>
+					{/if}
+				{:else if post.series?.title === 'The Harvest'}
+					<time datetime={post.date}>{date(post.date).format('DD MMMM YYYY')}</time>
 				{/if}
+
+				{#if post.series}<span>{post.series.title}</span>{/if}
 			</aside>
 
 			<h1>{post.title}</h1>
@@ -90,6 +95,12 @@
 			gap: 0.5rem;
 			grid-auto-flow: column;
 			align-items: center;
+
+			:not(:first-child)::before {
+				content: '❃';
+				margin-right: 0.5rem;
+				color: var(--color-accent-secondary);
+			}
 		}
 	}
 
@@ -408,10 +419,6 @@
 			[data-aubade='tooltip']::after {
 				border-color: oklch(0.4 0.0084 286) transparent transparent transparent;
 			}
-		}
-
-		.separator {
-			color: var(--color-accent-secondary);
 		}
 	}
 </style>

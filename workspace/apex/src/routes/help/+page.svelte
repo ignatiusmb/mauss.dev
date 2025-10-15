@@ -12,7 +12,7 @@
 
 <Piece>
 	{@html write(
-		"**welcome** — you've made port at the harbor of my digital garden, a kind of virtual abode nestled in a quiet corner of the internet. i hope this page can be your guiding compass, should you lose your bearings or wonder where to go next.",
+		"**welcome** — you've made port at the harbor of my [digital garden](/posts/digital-garden), a kind of virtual abode nestled in a quiet corner of the internet. i hope this page can be your guiding compass, should you lose your bearings or wonder where to go next.",
 		'',
 		'the garden is always *under construction*, slowly taking shape as i plant new seeds and tend old growth. in time, whether wandered by many or none, it may become a garden worth returning to.',
 		'***',
@@ -50,7 +50,7 @@
 		<a href="/atelier">/atelier</a>
 	</h2>
 	{@html write(
-		"the gallery for my digital garden. it's still sparse at the moment — there are seedlings i'm still tending to behind the scenes; some are just beginning to root, and a few shy ones are waiting for their time to open. for now, these are the ones that have bloomed.",
+		`the "art gallery" section. it's still sparse at the moment — there are seedlings i'm still tending to behind the scenes; some are just beginning to root, and a few shy ones are waiting for their time to open. for now, these are the ones that have bloomed.`,
 	)}
 
 	<h2 id="curated">
