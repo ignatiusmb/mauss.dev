@@ -41,9 +41,7 @@ A Google product related articles. Worth the read if you're learning Computer Sc
 
 ![Demon Slayer Mugen Train](https://image.tmdb.org/t/p/w1280/xoqr4dMbRJnzuhsWDF3XNHQwJ9x.jpg "[Demon Slayer: Infinity Train](/reviews/movie/kimetsu-no-yaiba-movie-mugen-ressha-hen) via [TMDB](https://www.themoviedb.org/movie/635302)")
 
-This is a given. You know it's coming. The highlight of January 2021. A great way to start the year is to definitely watch this! It's popularity is on-par with Spirited Away and Your Name. If you haven't watched the first season, I highly recommend you do so. If you have, the what are you waiting for.
-
-\*Note that you can't really see this without watching the first season of Demon Slayer since this movie is a direct continuation of the first season.
+This is a given. You know it's coming. The highlight of January 2021. A great way to start the year is to definitely watch this! It's popularity is on-par with Spirited Away and Your Name. I think this can be watched even if you haven't seen the show, but it would be better if you did.
 
 ### more
 

@@ -20,7 +20,7 @@ Of course, it's by no means ready for prime time, the team still has a lot of pl
 
 Personally, I'm really sad to see that HMR isn't coming to Sapper because I first started with Sapper and learned Svelte by building Sapper apps. So, you could also guess that I've made most of my apps with Sapper. I guess all good things must come to an end, and I'm sure that this would be a way better solution in the future, but I'll probably need some time to take this in.
 
-Don't take the title literally, that is how most people view it. It doesn't mean that you can't write Sapper apps anymore, or you should immediately abandon your current projects too. Right now Sapper is way more mature and ready for production, there's a lot of people who can testify this. My recommendation is to stick with Sapper right now and wait until Svelte Kit (name may change in the future) is actually stable and ready for use. Since it has a lot of similarity on its convention and API as Sapper, migrating later won't be a problem at all.
+Don't take the title literally, that is how most people view it. It doesn't mean that you can't write Sapper apps anymore, or you should immediately abandon your current projects too. Right now Sapper is way more mature and ready for production, there's a lot of people who can testify this. You can stick with Sapper right now and wait until Svelte Kit (name may change in the future) is actually stable and ready for use. Since it has a lot of similarity on its convention and API as Sapper, migrating later won't be a problem at all.
 
 > I think we are going to get to a point pretty soon where projects that use bundlers during development are going to look a little bit antiquated
 

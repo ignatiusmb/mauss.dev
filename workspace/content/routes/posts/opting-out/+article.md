@@ -6,7 +6,7 @@ description: on asociality and the irony of "social" networks that treat their u
 tags: [introspection, culture]
 ---
 
-after reflecting on being [An Outsider Inside Myself](/posts/fractured-memories), i realized that *antisocial* isn't the right word to describe what i was trying to express. i don't dislike social interaction; humans are inherently social creatures. what i reject is the digital way we're told to be social, the one mediated through platforms that prioritize engagement over connection.
+after reflecting on being [An Outsider Inside Myself](/posts/fractured-memories), i realized that *antisocial* isn't the right word to describe what i was trying to express. also, i don't dislike social interaction; humans are inherently social creatures. what i reject is the digital way we're told to be social, the one mediated through platforms that prioritize engagement over connection.
 
 *antisocial* describes behavior that is averse to others, often marked by actions that go **against** social norms — disruptive behavior such as vandalism, violence, theft, arson, or anything that harms or disregards the rights of others.
 

@@ -22,7 +22,7 @@ These words are frequently used interchangeably, but what's their difference? Th
 ### more
 
 **[Browser 'Favicons' Can Be Used as Undeletable 'Supercookies' to Track You Online](https://www.vice.com/en/article/n7v5y7/browser-favicons-can-be-used-as-undeletable-supercookies-to-track-you-online)** \
-It's both fascinating and scary at the same time, how do you even think about this. Even then, [Firefox 85 already does something about this](https://blog.mozilla.org/security/2021/01/26/supercookie-protections/). It's quite amazing from them, I highly recommend reading their blog post on cracking down supercookies, along with their [Firefox 86 blog post](https://blog.mozilla.org/security/2021/02/23/total-cookie-protection/) which introduces Total Cookie Protection.
+It's both fascinating and scary at the same time, how do you even think about this. Even then, [Firefox 85 already does something about this](https://blog.mozilla.org/security/2021/01/26/supercookie-protections/). It's quite an amazing post on cracking down supercookies, along with their [Firefox 86 blog post](https://blog.mozilla.org/security/2021/02/23/total-cookie-protection/) which introduces Total Cookie Protection.
 
 **[ARCHITECTURE.md](https://matklad.github.io//2021/02/06/ARCHITECTURE.md.html)** \
 Maintaining a project is hard. Maintaining an open-source project? Especially hard. Doesn't matter how many LoC it has, even coming back to your own project after a couple of weeks would require some time to relearn and understand the whole system again. That's what any new people coming in to your open-source project would feel.
@@ -118,7 +118,7 @@ I'll do a follow-up in a dedicated post for this, I promise. But, I really need 
 
 I can't believe I've lived through years without knowing "this", I can't even express how life-changing it is with just words. I won't and can't go into the details of this, but look up the term "Modded Apps" and do your own research. Sadly, I have no experience and can't guide iOS users for this as I don't think there's any, so this will only be applicable for Android users.
 
-One thing I can recommend right now is launchers. I've never went out of my way to change my launchers as I thought Samsung's launcher is good enough and have been constantly updated and improving. But, everything changed when I discovered "Niagara Launcher". More details will come with the follow-up post!
+I've never went out of my way to change my launchers as I thought Samsung's launcher is good enough and have been constantly updated and improving. But, everything changed when I discovered "Niagara Launcher". More details will come with the follow-up post!
 
 ### Facebook gambles on Australia
 
@@ -132,7 +132,7 @@ see: [TheGuardian](https://www.theguardian.com/commentisfree/2021/feb/19/faceboo
 
 ### LastPass is finally a no-brainer to ditch
 
-They truly shot themselves in the foot (see their blog post or Android comment thread) and have given the majority of us a reason to migrate away. The current best alternative (and also my recommendation) is to go with [Bitwarden](https://bitwarden.com/), you can self-host or use it with their server.
+They truly shot themselves in the foot (see their blog post or Android comment thread) and have given the majority of us a reason to migrate away. The current best alternative is to go with [Bitwarden](https://bitwarden.com/), you can self-host or use it with their server.
 
 see: [r/android](https://www.reddit.com/r/Android/comments/ll5ebu/changes_to_lastpass_free_one_free_device_only/) | [r/selfhosted](https://www.reddit.com/r/selfhosted/comments/ll4htz/lastpass_is_finally_a_nobrainer_to_ditch_bitwarden/) | [LastPass](https://blog.lastpass.com/2021/02/changes-to-lastpass-free/)
 
