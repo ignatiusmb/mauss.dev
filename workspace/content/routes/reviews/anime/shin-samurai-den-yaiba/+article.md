@@ -7,6 +7,7 @@ released: 2025-04-05
 genres: [samurai, action, adventure]
 seen:
   first: "2025-07-10T00:27:00+07:00"
+  last: "2025-10-03T02:01:00+07:00"
 rating: weak
 poster:
   source: tmdb

@@ -12,9 +12,7 @@
 
 <Piece>
 	{@html write(
-		"**welcome** — you've made port at the harbor of my [digital garden](/posts/digital-garden), a kind of virtual abode nestled in a quiet corner of the internet. i hope this page can be your guiding compass, should you lose your bearings or wonder where to go next.",
-		'',
-		'the garden is always *under construction*, slowly taking shape as i plant new seeds and tend old growth. in time, whether wandered by many or none, it may become a garden worth returning to.',
+		"**welcome** — you've made port at the harbor of my [digital garden](/posts/digital-garden). may this page be your compass if you lose your bearings or wonder where to go next. in time, whether wandered by many or none, it may yet grow into a garden worth returning to.",
 		'***',
 		"the index is a *collapsible* overview of the page and a way to jump between sections or sub-sections. you'll mostly see this in articles with headings, so you can navigate with ease.",
 	)}
