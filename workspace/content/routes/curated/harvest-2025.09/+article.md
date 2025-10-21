@@ -21,7 +21,7 @@ remember these?
 - [Facebook accused of watching Instagram users through cameras](/curated/harvest-2020.09#headlines-facebook-accused-of-watching-instagram-users-through-cameras)
 - [Facebook 'secretly' tracks your location just by having it installed](/curated/harvest-2020.12#headlines-facebook-and-instagram-are-cancer-to-our-privacy-and-society)
 - [Instagram exposes users' personal email and birthday through *private* messages](/curated/harvest-2020.12#headlines-facebook-and-instagram-are-cancer-to-our-privacy-and-society)
-- [533 million Facebook users' data leaked](/curated/harvest-2021.04#headlines-leaked-mark-zuckerberg-phone-number-s-reveals-he-is-on-signal)
+- [533 million Facebook users' data leaked](/curated/harvest-2021.04#headlines-leaked-mark-zuckerberg-phone-numbers-reveals-he-is-on-signal)
 
 ***
 

@@ -21,9 +21,6 @@ Another great read from Chris Coyier for an evolution of last month's article of
 **[Everything you ever wanted to know about building a secure password reset feature](https://www.troyhunt.com/everything-you-ever-wanted-to-know/)** \
 An amazing article written from 2012 which is still relevant today. I can't say much about this since it already explains most of my worries from applications out there in the article. It has a [TL;DR version in a diagram form](https://www.troyhunt.com/content/images/2016/02/21782177Password-Reset5.png) too.
 
-**[Software Developer vs. Engineer: What's the Difference?](https://www.developersforhire.com/software-developer-vs-software-engineer)** \
-I was recommended to take a look at this article earlier this month, it was quite a long read and researched based on the US standards heavily. In the end, words are just how people see and perceived them, that's how slangs come to be. But, it's still worth to take a look, especially if you're someone conscious about titles since they really break it down quite deep there.
-
 ***
 
 ## stories

@@ -70,7 +70,7 @@ This time it's actually an opening song from an anime, although I think this OP 
 
 @youtube{disclosure id=K42ED-7PWAo caption="[Ambiguous](https://music.youtube.com/watch?v=2oqeIu2G2fw) by GARNiDELiA [[Spotify](spotify:track:32VX3DJCxPY3pMjirgOayx)]"}
 
-Such a good and catchy OP from *Kill la Kill*. I'm the type of person who needs to see "it" first before I can fully feel the vibe and immerse myself in it, but I know some of you can listen to songs from Disney movies before it even hits the theater, so do what you want with this. But, I do recommend you to watch the anime first.
+Such a good and catchy OP from *Kill la Kill*. I'm the type of person who needs to see "it" first before I can fully feel the vibe and immerse myself in it, but I know some of you can listen to songs from Disney movies before it even hits the theater, so do what you want with this.
 
 @youtube{disclosure id=Y-MNeN5dDtI caption="[Open Blinds](https://music.youtube.com/watch?v=D25VT2BcGFQ) by DROELOE [[Spotify](spotify:track:0cR04cbujsPTTyKUazySY0)]"}
 

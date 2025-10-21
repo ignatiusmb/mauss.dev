@@ -32,7 +32,7 @@ An interesting article from one of my favorite community, Jellyfin software. Rea
 
 A bit different this month, and perhaps way too late, but I know a lot who doesn't know about this yet. This content's spotlight is a game from 2017, was nominated for multiple categories, and [won the IGN people's choice for every category](http://teamsalvato.com/blog/ddlc-wins-ign-peoples-choice-for-every-category/) it was nominated for.
 
-An amazing game *no one* should ever play. Yeah, I know I'm contradicting myself here, it was also an exaggeration. It was indeed a visual novel masterpiece, but still wouldn't probably recommend for the casual people. Look forward to the full review, where I'll explain more in details.
+An amazing game *no one* should ever play. Yeah, I know I'm contradicting myself here, it was also an exaggeration. It was indeed a visual novel masterpiece, but still would probably be too much for the casual people.
 
 ### more
 
@@ -57,7 +57,7 @@ Actually, the whole [Otogi album](https://www.youtube.com/playlist?list=OLAK5uy_
 
 @youtube{disclosure id=s17DzFKRPQs caption="With Love Until We Die by Tristam"}
 
-Tristam just released his album and it was wild. This was the spotlight song as the album is called [WLUWD](https://www.youtube.com/watch?v=AEydi6ibp60), an abbreviation for this song title. The other songs in this album are also so good in itself, highly recommended to check out the whole album.
+Tristam just released his album and it was wild. This was the spotlight song as the album is called [WLUWD](https://www.youtube.com/watch?v=AEydi6ibp60), an abbreviation for this song title. The other songs in this album are also so good in itself, go check out the whole album if you like this song.
 
 @youtube{disclosure id=3FKqAbb2X9c caption="[Haru Urara](https://music.youtube.com/watch?v=3FKqAbb2X9c) by Genic"}
 
@@ -75,7 +75,7 @@ Premiered on the last day of the month, perhaps a bit biased, but Eve seems to a
 
 May be the most controversial video in the playlist this month, but hear me out, or perhaps, hear the video out. This was produced by "What I've Learned" channel that I've recently been subscribed to this year. If you see most of their other videos such as ["Why does Japan eat so many Raw Eggs?"](https://youtu.be/cjrxXC3kGf4), you can see that it's very well-researched and gives lots of arguments both supporting and opposing their statements.
 
-Again, I recommend to watch the video and decide for yourself, don't just take my word for it. But... there's a lot of points that they made in which I needed to point out here. It's very easy to mislead people with statistics, especially when we know that there are a lot of people that share articles and videos without even reading/watching first or do some fact-checking. There's also the food waste problem, which in the order of importance, might just be the first we need to solve before tackling on other problems (that are probably not even one).
+Again, watch the video and decide for yourself, don't just take my word for it. But... there's a lot of points that they made in which I needed to point out here. It's very easy to mislead people with statistics, especially when we know that there are a lot of people that share articles and videos without even reading/watching first or do some fact-checking. There's also the food waste problem, which in the order of importance, might just be the first we need to solve before tackling on other problems (that are probably not even one).
 
 My point here is that this video is well-made, no matter how you looked at it. It gives a well developed, rational and logical counter-arguments for those they point out. Cutting off meat production right now isn't a solution, there are a lot of other problems that aren't and should be discussed instead of pointlessly blaming other things.
 
@@ -91,7 +91,7 @@ This is one of those things that most of us may actually know but just can't qui
 
 @youtube{disclosure id=5Dn3N3exIns caption="Responsible JavaScript"}
 
-One of the best talks this month about JavaScript and web technologies, highly recommended to watch for programmers, and especially for web developers. There's lots of ways to develop apps nowadays, and as such results in lots of wrong things. This talk addresses the problems most web apps are facing lately, as things progresses with many stuff on the rise, such as the notorious SPA where everything is JavaScript, even one that can be a pure static page.
+One of the best talks this month about JavaScript and web technologies. There's lots of ways to develop apps nowadays, and as such results in lots of wrong things. This talk addresses the problems most web apps are facing lately, as things progresses with many stuff on the rise, such as the notorious SPA where everything is JavaScript, even one that can be a pure static page.
 
 ***
 

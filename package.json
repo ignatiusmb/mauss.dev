@@ -8,7 +8,7 @@
 		"check:style": "prettier --check .",
 		"check:workspace": "pnpm --filter \"./workspace/*\" check"
 	},
-	"packageManager": "pnpm@10.15.1",
+	"packageManager": "pnpm@10.18.3",
 	"prettier": "mauss/prettier.config.js",
 	"devDependencies": {
 		"@fontsource-variable/brygada-1918": "^5.2.7",
@@ -18,7 +18,7 @@
 		"@sveltejs/kit": "^2.37.1",
 		"@sveltejs/vite-plugin-svelte": "^6.1.4",
 		"@types/node": "^24.3.1",
-		"aubade": "^0.11.5",
+		"aubade": "^0.12.0",
 		"mauss": "^0.10.7",
 		"prettier": "^3.6.2",
 		"prettier-plugin-sort-package-json": "^1.1.0",

@@ -51,10 +51,3 @@ Exactly, my first thoughts was, "aren't you just rewriting CSS as HTML classes?"
 To keep things simple, this is the biggest reason why it's not my type. It promotes ugly HTML markups, and I don't like my HTML cluttered with a lot of unnecessary stuff. CSS can already do **A LOT** of stuff, and I mean a lot. If you learn and understand their advance selectors, they can be your most powerful tools on the Front-End, even with "dirty" inefficient HTML tags. Imagine what you can do with the correct HTML tags and advanced CSS (hint: you can write [The Holy Grail Layout](https://css-tricks.com/the-holy-grail-layout-with-css-grid/) in a couple of lines).
 
 Hence, why I think it's *redundant* for me. Seriously, go take a look at my projects in GitHub (this site for example), especially since I'm already using Svelte which scopes CSS to just its component. There's no denying that there will be some duplicate lines between components, but if it means that every component is self-contained with maintainable code and predictable result (pure component in terms of styling), then I'll gladly pay that small price of duplicating some declaration lines.
-
-There's a lot of other things I could mention, but the point is made. I recommend you read the DEV post on my reference below if you're still not sure whether to use any or none. If you do and are enjoying yourself, then good for you.
-
-***
-Reference(s):
-
-- <https://dev.to/jaredcwhite/why-tailwind-isn-t-for-me-5c90>

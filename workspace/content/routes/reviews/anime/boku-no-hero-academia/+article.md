@@ -2,7 +2,7 @@
 date: 2020
 title: My Hero Academia
 alias: [Boku no Hero Academia]
-tier: "?"
+tier: S
 released: 2016-04-03
 completed: 138/138
 genres: [action, comedy, school, shounen]
