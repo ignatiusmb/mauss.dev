@@ -58,6 +58,7 @@
 			margin: 0;
 			border: 1px solid var(--color-border);
 			border-radius: var(--rounding-box);
+			font-family: var(--font-sans);
 			font-weight: 500;
 
 			&:hover,
