@@ -8,6 +8,7 @@
 	import { hydrate } from 'aubade/browser';
 	import { date } from 'mauss';
 	import { navigating } from '$app/state';
+	import { phrase } from '$lib/prose';
 
 	type Base = Items['/curated' | '/posts' | '/reviews'][number];
 	type Article = Overwrite<IntersectUnion<Base>, { branches?: string[] }>;
@@ -27,11 +28,11 @@
 		<header>
 			<aside>
 				{#if post.theme}
-					<span>a{post.theme === 'essay' ? 'n' : ''} {post.theme}</span>
+					<span>{phrase(post.theme)}</span>
 					{#if post.theme !== 'essay' && post.theme !== 'reflection'}
 						<time datetime={post.date}>{date(post.date).format('DD MMMM YYYY')}</time>
 					{/if}
-				{:else if post.series?.title === 'The Harvest'}
+				{:else if post.series?.title === 'Harvest'}
 					<time datetime={post.date}>{date(post.date).format('DD MMMM YYYY')}</time>
 				{/if}
 

@@ -21,10 +21,7 @@ export async function GET() {
 		map[series.title].push({ slug, title, chapter: series.chapter || '' });
 	}
 	for (const key in map) {
-		map[key].sort((x, y) => {
-			if (key === 'The Harvest') return y.slug.localeCompare(x.slug);
-			return x.chapter.localeCompare(y.chapter) || x.title.localeCompare(y.title);
-		});
+		map[key].sort((x, y) => x.chapter.localeCompare(y.chapter) || x.title.localeCompare(y.title));
 	}
 
 	return json({

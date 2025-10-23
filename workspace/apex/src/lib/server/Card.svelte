@@ -6,15 +6,30 @@
 		blurb: string;
 		date?: string;
 		footer?: string;
+		series?: {
+			title: string;
+			chapter?: string;
+		};
 	}
-	const { title, blurb, date, footer = '« mauss.dev »' }: Props = $props();
+	const { title, blurb, date, footer = '« mauss.dev »', series }: Props = $props();
 	const count = (text: string) => text.split(' ').length;
 </script>
 
 <div>
 	<section>
+		{#if series}
+			<header>
+				<span>{series.title}</span>
+				{#if series.chapter}
+					<span style:color="#d79628">❃</span>
+					<span>Chapter {series.chapter}</span>
+				{/if}
+			</header>
+		{/if}
+
 		<h1 class:balance={count(title) > 1}>{title}</h1>
 		<p class:balance={count(blurb) > 1}>{blurb}</p>
+
 		{#if date}
 			<footer>
 				<span>Alkamauss</span>
@@ -43,6 +58,7 @@
 		width: 100%;
 		height: 100%;
 		display: flex;
+		gap: 0.5rem;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
@@ -53,27 +69,33 @@
 	}
 
 	h1 {
-		margin-top: auto;
 		font-size: 6rem;
 	}
 
 	p {
-		margin: 0.5rem 0 auto 0;
 		line-height: 1.25;
 		font-size: 2rem;
 	}
 
+	header,
 	footer {
 		position: absolute;
-		bottom: -0.2rem;
 		display: flex;
-		gap: 0.5rem;
-		padding: 0 1rem;
+		gap: 0.8rem;
+		padding: 0 1.6rem;
 		align-items: center;
 		background: #050609;
 		color: #c2c4cb;
-		font-size: 1.8rem;
+	}
+	header {
+		top: -0.2rem;
+		transform: translateY(-50%);
+		font-size: 2.4rem;
+	}
+	footer {
+		bottom: -0.2rem;
 		transform: translateY(50%);
+		font-size: 1.8rem;
 	}
 
 	.balance {

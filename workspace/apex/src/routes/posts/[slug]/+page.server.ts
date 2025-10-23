@@ -12,7 +12,7 @@ export async function load({ parent, params }) {
 		collection: series,
 		meta: {
 			canonical: `/posts/${content.slug}`,
-			title: content.title,
+			title: (content.series ? `${content.series.title} • ` : '') + content.title,
 			description: content.description || '',
 			image: `https://mauss.dev/posts/${content.slug}/card.png`,
 		},

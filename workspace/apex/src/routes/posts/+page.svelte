@@ -13,6 +13,7 @@
 	import { scale } from 'svelte/transition';
 	import { pushState, replaceState } from '$app/navigation';
 	import { page } from '$app/state';
+	import { phrase } from '$lib/prose';
 	import worker from './search.agent?worker&url';
 
 	const { data } = $props();
@@ -104,10 +105,8 @@
 			<Image ratio={9 / 16} src={post.thumbnail || ''} alt={post.title}>
 				<div class="canvas" class:overlay={post.thumbnail}>
 					<aside>
+						<span>{phrase(post.theme)}</span>
 						<time datetime={post.date}>{date(post.date).format('DD MMMM YYYY')}</time>
-						{#if post.theme && post.theme !== 'pending'}
-							<span style:text-transform="capitalize">{post.theme}</span>
-						{/if}
 					</aside>
 					<header>{post.title}</header>
 					<small style:line-height="1.5">{post.description || ''}</small>
@@ -193,7 +192,7 @@
 				border-radius: var(--rounding-box);
 				font-size: var(--size-small);
 
-				span::before {
+				time::before {
 					content: '❃';
 					color: var(--color-accent-secondary);
 					margin-right: 0.5rem;
