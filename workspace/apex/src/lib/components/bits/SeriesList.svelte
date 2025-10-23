@@ -50,7 +50,7 @@
 			<a href="/{root}/{link}" class:current={slug === link}>
 				{#if chapter}
 					<span>{chapter}</span>
-					<span class="separator">❃</span>
+					<span style:color="var(--color-accent-secondary)">❃</span>
 				{/if}
 				<span>{title}</span>
 			</a>

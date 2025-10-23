@@ -24,7 +24,7 @@ export async function GET() {
 		map[series.title].push({ slug, title, chapter: series.chapter || '' });
 	}
 	for (const key in map) {
-		map[key].sort((a, b) => a.chapter.localeCompare(b.chapter) || a.title.localeCompare(b.title));
+		map[key].sort((x, y) => x.chapter.localeCompare(y.chapter) || x.title.localeCompare(y.title));
 	}
 
 	return json({
@@ -40,7 +40,6 @@ export async function GET() {
 				['guide', 'Guide'],
 				['moment', 'Moment'],
 				['archive', 'Archive'],
-				['pending', 'Pending'],
 			],
 			tags: [...new Set(items.flatMap((p) => p.tags))].filter((t) => t).sort(),
 			sort_by: [

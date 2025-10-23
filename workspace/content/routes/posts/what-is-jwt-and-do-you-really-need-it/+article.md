@@ -1,7 +1,7 @@
 ---
 date: "2020-09-28T17:38:25+07:00"
 theme: guide
-title: What Is JWT and Do You Really Need It?
+title: "What Is JWT and Do You Really Need It?"
 description: What is a JSON Web Token and do you really need it for your app.
 tags: [jwt, javascript, session]
 ---

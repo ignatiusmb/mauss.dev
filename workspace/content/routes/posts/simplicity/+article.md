@@ -5,7 +5,7 @@ title: The Virtue of Simplicity
 series:
   title: Art of Less
   chapter: 2
-description: complexity is rewarded for its noise, while simplicity is taken for granted.
+description: "complexity is rewarded for its noise, while simplicity is taken for granted."
 tags: [writing, design, productivity]
 ---
 

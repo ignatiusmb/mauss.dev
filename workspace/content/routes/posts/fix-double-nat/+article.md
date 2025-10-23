@@ -3,7 +3,7 @@ updated: "2025-08-26T20:00:00+07:00"
 date: "2019-01-15T17:38:25+07:00"
 theme: guide
 title: Fix Double-NAT on Your Network
-description: detect and fix Double-NAT issues that break remote access in apps like Plex, using traceroute, bridge mode, and port forwarding.
+description: "detect and fix Double-NAT issues that break remote access in apps like Plex, using traceroute, bridge mode, and port forwarding."
 tags: [tutorial, networking]
 ---
 

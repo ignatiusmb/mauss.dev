@@ -2,7 +2,7 @@
 date: 2025-10-21
 theme: reflection
 title: Opting Out of the Algorithmic Social Life
-description: on asociality and the irony of "social" networks that treat their users as commodities rather than individuals.
+description: on asociality and the irony of social networks that treat their users as commodities rather than individuals.
 tags: [introspection, culture]
 ---
 
