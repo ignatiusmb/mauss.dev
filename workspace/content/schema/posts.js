@@ -2,22 +2,30 @@ import { orchestrate } from 'aubade/conductor';
 import { stringify } from 'aubade/manifest';
 import { attempt, define } from 'mauss';
 
-export const schema = define(({ optional, literal, string, boolean }) => ({
+export const schema = define(({ optional, array, literal, string }) => ({
+	updated: optional(string()),
 	date: string(),
+	theme: literal(
+		'reflection', // personal thoughts or reflections on a topic
+		'essay', // opinionated long-form exploration of a subject
+		'guide', // practical instructions or how-to
+		'moment', // brief observation or thought, short or small insight
+		'archive', // republishing or preserving content for reference
+	),
 	title: string(),
 	series: optional({
-		title: literal('Highlights', 'The Essence', 'The Harvest', 'My Notes'),
+		title: string(),
 		chapter: optional(string()),
 	}),
-	description: optional(string()),
-	meta: optional({
-		index: optional(boolean()),
-	}),
+	description: string(),
+	tags: array(string()),
+	thumbnail: optional(string()),
+	image: optional(string()),
 }));
 
 /** @type {string[]} */
 const trashed = [];
-await orchestrate('./routes/curated', ({ breadcrumb: [file, slug], path }) => {
+await orchestrate('./routes/posts', ({ breadcrumb: [file, slug], path }) => {
 	if (file !== '+article.md') return;
 	const validate = attempt.wrap(schema);
 	return async ({ assemble, buffer, task }) => {
@@ -44,5 +52,5 @@ await orchestrate('./routes/curated', ({ breadcrumb: [file, slug], path }) => {
 	};
 });
 
-if (!trashed.length) console.log(`\x1b[32m✓\x1b[0m curated is all good!`);
-else console.log(`\x1b[33m⚠\x1b[0m ${trashed.length} curation were modified`);
+if (!trashed.length) console.log(`\x1b[32m✓\x1b[0m posts is all good!`);
+else console.log(`\x1b[33m⚠\x1b[0m ${trashed.length} post(s) were modified`);

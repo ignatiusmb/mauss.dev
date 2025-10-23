@@ -111,16 +111,12 @@ export const ROUTES = {
 			define(({ optional, array, literal, string }) => ({
 				updated: optional(string()),
 				date: string(),
-				theme: optional(
-					literal(
-						'reflection', // personal thoughts or reflections on a topic
-						'essay', // opinionated long-form exploration of a subject
-						'guide', // practical instructions or how-to
-						'moment', // brief observation or thought, short or small insight
-						'archive', // republishing or preserving content for reference
-						'pending', // unassigned or awaiting categorization
-					),
-					'pending',
+				theme: literal(
+					'reflection', // personal thoughts or reflections on a topic
+					'essay', // opinionated long-form exploration of a subject
+					'guide', // practical instructions or how-to
+					'moment', // brief observation or thought, short or small insight
+					'archive', // republishing or preserving content for reference
 				),
 				title: string(typography),
 				series: optional({

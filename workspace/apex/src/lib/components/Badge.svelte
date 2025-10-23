@@ -16,6 +16,7 @@
 		git: ['#f54d27', '#413932'],
 		github: ['#24292e', Contrast.LIGHT],
 		html: ['#e34c26', Contrast.LIGHT],
+		introspection: ['#4caf50', Contrast.LIGHT],
 		javascript: ['#f7df1e', Contrast.DARK],
 		life: ['#4caf50', Contrast.LIGHT],
 		lighthouse: ['#304ffe', Contrast.LIGHT],

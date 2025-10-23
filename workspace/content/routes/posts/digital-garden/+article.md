@@ -1,8 +1,8 @@
 ---
 date: 2025-10-15
-title: Digital Garden
 theme: reflection
-description: on tending a garden as a way of cultivating knowledge and ideas over time, a digital space that grows into a kind of second brain.
+title: Digital Garden
+description: "on tending a garden as a way of cultivating knowledge and ideas over time, a digital space that grows into a kind of second brain."
 tags: [writing]
 ---
 

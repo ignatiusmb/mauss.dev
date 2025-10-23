@@ -2,7 +2,7 @@
 date: "2023-06-21T12:00:00+07:00"
 theme: moment
 title: RIP Google Domains - Exploring New Digital Homes for Our Domains
-description: In the wake of Alphabet shutting down Google Domains, many of us are looking for alternatives to move our domains to, especially for our dev domains
+description: "In the wake of Alphabet shutting down Google Domains, many of us are looking for alternatives to move our domains to, especially for our dev domains"
 tags: [tech]
 thumbnail: https://9to5google.com/wp-content/uploads/sites/4/2022/03/google-domains-cover.jpeg
 ---

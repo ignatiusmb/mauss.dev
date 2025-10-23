@@ -1,33 +1,39 @@
 ---
-date: "2024-10-24"
+date: 2024-10-24
 theme: reflection
 title: Quarter-Life Renaissance
-description: October canon event — a quarter-century reflection
-tags: [life, reflection]
+series:
+  title: Orbit
+  chapter: 4
+description: reframing the 'quarter-life crisis' as an intellectual rebirth focused on craft over career.
+tags: [introspection]
 ---
 
-In the grand scheme of things, human life is fleeting. A speck of dust in the vastness of the universe, our time here is a mere blink of an eye. Yet, within this short span, we undergo profound phases of growth, reflection, and transformation — some so significant they redefine who we are and how we see the world, *canon events* as some would say.
+in the vastness of the universe, human life is fleeting — a speck of dust, a brief flicker in cosmic time. yet within that short span, we grow and change in ways that redefine who we are — *canon events*, as some would say.
 
-As humans, we love categorizing our lives into stages, often defined by age and milestones. One such early stage is the infamous quarter-life crisis — a period often marked by anxiety over the direction and quality of one's life. Clinical psychologist Alex Fowke describes it as "a period of insecurity, doubt, and disappointment surrounding your career, relationships, and financial situation."
+## crisis
 
-It's no wonder why so many of us experience this. The overwhelming transition where the freedoms and possibilities of youth begin to give way to the responsibilities and limitations of adulthood can feel daunting. We start to realize the path ahead isn't as clear as we once thought, and that life may not align perfectly with the expectations we held for ourselves.
+we like to frame our lives in stages. one of them is the so-called *quarter-life crisis* — a time marked by uncertainty, when the expectations we once carried begin to dissolve. clinical psychologist Alex Fowke describes it as:
 
-## Optimism
+> a period of insecurity, doubt, and disappointment surrounding your career, relationships, and financial situation.
 
-Historically, the Renaissance marked a transition from the Middle Ages to modernity — a period of rebirth or revival, often tied to significant social and intellectual change. That's exactly how I feel right now: a personal renaissance, filled with determination and excitement for the next chapter of my life.
+it's no surprise that many feel lost during this time. the transition when the freedoms of youth give way to the responsibilities of adulthood can feel overwhelming. we start to see that the path ahead isn't as clear as we once imagined, and life doesn't always align with the plans we made for it. the script we were handed ends, and we're left staring at a blank page.
 
-Life has taken on a new hue recently — charged with energy, fresh ideas, and limitless possibilities. I've always had dreams, ambitions, and goals, but now they feel more tangible, more aligned with who I am today. I've rediscovered my curiosity, become more open to change, and more willing to take risks. My hunger for growth has reignited, and it feels like things are falling into place. Every day isn't just another day anymore — it's an opportunity to learn, create, and evolve.
+## pivot
 
-The once distant goals now feel within reach, and the best part is, I'm no longer in a rush to get there. Instead of being preoccupied with where I should be, I'm savoring where I am. The journey has become just as meaningful as the destination. I've come to cherish the little things — the mundane moments and the simple joys that make life beautiful. Whether it's the thrill of a spontaneous adventure, the warmth of a shared meal, or the comfort of quiet moments, these experiences enrich the everyday.
+the "crisis" isn't ours to blame; it is a failure of the script itself. the disappointment comes from realizing that "the plan" was never aligned with a meaningful life, only a predictable one. we were taught to chase outcomes — the next degree, the next promotion, getting married, buying a house — but not to love the process of becoming ourselves.
 
-There's also a sense of peace that comes from realizing I don't need to have everything figured out right now. It's not about avoiding responsibility or ambition; it's about balancing drive with mindfulness and letting the present moment hold just as much weight as the future I'm working toward. Enjoying the process ensures that the journey itself is fulfilling, no matter the outcome.
+this is where the Renaissance begins. historically, it was an era of renewal, an intellectual and artistic rebirth. it was an active, rigorous, and obsessive return to the fundamentals. a shift *away* from dogmatic outcomes and *toward* a fascination with process. i've come to see this stage of my life as a pivot from living for outcomes to living for the craft itself.
 
-## Reflection
+this "rebirth" is not a feeling, but an action. i am digging into the fundamentals of subjects i thought i knew, not for a credential, but for mastery. rebuilding old projects, not to ship them, but to understand their mechanics. i'm no longer creating for validation, but for the joy of creation itself.
 
-One of life's simple truths that I always remind myself of is this: don't waste time chasing butterflies — tend to the garden, and they will come. Even if the butterflies never arrive, you'll still have a beautiful garden to enjoy. This metaphor serves as a constant reminder to focus on what I can control — my actions, my environment, and most importantly, my mindset.
+> What I cannot create, I do not understand. \
+> — Richard Feynman
 
-Speaking of milestones, today marks one that quietly reminds me of how far I've come — 25 years of life, a quarter of a century filled with memories, experiences, and lessons that have shaped me into the person I am today.
+## process
 
-I'm content with where I stand in my career, relationships, and financial situation. I have big plans for myself, and I'm steadily working toward them. Recently, I've bulked up 12% of my weight over the past few months and hit my desired muscle mass for the first stage of my fitness journey. My side projects are taking shape, and I'm building things I'm passionate about. Financially, I'm in the best position I've ever been, having saved and invested wisely.
+the Renaissance masters weren't famous for "arriving"; they were defined by their *studios* — their obsessive, daily practice. they fell in love with the *act* of mixing pigments, sketching anatomies, and solving problems. their masterpieces were the byproduct of a relentless devotion to the craft itself, the one thing they could control.
 
-As they say, you live and you learn — and enjoy the journey along the way.
+i've felt this before, but this time it feels grounded. i'm no longer chasing some idealized version of success or happiness. instead of being fixated on where i should be, i'm learning to appreciate where i am. the journey itself feels enough. there's joy in the mundane *practice*, peace in the quiet *focus*, and beauty in simply *doing the work*.
+
+today marks my twenty-fifth orbit around the sun. there's comfort in knowing i don't need to have it all figured out. i just need to show up to "the studio" consistently, and do the work. in a way, it makes me grateful for the 'crisis'. it was the catalyst that forced me to reevaluate my values and priorities, to enjoy the process and to find peace in *becoming* rather than *arriving* — in letting the present moment hold as much weight as the future i'm building.

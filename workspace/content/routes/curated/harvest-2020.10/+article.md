@@ -88,11 +88,11 @@ An epic showdown and ending to the Animator vs. Animation saga, watch the final 
 
 ## headlines
 
-### One-Hundredth of a Light-Year Across the Milky Way
+### One-Hundredth of a Light-Year Away
 
 This month marks another completed revolution for me. This time, I felt the need to make a special post to commemorate it. It's in my best interest to make this as general as possible, so that all of the readers would still understand and get my point. I do reserve the last section for everyone that's been involved in my life, one way or another.
 
-see: [article](/posts/one-hundredth-of-a-light-year-across-the-milky-way)
+see: [article](/posts/hundredth-light-year)
 
 ### Minecraft caves and cliffs update announced
 
