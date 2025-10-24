@@ -11,6 +11,7 @@
 	import { scale } from 'svelte/transition';
 	import { pushState, replaceState } from '$app/navigation';
 	import { page } from '$app/state';
+	import { entitle } from '$lib/prose';
 	import worker from './search.agent?worker&url';
 
 	const { data } = $props();
@@ -87,13 +88,13 @@
 		</p>
 	{/if}
 
-	{#each index as { title, slug } (slug)}
+	{#each index as { series, title, slug } (slug)}
 		<a
 			href="/curated/{slug}"
 			animate:flip={{ duration: TIME.SLIDE }}
 			transition:scale|local={{ duration: TIME.SLIDE }}
 		>
-			{title}
+			{entitle({ series, title })}
 		</a>
 	{/each}
 </div>

@@ -1,6 +1,6 @@
 ---
 date: 2025-08-14
-title: The Essence of Svelte
+title: Svelte
 series:
   title: The Essence
 description: a sleek language

@@ -1,8 +1,9 @@
 ---
 date: 2025-09-01
-title: Harvest • August 2025
+title: August 2025
 series:
-  title: The Harvest
+  title: Harvest
+  chapter: 2025.08
 ---
 
 ## headlines

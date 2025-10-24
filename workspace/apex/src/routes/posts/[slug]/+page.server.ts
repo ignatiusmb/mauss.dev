@@ -1,4 +1,5 @@
 import { redirect } from '@sveltejs/kit';
+import { entitle } from '$lib/prose';
 
 export const prerender = 'auto';
 export async function load({ parent, params }) {
@@ -12,7 +13,7 @@ export async function load({ parent, params }) {
 		collection: series,
 		meta: {
 			canonical: `/posts/${content.slug}`,
-			title: (content.series ? `${content.series.title} • ` : '') + content.title,
+			title: entitle(content),
 			description: content.description || '',
 			image: `https://mauss.dev/posts/${content.slug}/card.png`,
 		},

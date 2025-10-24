@@ -1,15 +1,15 @@
 import type { Schema } from '$content/posts.json/+server';
 import { date } from 'mauss';
 
-export type Query = {
+export interface Query {
 	search: string;
 	series: string;
 	theme: string;
 	tags: string[];
 	sort_by: keyof typeof by;
-};
+}
 
-export type Item = Omit<Schema['items'][number], 'content'>;
+export interface Item extends Omit<Schema['items'][number], 'content'> {}
 
 export function sift(items: Item[], payload: Query) {
 	const value = normalize(payload.search);

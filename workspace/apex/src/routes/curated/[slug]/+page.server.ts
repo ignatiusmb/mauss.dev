@@ -1,4 +1,5 @@
 import { redirect } from '@sveltejs/kit';
+import { entitle } from '$lib/prose';
 
 export async function load({ parent, params }) {
 	const { items, series } = await parent();
@@ -11,7 +12,7 @@ export async function load({ parent, params }) {
 		collection: series,
 		meta: {
 			canonical: `/curated/${article.slug}`,
-			title: article.title,
+			title: entitle(article),
 			description: article.description || '',
 			image: `https://mauss.dev/curated/${article.slug}/card.png`,
 		},

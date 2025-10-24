@@ -1,8 +1,9 @@
 ---
 date: 2021-01-01
-title: Harvest • December 2020
+title: December 2020
 series:
-  title: The Harvest
+  title: Harvest
+  chapter: 2020.12
 ---
 
 Hello and welcome back to the Harvest and Happy New Year! As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section.

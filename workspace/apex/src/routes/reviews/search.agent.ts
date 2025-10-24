@@ -13,5 +13,5 @@ const commands = {
 	},
 };
 
-export type Commands = Dispatch<typeof commands>;
+export interface Commands extends Dispatch<typeof commands> {}
 addEventListener('message', commander(commands));

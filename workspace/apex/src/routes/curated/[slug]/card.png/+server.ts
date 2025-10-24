@@ -13,5 +13,6 @@ export async function GET({ fetch, params }) {
 		title: post.title,
 		blurb: post.description || formatted,
 		date: post.description && formatted,
+		series: post.series,
 	});
 }

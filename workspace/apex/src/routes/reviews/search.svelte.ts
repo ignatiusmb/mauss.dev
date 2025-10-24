@@ -1,15 +1,15 @@
 import type { Schema } from '$content/reviews.json/+server';
 import { arrange, compare, date, inspect } from 'mauss';
 
-export type Query = {
+export interface Query {
 	search: string;
 	tier: string;
 	category: string;
 	genres: string[];
 	sort_by: keyof typeof by;
-};
+}
 
-export type Item = Omit<Schema['items'][number], 'branches' | 'content'>;
+export interface Item extends Omit<Schema['items'][number], 'branches' | 'content'> {}
 
 export function sift(items: Item[], payload: Query) {
 	const value = normalize(payload.search);

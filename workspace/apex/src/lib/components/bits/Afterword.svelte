@@ -1,9 +1,6 @@
 <script lang="ts">
-	import type { IntersectUnion, Overwrite } from 'mauss/typings';
-	import type { Items } from '$content/builder';
+	import type { Article } from '$lib/prose';
 	import { page } from '$app/state';
-	type Base = Items['/curated' | '/posts' | '/reviews'][number];
-	type Article = Overwrite<IntersectUnion<Base>, { branches?: string[] }>;
 
 	interface Props {
 		slug: string;
