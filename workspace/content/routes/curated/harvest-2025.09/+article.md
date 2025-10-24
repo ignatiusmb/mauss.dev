@@ -1,8 +1,9 @@
 ---
 date: 2025-10-01
-title: Harvest • September 2025
+title: September 2025
 series:
-  title: The Harvest
+  title: Harvest
+  chapter: 2025.09
 description: "Meta's latest privacy issues, summer anime finales, round two of vocal synth finds, and unsettling truths about Indonesia's tofu industry."
 ---
 

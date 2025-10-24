@@ -1,11 +1,11 @@
 import type { Items } from '$content/builder';
 
-export type Query = {
+export interface Query {
 	search: string;
 	series: string;
-};
+}
 
-export type Item = Omit<Items['/curated'][number], 'branches' | 'content'>;
+export interface Item extends Omit<Items['/curated'][number], 'branches' | 'content'> {}
 
 export function sift(items: Item[], payload: Query) {
 	const value = normalize(payload.search);

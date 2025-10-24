@@ -1,8 +1,9 @@
 ---
 date: 2020-11-01
-title: Harvest • October 2020
+title: October 2020
 series:
-  title: The Harvest
+  title: Harvest
+  chapter: 2020.10
 ---
 
 Hello and welcome back to the Harvest! As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section.

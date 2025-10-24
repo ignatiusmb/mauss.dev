@@ -1,8 +1,9 @@
 ---
 date: 2020-10-01
-title: Harvest • September 2020
+title: September 2020
 series:
-  title: The Harvest
+  title: Harvest
+  chapter: 2020.09
 ---
 
 Hello and welcome back to the Harvest! September was pretty slow with everything except the articles. As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section.

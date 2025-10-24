@@ -1,6 +1,6 @@
 ---
 date: 2025-08-14
-title: The Essence of Semantic Versioning
+title: Semantic Versioning
 series:
   title: The Essence
 description: a contract in numbers

@@ -6,7 +6,7 @@ export const schema = define(({ optional, literal, string, boolean }) => ({
 	date: string(),
 	title: string(),
 	series: optional({
-		title: literal('Highlights', 'The Essence', 'The Harvest', 'My Notes'),
+		title: literal('Highlights', 'The Essence', 'Harvest', 'Notes'),
 		chapter: optional(string()),
 	}),
 	description: optional(string()),

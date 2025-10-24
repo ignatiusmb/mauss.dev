@@ -5,55 +5,39 @@ title: One-Hundredth of a Light-Year Away
 series:
   title: Orbit
   chapter: 1
-description: learning to live at my own pace within the vastness of the universe.
+description: setting a personal pace in a vast universe and acknowledging the gravitational forces that define my orbit.
 tags: [introspection]
 ---
 
 it's strange to think that after all these years, i've only traveled a little more than one-hundredth of a light-year across the milky way — what a minuscule amount it is. over twenty revolutions around the sun, and yet the number feels almost comical. it's a humbling reminder of how small we are in the grand scheme of the universe, a speck of dust in the vast cosmic ocean.
 
-time itself is a human construct, something we built to make sense of existence. growing older doesn't necessarily mean growing wiser; some people simply accumulate years without reflection. i've met younger souls who understand life far better than those twice their age. i try to stay open-minded, to meet people as they are rather than through the lens of gossip or assumption.
+time itself is a human construct. growing older doesn't necessarily mean growing wiser; some people simply accumulate years without reflection. i've met younger souls who understand life far better than those twice their age. this perspective and sense of cosmic scale is the foundation of how i try to live.
 
-## past
+## noisy world
 
-years ago, i told a friend something i still stand by: *"i don't care what others say about you and i don't want to know either. if i want to know you better, i'll ask you myself."* it wasn't said with any other intention than to be sincere: that i want to hear their story from them directly, without filters or second-hand interpretations.
+when i internalize that scale, i start to see how much of human interaction is just short-term "noise". from then on, i can't seem to care less or have the patience to deal with gossip or second-hand interpretations. badmouthing others is a cowardly act, and i have zero tolerance or respect for it. i told a friend something i still stand by: *"i don't care what others say about you... if i want to know you better, i'll ask you myself."*
 
-i'm quite forgetful when it comes to people. i could literally leave a chat unread for days, but then reply as if no time has passed. i just can't help it; i do feel bad about it, but it's really not done with malice. similarly, i could have different answers to the same question asked at different times, simply because i forgot or my perspective changed over time.
+this applies to being the *subject* of noise, too. i reminded a friend that other people's opinions shouldn't weigh more than their own self-worth. most people are too absorbed in their own lives to give a shit about others. if i catch myself judging someone — be it for their taste, habits, or hobbies — i ask: *what does it matter to me?*
 
-## present
+most of the time, the answer is none. one of the most effective ways for me to manage this has been to [step away from most social media](/posts/opting-out). my mind feels lighter, i feel more content, and i have more time for what actually matters.
 
-not long ago, that same topic came up again with a close friend. she was hurt by people talking behind her back — something i've never had patience for. badmouthing others is a cowardly act, and i have zero tolerance or respect for it.
+stepping away has helped me notice something else: for a problem to be real, the relationship must be real. if someone's opinion comes from a place so distant that they don't know me well enough for a direct conversation, then they don't know me well enough to have a valid problem. their judgment is just surface-level noise, and i've learned to let it pass by.
 
-> criticize to help someone become better, not to feel superior.
+## my pace
 
-this doesn't mean to always be honest without tact. constructive criticism is valuable when given with kindness and the intent to help. honesty without kindness is cruelty, and kindness without honesty is manipulation.
+once you filter out the noise, you can finally set your own pace.
 
-going back to my friend, i reminded her that other people's opinions shouldn't weigh more than her own self-worth. those who talk behind your back are rarely worth listening to. if someone has something real to say, they'll say it to your face.
+my pace is asynchronous. i'm quite forgetful when it comes to people. i could literally leave a chat unread for days, but then reply as if no time has passed. it's not done with malice; i just operate on a different frequency, one that isn't dictated by push notifications.
 
-> you can't please everyone. you're not meant to. live in a way that feels honest to you.
+my pace is deliberate. i believe honesty without kindness is cruelty, and kindness without honesty is manipulation. i'd rather be silent than say something unkind. silence is often the best response, and will result in an outcome far better than any words could achieve.
 
-most people are too absorbed in their own lives to give a shit about others. worrying about being judged is exhausting and pointless — everyone else is likely doing the same thing in their heads. make yourself a priority, you're the only constant companion you'll ever have.
+my pace is authentic. you can't please everyone. you're not meant to. i learned to not let other people's opinions dictate my sense of self. it's about being at peace with who i am, so long as my existence doesn't harm others.
 
-despite my forgetfulness, i'm glad that certain values remain embedded deeper than thought, ingrained within my subconscious.
+## my orbit
 
-## future
+another year, another revolution around the sun. i've never cared much for the obligatory wishes, especially when they only come once a year; what matters are the small, genuine gestures shared along the way.
 
-i've long [stepped away from most social media](/posts/opting-out). i didn't delete everything — partly for archival reasons, and partly so that people can still find me if they need to. but for the most part, those spaces now exist as remnants of who i once was, preserved as an online reminiscence for the future.
-
-quitting social media had a huge impact on my life. my mind feels lighter, i feel like i have a lot more time for myself and those i care about, i feel more content with what i have and in turn, happier.
-
-> if you can't think of anything kind to say, say nothing at all.
-
-even though simple, this has been a line i've remembered for years. whenever i feel the urge to say something negative about someone, i pause and reflect. silence is often the best response, and will result in an outcome far better than any words could achieve.
-
-## philosophy
-
-i learned to not let other people's opinions dictate my sense of self. it doesn't mean that i can use that as an excuse to be inconsiderate, but it's more about being at peace with who i am, so long as my existence doesn't harm others.
-
-if i catch myself judging someone — be it for their taste, habits, or hobbies — i remind myself and ask: *what does it matter to me?* most of the time, the answer is none. when you stop caring what others think or stop trying to control how others see you, life softens a lot. you'll realize that the world and life in general isn't so bad after all. you learn to be more relaxed, composed, kinder, and exist without constant comparison or validation.
-
-another year, another revolution around the sun. i've never cared much for obligatory birthday wishes, especially when they only come once a year. what matters are the small, genuine gestures shared along the way.
-
-## to you, who
+my orbit is my own, but it's been bent and shaped by the gravity of every person i've encountered. this is to you, who:
 
 - kept me company during childhood
 - always shared your water bottle with me
@@ -74,4 +58,4 @@ another year, another revolution around the sun. i've never cared much for oblig
 - stayed by me when others left
 - believed in me when no one else did
 
-every single one who has been part of my life — whether still present or long gone — *thank you*. after all, you've literally been a part of my life and played a role in shaping the person writing this now, whether through kindness, hardship, or presence alone. every encounter, brief or lasting, has left its trace.
+every single one who has been part of my life — whether still present or long gone — *thank you*. after all, you've literally been a part of my life and played a role in shaping the person writing this now, whether through kindness, hardship, or presence alone. every encounter, brief or lasting, has left its trace on my trajectory.

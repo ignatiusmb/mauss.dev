@@ -1,8 +1,9 @@
 ---
 date: 2021-04-01
-title: Harvest • March 2021
+title: March 2021
 series:
-  title: The Harvest
+  title: Harvest
+  chapter: 2021.03
 ---
 
 Hello and welcome back to the Harvest! As always, feel free to skip ahead to your preferred content by using the quick links provided above to jump to your the section.

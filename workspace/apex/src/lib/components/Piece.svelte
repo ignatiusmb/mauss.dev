@@ -3,15 +3,15 @@
 	import Afterword from './bits/Afterword.svelte';
 	import SeriesList from './bits/SeriesList.svelte';
 
-	import type { IntersectUnion, Overwrite, PartialOmit } from 'mauss/typings';
+	import type { PartialOmit } from 'mauss/typings';
 	import type { Items, SeriesTable } from '$content/builder';
+	import type { Article } from '$lib/prose';
 	import { hydrate } from 'aubade/browser';
 	import { date } from 'mauss';
 	import { navigating } from '$app/state';
 	import { phrase } from '$lib/prose';
 
 	type Base = Items['/curated' | '/posts' | '/reviews'][number];
-	type Article = Overwrite<IntersectUnion<Base>, { branches?: string[] }>;
 	interface Props {
 		source?: string;
 		post?: PartialOmit<Article, keyof Omit<Article, keyof Base>>;
@@ -167,7 +167,6 @@
 			margin: calc(var(--size-base) * 0.64) 0;
 			border-left: var(--rounding-base) solid var(--color-border);
 			font-size: var(--size-base);
-			font-style: italic;
 			color: var(--color-text-muted);
 
 			> :first-child {
