@@ -13,11 +13,13 @@ this was meant to be published a month earlier — on the 19th of September, to 
 
 for reasons i can't quite remember now, i delayed it. in hindsight, that delay turned out to be a good thing. so much happened within that short span that it changed the entire tone of this piece — what was once a dark reflection has softened into something else entirely.
 
-## four years of peer pressure
+## four years of the script
 
-you probably already know what i'm referring to. those four years weren't exactly the best, nor the worst, but they were heavy. there were moments when i questioned everything, from "why i was there", "what was the point of it all", and "whether i was slowly losing my mind". much of what was *required* felt meaningless. even now, i struggle to see the merit behind them.
+in my first orbit reflection, i wrote about filtering out social "noise". this was something different. this was the systemic pressure of the script most of us were handed, to go to school, get the degree, get the job.
 
-still, it wasn't all for nothing. i gained skills and experiences that wouldn't have been accessible if i hadn't gone through this, but my sanity took quite a toll. my mental state faltered toward the end, and i found myself thinking in ways i never thought i would, which i find unsettling. well, it's been a while since then, and i'm much better now. i don't resent those years, and i've learned what not to repeat.
+i am referring to those four years of university. they weren't exactly the best, nor the worst, but they were heavy. there were moments when i questioned everything, from "why i was there" (a question i'd already solved regarding social life, but not my career), "what was the point of it all", and "whether i was slowly losing my mind". much of what was *required* for the degree felt meaningless.
+
+still, i don't think it was for nothing. i gained skills and experiences that wouldn't have been accessible if i hadn't gone through this, but my sanity took quite a toll. my mental state faltered toward the end, and i found myself thinking in ways i never thought i would, which i find unsettling. well, it's been a while since then, and i'm much better now. i don't resent those years, and i've learned what not to repeat.
 
 ## memento vivere
 

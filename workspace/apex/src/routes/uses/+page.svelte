@@ -1,82 +1,5 @@
 <script lang="ts">
 	import Piece from '$lib/components/Piece.svelte';
-	const instruments: Array<{
-		icon: string;
-		type: string;
-		items: Array<{
-			type: string;
-			name: string;
-			link?: string;
-		}>;
-	}> = [
-		{
-			icon: 'devices',
-			type: 'hardware',
-			items: [
-				{
-					type: 'PC',
-					name: 'ASUS NUC 14 Pro',
-					link: 'https://www.asus.com/us/displays-desktops/nucs/nuc-mini-pcs/asus-nuc-14-pro',
-				},
-				{
-					type: 'Display',
-					name: 'LG UltraGear 27GL83A-B 27"',
-					link: 'https://www.lg.com/us/monitors/lg-27gl83a-b-gaming-monitor',
-				},
-				{
-					type: 'Keyboard',
-					name: 'Keychron K2 - Brown Switch',
-					link: 'https://www.keychron.com/products/keychron-k2-wireless-mechanical-keyboard',
-				},
-				{
-					type: 'Audio I/O',
-					name: 'Focusrite Scarlett Solo 4th Gen',
-					link: 'https://focusrite.com/products/scarlett-solo',
-				},
-				{ type: 'Phone', name: 'Galaxy S23+' },
-				{ type: 'Watch', name: 'Venu 2 Plus' },
-				{ type: 'Earbuds', name: 'Galaxy Buds3 Pro' },
-				{
-					type: 'Home Lab',
-					name: 'GEEKOM Mini Air12',
-					link: 'https://www.geekompc.com/geekom-mini-air12-mini-pc',
-				},
-				{
-					type: 'Storage',
-					name: 'ORICO 4-bay',
-					link: 'https://www.orico.cc/us/product/detail/3617.html',
-				},
-			],
-		},
-		{
-			icon: 'terminal-window',
-			type: 'software',
-			items: [
-				{
-					type: 'Launcher',
-					name: 'Niagara',
-					link: 'https://play.google.com/store/apps/details?id=bitpit.launcher',
-				},
-				{ type: 'Code', name: 'VS Code', link: 'https://code.visualstudio.com' },
-				{ type: 'Music', name: 'Spotify', link: 'https://open.spotify.com' },
-				{ type: 'Vault', name: 'Bitwarden', link: 'https://bitwarden.com' },
-				{ type: 'Server', name: 'DietPi', link: 'https://dietpi.com' },
-				{ type: '3D + Video', name: 'Blender', link: 'https://www.blender.org' },
-			],
-		},
-		{
-			icon: 'drop-half',
-			type: 'wellness',
-			items: [
-				{ type: 'Cleanser', name: 'Bioderma Sensibio' },
-				{ type: 'Moisturizer', name: 'Effaclar Duo+M' },
-				{ type: 'Vitamin D3', name: '10000 IU' },
-				{ type: 'Vitamin K2', name: 'MK7 200 mcg' },
-				{ type: 'Magnesium', name: 'Glycinate 500 mg' },
-				{ type: 'Creatine', name: '5 g' },
-			],
-		},
-	];
 </script>
 
 <header>
@@ -85,32 +8,141 @@
 </header>
 
 <Piece>
-	{#each instruments as { icon, type, items }}
-		<h3 id={type}>
-			<i data-icon={icon}></i>
-			<span>{type}.</span>
-		</h3>
-		<table>
-			<thead>
-				<tr>
-					<th>type</th>
-					<th>name</th>
-				</tr>
-			</thead>
-			<tbody>
-				{#each items as { type, name, link }}
-					<tr>
-						<th scope="col">{type}</th>
-						{#if link}
-							<td><a href={link}>{name}</a></td>
-						{:else}
-							<td>{name}</td>
-						{/if}
-					</tr>
-				{/each}
-			</tbody>
-		</table>
-	{/each}
+	<h3 id="hardware">
+		<i data-icon="devices"></i>
+		<span>hardware.</span>
+	</h3>
+	<table>
+		<thead>
+			<tr><th>type</th><th>name</th></tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th scope="col">PC</th>
+				<td>
+					<a href="https://www.asus.com/us/displays-desktops/nucs/nuc-mini-pcs/asus-nuc-14-pro">
+						ASUS NUC 14 Pro
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<th scope="col">Display</th>
+				<td>
+					<a href="https://www.lg.com/us/monitors/lg-27gl83a-b-gaming-monitor">
+						LG UltraGear 27GL83A-B 27"
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<th scope="col">Keyboard</th>
+				<td>
+					<a href="https://www.keychron.com/products/keychron-k2-wireless-mechanical-keyboard">
+						Keychron K2 - Brown Switch
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<th scope="col">Audio I/O</th>
+				<td>
+					<a href="https://focusrite.com/products/scarlett-solo">Focusrite Scarlett Solo 4th Gen</a>
+				</td>
+			</tr>
+			<tr>
+				<th scope="col">Phone</th>
+				<td>Galaxy S23+</td>
+			</tr>
+			<tr>
+				<th scope="col">Watch</th>
+				<td>Venu 2 Plus</td>
+			</tr>
+			<tr>
+				<th scope="col">Earbuds</th>
+				<td>Galaxy Buds3 Pro</td>
+			</tr>
+			<tr>
+				<th scope="col">Home Lab</th>
+				<td><a href="https://www.geekompc.com/geekom-mini-air12-mini-pc">GEEKOM Mini Air12</a></td>
+			</tr>
+			<tr>
+				<th scope="col">Storage</th>
+				<td><a href="https://www.orico.cc/us/product/detail/3617.html">ORICO 4-bay</a></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h3 id="software">
+		<i data-icon="terminal-window"></i>
+		<span>software.</span>
+	</h3>
+	<table>
+		<thead>
+			<tr><th>type</th><th>name</th></tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th scope="col">Launcher</th>
+				<td>
+					<a href="https://play.google.com/store/apps/details?id=bitpit.launcher">Niagara</a>
+				</td>
+			</tr>
+			<tr>
+				<th scope="col">Code</th>
+				<td><a href="https://code.visualstudio.com">VS Code</a></td>
+			</tr>
+			<tr>
+				<th scope="col">Music</th>
+				<td><a href="https://open.spotify.com">Spotify</a></td>
+			</tr>
+			<tr>
+				<th scope="col">Vault</th>
+				<td><a href="https://bitwarden.com">Bitwarden</a></td>
+			</tr>
+			<tr>
+				<th scope="col">Server</th>
+				<td><a href="https://dietpi.com">DietPi</a></td>
+			</tr>
+			<tr>
+				<th scope="col">3D + Video</th>
+				<td><a href="https://www.blender.org">Blender</a></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h3 id="wellness">
+		<i data-icon="drop-half"></i>
+		<span>wellness.</span>
+	</h3>
+	<table>
+		<thead>
+			<tr><th>type</th><th>name</th></tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th scope="col">Cleanser</th>
+				<td>Bioderma Sensibio H<sub>2</sub>O</td>
+			</tr>
+			<tr>
+				<th scope="col">Moisturizer</th>
+				<td>Effaclar Duo+M</td>
+			</tr>
+			<tr>
+				<th scope="col"><a href="/posts/core-supplements">Vitamin D3</a></th>
+				<td>10,000 IU</td>
+			</tr>
+			<tr>
+				<th scope="col"><a href="/posts/core-supplements">Vitamin K2</a></th>
+				<td>MK7 200 mcg</td>
+			</tr>
+			<tr>
+				<th scope="col"><a href="/posts/core-supplements">Magnesium</a></th>
+				<td>Glycinate 500 mg</td>
+			</tr>
+			<tr>
+				<th scope="col">Creatine</th>
+				<td>5 g</td>
+			</tr>
+		</tbody>
+	</table>
 </Piece>
 
 <style>

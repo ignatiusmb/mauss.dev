@@ -65,7 +65,7 @@
 	{#if source}
 		<section data-info>
 			<!-- prettier-ignore -->
-			<p>feedback or fixes welcome — <a href="https://github.com/ignatiusmb/mauss.dev/issues">issues</a> &middot; <a href="https://github.com/ignatiusmb/mauss.dev/blob/master/workspace/content/routes/{source}">edits</a></p>
+			<p><a href="/help#feedback">send thoughts</a> via <a href="/about#elsewhere">email</a>. feedback or fixes welcome — <a href="https://github.com/ignatiusmb/mauss.dev/issues">issues</a> &middot; <a href="https://github.com/ignatiusmb/mauss.dev/blob/master/workspace/content/routes/{source}">edits</a></p>
 		</section>
 	{/if}
 </article>

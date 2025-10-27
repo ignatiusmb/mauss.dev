@@ -6,13 +6,11 @@ description: a technical dive into the process of building a self-contained favi
 tags: [devlog, javascript, typescript, svelte]
 ---
 
-lately, ideas have been pouring in faster than i can manage, and i feel the urge to chase and iterate on all of them. i know it's unrealistic to think i have the time or energy for everything, but i try anyway. *\*cue the pile of unfinished side projects watching me start another one\**
-
-naming things is still as hard as ever. and now that i'm delved into a bit of *graphic design*, making a logo (favicon) feels like the "naming things" equivalent of a software project. it's a hard thing that you need to do right — hopefully only once.
+naming things is still as hard as ever. and now that i've delved into a bit of *graphic design*, making a logo (favicon) feels like the "naming things" equivalent of a software project. it's a hard thing that you need to do right — hopefully only once.
 
 ## how to favicon
 
-a favicon has to be simple, recognizable, and convey the essence of the project in a small size, literally. it needs be eligible and visually discernible with the smallest size being `32x32` (or `16x16`) in the miniscule browser tab, and it has to look good in larger sizes as well. it is a separate rabbit hole that i've already fallen into and spent far too much time in, but let's set that aside for now and assume we have the SVG logo we want to use as our favicon, what now?
+a favicon has to be simple, recognizable, and convey the essence of the project in a small size, literally. it needs to be legible and visually discernible with the smallest size being `32x32` (or `16x16`) in the miniscule browser tab, and it has to look good in larger sizes as well. it is a separate rabbit hole that i've already fallen into and spent far too much time in, but let's set that aside for now and assume we have the SVG logo we want to use as our favicon, what now?
 
 the first thing that comes up when i tried to learn *the way* to do favicons is [How to Favicon](https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs) by Evil Martians. it's an amazing and comprehensive post that's been updated since it was first published in 2021, nice!
 
@@ -24,7 +22,7 @@ and then, i remembered that i'm a software developer, and i can spend (definitel
 
 ## breaking it down
 
-a good first step when encountering a problem is to break it down into smaller, manageable parts. in the case of setting up the favicon of a website, once the `<link>` tags and `.webmanifest` file are set up, the only repeatable tasks when the icon changes is the icon files itself.
+a good first step when encountering a problem is to break it down into smaller, manageable parts. in the case of setting up the favicon of a website, once the `<link>` tags and `.webmanifest` file are set up, the only repeatable tasks when the icon changes are the icon files themselves.
 
 once that's done, i need to figure out what i'm working with and what the end result should be. in this case, i wanted the *original* logo to be in SVG format because ~~i like coding my logo~~ it's scalable and will look good in any size. the output should be a set of favicon files i've already defined, which are:
 
@@ -71,6 +69,8 @@ async function png(raw: string, image: number, size: number): Promise<Blob> {
   });
 }
 ```
+
+here, the `size` parameter defines the total canvas dimension (e.g., `512x512`), while `image` defines the size of the icon itself (e.g., `400x400`), allowing me to calculate an `offset` to center it, which is useful for the maskable icon.
 
 the bulk of the work is done by the detached `canvas` element and calling `canvas.toBlob()`. with this function, i've *technically* completed 80% of the work, which covers generating 4 out of the 5 image files needed. of course, the first 80% only takes 20% of the time, and the remaining 20% takes 80% of the time (*subtle foreshadowing*). **Pareto principle** at its finest, right?
 
@@ -124,7 +124,7 @@ it's essentially a wrapper around the `png()` function, double-checking the `.ic
 
 ### serving the blobs
 
-notice that both `png()` and `ico()` function returns a (promised) `Blob`, which is a binary representation of the image data. this makes it convenient to generate the download links from the generated files, all it needs is an `<a>` tag with a `href` pointing to the `Blob` URL and a `download` attribute. this is how the download links are generated:
+notice that both `png()` and `ico()` function return a `Promise<Blob>`, which is a binary representation of the image data. this makes it convenient to generate the download links from the generated files, all it needs is an `<a>` tag with a `href` pointing to the `Blob` URL and a `download` attribute. this is how the download links are generated:
 
 ```svelte
 {#each [/* the generated file objects */] as { name, blob }}
@@ -140,11 +140,11 @@ the `{#each}` block is just Svelte's syntax for iterating over an array. what ma
 
 ### ZIP-em-up
 
-all the files are generated and can be downloaded individually, but it'll be (another) hassle to click and download them each of them one-by-one. it would be much better if they were zipped up nicely in a single download, but not a button that downloads all of them and spills the files all over the Downloads directory.
+all the files are generated and can be downloaded individually, but it'll be (another) hassle to click and download each of them one-by-one. it would be much better if they were zipped up nicely in a single download, but not a button that downloads all of them and spills the files all over the downloads directory.
 
-now, any sane person would've used a library and be done with it. but, as you can probably guess by now, i seem to enjoy pain a bit much by doing things the hard way. so, i implemented my own ZIP archiver, without compression! i don't hate myself that much, please.
+now, any sane person would've used a library and be done with it. but, as you can probably guess by now, i seem to enjoy pain a bit much by doing things the hard way. so, i implemented my own ZIP archiver (excluding compression) using only the platform APIs.
 
-after another few hours down the rabbit hole and reading the [ZIP file format](https://en.wikipedia.org/wiki/ZIP_(file_format)) specs, i managed to cram the bulk of it in about 100 lines of code inside the `zip()` function, excluding the couple of helper functions. it's more or less the same with the ICO encoding, but with a few more metadata to deal with.
+after another few hours down the rabbit hole and reading the [ZIP file format](https://en.wikipedia.org/wiki/ZIP_(file_format)) specs, i managed to implement the bulk of it in about 100 lines of code inside the `zip()` function, excluding the couple of helper functions. it's more or less the same with the ICO encoding, but with a few more metadata to deal with.
 
 ### self-contained
 

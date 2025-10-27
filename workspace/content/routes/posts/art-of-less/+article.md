@@ -1,11 +1,11 @@
 ---
 date: 2025-09-15
 theme: essay
-title: The Art of Less
+title: A Discipline of Subtraction
 series:
   title: Art of Less
   chapter: 1
-description: brevity reveals discipline in practice.
+description: perfection is achieved when there is nothing left to take away.
 tags: [writing, coding, productivity]
 ---
 
@@ -42,6 +42,8 @@ we need to be more aware. the danger is not that these machines will replace us,
 code is another form of writing. it [scales in complexity](https://blog.codinghorror.com/diseconomies-of-scale-and-lines-of-code/), and the [cost of mistakes](https://www.mayerdan.com/ruby/2012/11/11/bugs-per-line-of-code-ratio) grows *quadratically* with project size. more code creates more surface area for bugs and greater difficulty reasoning about the system.
 
 brevity here does not mean cryptic shorthand. code is read more often than it is written — usually by your future self. concise, clear code reduces cognitive load. the best tools and patterns are those that let us [express *more with less*](/curated/essence-of-svelte).
+
+structural subtraction simplifies the system for the *human* — simpler architecture, fewer dependencies; while computational subtraction lightens the load for the *machine* — smarter algorithms, or just *[doing less](https://youtu.be/5rb0vvJ7NCY)*. prioritizing only the computational yields a system that is fast but cryptic; prioritizing only the structural yields one that is clear but slow.
 
 ## living with less
 

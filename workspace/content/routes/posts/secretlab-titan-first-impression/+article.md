@@ -1,37 +1,40 @@
 ---
+updated: 2025-10-27
 date: "2020-06-13T17:38:25+07:00"
 theme: archive
 title: Secretlab TITAN Chair First Impression
-description: First impression of Secretlab chair TITAN series
+description: first impressions of Secretlab TITAN series chair
 tags: [daily]
 ---
 
-My Secretlab TITAN chair just arrived at `17:20` and I finished unboxing and assembling it after around an hour later at `18:30`. I'll be honest, I've been slacking a lot lately, so I'm completely exhausted by the time I've moved the box upstairs.
+> **[2025 retrospective]**
+>
+> i wrote this initial impression in June 2020. it's been over five years. i'm preserving the original post below as an archive of my immediate thoughts.
+>
+> the 2020 post concluded with a hypothesis that this chair "would definitely improve my overall productivity and health" — did it?
+>
+> well, kind of. the chair has held up remarkably well over the years, and it remains comfortable for long working sessions. however, it doesn't seem to be as ergonomic as i initially thought. i had to buy an additional seat cushion and changed my table to an adjustable standing desk to get the optimal posture. it's a solid investment, but i don't think i'll be upgrading to another *gaming* chair in the future. instead, i'll look for more specialized ergonomic office chairs.
 
-For starters, the unboxing experience was actually quite good and memorable, but the assembly isn't the most intuitive. Just pulling out the parts out of the box is challenging enough, let alone assembling it, especially for someone like me who has no one to help. You might get away with at least another person helping, they said it on the box too that this is a 2-person job. I was so exhausted after assembling this, I almost fell asleep on the chair.
+***
 
-Here's the quick impression review of it. It was everything I expected it to be.
+my Secretlab TITAN arrived at `17:20` and took roughly an hour to assemble solo. the unboxing experience was high-quality, but the assembly process is not intuitive. the components are heavy, and the instructions confirmed this is intended as a two-person job.
 
-- Smells like new leather
-- Superb high quality build
-- Really nice adjustable lumbar support
-- Comfortable individual adjustable armrests ✔
-- Comfortable head pillow, included with TITAN series ✔
-- Comfortable cushions
-- Levelled seat base that enables cross-legged sitting ✔
-- Wide backrest recline angle ✔
+@youtube{id=i_GdCtsl-qs caption="Secretlab Chair Features Usage"}
 
-[A YouTube video by Secretlab explaining the chair features](https://youtu.be/i_GdCtsl-qs)
+my quick impression of it was everything that i expected it to be. the last four points are the most important ones to me.
 
-Those points I give ✔ is the points I'm most grateful and most important to me.
+- smells nice
+- build feels solid
+- easy adjustable lumbar support
+- comfortable adjustable armrests ✔
+- comfortable head pillow ✔
+- levelled seat base that enables cross-legged sitting ✔
+- wide backrest recline angle ✔
 
-1. Individual adjustable armrests allows me to quickly and seamlessly switch positions between working mode and leisure mode. This is the biggest problem I had previously that costs me back and shoulder pain every day, since I can't freely adjust my armrests to support my right hand reaching across the table for the mouse.
-2. Head pillow is in combination with the wide backrest recline angle which allows me to rest for a while without leaving the desk, overshoots in the bed and sleeps. In short, increases productivity.
-3. I've grown a habit of having my legs either spread apart on both sides of the chair or up on the chair from using the last chair for about 5 years, so having a levelled seat base won't prevent me from spreading it to both sides and having it wide allows me to have more room when it's up and crossed on the chair.
+my extended thoughts after using it for a few hours:
 
-All things considered, I can safely conclude that this would be a worthwhile purchase. No doubt, this is already sixfold better than my previous chair and would definitely improve my overall productivity and health.
+1. adjustable armrests allows me to quickly switch positions between working mode and leisure mode. my previous chair's static rests were the primary source of daily back and shoulder pain, as i couldn't properly support my right arm while using the mouse.
+2. the combination of the included head pillow and the wide backrest recline angle allows for short rests at the desk, rather than leaving the workspace entirely and losing focus.
+3. i have a long-standing habit of sitting cross-legged. the TITAN's wide, levelled seat base accommodates this without issue.
 
----
-Reference(s):
-
-- <https://topgamingchair.com/secretlab-titan-2020-series-new-favorite-chair/>
+all things considered, this was a significant, necessary upgrade. it is a stark improvement over my previous chair, and i hypothesize it will have a net positive impact on my long-term productivity and physical health.

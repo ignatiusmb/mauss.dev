@@ -11,6 +11,8 @@ tags: [introspection]
 
 24 karat is the measure of pure gold. it's valued for its 99.9% purity, but this very purity makes it incredibly soft — too soft for most practical use. to gain strength and durability, it must be alloyed with other metals. similarly, i've come to see life in the same way...
 
+> this reflection arrives after two orbits. i deliberately skipped last year's 'orbit', choosing instead to be fully present and enjoy the day for myself, disconnected from any device and external distractions. this year, i've returned and eager to share my thoughts once again.
+
 ## happiness
 
 if i find myself stripped of everything, who would i be then? in that stark emptiness, all i have left is myself. everything external is but a complement to who i am, none of which is a part of my core being. no amount of possessions can ever fill the void within, and no amount of validation from others can make me love myself more. the core isn't defined by what i own or how others see me, nothing outside can complete me, because i am already whole to begin with.
@@ -29,12 +31,11 @@ resolve can be cultivated. however, we often make the mistake of trying to build
 
 > emotions cannot be selectively muted, they are felt in their entirety or not at all. people who are emotionally numb are disconnected from their feelings and don't feel anything deeply. while this numbness may protect them from negative emotions, it also robs them of the capacity to foster positive ones like resolve.
 
-being disciplined means cultivating resolve on a daily basis. capture mental snapshots of the moments when you feel most driven and resolute, and use them as fuel for your willpower. start with small or easy tasks that you can do consistently, something that won't be emotionally taxing or overwhelming. visualize resolve as your inner fire, a small flame that you stoke daily until it grows and blazes brightly. through that cultivation, you will gain the required emotional energy to carry you forward.
+this seems like a contradiction: how can *consistency* be built on something that *fluctuates*? the key is that discipline is not just *having* the emotion of resolve; it is the *practice* of cultivating and recalling it. **this practice involves capturing** mental snapshots of the moments when you feel most driven and resolute, and **using** them as fuel for your willpower.
+
+start with small or easy tasks that you can do consistently, something that won't be emotionally taxing or overwhelming. visualize resolve as your inner fire, a small flame that you stoke daily until it grows and blazes brightly. through that cultivation, you will gain the required emotional energy to carry you forward.
 
 ## purpose
-
-*raison d'être*, what is the purpose of life? \
-there isn't a universal one — only the meaning we choose to make.
 
 unfortunately, finding purpose is hard these days. most of us are too busy with our daily lives to even think about it, often overwhelmed by external distractions that leave us with a sense of meaninglessness. as life becomes meaningless, we start to seek external sources for quick dopamine rushes, we become so accustomed to instant gratification that we end up externalizing our attention.
 

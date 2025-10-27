@@ -9,11 +9,13 @@ description: "learning to see life not as a problem to be solved, but a reality 
 tags: [introspection]
 ---
 
+in the last orbit, i wrote about finding my *raison d'être* within my [Quarter-Life Renaissance](/posts/quarter-life-renaissance). and for a time, this was the answer; i found my drive. but i came to realize that *solution* only "solved" the problem of my *work*, not the problem of my *existence*...
+
 every time i move forward, i find myself paralyzed a few months later. colors lose their glow, light doesn't shine, and trying to find what matters becomes the only thing that matters.
 
 ## the void
 
-an existential inertia. zooming out, in the grand scheme of things, humans don't seem to matter at all. *nothing* we do seems to matter. the earth has been here for billions of years and will remain long after humanity ceases to exist. the world doesn't revolve around any one person. everyone who lives will eventually die.  
+an existential inertia. zooming out, in the grand scheme of things, humans don't seem to matter at all. *nothing* we do seems to matter. the earth has been here for billions of years and will remain long after humanity ceases to exist. the world doesn't revolve around any one person. everyone who lives will eventually die.
 
 so then — why am i alive? what is the meaning of life? why bother doing *anything* at all?
 
@@ -26,6 +28,8 @@ when i was a kid, everything seemed magical. the world felt big, there was so mu
 the monotony isn't the problem — merely a symptom. the paralysis comes from the *search* itself.
 
 a change in routine seems scary. being unable to predict the outcome makes me uncomfortable, so i lock myself in the comfort zone that feels safe. venturing through unfamiliar territory rarely feels easy. how do i know if i'm making the right choice? what if i fail? what if things get worse?
+
+> this ties into a classic psychological trap known as the [region-beta paradox](https://en.wikipedia.org/wiki/Region-beta_paradox), which suggests that we are more likely to change a *terrible* situation than a *mildly bad* one. an intolerable (region `β`) problem triggers our psychological immune system, forcing us to act. but a "just tolerable" (region `α`) problem, like my "safe" comfort zone, isn't painful enough to motivate that change. we end up stuck in mediocrity simply because it's not bad enough to leave.
 
 this fear is a byproduct of overthinking. constantly traveling between the past and the future, never truly *living* in the moment. imagine going on a trip, thinking about making some memories and taking pictures — thinking about now as if it were the past in the future when looking back on the present... that's unbelievable time travel, and i used to do it all the time. i was so preoccupied with what could have been or what might be that i missed out on what *is*.
 

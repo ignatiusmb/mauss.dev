@@ -10,13 +10,15 @@ after reflecting on being [An Outsider Inside Myself](/posts/fractured-memories)
 
 *antisocial* describes behavior that is averse to others, often marked by actions that go **against** social norms — disruptive behavior such as vandalism, violence, theft, arson, or anything that harms or disregards the rights of others.
 
-throughout this piece, i'll refer to the platforms collectively called 'social media' as 'social networks', borrowing the term from the Japanese *SNS*. i find it more accurate for describing the *absence* of genuine social interaction that these systems foster.
+the term i was looking for is *asocial* — not hostility toward others, but a lack of motivation to engage socially. it captures how i feel about the digital way we're told to be social.
+
+throughout this piece, i'll refer to 'social media' as 'social networks'. the latter feels more accurate because it better describes the systems of connection — and disconnection — that these platforms foster, while the former implies a one-way broadcast model that doesn't capture the full scope of their impact on our social lives.
 
 ## motive
 
 as an introvert, i prefer smaller circles and one-on-one conversations over large gatherings. i recharge through solitude and being alone with my thoughts. i've never quite "got the gist" of drawn-out exchanges in instant messaging apps, including the direct or private messages built into social networks. they function mostly as tools for quick confirmation, not as spaces for deep conversation.
 
-the term i was looking for is *asocial* — not hostility toward others, but a lack of motivation to engage socially. it captures how i feel about social networks and how they reshape interactions between individuals. i'm not *against* people; my introversion merely reinforces it, but it's not the main reason...
+this feeling is reinforced by my introversion, but it's not the root cause. my *asociality* is not a general apathy toward people; rather a specific, principled lack of motivation to engage *with these platforms*. i'm not *against* people per se, just the algorithmic and superficial systems that now mediate our interactions.
 
 ## empty
 
@@ -70,13 +72,11 @@ as mentioned in [echo chambers](#echo-chambers), it's difficult to reach those w
 
 the root problem lies in the algorithms and the lack of freedom to choose both what we see and how it's presented. i've been curating my own *feed* through RSS and by visiting websites directly — no algorithms, no distractions. this ties into privacy and security too, but that's a topic for another day.
 
-it'd be naive to think i can make a difference alone, *but i wasn't raised a quitter!* i live in a democratic country with the usual "your vote matters" spiel, and i've learned that power comes from the collective action of individuals. if enough people decide to step away from social networks, it could still shift how we engage with one another and the world around us.
-
 > Yesterday I was clever, so I wanted to change the world. Today I am wise, so I am changing myself. \
 > — Rumi
 
-people once interacted face-to-face, forming genuine connections and communities. we had hobbies, we read, we went outside, we explored. meeting occasionally was enough, because those moments were meaningful and memorable. there was no need for constant updates or validation. we lived our own lives, content with our own company and the company of those around us.
+i crave the [simplicity](/posts/simplicity) and authenticity of a time when connection wasn't a stream of performative feed. there was no pressure for constant updates or validation; meeting occasionally was enough, because those moments were meaningful. we lived our own lives, content with our own company and the company of those around us.
 
-i crave that [simplicity](/posts/simplicity) and authenticity. moving away from social networks is my way of reclaiming time and attention for more meaningful pursuits. i grew up in the era of *pen pals* and still cherish that slower, more intentional form of communication. my preferred [contact method](/about#elsewhere) is now the plain and "boring" email, without the performative corporate speak or formatting — unless i'm writing to a corporation (?)
+moving away from social networks is my way of reclaiming time and attention for more meaningful pursuits. i grew up in the era of *pen pals* and still cherish that slower, more intentional form of communication. my preferred [contact method](/about#elsewhere) is now the plain and "boring" email, without the performative corporate speak or formatting — unless i'm writing to a corporation (?)
 
 in the end, this is one of my reasons for building a small corner of the internet — a [Digital Garden](/posts/digital-garden). <!-- as for everything else, well, [Leave Me Alone](/posts/leave-me-alone). -->

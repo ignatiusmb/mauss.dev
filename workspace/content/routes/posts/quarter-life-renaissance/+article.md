@@ -21,9 +21,9 @@ it's no surprise that many feel lost during this time. the transition when the f
 
 ## pivot
 
-the "crisis" isn't ours to blame; it is a failure of the script itself. the disappointment comes from realizing that "the plan" was never aligned with a meaningful life, only a predictable one. we were taught to chase outcomes — the next degree, the next promotion, getting married, buying a house — but not to love the process of becoming ourselves.
+the "crisis" isn't ours to blame; it is a failure of the script itself. the disappointment comes from realizing that "the plan" was never aligned with a meaningful *process*, only a predictable *outcome*. we were taught to chase outcomes — the next degree, the next promotion, getting married, buying a house — but not to love the process of becoming ourselves.
 
-this is where the Renaissance begins. historically, it was an era of renewal, an intellectual and artistic rebirth. it was an active, rigorous, and obsessive return to the fundamentals. a shift *away* from dogmatic outcomes and *toward* a fascination with process. i've come to see this stage of my life as a pivot from living for outcomes to living for the craft itself.
+this is where the Renaissance begins. historically, it was an era of renewal, an intellectual and artistic rebirth. it was an active, rigorous, and obsessive return to the fundamentals. a shift *away* from dogmatic outcomes and *toward* a fascination with process. i've come to see this stage of my life as a pivot from living for *a career* to living for *the craft itself*.
 
 this "rebirth" is not a feeling, but an action. i am digging into the fundamentals of subjects i thought i knew, not for a credential, but for mastery. rebuilding old projects, not to ship them, but to understand their mechanics. i'm no longer creating for validation, but for the joy of creation itself.
 
@@ -36,4 +36,4 @@ the Renaissance masters weren't famous for "arriving"; they were defined by thei
 
 i've felt this before, but this time it feels grounded. i'm no longer chasing some idealized version of success or happiness. instead of being fixated on where i should be, i'm learning to appreciate where i am. the journey itself feels enough. there's joy in the mundane *practice*, peace in the quiet *focus*, and beauty in simply *doing the work*.
 
-today marks my twenty-fifth orbit around the sun. there's comfort in knowing i don't need to have it all figured out. i just need to show up to "the studio" consistently, and do the work. in a way, it makes me grateful for the 'crisis'. it was the catalyst that forced me to reevaluate my values and priorities, to enjoy the process and to find peace in *becoming* rather than *arriving* — in letting the present moment hold as much weight as the future i'm building.
+today marks my twenty-fifth orbit around the sun. there's comfort in knowing i don't need to have it all figured out. i just need to show up to "the studio" consistently, and do the work. in a way, it makes me grateful for the 'crisis'. it was the catalyst that forced me to reevaluate my values and priorities, to enjoy the *process of the craft*, and to find peace in *the work itself* — in letting the daily practice hold as much weight as the masterpieces i'm building.
