@@ -74,7 +74,7 @@
 
 	p {
 		line-height: 1.25;
-		font-size: 2rem;
+		font-size: 2.1rem;
 	}
 
 	header,

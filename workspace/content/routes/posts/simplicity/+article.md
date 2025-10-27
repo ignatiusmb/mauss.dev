@@ -31,7 +31,7 @@ complexity also sells better than simplicity. more layers, more features, more j
 
 complexity is contagious. once a system becomes bloated, it tends to stay that way. new features stack on top of old ones, quick fixes pile into technical debt, and the result is a system no one fully understands — but everyone tolerates because "that's how it's always been".
 
-few dare to simplify an inherited mess for fear of breaking something, so patches and add-ons keep stacking up. tight budgets and timelines encourage more shortcuts and workarounds, until no one remembers how the system works and the [bus factor](https://en.wikipedia.org/wiki/Bus_factor) drops to zero.
+few dare to simplify an inherited mess for fear of breaking something, so patches and add-ons keep stacking up. tight budgets and timelines encourage more shortcuts and workarounds, until knowledge becomes so fragmented that no single person understands the whole, rendering the project effectively unmaintainable.
 
 once entrenched, complexity reshapes the culture around it. teams learn to fear change, to patch rather than address the root problem, to measure effort by volume instead of clarity. the system becomes self-preserving, not because it works well, but because no one dares to touch it.
 
