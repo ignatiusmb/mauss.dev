@@ -2,7 +2,7 @@
 date: 2025-10-27
 theme: reflection
 title: Core Supplements
-description: a personal log of my research and experience with vitamin D, magnesium, and other essential supplements; not medical advice.
+description: "a personal log of my research and experience with vitamin D, magnesium, and other essential supplements; not medical advice."
 tags: [health, wellness]
 ---
 

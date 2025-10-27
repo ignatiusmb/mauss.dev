@@ -11,7 +11,7 @@ tags: [introspection]
 
 24 karat is the measure of pure gold. it's valued for its 99.9% purity, but this very purity makes it incredibly soft — too soft for most practical use. to gain strength and durability, it must be alloyed with other metals. similarly, i've come to see life in the same way...
 
-> this reflection arrives after two orbits. i deliberately skipped last year's 'orbit', choosing instead to be fully present and enjoy the day for myself, disconnected from any device and external distractions. this year, i've returned and eager to share my thoughts once again.
+> this reflection arrives after two orbits. i deliberately skipped last year's orbit, choosing instead to be fully present and enjoy the day for myself, disconnected from any device and external distractions. this year, i've returned and eager to share my thoughts once again.
 
 ## happiness
 
