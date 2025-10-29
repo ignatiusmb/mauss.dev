@@ -109,6 +109,7 @@
 
 		<a
 			href="/reviews/{post.slug}"
+			tabindex={post.draft ? -1 : null}
 			data-tier={post.tier}
 			aria-label={post.title}
 			aria-disabled={post.draft ? 'true' : null}
