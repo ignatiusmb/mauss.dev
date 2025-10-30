@@ -17,6 +17,9 @@ every time i move forward, i find myself paralyzed a few months later. colors lo
 
 an existential inertia. zooming out, in the grand scheme of things, humans don't seem to matter at all. *nothing* we do seems to matter. the earth has been here for billions of years and will remain long after humanity ceases to exist. the world doesn't revolve around any one person. everyone who lives will eventually die.
 
+> We come from an inconceivable nothingness. We stay a while in something which seems equally inconceivable, only to vanish again into the inconceivable nothingness. \
+> — Peter Wessel Zapffe
+
 so then — why am i alive? what is the meaning of life? why bother doing *anything* at all?
 
 this feeling bleeds into the present. when the only life i know is the one i'm living, it loses its spark. i grow so accustomed to my lifestyle that i forget there are other ways to live. the somber feeling of adaptation keeps me locked in place — unable to move forward or backward, simply enduring the passage of time.
@@ -33,7 +36,7 @@ a change in routine seems scary. being unable to predict the outcome makes me un
 
 this fear is a byproduct of overthinking. constantly traveling between the past and the future, never truly *living* in the moment. imagine going on a trip, thinking about making some memories and taking pictures — thinking about now as if it were the past in the future when looking back on the present... that's unbelievable time travel, and i used to do it all the time. i was so preoccupied with what could have been or what might be that i missed out on what *is*.
 
-what makes it worse is that we're more connected, yet more isolated, than ever before. i'm [Opting Out of the Algorithmic Social Life](/posts/opting-out), preferring in-person connection whenever possible. oxytocin bonds people together, and we lose it when we replace touch and eye contact with taps and videos on a screen.
+what makes it worse is that we're more connected, yet more isolated, than ever before. i'm [Opting Out of the Algorithm](/posts/opting-out), preferring in-person connection whenever possible. oxytocin bonds people together, and we lose it when we replace touch and eye contact with taps and videos on a screen.
 
 ## the release
 

@@ -99,9 +99,13 @@
 	.options {
 		display: grid;
 		gap: 0.5rem;
-		grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+		grid-template-columns: 1fr 1fr;
 		margin-top: 1rem;
 		background: inherit;
+
+		@media (min-width: 600px) {
+			grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+		}
 
 		section {
 			overflow-y: auto;

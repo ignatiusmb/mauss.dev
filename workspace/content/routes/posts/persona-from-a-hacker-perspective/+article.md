@@ -2,8 +2,11 @@
 date: "2020-06-04T17:38:25+07:00"
 theme: archive
 title: Persona from A Hacker's Perspective
+series:
+  title: PPL 2020
+  chapter: 5
 description: Persona should be the first step to any development plan
-tags: [ppl2020, design]
+tags: [design]
 ---
 
 Creating, especially coding something starts from a certain problem. There's something we want to tackle and it has to have a clear objective for it to succeed. It has to take the necessary steps to stay in track and keep progressing in the right way.

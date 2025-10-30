@@ -1,7 +1,10 @@
 ---
 date: 2025-10-21
 theme: reflection
-title: Opting Out of the Algorithmic Social Life
+title: Opting Out of the Algorithm
+series:
+  title: Solus
+  chapter: 2
 description: on asociality and the irony of social networks that treat their users as commodities rather than individuals.
 tags: [introspection, culture]
 ---
@@ -79,4 +82,4 @@ i crave the [simplicity](/posts/simplicity) and authenticity of a time when conn
 
 moving away from social networks is my way of reclaiming time and attention for more meaningful pursuits. i grew up in the era of *pen pals* and still cherish that slower, more intentional form of communication. my preferred [contact method](/about#elsewhere) is now the plain and "boring" email, without the performative corporate speak or formatting — unless i'm writing to a corporation (?)
 
-in the end, this is one of my reasons for building a small corner of the internet — a [Digital Garden](/posts/digital-garden). <!-- as for everything else, well, [Leave Me Alone](/posts/leave-me-alone). -->
+in the end, this is one of my reasons for building a small corner of the internet — a [Digital Garden](/posts/digital-garden). as for everything else, well, [Leave Me Alone](/posts/leave-me-alone).

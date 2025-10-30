@@ -2,8 +2,11 @@
 date: "2020-04-30T17:38:25+07:00"
 theme: archive
 title: Complete Flutter Development Automation
+series:
+  title: PPL 2020
+  chapter: 3
 description: Check out how to automate your Flutter development workflow
-tags: [ppl2020, flutter, devops, gitlab]
+tags: [flutter, devops, gitlab]
 ---
 
 ![Flutter Logo](https://storage.googleapis.com/cms-storage-bucket/lockup_flutter_horizontal_wht.67187dff9313e2831a8c.svg)

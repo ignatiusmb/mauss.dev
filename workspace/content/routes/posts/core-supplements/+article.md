@@ -28,15 +28,15 @@ that said, my research has shown me a few things:
 
 from what i've read, this only happens at absurd, sustained doses (hundreds of thousands of IU daily for months), not the modest doses most people use. this context is what makes me comfortable with my own routine.
 
-**my dose**: i take **10,000 IU of `D3`** daily. i look for `D3` (not `D2`) and supplements without fillers like maltodextrin.
+**my dose**: i take **10,000 IU** of `D3` daily. i look for `D3` (not `D2`) and supplements without fillers like maltodextrin.
 
-## Vitamin `K2 (MK-7)`
+## Vitamin `K2` (`MK-7`)
 
 this one seems critical to take *with* vitamin `D`. from what i've read, `K2` is what directs calcium into bones and teeth, [improving bone quality and strength](https://pmc.ncbi.nlm.nih.gov/articles/PMC7230802/), while also keeping it out of arteries and soft tissues.
 
 this is my primary safeguard against the main risk of vitamin `D` (vascular calcification). i specifically look for the `MK-7` form (not `MK-4`), at a ratio of at least 100 mcg for every 10,000 IU of `D3`.
 
-**my dose**: i take **200 mcg of vitamin `K2 (MK-7)`**, which comes included in my daily `D3` supplement. i also get it from food (high-quality grass-fed butter and beef, kimchi, eggs).
+**my dose**: i take **200 mcg** of vitamin `K2` (`MK-7`), which comes included in my daily `D3` supplement. i also get it from food (high-quality grass-fed butter and beef, kimchi, eggs).
 
 ## Magnesium Glycinate
 
@@ -44,11 +44,11 @@ my understanding is that this is another essential partner for vitamin `D` and a
 
 i chose the `glycinate` form specifically because i've read it's highly bioavailable. as a bonus, it seems to help me sleep better. i get some from food (leafy greens, chocolate, nuts, pumpkin seeds), but i supplement it to be sure.
 
-**my dose**: i take **500 mg of magnesium `glycinate`** daily, usually after dinner.
+**my dose**: i take **500 mg** of magnesium `glycinate` daily, usually after dinner.
 
 ## Zinc
 
-i learned that the vitamin `D` receptor (vdr) depends on zinc to function.
+i learned that the vitamin `D` receptor (VDR) depends on zinc to function.
 
 i'm careful with this one. i *think* i accidentally double-dosed once and felt incredibly sick, vomiting my lunch. it might have been a nocebo effect, but i'm avoiding pure zinc supplements for now and try to get it from food. if i do look for one, i'll make sure it's a low-dose blend with other trace minerals.
 

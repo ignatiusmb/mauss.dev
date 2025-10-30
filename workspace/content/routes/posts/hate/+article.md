@@ -8,7 +8,7 @@ tags: [emotion, ethics]
 
 hate is an *active* process, a conscious — or unconscious — expenditure of energy. it is the act of ruminating, of wishing harm, of allowing one's thoughts to be consumed by intense hostility. it is this *active* nature that makes it uniquely draining and dangerous. unlike hate, dislike is passive; it is a preference or a judgment.
 
-i do not use the word 'hate' lightly. i reserve it for a specific emotional process, distinct from mere dislike or aversion. however, this article is not about the "hate" for abstract concepts like injustice or cruelty, which can be a motivating force for good. it is about *interpersonal hate* — the active, sustained hostility directed from one person to another.
+i do not use the word 'hate' lightly, reserving it for a specific emotional process, distinct from mere dislike or aversion. however, this article is not about the "hate" for abstract concepts like injustice or cruelty, which can be a motivating force for good. it is about *interpersonal hate* — the active, sustained hostility directed from one person to another.
 
 > Hate is too great a burden to bear. It injures the hater more than it injures the hated. \
 > — Coretta Scott King

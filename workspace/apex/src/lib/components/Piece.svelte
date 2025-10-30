@@ -29,7 +29,7 @@
 			<aside>
 				{#if post.theme}
 					<span>{phrase(post.theme)}</span>
-					{#if post.theme !== 'essay' && post.theme !== 'reflection'}
+					{#if !post.series && post.theme !== 'essay' && post.theme !== 'reflection'}
 						<time datetime={post.date}>{date(post.date).format('DD MMMM YYYY')}</time>
 					{/if}
 				{:else if post.series?.title === 'Harvest'}
@@ -63,9 +63,13 @@
 	{/if}
 
 	{#if source}
-		<section data-info>
+		<section
+			data-info
+			style:text-align="center"
+			style:border-right="var(--rounding-base) solid var(--color-accent-primary)"
+		>
 			<!-- prettier-ignore -->
-			<p><a href="/help#feedback">send thoughts</a> via <a href="/about#elsewhere">email</a>. feedback or fixes welcome — <a href="https://github.com/ignatiusmb/mauss.dev/issues">issues</a> &middot; <a href="https://github.com/ignatiusmb/mauss.dev/blob/master/workspace/content/routes/{source}">edits</a></p>
+			<p><a href="/help#feedback">feedback</a> &middot; <a href="/about#elsewhere">email</a> &middot; <a href="https://github.com/ignatiusmb/mauss.dev/issues">issues</a> &middot; <a href="https://github.com/ignatiusmb/mauss.dev/blob/master/workspace/content/routes/{source}">edits</a></p>
 		</section>
 	{/if}
 </article>

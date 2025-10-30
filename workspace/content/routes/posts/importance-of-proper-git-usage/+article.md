@@ -2,8 +2,11 @@
 date: "2020-04-28T17:38:25+07:00"
 theme: archive
 title: Importance of Proper Git Usage
+series:
+  title: PPL 2020
+  chapter: 2
 description: A good commit can come a long way in the future and it can significantly reduce debugging time with descriptive body
-tags: [ppl2020, git, proper]
+tags: [git, proper]
 ---
 
 ![Commit messages steadily declining in quality](https://imgs.xkcd.com/comics/git_commit.png "[xkcd: Git Commit](https://xkcd.com/1296/)")
