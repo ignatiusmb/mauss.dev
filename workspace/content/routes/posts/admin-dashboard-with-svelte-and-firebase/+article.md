@@ -2,8 +2,11 @@
 date: "2020-05-11T17:38:25+07:00"
 theme: archive
 title: Admin Dashboard with Svelte and Firebase
+series:
+  title: PPL 2020
+  chapter: 4
 description: Creating a full-fledged admin dashboard in under 3 hours
-tags: [ppl2020, svelte, firebase, sapper, javascript, audit, lighthouse]
+tags: [svelte, firebase, sapper, javascript, audit, lighthouse]
 ---
 
 ![Admin Dashboard Login](./admin-login.png)

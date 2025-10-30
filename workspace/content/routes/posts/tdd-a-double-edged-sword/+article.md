@@ -2,8 +2,11 @@
 date: "2020-04-27T17:38:25+07:00"
 theme: archive
 title: "Test-Driven Development: A Double-Edged Sword"
+series:
+  title: PPL 2020
+  chapter: 1
 description: Is TDD really worth the time to invest for a maintainable and clean codebase
-tags: [ppl2020, tdd]
+tags: [tdd]
 ---
 
 ![TDD Global Life Cycle](https://upload.wikimedia.org/wikipedia/commons/0/0b/TDD_Global_Lifecycle.png "by Xavier Pigeon via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:TDD_Global_Lifecycle.png)")

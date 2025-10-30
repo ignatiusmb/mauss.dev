@@ -2,6 +2,9 @@
 date: 2025-10-10
 theme: reflection
 title: An Outsider Inside Myself
+series:
+  title: Solus
+  chapter: 1
 description: "the strange feeling of living my own life, yet remembering it as if i were watching someone else's."
 tags: [memory, introspection]
 ---

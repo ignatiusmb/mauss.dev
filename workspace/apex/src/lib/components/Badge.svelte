@@ -22,7 +22,6 @@
 		lighthouse: ['#304ffe', Contrast.LIGHT],
 		music: ['#1e88e5', Contrast.LIGHT],
 		nodejs: ['#90c53f', Contrast.DARK],
-		ppl2020: ['#feb229', Contrast.DARK],
 		productivity: ['#ff9900', Contrast.DARK],
 		python: ['#3879ab', '#ffda5d'],
 		reflection: ['#708090', Contrast.DARK],
