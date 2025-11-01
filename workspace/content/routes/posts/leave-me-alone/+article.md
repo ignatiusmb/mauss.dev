@@ -19,7 +19,7 @@ but this disposition clashes with a modern world that runs on constant, unsolici
 
 ## the fight for attention
 
-[attention is a luxury good](https://seths.blog/2025/10/attention-is-a-luxury-good/) and the new currency.
+[attention is a luxury good](https://seths.blog/2025/10/attention-is-a-luxury-good/), and it has become the new currency everyone wants to collect.
 
 in real life, that's manageable. it's the salesperson, the shop worker tailing me, and the noise of traffic. i can put on noise-cancelling earbuds, and most people understand a clear "no". i know these interruptions are often just part of someone's job, and i don't take them personally. i just want to stroll in peace.
 
