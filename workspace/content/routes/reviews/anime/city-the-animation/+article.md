@@ -7,6 +7,7 @@ genres: [comedy]
 seen:
   first: "2025-07-07T10:52:00+07:00"
   last: "2025-10-07T19:25:00+07:00"
+rating: solid
 poster:
   source: tmdb
   path: w6TAfJYgLahwtsYi9FM6Mb86OMM.jpg
