@@ -2,12 +2,13 @@
 date: 2020
 title: The Fragrant Flower Blooms with Dignity
 alias: [Kaoru Hana wa Rin to Saku]
-tier: "?"
+tier: A
 released: 2025-07-06
 genres: [school, drama, romance]
 seen:
   first: "2025-07-16T22:02:00+07:00"
   last: "2025-10-05T23:14:00+07:00"
+rating: solid
 poster:
   source: tmdb
   path: g1sYAQt0OeCxzyfagSEqxUlsLnt.jpg

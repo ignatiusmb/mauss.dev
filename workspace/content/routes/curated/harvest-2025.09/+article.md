@@ -90,7 +90,7 @@ blood guns(?)
 
 ## pieces
 
-![the art of less card image](/posts/art-of-less/card.png "[The Art of Less](/posts/art-of-less)")
+![card image for the first chapter of the art of less series](/posts/art-of-less/card.png "[A Discipline of Subtraction](/posts/art-of-less)")
 
 live with less, live in brevity. less is an act of discipline, a deliberate refusal of excess. it is not absence, because what remains is chosen with intent. it is not apathy, because it requires mindfulness. less is the foundation on which something greater can grow.
 
