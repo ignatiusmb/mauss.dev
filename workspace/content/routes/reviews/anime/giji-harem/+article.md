@@ -7,6 +7,7 @@ released: 2024-07-05
 genres: [comedy, romance]
 seen:
   first: "2025-07-18T23:27:00+07:00"
+  last: "2025-11-12T00:53:00+07:00"
 rating: mid
 poster:
   source: tmdb
