@@ -1,7 +1,7 @@
 ---
 date: 2020
 title: "Orb: On the Movements of the Earth"
-alias: ["Chi. Chikyuu no Undou ni Tsuite"]
+alias: [Chi. Chikyuu no Undou ni Tsuite]
 tier: B
 released: 2024-10-05
 genres: [drama]
